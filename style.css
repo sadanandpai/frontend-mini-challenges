@@ -1,0 +1,24 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+a:hover {
+  font-size: 1.3rem;
+}
