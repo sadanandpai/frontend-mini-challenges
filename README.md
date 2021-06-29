@@ -1,4 +1,7 @@
-# Collection of frontend micro challenges in pure HTML, CSS and JavaScript
+# Collection of frontend micro challenges
+### Technologies: HTML, CSS and JavaScript only
+
+--------
 
 #### Repo just started
 
