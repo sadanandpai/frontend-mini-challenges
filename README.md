@@ -5,4 +5,4 @@
 
 #### Repo just started
 
-[Check it out](https://sadanandpai.github.io/frontennd-micro-challenges/)
+[Check it out](https://sadanandpai.github.io/frontend-micro-challenges/)
