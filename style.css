@@ -14,11 +14,19 @@ html {
   text-align: center;
 }
 
+main{
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+
+main div{
+  box-shadow: 0 5px 50px 0 rgba(0, 0, 0, 0.15);
+  padding: 10px;
+}
+
 a {
   text-decoration: none;
   font-size: 1.2rem;
-}
-
-a:hover {
-  font-size: 1.3rem;
+  color: chocolate;
 }

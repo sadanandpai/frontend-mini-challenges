@@ -1,11 +1,11 @@
-var question = "TODO Study List";
-var options = ["JavaScript", "HTML", "CSS", "React", "Angular", "Zustand", "NextJS", "TypeScript"];
+const question = "TODO Study List";
+const options = ["JavaScript", "HTML", "CSS", "React", "Angular", "Zustand", "NextJS", "TypeScript"];
 
-var listContainer = document.getElementById("listContainer");
-var animationDuration = 500;
+const listContainer = document.getElementById("listContainer");
+const animationDuration = 500;
 
 function createTodos(optionsArray) {
-  var optionsFragment = document.createDocumentFragment();
+  const optionsFragment = document.createDocumentFragment();
 
   optionsArray.forEach(function (optionText, index) {
     optionsFragment.appendChild(createTodo(optionText, index));
@@ -15,9 +15,9 @@ function createTodos(optionsArray) {
 }
 
 function createTodo(text, index) {
-  var todo = document.createElement("div");
-  var description = document.createElement("span");
-  var button = document.createElement("button");
+  const todo = document.createElement("div");
+  const description = document.createElement("span");
+  const button = document.createElement("button");
 
   description.textContent = text;
   button.textContent = "Done";
@@ -30,7 +30,7 @@ function createTodo(text, index) {
 }
 
 function deleteTodo(button) {
-  var element = button.parentNode;
+  const element = button.parentNode;
   element.classList.add("hide-smooth");
 
   // Remove after delay for animation to finish
@@ -40,7 +40,7 @@ function deleteTodo(button) {
 }
 
 function buttonClickLinstener(event) {
-  var target = event.target;
+  const target = event.target;
 
   if (target.classList.contains("dont-button")) {
     deleteTodo(target);

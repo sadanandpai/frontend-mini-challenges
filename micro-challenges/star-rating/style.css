@@ -1,0 +1,57 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+  text-align: center;
+}
+
+.star-container {
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
+  flex-wrap: wrap;
+}
+
+.star-empty::before {
+  content: "☆";
+}
+
+.star-filled::before {
+  color: rgba(231, 198, 10, 0.685);
+  content: "★";
+  cursor: pointer;
+}
+
+.info {
+  margin: 2rem;
+}
+
+.smiley-container div {
+  display: none;
+  font-size: 2rem;
+}
+
+.smiley-container.worst .worst {
+  display: block;
+}
+.smiley-container.bad .bad {
+  display: block;
+}
+.smiley-container.neutral .neutral {
+  display: block;
+}
+.smiley-container.good .good {
+  display: block;
+}
+.smiley-container.best .best {
+  display: block;
+}
