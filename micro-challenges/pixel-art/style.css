@@ -1,0 +1,28 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+  text-align: center;
+}
+
+.board{
+  display: inline-grid;
+}
+
+.box{
+  border: 1px solid black;
+}
+
+.info{
+  margin-top: 20px;
+  font-size: large;
+}
