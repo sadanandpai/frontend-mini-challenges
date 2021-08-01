@@ -17,7 +17,7 @@ html {
 .star-container {
   display: flex;
   justify-content: center;
-  font-size: 2rem;
+  font-size: 3rem;
   flex-wrap: wrap;
 }
 
@@ -35,22 +35,6 @@ html {
   margin: 2rem;
 }
 
-.smiley-container div {
-  font-size: 2rem;
-}
-
-.smiley-container.worst .worst {
-  display: block;
-}
-.smiley-container.bad .bad {
-  display: block;
-}
-.smiley-container.neutral .neutral {
-  display: block;
-}
-.smiley-container.good .good {
-  display: block;
-}
-.smiley-container.best .best {
-  display: block;
+.smiley-container {
+  font-size: 6rem;
 }

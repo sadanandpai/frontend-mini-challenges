@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="index.js" type="module" defer></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Toast popup</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="title">Toast Popup</h1>
+      <div class="position-selector">
+        <label for="topLeft">
+          <input type="radio" name="position" id="topLeft" value="top-left" />
+          Top Left
+        </label>
+        <label for="topCenter">
+          <input type="radio" name="position" id="topCenter" value="top-center" />
+          Top Center
+        </label>
+        <label for="topRight">
+          <input type="radio" name="position" id="topRight" value="top-right" />
+          Top Right
+        </label>
+        <label for="centerLeft">
+          <input type="radio" name="position" id="centerLeft" value="left-center" />
+          Center Left
+        </label>
+        <label for="centerRight">
+          <input type="radio" name="position" id="centerRight" value="right-center" />
+          Center Right
+        </label>
+        <label for="bottomLeft">
+          <input type="radio" name="position" id="bottomLeft" value="bottom-left" />
+          Bottom Left
+        </label>
+        <label for="bottomCenter">
+          <input type="radio" name="position" id="bottomCenter" value="bottom-center" />
+          Bottom Center
+        </label>
+        <label for="bottomRight">
+          <input type="radio" name="position" id="bottomRight" value="bottom-right" />
+          Bottom Right
+        </label>
+      </div>
+
+      <button id="showToast">Display</button>
+
+      <div id="toastContainer" class="toast-container">Hello Boys</div>
+    </div>
+  </body>
+</html>

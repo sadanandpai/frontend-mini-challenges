@@ -1,37 +1,41 @@
+import { createElement, createElements } from "./helper.js";
+
 const starCount = 5; // Use multiples of 5
+const smileys = ["😢", "😞", "😐", "😀", "😎"];
+
 let rating = 0;
+let filled = 0; // to reduce the iterations
+let unfilled = 0; // to reduce the iterations
 
 const starContainer = document.getElementById("starContainer");
 const smileyContainer = document.getElementById("smileyContainer");
+starContainer.appendChild(createElements(starCount, (i) => createElement("div", { class: "star star-empty", "data-index": i }), 1));
+const stars = starContainer.querySelectorAll(".star");
 
-function createStars(count) {
-  const starFragment = document.createDocumentFragment();
-
-  for (let i = 1; i <= count; i++) {
-    starFragment.appendChild(createStarElement(i));
-  }
-  return starFragment;
-}
-
-function createStarElement(index) {
-  const starElement = document.createElement("div");
-  starElement.classList.add("star");
-  starElement.classList.add("star-empty");
-  starElement.dataset.index = index;
-  return starElement;
-}
+starContainer.addEventListener("mouseover", hoverListener);
+starContainer.addEventListener("mouseleave", leaveListener);
+starContainer.addEventListener("click", clickListener);
 
 function fillStars(count) {
-  const stars = starContainer.querySelectorAll(".star");
-
-  for (let i = 0; i < count; i++) {
+  for (let i = filled; i < count; i++) {
     stars[i].classList.add("star-filled");
     stars[i].classList.remove("star-empty");
   }
 
-  for (let i = count; i < starCount; i++) {
+  for (let i = count; i < unfilled; i++) {
     stars[i].classList.remove("star-filled");
     stars[i].classList.add("star-empty");
+  }
+
+  filled = count;
+  unfilled = count;
+}
+
+function clickListener(event) {
+  const target = event.target;
+  if (target.classList.contains("star")) {
+    rating = +target.dataset.index;
+    setSmiley(rating);
   }
 }
 
@@ -44,38 +48,10 @@ function hoverListener(event) {
 }
 
 function leaveListener() {
-  fillStars(rating);
+  fillStars(+rating);
 }
 
-function clickListener(event) {
-  const target = event.target;
-  if (target.classList.contains("star")) {
-    rating = target.dataset.index;
-    const className = setClassForRating(+rating);
-    smileyContainer.className = "smiley-container";
-    smileyContainer.classList.add(className);
-  }
+function setSmiley(rating) {
+  const index = Math.ceil((smileys.length * rating) / starCount) - 1;
+  smileyContainer.textContent = smileys[index];
 }
-
-function setClassForRating(rating) {
-  const percentage = (100 * rating) / starCount;
-
-  if (percentage <= 20) {
-    return "worst";
-  } else if (percentage <= 40) {
-    return "bad";
-  } else if (percentage <= 60) {
-    return "neutral";
-  } else if (percentage <= 80) {
-    return "good";
-  } else {
-    return "best";
-  }
-}
-
-const stars = createStars(starCount);
-starContainer.appendChild(stars);
-
-starContainer.addEventListener("mouseover", hoverListener);
-starContainer.addEventListener("mouseleave", leaveListener);
-starContainer.addEventListener("click", clickListener);
