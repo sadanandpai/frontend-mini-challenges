@@ -1,0 +1,49 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+  text-align: center;
+}
+
+.display {
+  font-size: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.display span {
+  order: 1;
+}
+
+.display #secMSB,
+.display #secLSB {
+  order: 2;
+}
+
+input {
+  font-size: 3rem;
+  width: 2.22rem;
+}
+
+.display.progress input {
+  border-color: transparent;
+}
+
+button {
+  padding: 0.5rem 0.8rem;
+  border: 1px solid grey;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
+}

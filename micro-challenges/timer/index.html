@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="index.js" type="module" defer></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Timer</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="title">Timer</h1>
+      <div class="display" id="display">
+        <span>:</span>
+        <input type="text" id="minMSB" value="0" />
+        <input type="text" id="minLSB" value="0" />
+        <input type="text" id="secMSB" value="0" />
+        <input type="text" id="secLSB" value="0" />
+      </div>
+      <div id="controls">
+        <button id="start">Start</button>
+        <button id="stop" disabled>Stop</button>
+        <button id="reset">Reset</button>
+      </div>
+    </div>
+  </body>
+</html>
