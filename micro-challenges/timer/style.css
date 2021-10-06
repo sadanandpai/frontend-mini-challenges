@@ -34,7 +34,11 @@ html {
 
 input {
   font-size: 3rem;
-  width: 2.22rem;
+  width: 2rem;
+  border: 1px solid grey;
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+  margin: 0;
 }
 
 .display.progress input {
