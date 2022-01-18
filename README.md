@@ -1,5 +1,8 @@
-# Collection of frontend micro challenges
-### Technologies: HTML, CSS and JavaScript only
+<div align="center">
+  <h1>Frontend Micro Challenges</h1>
+  <h3>Collection of frontend challenges for learning and interviews</h3>
+  <img src="./cover.png alt="web programming" />
+</div>
 
 --------
 
