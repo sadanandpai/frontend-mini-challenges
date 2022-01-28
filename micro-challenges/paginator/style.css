@@ -1,0 +1,76 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 50%;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.pagination {
+  display: flex;
+  column-gap: 10px;
+  justify-content: center;
+}
+
+input {
+  padding: 2px 5px;
+  font-size: 1rem;
+}
+
+.page-number {
+  justify-content: center;
+  padding: 6px 12px;
+  flex: 1 1 0;
+  border-radius: 6px;
+  background-color: #fafafa;
+  border: 1px solid #ececec;
+  color: black;
+  cursor: pointer;
+  width: 0;
+  display: flex;
+  max-width: 30px;
+  min-width: 30px;
+}
+
+.page-number.active {
+  background-color: #0070f3;
+  color: white;
+}
+
+.dot-left:hover::before {
+  content: "<<";
+}
+
+.dot-right:hover::before {
+  content: ">>";
+}
+
+.dot::before {
+  font-size: 0.8rem;
+}
+
+.dot:hover {
+  font-size: 0;
+}

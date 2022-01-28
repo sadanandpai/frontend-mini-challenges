@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="index.js" type="module" defer></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Paginator</title>
+  </head>
+  <body>
+    <div class="container">
+
+      <h1>Paginator</h1>
+
+      <div class="form">
+        <label for="pages">
+          Page count
+          <input type="number" id="pages" value="12" />
+        </label>
+        <label for="sibblings">
+          Sibblings
+          <input type="number" id="sibbling" value="1" />
+        </label>
+        <label for="boundary">
+          Boundary
+          <input type="number" id="boundary" value="1" />
+        </label>
+      </div>
+      <div id="pagination" class="pagination" />
+    </div>
+  </body>
+</html>
