@@ -29,17 +29,21 @@ html {
 }
 
 .pagination {
-  display: flex;
+  display: inline-flex;
   column-gap: 10px;
-  justify-content: center;
 }
 
 input {
   padding: 2px 5px;
   font-size: 1rem;
+  width: 200px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  vertical-align: middle;
 }
 
-.page-number {
+.page-number,
+.page-modifier {
   justify-content: center;
   padding: 6px 12px;
   flex: 1 1 0;
@@ -52,6 +56,12 @@ input {
   display: flex;
   max-width: 30px;
   min-width: 30px;
+}
+
+button:disabled {
+  background-color: inherit;
+  color: #ccc;
+  cursor: not-allowed;
 }
 
 .page-number.active {

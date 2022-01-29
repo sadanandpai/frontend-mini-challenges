@@ -2,84 +2,139 @@ const paginationElement = document.getElementById("pagination");
 const pagesElement = document.getElementById("pages");
 const sibblingElement = document.getElementById("sibbling");
 const boundaryElement = document.getElementById("boundary");
-let totalPages = 12;
-let activePage = 1;
-let sibblingCount = 1;
-let customBoundary = 1;
 
-function createPaginator(element) {
-  paginationElement.innerHTML = "";
-  const boundary = sibblingCount * 2 + 2 + customBoundary;
-  let isLastDot = false;
+class Paginator {
+  constructor(paginatorElement, totalPages, sibblingCount, boundary, activePage = 1) {
+    this.paginatorElement = paginatorElement;
+    this.totalPages = totalPages;
+    this.activePage = activePage;
+    this.sibblingCount = sibblingCount;
+    this.boundary = boundary;
 
-  const fragment = document.createDocumentFragment();
-  for (let i = 1; i <= totalPages; i++) {
-    const button = document.createElement("button");
+    this.addListener();
+    this.populate();
+  }
 
-    if (i === activePage) {
-      button.innerText = i;
-      button.dataset.value = i;
-      isLastDot = false;
-      button.classList.add("active");
-    } else if (i <= customBoundary || i > totalPages - customBoundary) {
-      button.innerText = i;
-      button.dataset.value = i;
-      isLastDot = false;
-    } else if (
-      (activePage <= boundary - sibblingCount && i <= boundary) ||
-      (activePage > totalPages - boundary + sibblingCount && i > totalPages - boundary)
-    ) {
-      button.innerText = i;
-      button.dataset.value = i;
-      isLastDot = false;
-    } else if (i >= activePage - sibblingCount && i <= activePage + sibblingCount) {
-      button.innerText = i;
-      button.dataset.value = i;
-      isLastDot = false;
-    } else if (!isLastDot) {
-      button.innerText = "...";
-      button.classList.add("dot");
-      button.dataset.value = i;
-
-      if (activePage > i) {
-        button.classList.add("dot-left");
-        
-      } else {
-        button.classList.add("dot-right");
+  addListener() {
+    this.paginatorElement.addEventListener("click", (event) => {
+      if (event.target.classList.contains("page-number")) {
+        this.activePage = +event.target.dataset.value;
+        this.populate();
+        return;
       }
 
-      isLastDot = true;
-    } else {
-      continue;
+      if (event.target.classList.contains("page-decrement")) {
+        this.activePage = Math.max(1, this.activePage - 1);
+        this.populate();
+        return;
+      }
+
+      if (event.target.classList.contains("page-increment")) {
+        this.activePage = Math.min(this.totalPages, this.activePage + 1);
+        this.populate();
+        return;
+      }
+    });
+  }
+
+  populate() {
+    this.paginatorElement.innerHTML = "";
+    const boundaryLength = this.sibblingCount * 2 + 2 + this.boundary;
+    let isLastDot = false;
+
+    const fragment = document.createDocumentFragment();
+
+    let button = document.createElement("button");
+    button.classList.add("page-modifier");
+    button.classList.add("page-decrement");
+    button.textContent = "<";
+    if (this.activePage === 1) {
+      button.disabled = true;
+    }
+    fragment.appendChild(button);
+
+    for (let i = 1; i <= this.totalPages; i++) {
+      const button = document.createElement("button");
+      let buttonValue = i;
+
+      if (
+        !(
+          i <= this.boundary ||
+          i > this.totalPages - this.boundary ||
+          (this.activePage <= boundaryLength - this.sibblingCount && i <= boundaryLength) ||
+          (this.activePage > this.totalPages - boundaryLength + this.sibblingCount &&
+            i > this.totalPages - boundaryLength) ||
+          (i >= this.activePage - this.sibblingCount && i <= this.activePage + this.sibblingCount)
+        )
+      ) {
+        if (isLastDot) continue;
+
+        buttonValue = "...";
+        button.classList.add("dot");
+        button.classList.add(this.activePage > i ? "dot-left" : "dot-right");
+        button.dataset.value =
+          this.activePage > i
+            ? Math.max(1, this.activePage - boundaryLength)
+            : Math.min(this.totalPages, this.activePage + boundaryLength);
+      }
+
+      button.textContent = buttonValue;
+      if (typeof buttonValue === "number") {
+        button.dataset.value = i;
+        button.setAttribute("tabindex", 0);
+      }
+      isLastDot = typeof buttonValue === "string";
+      button.classList.add("page-number");
+      fragment.appendChild(button);
     }
 
-    button.classList.add("page-number");
+    button = document.createElement("button");
+    button.classList.add("page-modifier");
+    button.classList.add("page-increment");
+    button.textContent = ">";
+    if (this.activePage === this.totalPages) {
+      button.disabled = true;
+    }
     fragment.appendChild(button);
+
+    this.paginatorElement.appendChild(fragment);
+    const activeElement = this.paginatorElement.querySelector(`[data-value='${this.activePage}']`);
+    activeElement.classList.add("active");
+    activeElement.focus();
   }
 
-  element.appendChild(fragment);
+  setTotalPages(totalPages) {
+    this.totalPages = totalPages;
+    this.activePage = Math.min(this.activePage, this.totalPages);
+    this.populate();
+  }
+
+  setBoundary(boundary) {
+    this.boundary = boundary;
+    this.populate();
+  }
+
+  setSibblingCount(sibblingCount) {
+    this.sibblingCount = sibblingCount;
+    this.populate();
+  }
 }
 
-paginationElement.addEventListener("click", (event) => {
-  if (event.target.classList.contains("page-number")) {
-    activePage = +event.target.dataset.value;
-    createPaginator(paginationElement);
-  }
+const paginator = new Paginator(
+  paginationElement,
+  +pagesElement.value,
+  +sibblingElement.value,
+  +boundaryElement.value
+);
+
+pagesElement.addEventListener("input", () => {
+  paginator.setTotalPages(+pagesElement.value);
 });
 
-sibblingElement.addEventListener("keyup", () => {
-  sibblingCount = +sibblingElement.value || 1;
-  createPaginator(paginationElement);
+sibblingElement.addEventListener("input", () => {
+  paginator.setSibblingCount(+sibblingElement.value);
 });
 
-boundaryElement.addEventListener("keyup", () => {
-  customBoundary = +boundaryElement.value || 1;
-  createPaginator(paginationElement);
+boundaryElement.addEventListener("input", () => {
+  paginator.setBoundary(+boundaryElement.value);
 });
-
-pagesElement.addEventListener("keyup", () => {
-  totalPages = +pagesElement.value || 12;
-  createPaginator(paginationElement);
-});
-
-createPaginator(paginationElement);
