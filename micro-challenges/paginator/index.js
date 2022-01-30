@@ -1,14 +1,14 @@
 const paginationElement = document.getElementById("pagination");
 const pagesElement = document.getElementById("pages");
-const sibblingElement = document.getElementById("sibbling");
+const siblingElement = document.getElementById("siblings");
 const boundaryElement = document.getElementById("boundary");
 
 class Paginator {
-  constructor(paginatorElement, totalPages, sibblingCount, boundary, activePage = 1) {
+  constructor(paginatorElement, totalPages, siblingCount, boundary, activePage = 1) {
     this.paginatorElement = paginatorElement;
     this.totalPages = totalPages;
     this.activePage = activePage;
-    this.sibblingCount = sibblingCount;
+    this.siblingCount = siblingCount;
     this.boundary = boundary;
 
     this.addListener();
@@ -39,7 +39,7 @@ class Paginator {
 
   populate() {
     this.paginatorElement.innerHTML = "";
-    const boundaryLength = this.sibblingCount * 2 + 2 + this.boundary;
+    const boundaryLength = this.siblingCount * 2 + 2 + this.boundary;
     let isLastDot = false;
 
     const fragment = document.createDocumentFragment();
@@ -61,10 +61,10 @@ class Paginator {
         !(
           i <= this.boundary ||
           i > this.totalPages - this.boundary ||
-          (this.activePage <= boundaryLength - this.sibblingCount && i <= boundaryLength) ||
-          (this.activePage > this.totalPages - boundaryLength + this.sibblingCount &&
+          (this.activePage <= boundaryLength - this.siblingCount && i <= boundaryLength) ||
+          (this.activePage > this.totalPages - boundaryLength + this.siblingCount &&
             i > this.totalPages - boundaryLength) ||
-          (i >= this.activePage - this.sibblingCount && i <= this.activePage + this.sibblingCount)
+          (i >= this.activePage - this.siblingCount && i <= this.activePage + this.siblingCount)
         )
       ) {
         if (isLastDot) continue;
@@ -114,8 +114,8 @@ class Paginator {
     this.populate();
   }
 
-  setSibblingCount(sibblingCount) {
-    this.sibblingCount = sibblingCount;
+  setSiblingCount(siblingCount) {
+    this.siblingCount = siblingCount;
     this.populate();
   }
 }
@@ -123,7 +123,7 @@ class Paginator {
 const paginator = new Paginator(
   paginationElement,
   +pagesElement.value,
-  +sibblingElement.value,
+  +siblingElement.value,
   +boundaryElement.value
 );
 
@@ -131,8 +131,8 @@ pagesElement.addEventListener("input", () => {
   paginator.setTotalPages(+pagesElement.value);
 });
 
-sibblingElement.addEventListener("input", () => {
-  paginator.setSibblingCount(+sibblingElement.value);
+siblingElement.addEventListener("input", () => {
+  paginator.setSiblingCount(+siblingElement.value);
 });
 
 boundaryElement.addEventListener("input", () => {
