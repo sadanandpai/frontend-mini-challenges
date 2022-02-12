@@ -1,0 +1,81 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+  text-align: center;
+}
+
+.carousel {
+  width: 256px;
+  margin: auto;
+  position: relative;
+}
+
+.img-frame{
+  overflow: hidden;
+}
+
+.img-holder {
+  display: flex;
+  transition: 0.1s all;
+}
+
+img {
+  width: 256px;
+  height: 256px;
+}
+
+.handle {
+  border: 2px solid black;
+  display: inline-block;
+  padding: 8px 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  z-index: 1;
+  user-select: none;
+}
+
+.left-handle {
+  top: 50%;
+  left: 0;
+  transform: translate(-100%, -50%);
+}
+
+.right-handle {
+  top: 50%;
+  right: 0;
+  transform: translate(100%, -50%);
+}
+
+.dot-holder {
+  display: flex;
+  height: 20px;
+  align-items: center;
+  justify-content: center;
+  column-gap: 10px;
+}
+
+.dot-holder > span {
+  box-shadow: 0 0 0 2px white inset;
+  border-radius: 50%;
+  height: 10px;
+  width: 10px;
+  background: white;
+  border: 1px solid blue;
+}
+
+.dot-holder .selected {
+  background-color: green;
+}
