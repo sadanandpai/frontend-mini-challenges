@@ -1,0 +1,67 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.container {
+  margin: auto;
+  width: 90%;
+}
+
+.title{
+  text-align: center;
+}
+
+p{
+  margin: 0.25rem 0;
+}
+
+.main-comment {
+  padding: 5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.comment-text[contenteditable="true"] {
+  outline: 1px solid #ccc;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.sub-comments {
+  margin-left: 2rem;
+}
+
+.name {
+  font-weight: bold;
+}
+
+button {
+  border: none;
+  background-color: inherit;
+  padding: 0.5rem;
+  cursor: pointer;
+  margin: 0 10px;
+  box-shadow: 0 4px 50px rgba(0, 0, 0, 0.15);
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+input {
+  display: block;
+  width: 50%;
+  margin: 0.5rem 0;
+}
+
+textarea {
+  resize: none;
+}
+
+#commentContainer > .comment:first-child > .main-comment:first-child{
+  background-color: azure;
+}
