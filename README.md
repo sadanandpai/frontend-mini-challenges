@@ -4,8 +4,24 @@
   <a href="https://sadanandpai.github.io/frontend-micro-challenges/"><img src="cover.png" alt="web programming" width="500px" /></a>
 </div>
 
+<div align="center">
+  <h3><a href="https://sadanandpai.github.io/frontend-micro-challenges/">View challenges</a></h3>
+</div>
+
 --------
 
-#### Repo just started
+All the challenges are listed below
 
-[Check it out](https://sadanandpai.github.io/frontend-micro-challenges/)
+- [Toast Popup](https://sadanandpai.github.io/frontend-micro-challenges/micro-challenges/toast-popup/)
+- [Guess the number](https://sadanandpai.github.io/frontend-micro-challenges/micro-challenges/guess-the-number/)
+- [Telephone formatter](https://sadanandpai.github.io/frontend-micro-challenges/micro-challenges/telephone-formatter/)
+- [Light & Dark mode](https://sadanandpai.github.io/frontend-micro-challenges/micro-challenges/theme/)
+- [Todo List](https://sadanandpai.github.io/frontend-micro-challenges/micro-challenges/todo-list/)
+- [Star Rating](https://sadanandpai.github.io/frontend-micro-challenges/micro-challenges/star-rating/)
+- [Pixel Art](https://sadanandpai.github.io/frontend-micro-challenges/micro-challenges/pixel-art/)
+- [Countdown Timer](https://sadanandpai.github.io/frontend-micro-challenges/micro-challenges/timer/)
+- [Area Selector](https://sadanandpai.github.io/frontend-micro-challenges/micro-challenges/area-selector/)
+- [Carousel](https://sadanandpai.github.io/frontend-micro-challenges/micro-challenges/carousel/)
+- [Paginator](https://sadanandpai.github.io/frontend-micro-challenges/micro-challenges/paginator/)
+- [Comment box](https://sadanandpai.github.io/frontend-micro-challenges/micro-challenges/comment-box/)
+- [Array methods](https://sadanandpai.github.io/frontend-micro-challenges/micro-challenges/array-methods/)
