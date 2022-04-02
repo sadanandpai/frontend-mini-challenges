@@ -5,7 +5,7 @@
 </div>
 
 <div align="center">
-  <h3><a href="https://sadanandpai.github.io/frontend-micro-challenges/">View challenges</a></h3>
+  <h3><a href="https://sadanandpai.github.io/frontend-micro-challenges/">All Challenges</a></h3>
 </div>
 
 --------
