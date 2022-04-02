@@ -35,7 +35,7 @@ const createCommentInput = () => {
     placeholder: "comment",
     className: "comment-text",
     rows: 2,
-    cols: 50,
+    cols: 30,
   });
   const postBtn = createElement("button", { textContent: "Post", className: "btn btn-primary small post" });
   const cancelBtn = createElement("button", { textContent: "Cancel", className: "btn btn-primary small cancel" });
