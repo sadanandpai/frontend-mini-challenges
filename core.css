@@ -32,3 +32,23 @@ body {
 .text-center {
   text-align: center;
 }
+
+.text-bold {
+  font-weight: bold;
+}
+
+.btn.btn-primary {
+  background-color: #5affd8;
+  padding: 10px 16px;
+  border: 1px solid grey;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn.btn-primary.small {
+  padding: 4px 6px;
+}
+
+button:disabled, button.btn:disabled {
+  cursor: not-allowed;
+}

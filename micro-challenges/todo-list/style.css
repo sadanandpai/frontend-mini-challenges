@@ -1,8 +1,4 @@
-@import url(/core.css);
-
-.container {
-  text-align: center;
-}
+@import url(../../core.css);
 
 @media (min-width: 768px) {
   .container {

@@ -1,18 +1,4 @@
-html {
-  box-sizing: border-box;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-}
-
-.container {
-  width: 90%;
-  margin: auto;
-  text-align: center;
-}
+@import url(../../core.css);
 
 input {
   font-size: 2rem;

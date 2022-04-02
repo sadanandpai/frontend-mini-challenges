@@ -7,6 +7,7 @@ const challenges = [
   { title: "Star Rating", link: "star-rating" },
   { title: "Pixel Art", link: "pixel-art" },
   { title: "Countdown Timer", link: "timer" },
+  { title: "Area Selector", link: "area-selector" },
   { title: "Carousel", link: "carousel" },
   { title: "Paginator", link: "paginator" },
   { title: "Comment box", link: "comment-box" },

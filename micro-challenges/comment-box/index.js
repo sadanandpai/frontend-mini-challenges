@@ -12,15 +12,15 @@ const createElement = (elementType = "div", properties, ...children) => {
 
 const createComment = (name, text, settings) => {
   text = text.replaceAll("\n", "<br>");
-  const p1 = createElement("p", { textContent: name, className: "name" });
+  const p1 = createElement("p", { textContent: name, className: "text-bold name" });
   const p2 = createElement("p", { innerHTML: text, className: "comment-text" });
 
   const buttons = [];
-  buttons.push(createElement("button", { textContent: "Reply", className: "reply" }));
+  buttons.push(createElement("button", { textContent: "Reply", className: "btn btn-primary small reply" }));
   if (!settings?.hasNoEdit)
-    buttons.push(createElement("button", { textContent: "Edit", className: "edit" }));
+    buttons.push(createElement("button", { textContent: "Edit", className: "btn btn-primary small edit" }));
   if (!settings?.hasNoDelete)
-    buttons.push(createElement("button", { textContent: "Delete", className: "delete" }));
+    buttons.push(createElement("button", { textContent: "Delete", className: "btn btn-primary small delete" }));
 
   const btnHolder = createElement("div", { className: "btn-holder" }, ...buttons);
   const mainComment = createElement("div", { className: "main-comment" }, p1, p2, btnHolder);
@@ -30,15 +30,15 @@ const createComment = (name, text, settings) => {
 };
 
 const createCommentInput = () => {
-  const nameInput = createElement("input", { placeholder: "Your name", className: "name" });
+  const nameInput = createElement("input", { placeholder: "Your name", className: "text-bold name " });
   const commentInput = createElement("textarea", {
     placeholder: "comment",
     className: "comment-text",
     rows: 2,
     cols: 50,
   });
-  const postBtn = createElement("button", { textContent: "Post", className: "post" });
-  const cancelBtn = createElement("button", { textContent: "Cancel", className: "cancel" });
+  const postBtn = createElement("button", { textContent: "Post", className: "btn btn-primary small post" });
+  const cancelBtn = createElement("button", { textContent: "Cancel", className: "btn btn-primary small cancel" });
   const btnHolder = createElement("div", { className: "btn-holder" }, postBtn, cancelBtn);
 
   return createElement("div", { className: "comment" }, nameInput, commentInput, btnHolder);
@@ -64,7 +64,7 @@ commentContainer.addEventListener("click", (e) => {
 
     if (target.classList.contains("edit")) {
       target.textContent = "Save";
-      target.className = "save";
+      target.className = "btn btn-primary small save";
       toggleNeighbours(target);
       target.closest(".main-comment").children[1].contentEditable = true;
       return;
@@ -75,7 +75,7 @@ commentContainer.addEventListener("click", (e) => {
 
       if (!commentText.textContent) return;
       target.textContent = "Edit";
-      target.className = "edit";
+      target.className = "btn btn-primary small edit";
 
       commentText.contentEditable = false;
       toggleNeighbours(target);

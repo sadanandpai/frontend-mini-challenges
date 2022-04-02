@@ -1,23 +1,16 @@
-html {
-  box-sizing: border-box;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-}
+@import url(../../core.css);
 
 body {
   transition: 0.25s;
+  padding: 1rem
 }
 
 .container {
-  padding: 0 5%;
+  padding: 0 2.5%;
 }
 
 .inner-container {
-  padding: 5%;
+  padding: 2.5%;
   border: 1px solid blue;
 }
 

@@ -1,21 +1,4 @@
-html {
-  box-sizing: border-box;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-}
-
-.container {
-  margin: auto;
-  width: 90%;
-}
-
-.title{
-  text-align: center;
-}
+@import url(../../core.css);
 
 p{
   margin: 0.25rem 0;
@@ -23,33 +6,21 @@ p{
 
 .main-comment {
   padding: 5px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .comment-text[contenteditable="true"] {
   outline: 1px solid #ccc;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
 
 .sub-comments {
   margin-left: 2rem;
 }
 
-.name {
-  font-weight: bold;
-}
-
 button {
-  border: none;
-  background-color: inherit;
-  padding: 0.5rem;
-  cursor: pointer;
   margin: 0 10px;
-  box-shadow: 0 4px 50px rgba(0, 0, 0, 0.15);
-}
-
-button:disabled {
-  cursor: not-allowed;
 }
 
 input {

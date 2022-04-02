@@ -1,18 +1,4 @@
-html {
-  box-sizing: border-box;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-}
-
-.container {
-  width: 90%;
-  margin: auto;
-  text-align: center;
-}
+@import url(../../core.css);
 
 .position-selector{
   display: flex;
@@ -23,47 +9,93 @@ html {
 
 .toast-container {
   position: fixed;
-  background-color: red;
+  background-color: pink;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
   padding: 10px 20px;
   display: none;
 }
 
 .toast-container[position='top-left'] {
   left: 10px;
-  top: 10px;
+  top: 30px;
+  animation: appearFromLeft 0.1s ease-in forwards;
 }
 
 .toast-container[position='top-center'] {
   left: 50%;
   top: 10px;
+  animation: appearFromTop 0.1s ease-in forwards;
+  transform: translateX(-50%);
 }
 
 .toast-container[position='top-right'] {
   right: 10px;
-  top: 10px;
+  top: 30px;
+  animation: appearFromRight 0.1s ease-in forwards;
 }
 
 .toast-container[position='left-center'] {
   left: 10px;
   top: 50%;
+  animation: appearFromLeft 0.1s ease-in forwards;
 }
 
 .toast-container[position='right-center'] {
   right: 10px;
   top: 50%;
+  animation: appearFromRight 0.1s ease-in forwards;
 }
 
 .toast-container[position='bottom-left'] {
   left: 10px;
   bottom: 10px;
+  animation: appearFromLeft 0.1s ease-in forwards;
 }
 
 .toast-container[position='bottom-center'] {
   left: 50%;
   bottom: 10px;
+  animation: appearFromBottom 0.1s ease-in forwards;
 }
 
 .toast-container[position='bottom-right'] {
   right: 10px;
   bottom: 10px;
+  animation: appearFromRight 0.1s ease-in forwards;
+}
+
+@keyframes appearFromLeft {
+  0% {
+    transform: translate(-100%, -50%) scale(0.5);
+  }
+  100% {
+    transform: translate(0, -50%) scale(1);
+  }
+}
+
+@keyframes appearFromRight {
+  0% {
+    transform: translate(100%, -50%) scale(0.5);
+  }
+  100% {
+    transform: translate(0, -50%) scale(1);
+  }
+}
+
+@keyframes appearFromTop {
+  0% {
+    transform: translate(-50%, -100%) scale(0.5);
+  }
+  100% {
+    transform: translate(-50%, 0%) scale(1);
+  }
+}
+
+@keyframes appearFromBottom {
+  0% {
+    transform: translate(-50%, 100%) scale(0.5);
+  }
+  100% {
+    transform: translate(-50%, 0%) scale(1);
+  }
 }

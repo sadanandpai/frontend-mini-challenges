@@ -1,25 +1,11 @@
-html {
-  box-sizing: border-box;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-}
-
-.container {
-  width: 90%;
-  margin: auto;
-  text-align: center;
-}
+@import url(../../core.css);
 
 .board{
   display: inline-grid;
 }
 
 .box{
-  border: 1px solid black;
+  outline: 1px solid grey;
 }
 
 .info{
