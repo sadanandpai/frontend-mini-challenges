@@ -1,32 +1,43 @@
-html {
-  box-sizing: border-box;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-}
-
-.container {
-  width: 90%;
-  margin: auto;
-  text-align: center;
-}
-
-main{
-  display: flex;
-  flex-direction: column;
-  row-gap: 1rem;
-}
-
-main div{
-  box-shadow: 0 5px 50px 0 rgba(0, 0, 0, 0.15);
-  padding: 10px;
+.challenge-grid {
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1.5rem;
 }
 
 a {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 10px;
   text-decoration: none;
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   color: chocolate;
+  transition: all 0.2s ease-in-out;
+  background-color: white;
 }
+
+a:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.3);
+}
+
+@media screen and (min-width: 768px) {
+  .challenge-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .challenge-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .challenge-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
