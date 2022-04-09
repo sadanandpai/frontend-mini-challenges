@@ -13,12 +13,28 @@ const challenges = [
   { title: "Paginator", link: "paginator" },
   { title: "Comment box", link: "comment-box" },
   { title: "Array methods", link: "array-methods" },
+  { title: "Stepper", link: "#" },
+  { title: "Accordion", link: "#" },
+  { title: "Transfer List", link: "#" },
+  { title: "Autocomplete", link: "#" },
+  { title: "Progress Bar", link: "#" },
+  { title: "Dialog Popup", link: "#" },
+  { title: "Sort Table", link: "#" },
+  { title: "Calendar", link: "#" },
+  { title: "Loaders", link: "#" },
 ];
 
 const createAnchorElement = (obj) => {
   const a = document.createElement("a");
   a.textContent = obj.title;
   a.href = `./mc/${obj.link}/`;
+
+  if(obj.link === '#'){
+    a.classList.add('disabled');
+    a.title = 'To be developed';
+    a.href = '#';
+  }
+
   return a;
 };
 
