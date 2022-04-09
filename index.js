@@ -7,6 +7,8 @@ const challenges = [
   { title: "Star Rating", link: "star-rating" },
   { title: "Pixel Art", link: "pixel-art" },
   { title: "Tic-Tac-Toe", link: "tic-tac-toe" },
+  { title: "Chess board", link: "#" },
+  { title: "Skeleton Loader", link: "#" },
   { title: "Countdown Timer", link: "count-down-timer" },
   { title: "Area Selector", link: "area-selector" },
   { title: "Carousel", link: "carousel" },

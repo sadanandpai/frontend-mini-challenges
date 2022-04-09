@@ -1,0 +1,14 @@
+@import url(../../core.css);
+
+.grid {
+  display: inline-grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  gap: 0.2rem;
+}
+
+.grid > button {
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+}
