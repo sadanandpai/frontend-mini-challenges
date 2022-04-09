@@ -8,20 +8,21 @@
   <h3><a href="https://sadanandpai.github.io/frontend-micro-challenges/">All Challenges</a></h3>
 </div>
 
---------
+---
 
 All the challenges are listed below
 
-- [Toast Popup](https://sadanandpai.github.io/frontend-micro-challenges/micro-challenges/toast-popup/)
-- [Guess the number](https://sadanandpai.github.io/frontend-micro-challenges/micro-challenges/guess-the-number/)
-- [Telephone formatter](https://sadanandpai.github.io/frontend-micro-challenges/micro-challenges/telephone-formatter/)
-- [Light & Dark mode](https://sadanandpai.github.io/frontend-micro-challenges/micro-challenges/theme/)
-- [Todo List](https://sadanandpai.github.io/frontend-micro-challenges/micro-challenges/todo-list/)
-- [Star Rating](https://sadanandpai.github.io/frontend-micro-challenges/micro-challenges/star-rating/)
-- [Pixel Art](https://sadanandpai.github.io/frontend-micro-challenges/micro-challenges/pixel-art/)
-- [Countdown Timer](https://sadanandpai.github.io/frontend-micro-challenges/micro-challenges/timer/)
-- [Area Selector](https://sadanandpai.github.io/frontend-micro-challenges/micro-challenges/area-selector/)
-- [Carousel](https://sadanandpai.github.io/frontend-micro-challenges/micro-challenges/carousel/)
-- [Paginator](https://sadanandpai.github.io/frontend-micro-challenges/micro-challenges/paginator/)
-- [Comment box](https://sadanandpai.github.io/frontend-micro-challenges/micro-challenges/comment-box/)
-- [Array methods](https://sadanandpai.github.io/frontend-micro-challenges/micro-challenges/array-methods/)
+- [Toast Popup](https://sadanandpai.github.io/frontend-micro-challenges/mc/toast-popup/)
+- [Guess the number](https://sadanandpai.github.io/frontend-micro-challenges/mc/guess-the-number/)
+- [Telephone formatter](https://sadanandpai.github.io/frontend-micro-challenges/mc/telephone-formatter/)
+- [Light & Dark mode](https://sadanandpai.github.io/frontend-micro-challenges/mc/theme/)
+- [Todo List](https://sadanandpai.github.io/frontend-micro-challenges/mc/todo-list/)
+- [Star Rating](https://sadanandpai.github.io/frontend-micro-challenges/mc/star-rating/)
+- [Pixel Art](https://sadanandpai.github.io/frontend-micro-challenges/mc/pixel-art/)
+- [Tic Tac Toe](https://sadanandpai.github.io/frontend-micro-challenges/mc/tic-tac-toe/)
+- [Countdown Timer](https://sadanandpai.github.io/frontend-micro-challenges/mc/timer/)
+- [Area Selector](https://sadanandpai.github.io/frontend-micro-challenges/mc/area-selector/)
+- [Carousel](https://sadanandpai.github.io/frontend-micro-challenges/mc/carousel/)
+- [Paginator](https://sadanandpai.github.io/frontend-micro-challenges/mc/paginator/)
+- [Comment box](https://sadanandpai.github.io/frontend-micro-challenges/mc/comment-box/)
+- [Array methods](https://sadanandpai.github.io/frontend-micro-challenges/mc/array-methods/)
