@@ -1,14 +1,32 @@
 @import url(../../core.css);
 
-.grid {
-  display: inline-grid;
-  grid-template-columns: repeat(8, 1fr);
-  grid-template-rows: repeat(8, 1fr);
-  gap: 0.2rem;
+*{
+  box-sizing: border-box;
 }
 
-.grid > button {
-  width: 2rem;
-  height: 2rem;
-  cursor: pointer;
+.board{
+  height: 320px;
+  width: 320px;
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  margin: auto;
+}
+
+.board div{
+  display: flex;
+  flex-grow: 1;
+}
+
+.board div:nth-child(even) div:nth-child(odd){
+  background-color: black;
+}
+
+.board div:nth-child(odd) div:nth-child(even){
+  background-color: black;
+}
+
+.board div div.box.selected{
+  background-color: red;
 }

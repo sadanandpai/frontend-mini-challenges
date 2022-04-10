@@ -1,0 +1,21 @@
+@import url(../../core.css);
+
+.loader-spin{
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  border: 0.5rem solid blue;
+  border-top-color: #0000bb20;
+  border-right-color: #0000bb20;
+  border-bottom-color: #0000bb20;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
