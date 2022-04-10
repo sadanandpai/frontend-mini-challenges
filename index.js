@@ -6,6 +6,7 @@ const challenges = [
   { title: "Loaders...", link: "#" },
   { title: "Star Rating", link: "star-rating" },
   { title: "Pixel Art", link: "pixel-art" },
+  { title: "Color Spotter", link: "color-spotter" },
   { title: "Tic-Tac-Toe", link: "tic-tac-toe" },
   { title: "Chess board", link: "chess-board" },
   { title: "Skeleton Loader", link: "#" },
