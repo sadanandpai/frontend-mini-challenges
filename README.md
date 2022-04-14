@@ -16,6 +16,7 @@ All the challenges are listed below
 - [Guess the number](https://sadanandpai.github.io/frontend-micro-challenges/mc/guess-the-number/)
 - [Telephone formatter](https://sadanandpai.github.io/frontend-micro-challenges/mc/telephone-formatter/)
 - [Light & Dark mode](https://sadanandpai.github.io/frontend-micro-challenges/mc/theme/)
+- [Password strength](https://sadanandpai.github.io/frontend-micro-challenges/mc/password-strength/)
 - [Star Rating](https://sadanandpai.github.io/frontend-micro-challenges/mc/star-rating/)
 - [Pixel Art](https://sadanandpai.github.io/frontend-micro-challenges/mc/pixel-art/)
 - [Color Spotter](https://sadanandpai.github.io/frontend-micro-challenges/mc/color-spotter/)

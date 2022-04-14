@@ -3,6 +3,7 @@ const challenges = [
   { title: "Guess the number", link: "guess-the-number" },
   { title: "Telephone formatter", link: "telephone-formatter" },
   { title: "Light & Dark mode", link: "light-dark-mode" },
+  { title: "Password Strength", link: "password-strength" },
   { title: "Loaders...", link: "#" },
   { title: "Star Rating", link: "star-rating" },
   { title: "Pixel Art", link: "pixel-art" },
@@ -25,7 +26,7 @@ const challenges = [
   { title: "Dialog Popup", link: "#" },
   { title: "Sort Table", link: "#" },
   { title: "Calendar", link: "#" },
-  { title: "Loaders", link: "#" },
+  { title: "Emoji Editor", link: "#" },
 ];
 
 const createAnchorElement = (obj) => {

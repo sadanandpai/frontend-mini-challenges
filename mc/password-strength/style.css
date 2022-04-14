@@ -1,0 +1,23 @@
+@import url(../../core.css);
+
+input {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  width: 20rem;
+}
+
+.progress-container {
+  margin: auto;
+  position: relative;
+  width: 20rem;
+  height: 0.6rem;
+  outline: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.progress-bar {
+  width: 0%;
+  height: 100%;
+  background: red;
+  transition: all 0.25s ease-in-out;
+}
