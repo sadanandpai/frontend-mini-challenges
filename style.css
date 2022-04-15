@@ -4,7 +4,18 @@
   margin: 2rem 0;
 }
 
-a {
+h1 {
+  justify-content: center;
+  align-items: center;
+}
+
+h1 a img{
+  height: 35px;
+  width:35px;
+  vertical-align: text-bottom;
+}
+
+main a {
   height: 100px;
   display: flex;
   align-items: center;
@@ -19,7 +30,7 @@ a {
   background-color: white;
 }
 
-a:hover {
+main a:hover {
   transform: scale(1.05);
   box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.3);
 }
