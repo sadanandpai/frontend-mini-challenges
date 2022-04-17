@@ -1,4 +1,5 @@
 const challenges = [
+  { title: "Counter", link: "counter" },
   { title: "Toast Popup", link: "toast-popup" },
   { title: "Guess the number", link: "guess-the-number" },
   { title: "Telephone formatter", link: "telephone-formatter" },

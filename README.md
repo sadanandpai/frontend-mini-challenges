@@ -12,6 +12,7 @@
 
 All the challenges are listed below
 
+- [Counter](https://sadanandpai.github.io/frontend-mini-challenges/mc/counter/)
 - [Toast Popup](https://sadanandpai.github.io/frontend-mini-challenges/mc/toast-popup/)
 - [Guess the number](https://sadanandpai.github.io/frontend-mini-challenges/mc/guess-the-number/)
 - [Telephone formatter](https://sadanandpai.github.io/frontend-mini-challenges/mc/telephone-formatter/)

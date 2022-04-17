@@ -1,0 +1,22 @@
+@import url(../../core.css);
+
+.btn {
+  color: black;
+  font-size: 1rem;
+}
+
+.counter-value{
+  font-size: 3rem;
+  font-weight: bold;
+  padding: 1rem;
+}
+
+input {
+  width: 3rem;
+  height: 2rem;
+  font-size: 1rem;
+}
+
+.change{
+  margin: 1rem 0;
+}
