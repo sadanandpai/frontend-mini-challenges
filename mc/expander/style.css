@@ -1,0 +1,68 @@
+@import url(../../core.css);
+
+.container{
+  margin: 1rem;
+}
+
+input {
+  padding: 4px;
+  width: 100px;
+  z-index: 1;
+  position: relative;
+}
+
+.sub-item {
+  padding: 20px 0 0 20px;
+  margin-left: 1.5rem;
+  position: relative;
+}
+
+.sub-item::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 20px;
+  height: 1px;
+  background: black;
+  left: 0;
+  top: 30px;
+  background: black;
+}
+
+.sub-item::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 1px;
+  height: 40px;
+  background: black;
+  left: 0;
+  top: -10px;
+  background: black;
+}
+
+.sub-item:not(:last-child)::after {
+  height: 100%;
+}
+
+.arrow {
+  display: inline-block;
+  cursor: pointer;
+  transition: all 0.15s;
+  user-select: none;
+}
+
+.arrow.open {
+  transform: rotate(90deg);
+  transition: all 0.15s;
+}
+
+.arrow:not(.open)~.sub-item,
+.arrow.hide {
+  display: none;
+}
+
+
+#base>.key-value-container>.remove {
+  display: none;
+}

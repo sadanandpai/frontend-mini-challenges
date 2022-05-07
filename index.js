@@ -18,6 +18,7 @@ const challenges = [
   { title: "Carousel", link: "carousel" },
   { title: "Paginator", link: "paginator" },
   { title: "Comment box", link: "comment-box" },
+  { title: "Key Value expander", link: "expander" },
   { title: "Array methods", link: "array-methods" },
   { title: "Stepper", link: "#" },
   { title: "Accordion", link: "#" },
@@ -35,10 +36,10 @@ const createAnchorElement = (obj) => {
   a.textContent = obj.title;
   a.href = `./mc/${obj.link}/`;
 
-  if(obj.link === '#'){
-    a.classList.add('disabled');
-    a.title = 'To be developed';
-    a.href = '#';
+  if (obj.link === "#") {
+    a.classList.add("disabled");
+    a.title = "To be developed";
+    a.href = "#";
   }
 
   return a;
