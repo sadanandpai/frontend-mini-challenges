@@ -62,7 +62,10 @@ input {
   display: none;
 }
 
-
 #base>.key-value-container>.remove {
   display: none;
+}
+
+.get-json-button{
+  margin: 1rem 0;
 }

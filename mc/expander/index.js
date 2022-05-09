@@ -1,5 +1,32 @@
 const base = document.getElementById("base");
+const addNewExpander = document.querySelector(".keyValueExpander");
 const keyValueTemplate = document.querySelector(".key-value");
+const getJsonTemplate = document.querySelector(".get-json");
+
+function getJSON(container) {
+  const object = {};
+
+  const keyEl = container.querySelector(".key");
+  const valueEl = container.querySelector(".key + .value");
+
+  if (keyEl && keyEl.value) {
+    if (valueEl.style.display !== "none") object[keyEl.value] = valueEl.value;
+    else {
+      let subItem = container.querySelector(".sub-item");
+      const subItems = [subItem];
+      while (subItem.nextElementSibling) {
+        subItems.push(subItem.nextElementSibling);
+        subItem = subItem.nextElementSibling;
+      }
+      let obj = {};
+      subItems.forEach((subItem) => {
+        obj = { ...obj, ...getJSON(subItem) };
+      });
+      object[keyEl.value] = obj;
+    }
+  }
+  return object;
+}
 
 function getElementsOfTemplate(element) {
   return {
@@ -18,14 +45,6 @@ function getNode() {
 
   arrowEl.addEventListener("click", () => {
     arrowEl.classList.toggle("open");
-  });
-
-  valueEl.addEventListener("input", () => {
-    if (valueEl.value === "") {
-      addEl.style.display = "inline";
-    } else {
-      addEl.style.display = "none";
-    }
   });
 
   addEl.addEventListener("click", () => {
@@ -52,7 +71,19 @@ function getNode() {
     }
   });
 
-  return keyValueNode;
+  return container;
 }
 
-base.appendChild(getNode());
+addNewExpander.addEventListener("click", () => {
+  const container = base.appendChild(getNode());
+  const getJSONButton = document.createElement("button");
+  getJSONButton.textContent = "Get JSON";
+  getJSONButton.classList.add("get-json-button");
+  base.appendChild(getJSONButton);
+
+  getJSONButton.addEventListener("click", () =>
+    console.log(JSON.stringify(getJSON(container)))
+  );
+});
+
+addNewExpander.click();
