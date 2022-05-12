@@ -29,5 +29,5 @@ All the challenges are listed below
 - [Carousel](https://sadanandpai.github.io/frontend-mini-challenges/mc/carousel/)
 - [Paginator](https://sadanandpai.github.io/frontend-mini-challenges/mc/paginator/)
 - [Comment box](https://sadanandpai.github.io/frontend-mini-challenges/mc/comment-box/)
-- [Key Value expander](https://sadanandpai.github.io/frontend-mini-challenges/mc/expander/)
+- [JSON Creator](https://sadanandpai.github.io/frontend-mini-challenges/mc/json-creator/)
 - [Array methods](https://sadanandpai.github.io/frontend-mini-challenges/mc/array-methods/)

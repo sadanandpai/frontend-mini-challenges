@@ -6,19 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="index.js" type="module" defer></script>
     <link rel="stylesheet" href="style.css" />
-    <title>Expander</title>
+    <title>JSON creator</title>
   </head>
   <body>
     <div class="container">
-      <h1 class="title text-center keyValueExpander">Key Value expander</h1>
-      <div id="base"></div>
+      <h1 class="title text-center">JSON creator</h1>
+      <div id="json-holder"></div>
+      <button class="get-json-button">Get JSON</button>
+      <div><output></output></div>
     </div>
 
-    <template class="key-value">
-      <div class="key-value-container">
+    <template class="json-template">
+      <div class="json-container">
         <span class="arrow hide">▶</span>
-        <input type="text" class="key" placeholder="property" />
-        <input type="text" class="value" placeholder="cost" />
+        <input type="text" class="key" placeholder="key" />
+        <input type="text" class="value" placeholder="value" />
         <button class="add">+</button>
         <button class="remove">x</button>
       </div>

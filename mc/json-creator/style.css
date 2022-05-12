@@ -1,6 +1,6 @@
 @import url(../../core.css);
 
-.container{
+.container {
   margin: 1rem;
 }
 
@@ -57,15 +57,15 @@ input {
   transition: all 0.15s;
 }
 
-.arrow:not(.open)~.sub-item,
+.arrow:not(.open) ~ .sub-item,
 .arrow.hide {
   display: none;
 }
 
-#base>.key-value-container>.remove {
+#json-holder > .json-container > .remove {
   display: none;
 }
 
-.get-json-button{
+.get-json-button {
   margin: 1rem 0;
 }

@@ -18,7 +18,7 @@ const challenges = [
   { title: "Carousel", link: "carousel" },
   { title: "Paginator", link: "paginator" },
   { title: "Comment box", link: "comment-box" },
-  { title: "Key Value expander", link: "expander" },
+  { title: "JSON Creator", link: "json-creator" },
   { title: "Array methods", link: "array-methods" },
   { title: "Stepper", link: "#" },
   { title: "Accordion", link: "#" },
