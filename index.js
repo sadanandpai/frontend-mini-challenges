@@ -13,6 +13,7 @@ const challenges = [
   { title: "Tic-Tac-Toe", link: "tic-tac-toe" },
   { title: "Chess board", link: "chess-board" },
   { title: "Skeleton Loader", link: "#" },
+  { title: "Chips Input", link: "chips-input" },
   { title: "Countdown Timer", link: "count-down-timer" },
   { title: "Area Selector", link: "area-selector" },
   { title: "Carousel", link: "carousel" },

@@ -24,6 +24,7 @@ All the challenges are listed below
 - [Todo List](https://sadanandpai.github.io/frontend-mini-challenges/mc/todo-list/)
 - [Tic Tac Toe](https://sadanandpai.github.io/frontend-mini-challenges/mc/tic-tac-toe/)
 - [Chess Board](https://sadanandpai.github.io/frontend-mini-challenges/mc/chess-board/)
+- [Chips Input](https://sadanandpai.github.io/frontend-mini-challenges/mc/chips-input/)
 - [Countdown Timer](https://sadanandpai.github.io/frontend-mini-challenges/mc/timer/)
 - [Area Selector](https://sadanandpai.github.io/frontend-mini-challenges/mc/area-selector/)
 - [Carousel](https://sadanandpai.github.io/frontend-mini-challenges/mc/carousel/)
