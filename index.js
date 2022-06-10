@@ -1,9 +1,9 @@
 const challenges = [
   { title: "Counter", link: "counter" },
-  { title: "Toast Popup", link: "toast-popup" },
   { title: "Guess the number", link: "guess-the-number" },
   { title: "Telephone formatter", link: "telephone-formatter" },
   { title: "Light & Dark mode", link: "light-dark-mode" },
+  { title: "Toast Popup", link: "toast-popup" },
   { title: "Password Strength", link: "password-strength" },
   { title: "Loaders...", link: "#" },
   { title: "Star Rating", link: "star-rating" },

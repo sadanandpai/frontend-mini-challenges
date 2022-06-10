@@ -11,44 +11,60 @@
   <body>
     <div class="container text-center">
       <h1 class="title">Toast Popup</h1>
-      <div class="position-selector">
-        <label for="topLeft">
-          <input type="radio" name="position" id="topLeft" value="top-left" />
-          Top Left
-        </label>
-        <label for="topCenter">
-          <input type="radio" name="position" id="topCenter" value="top-center" />
-          Top Center
-        </label>
-        <label for="topRight">
-          <input type="radio" name="position" id="topRight" value="top-right" />
-          Top Right
-        </label>
-        <label for="centerLeft">
-          <input type="radio" name="position" id="centerLeft" value="left-center" />
-          Center Left
-        </label>
-        <label for="centerRight">
-          <input type="radio" name="position" id="centerRight" value="right-center" />
-          Center Right
-        </label>
-        <label for="bottomLeft">
-          <input type="radio" name="position" id="bottomLeft" value="bottom-left" />
-          Bottom Left
-        </label>
-        <label for="bottomCenter">
-          <input type="radio" name="position" id="bottomCenter" value="bottom-center" />
-          Bottom Center
-        </label>
-        <label for="bottomRight">
-          <input type="radio" name="position" id="bottomRight" value="bottom-right" />
-          Bottom Right
-        </label>
-      </div>
 
-      <button id="showToast" class="btn btn-primary">Display</button>
+      <form class="flex">
+        <select name="position" id="horizontal-position">
+          <option value="left">Left</option>
+          <option value="right">Right</option>
+        </select>
 
-      <div id="toastContainer" class="toast-container"></div>
+        <select name="position" id="vertical-position">
+          <option value="top">Top</option>
+          <option value="bottom">Bottom</option>
+        </select>
+
+        <select name="type" id="type">
+          <option value="success">Success</option>
+          <option value="error">Error</option>
+          <option value="warning">Warning</option>
+          <option value="info">Info</option>
+        </select>
+
+        <input
+          type="text"
+          name="message"
+          id="message"
+          placeholder="Message"
+          value="This is a toast message!"
+        />
+
+        <label for="duration" class="flex"
+          >Duration
+          <input
+            type="range"
+            name="duration"
+            id="duration"
+            min="3"
+            max="10"
+            value="5"
+        /></label>
+
+        <button type="button" class="btn btn-primary" id="show-toast">
+          Show Toast
+        </button>
+      </form>
     </div>
+
+    <div class="toast-container tc-left-top flex"></div>
+    <div class="toast-container tc-left-bottom flex"></div>
+    <div class="toast-container tc-right-top flex"></div>
+    <div class="toast-container tc-right-bottom flex"></div>
+
+    <template id="toast-template">
+      <div class="toast flex">
+        <span class="toast-message"></span>
+        <button class="remove flex-center">&#x2715;</button>
+      </div>
+    </template>
   </body>
 </html>
