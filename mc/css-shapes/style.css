@@ -1,0 +1,153 @@
+@import url(../../core.css);
+
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 1em;
+}
+
+.grid > div {
+  border: 1px solid black;  
+  position: relative;
+  height: 250px;
+}
+
+.shape{
+  margin: auto;
+}
+
+.square {
+  width: 150px;
+  height: 150px;
+  background-color: skyblue;
+}
+
+.circle{
+  width: 150px;
+  height: 150px;
+  background-color: orange;
+  border-radius: 50%;
+}
+
+.triangle{
+  width: 0;
+  height: 0;
+  border-top: 25px solid transparent;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 100px solid green;
+}
+
+.parallelogram{
+  width: 150px;
+  height: 150px;
+  background-color: pink;
+  transform: skewX(-30deg);
+}
+
+.diamond{
+  width: 100px;
+  height: 100px;
+  background-color: blueviolet;
+  transform: translateY(25px) rotate(-45deg) ;
+}
+
+.egg {
+  display: block;
+  width: 100px;
+  height: 150px;
+  border: 4px solid black;
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+}
+
+.star {
+  margin-top: 60px;
+  position: relative;
+  display: block;
+  color: red;
+  width: 0;
+  height: 0;
+  border-right: 100px solid transparent;
+  border-bottom: 70px solid yellowgreen;
+  border-left: 100px solid transparent;
+  transform: rotate(35deg);
+}
+
+.star:before {
+  border-bottom: 80px solid yellowgreen;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  position: absolute;
+  height: 0;
+  width: 0;
+  top: -45px;
+  left: -65px;
+  display: block;
+  content: '';
+  transform: rotate(-35deg);
+}
+
+.star:after {
+  position: absolute;
+  display: block;
+  color: yellowgreen;
+  top: 3px;
+  left: -105px;
+  width: 0px;
+  height: 0px;
+  border-right: 100px solid transparent;
+  border-bottom: 70px solid yellowgreen;
+  border-left: 100px solid transparent;
+  transform: rotate(-70deg);
+  content: '';
+}
+
+.heart {
+  position: relative;
+  width: 100px;
+  height: 90px;
+  transform: scale(1.5);
+  margin-top: 60px;
+}
+
+.heart:before,
+.heart:after {
+  position: absolute;
+  content: "";
+  left: 50px;
+  top: 0;
+  width: 50px;
+  height: 80px;
+  background: red;
+  border-radius: 50px 50px 0 0;
+  transform: rotate(-45deg);
+  transform-origin: 0 100%;
+}
+
+.heart:after {
+  left: 0;
+  transform: rotate(45deg);
+  transform-origin: 100% 100%;
+}
+
+.loader{
+  width: 125px;
+  height: 125px;
+  border: 4px solid brown;
+  border-top-width: 0;
+  border-left-width: 0;
+  border-right-width: 0;
+  border-radius: 50%;
+  animation: loader linear 1s infinite;
+  margin-top: 25px;
+}
+
+@keyframes loader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

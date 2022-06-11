@@ -17,6 +17,7 @@ All the challenges are listed below
 - [Telephone formatter](https://sadanandpai.github.io/frontend-mini-challenges/mc/telephone-formatter/)
 - [Light & Dark mode](https://sadanandpai.github.io/frontend-mini-challenges/mc/theme/)
 - [Toast Popup](https://sadanandpai.github.io/frontend-mini-challenges/mc/toast-popup/)
+- [CSS Shapes](https://sadanandpai.github.io/frontend-mini-challenges/mc/css-shapes/)
 - [Password strength](https://sadanandpai.github.io/frontend-mini-challenges/mc/password-strength/)
 - [Star Rating](https://sadanandpai.github.io/frontend-mini-challenges/mc/star-rating/)
 - [Pixel Art](https://sadanandpai.github.io/frontend-mini-challenges/mc/pixel-art/)
