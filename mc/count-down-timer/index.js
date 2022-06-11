@@ -1,5 +1,5 @@
-const display = document.getElementById("display");
-const controls = document.getElementById("controls");
+const display = document.getElementById('display');
+const controls = document.getElementById('controls');
 
 class Timer {
   msbRegex = /^[0-5]$/;
@@ -21,17 +21,17 @@ class Timer {
     this.display = document.getElementById(display);
   }
 
-  onClick = (event) => {
-    if (event.target.tagName === "INPUT") event.target.select();
-    else if (event.target.id === "start") this.onStart(event);
-    else if (event.target.id === "stop") this.onStop(event);
-    else if (event.target.id === "reset") this.onReset(event);
+  onClick = event => {
+    if (event.target.tagName === 'INPUT') event.target.select();
+    else if (event.target.id === 'start') this.onStart(event);
+    else if (event.target.id === 'stop') this.onStop(event);
+    else if (event.target.id === 'reset') this.onReset(event);
   };
 
   onStart() {
     this.setControls(true, false);
 
-    this.display.classList.add("progress");
+    this.display.classList.add('progress');
     this.setInputsDisabledStatus(true);
     this.setTime();
     this.startTimer();
@@ -39,7 +39,7 @@ class Timer {
 
   onStop() {
     this.setControls(false, true);
-    this.display.classList.remove("progress");
+    this.display.classList.remove('progress');
     this.setInputsDisabledStatus(false);
     clearInterval(this.intervalId);
   }
@@ -55,13 +55,13 @@ class Timer {
     this.stop.disabled = stopStatus;
   }
 
-  onInput = (event) => {
+  onInput = event => {
     const value = Number(event.data);
 
-    if (typeof value === "number") {
-      if (event.target.id === "minMSB" || event.target.id === "secMSB") {
+    if (typeof value === 'number') {
+      if (event.target.id === 'minMSB' || event.target.id === 'secMSB') {
         this.onValueEntry(this.msbRegex, event.target, value);
-      } else if (event.target.id === "minLSB" || event.target.id === "secLSB") {
+      } else if (event.target.id === 'minLSB' || event.target.id === 'secLSB') {
         this.onValueEntry(this.lsbRegex, event.target, value);
       }
     }
@@ -87,7 +87,7 @@ class Timer {
 
   resetControls() {
     clearInterval(this.intervalId);
-    this.display.classList.remove("progress");
+    this.display.classList.remove('progress');
     this.setInputsDisabledStatus(false);
   }
 
@@ -126,20 +126,11 @@ class Timer {
   }
 
   setDisplay(mins, secs) {
-    [this.minMSB.value, this.minLSB.value] = String(mins).padStart(2, 0).split("");
-    [this.secMSB.value, this.secLSB.value] = String(secs).padStart(2, 0).split("");
+    [this.minMSB.value, this.minLSB.value] = String(mins).padStart(2, 0).split('');
+    [this.secMSB.value, this.secLSB.value] = String(secs).padStart(2, 0).split('');
   }
 }
 
-const timer = new Timer(
-  "minMSB",
-  "minLSB",
-  "secMSB",
-  "secLSB",
-  "start",
-  "stop",
-  "reset",
-  "display"
-);
-display.addEventListener("input", timer.onInput);
-document.body.addEventListener("click", timer.onClick);
+const timer = new Timer('minMSB', 'minLSB', 'secMSB', 'secLSB', 'start', 'stop', 'reset', 'display');
+display.addEventListener('input', timer.onInput);
+document.body.addEventListener('click', timer.onClick);

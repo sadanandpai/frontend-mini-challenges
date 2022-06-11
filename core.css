@@ -25,7 +25,7 @@ body {
   display: flex;
 }
 
-.flex-center{
+.flex-center {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -55,11 +55,12 @@ body {
   padding: 4px 6px;
 }
 
-button:disabled, button.btn:disabled {
+button:disabled,
+button.btn:disabled {
   cursor: not-allowed;
 }
 
-.disabled{
+.disabled {
   color: grey;
   cursor: not-allowed;
 }

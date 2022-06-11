@@ -1,6 +1,6 @@
 @import url(../../core.css);
 
-.transfer-list{
+.transfer-list {
   width: 100%;
 }
 
@@ -15,7 +15,7 @@ section {
   flex-basis: 0;
 }
 
-.controls{
+.controls {
   align-items: center;
   max-width: 5rem;
 }

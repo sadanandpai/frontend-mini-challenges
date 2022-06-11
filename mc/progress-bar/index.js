@@ -1,23 +1,23 @@
-const progress = document.getElementById("progress");
+const progress = document.getElementById('progress');
 let isInProgress = false;
 let reqAniFrameId;
 
-const progressController = document.querySelector(".progress-controller");
-const startButton = document.getElementById("start");
-const stopButton = document.getElementById("stop");
-const resetButton = document.getElementById("reset");
+const progressController = document.querySelector('.progress-controller');
+const startButton = document.getElementById('start');
+const stopButton = document.getElementById('stop');
+const resetButton = document.getElementById('reset');
 
 stopButton.disabled = true;
-progressController.addEventListener("click", clickHandler);
+progressController.addEventListener('click', clickHandler);
 
 function clickHandler(e) {
   const id = e.target.id;
 
-  if (id === "start" && !isInProgress) {
+  if (id === 'start' && !isInProgress) {
     onStart();
-  } else if (id === "stop" && isInProgress) {
+  } else if (id === 'stop' && isInProgress) {
     onStop();
-  } else if (id === "reset") {
+  } else if (id === 'reset') {
     onStop();
     setProgressWidth(0);
   }
@@ -51,9 +51,9 @@ function stopProgress() {
 }
 
 function getProgressWidth() {
-  return +progress.style.width.split("%")[0];
+  return +progress.style.width.split('%')[0];
 }
 
 function setProgressWidth(progressPercent) {
-  progress.style.width = progressPercent + "%";
+  progress.style.width = progressPercent + '%';
 }

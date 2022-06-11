@@ -6,41 +6,42 @@ form {
   gap: 1rem;
 }
 
-input, select{
+input,
+select {
   font-size: 1rem;
-  padding:0.5em;
+  padding: 0.5em;
 }
 
-#message{
+#message {
   min-width: 25ch;
 }
 
-[for='duration']{
+[for='duration'] {
   align-items: center;
 }
 
 .toast-container {
   position: fixed;
-  flex-direction:column;
+  flex-direction: column;
   gap: 0.5rem;
 }
 
-.tc-left-top{
+.tc-left-top {
   top: 1rem;
   left: 1rem;
 }
 
-.tc-left-bottom{
+.tc-left-bottom {
   bottom: 1rem;
   left: 1rem;
 }
 
-.tc-right-top{
+.tc-right-top {
   top: 1rem;
   right: 1rem;
 }
 
-.tc-right-bottom{
+.tc-right-bottom {
   bottom: 1rem;
   right: 1rem;
 }
@@ -64,47 +65,48 @@ input, select{
   background-color: #ffa500;
 }
 
-.toast.info{
+.toast.info {
   background-color: lightyellow;
 }
 
-.toast::before{
+.toast::before {
   font-size: 0.85em;
   padding: 0.1em 0.5em;
   font-weight: bold;
   min-width: 1rem;
 }
 
-.toast.success::before{
-  content: "✓";
+.toast.success::before {
+  content: '✓';
 }
 
-.toast.error::before{
-  content: "✗";
+.toast.error::before {
+  content: '✗';
 }
 
-.toast.warning::before{
-  content: "⚠";
+.toast.warning::before {
+  content: '⚠';
 }
 
-.toast.info::before{
-  content: "ⓘ";
+.toast.info::before {
+  content: 'ⓘ';
 }
 
-.remove{
+.remove {
   all: unset;
   margin-left: 1em;
   cursor: pointer;
 }
 
-.tc-left-top .toast, .tc-left-bottom .toast{
+.tc-left-top .toast,
+.tc-left-bottom .toast {
   animation: appearFromLeft 0.1s ease-in forwards;
 }
 
-.tc-left-top .toast.fade-out-left, .tc-left-bottom .toast.fade-out-left{
+.tc-left-top .toast.fade-out-left,
+.tc-left-bottom .toast.fade-out-left {
   animation: fadeOutToLeft 0.1s ease-in forwards;
 }
-
 
 @keyframes appearFromLeft {
   0% {
@@ -124,14 +126,15 @@ input, select{
   }
 }
 
-.tc-right-top .toast, .tc-right-bottom .toast{
+.tc-right-top .toast,
+.tc-right-bottom .toast {
   animation: appearFromRight 0.1s ease-in forwards;
 }
 
-.tc-right-top .toast.fade-out-right, .tc-right-bottom .toast.fade-out-right{
+.tc-right-top .toast.fade-out-right,
+.tc-right-bottom .toast.fade-out-right {
   animation: fadeOutToRight 0.1s ease-in forwards;
 }
-
 
 @keyframes appearFromRight {
   0% {

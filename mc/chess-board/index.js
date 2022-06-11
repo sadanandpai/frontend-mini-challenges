@@ -1,18 +1,18 @@
-"use strict";
+'use strict';
 
-var board = document.querySelector(".board");
+var board = document.querySelector('.board');
 var clickedOnCell = false;
 createBoard(board, 8);
 
 function createBoard(element, rows, cols = rows) {
   var gridDocFragment = document.createDocumentFragment();
   for (let i = 0; i < rows; i++) {
-    var row = document.createElement("div");
+    var row = document.createElement('div');
     for (let j = 0; j < cols; j++) {
-      var col = document.createElement("div");
+      var col = document.createElement('div');
       col.dataset.locX = i;
       col.dataset.locY = j;
-      col.classList.add("box");
+      col.classList.add('box');
       row.appendChild(col);
     }
     gridDocFragment.appendChild(row);
@@ -20,14 +20,14 @@ function createBoard(element, rows, cols = rows) {
   element.appendChild(gridDocFragment);
 }
 
-document.addEventListener("click", onClick);
+document.addEventListener('click', onClick);
 
 function onClick(event) {
   var element = event.target;
 
   if (clickedOnCell) resetChessGrid();
 
-  if (element.classList.contains("box")) {
+  if (element.classList.contains('box')) {
     clickedOnCell = true;
     setColor(element);
     let y1 = +element.dataset.locY;
@@ -54,13 +54,11 @@ function onClick(event) {
 }
 
 function setColor(element) {
-  if (element) element.classList.add("selected");
+  if (element) element.classList.add('selected');
 }
 
 function resetChessGrid() {
   clickedOnCell = false;
-  const elements = document
-    .querySelector(".board")
-    .getElementsByClassName("selected");
-  while (elements.length !== 0) elements[0].classList.remove("selected");
+  const elements = document.querySelector('.board').getElementsByClassName('selected');
+  while (elements.length !== 0) elements[0].classList.remove('selected');
 }

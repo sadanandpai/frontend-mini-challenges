@@ -1,14 +1,14 @@
 @import url(../../core.css);
 
-.board{
+.board {
   display: inline-grid;
 }
 
-.box{
+.box {
   outline: 1px solid grey;
 }
 
-.info{
+.info {
   margin-top: 20px;
   font-size: large;
 }

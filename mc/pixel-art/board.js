@@ -11,8 +11,8 @@ Board.prototype.generateGrid = function () {
   const fragment = document.createDocumentFragment();
 
   for (let i = 0; i < this.row * this.col; i++) {
-    const div = document.createElement("div");
-    div.classList.add("box");
+    const div = document.createElement('div');
+    div.classList.add('box');
     fragment.appendChild(div);
   }
 
@@ -23,9 +23,9 @@ Board.prototype.generateColorRow = function () {
   const fragment = document.createDocumentFragment();
 
   for (let i = 0; i < this.col; i++) {
-    const div = document.createElement("div");
-    div.classList.add("box");
-    div.classList.add("palette");
+    const div = document.createElement('div');
+    div.classList.add('box');
+    div.classList.add('palette');
     div.style.backgroundColor = getGetHEXColorCode();
     fragment.appendChild(div);
   }
@@ -36,12 +36,12 @@ Board.prototype.generateColorRow = function () {
 function getGetHEXColorCode() {
   const rValue = Math.round(0xff * Math.random())
     .toString(16)
-    .padStart(2, "0");
+    .padStart(2, '0');
   const gValue = Math.round(0xff * Math.random())
     .toString(16)
-    .padStart(2, "0");
+    .padStart(2, '0');
   const bValue = Math.round(0xff * Math.random())
     .toString(16)
-    .padStart(2, "0");
-  return "#" + rValue + gValue + bValue;
+    .padStart(2, '0');
+  return '#' + rValue + gValue + bValue;
 }

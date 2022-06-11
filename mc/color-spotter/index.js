@@ -5,16 +5,8 @@ const getRandomColors = function () {
   var saturation = Math.round(Math.random() * 100) % 85;
   var lightness = Math.round(Math.random() * 100) % 85;
 
-  var color =
-    "hsl(" + Math.round(360 * hue) + "," + saturation + "%," + lightness + "%)";
-  var oddColor =
-    "hsl(" +
-    Math.round(360 * hue) +
-    "," +
-    saturation +
-    "%," +
-    (lightness + 5) +
-    "%)";
+  var color = 'hsl(' + Math.round(360 * hue) + ',' + saturation + '%,' + lightness + '%)';
+  var oddColor = 'hsl(' + Math.round(360 * hue) + ',' + saturation + '%,' + (lightness + 5) + '%)';
 
   return {
     color,
@@ -22,7 +14,7 @@ const getRandomColors = function () {
   };
 };
 
-var element = document.getElementById("board");
+var element = document.getElementById('board');
 var startingSize = 4;
 // updateStartingSize(startingSize);
 var gameSize = startingSize;
@@ -44,16 +36,16 @@ function createBoard(element, size) {
   var oddCellY = Math.ceil(Math.random() * size);
 
   for (let i = 1; i <= size; i++) {
-    var row = document.createElement("div");
+    var row = document.createElement('div');
     for (let j = 1; j <= size; j++) {
-      var col = document.createElement("div");
+      var col = document.createElement('div');
       col.dataset.locX = i;
       col.dataset.locY = j;
-      col.classList.add("box");
+      col.classList.add('box');
 
       if (i === oddCellX && j === oddCellY) {
         col.style.backgroundColor = gridColor.oddColor;
-        col.classList.add("odd-box");
+        col.classList.add('odd-box');
       } else {
         col.style.backgroundColor = gridColor.color;
       }
@@ -65,20 +57,20 @@ function createBoard(element, size) {
   element.appendChild(gridDocFragment);
 }
 
-document.addEventListener("click", (event) => {
+document.addEventListener('click', event => {
   if (!clickAllowed) return;
-  if (event.target.classList.contains("box")) {
-    if (event.target.classList.contains("odd-box")) {
-      element.innerHTML = "";
-      document.getElementById("score").textContent = ++score;
+  if (event.target.classList.contains('box')) {
+    if (event.target.classList.contains('odd-box')) {
+      element.innerHTML = '';
+      document.getElementById('score').textContent = ++score;
       createBoard(element, ++gameSize);
-      document.getElementById("statingSizeSelector").disabled = true;
+      document.getElementById('statingSizeSelector').disabled = true;
     } else {
       clickAllowed = false;
-      document.querySelector(".odd-box").style.border = "4px solid red";
+      document.querySelector('.odd-box').style.border = '2px solid red';
       shakeTheGrid(function () {
         updateScores();
-        element.innerHTML = "";
+        element.innerHTML = '';
         gameSize = startingSize;
         createBoard(element, gameSize);
         clickAllowed = true;
@@ -87,37 +79,35 @@ document.addEventListener("click", (event) => {
   }
 });
 
-document
-  .getElementById("statingSizeSelector")
-  .addEventListener("input", function () {
-    updateStartingSize(this.value);
-  });
+document.getElementById('statingSizeSelector').addEventListener('input', function () {
+  updateStartingSize(this.value);
+});
 
 function updateStartingSize(value) {
-  document.getElementById("statingSizeSelectorOutput").textContent = value;
+  document.getElementById('statingSizeSelectorOutput').textContent = value;
   startingSize = value;
   gameSize = startingSize;
 
   if (score === 0) {
-    element.innerHTML = "";
+    element.innerHTML = '';
     createBoard(element, gameSize);
   }
 }
 
 function shakeTheGrid(callback) {
-  element.classList.add("shake");
+  element.classList.add('shake');
   setTimeout(() => {
-    element.classList.remove("shake");
+    element.classList.remove('shake');
     callback();
   }, 2000);
 }
 
 function updateScores() {
   if (score > maxScore) {
-    document.getElementById("maxScore").textContent = score;
+    document.getElementById('maxScore').textContent = score;
     maxScore = score;
   }
   score = 0;
-  document.getElementById("score").textContent = score;
-  document.getElementById("statingSizeSelector").disabled = false;
+  document.getElementById('score').textContent = score;
+  document.getElementById('statingSizeSelector').disabled = false;
 }

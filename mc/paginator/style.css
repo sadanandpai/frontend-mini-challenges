@@ -55,11 +55,11 @@ button:disabled {
 }
 
 .dot-left:hover::before {
-  content: "<<";
+  content: '<<';
 }
 
 .dot-right:hover::before {
-  content: ">>";
+  content: '>>';
 }
 
 .dot::before {

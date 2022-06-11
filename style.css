@@ -9,9 +9,9 @@ h1 {
   align-items: center;
 }
 
-h1 a img{
+h1 a img {
   height: 35px;
-  width:35px;
+  width: 35px;
   vertical-align: text-bottom;
 }
 
@@ -52,4 +52,3 @@ main a:hover {
     grid-template-columns: repeat(5, 1fr);
   }
 }
-

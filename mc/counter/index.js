@@ -1,18 +1,18 @@
-const increment = document.getElementById("increment");
-const decrement = document.getElementById("decrement");
-const changeBy = document.getElementById("changeBy");
-const reset = document.getElementById("reset");
-const value = document.querySelector(".value");
+const increment = document.getElementById('increment');
+const decrement = document.getElementById('decrement');
+const changeBy = document.getElementById('changeBy');
+const reset = document.getElementById('reset');
+const value = document.querySelector('.value');
 
-increment.addEventListener("click", () => {
+increment.addEventListener('click', () => {
   value.textContent = +value.textContent + changeBy.valueAsNumber;
 });
 
-decrement.addEventListener("click", () => {
+decrement.addEventListener('click', () => {
   value.textContent = parseInt(value.textContent) - parseInt(changeBy.value);
 });
 
-changeBy.addEventListener("change", () => {
+changeBy.addEventListener('change', () => {
   const changeByValue = changeBy.valueAsNumber;
 
   if (Number.isNaN(changeByValue)) {
@@ -24,6 +24,6 @@ changeBy.addEventListener("change", () => {
   }
 });
 
-reset.addEventListener("click", () => {
+reset.addEventListener('click', () => {
   value.textContent = 0;
 });

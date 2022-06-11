@@ -1,6 +1,6 @@
-const carousel = document.getElementById("carousel");
-const leftHandle = document.getElementById("leftHandle");
-const rightHandle = document.getElementById("rightHandle");
+const carousel = document.getElementById('carousel');
+const leftHandle = document.getElementById('leftHandle');
+const rightHandle = document.getElementById('rightHandle');
 
 class Carousel {
   constructor(carousel, images, leftHandle, rightHandle, selected = 0) {
@@ -17,9 +17,9 @@ class Carousel {
   }
 
   addListeners() {
-    this.leftHandle.addEventListener("click", this.swipeLeft);
-    this.rightHandle.addEventListener("click", this.swipeRight);
-    this.dotHolder.addEventListener("click", this.dotSelect);
+    this.leftHandle.addEventListener('click', this.swipeLeft);
+    this.rightHandle.addEventListener('click', this.swipeRight);
+    this.dotHolder.addEventListener('click', this.dotSelect);
   }
 
   swipeLeft = () => {
@@ -34,8 +34,8 @@ class Carousel {
     this.setSelection();
   };
 
-  dotSelect = (event) => {
-    if (!event.target.classList.contains("dot")) return;
+  dotSelect = event => {
+    if (!event.target.classList.contains('dot')) return;
 
     this.selected = +event.target.dataset.index;
     console.log(this.selected);
@@ -43,21 +43,21 @@ class Carousel {
   };
 
   setSelection() {
-    const imageHolder = this.carousel.querySelector(".img-holder");
+    const imageHolder = this.carousel.querySelector('.img-holder');
     const dot = this.dotHolder.querySelector(`[data-index='${this.selected}']`);
 
     imageHolder.style.transform = `translateX(${256 * -this.selected}px)`;
-    this.dotHolder.querySelector(".selected")?.classList.remove("selected");
-    dot.classList.add("selected");
+    this.dotHolder.querySelector('.selected')?.classList.remove('selected');
+    dot.classList.add('selected');
   }
 
   placeImages() {
-    const imageFrame = document.createElement("div");
-    imageFrame.classList.add("img-frame");
-    const imageHolder = document.createElement("div");
-    imageHolder.classList.add("img-holder");
-    this.images.forEach((image) => {
-      const img = document.createElement("img");
+    const imageFrame = document.createElement('div');
+    imageFrame.classList.add('img-frame');
+    const imageHolder = document.createElement('div');
+    imageHolder.classList.add('img-holder');
+    this.images.forEach(image => {
+      const img = document.createElement('img');
       img.src = `./${image}`;
       imageHolder.appendChild(img);
     });
@@ -66,12 +66,12 @@ class Carousel {
   }
 
   createProgress() {
-    const dotHolder = document.createElement("div");
-    dotHolder.classList.add("dot-holder");
+    const dotHolder = document.createElement('div');
+    dotHolder.classList.add('dot-holder');
     this.images.forEach((_, idx) => {
-      const span = document.createElement("span");
+      const span = document.createElement('span');
       span.dataset.index = idx;
-      span.classList.add("dot");
+      span.classList.add('dot');
       dotHolder.appendChild(span);
     });
     this.carousel.appendChild(dotHolder);
@@ -81,7 +81,7 @@ class Carousel {
 
 new Carousel(
   carousel,
-  ["images/1.jpg", "images/2.jpg", "images/3.jpg", "images/4.jpg", "images/5.jpg"],
+  ['images/1.jpg', 'images/2.jpg', 'images/3.jpg', 'images/4.jpg', 'images/5.jpg'],
   leftHandle,
   rightHandle
 );

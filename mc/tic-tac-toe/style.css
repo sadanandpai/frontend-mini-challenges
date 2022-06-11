@@ -12,13 +12,12 @@
   height: 5rem;
   cursor: pointer;
   font-size: 2rem;
-  
 }
 
-.row{
+.row {
   margin-top: 1rem;
 }
 
-.winner{
+.winner {
   font-weight: bold;
 }

@@ -8,12 +8,12 @@
 }
 
 .star-empty::before {
-  content: "☆";
+  content: '☆';
 }
 
 .star-filled::before {
   color: rgba(231, 198, 10, 0.685);
-  content: "★";
+  content: '★';
   cursor: pointer;
 }
 

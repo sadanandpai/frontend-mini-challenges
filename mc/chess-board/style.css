@@ -1,10 +1,10 @@
 @import url(../../core.css);
 
-*{
+* {
   box-sizing: border-box;
 }
 
-.board{
+.board {
   height: 320px;
   width: 320px;
   border: 2px solid black;
@@ -14,19 +14,19 @@
   margin: auto;
 }
 
-.board div{
+.board div {
   display: flex;
   flex-grow: 1;
 }
 
-.board div:nth-child(even) div:nth-child(odd){
+.board div:nth-child(even) div:nth-child(odd) {
   background-color: black;
 }
 
-.board div:nth-child(odd) div:nth-child(even){
+.board div:nth-child(odd) div:nth-child(even) {
   background-color: black;
 }
 
-.board div div.box.selected{
+.board div div.box.selected {
   background-color: red;
 }

@@ -1,35 +1,35 @@
 @import url(../../core.css);
 
-.method-list{
+.method-list {
   display: flex;
   flex-direction: column;
 }
 
-input{
+input {
   padding: 0.2rem;
   margin: 0.5rem;
   width: 200px;
 }
 
-.method-list > div{
+.method-list > div {
   box-shadow: 0 2px 8px 0 rgba(44, 30, 30, 0.2);
   margin: 0.5rem 0;
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.method-list > div > div{
+.method-list > div > div {
   margin: 5px 0;
 }
 
-select{
+select {
   background-color: aqua;
   font-weight: bold;
-  letter-spacing:0.25ch;
+  letter-spacing: 0.25ch;
 }
 
-button{
+button {
   border: none;
-  background-color:black;
+  background-color: black;
   color: white;
   padding: 0.5rem 1rem;
   font-size: 1.1rem;

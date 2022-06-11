@@ -5,7 +5,7 @@
   font-size: 1rem;
 }
 
-.counter-value{
+.counter-value {
   font-size: 3rem;
   font-weight: bold;
   padding: 1rem;
@@ -17,6 +17,6 @@ input {
   font-size: 1rem;
 }
 
-.change{
+.change {
   margin: 1rem 0;
 }

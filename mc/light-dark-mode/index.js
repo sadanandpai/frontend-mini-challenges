@@ -1,12 +1,12 @@
-const themeSwitch = document.getElementById("themeSwitch");
-const innnerThemeSwitch = document.getElementById("innnerThemeSwitch");
+const themeSwitch = document.getElementById('themeSwitch');
+const innnerThemeSwitch = document.getElementById('innnerThemeSwitch');
 
-themeSwitch.addEventListener("change", function () {
+themeSwitch.addEventListener('change', function () {
   if (themeSwitch.checked) {
-    document.body.classList.add("dark");
+    document.body.classList.add('dark');
     innnerThemeSwitch.checked = true;
   } else {
-    document.body.classList.remove("dark");
+    document.body.classList.remove('dark');
     innnerThemeSwitch.checked = false;
   }
 });

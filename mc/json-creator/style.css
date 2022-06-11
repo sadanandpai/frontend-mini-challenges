@@ -18,7 +18,7 @@ input {
 }
 
 .sub-item::before {
-  content: "";
+  content: '';
   display: block;
   position: absolute;
   width: 20px;
@@ -30,7 +30,7 @@ input {
 }
 
 .sub-item::after {
-  content: "";
+  content: '';
   display: block;
   position: absolute;
   width: 1px;

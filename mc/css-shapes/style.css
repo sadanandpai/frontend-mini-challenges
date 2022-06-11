@@ -1,6 +1,5 @@
 @import url(../../core.css);
 
-
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -8,12 +7,12 @@
 }
 
 .grid > div {
-  border: 1px solid black;  
+  border: 1px solid black;
   position: relative;
   height: 250px;
 }
 
-.shape{
+.shape {
   margin: auto;
 }
 
@@ -23,14 +22,14 @@
   background-color: skyblue;
 }
 
-.circle{
+.circle {
   width: 150px;
   height: 150px;
   background-color: orange;
   border-radius: 50%;
 }
 
-.triangle{
+.triangle {
   width: 0;
   height: 0;
   border-top: 25px solid transparent;
@@ -39,18 +38,18 @@
   border-bottom: 100px solid green;
 }
 
-.parallelogram{
+.parallelogram {
   width: 150px;
   height: 150px;
   background-color: pink;
   transform: skewX(-30deg);
 }
 
-.diamond{
+.diamond {
   width: 100px;
   height: 100px;
   background-color: blueviolet;
-  transform: translateY(25px) rotate(-45deg) ;
+  transform: translateY(25px) rotate(-45deg);
 }
 
 .egg {
@@ -114,7 +113,7 @@
 .heart:before,
 .heart:after {
   position: absolute;
-  content: "";
+  content: '';
   left: 50px;
   top: 0;
   width: 50px;
@@ -131,7 +130,7 @@
   transform-origin: 100% 100%;
 }
 
-.loader{
+.loader {
   width: 125px;
   height: 125px;
   border: 4px solid brown;

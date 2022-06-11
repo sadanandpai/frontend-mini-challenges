@@ -1,16 +1,16 @@
-const root = document.querySelector(".grid");
+const root = document.querySelector('.grid');
 const rows = window.innerHeight / 60 - 3,
   cols = window.innerWidth / 60 - 3;
 const state = [];
 
 const fragment = document.createDocumentFragment();
 for (let i = 0; i < rows; i++) {
-  const row = document.createElement("div");
-  row.classList.add("row");
+  const row = document.createElement('div');
+  row.classList.add('row');
   state.push([]);
   for (let j = 0; j < cols; j++) {
-    const box = document.createElement("div");
-    box.classList.add("box");
+    const box = document.createElement('div');
+    box.classList.add('box');
     box.dataset.x = i;
     box.dataset.y = j;
     state[i].push(box);
@@ -21,17 +21,17 @@ for (let i = 0; i < rows; i++) {
 root.appendChild(fragment);
 
 let x1, y1;
-root.addEventListener("mousedown", (event) => {
-  if (event.target.classList.contains("box")) {
+root.addEventListener('mousedown', event => {
+  if (event.target.classList.contains('box')) {
     x1 = event.target.dataset.x;
     y1 = event.target.dataset.y;
     markCells(x1, y1, x1, y1);
   }
 });
 
-root.addEventListener("mousemove", (event) => {
+root.addEventListener('mousemove', event => {
   if (x1 && y1) {
-    if (event.target.classList.contains("box")) {
+    if (event.target.classList.contains('box')) {
       const x2 = event.target.dataset.x;
       const y2 = event.target.dataset.y;
       unmarkCells();
@@ -40,9 +40,9 @@ root.addEventListener("mousemove", (event) => {
   }
 });
 
-root.addEventListener("mouseup", clearAction);
+root.addEventListener('mouseup', clearAction);
 
-root.addEventListener("mouseleave", clearAction);
+root.addEventListener('mouseleave', clearAction);
 
 function clearAction() {
   x1 = null;
@@ -59,7 +59,7 @@ function markCells(x2, y2) {
 
     for (let i = minRow; i <= maxRow; i++) {
       for (let j = minCol; j <= maxCol; j++) {
-        state[i][j].style.backgroundColor = "skyblue";
+        state[i][j].style.backgroundColor = 'skyblue';
       }
     }
   }
@@ -68,7 +68,7 @@ function markCells(x2, y2) {
 function unmarkCells() {
   for (let i = 0; i < rows; i++) {
     for (let j = 0; j < cols; j++) {
-      state[i][j].style.backgroundColor = "white";
+      state[i][j].style.backgroundColor = 'white';
     }
   }
 }

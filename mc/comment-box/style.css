@@ -1,6 +1,6 @@
 @import url(../../core.css);
 
-p{
+p {
   margin: 0.25rem 0;
 }
 
@@ -10,7 +10,7 @@ p{
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.comment-text[contenteditable="true"] {
+.comment-text[contenteditable='true'] {
   outline: 1px solid #ccc;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
@@ -32,6 +32,6 @@ textarea {
   resize: none;
 }
 
-#commentContainer > .comment:first-child > .main-comment:first-child{
+#commentContainer > .comment:first-child > .main-comment:first-child {
   background-color: azure;
 }

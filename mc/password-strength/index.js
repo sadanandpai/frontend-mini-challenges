@@ -1,7 +1,7 @@
-const password = document.getElementById("password");
-const progressBar = document.getElementById("progressBar");
+const password = document.getElementById('password');
+const progressBar = document.getElementById('progressBar');
 
-password.addEventListener("input", function () {
+password.addEventListener('input', function () {
   // check if password contains at least one number
   const hasNumber = /\d/;
   // check if password contains at least one uppercase letter
@@ -17,18 +17,15 @@ password.addEventListener("input", function () {
   let strength = Math.min(6, Math.floor(value.length / 3));
   strength +=
     value.length > 3
-      ? hasNumber.test(value) +
-        hasUpperCase.test(value) +
-        hasLowerCase.test(value) +
-        hasSpecial.test(value)
+      ? hasNumber.test(value) + hasUpperCase.test(value) + hasLowerCase.test(value) + hasSpecial.test(value)
       : 0;
 
-  progressBar.style.width = strength * 10 + "%";
+  progressBar.style.width = strength * 10 + '%';
   if (strength > 8) {
-    progressBar.style.backgroundColor = "green";
+    progressBar.style.backgroundColor = 'green';
   } else if (strength > 5) {
-    progressBar.style.backgroundColor = "orange";
+    progressBar.style.backgroundColor = 'orange';
   } else {
-    progressBar.style.backgroundColor = "red";
+    progressBar.style.backgroundColor = 'red';
   }
 });
