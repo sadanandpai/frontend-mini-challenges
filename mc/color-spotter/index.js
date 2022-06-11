@@ -5,8 +5,16 @@ const getRandomColors = function () {
   var saturation = Math.round(Math.random() * 100) % 85;
   var lightness = Math.round(Math.random() * 100) % 85;
 
-  var color = "hsl(" + Math.round(360 * hue) + "," + saturation + "%," + lightness + "%)";
-  var oddColor = "hsl(" + Math.round(360 * hue) + "," + saturation + "%," + (lightness + 5) + "%)";
+  var color =
+    "hsl(" + Math.round(360 * hue) + "," + saturation + "%," + lightness + "%)";
+  var oddColor =
+    "hsl(" +
+    Math.round(360 * hue) +
+    "," +
+    saturation +
+    "%," +
+    (lightness + 5) +
+    "%)";
 
   return {
     color,
@@ -57,7 +65,7 @@ function createBoard(element, size) {
   element.appendChild(gridDocFragment);
 }
 
-document.addEventListener("click", () => {
+document.addEventListener("click", (event) => {
   if (!clickAllowed) return;
   if (event.target.classList.contains("box")) {
     if (event.target.classList.contains("odd-box")) {
@@ -67,6 +75,7 @@ document.addEventListener("click", () => {
       document.getElementById("statingSizeSelector").disabled = true;
     } else {
       clickAllowed = false;
+      document.querySelector(".odd-box").style.border = "4px solid red";
       shakeTheGrid(function () {
         updateScores();
         element.innerHTML = "";
@@ -78,9 +87,11 @@ document.addEventListener("click", () => {
   }
 });
 
-document.getElementById("statingSizeSelector").addEventListener("input", function () {
-  updateStartingSize(this.value);
-});
+document
+  .getElementById("statingSizeSelector")
+  .addEventListener("input", function () {
+    updateStartingSize(this.value);
+  });
 
 function updateStartingSize(value) {
   document.getElementById("statingSizeSelectorOutput").textContent = value;
@@ -98,13 +109,13 @@ function shakeTheGrid(callback) {
   setTimeout(() => {
     element.classList.remove("shake");
     callback();
-  }, 1000);
+  }, 2000);
 }
 
 function updateScores() {
   if (score > maxScore) {
-      document.getElementById("maxScore").textContent = score;
-      maxScore = score;
+    document.getElementById("maxScore").textContent = score;
+    maxScore = score;
   }
   score = 0;
   document.getElementById("score").textContent = score;
