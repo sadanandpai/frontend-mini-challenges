@@ -34,3 +34,4 @@ All the challenges are listed below
 - [Comment box](https://sadanandpai.github.io/frontend-mini-challenges/mc/comment-box/)
 - [JSON Creator](https://sadanandpai.github.io/frontend-mini-challenges/mc/json-creator/)
 - [Array methods](https://sadanandpai.github.io/frontend-mini-challenges/mc/array-methods/)
+- [Progress Bar](https://sadanandpai.github.io/frontend-mini-challenges/mc/progress-bar/)

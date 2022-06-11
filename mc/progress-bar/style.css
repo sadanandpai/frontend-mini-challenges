@@ -1,0 +1,28 @@
+@import url(../../core.css);
+
+.progress-bar {
+  background-color: #ececec;
+  height: 10px;
+}
+
+.progress {
+  background-color: rgb(79, 79, 241);
+  width: 0%;
+  height: 100%;
+}
+
+.progress-controller {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.progress-controller > button {
+  flex-basis: 15%;
+  margin: 0 10px;
+}
+
+button {
+  display: block;
+  margin: auto;
+}
