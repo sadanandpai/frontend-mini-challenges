@@ -1,0 +1,25 @@
+@import url(../../core.css);
+
+.transfer-list{
+  width: 100%;
+}
+
+section {
+  border: 1px solid grey;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-grow: 1;
+  padding: 1rem;
+  gap: 1rem;
+  flex-basis: 0;
+}
+
+.controls{
+  align-items: center;
+  max-width: 5rem;
+}
+
+input {
+  margin-right: 1rem;
+}

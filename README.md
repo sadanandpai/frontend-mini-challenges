@@ -22,6 +22,7 @@ All the challenges are listed below
 - [Pixel Art](https://sadanandpai.github.io/frontend-mini-challenges/mc/pixel-art/)
 - [Color Spotter](https://sadanandpai.github.io/frontend-mini-challenges/mc/color-spotter/)
 - [Todo List](https://sadanandpai.github.io/frontend-mini-challenges/mc/todo-list/)
+- [Transfer List](https://sadanandpai.github.io/frontend-mini-challenges/mc/transfer-list/)
 - [Tic Tac Toe](https://sadanandpai.github.io/frontend-mini-challenges/mc/tic-tac-toe/)
 - [Chess Board](https://sadanandpai.github.io/frontend-mini-challenges/mc/chess-board/)
 - [Chips Input](https://sadanandpai.github.io/frontend-mini-challenges/mc/chips-input/)
