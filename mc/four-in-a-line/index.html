@@ -6,11 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="index.js" type="module" defer></script>
     <link rel="stylesheet" href="style.css" />
-    <title>Four in Line</title>
+    <title>Four in a Line</title>
   </head>
   <body>
     <div class="container text-center">
-      <h1 class="title">Four in Line</h1>
+      <h1 class="title">Four in a Line</h1>
+      <p>
+        The four in a row rules are very simple. It’s always played with 2 players and in a 7x6 grid. Each turn each
+        player puts a piece of his color inside a column and it will fall until it reaches the lowest available spot.
+        The one who can put 4 pieces of the same color in a row horizontally, vertically or diagonally wins. If no one
+        manages to do it then the match ends in a draw.
+      </p>
 
       <div id="slots" class="slots"></div>
       <div id="board" class="board"></div>
@@ -19,7 +25,7 @@
         <button id="reset" class="btn btn-primary">Reset</button>
       </div>
 
-      <label id="info"></label>
+      <h3 id="info"></h3>
     </div>
   </body>
 </html>

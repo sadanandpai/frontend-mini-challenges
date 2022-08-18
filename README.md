@@ -31,7 +31,7 @@ All the challenges are listed below
 - [Area Selector](https://sadanandpai.github.io/frontend-mini-challenges/mc/area-selector/)
 - [Carousel](https://sadanandpai.github.io/frontend-mini-challenges/mc/carousel/)
 - [Paginator](https://sadanandpai.github.io/frontend-mini-challenges/mc/paginator/)
-- [Four in Line](https://sadanandpai.github.io/frontend-mini-challenges/mc/four-in-line/)
+- [Four in a Line](https://sadanandpai.github.io/frontend-mini-challenges/mc/four-in-a-line/)
 - [Comment box](https://sadanandpai.github.io/frontend-mini-challenges/mc/comment-box/)
 - [JSON Creator](https://sadanandpai.github.io/frontend-mini-challenges/mc/json-creator/)
 - [Array methods](https://sadanandpai.github.io/frontend-mini-challenges/mc/array-methods/)

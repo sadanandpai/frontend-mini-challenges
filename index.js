@@ -19,7 +19,7 @@ const challenges = [
   { title: 'Area Selector', link: 'area-selector' },
   { title: 'Carousel', link: 'carousel' },
   { title: 'Paginator', link: 'paginator' },
-  { title: 'Four in Line', link: 'four-in-line' },
+  { title: 'Four in a Line', link: 'four-in-a-line' },
   { title: 'Comment box', link: 'comment-box' },
   { title: 'JSON Creator', link: 'json-creator' },
   { title: 'Array methods', link: 'array-methods' },

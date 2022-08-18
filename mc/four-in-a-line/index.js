@@ -22,6 +22,10 @@ const game = {
     this.activePlayer = this.activePlayer === 1 ? 2 : 1;
   },
 
+  isStateFull() {
+    return this.state[0].every(value => value !== 0);
+  },
+
   reset() {
     this.state = getGridState(rows, cols);
     this.winner = null;
@@ -58,6 +62,10 @@ const insertToColumn = col => {
     if (game.state[i][col] !== 0) {
       break;
     }
+  }
+
+  if (i - 1 < 0) {
+    return i - 1;
   }
 
   game.state[i - 1][col] = game.activePlayer;
@@ -109,12 +117,25 @@ const onClickToPlay = event => {
   if (target.classList.contains('box') || target.classList.contains('slot')) {
     const col = +target.dataset.j;
     const row = insertToColumn(col);
+
+    if (row < 0) {
+      return;
+    }
+
     if (checkForWinner(row, col)) {
       game.winner = game.activePlayer;
       infoElement.textContent = `Player ${game.getActiveColor()} wins!`;
       hidePlayerIcon();
       return;
     }
+
+    if (row === 0 && game.isStateFull()) {
+      game.winner = -1;
+      infoElement.textContent = 'Draw!';
+      hidePlayerIcon();
+      return;
+    }
+
     game.switchPlayer();
     displayPlayerIcon(col);
   }
