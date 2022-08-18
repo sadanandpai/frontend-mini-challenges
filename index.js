@@ -19,6 +19,7 @@ const challenges = [
   { title: 'Area Selector', link: 'area-selector' },
   { title: 'Carousel', link: 'carousel' },
   { title: 'Paginator', link: 'paginator' },
+  { title: 'Four in Line', link: 'four-in-line' },
   { title: 'Comment box', link: 'comment-box' },
   { title: 'JSON Creator', link: 'json-creator' },
   { title: 'Array methods', link: 'array-methods' },
@@ -31,6 +32,7 @@ const challenges = [
   { title: 'Calendar', link: '#' },
   { title: 'Emoji Editor', link: '#' },
   { title: 'Infinite Scroll', link: '#' },
+  { title: 'Memory tiles', link: '#' },
 ];
 
 const createAnchorElement = obj => {

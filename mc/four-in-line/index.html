@@ -6,19 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="index.js" type="module" defer></script>
     <link rel="stylesheet" href="style.css" />
-    <title>Password Strength</title>
+    <title>Four in Line</title>
   </head>
   <body>
     <div class="container text-center">
-      <h1 class="title">Password Strength</h1>
-      <div>
-        <label for="password-length">Enter the password</label><br /><br />
-        <input type="text" id="password" min="8" max="32" />
+      <h1 class="title">Four in Line</h1>
+
+      <div id="slots" class="slots"></div>
+      <div id="board" class="board"></div>
+
+      <div class="button-holder">
+        <button id="reset" class="btn btn-primary">Reset</button>
       </div>
 
-      <div class="progress-container">
-        <div class="progress-bar" id="progressBar"></div>
-      </div>
+      <label id="info"></label>
     </div>
   </body>
 </html>

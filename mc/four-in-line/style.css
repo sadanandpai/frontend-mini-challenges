@@ -1,0 +1,36 @@
+@import url(../../core.css);
+
+.slots {
+  display: flex;
+  justify-content: center;
+}
+
+.slot {
+  width: 5em;
+  height: 5em;
+}
+
+.board {
+  display: inline-grid;
+  background: grey;
+  border: 0.5em solid grey;
+}
+
+.box {
+  border: 0.5em solid grey;
+  width: 5em;
+  height: 5em;
+  border-radius: 50%;
+  background: white;
+  
+}
+
+.active {
+  border-radius: 50%;
+  border: 0.5em solid white;
+}
+
+.button-holder {
+  margin: 20px;
+  font-size: large;
+}
