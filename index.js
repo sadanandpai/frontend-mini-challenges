@@ -16,6 +16,7 @@ const challenges = [
   { title: 'Skeleton Loader', link: '#' },
   { title: 'Chips Input', link: 'chips-input' },
   { title: 'Countdown Timer', link: 'count-down-timer' },
+  { title: 'OTP Entry', link: 'otp-entry' },
   { title: 'Area Selector', link: 'area-selector' },
   { title: 'Carousel', link: 'carousel' },
   { title: 'Paginator', link: 'paginator' },

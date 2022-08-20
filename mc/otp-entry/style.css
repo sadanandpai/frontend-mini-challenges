@@ -1,0 +1,23 @@
+@import url(../../core.css);
+
+.display {
+  font-size: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 0.5rem;
+  margin: 2rem 0;
+}
+
+
+input {
+  margin: 0;
+  width: 2rem;
+  outline: none;
+  font-size: 2rem;
+  text-align: center;
+  border: none;
+  border-bottom: 1px solid grey;
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+}
