@@ -12,7 +12,7 @@
 
 input {
   margin: 0;
-  width: 2rem;
+  width: 3.25rem;
   outline: none;
   font-size: 2rem;
   text-align: center;
@@ -20,4 +20,6 @@ input {
   border-bottom: 1px solid grey;
   -webkit-appearance: none;
   -moz-appearance: textfield;
+  border-radius: 0;
+  color: black;
 }

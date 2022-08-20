@@ -7,6 +7,7 @@ const populateDisplay = length => {
     const input = document.createElement('input');
     input.type = 'text';
     input.maxLength = 1;
+    input.inputMode = 'numeric';
     input.classList.add('slot');
     display.appendChild(input);
     otpFields.push(input);

@@ -16,11 +16,11 @@ const challenges = [
   { title: 'Skeleton Loader', link: '#' },
   { title: 'Chips Input', link: 'chips-input' },
   { title: 'Countdown Timer', link: 'count-down-timer' },
-  { title: 'OTP Entry', link: 'otp-entry' },
+  { title: 'OTP Entry', link: 'otp-entry', isNew: true },
   { title: 'Area Selector', link: 'area-selector' },
   { title: 'Carousel', link: 'carousel' },
   { title: 'Paginator', link: 'paginator' },
-  { title: 'Four in a Line', link: 'four-in-a-line' },
+  { title: 'Four in a Line', link: 'four-in-a-line', isNew: true },
   { title: 'Comment box', link: 'comment-box' },
   { title: 'JSON Creator', link: 'json-creator' },
   { title: 'Array methods', link: 'array-methods' },
@@ -37,6 +37,7 @@ const challenges = [
 ];
 
 const createAnchorElement = obj => {
+  const div = document.createElement('div');
   const a = document.createElement('a');
   a.textContent = obj.title;
   a.href = `./mc/${obj.link}/`;
@@ -47,7 +48,15 @@ const createAnchorElement = obj => {
     a.href = '#';
   }
 
-  return a;
+  if (obj.isNew) {
+    const newTag = document.createElement('span');
+    newTag.textContent = 'New';
+    newTag.classList.add('new');
+    div.appendChild(newTag);
+  }
+
+  div.appendChild(a);
+  return div;
 };
 
 const challengeGridEl = document.getElementById('challengeGrid');

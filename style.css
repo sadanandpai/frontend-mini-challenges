@@ -20,19 +20,41 @@ main a {
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.15);
-  border: 1px solid rgba(0, 0, 0, 0.05);
+  
   padding: 10px;
   text-decoration: none;
   font-size: 1.25rem;
   color: chocolate;
+
+}
+
+main div{
+  box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(0, 0, 0, 0.05);
   transition: all 0.2s ease-in-out;
   background-color: white;
 }
 
-main a:hover {
+main div:hover {
   transform: scale(1.05);
   box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.3);
+}
+
+main div {
+  position: relative;
+  overflow: hidden;
+}
+
+main .new {
+  position: absolute;
+  width: 6rem;
+  background: red;
+  text-align: center;
+  color: white;
+  top: 0.75rem;
+  right: -1.75rem;
+  transform: rotate(45deg);
+  font-size: 1rem;
 }
 
 @media screen and (min-width: 768px) {
