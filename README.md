@@ -27,6 +27,7 @@ All the challenges are listed below
 - [Tic Tac Toe](https://sadanandpai.github.io/frontend-mini-challenges/mc/tic-tac-toe/)
 - [Chess Board](https://sadanandpai.github.io/frontend-mini-challenges/mc/chess-board/)
 - [Chips Input](https://sadanandpai.github.io/frontend-mini-challenges/mc/chips-input/)
+- [Typing Speed Test](https://sadanandpai.github.io/frontend-mini-challenges/mc/typi-speed-test/)
 - [Countdown Timer](https://sadanandpai.github.io/frontend-mini-challenges/mc/timer/)
 <!-- - [OTP Entry](https://sadanandpai.github.io/frontend-mini-challenges/mc/otp-entry/) -->
 - [Area Selector](https://sadanandpai.github.io/frontend-mini-challenges/mc/area-selector/)

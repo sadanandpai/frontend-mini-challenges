@@ -1,0 +1,50 @@
+@import url(../../core.css);
+
+.sentences-display{
+    white-space: nowrap;
+    overflow: hidden;
+    height: 100%;
+    width: 50%;
+    margin: 0 0 1em auto;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 2rem;
+    color: grey;
+}
+
+.sentences-display::first-letter{
+    color: black;
+}
+
+.key {
+    height: 1.5em;
+    min-width: 5%;
+    border: 1px solid #000;
+    border-radius: 3px;
+    background-color: #fff;
+    display: inline-block;
+    margin: 0.1em;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+    color: #000;
+    cursor: pointer;
+    padding-top: 0.1em;
+    font-weight: 400;
+}
+
+.key.active{
+    background-color: green;
+    color: #fff;
+}
+
+section{
+    width: 50%;
+    margin: 1rem auto;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #000;
+}
