@@ -9,7 +9,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0px 0px 0 5px black;
+  box-shadow: 0px 0px 0 5px black,
+  0px 5px 50px 0 rgba(0, 0, 0, 0.25);
 }
 
 .digits {
@@ -17,12 +18,15 @@
   height: 100%;
   position: absolute;
   transform-origin: center;
-  transform: rotate(1deg);
+  color: brown;
+  font-weight: 600;
+  font-size: 1rem;
 }
 
 .digit {
   position: absolute;
   transform: translate(-50%, -50%);
+  text-shadow: 0px 2px rgb(0 0 0 / 15%);
 }
 
 .center-connector {
