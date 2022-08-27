@@ -44,7 +44,7 @@ const createAnchorElement = obj => {
   const div = document.createElement('div');
   const a = document.createElement('a');
   a.textContent = obj.title;
-  a.href = `./mc/${obj.link}/`;
+  a.href = `./src/mc/${obj.link}/`;
 
   if (obj.link === '#') {
     a.classList.add('disabled');
