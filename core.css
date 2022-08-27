@@ -64,3 +64,11 @@ button.btn:disabled {
   color: grey;
   cursor: not-allowed;
 }
+
+.fixed {
+  position: fixed;
+}
+
+.relative {
+  position: relative;
+}

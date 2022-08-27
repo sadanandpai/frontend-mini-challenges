@@ -15,7 +15,7 @@ const challenges = [
   { title: 'Chess board', link: 'chess-board' },
   { title: 'Skeleton Loader', link: '#' },
   { title: 'Chips Input', link: 'chips-input' },
-  { title: 'Analog Clock', link: '#' },
+  { title: 'Analog Clock', link: 'analog-clock', isNew: true },
   { title: 'Calculator', link: '#' },
   { title: 'Navigation Bar', link: '#' },
   { title: 'Typing Speed Test', link: 'typing-speed-test', isNew: true },
