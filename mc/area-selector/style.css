@@ -1,9 +1,9 @@
 @import url(../../core.css);
 
 .grid {
-  align-items: center;
   display: flex;
   flex-direction: column;
+  align-items: center;
   margin-top: 1rem;
 }
 
@@ -12,7 +12,7 @@
 }
 
 .box {
-  outline: 1px solid grey;
-  height: 60px;
   width: 60px;
+  height: 60px;
+  outline: 1px solid grey;
 }

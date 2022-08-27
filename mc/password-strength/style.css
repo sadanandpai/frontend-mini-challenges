@@ -1,18 +1,18 @@
 @import url(../../core.css);
 
 input {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
   width: 20rem;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
 }
 
 .progress-container {
-  margin: auto;
   position: relative;
   width: 20rem;
   height: 0.6rem;
-  outline: 1px solid #ccc;
+  margin: auto;
   border-radius: 8px;
+  outline: 1px solid #ccc;
 }
 
 .progress-bar {

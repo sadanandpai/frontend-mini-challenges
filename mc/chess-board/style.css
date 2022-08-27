@@ -5,13 +5,13 @@
 }
 
 .board {
-  height: 320px;
-  width: 320px;
-  border: 2px solid black;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+  width: 320px;
+  height: 320px;
   margin: auto;
+  border: 2px solid black;
 }
 
 .board div {

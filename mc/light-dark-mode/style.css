@@ -1,8 +1,8 @@
 @import url(../../core.css);
 
 body {
-  transition: 0.25s;
   padding: 1rem;
+  transition: 0.25s;
 }
 
 .container {

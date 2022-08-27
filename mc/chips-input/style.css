@@ -2,9 +2,9 @@
 
 input {
   width: 75%;
-  font-size: 1rem;
-  padding: 0.5rem 1rem;
   margin-bottom: 1rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
 }
 
 .chips-display {
@@ -13,19 +13,19 @@ input {
 }
 
 .chip {
-  border: 1px solid lightgrey;
-  padding: 0.5em 0.75em;
-  border-radius: 1em;
-  background-color: #eee;
   margin: 0.5em;
+  padding: 0.5em 0.75em;
+  background-color: #eee;
+  border: 1px solid lightgrey;
+  border-radius: 1em;
 }
 
 .chip .remove {
-  all: unset;
-  margin-left: 1em;
-  cursor: pointer;
-  vertical-align: middle;
   display: none;
+  margin-left: 1em;
+  vertical-align: middle;
+  cursor: pointer;
+  all: unset;
 }
 
 .chip.finalized .remove {

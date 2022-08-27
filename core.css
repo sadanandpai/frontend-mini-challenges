@@ -27,8 +27,8 @@ body {
 
 .flex-center {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }
 
 .grid {
@@ -44,8 +44,8 @@ body {
 }
 
 .btn.btn-primary {
-  background-color: #5affd8;
   padding: 10px 16px;
+  background-color: #5affd8;
   border: 1px solid grey;
   border-radius: 4px;
   cursor: pointer;

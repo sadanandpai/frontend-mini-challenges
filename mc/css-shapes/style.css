@@ -2,14 +2,14 @@
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-gap: 1em;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
 
 .grid > div {
-  border: 1px solid black;
   position: relative;
   height: 250px;
+  border: 1px solid black;
 }
 
 .shape {
@@ -33,9 +33,9 @@
   width: 0;
   height: 0;
   border-top: 25px solid transparent;
-  border-left: 50px solid transparent;
   border-right: 50px solid transparent;
   border-bottom: 100px solid green;
+  border-left: 50px solid transparent;
 }
 
 .parallelogram {
@@ -61,12 +61,12 @@
 }
 
 .star {
-  margin-top: 60px;
   position: relative;
   display: block;
-  color: red;
   width: 0;
   height: 0;
+  margin-top: 60px;
+  color: red;
   border-right: 100px solid transparent;
   border-bottom: 70px solid yellowgreen;
   border-left: 100px solid transparent;
@@ -74,27 +74,27 @@
 }
 
 .star:before {
-  border-bottom: 80px solid yellowgreen;
-  border-left: 30px solid transparent;
-  border-right: 30px solid transparent;
   position: absolute;
-  height: 0;
-  width: 0;
   top: -45px;
   left: -65px;
   display: block;
-  content: '';
+  width: 0;
+  height: 0;
+  border-right: 30px solid transparent;
+  border-bottom: 80px solid yellowgreen;
+  border-left: 30px solid transparent;
   transform: rotate(-35deg);
+  content: '';
 }
 
 .star:after {
   position: absolute;
-  display: block;
-  color: yellowgreen;
   top: 3px;
   left: -105px;
+  display: block;
   width: 0px;
   height: 0px;
+  color: yellowgreen;
   border-right: 100px solid transparent;
   border-bottom: 70px solid yellowgreen;
   border-left: 100px solid transparent;
@@ -106,22 +106,22 @@
   position: relative;
   width: 100px;
   height: 90px;
-  transform: scale(1.5);
   margin-top: 60px;
+  transform: scale(1.5);
 }
 
 .heart:before,
 .heart:after {
   position: absolute;
-  content: '';
-  left: 50px;
   top: 0;
+  left: 50px;
   width: 50px;
   height: 80px;
   background: red;
   border-radius: 50px 50px 0 0;
   transform: rotate(-45deg);
   transform-origin: 0 100%;
+  content: '';
 }
 
 .heart:after {
@@ -133,19 +133,20 @@
 .loader {
   width: 125px;
   height: 125px;
+  margin-top: 25px;
   border: 4px solid brown;
   border-top-width: 0;
-  border-left-width: 0;
   border-right-width: 0;
+  border-left-width: 0;
   border-radius: 50%;
   animation: loader linear 1s infinite;
-  margin-top: 25px;
 }
 
 @keyframes loader {
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }

@@ -1,12 +1,12 @@
 @import url(../../core.css);
 
 .display {
-  font-size: 3rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  column-gap: 0.5rem;
   margin-bottom: 1rem;
+  font-size: 3rem;
+  column-gap: 0.5rem;
 }
 
 .display span {
@@ -19,12 +19,12 @@
 }
 
 input {
-  font-size: 3rem;
   width: 2rem;
+  margin: 0;
+  font-size: 3rem;
   border: 1px solid grey;
   -webkit-appearance: none;
   -moz-appearance: textfield;
-  margin: 0;
 }
 
 .display.progress input {

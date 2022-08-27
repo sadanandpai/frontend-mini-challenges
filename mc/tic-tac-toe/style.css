@@ -2,16 +2,16 @@
 
 .grid {
   display: inline-grid;
-  grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 0.2rem;
 }
 
 .grid > button {
   width: 5rem;
   height: 5rem;
-  cursor: pointer;
   font-size: 2rem;
+  cursor: pointer;
 }
 
 .row {

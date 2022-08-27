@@ -1,9 +1,9 @@
 @import url(../../core.css);
 
 #todoItemInput {
-  font-size: 1.25rem;
-  padding: 0.25rem;
   margin-bottom: 1rem;
+  padding: 0.25rem;
+  font-size: 1.25rem;
 }
 
 .no-elments {
@@ -23,12 +23,12 @@ li {
 }
 
 button {
-  border: none;
-  cursor: pointer;
+  margin-left: 0.5rem;
+  color: white;
   font-size: 1rem;
   background: white;
-  color: white;
-  margin-left: 0.5rem;
+  border: none;
+  cursor: pointer;
 }
 
 button.edit {

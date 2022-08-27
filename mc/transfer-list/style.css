@@ -5,14 +5,14 @@
 }
 
 section {
-  border: 1px solid grey;
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  flex-grow: 1;
-  padding: 1rem;
-  gap: 1rem;
   flex-basis: 0;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 1rem;
+  align-items: flex-start;
+  padding: 1rem;
+  border: 1px solid grey;
 }
 
 .controls {

@@ -1,23 +1,23 @@
 @import url(../../core.css);
 
 .clock {
-  height: 300px;
-  width: 300px;
-  margin: auto;
-  border-radius: 50%;
-  border: 2px solid black;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  width: 300px;
+  height: 300px;
+  margin: auto;
+  border: 2px solid black;
+  border-radius: 50%;
   box-shadow: 0px 0px 0 5px black;
 }
 
-.digits{
+.digits {
+  position: absolute;
   width: 100%;
   height: 100%;
-  position: absolute;
-  transform-origin: center;
   transform: rotate(1deg);
+  transform-origin: center;
 }
 
 .digit {
@@ -26,34 +26,36 @@
 }
 
 .center-connector {
-  border-radius: 50%;
-  background-color: black;
-  height: 1em;
   width: 1em;
+  height: 1em;
+  background-color: black;
+  border-radius: 50%;
 }
 
-.seconds-hand, .minutes-hand, .hours-hand {
+.seconds-hand,
+.minutes-hand,
+.hours-hand {
   position: absolute;
   left: 50%;
-  background-color:black;
+  background-color: black;
   transform-origin: bottom center;
 }
 
 .seconds-hand {
+  top: 15%;
   width: 2px;
   height: 45%;
-  top: 15%;
   transform-origin: 1px 77.5%;
 }
 
 .minutes-hand {
+  top: 5%;
   width: 3px;
   height: 45%;
-  top: 5%;
 }
 
 .hours-hand {
   top: 20%;
-  height: 30%;
   width: 6px;
+  height: 30%;
 }

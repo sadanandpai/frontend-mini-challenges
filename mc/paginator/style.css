@@ -20,38 +20,38 @@
 }
 
 input {
+  width: 200px;
   padding: 2px 5px;
   font-size: 1rem;
-  width: 200px;
+  vertical-align: middle;
   border: 1px solid #ccc;
   border-radius: 4px;
-  vertical-align: middle;
 }
 
 .page-number,
 .page-modifier {
-  justify-content: center;
-  padding: 6px 12px;
+  display: flex;
   flex: 1 1 0;
-  border-radius: 6px;
+  justify-content: center;
+  width: 0;
+  min-width: 30px;
+  max-width: 30px;
+  padding: 6px 12px;
+  color: black;
   background-color: #fafafa;
   border: 1px solid #ececec;
-  color: black;
+  border-radius: 6px;
   cursor: pointer;
-  width: 0;
-  display: flex;
-  max-width: 30px;
-  min-width: 30px;
 }
 
 button:disabled {
-  background-color: inherit;
   color: #ccc;
+  background-color: inherit;
 }
 
 .page-number.active {
-  background-color: #0070f3;
   color: white;
+  background-color: #0070f3;
 }
 
 .dot-left:hover::before {

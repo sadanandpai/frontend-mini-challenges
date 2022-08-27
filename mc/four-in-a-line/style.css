@@ -17,17 +17,16 @@
 }
 
 .box {
-  border: 0.5em solid grey;
   width: 5em;
   height: 5em;
-  border-radius: 50%;
   background: white;
-  
+  border: 0.5em solid grey;
+  border-radius: 50%;
 }
 
 .active {
-  border-radius: 50%;
   border: 0.5em solid white;
+  border-radius: 50%;
 }
 
 .button-holder {

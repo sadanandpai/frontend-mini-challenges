@@ -1,14 +1,14 @@
 @import url(../../core.css);
 
 .progress-bar {
-  background-color: #ececec;
   height: 10px;
+  background-color: #ececec;
 }
 
 .progress {
-  background-color: rgb(79, 79, 241);
   width: 0%;
   height: 100%;
+  background-color: rgb(79, 79, 241);
 }
 
 .progress-controller {

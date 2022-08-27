@@ -6,9 +6,9 @@
 }
 
 .counter-value {
-  font-size: 3rem;
-  font-weight: bold;
   padding: 1rem;
+  font-weight: bold;
+  font-size: 3rem;
 }
 
 input {

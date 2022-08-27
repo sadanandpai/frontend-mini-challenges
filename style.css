@@ -1,60 +1,55 @@
 .challenge-grid {
-  grid-template-columns: repeat(2, 1fr);
   grid-gap: 1.5rem;
+  grid-template-columns: repeat(2, 1fr);
   margin: 2rem 0;
 }
 
 h1 {
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }
 
 h1 a img {
-  height: 35px;
   width: 35px;
+  height: 35px;
   vertical-align: text-bottom;
 }
 
 main a {
-  height: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
-  
+  height: 100px;
   padding: 10px;
-  text-decoration: none;
-  font-size: 1.25rem;
   color: chocolate;
-
-}
-
-main div{
-  box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.15);
-  border: 1px solid rgba(0, 0, 0, 0.05);
-  transition: all 0.2s ease-in-out;
-  background-color: white;
-}
-
-main div:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.3);
+  font-size: 1.25rem;
+  text-decoration: none;
 }
 
 main div {
   position: relative;
   overflow: hidden;
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.15);
+  transition: all 0.2s ease-in-out;
+}
+
+main div:hover {
+  box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.3);
+  transform: scale(1.05);
 }
 
 main .new {
   position: absolute;
-  width: 6rem;
-  background: red;
-  text-align: center;
-  color: white;
   top: 0.75rem;
   right: -1.75rem;
-  transform: rotate(45deg);
+  width: 6rem;
+  color: white;
   font-size: 1rem;
+  text-align: center;
+  background: red;
+  transform: rotate(45deg);
 }
 
 @media screen and (min-width: 768px) {

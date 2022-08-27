@@ -1,21 +1,21 @@
 @import url(../../core.css);
 
 #board {
-  height: 300px;
-  width: 300px;
-  border: 3px solid black;
-  border-radius: 5px;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+  width: 300px;
+  height: 300px;
   margin: auto;
   margin-top: 10px;
+  border: 3px solid black;
+  border-radius: 5px;
 }
 
 @media screen and (min-width: 768px) {
   #board {
-    height: 500px;
     width: 500px;
+    height: 500px;
   }
 }
 
@@ -29,8 +29,8 @@
 }
 
 .shake {
-  animation: shake 0.8s infinite;
   transform: translate3d(0, 0, 0);
+  animation: shake 0.8s infinite;
 }
 
 @keyframes shake {

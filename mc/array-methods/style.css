@@ -6,15 +6,15 @@
 }
 
 input {
-  padding: 0.2rem;
-  margin: 0.5rem;
   width: 200px;
+  margin: 0.5rem;
+  padding: 0.2rem;
 }
 
 .method-list > div {
-  box-shadow: 0 2px 8px 0 rgba(44, 30, 30, 0.2);
   margin: 0.5rem 0;
   border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 8px 0 rgba(44, 30, 30, 0.2);
 }
 
 .method-list > div > div {
@@ -22,17 +22,17 @@ input {
 }
 
 select {
-  background-color: aqua;
   font-weight: bold;
   letter-spacing: 0.25ch;
+  background-color: aqua;
 }
 
 button {
-  border: none;
-  background-color: black;
-  color: white;
   padding: 0.5rem 1rem;
+  color: white;
   font-size: 1.1rem;
+  background-color: black;
+  border: none;
   border-radius: 5px;
   cursor: pointer;
 }
