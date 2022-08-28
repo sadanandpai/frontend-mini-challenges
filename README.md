@@ -32,6 +32,7 @@ All the challenges are listed below
 - [Countdown Timer](https://sadanandpai.github.io/frontend-mini-challenges/src/mc/timer/)
 - [Area Selector](https://sadanandpai.github.io/frontend-mini-challenges/src/mc/area-selector/)
 - [Carousel](https://sadanandpai.github.io/frontend-mini-challenges/src/mc/carousel/)
+- [Calendar](https://sadanandpai.github.io/frontend-mini-challenges/src/mc/calendar/)
 - [Paginator](https://sadanandpai.github.io/frontend-mini-challenges/src/mc/paginator/)
 - [Four in a Line](https://sadanandpai.github.io/frontend-mini-challenges/src/mc/four-in-a-line/)
 - [Comment box](https://sadanandpai.github.io/frontend-mini-challenges/src/mc/comment-box/)

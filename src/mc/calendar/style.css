@@ -1,0 +1,71 @@
+@import url(../../core.css);
+
+.calendar {
+  padding: 0.5rem;
+  border: 1px solid grey;
+  display: inline-block;
+  user-select: none;
+}
+
+.controls {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.controls select {
+  padding: 0.25em;
+  flex: 1 1 0;
+}
+
+.week-days {
+  display: flex;
+  justify-content: space-around;
+  color: grey;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.days {
+  display: grid;
+  grid-template-columns: repeat(7, 2rem);
+  gap: 0.5rem;
+}
+
+.days span:nth-child(7n + 1) {
+  color: red;
+}
+
+.days span {
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.today {
+  border-radius: 50%;
+  border: 1px solid black;
+}
+
+.days.current-month .today {
+  background-color: rgba(0, 0, 255, 0.756);
+  color: white;
+  border-radius: 50%;
+  border: none;
+}
+
+.days.current-month span.today:nth-child(7n + 1) {
+  background-color: red;
+}
+
+.btn-today{
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.current-month + .btn-today {
+  cursor: not-allowed;
+  color: grey;
+  background-color: lightgrey;
+}
