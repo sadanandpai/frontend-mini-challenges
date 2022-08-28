@@ -1,15 +1,11 @@
 @import url(../../core.css);
 
-body {
-  padding: 1rem;
+.container {
   transition: 0.25s;
 }
 
-.container {
-  padding: 0 2.5%;
-}
-
 .inner-container {
+  margin: 1rem 0;
   padding: 2.5%;
   border: 1px solid blue;
 }

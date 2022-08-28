@@ -30,7 +30,6 @@ All the challenges are listed below
 - [Analog Clock](https://sadanandpai.github.io/frontend-mini-challenges/src/mc/analog-clock/)
 - [Typing Speed Test](https://sadanandpai.github.io/frontend-mini-challenges/src/mc/typing-speed-test/)
 - [Countdown Timer](https://sadanandpai.github.io/frontend-mini-challenges/src/mc/timer/)
-<!-- - [OTP Entry](https://sadanandpai.github.io/frontend-mini-challenges/src/mc/otp-entry/) -->
 - [Area Selector](https://sadanandpai.github.io/frontend-mini-challenges/src/mc/area-selector/)
 - [Carousel](https://sadanandpai.github.io/frontend-mini-challenges/src/mc/carousel/)
 - [Paginator](https://sadanandpai.github.io/frontend-mini-challenges/src/mc/paginator/)

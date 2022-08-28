@@ -16,6 +16,11 @@ body {
   margin: 0;
 }
 
+a {
+  text-decoration: none;
+  color: blue;
+}
+
 .container {
   width: 90%;
   margin: auto;
@@ -71,4 +76,30 @@ button.btn:disabled {
 
 .relative {
   position: relative;
+}
+
+.github-img {
+  width: 35px;
+  height: 35px;
+  vertical-align: text-bottom;
+}
+
+.global-nav {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.global-nav::after {
+  content: '';
+  position: absolute;
+  width: 110%;
+  bottom: 10px;
+  left: -5%;
+  box-shadow: 0 5px 0 2px grey;
 }
