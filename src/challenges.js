@@ -16,7 +16,7 @@ export const challenges = [
   { title: 'Skeleton Loader', link: '#' },
   { title: 'Chips Input', link: 'chips-input' },
   { title: 'Analog Clock', link: 'analog-clock', isNew: true },
-  { title: 'Calculator', link: '#' },
+  { title: 'Basic calculator', link: 'basic-calculator', isNew: true },
   { title: 'Navigation Bar', link: '#' },
   { title: 'Typing Speed Test', link: 'typing-speed-test', isNew: true },
   { title: 'Countdown Timer', link: 'count-down-timer' },
