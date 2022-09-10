@@ -1,4 +1,4 @@
-@import url(../../core.css);
+@import url(../../helpers/core.css);
 
 .calculator {
   display: inline-grid;

@@ -1,4 +1,4 @@
-import { challenges } from './challenges.js';
+import { challenges } from './helpers/challenges.js';
 
 const createAnchorElement = obj => {
   const div = document.createElement('div');
