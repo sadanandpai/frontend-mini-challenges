@@ -29,6 +29,7 @@ All the challenges are listed below
 - [Chips Input](https://sadanandpai.github.io/frontend-mini-challenges/src/mc/chips-input/)
 - [Analog Clock](https://sadanandpai.github.io/frontend-mini-challenges/src/mc/analog-clock/)
 - [Basic Calculator](https://sadanandpai.github.io/frontend-mini-challenges/src/mc/basic-calculator/)
+- [Match Pair](https://sadanandpai.github.io/frontend-mini-challenges/src/mc/match-pair/)
 - [Typing Speed Test](https://sadanandpai.github.io/frontend-mini-challenges/src/mc/typing-speed-test/)
 - [Countdown Timer](https://sadanandpai.github.io/frontend-mini-challenges/src/mc/timer/)
 - [Area Selector](https://sadanandpai.github.io/frontend-mini-challenges/src/mc/area-selector/)

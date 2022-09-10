@@ -1,0 +1,75 @@
+@import url(../../helpers/core.css);
+
+:root{
+    --size: min(14vh, 14vw);
+    --transition-time: 1s;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.game {
+  display: inline-grid;
+  grid-template-rows: repeat(4, var(--size));
+  grid-template-columns: repeat(4, var(--size));
+  gap: min(2vh, 2vw);
+}
+
+.game-front {
+    position: absolute;
+}
+
+.tile {
+  height: var(--size);
+  width: var(--size);
+  background-color: aquamarine;
+  border-radius: 4px;
+  border: 1px solid rgb(214, 214, 214);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  font-size: calc(var(--size) / 2);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transition: var(--transition-time) transform;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.reset .tile {
+    animation: bubbleEffect 1.5s;
+}
+
+@keyframes bubbleEffect {
+    25% {
+        scale: 0.4;
+    }
+    100% {
+        scale: 1;
+    }
+}
+
+.tile.back-tile {
+    transform: rotateY(180deg);
+}
+
+.tile.active {
+  background-color:yellowgreen;
+  transform: rotateY(180deg);
+}
+
+.tile.back-tile.active {
+    background-color:yellowgreen;
+    transform: rotateY(360deg);
+}
+
+.tile.match {
+    transform: rotateY(180deg); 
+}
+
+.tile.back-tile.match {
+    transform: rotateY(360deg);
+}

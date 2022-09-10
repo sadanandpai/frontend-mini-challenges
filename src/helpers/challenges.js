@@ -18,6 +18,7 @@ export const challenges = [
   { title: 'Analog Clock', link: 'analog-clock', isNew: true },
   { title: 'Basic calculator', link: 'basic-calculator', isNew: true },
   { title: 'Navigation Bar', link: '#' },
+  { title: 'Match Pair', link: 'match-pair', isNew: true },
   { title: 'Typing Speed Test', link: 'typing-speed-test', isNew: true },
   { title: 'Countdown Timer', link: 'count-down-timer' },
   { title: 'OTP Input', link: '#' },
@@ -37,5 +38,4 @@ export const challenges = [
   { title: 'Sort Table', link: '#' },
   { title: 'Emoji Editor', link: '#' },
   { title: 'Infinite Scroll', link: '#' },
-  { title: 'Memory tiles', link: '#' },
 ];
