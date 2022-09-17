@@ -15,6 +15,7 @@ export const challenges = [
   { title: 'Chess board', link: 'chess-board' },
   { title: 'Skeleton Loader', link: '#' },
   { title: 'Chips Input', link: 'chips-input' },
+  { title: 'Password Generator', link: 'password-generator', isNew: true },
   { title: 'Analog Clock', link: 'analog-clock', isNew: true },
   { title: 'Basic calculator', link: 'basic-calculator', isNew: true },
   { title: 'Navigation Bar', link: '#' },

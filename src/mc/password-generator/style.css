@@ -1,0 +1,55 @@
+@import url(../../helpers/core.css);
+
+.password-form {
+  border: 1px solid #ccc;
+  display: inline-flex;
+  flex-direction: column;
+  padding: 1rem;
+  gap: 1rem;
+  font-size: 1.25rem;
+  min-width: min(100%, 40ch);
+}
+
+.password-form > div {
+  display: flex;
+  gap: 1rem;
+  text-align: left;
+}
+
+input {
+  padding: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.input-holder {
+  position: relative;
+}
+
+.input-holder input {
+  position: relative;
+  width: 100%;
+  padding-right: 2.5rem;
+}
+
+.copy-btn {
+  position: absolute;
+  right: 0;
+  top: 0.75rem;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.copy-btn:active {
+  animation: copy-animation 0.01s linear forwards;
+}
+
+@keyframes copy-animation {
+  from {
+    transform: 1;
+  }
+
+  to {
+    scale: 0.5;
+  }
+}

@@ -27,6 +27,7 @@ All the challenges are listed below
 - [Tic Tac Toe](https://sadanandpai.github.io/frontend-mini-challenges/src/mc/tic-tac-toe/)
 - [Chess Board](https://sadanandpai.github.io/frontend-mini-challenges/src/mc/chess-board/)
 - [Chips Input](https://sadanandpai.github.io/frontend-mini-challenges/src/mc/chips-input/)
+- [Password Generator](https://sadanandpai.github.io/frontend-mini-challenges/src/mc/password-generator/)
 - [Analog Clock](https://sadanandpai.github.io/frontend-mini-challenges/src/mc/analog-clock/)
 - [Basic Calculator](https://sadanandpai.github.io/frontend-mini-challenges/src/mc/basic-calculator/)
 - [Match Pair](https://sadanandpai.github.io/frontend-mini-challenges/src/mc/match-pair/)
