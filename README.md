@@ -43,3 +43,9 @@ All the challenges are listed below
 - [JSON Creator](https://sadanandpai.github.io/frontend-mini-challenges/src/mc/json-creator/)
 - [Array methods](https://sadanandpai.github.io/frontend-mini-challenges/src/mc/array-methods/)
 - [Progress Bar](https://sadanandpai.github.io/frontend-mini-challenges/src/mc/progress-bar/)
+
+---
+
+### License
+
+This repository is MIT licensed. [Read more](./LICENSE)
