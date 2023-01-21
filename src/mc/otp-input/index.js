@@ -6,6 +6,7 @@ const populateDisplay = length => {
   for (let i = 0; i < length; i++) {
     const input = document.createElement('input');
     input.type = 'text';
+    input.inputMode = 'numeric';
     input.maxLength = 1;
     input.classList.add('slot');
     display.appendChild(input);
