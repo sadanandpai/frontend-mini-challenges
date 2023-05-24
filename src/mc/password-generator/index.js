@@ -94,7 +94,7 @@ passwordFormEl.addEventListener('submit', e => {
   passwordInputEl.value = password;
 });
 
-passwordFormEl.addEventListener('change', e => {
+passwordFormEl.addEventListener('mousemove', e => {
   if (e.target.type === 'range') {
     updateCharLength(e.target.value);
   }
