@@ -1,0 +1,21 @@
+.main {
+  text-align: center;
+
+  div {
+    margin: 1rem 0;
+  }
+
+  button {
+    padding: 0.25rem 0.5rem;
+    margin: 0 0.5rem;
+    font-size: 1.15rem;
+    cursor: pointer;
+  }
+
+  input {
+    padding: 0.15rem;
+    font-size: 1.15rem;
+    width: 5rem;
+    margin-left: 1rem;
+  }
+}

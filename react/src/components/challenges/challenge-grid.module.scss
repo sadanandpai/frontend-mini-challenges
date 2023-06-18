@@ -1,0 +1,60 @@
+.challengeGrid {
+  grid-gap: 1.5rem;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 2rem 0;
+  display: grid;
+
+  div {
+    position: relative;
+    overflow: hidden;
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.15);
+    transition: all 0.2s ease-in-out;
+  }
+
+  div:hover {
+    box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    padding: 10px;
+    color: chocolate;
+    font-size: 1.25rem;
+    text-decoration: none;
+
+    &[class="disabled"] {
+      color: grey;
+      cursor: not-allowed;
+    }
+  }
+
+  .new {
+    position: absolute;
+    top: 0.75rem;
+    right: -1.75rem;
+    width: 6rem;
+    color: white;
+    font-size: 1rem;
+    text-align: center;
+    background: red;
+    transform: rotate(45deg);
+  }
+
+  @media screen and (min-width: 768px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media screen and (min-width: 1024px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  @media screen and (min-width: 1400px) {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
