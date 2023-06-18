@@ -3,7 +3,7 @@ import styles from "./header.module.css";
 function Header({ heading = "Challenge" }: { heading?: string }) {
   return (
     <nav className={styles.nav}>
-      <a href="/">Home</a>
+      <a href="#/">Home</a>
 
       <h1>{heading[0].toUpperCase() + heading.slice(1)}</h1>
 
