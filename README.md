@@ -10,8 +10,6 @@
 
 ---
 
-All the challenges are listed below
-
 - [Counter](https://sadanandpai.github.io/frontend-mini-challenges/native/mc/counter/)
 - [Guess the number](https://sadanandpai.github.io/frontend-mini-challenges/native/mc/guess-the-number/)
 - [Telephone formatter](https://sadanandpai.github.io/frontend-mini-challenges/native/mc/telephone-formatter/)
@@ -45,6 +43,8 @@ All the challenges are listed below
 - [Progress Bar](https://sadanandpai.github.io/frontend-mini-challenges/native/mc/progress-bar/)
 
 ---
+
+Frontend mini challenges will be developed in React soon! [Keep an eye](https://sadanandpai.github.io/frontend-mini-challenges/react/dist/)
 
 ### License
 
