@@ -24,7 +24,7 @@ export const challenges = [
   { title: 'Countdown Timer', link: 'count-down-timer' },
   { title: 'OTP Input', link: 'otp-input', isNew: true },
   { title: 'Area Selector', link: 'area-selector' },
-  { title: 'Carousel', link: '#' },
+  { title: 'Carousel', link: 'carousel' },
   { title: 'Calendar', link: 'calendar' },
   { title: 'Paginator', link: 'paginator' },
   { title: 'Connect Four', link: 'connect-four', isNew: true },
