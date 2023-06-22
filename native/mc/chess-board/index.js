@@ -9,7 +9,7 @@ function createBoard(element, rows, cols = rows) {
   for (let i = 0; i < rows; i++) {
     var row = document.createElement('div');
     for (let j = 0; j < cols; j++) {
-      var col = document.createElement('div');
+      var col = document.createElement('button');
       col.dataset.x = i;
       col.dataset.y = j;
       col.classList.add('box');

@@ -12,19 +12,33 @@
   border: 2px solid black;
 }
 
-.board div {
+.board > div {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.board div button.box {
   display: flex;
   flex-grow: 1;
+  cursor: pointer;
+  border: none;
 }
 
-.board div:nth-child(even) div:nth-child(odd) {
+.board div:nth-child(even) button:nth-child(odd) {
   background-color: black;
 }
 
-.board div:nth-child(odd) div:nth-child(even) {
+.board div:nth-child(odd) button:nth-child(even) {
   background-color: black;
 }
 
-.board div div.box.selected {
+.board div button.box.selected {
+  transition: all 0.33s;
   background-color: red;
+}
+
+button:focus-visible {
+  outline: 4px solid yellowgreen;
+  z-index: 1;
 }

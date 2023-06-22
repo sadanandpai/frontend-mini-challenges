@@ -1,7 +1,7 @@
 import { Board } from './board.js';
 
-const rows = 15;
-const cols = 10;
+const rows = Math.floor((window.innerHeight - 200) / 30);
+const cols = Math.floor((0.9 * window.innerWidth) / 30);
 
 let isMouseDown = false;
 const boardElement = document.getElementById('board');
