@@ -36,27 +36,29 @@
   color: red;
 }
 
-.days span {
+.days span:not(:empty) {
   height: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 
 .today {
   border-radius: 50%;
-  border: 1px solid black;
+  background-color: lightcyan;
+  cursor: default;
 }
 
 .days.current-month .today {
-  background-color: rgba(0, 0, 255, 0.756);
-  color: white;
+  background-color: cyan;
   border-radius: 50%;
   border: none;
 }
 
 .days.current-month span.today:nth-child(7n + 1) {
   background-color: red;
+  color: white;
 }
 
 .btn-today{
@@ -68,4 +70,9 @@
   cursor: not-allowed;
   color: grey;
   background-color: lightgrey;
+}
+
+.selected {
+  border: 1px solid green;
+  border-radius: 50%;
 }

@@ -21,13 +21,15 @@ input {
 }
 
 .chip .remove {
-  display: none;
-  margin-left: 1em;
-  vertical-align: middle;
-  cursor: pointer;
   all: unset;
+  display: none;
+  vertical-align: middle;
+  margin-left: 0.5em;
+  color: red;
+  cursor: pointer;
 }
 
 .chip.finalized .remove {
   display: inherit;
+  
 }

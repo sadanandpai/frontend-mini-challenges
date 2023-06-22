@@ -1,3 +1,5 @@
+import { getDaysFragment, getMonthsFragment, getWeekDaysFragment, getYearsFragment } from './helper.js';
+
 const prevBtn = document.querySelector('.prev');
 const monthEl = document.querySelector('.month');
 const yearEl = document.querySelector('.year');
@@ -5,97 +7,53 @@ const nextBtn = document.querySelector('.next');
 const weekDaysEl = document.querySelector('.week-days');
 const daysEl = document.querySelector('.days');
 const todayBtn = document.querySelector('.btn-today');
-const weekStartEl = document.querySelector('#week-start');
+const selectedDateEl = document.querySelector('.selected-date');
 
-const MONTHS = [
-  'January',
-  'February',
-  'March',
-  'April',
-  'May',
-  'June',
-  'July',
-  'August',
-  'September',
-  'October',
-  'November',
-  'December',
-];
-const WEEK_DAYS = ['S', 'M', 'T', 'W', 'T', 'F', 'S'];
-const todayDate = new Date();
-
-const getMonths = () => {
-  const fragment = document.createDocumentFragment();
-  MONTHS.map(month => {
-    const option = document.createElement('option');
-    option.textContent = month;
-    fragment.appendChild(option);
-  });
-  return fragment;
+const date = new Date();
+const calendar = {
+  today: date,
+  selectedDate: date,
+  month: date.getMonth(),
+  year: date.getFullYear(),
 };
+const calendarProxy = new Proxy(calendar, {
+  set: function (target, key, value) {
+    if (key === 'selectedDate') {
+      target[key] = new Date(calendar.year, calendar.month, value);
+      updateSelectedDate();
+      return true;
+    }
 
-const getYears = (date = todayDate) => {
-  const fragment = document.createDocumentFragment();
-  const currentYear = date.getFullYear();
+    target[key] = value;
+    updateCalendar();
+    calendar.selectedDate = new Date(calendar.year, calendar.month, calendar.today.getDate());
+    updateSelectedDate();
+    return true;
+  },
+});
 
-  for (let year = currentYear - 100; year < currentYear + 10; year++) {
-    const option = document.createElement('option');
-    option.textContent = year;
-    fragment.appendChild(option);
-  }
-
-  return fragment;
-};
-
-const getWeekDays = type => {
-  const fragment = document.createDocumentFragment();
-  WEEK_DAYS.map(weekDay => {
-    const span = document.createElement(type);
-    span.textContent = weekDay;
-    fragment.appendChild(span);
-  });
-  return fragment;
-};
-
-const getDays = (month, year) => {
-  const fragment = document.createDocumentFragment();
-  const firstDay = new Date(year, month, 1).getDay();
-  const lastDate = new Date(year, month + 1, 0).getDate();
-
-  for (let day = 0; day < firstDay; day++) {
-    const span = document.createElement('span');
-    span.textContent = '';
-    fragment.appendChild(span);
-  }
-
-  for (let date = 1; date <= lastDate; date++) {
-    const span = document.createElement('span');
-    span.textContent = date;
-    span.classList.add('date-' + date);
-    fragment.appendChild(span);
-  }
-
-  return fragment;
-};
-
-const populateControls = (date = todayDate) => {
-  const monthOptions = getMonths();
+const populateControls = (date = calendarProxy.today) => {
+  const monthOptions = getMonthsFragment();
   monthEl.appendChild(monthOptions);
   monthEl.selectedIndex = date.getMonth();
 
-  const yearOptions = getYears(date);
+  const yearOptions = getYearsFragment(date);
   yearEl.appendChild(yearOptions);
   yearEl.selectedIndex = 100;
 };
 
 const populateWeekDays = () => {
-  const weekDays = getWeekDays('span');
   weekDaysEl.innerHTML = '';
-  weekDaysEl.appendChild(weekDays);
+  weekDaysEl.appendChild(getWeekDaysFragment('span'));
 };
 
-const populateDays = (date = todayDate) => {
-  const days = getDays(monthEl.selectedIndex, +yearEl.value);
+const setMonthYear = (month = calendarProxy.month, year = calendarProxy.year) => {
+  monthEl.selectedIndex = month;
+  yearEl.value = year;
+};
+
+const populateDays = (date = calendarProxy.today) => {
+  const days = getDaysFragment(calendarProxy.month, calendarProxy.year);
   daysEl.innerHTML = '';
   daysEl.appendChild(days);
 
@@ -106,51 +64,57 @@ const populateDays = (date = todayDate) => {
     daysEl.classList.remove('current-month');
   }
 
-  daysEl.querySelector(`.date-${date.getDate()}`).classList.add('today');
+  daysEl.querySelector(`.date-${date.getDate()}`)?.classList.add('today');
 };
 
-const setDate = (date = todayDate) => {
-  monthEl.selectedIndex = date.getMonth();
-  yearEl.value = date.getFullYear();
+const updateCalendar = () => {
+  setMonthYear();
+  populateDays();
 };
 
-const setPreviousMonth = () => {
-  const previousDate = new Date(+yearEl.value, monthEl.selectedIndex, 0);
-  if (previousDate.getFullYear() < todayDate.getFullYear() - 100) {
-    return;
-  }
-
-  setDate(previousDate);
-  return true;
-};
-
-const setNextMonth = () => {
-  const nextDate = new Date(+yearEl.value, monthEl.selectedIndex + 1, 1);
-  if (nextDate.getFullYear() >= todayDate.getFullYear() + 10) {
-    return false;
-  }
-
-  setDate(nextDate);
-  return true;
+const updateSelectedDate = () => {
+  daysEl.querySelector('.selected')?.classList.remove('selected');
+  daysEl.querySelector(`.date-${calendarProxy.selectedDate.getDate()}`)?.classList.add('selected');
+  selectedDateEl.textContent = calendarProxy.selectedDate.toDateString();
 };
 
 prevBtn.addEventListener('click', () => {
-  if (setPreviousMonth()) {
-    populateDays();
+  const prevDate = new Date(calendarProxy.year, calendarProxy.month, 0);
+  if (prevDate.getFullYear() < calendarProxy.today.getFullYear() - 100) {
+    return;
   }
-});
-nextBtn.addEventListener('click', () => {
-  if (setNextMonth()) {
-    populateDays();
+
+  if (prevDate) {
+    calendarProxy.month = prevDate.getMonth();
+    calendarProxy.year = prevDate.getFullYear();
   }
-});
-monthEl.addEventListener('change', () => populateDays());
-yearEl.addEventListener('change', () => populateDays());
-todayBtn.addEventListener('click', () => {
-  setDate();
-  populateDays();
 });
 
-populateWeekDays();
+nextBtn.addEventListener('click', () => {
+  const nextDate = new Date(calendarProxy.year, calendarProxy.month + 1, 1);
+  if (nextDate.getFullYear() >= calendarProxy.today.getFullYear() + 10) {
+    return;
+  }
+
+  if (nextDate) {
+    calendarProxy.month = nextDate.getMonth();
+    calendarProxy.year = nextDate.getFullYear();
+  }
+});
+
+monthEl.addEventListener('change', () => (calendarProxy.month = monthEl.selectedIndex));
+yearEl.addEventListener('change', () => (calendarProxy.year = +yearEl.value));
+todayBtn.addEventListener('click', () => {
+  calendarProxy.month = calendarProxy.today.getMonth();
+  calendarProxy.year = calendarProxy.today.getFullYear();
+});
+daysEl.addEventListener('click', e => {
+  if (e.target.className.includes('date')) {
+    calendarProxy.selectedDate = e.target.textContent;
+  }
+});
+
 populateControls();
+populateWeekDays();
 populateDays();
+updateSelectedDate();

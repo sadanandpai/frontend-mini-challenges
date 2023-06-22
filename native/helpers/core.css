@@ -50,7 +50,7 @@ a {
 
 .btn.btn-primary {
   padding: 10px 16px;
-  background-color: #5affd8;
+  background-color: cyan;
   border: 1px solid grey;
   border-radius: 4px;
   cursor: pointer;
@@ -60,8 +60,10 @@ a {
   padding: 4px 6px;
 }
 
+input:disabled,
 button:disabled,
-button.btn:disabled {
+button.btn:disabled,
+.btn.btn-primary:disabled {
   cursor: not-allowed;
 }
 

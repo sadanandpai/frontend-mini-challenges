@@ -1,8 +1,8 @@
-'use strict';
-
-var board = document.querySelector('.board');
-var clickedOnCell = false;
-createBoard(board, 8);
+const gridSize = 8;
+const board = document.querySelector('.board');
+const size = Math.min(window.innerWidth, window.innerHeight - 100) - 50;
+board.style.width = size + 'px';
+board.style.height = size + 'px';
 
 function createBoard(element, rows, cols = rows) {
   var gridDocFragment = document.createDocumentFragment();
@@ -10,8 +10,8 @@ function createBoard(element, rows, cols = rows) {
     var row = document.createElement('div');
     for (let j = 0; j < cols; j++) {
       var col = document.createElement('div');
-      col.dataset.locX = i;
-      col.dataset.locY = j;
+      col.dataset.x = i;
+      col.dataset.y = j;
       col.classList.add('box');
       row.appendChild(col);
     }
@@ -20,37 +20,25 @@ function createBoard(element, rows, cols = rows) {
   element.appendChild(gridDocFragment);
 }
 
-document.addEventListener('click', onClick);
-
 function onClick(event) {
-  var element = event.target;
+  resetChessGrid();
 
-  if (clickedOnCell) resetChessGrid();
-
+  const element = event.target;
   if (element.classList.contains('box')) {
-    clickedOnCell = true;
     setColor(element);
-    let y1 = +element.dataset.locY;
-    let y2 = +element.dataset.locY;
+    let x = +element.dataset.x;
+    let y = +element.dataset.y;
 
-    let ePrev = element.parentElement.previousElementSibling,
-      eNext = element.parentElement.nextElementSibling;
+    for (let i = x - 1, offset = 1, col = y; i >= 0; i--, offset++) {
+      setColor(board.querySelector(`[data-x='${i}'][data-y='${col - offset}']`));
+      setColor(board.querySelector(`[data-x='${i}'][data-y='${col + offset}']`));
+    }
 
-    do {
-      if (ePrev) {
-        setColor(ePrev.querySelector("[data-loc-y='" + (y1 - 1) + "']"));
-        setColor(ePrev.querySelector("[data-loc-y='" + (y2 + 1) + "']"));
-      }
-      if (eNext) {
-        setColor(eNext.querySelector("[data-loc-y='" + (y1 - 1) + "']"));
-        setColor(eNext.querySelector("[data-loc-y='" + (y2 + 1) + "']"));
-      }
-      y1--;
-      y2++;
-      ePrev = ePrev ? ePrev.previousElementSibling : ePrev;
-      eNext = eNext ? eNext.nextElementSibling : eNext;
-    } while (ePrev || eNext);
-  } else resetChessGrid();
+    for (let i = x + 1, offset = 1, col = y; i < gridSize; i++, offset++) {
+      setColor(board.querySelector(`[data-x='${i}'][data-y='${col - offset}']`));
+      setColor(board.querySelector(`[data-x='${i}'][data-y='${col + offset}']`));
+    }
+  }
 }
 
 function setColor(element) {
@@ -58,7 +46,9 @@ function setColor(element) {
 }
 
 function resetChessGrid() {
-  clickedOnCell = false;
   const elements = document.querySelector('.board').getElementsByClassName('selected');
   while (elements.length !== 0) elements[0].classList.remove('selected');
 }
+
+createBoard(board, gridSize);
+document.addEventListener('click', onClick);
