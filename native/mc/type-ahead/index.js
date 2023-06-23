@@ -1,7 +1,7 @@
 import { Trie } from './trie.js';
 import { suggestionsList } from './list.js';
 
-const suggestionLength = 5;
+const suggestionLength = 8;
 const userInput = document.getElementById('userInput');
 const suggestionsEl = document.querySelector('.suggestions');
 let suggestionFocus = null;
@@ -67,5 +67,16 @@ userInput.addEventListener('keydown', event => {
 
     suggestionFocus -= 1;
     highlightSuggestion(suggestionFocus);
+  }
+});
+
+suggestionsEl.addEventListener('click', event => {
+  const element = event.target;
+
+  if (element.tagName.toLowerCase() === 'li') {
+    userText = element.textContent;
+    userInput.value = userText;
+    suggestionFocus = null;
+    suggestionsEl.innerHTML = '';
   }
 });
