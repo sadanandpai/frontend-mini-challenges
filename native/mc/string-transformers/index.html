@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="index.js" type="module" defer></script>
+    <script src="../../helpers/header.js" type="module" defer></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container text-center">
+      <form>
+        <input
+          type="text"
+          id="userInput"
+          autocomplete="off"
+          placeholder="enter the sentence with spaces (alphanumeric)"
+          value="this is a normal sentence to transform"
+        />
+      </form>
+
+      <div class="transformers">
+        <div><label>Lower Case</label><span id="lowercase"></span></div>
+        <div><label>Upper Case</label><span id="uppercase"></span></div>
+        <div><label>Camel Case</label><span id="camelcase"></span></div>
+        <div><label>Pascal Case</label><span id="pascalcase"></span></div>
+        <div><label>Snake Case</label><span id="snakecase"></span></div>
+        <div><label>Kebab Case</label><span id="kebabcase"></span></div>
+        <div><label>Trim</label><span id="trim"></span></div>
+      </div>
+    </div>
+  </body>
+</html>

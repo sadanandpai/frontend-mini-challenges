@@ -12,6 +12,7 @@
 
 - [Counter](https://sadanandpai.github.io/frontend-mini-challenges/native/mc/counter/)
 - [Guess the number](https://sadanandpai.github.io/frontend-mini-challenges/native/mc/guess-the-number/)
+- [String transformers](https://sadanandpai.github.io/frontend-mini-challenges/native/mc/string-transformers/)
 - [Telephone formatter](https://sadanandpai.github.io/frontend-mini-challenges/native/mc/telephone-formatter/)
 - [Light & Dark mode](https://sadanandpai.github.io/frontend-mini-challenges/native/mc/light-dark-mode/)
 - [Toast Popup](https://sadanandpai.github.io/frontend-mini-challenges/native/mc/toast-popup/)
@@ -35,12 +36,13 @@
 - [Area Selector](https://sadanandpai.github.io/frontend-mini-challenges/native/mc/area-selector/)
 - [Carousel](https://sadanandpai.github.io/frontend-mini-challenges/native/mc/carousel/)
 - [Calendar](https://sadanandpai.github.io/frontend-mini-challenges/native/mc/calendar/)
+- [Progress Bar](https://sadanandpai.github.io/frontend-mini-challenges/native/mc/progress-bar/)
 - [Paginator](https://sadanandpai.github.io/frontend-mini-challenges/native/mc/paginator/)
 - [Connect Four](https://sadanandpai.github.io/frontend-mini-challenges/native/mc/connect-four/)
 - [Comment box](https://sadanandpai.github.io/frontend-mini-challenges/native/mc/comment-box/)
 - [JSON Creator](https://sadanandpai.github.io/frontend-mini-challenges/native/mc/json-creator/)
+- [Typeahead (offline)](https://sadanandpai.github.io/frontend-mini-challenges/native/mc/type-ahead/)
 - [Array methods](https://sadanandpai.github.io/frontend-mini-challenges/native/mc/array-methods/)
-- [Progress Bar](https://sadanandpai.github.io/frontend-mini-challenges/native/mc/progress-bar/)
 
 ---
 
