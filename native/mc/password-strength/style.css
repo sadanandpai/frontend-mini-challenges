@@ -2,8 +2,20 @@
 
 input {
   width: 20rem;
-  margin-bottom: 1rem;
+  /* margin-bottom: 1rem; */
   font-size: 1.5rem;
+}
+
+.indicators {
+  width: 20rem;
+  justify-content: space-between;
+  margin: 0.5rem auto 1rem;
+  font-size: 0.8rem;
+  color: lightgrey
+}
+
+.indicators .true{
+  color: green;
 }
 
 .progress-container {

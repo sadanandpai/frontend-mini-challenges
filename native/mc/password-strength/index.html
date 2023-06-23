@@ -12,12 +12,22 @@
     <div class="container text-center">
       <div>
         <label for="password-length">Enter the password</label><br /><br />
-        <input type="text" id="password" min="8" max="32" />
+        <input type="text" id="password" min="8" max="32" autofocus autocomplete="off" />
+      </div>
+
+      <div class="flex indicators">
+        <span id="lc">Lowercase</span>
+        <span id="uc">Uppercase</span>
+        <span id="num">Number</span>
+        <span id="sym">Symbols</span>
       </div>
 
       <div class="progress-container">
         <div class="progress-bar" id="progressBar"></div>
       </div>
+
+      <p>Password has <strong id="chars">0</strong> chars</p>
+      <p>Your password is <strong id="strength">Weak</strong></p>
     </div>
   </body>
 </html>
