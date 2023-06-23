@@ -32,7 +32,7 @@ export const challenges = [
   { title: 'Connect Four', link: 'connect-four', isNew: true },
   { title: 'Comment box', link: 'comment-box' },
   { title: 'JSON Creator', link: 'json-creator' },
-  { title: 'Typeahead (offline)', link: 'type-ahead', isNew: true },
+  { title: 'Typeahead / Autocomplete (offline)', link: 'type-ahead', isNew: true },
   { title: 'Typeahead (online)', link: '#' },
   { title: 'Array methods', link: 'array-methods' },
   { title: 'Stepper', link: '#' },

@@ -41,7 +41,7 @@
 - [Connect Four](https://sadanandpai.github.io/frontend-mini-challenges/native/mc/connect-four/)
 - [Comment box](https://sadanandpai.github.io/frontend-mini-challenges/native/mc/comment-box/)
 - [JSON Creator](https://sadanandpai.github.io/frontend-mini-challenges/native/mc/json-creator/)
-- [Typeahead (offline)](https://sadanandpai.github.io/frontend-mini-challenges/native/mc/type-ahead/)
+- [Typeahead / Autocomplete (offline)](https://sadanandpai.github.io/frontend-mini-challenges/native/mc/type-ahead/)
 - [Array methods](https://sadanandpai.github.io/frontend-mini-challenges/native/mc/array-methods/)
 
 ---
