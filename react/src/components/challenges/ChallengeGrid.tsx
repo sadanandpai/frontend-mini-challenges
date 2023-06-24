@@ -13,6 +13,7 @@ function ChallengeGrid() {
           >
             {challenge.title}
           </a>
+          {challenge.isNew && <span className={styles.new}>New</span>}
         </div>
       ))}
     </div>

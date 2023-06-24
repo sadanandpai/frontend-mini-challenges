@@ -1,5 +1,6 @@
 export const challenges = [
-  { title: "Counter", link: "#/0/counter" },
+  { title: "Accordion", link: "#/0/accordion", isNew: true },
+  { title: "Counter", link: "#/1/counter" },
   { title: "Guess the number", link: "#" },
   { title: "Telephone formatter", link: "#" },
   { title: "Light & Dark mode", link: "#" },
