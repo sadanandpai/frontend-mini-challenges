@@ -1,0 +1,58 @@
+@import url(../../helpers/core.css);
+
+input {
+  width: 94%;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+}
+
+.suggestions {
+  width: 93%;
+  margin: auto;
+  padding-inline-start: 0;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  padding-left: 1rem;
+  margin-bottom: 0.1rem;
+  background-color: beige;
+  cursor: pointer;
+  list-style: none;
+}
+
+li.highlight {
+  background-color: khaki;
+  outline: 1px solid ;
+}
+
+@media (min-width: 768px) {
+  input, .suggestions {
+    width: 50%;
+  }
+}
+
+.loader {
+  width: 25px;
+  height: 25px;
+  margin: auto;
+  margin-top: 25px;
+  border: 2px solid black;
+  border-right-width: 0;
+  border-left-width: 0; 
+  border-radius: 50%;
+  animation: loader linear 1s infinite;
+}
+
+@keyframes loader {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

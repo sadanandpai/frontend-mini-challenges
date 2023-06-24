@@ -33,7 +33,7 @@ export const challenges = [
   { title: 'Comment box', link: 'comment-box' },
   { title: 'JSON Creator', link: 'json-creator' },
   { title: 'Typeahead / Autocomplete (offline)', link: 'type-ahead', isNew: true },
-  { title: 'Typeahead (online)', link: '#' },
+  { title: 'Typeahead / Autocomplete (online)', link: 'type-ahead-online', isNew: true },
   { title: 'Array methods', link: 'array-methods' },
   { title: 'Stepper', link: '#' },
   { title: 'Accordion', link: '#' },

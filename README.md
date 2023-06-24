@@ -42,6 +42,7 @@
 - [Comment box](https://sadanandpai.github.io/frontend-mini-challenges/native/mc/comment-box/)
 - [JSON Creator](https://sadanandpai.github.io/frontend-mini-challenges/native/mc/json-creator/)
 - [Typeahead / Autocomplete (offline)](https://sadanandpai.github.io/frontend-mini-challenges/native/mc/type-ahead/)
+- [Typeahead / Autocomplete (online)](https://sadanandpai.github.io/frontend-mini-challenges/native/mc/type-ahead-online/)
 - [Array methods](https://sadanandpai.github.io/frontend-mini-challenges/native/mc/array-methods/)
 
 ---
