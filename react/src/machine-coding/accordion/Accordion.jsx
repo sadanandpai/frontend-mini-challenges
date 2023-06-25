@@ -1,12 +1,27 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+
 import styles from "./Accordion.module.css";
 
-const Accordion = ({ title, info, id }) => {
+const Accordion = ({
+  title,
+  info,
+  id,
+  openAccordionId,
+  setIdOfOpenAccordion,
+}) => {
   const [show, setShow] = useState(false);
 
   const toggle = () => {
     setShow((prev) => !prev);
+    setIdOfOpenAccordion(id);
   };
+
+  useEffect(() => {
+    if (openAccordionId) {
+      setShow(openAccordionId === id);
+    }
+  }, [id, openAccordionId]);
+
   return (
     <>
       <div key={id} className={styles.accordion}>

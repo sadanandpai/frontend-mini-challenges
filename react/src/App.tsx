@@ -15,6 +15,10 @@ function App() {
         </a>
       </h1>
 
+      <h4>Challenges built using React</h4>
+
+      <a href="/frontend-mini-challenges/">Switch to JavaScript version</a>
+
       <ChallengeGrid />
     </div>
   );

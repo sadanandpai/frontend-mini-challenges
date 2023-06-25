@@ -1,7 +1,9 @@
 .App {
   font-family: sans-serif;
   text-align: center;
+  margin-top: 1rem;
 }
+
 .accordion {
   width: 95%;
   border: 1px solid rgb(218, 212, 212);
@@ -10,11 +12,13 @@
   text-align: left;
   margin-bottom: 10px;
 }
+
 .accordion-title {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+
 .accordion-icon {
   background: transparent;
   border-color: transparent;
