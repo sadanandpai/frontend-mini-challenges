@@ -23,17 +23,15 @@ const Accordion = ({
   }, [id, openAccordionId]);
 
   return (
-    <>
-      <div key={id} className={styles.accordion}>
-        <div className={styles["accordion-title"]}>
-          <h3>{title}</h3>
-          <button onClick={toggle} className={styles["accordion-icon"]}>
-            {show ? "-" : "+"}
-          </button>
-        </div>
-        {show && <p className={styles["accordion-info"]}>{info}</p>}
+    <div key={id} className={styles.accordion}>
+      <div className={styles["accordion-title"]}>
+        <h3>{title}</h3>
+        <button onClick={toggle} className={styles["accordion-icon"]}>
+          {show ? "-" : "+"}
+        </button>
       </div>
-    </>
+      {show && <p>{info}</p>}
+    </div>
   );
 };
 
