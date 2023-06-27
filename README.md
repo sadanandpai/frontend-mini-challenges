@@ -2,10 +2,14 @@
   <h1>Frontend Mini Challenges</h1>
   <h3>Collection of frontend challenges for learning and interviews</h3>
   <a href="https://sadanandpai.github.io/frontend-mini-challenges/"><img src="cover.png" alt="web programming" width="500px" /></a>
-</div>
 
-<div align="center">
-  <h3><a href="https://sadanandpai.github.io/frontend-mini-challenges/">All Challenges</a></h3>
+  [![](https://img.shields.io/github/stars/sadanandpai/frontend-mini-challenges?style=for-the-badge)](#stars)
+  [![](https://img.shields.io/github/forks/sadanandpai/frontend-mini-challenges?style=for-the-badge)](#forks)
+
+  <h3>
+    <a href="https://sadanandpai.github.io/frontend-mini-challenges/">Challenges in JavaScript</a> |
+    <a href="https://sadanandpai.github.io/frontend-mini-challenges/react/dist/">Challenges in React</a>
+  </h3>
 </div>
 
 ---
