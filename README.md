@@ -28,8 +28,8 @@ This repo is created to list down all the popular frontend challenges which are 
   - The challenges are standalone modules. Those can be viewed directly by opening the index file or live server
 - React Challenges
   - navigate to `react/`
-  - npm install (only one time installation is needed for all the challenges)
-  - npm run dev
+  - `npm install` (only one time installation is needed for all the challenges)
+  - `npm run dev`
 
 ### Stargazers
 
