@@ -39,7 +39,7 @@ This repo is created to list down all the popular frontend challenges which are 
 
 ## Contributing Guide
 
-If you want to contribute, improve or suggest changes to this repo, then check out the [Contributing Guide](./contributing.md)
+If you want to contribute, improve or suggest changes to this repo, then check out the [Contributing Guide](https://github.com/sadanandpai/frontend-mini-challenges/blob/main/CONTRIBUTING.md)
 
 <br/>
 
