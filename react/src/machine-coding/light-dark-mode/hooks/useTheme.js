@@ -17,8 +17,8 @@ const useTheme = () => {
   }, [theme]);
 
   const toggleTheme = () => {
-    if (theme === "light-theme") setTheme("dark-theme");
-    else setTheme("light-theme");
+    if (theme === "dark-theme") setTheme("light-theme");
+    else setTheme("dark-theme");
   };
 
   return { theme, toggleTheme };
