@@ -4,7 +4,7 @@ export const challenges = [
   { title: "Star Rating", link: "#/2/star-Rating", isNew: true },
   { title: "Light Dark Mode", link: "#/3/light-dark-mode", isNew: true },
   { title: "Guess the number", link: "#" },
-  { title: "Telephone formatter", link: "#" },
+  { title: "Telephone formatter", link: "#/5/telephone-formatter", isNew: true },
   { title: "Light & Dark mode", link: "#" },
   { title: "Toast Popup", link: "#" },
   { title: "Password Strength", link: "#" },
