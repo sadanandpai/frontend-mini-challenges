@@ -1,11 +1,14 @@
 export const challenges = [
-  { title: "Accordion", link: "#/0/accordion" },
-  { title: "Counter", link: "#/1/counter" },
+  { title: "Counter", link: "#/0/counter" },
+  { title: "Accordion", link: "#/1/accordion" },
   { title: "Star Rating", link: "#/2/star-Rating", isNew: true },
   { title: "Light Dark Mode", link: "#/3/light-dark-mode", isNew: true },
   { title: "Guess the number", link: "#" },
-  { title: "Telephone formatter", link: "#/5/telephone-formatter", isNew: true },
-  { title: "Light & Dark mode", link: "#" },
+  {
+    title: "Telephone formatter",
+    link: "#/5/telephone-formatter",
+    isNew: true,
+  },
   { title: "Toast Popup", link: "#" },
   { title: "Password Strength", link: "#" },
   { title: "Pixel Art", link: "#" },
