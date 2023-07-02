@@ -4,6 +4,7 @@ import Header from "../header/header";
 import LightDarkMode from "@/machine-coding/light-dark-mode/App";
 import StarRating from "@/machine-coding/star-rating/App";
 import TelephoneFormatter from "@/machine-coding/telephone-formatter";
+import GuessNumber from  "../../machine-coding/Guess-the-number/App";
 import { useParams } from "react-router-dom";
 
 const reactChallenges = [
@@ -11,7 +12,7 @@ const reactChallenges = [
   <Accordion />,
   <StarRating />,
   <LightDarkMode />,
-  null, // Gap for "Guess the number"
+  <GuessNumber/>,  // Gap for "Guess the number"
   <TelephoneFormatter />,
 ];
 
