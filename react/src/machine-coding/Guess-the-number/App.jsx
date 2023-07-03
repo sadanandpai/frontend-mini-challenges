@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-import styles from "./Guess.module.css";
+import styles from "./guess.module.css";
 
 export default function App() {
   const [l1, setL1] = useState();
