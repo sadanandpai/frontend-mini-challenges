@@ -1,6 +1,6 @@
 import Accordion from "@/machine-coding/accordion/App";
 import Counter from "@/machine-coding/counter/counter";
-import GuessNumber from "@/machine-coding/guess-the-number/App";
+import GuessNumber from "@/machine-coding/guess-number/App";
 import Header from "../header/header";
 import LightDarkMode from "@/machine-coding/light-dark-mode/App";
 import StarRating from "@/machine-coding/star-rating/App";
