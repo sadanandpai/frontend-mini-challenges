@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-import styles from "./guess.module.css";
+import styles from "./Guess.module.css";
 
 export default function App() {
   const [l1, setL1] = useState();
@@ -37,24 +37,45 @@ export default function App() {
     setLow(false);
     setHigh(false);
     setDisable(false);
+    setNum(1);
   };
 
   return (
     <div className={styles.app}>
-      <input
-        placeholder="Guess-Number"
-        onChange={(e) => setNum(e.target.value)}
-      />
-      <div className={styles.widget}>
-        <button onClick={() => restart()}> Start</button>
-        <button onClick={(e) => check(e)} disabled={disable}>
-          check
-        </button>
-      </div>
+      <form onSubmit={check}>
+        <label htmlFor="input">Guess a Number between 0 and 100</label>
+        <input
+          id="input"
+          type="number"
+          value={num}
+          placeholder="Guess-Number"
+          onChange={(e) => setNum(Number(e.target.value))}
+        />
+        <div className={styles.widget}>
+          <button type="reset" onClick={() => restart()}>
+            Reset
+          </button>
+          <button type="submit" onClick={(e) => check(e)} disabled={disable}>
+            Check
+          </button>
+        </div>
+      </form>
       <div className={styles.text}>
-        {low && <p>Your guess is Less than the actual number</p>}
-        {high && <p>Your guess is Higher than the actual number</p>}
-        {hi && <p>Your guess is right</p>}
+        {low && (
+          <p>
+            Your guess is <b>Less</b> than the actual number
+          </p>
+        )}
+        {high && (
+          <p>
+            Your guess is <b>Higher</b> than the actual number
+          </p>
+        )}
+        {hi && (
+          <p>
+            Your guess is <b>right</b>
+          </p>
+        )}
       </div>
     </div>
   );
