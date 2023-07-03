@@ -3,7 +3,7 @@ export const challenges = [
   { title: "Accordion", link: "#/1/accordion" },
   { title: "Star Rating", link: "#/2/star-Rating", isNew: true },
   { title: "Light Dark Mode", link: "#/3/light-dark-mode", isNew: true },
-  { title: "Guess the number", link: "#" },
+  { title: "Guess the number", link: "#/4/Guess-the-number",isNew: true  },
   {
     title: "Telephone formatter",
     link: "#/5/telephone-formatter",

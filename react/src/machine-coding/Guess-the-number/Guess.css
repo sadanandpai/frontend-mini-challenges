@@ -1,0 +1,19 @@
+.App{
+    display: flex;
+    flex-direction: column;
+    max-width: 10%;
+    margin:10px auto;
+    
+}
+.App input{
+    text-align: center;
+    height: 30px;
+}
+.App .widget{
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-around;
+}
+.App .text p{
+    text-align: center;
+}
