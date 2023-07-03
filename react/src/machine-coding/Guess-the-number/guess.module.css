@@ -1,19 +1,19 @@
-.App{
+.app{
     display: flex;
     flex-direction: column;
     max-width: 10%;
     margin:10px auto;
     
 }
-.App input{
+.app input{
     text-align: center;
     height: 30px;
 }
-.App .widget{
+.app .widget{
     margin-top: 5px;
     display: flex;
     justify-content: space-around;
 }
-.App .text p{
+.app .text p{
     text-align: center;
 }
