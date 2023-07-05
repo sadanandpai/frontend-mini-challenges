@@ -1,7 +1,7 @@
 import { challenges } from './challenges.js';
 
-const challengeLink = window.location.pathname.split('mc/')[1].slice(0, -1);
-const challenge = challenges.find(challenge => challenge.link === challengeLink);
+const challengeLink = window.location.pathname.split('machine-coding/')[1].slice(0, -1);
+const challenge = challenges.find((challenge) => challenge.link === challengeLink);
 
 const nav = document.createElement('nav');
 nav.className = 'global-nav';

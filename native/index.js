@@ -1,10 +1,10 @@
 import { challenges } from './helpers/challenges.js';
 
-const createAnchorElement = obj => {
+const createAnchorElement = (obj) => {
   const div = document.createElement('div');
   const a = document.createElement('a');
   a.textContent = obj.title;
-  a.href = `./native/mc/${obj.link}/`;
+  a.href = `./native/machine-coding/${obj.link}/`;
 
   if (obj.link === '#') {
     a.classList.add('disabled');
@@ -24,4 +24,4 @@ const createAnchorElement = obj => {
 };
 
 const challengeGridEl = document.getElementById('challengeGrid');
-challenges.map(createAnchorElement).forEach(el => challengeGridEl.appendChild(el));
+challenges.map(createAnchorElement).forEach((el) => challengeGridEl.appendChild(el));

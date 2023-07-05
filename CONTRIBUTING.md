@@ -1,6 +1,6 @@
 ### Contribution Guide
 
-- Feel free to contribute to this repo by raising the __pull request__
+- Feel free to contribute to this repo by raising the **pull request**
 - Spelling mistakes, improvement of answers, code comments, rephrasing the questions, additional details, or similar contributions are highly appreciated
 
 #### Challenge contribution
@@ -13,7 +13,7 @@
 
 ##### Steps to Contribute JavaScript Challenge
 
-- The challenge should be added as a separate folder that should be named with the name of the challenge inside `/native/mc/`
+- The challenge should be added as a separate folder that should be named with the name of the challenge inside `/native/machine-coding/`
 - Challenge should have a minimum of index.html
 - JavaScript and CSS code if exists should have separate file[s]
 - Challenge should be added to the array of challenges `/native/helpers/challenges.js`

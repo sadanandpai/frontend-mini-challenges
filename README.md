@@ -3,8 +3,8 @@
   <h3>Collection of frontend challenges for learning and interviews</h3>
   <a href="https://sadanandpai.github.io/frontend-mini-challenges/"><img src="cover.png" alt="web programming" width="500px" /></a>
 
-  [![](https://img.shields.io/github/stars/sadanandpai/frontend-mini-challenges?style=for-the-badge)](#stars)
-  [![](https://img.shields.io/github/forks/sadanandpai/frontend-mini-challenges?style=for-the-badge)](#forks)
+[![](https://img.shields.io/github/stars/sadanandpai/frontend-mini-challenges?style=for-the-badge)](#stars)
+[![](https://img.shields.io/github/forks/sadanandpai/frontend-mini-challenges?style=for-the-badge)](#forks)
 
   <p>Show your support by giving a ⭐ to this repo</p>
 
@@ -20,7 +20,7 @@
 
 This repo is created to list down all the popular frontend challenges which are recommended for learning and interviews. Challenges are solved both in vanilla JavaScript and React. You can both play with the UI and view the solutions.
 
-- Solutions to JavaScript challenges: [Click here](https://github.com/sadanandpai/frontend-mini-challenges/tree/main/native/mc)
+- Solutions to JavaScript challenges: [Click here](https://github.com/sadanandpai/frontend-mini-challenges/tree/main/native/machine-coding)
 - Solutions to React challenges: [Click here](https://github.com/sadanandpai/frontend-mini-challenges/tree/main/react/src/machine-coding)
 
 <br/>
