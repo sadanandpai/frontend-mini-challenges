@@ -23,6 +23,6 @@
 - The challenge should be added as a separate folder that should be named with the name of the challenge inside `/react/src/machine-coding/`
 - Challenge should have a minimum of App.jsx / App.tsx
 - App should be broken down into components and have their files
-- CSS should be strictly module CSS to prevent pollution in global space
+- CSS should be strictly **module CSS** to prevent pollution in global space
 - Challenge should be added to the array of challenges `/react/src/helpers/challenges.ts`
 - The component should be imported and added to their respective position in the array of challenges in `/react/src/components/challenge/Challenge.tsx`
