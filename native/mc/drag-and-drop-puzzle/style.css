@@ -1,3 +1,5 @@
+@import url(../../helpers/core.css);
+
 .container {
   display: flex;
   justify-content: center;

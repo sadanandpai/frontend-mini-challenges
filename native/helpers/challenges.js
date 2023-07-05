@@ -18,6 +18,7 @@ export const challenges = [
   { title: 'Chips Input', link: 'chips-input' },
   { title: 'Password Generator', link: 'password-generator' },
   { title: 'Analog Clock', link: 'analog-clock' },
+  { title: 'Drag and Drop Puzzle', link: 'drag-and-drop-puzzle', isNew: true },
   { title: 'Basic calculator', link: 'basic-calculator', isNew: true },
   { title: 'Navigation Bar', link: '#' },
   { title: 'Match Pair', link: 'match-pair', isNew: true },
@@ -41,5 +42,4 @@ export const challenges = [
   { title: 'Sort Table', link: '#' },
   { title: 'Emoji Editor', link: '#' },
   { title: 'Infinite Scroll', link: '#' },
-  { title: 'Drag and Drop Puzzle', link: 'drag-and-drop-puzzle' },
 ];
