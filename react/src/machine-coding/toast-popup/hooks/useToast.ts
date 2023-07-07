@@ -1,6 +1,5 @@
-import { useState } from 'react';
-import { ToastMessage,ToastType,VerticalAlignment,HorizontalAlignment } from '../types';
-
+import { useState, useEffect } from 'react';
+import { ToastMessage, ToastType, VerticalAlignment, HorizontalAlignment } from '../types';
 
 export const useToast = () => {
   const [horizontalPosition, setHorizontalPosition] = useState<HorizontalAlignment>(HorizontalAlignment.LEFT);
@@ -8,9 +7,16 @@ export const useToast = () => {
   const [type, setType] = useState<ToastType>(ToastType.SUCCESS);
   const [message, setMessage] = useState<string>('This is a toast message!');
   const [duration, setDuration] = useState<number>(5);
-
- 
   const [toastMessages, setToastMessages] = useState<ToastMessage[]>([]);
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const timerIds: any = [];
+  useEffect(() => {
+    
+
+    return () => {
+      timerIds.forEach((timerId) => clearTimeout(timerId));
+    };
+  }, []);
 
   const showToast = () => {
     const newToast: ToastMessage = {
@@ -21,12 +27,14 @@ export const useToast = () => {
 
     setToastMessages((prevMessages) => [...prevMessages, newToast]);
 
-    setTimeout(() => {
+    const timerId = setTimeout(() => {
       setToastMessages((prevMessages) => prevMessages.filter((msg) => msg.id !== newToast.id));
     }, duration * 1000);
+
+    timerIds.push(timerId);
   };
 
-  const removeToast = (id: number) =>{
+  const removeToast = (id: number) => {
     setToastMessages((prevMessages) => prevMessages.filter((msg) => msg.id !== id));
   };
 
@@ -43,8 +51,6 @@ export const useToast = () => {
     setMessage,
     setDuration,
     showToast,
-    setToastMessages,
-    removeToast
-    
+    removeToast,
   };
 };

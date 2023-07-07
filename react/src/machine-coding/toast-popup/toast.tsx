@@ -1,8 +1,8 @@
 
 import { useToast } from './hooks/useToast'
 import styles from './toast.module.scss';
-import { ToastMessage, ToastType, VerticalAlignment, HorizontalAlignment } from './types';
-
+import {ToastType, VerticalAlignment, HorizontalAlignment } from './types';
+import { ToastItem } from './toastItem';
 
 const Toast = () => {
   const {
@@ -18,23 +18,10 @@ const Toast = () => {
     setMessage,
     setDuration,
     showToast,
-    setToastMessages
+    removeToast
   } = useToast();
   const toastClassName = `tc${horizontalPosition}${verticalPosition}`
-  const ToastItem: React.FC<ToastMessage> = ({ id, message, type }) => {
-
-    const removeToast = () => {
-      setToastMessages((prevMessages) => prevMessages.filter((msg) => msg.id !== id));
-    };
-    return (
-      <div className={`${styles.toast} ${styles[type]}`} >
-        <span className="toast-message">{message}</span>
-        <button className={styles.remove} onClick={removeToast}>
-          &#x2715;
-        </button>
-      </div>
-    );
-  };
+  
 
   return (
     <div className={styles.main}>
@@ -85,7 +72,7 @@ const Toast = () => {
       {toastMessages.length > 0 && (
         <div className={`${styles.toastContainer} ${styles[toastClassName]}`}>
           {toastMessages.map((msg) => (
-            <ToastItem key={msg.id} {...msg} />
+            <ToastItem key={msg.id} {...msg} removeToast={removeToast}/>
           ))}
         </div>
       )}
