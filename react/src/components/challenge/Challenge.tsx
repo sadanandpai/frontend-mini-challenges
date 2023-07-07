@@ -1,6 +1,8 @@
 import Accordion from "@/machine-coding/accordion/App";
 import Counter from "@/machine-coding/counter/counter";
+import PasswordStrength from "@/machine-coding/password-strength/passwordStrength";
 import GuessNumber from "@/machine-coding/guess-number/App";
+import Toast from "@/machine-coding/toast-popup/toast";
 import Header from "../header/header";
 import LightDarkMode from "@/machine-coding/light-dark-mode/App";
 import StarRating from "@/machine-coding/star-rating/App";
@@ -14,6 +16,8 @@ const reactChallenges = [
   <LightDarkMode />,
   <GuessNumber />,
   <TelephoneFormatter />,
+  <Toast />,
+  <PasswordStrength />
 ];
 
 function Challenge() {
