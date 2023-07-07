@@ -29,3 +29,12 @@ a {
 .text-center {
   text-align: center;
 }
+
+
+.btn.btn-primary {
+  padding: 10px 16px;
+  background-color: cyan;
+  border: 1px solid grey;
+  border-radius: 4px;
+  cursor: pointer;
+}
