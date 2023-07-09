@@ -8,7 +8,7 @@ import PasswordStrength from "@/machine-coding/password-strength/passwordStrengt
 import StarRating from "@/machine-coding/star-rating/App";
 import TelephoneFormatter from "@/machine-coding/telephone-formatter";
 import Toast from "@/machine-coding/toast-popup/toast";
-import TodoList from "@/machine-coding/todo-list/Todo";
+import TodoList from "@/machine-coding/todo-list/todo";
 import { useParams } from "react-router-dom";
 
 const reactChallenges = [
