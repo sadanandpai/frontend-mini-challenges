@@ -1,13 +1,14 @@
 import Accordion from "@/machine-coding/accordion/App";
 import Counter from "@/machine-coding/counter/counter";
-import PasswordStrength from "@/machine-coding/password-strength/passwordStrength";
+import FileExplorer from "@/machine-coding/file-explorer/App";
 import GuessNumber from "@/machine-coding/guess-number/App";
-import Toast from "@/machine-coding/toast-popup/toast";
 import Header from "../header/header";
 import LightDarkMode from "@/machine-coding/light-dark-mode/App";
+import PasswordStrength from "@/machine-coding/password-strength/passwordStrength";
 import StarRating from "@/machine-coding/star-rating/App";
 import TelephoneFormatter from "@/machine-coding/telephone-formatter";
-import TodoList from "@/machine-coding/todo-list/todo";
+import Toast from "@/machine-coding/toast-popup/toast";
+import TodoList from "@/machine-coding/todo-list/Todo";
 import { useParams } from "react-router-dom";
 
 const reactChallenges = [
@@ -19,7 +20,8 @@ const reactChallenges = [
   <TelephoneFormatter />,
   <Toast />,
   <PasswordStrength />,
-  <TodoList />
+  <TodoList />,
+  <FileExplorer />,
 ];
 
 function Challenge() {
