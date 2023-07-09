@@ -13,7 +13,7 @@ export const challenges = [
   { title: "Password Strength", link: "#/7/password-strength", isNew: true},
   { title: "Pixel Art", link: "#" },
   { title: "Color Spotter", link: "#" },
-  { title: "Todo List", link: "#" },
+  { title: "Todo List", link: "#/8/todo-list",isNew: true },
   { title: "Tic-Tac-Toe", link: "#" },
   { title: "Chess board", link: "#" },
 ];
