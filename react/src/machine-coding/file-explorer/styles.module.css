@@ -1,0 +1,57 @@
+.app {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
+
+.list {
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 0.5em;
+  height: 1.5em;
+  display: flex;
+  align-items: center;
+}
+
+.list button {
+  font-size: 1em;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.list.editList {
+  padding: 1px 6px;
+}
+
+.list input {
+  font-size: 1em;
+}
+
+.indent {
+  margin-left: 30px;
+}
+
+.controls {
+  display: flex;
+  gap: 0.5em;
+  margin-left: 2rem;
+}
+
+.controls button {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+}
+
+.list:hover button {
+  display: block;
+}
+
+.list[data-root="true"]:hover div button:first-child,
+.list[data-root="true"]:hover div button:last-child {
+  display: none;
+}

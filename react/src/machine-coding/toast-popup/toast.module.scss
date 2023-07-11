@@ -1,0 +1,169 @@
+.main {
+  text-align: center;
+  width: 90%;
+  margin: auto;
+  margin-top: 1rem;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  input,
+  select {
+    padding: 0.5em;
+    font-size: 1rem;
+  }
+
+  label {
+    display: flex;
+  }
+
+  #message {
+    min-width: 25ch;
+  }
+
+  [for='duration'] {
+    align-items: center;
+  }
+
+  .toastContainer {
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .toast {
+    padding: 0.5em;
+    background-color: pink;
+    border-radius: 0.25rem;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+  }
+  .success {
+    background-color: #00b300;
+  }
+  
+  .error {
+    background-color: #ff0000;
+  }
+  
+  .warning {
+    background-color: #ffa500;
+  }
+  
+  .info {
+    background-color: lightyellow;
+  }
+
+  .toast::before {
+    min-width: 1rem;
+    padding: 0.1em 0.5em;
+    font-weight: bold;
+    font-size: 0.85em;
+  }
+  
+  .success::before {
+    content: '✓';
+  }
+  
+  .error::before {
+    content: '✗';
+  }
+  
+  .warning::before {
+    content: '⚠';
+  }
+  
+  .info::before {
+    content: 'ⓘ';
+  }
+
+  .remove {
+    all: unset;
+    margin-left: 1em;
+    cursor: pointer;
+  }
+
+  .tcLeftTop {
+    top: 1rem;
+    left: 1rem;
+  }
+
+  .tcLeftBottom {
+    bottom: 1rem;
+    left: 1rem;
+  }
+
+  .tcRightTop {
+    top: 1rem;
+    right: 1rem;
+  }
+
+  .tcRightBottom {
+    right: 1rem;
+    bottom: 1rem;
+  }
+
+  .tcLeftTop .toast,
+  .tcLeftBottom .toast {
+    animation: appearFromLeft 0.1s ease-in forwards;
+  }
+
+  .tcLeftTop .toast.fade-out-left,
+  .tcLeftBottom .toast.fade-out-left {
+    animation: fadeOutToLeft 0.1s ease-in forwards;
+  }
+
+  @keyframes appearFromLeft {
+    0% {
+      transform: translateX(-200%);
+    }
+
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes fadeOutToLeft {
+    0% {
+      transform: translateX(0);
+    }
+
+    100% {
+      transform: translateX(-200%);
+    }
+  }
+
+  .tcRightTop .toast,
+  .tcRightBottom .toast {
+    animation: appearFromRight 0.1s ease-in forwards;
+  }
+
+  .tcRightTop .toast.fade-out-right,
+  .tcRightBottom .toast.fade-out-right {
+    animation: fadeOutToRight 0.1s ease-in forwards;
+  }
+
+  @keyframes appearFromRight {
+    0% {
+      transform: translateX(200%);
+    }
+
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes fadeOutToRight {
+    0% {
+      transform: translateX(0);
+    }
+
+    100% {
+      transform: translateX(200%);
+    }
+  }
+}
