@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&family=Lora:ital,wght@0,400;0,500;1,400;1,500&family=Montserrat:wght@300;400&family=Nunito+Sans:wght@200&family=Open+Sans:wght@300&family=Pathway+Extreme:wght@100&family=Poppins:ital,wght@0,100;0,200;0,400;0,900;1,300&family=Raleway:ital,wght@0,800;1,800&family=Urbanist:ital,wght@0,200;0,300;1,200;1,400&family=Varela&family=Varela+Round&display=swap');
+@import url(../../helpers/core.css);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', 'sans-serif';
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #0c5664;
+  overflow: hidden;
+}
+.container {
+  width: 400px;
+  overflow: hidden;
+}
+
+.container .text {
+  position: relative;
+  color: #32043d;
+  font-size: 50px;
+  font-weight: 600;
+}
+
+.container .text.first-text {
+  color: #b8e3ea;
+}
+
+.text.second-text::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #0c5664;
+  border-left: 2px solid #32043d;
+  animation: animate 4s steps(10) infinite;
+  /*
+   animation: animate 4s steps(38) infinite;
+  animation: animate 4s steps(12) infinite;
+  animation: animate 2s steps(05) infinite;
+  */
+}
+@keyframes animate {
+  40%,
+  60% {
+    left: calc(100% + 4px);
+  }
+
+  100% {
+    left: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+}
+@media screen and (max-width: 480px) {
+  .container {
+    margin-left: 30px;
+  }
+}
