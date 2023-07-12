@@ -13,6 +13,8 @@ export const challenges = [
   { title: "Password Strength", link: "#/7/password-strength", isNew: true },
   { title: "Todo List", link: "#/8/todo-list", isNew: true },
   { title: "File Explorer", link: "#/9/file-explorer", isNew: true },
+  { title: "Typeahead / Autocomplete (offline)", link: "#/10/autocomplete-offline", isNew: true },
+  { title: "Typeahead / Autocomplete (online)", link: "#/11/autocomplete-online", isNew: true },
   { title: "Pixel Art", link: "#" },
   { title: "Color Spotter", link: "#" },
   { title: "Tic-Tac-Toe", link: "#" },
