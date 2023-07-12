@@ -12,7 +12,7 @@
   grid-template-columns: repeat(3, 200px);
   grid-template-rows: repeat(3, 200px);
   gap: 15px;
-  margin: auto;
+  /*  margin: auto;*/
 }
 
 .piece {
@@ -34,4 +34,35 @@
 .piece.dragging {
   opacity: 0.6;
   cursor: grabbing;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .container {
+    margin: 20px;
+  }
+  .puzzle-container {
+    grid-template-columns: repeat(3, 130px);
+    grid-template-rows: repeat(3, 130px);
+  }
+
+  .piece {
+    width: 130px;
+    height: 130px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    margin: 20px;
+  }
+  .puzzle-container {
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+  }
+
+  .piece {
+    width: 100px;
+    height: 100px;
+  }
 }

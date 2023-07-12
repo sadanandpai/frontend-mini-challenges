@@ -42,4 +42,5 @@ export const challenges = [
   { title: 'Sort Table', link: '#' },
   { title: 'Emoji Editor', link: '#' },
   { title: 'Infinite Scroll', link: '#' },
+  { title: 'Multi Typing', link: 'multi-typing' },
 ];

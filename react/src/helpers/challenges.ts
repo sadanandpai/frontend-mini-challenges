@@ -17,4 +17,5 @@ export const challenges = [
   { title: "Color Spotter", link: "#" },
   { title: "Tic-Tac-Toe", link: "#" },
   { title: "Chess board", link: "#" },
+  { title: "Chess board", link: "#" },
 ];
