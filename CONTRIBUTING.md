@@ -25,4 +25,4 @@
 - App should be broken down into components and have their files
 - CSS should be strictly **module CSS** to prevent pollution in global space
 - Challenge should be added to the array of challenges `/react/src/helpers/challenges.ts`
-- The component should be imported and added to their respective position in the array of challenges in `/react/src/components/challenge/Challenge.tsx`
+- The component should be imported and added to their respective position in the array of challenges in `/react/src/pages/challenge/Challenge.tsx`
