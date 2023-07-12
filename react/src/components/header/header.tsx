@@ -1,10 +1,10 @@
-import styles from "./header.module.css";
-import { challenges } from "@/helpers/challenges";
+import { challenges } from '@/helpers/challenges';
+import styles from './header.module.css';
 
-function Header({ heading = "Challenge" }: { heading?: string }) {
+function Header({ heading = 'Challenge' }: { heading?: string }) {
   return (
     <nav className={styles.nav}>
-      <a href="#/">Home</a>
+      <a href="#/challenges">Home</a>
 
       <h1>{getChallengeTitle(heading)}</h1>
 
@@ -23,5 +23,5 @@ export default Header;
 
 const getChallengeTitle = (challengeParam: string): string | undefined => {
   const challenge = challenges.find((item) => item.link.includes(challengeParam));
-  return challenge?.title||'Challenge';
+  return challenge?.title || 'Challenge';
 };

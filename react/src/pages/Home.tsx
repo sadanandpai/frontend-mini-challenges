@@ -28,7 +28,7 @@ function Home() {
           <br />
           JavaScript
         </a>
-        <a href="https://sadanandpai.github.io/frontend-mini-challenges/react/dist/">
+        <a href="https://sadanandpai.github.io/frontend-mini-challenges/react/dist/#/challenges">
           View challenges in
           <br />
           React
