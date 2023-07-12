@@ -1,5 +1,5 @@
-import { challenges } from "@/helpers/challenges";
-import styles from "./challenge-grid.module.scss";
+import { challenges } from '@/helpers/challenges';
+import styles from './challenge-grid.module.scss';
 
 function ChallengeGrid() {
   return (
@@ -8,8 +8,8 @@ function ChallengeGrid() {
         <div key={challenge.title}>
           <a
             href={challenge.link}
-            className={`${challenge.link === "#" ? "disabled" : ""}`}
-            title={challenge.link === "#" ? "To be developed" : ""}
+            className={`${challenge.link === '#' ? 'disabled' : ''}`}
+            title={challenge.link === '#' ? 'To be developed' : ''}
           >
             {challenge.title}
           </a>
