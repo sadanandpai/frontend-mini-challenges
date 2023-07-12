@@ -9,6 +9,8 @@ import StarRating from "@/machine-coding/star-rating/App";
 import TelephoneFormatter from "@/machine-coding/telephone-formatter";
 import Toast from "@/machine-coding/toast-popup/toast";
 import TodoList from "@/machine-coding/todo-list/todo";
+import AutocompleteOnline from "@/machine-coding/autocomplete-offline/autocompleteOnline";
+import Autocomplete from "@/machine-coding/autocomplete-offline/autocomplete";
 import { useParams } from "react-router-dom";
 
 const reactChallenges = [
@@ -22,6 +24,8 @@ const reactChallenges = [
   <PasswordStrength />,
   <TodoList />,
   <FileExplorer />,
+  <Autocomplete />,
+  <AutocompleteOnline />
 ];
 
 function Challenge() {
