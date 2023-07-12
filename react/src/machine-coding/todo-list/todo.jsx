@@ -8,7 +8,8 @@ const Todo = () => {
   const [items, setItems] = useState([]);
   const [editInfo, setEditInfo] = useState(null);
 
-  const submitHandler = () => {
+  const submitHandler = (event) => {
+    event.preventDefault();
     if (editInfo) {
       updateItem(value);
     } else {
