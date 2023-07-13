@@ -24,12 +24,13 @@ const createAnchorElement = (challenge) => {
   if (challenge.developer) {
     const developer = challengeCard.querySelector('.developer');
     developer.classList.remove('hidden');
-    const developerName = challengeCard.querySelector('.developer-name');
-    developerName.textContent = challenge.developer;
-    const developerImg = challengeCard.querySelector('.developer-img');
+
     const contributor = contributors.get(challenge.developer);
+    const developerName = challengeCard.querySelector('.developer-name');
+    const developerImg = challengeCard.querySelector('.developer-img');
     developerImg.src = contributor.pic;
     developerImg.alt = contributor.name;
+    developerName.textContent = contributor.name;
   }
 
   return challengeCard;
