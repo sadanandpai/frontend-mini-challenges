@@ -1,26 +1,38 @@
 import { challenges } from './helpers/challenges.js';
+import { contributors } from './helpers/contributors.js';
 
-const createAnchorElement = (obj) => {
-  const div = document.createElement('div');
-  const a = document.createElement('a');
-  a.textContent = obj.title;
-  a.href = `./machine-coding/${obj.link}/`;
+const challengeTemplate = document.getElementById('challengeTemplate');
 
-  if (obj.link === '#') {
-    a.classList.add('disabled');
-    a.title = 'To be developed';
-    a.href = '#';
+const createAnchorElement = (challenge) => {
+  const challengeCard = challengeTemplate.content.cloneNode(true);
+
+  const card = challengeCard.querySelector('.challenge-card');
+  if (challenge.link === '#') {
+    card.classList.add('disabled');
+    card.title = 'To be developed';
+  } else {
+    card.href = `./machine-coding/${challenge.link}/`;
   }
 
-  if (obj.isNew) {
-    const newTag = document.createElement('span');
-    newTag.textContent = 'New';
-    newTag.classList.add('new');
-    div.appendChild(newTag);
+  if (challenge.isNew) {
+    challengeCard.querySelector('.new').classList.remove('hidden');
   }
 
-  div.appendChild(a);
-  return div;
+  const title = challengeCard.querySelector('.challenge-title');
+  title.textContent = challenge.title;
+
+  if (challenge.developer) {
+    const developer = challengeCard.querySelector('.developer');
+    developer.classList.remove('hidden');
+    const developerName = challengeCard.querySelector('.developer-name');
+    developerName.textContent = challenge.developer;
+    const developerImg = challengeCard.querySelector('.developer-img');
+    const contributor = contributors.get(challenge.developer);
+    developerImg.src = contributor.pic;
+    developerImg.alt = contributor.name;
+  }
+
+  return challengeCard;
 };
 
 const challengeGridEl = document.getElementById('challengeGrid');
