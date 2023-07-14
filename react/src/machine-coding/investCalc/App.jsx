@@ -2,9 +2,9 @@ import Header from "./src/components/Header/Header.jsx";
 import ResultsTable from "./src/components/ResultsTable/ResultsTable.jsx";
 import UserInput from "./src/components/UserInput/UserInput.jsx";
 import styles from './src/index.module.css';
-import {useState} from 'react';
+import { useState } from 'react';
 
-const App = () => {
+function App() {
   const[userInput, setUserInput] = useState(null);
 
   const calculateHandler = (userInput) => {
