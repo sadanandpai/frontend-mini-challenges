@@ -1,6 +1,6 @@
-import { useRef, useState } from 'react';
+import { useRef, useState } from "react";
 
-import styles from './counter.module.scss';
+import styles from "./counter.module.scss";
 
 function Counter() {
   const [value, setValue] = useState(0);
