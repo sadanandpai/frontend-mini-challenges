@@ -1,20 +1,19 @@
-import Header from "./src/components/Header/Header.jsx";
-import ResultsTable from "./src/components/ResultsTable/ResultsTable.jsx";
-import UserInput from "./src/components/UserInput/UserInput.jsx";
+import ResultsTable from './src/components/ResultsTable/ResultsTable.jsx';
+import UserInput from './src/components/UserInput/UserInput.jsx';
 import styles from './src/index.module.css';
 import { useState } from 'react';
 
 function App() {
-  const[userInput, setUserInput] = useState(null);
+  const [userInput, setUserInput] = useState(null);
 
   const calculateHandler = (userInput) => {
     setUserInput(userInput);
   };
 
-  const yearlyData = []; 
-  if(userInput) {
-    let currentSavings = +userInput['current-savings']; 
-    const yearlyContribution = +userInput['yearly-contribution']; 
+  const yearlyData = [];
+  if (userInput) {
+    let currentSavings = +userInput['current-savings'];
+    const yearlyContribution = +userInput['yearly-contribution'];
     const expectedReturn = +userInput['expected-return'] / 100;
     const duration = +userInput['duration'];
 
@@ -27,18 +26,16 @@ function App() {
         savingsEndOfYear: currentSavings,
         yearlyContribution: yearlyContribution,
       });
+    }
   }
-  }
- 
+
   return (
     <div className={styles.main}>
-      <Header />
-      <UserInput onCalculate={calculateHandler}/>
-      {!userInput && <p style={{textAlign:'center'}}>No data found</p>}
-      {userInput && <ResultsTable data={yearlyData} inInvest={userInput['current-savings']}/>}
+      <UserInput onCalculate={calculateHandler} />
+      {!userInput && <p style={{ textAlign: 'center' }}>No data found</p>}
+      {userInput && <ResultsTable data={yearlyData} inInvest={userInput['current-savings']} />}
     </div>
   );
 }
 
 export default App;
-

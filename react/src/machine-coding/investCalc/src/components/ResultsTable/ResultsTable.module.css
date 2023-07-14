@@ -1,46 +1,50 @@
 .result {
-    max-width: 60rem;
-    padding: 1rem;
-    table-layout: fixed;
-    border-spacing: 1rem;
-    text-align: right;
+  max-width: 60rem;
+  padding: 1rem;
+  table-layout: fixed;
+  border-spacing: 1rem;
+  text-align: right;
 }
 
 .result thead {
-    font-size: 0.7rem;
-    color: #83e6c0;
+  font-size: 0.7rem;
 }
 
 .result tbody {
-    font-family: 'Roboto Condensed', sans-serif;
-    font-size: 0.85rem;
-    color: #c2e9e0;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 0.85rem;
+  color: blueviolet;
 }
+
 @media screen and (max-width: 400px) {
-    .result {
-        padding: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-    .result tbody {
-        font-size: 0.68rem;
-    }
+  .result {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .result tbody {
+    font-size: 0.68rem;
+  }
 }
+
 @media screen and (max-width: 300px) {
-    .result {
-        padding: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-    .result thead {
-        font-size: 0.52rem;
-        color: #83e6c0;
-    }
-    .result tbody {
-        font-size: 0.68rem;
-    }
+  .result {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .result thead {
+    font-size: 0.52rem;
+    color: blueviolet;
+  }
+
+  .result tbody {
+    font-size: 0.68rem;
+  }
 }
