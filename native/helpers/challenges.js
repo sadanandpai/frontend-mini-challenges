@@ -43,4 +43,5 @@ export const challenges = [
   { title: 'Emoji Editor', link: '#' },
   { title: 'Infinite Scroll', link: '#' },
   { title: 'Multi Typing', link: 'multi-typing' },
+  { title: 'Meme Generator ', link: 'meme-generator' },
 ];
