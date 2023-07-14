@@ -87,4 +87,12 @@ export const challenges = [
     tags: [],
     isNew: true,
   },
+  {
+    title: 'Investment Calculator',
+    link: '#/12/investCalc',
+    difficulty: 'hard',
+    developer: 'insharahAyyubi',
+    tags: [],
+    isNew: true,
+  },
 ];
