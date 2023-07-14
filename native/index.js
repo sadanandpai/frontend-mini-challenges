@@ -12,6 +12,7 @@ const createAnchorElement = (challenge) => {
     card.title = 'To be developed';
   } else {
     card.href = `./machine-coding/${challenge.link}/`;
+    card.classList.add(challenge.difficulty);
   }
 
   if (challenge.isNew) {

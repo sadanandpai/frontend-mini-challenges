@@ -72,6 +72,18 @@
   .name {
     color: black;
   }
+
+  &.easy {
+    border: 2px solid green;
+  }
+
+  &.medium {
+    border: 2px solid orange;
+  }
+
+  &.hard {
+    border: 2px solid red;
+  }
 }
 
 @media screen and (min-width: 480px) {

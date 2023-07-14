@@ -8,7 +8,9 @@ function ChallengeGrid() {
       {challenges.map((challenge) => (
         <a
           key={challenge.title}
-          className={`${styles.challengeCard} ${challenge.link === '#' && styles.disabled}`}
+          className={`${styles.challengeCard} ${challenge.link === '#' && styles.disabled} ${
+            styles[challenge.difficulty]
+          }`}
           href={challenge.link}
         >
           {challenge.isNew && <span className={styles.new}>New</span>}

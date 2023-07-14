@@ -42,6 +42,18 @@ a img {
   transform: scale(1);
 }
 
+.challenge-card.easy {
+  border: 2px solid green;
+}
+
+.challenge-card.medium {
+  border: 2px solid orange;
+}
+
+.challenge-card.hard {
+  border: 2px solid red;
+}
+
 .challenge-card h3 {
   color: chocolate;
   font-size: 1.25rem;
