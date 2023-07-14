@@ -36,10 +36,19 @@ export const challenges = [
     tags: [],
   },
   { title: 'Accordion', link: '#' },
+
   {
     title: 'Multi Typing',
     link: 'multi-typing',
     difficulty: 'easy',
+    developer: 'noorulaink00',
+    tags: [],
+    isNew: true,
+  },
+  {
+    title: 'Meme Generator',
+    link: 'meme-generator',
+    difficulty: 'medium',
     developer: 'noorulaink00',
     tags: [],
     isNew: true,
@@ -273,6 +282,4 @@ export const challenges = [
   { title: 'Emoji Editor', link: '#' },
   { title: 'Sort Table', link: '#' },
   { title: 'Infinite Scroll', link: '#' },
-  { title: 'Multi Typing', link: 'multi-typing' },
-  { title: 'Meme Generator', link: 'meme-generator' },
 ];
