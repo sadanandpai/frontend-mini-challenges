@@ -14,7 +14,7 @@ img.classList.add('github-img');
 
 home.textContent = 'Home';
 h1.textContent = challenge.title;
-home.href = '/frontend-mini-challenges/';
+home.href = '/frontend-mini-challenges/native/';
 repo.href = 'https://github.com/sadanandpai/frontend-mini-challenges/';
 repo.target = '_blank';
 

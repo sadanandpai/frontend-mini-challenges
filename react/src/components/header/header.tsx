@@ -1,11 +1,12 @@
-import styles from "./header.module.css";
+import { challenges } from '@/helpers/challenges';
+import styles from './header.module.css';
 
-function Header({ heading = "Challenge" }: { heading?: string }) {
+function Header({ heading = 'Challenge' }: { heading?: string }) {
   return (
     <nav className={styles.nav}>
-      <a href="#/">Home</a>
+      <a href="#/challenges">Home</a>
 
-      <h1>{heading[0].toUpperCase() + heading.slice(1)}</h1>
+      <h1>{getChallengeTitle(heading)}</h1>
 
       <a href="https://github.com/sadanandpai/frontend-mini-challenges/">
         <img
@@ -19,3 +20,8 @@ function Header({ heading = "Challenge" }: { heading?: string }) {
 }
 
 export default Header;
+
+const getChallengeTitle = (challengeParam: string): string | undefined => {
+  const challenge = challenges.find((item) => item.link.includes(challengeParam));
+  return challenge?.title || 'Challenge';
+};

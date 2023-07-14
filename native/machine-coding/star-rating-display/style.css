@@ -1,0 +1,44 @@
+@import url(../../helpers/core.css);
+
+.star-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-size: 3rem;
+  gap: 10px;
+  margin-bottom: 1rem;
+}
+
+.star {
+  position: relative;
+  user-select: none;
+}
+
+.star-filled::before {
+  content: '★';
+  position: absolute;
+  left: 0;
+  right: 0;
+  color: gold;
+}
+
+.star-partial {
+  position: absolute;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  color: gold;
+  align-self: flex-start;
+  width: 0%;
+}
+
+#range {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  #range {
+    width: 50%;
+  }
+}

@@ -30,8 +30,16 @@ function handleDrop(event) {
   draggingPiece = null;
 }
 
+// to handle when piece dropped outside dropzone
+function handleDragEnd(event){
+   // Reset the draggingPiece variable and remove the dragging class
+    draggingPiece?.classList?.remove('dragging');
+    draggingPiece = null;
+}
+
 pieces.forEach((piece) => {
   piece.addEventListener('dragstart', handleDragStart);
   piece.addEventListener('dragover', handleDragOver);
   piece.addEventListener('drop', handleDrop);
+  piece.addEventListener('dragend', handleDragEnd);
 });

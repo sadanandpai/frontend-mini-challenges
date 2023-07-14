@@ -1,0 +1,45 @@
+.h1 {
+  justify-content: center;
+
+  .github {
+    height: 35px;
+    width: 35px;
+    vertical-align: text-bottom;
+    margin-left: 0.5rem;
+  }
+}
+
+.hero {
+  width: min(80vh, 80vw);
+}
+
+.routes {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+
+  a {
+    background-color: darkorchid;
+    color: white;
+    padding: 1rem 2rem;
+    min-width: 12rem;
+    border-radius: 0.5rem;
+    transition: all 0.33s;
+    font-size: 1.2rem;
+    line-height: 2rem;
+  }
+
+  a:hover {
+    transform: scale(1.1);
+  }
+}
+
+@media screen and (min-width: 375px) {
+  .routes {
+    a {
+      padding: 1rem 4rem;
+      flex-shrink: 0;
+    }
+  }
+}

@@ -10,7 +10,7 @@ let unfilled = 0; // to reduce the iterations
 const starContainer = document.getElementById('starContainer');
 const smileyContainer = document.getElementById('smileyContainer');
 starContainer.appendChild(
-  createElements(starCount, i => createElement('div', { class: 'star star-empty', 'data-index': i }), 1)
+  createElements(starCount, (i) => createElement('button', { class: 'star star-empty', 'data-index': i }), 1)
 );
 const stars = starContainer.querySelectorAll('.star');
 
@@ -37,6 +37,7 @@ function clickListener(event) {
   const target = event.target;
   if (target.classList.contains('star')) {
     rating = +target.dataset.index;
+    fillStars(rating);
     setSmiley(rating);
   }
 }

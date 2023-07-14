@@ -1,6 +1,6 @@
 .challenge-grid {
   grid-gap: 1.5rem;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   margin: 2rem 0;
 }
 
@@ -9,24 +9,14 @@ h1 {
   justify-content: center;
 }
 
-h1 a img {
+a img {
   width: 35px;
   height: 35px;
   vertical-align: text-bottom;
 }
 
-main a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100px;
+.challenge-card {
   padding: 10px;
-  color: chocolate;
-  font-size: 1.25rem;
-  text-decoration: none;
-}
-
-main div {
   position: relative;
   overflow: hidden;
   background-color: white;
@@ -35,12 +25,46 @@ main div {
   transition: all 0.2s ease-in-out;
 }
 
-main div:hover {
+.challenge-card:hover {
   box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.3);
   transform: scale(1.05);
 }
 
-main .new {
+.challenge-card.disabled h3 {
+  color: grey;
+}
+
+.challenge-card.disabled {
+  box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.1);
+}
+
+.challenge-card.disabled:hover {
+  transform: scale(1);
+}
+
+.challenge-card.easy {
+  border: 2px solid green;
+}
+
+.challenge-card.medium {
+  border: 2px solid orange;
+}
+
+.challenge-card.hard {
+  border: 2px solid red;
+}
+
+.challenge-card h3 {
+  color: chocolate;
+  font-size: 1.25rem;
+}
+
+.challenge-card a {
+  color: chocolate;
+  text-decoration: none;
+}
+
+.challenge-card .new {
   position: absolute;
   top: 0.75rem;
   right: -1.75rem;
@@ -52,20 +76,39 @@ main .new {
   transform: rotate(45deg);
 }
 
-@media screen and (min-width: 768px) {
+.developer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  font-size: 0.8rem;
+}
+
+.developer-img {
+  border-radius: 50%;
+  height: 25px;
+  width: 25px;
+  margin-right: 0.5rem;
+}
+
+.hidden {
+  display: none;
+}
+
+@media screen and (min-width: 480px) {
   .challenge-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media screen and (min-width: 1024px) {
   .challenge-grid {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
 @media screen and (min-width: 1400px) {
   .challenge-grid {
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
 }
