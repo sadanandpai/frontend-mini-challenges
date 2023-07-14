@@ -11,6 +11,7 @@ import StarRating from '@/machine-coding/star-rating/App';
 import TelephoneFormatter from '@/machine-coding/telephone-formatter';
 import Toast from '@/machine-coding/toast-popup/toast';
 import TodoList from '@/machine-coding/todo-list/todo';
+import InvestmentCalc from '@/machine-coding/investCalc/App.jsx';
 import { useParams } from 'react-router-dom';
 
 const reactChallenges = [
@@ -26,6 +27,7 @@ const reactChallenges = [
   <FileExplorer />,
   <Autocomplete />,
   <AutocompleteOnline />,
+  <InvestmentCalc />,
 ];
 
 function Challenge() {
