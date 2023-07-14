@@ -274,4 +274,5 @@ export const challenges = [
   { title: 'Sort Table', link: '#' },
   { title: 'Infinite Scroll', link: '#' },
   { title: 'Multi Typing', link: 'multi-typing' },
+  { title: 'Meme Generator', link: 'meme-generator' },
 ];
