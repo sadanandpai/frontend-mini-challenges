@@ -43,7 +43,14 @@ export const challenges = [
     developer: 'sadanandpai',
     tags: [],
   },
-  { title: 'Accordion', link: '#' },
+  {
+    title: 'Accordion',
+    link: 'accordion',
+    difficulty: 'easy',
+    developer: "rashidtvmr",
+    isNew: true,
+    tags: [],
+  },
   {
     title: 'Multi Typing',
     link: 'multi-typing',
