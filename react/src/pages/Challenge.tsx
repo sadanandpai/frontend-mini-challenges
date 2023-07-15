@@ -8,6 +8,7 @@ import Header from '@/components/header/header';
 import InvestmentCalc from '@/machine-coding/investment-calculator/App';
 import LightDarkMode from '@/machine-coding/light-dark-mode/App';
 import PasswordStrength from '@/machine-coding/password-strength/passwordStrength';
+import Stack from '@/machine-coding/stack-implementation/Stack';
 import StarRating from '@/machine-coding/star-rating/App';
 import Stopwatch from '@/machine-coding/stopwatch/App';
 import TelephoneFormatter from '@/machine-coding/telephone-formatter';
@@ -16,20 +17,21 @@ import TodoList from '@/machine-coding/todo-list/todo';
 import { useParams } from 'react-router-dom';
 
 const reactChallenges = [
-  <Counter />,
   <Accordion />,
-  <StarRating />,
-  <LightDarkMode />,
-  <GuessNumber />,
-  <TelephoneFormatter />,
-  <Toast />,
-  <PasswordStrength />,
-  <TodoList />,
-  <InvestmentCalc />,
-  <Stopwatch />,
-  <FileExplorer />,
   <Autocomplete />,
   <AutocompleteOnline />,
+  <Counter />,
+  <FileExplorer />,
+  <GuessNumber />,
+  <InvestmentCalc />,
+  <LightDarkMode />,
+  <PasswordStrength />,
+  <Stack />,
+  <StarRating />,
+  <Stopwatch />,
+  <TelephoneFormatter />,
+  <Toast />,
+  <TodoList />,
 ];
 
 function Challenge() {
