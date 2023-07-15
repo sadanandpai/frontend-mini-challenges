@@ -1,3 +1,58 @@
-.test {
-  color: red;
+.watch-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.watch {
+  background: #b4161b;
+  height: 250px;
+  width: 250px;
+  border-radius: 50%;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* border-radius: 50px; */
+  background: linear-gradient(145deg, #cacaca, #f0f0f0);
+  box-shadow: 0px 0px 20px #bebebe;
+  position: relative;
+}
+.watch-timer {
+  font-size: 30px;
+  font-weight: 900;
+  color: aliceblue;
+}
+.watch-btn:disabled {
+  cursor: not-allowed;
+  background: linear-gradient(-45deg, #e81cff80 0%, #40c9ff80 100%);
+}
+.watch-btn {
+  border-radius: 12px;
+  /* background: #51e1ed; */
+  margin: 20px auto;
+  background: linear-gradient(-45deg, #e81cff 0%, #40c9ff 100%);
+  color: #ffffff;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: none;
+  margin: 20px 2px 0;
+  height: 40px;
+  padding: 0 10px;
+}
+
+.watch::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  left: -5px;
+  top: -5px;
+  width: 104%;
+  height: 104%;
+  border-radius: 50%;
+  background: linear-gradient(-45deg, #e81cff 0%, #40c9ff 100%);
+  z-index: -10;
 }
