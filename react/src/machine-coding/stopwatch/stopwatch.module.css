@@ -1,10 +1,8 @@
-/*  didn't follow any UI/UX standard random colors has been used */
-
 .watch-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  margin-top: 1rem;
 }
 
 .watch {
@@ -18,7 +16,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* border-radius: 50px; */
   background: linear-gradient(145deg, #cacaca, #f0f0f0);
   box-shadow: 0px 0px 20px #bebebe;
   position: relative;
@@ -39,7 +36,6 @@
 }
 .watch-btn {
   border-radius: 12px;
-  /* background: #51e1ed; */
   margin: 20px auto;
   background: linear-gradient(-45deg, #e81cff 0%, #40c9ff 100%);
   color: #ffffff;
@@ -50,19 +46,6 @@
   height: 40px;
   padding: 0 10px;
 }
-/* 
-.watch::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  left: -5px;
-  top: -5px;
-  width: 104%;
-  height: 104%;
-  border-radius: 50%;
-  background: linear-gradient(-45deg, #e81cff 0%, #40c9ff 100%);
-  z-index: -10;
-} */
 
 @media (max-width: 300px) {
   .watch {
