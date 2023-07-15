@@ -3,7 +3,6 @@ const inputLift = document.getElementById('input-lift');
 const btnSubmit = document.getElementById('btn-submit');
 const form = document.getElementById('form1');
 const btnReset = document.getElementById('btn-reset');
-
 const content = document.getElementById('content');
 
 let _floorCount = 0;
@@ -27,6 +26,7 @@ let liftPos = [
     floor: 1,
   },
 ];
+
 const nth = function (d) {
   if (d > 3 && d < 21) return 'th';
   switch (d % 10) {
@@ -40,6 +40,7 @@ const nth = function (d) {
       return 'th';
   }
 };
+
 function findClosestLift(floorNumber, lifts) {
   let closestLiftId;
   let minDistance = Infinity;
@@ -98,6 +99,7 @@ btnReset.addEventListener('click', (e) => {
   _liftCount = 0;
   currentLift = 0;
 });
+
 btnSubmit.addEventListener('click', (e) => {
   e.preventDefault();
   let floorNumber = inputFloor.value;
