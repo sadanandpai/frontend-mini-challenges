@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./main.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>Lift Simulation</title>
+    <script src="../../helpers/header.js" type="module" defer></script>
+  </head>
+  <body>
+    <main id="main" class="main">
+      <section id="form" class="form">
+        <p>max number of floors should be 99 and lift 4</p>
+        <form id="form1">
+          <label for="input-floor">Enter Floor no.</label>
+          <input min="2" max="8" value="2" id="input-floor" type="number" />
+          <label for="input-lift">Enter Lift no.</label>
+          <input min="1" max="4" value="1" id="input-lift" type="number" />
+          <button type="submit" value="submit" form="form1" class="btn btn-submit" id="btn-submit">Submit</button>
+        </form>
+        <button type="submit" value="reset" class="btn btn-submit btn-reset" id="btn-reset">Reset 🔄</button>
+      </section>
+      <div id="content" class="content"></div>
+    </main>
+  </body>
+  <script src="./main.js"></script>
+</html>

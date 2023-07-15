@@ -9,6 +9,7 @@ import InvestmentCalc from '@/machine-coding/investment-calculator/App';
 import LightDarkMode from '@/machine-coding/light-dark-mode/App';
 import PasswordStrength from '@/machine-coding/password-strength/passwordStrength';
 import StarRating from '@/machine-coding/star-rating/App';
+import Stopwatch from '@/machine-coding/stopwatch/App';
 import TelephoneFormatter from '@/machine-coding/telephone-formatter';
 import Toast from '@/machine-coding/toast-popup/toast';
 import TodoList from '@/machine-coding/todo-list/todo';
@@ -25,6 +26,7 @@ const reactChallenges = [
   <PasswordStrength />,
   <TodoList />,
   <InvestmentCalc />,
+  <Stopwatch />,
   <FileExplorer />,
   <Autocomplete />,
   <AutocompleteOnline />,
