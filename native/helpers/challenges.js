@@ -39,8 +39,9 @@ export const challenges = [
     title: 'Accordion',
     link: 'accordion',
     difficulty: 'easy',
-    developer: "rashidtvmr"
-
+    developer: "rashidtvmr",
+    isNew: true,
+    tags: [],
   },
   {
     title: 'Multi Typing',
