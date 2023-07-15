@@ -1,3 +1,5 @@
+/*  didn't follow any UI/UX standard random colors has been used */
+
 .watch-container {
   display: flex;
   justify-content: center;
@@ -21,10 +23,15 @@
   box-shadow: 0px 0px 20px #bebebe;
   position: relative;
 }
+.watch-heading {
+  font-size: 30px;
+  font-weight: 900;
+  color: purple;
+}
 .watch-timer {
   font-size: 30px;
   font-weight: 900;
-  color: aliceblue;
+  color: #b4161b;
 }
 .watch-btn:disabled {
   cursor: not-allowed;
@@ -43,7 +50,7 @@
   height: 40px;
   padding: 0 10px;
 }
-
+/* 
 .watch::before {
   content: '';
   position: absolute;
@@ -55,4 +62,18 @@
   border-radius: 50%;
   background: linear-gradient(-45deg, #e81cff 0%, #40c9ff 100%);
   z-index: -10;
+} */
+
+@media (max-width: 300px) {
+  .watch {
+    width: 230px;
+    height: 230px;
+    padding: 0;
+  }
+  .watch-heading {
+    font-size: 20px;
+  }
+  .watch-btn {
+    margin: 5px;
+  }
 }
