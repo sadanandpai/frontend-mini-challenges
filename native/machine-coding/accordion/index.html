@@ -18,46 +18,79 @@
     <div class="accordion">
         <div class="accordion-item">
             <h2 class="accordion-header">
-                <button class="accordion-button" type="button"> Item 1</button>
+                <button class="accordion-button" type="button"> Step 1</button>
+                <span class="accordion-arrow"></span>
             </h2>
             <div class="accordion-panel">
                 <div class="accordion-content">
-                    content 1
+                    <div>
+                        Create Html
+                    </div>
+                    <img src="./step1.png" alt="">
                 </div>
             </div>
         </div>
         <div class="accordion-item">
             <h2 class="accordion-header">
-                <button class="accordion-button" type="button"> Item 2</button>
+                <button class="accordion-button" type="button"> Step 2</button>
+                <span class="accordion-arrow"></span>
             </h2>
             <div class="accordion-panel">
                 <div class="accordion-content">
-                    content 1
+                    <div>
+                        Define CSS
+                    </div>
+                    <img src="./step2.png" alt="">
                 </div>
             </div>
         </div>
         <div class="accordion-item">
             <h2 class="accordion-header">
-                <button class="accordion-button" type="button"> Item 3</button>
+                <button class="accordion-button" type="button"> Step 3</button>
+                <span class="accordion-arrow"></span>
             </h2>
             <div class="accordion-panel">
                 <div class="accordion-content">
-                    content 1
+                    <div>
+                        Define JS
+                    </div>
+                    <img src="./step3.png" alt="" style="border-radius: 12px;">
                 </div>
             </div>
         </div>
     </div>
 
     <script>
+        // Get all accordion items
         const accordionItems = document.querySelectorAll('.accordion-item');
+
+        // Attach click event listener to each accordion header
         accordionItems.forEach((item) => {
             const accordionHeader = item.querySelector('.accordion-header');
             const accordionButton = item.querySelector('.accordion-button');
             const accordionPanel = item.querySelector('.accordion-panel');
+            const accordionArrow = item.querySelector('.accordion-arrow');
+
+            // Toggle the open class on click
             accordionHeader.addEventListener('click', () => {
-                accordionPanel.classList.toggle('open');
+                const isOpen = accordionPanel.classList.contains('open');
+
+                // Close all other accordion items
+                accordionItems.forEach((item) => {
+                    item.querySelector('.accordion-panel').classList.remove('open');
+                    item.querySelector('.accordion-arrow').classList.remove('open');
+                });
+
+                if (!isOpen) {
+                    accordionPanel.classList.add('open');
+                    accordionArrow.classList.add('open');
+                } else {
+                    accordionPanel.classList.remove('open');
+                    accordionArrow.classList.remove('open');
+                }
             });
         });
+
 
     </script>
 </body>
