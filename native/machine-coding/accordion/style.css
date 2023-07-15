@@ -1,0 +1,32 @@
+.accordion-item {
+  border-bottom: 1px solid #ccc;
+}
+
+.accordion-header {
+  margin: 0;
+  padding: 0;
+}
+
+.accordion-button {
+  width: 100%;
+  background-color: #f0f0f0;
+  border: none;
+  text-align: left;
+  padding: 10px;
+}
+
+.accordion-panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.accordion-panel.open {
+  max-height: 1000px;
+  transition: max-height 0.3s ease;
+}
+
+.accordion-content {
+  padding: 10px;
+  border: 1px solid #ccc;
+}

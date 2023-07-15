@@ -1,0 +1,65 @@
+<!-- followed bootstrap css names -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="../../logo.svg" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="index.js" type="module" defer></script>
+    <script src="../../helpers/header.js" type="module" defer></script>
+    <link rel="stylesheet" href="./style.css" />
+
+</head>
+
+<body>
+    How to create accordion using vanilla js step by step
+    <div class="accordion">
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button" type="button"> Item 1</button>
+            </h2>
+            <div class="accordion-panel">
+                <div class="accordion-content">
+                    content 1
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button" type="button"> Item 2</button>
+            </h2>
+            <div class="accordion-panel">
+                <div class="accordion-content">
+                    content 1
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button" type="button"> Item 3</button>
+            </h2>
+            <div class="accordion-panel">
+                <div class="accordion-content">
+                    content 1
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const accordionItems = document.querySelectorAll('.accordion-item');
+        accordionItems.forEach((item) => {
+            const accordionHeader = item.querySelector('.accordion-header');
+            const accordionButton = item.querySelector('.accordion-button');
+            const accordionPanel = item.querySelector('.accordion-panel');
+            accordionHeader.addEventListener('click', () => {
+                accordionPanel.classList.toggle('open');
+            });
+        });
+
+    </script>
+</body>
+
+</html>
