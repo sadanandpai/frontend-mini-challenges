@@ -29,9 +29,9 @@ const createAnchorElement = (challenge) => {
     const contributor = contributors.get(challenge.developer);
     const developerName = challengeCard.querySelector('.developer-name');
     const developerImg = challengeCard.querySelector('.developer-img');
-    developerImg.src = contributor.pic;
-    developerImg.alt = contributor.name;
-    developerName.textContent = contributor.name;
+    developerImg.src = contributor?.pic;
+    developerImg.alt = contributor?.name;
+    developerName.textContent = contributor?.name;
   }
 
   return challengeCard;
