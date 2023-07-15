@@ -19,8 +19,6 @@ changeBy.addEventListener('change', () => {
     changeBy.value = 1;
   } else if (changeByValue < 0) {
     changeBy.value = 1;
-  } else if (changeByValue > 10) {
-    changeBy.value = 10;
   }
 });
 

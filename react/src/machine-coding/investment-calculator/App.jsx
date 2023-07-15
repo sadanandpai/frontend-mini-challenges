@@ -32,7 +32,6 @@ function App() {
   return (
     <div className={styles.main}>
       <UserInput onCalculate={calculateHandler} />
-      {!userInput && <p style={{ textAlign: 'center' }}>No data found</p>}
       {userInput && <ResultsTable data={yearlyData} inInvest={userInput['current-savings']} />}
     </div>
   );
