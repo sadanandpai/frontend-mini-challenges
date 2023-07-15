@@ -22,6 +22,14 @@ export const challenges = [
     isNew: true,
   },
   {
+    title:'Lift Simulation',
+    link:'lift-simulation',
+    difficulty:'medium',
+    developer:'gauravsinhaweb',
+    tags:[],
+    isNew:true
+  },
+  {
     title: 'Telephone formatter',
     link: 'telephone-formatter',
     difficulty: 'easy',

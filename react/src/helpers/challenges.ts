@@ -64,8 +64,16 @@ export const challenges = [
     isNew: true,
   },
   {
+    title: 'Investment Calculator',
+    link: '#/9/investment-calculator',
+    difficulty: 'medium',
+    developer: 'insharahAyyubi',
+    tags: [],
+    isNew: true,
+  },
+  {
     title: 'File Explorer',
-    link: '#/9/file-explorer',
+    link: '#/10/file-explorer',
     difficulty: 'hard',
     developer: 'sadanandpai',
     tags: [],
@@ -73,7 +81,7 @@ export const challenges = [
   },
   {
     title: 'Typeahead / Autocomplete (offline)',
-    link: '#/10/autocomplete-offline',
+    link: '#/11/autocomplete-offline',
     difficulty: 'hard',
     developer: 'deepu0',
     tags: [],
@@ -81,7 +89,7 @@ export const challenges = [
   },
   {
     title: 'Typeahead / Autocomplete (online)',
-    link: '#/11/autocomplete-online',
+    link: '#/12/autocomplete-online',
     difficulty: 'hard',
     developer: 'deepu0',
     tags: [],

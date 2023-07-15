@@ -11,12 +11,10 @@ function ChallengeGrid() {
           className={`${styles.challengeCard} ${challenge.link === '#' && styles.disabled} ${
             styles[challenge.difficulty]
           }`}
-          href={challenge.link}
-        >
+          href={challenge.link} >
           {challenge.isNew && <span className={styles.new}>New</span>}
           <div>
             <h3>{challenge.title}</h3>
-
             {challenge.developer && (
               <div className={styles.developer}>
                 <img src={contributors.get(challenge.developer)?.pic} alt="" />
