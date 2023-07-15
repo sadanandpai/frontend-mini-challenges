@@ -95,4 +95,12 @@ export const challenges = [
     tags: [],
     isNew: true,
   },
+  {
+    title: 'Stopwatch',
+    link: '#/13/stopwatch',
+    difficulty: 'meduim',
+    developer: 'rashidtvmr',
+    tags: [],
+    isNew: true,
+  },
 ];

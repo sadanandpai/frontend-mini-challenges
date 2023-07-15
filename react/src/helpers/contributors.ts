@@ -7,4 +7,5 @@ export const contributors = new Map([
   ['arpansaha13', { name: 'Arpan Saha', pic: 'https://avatars.githubusercontent.com/u/82361490' }],
   ['deepakrajkranti', { name: 'Deepak Raj', pic: 'https://avatars.githubusercontent.com/u/88797436' }],
   ['insharahAyyubi', { name: 'Insharah Ayyubi', pic: 'https://avatars.githubusercontent.com/u/103804673' }],
+  ['rashidtvmr', { name: 'Rashid', pic: 'https://avatars.githubusercontent.com/u/58169715' }],
 ]);
