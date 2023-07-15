@@ -1,4 +1,5 @@
 @import url(../../helpers/core.css);
+
 .accordion-container {
   display: flex;
   justify-content: center;
@@ -30,6 +31,7 @@
   padding: 10px;
   font-weight: bolder;
 }
+
 .accordion-arrow {
   width: 0;
   height: 0;
@@ -61,5 +63,4 @@
 
 .accordion-content {
   padding: 20px;
-  /* border: 1px solid #ccc; */
 }

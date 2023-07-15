@@ -20,20 +20,24 @@
   box-shadow: 0px 0px 20px #bebebe;
   position: relative;
 }
+
 .watch-heading {
   font-size: 30px;
   font-weight: 900;
   color: purple;
 }
+
 .watch-timer {
   font-size: 30px;
   font-weight: 900;
   color: #b4161b;
 }
+
 .watch-btn:disabled {
   cursor: not-allowed;
   background: linear-gradient(-45deg, #e81cff80 0%, #40c9ff80 100%);
 }
+
 .watch-btn {
   border-radius: 12px;
   margin: 20px auto;
@@ -53,9 +57,11 @@
     height: 230px;
     padding: 0;
   }
+  
   .watch-heading {
     font-size: 20px;
   }
+
   .watch-btn {
     margin: 5px;
   }

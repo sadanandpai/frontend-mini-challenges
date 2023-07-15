@@ -79,6 +79,7 @@ const openDoor = function (lift) {
   liftDoorRight.style.transition = 'all 2s';
   liftDoorLeft.style.transition = 'all 2s';
 };
+
 const closeDoor = function (lift) {
   const liftDoorLeft = document.getElementById(`lift${lift}-door-left`);
   const liftDoorRight = document.getElementById(`lift${lift}-door-right`);
@@ -87,7 +88,8 @@ const closeDoor = function (lift) {
   liftDoorRight.style.transition = 'all 2s';
   liftDoorLeft.style.transition = 'all 2s';
 };
-btnReset.addEventListener('click', (e) => {
+
+btnReset.addEventListener('click', () => {
   location.reload(true);
 
   inputFloor.value = '';
