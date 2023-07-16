@@ -43,7 +43,6 @@ const ProgressBar = () => {
 
   const stopProgress = () => {
     pauseProgress();
-    intervalId.current = null;
     setCurrentCycle(0);
   };
 
