@@ -15,6 +15,7 @@ import Stopwatch from '@/machine-coding/stopwatch/App';
 import TelephoneFormatter from '@/machine-coding/telephone-formatter';
 import Toast from '@/machine-coding/toast-popup/toast';
 import TodoList from '@/machine-coding/todo-list/todo';
+import TicTacToe from '@/machine-coding/tic-tac-toe/App';
 import { useParams } from 'react-router-dom';
 
 const reactChallenges = [
@@ -34,6 +35,7 @@ const reactChallenges = [
   <FileExplorer />,
   <Autocomplete />,
   <AutocompleteOnline />,
+  <TicTacToe />
 ];
 
 function Challenge() {
