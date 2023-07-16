@@ -1,7 +1,10 @@
+export const size = 3;
+
 export const winningCombos = [
-    [0, 1, 2], [3, 4, 5], [6, 7, 8], // Rows
-    [0, 3, 6], [1, 4, 7], [2, 5, 8], // Columns
-    [0, 4, 8], [2, 4, 6] // Diagonals
+  ...Array.from(new Array(size), (_, i) => Array.from(new Array(size), (_, j) => i * size + j)),
+  ...Array.from(new Array(size), (_, i) => Array.from(new Array(size), (_, j) => j * size + i)),
+  Array.from(new Array(size), (_, i) => i * size + i),
+  Array.from(new Array(size), (_, i) => i * size + size - i - 1),
 ];
 
-export const initialArray = Array(9).fill(null);
+export const initialArray = Array(size * size).fill(null);
