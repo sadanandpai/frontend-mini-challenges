@@ -1,46 +1,49 @@
-import React, { useState, useRef, useCallback } from 'react'
-import useBookSearch from './useBookSearch'
-import styles from './index.module.css'
+import React, { useCallback, useRef, useState } from 'react';
+
+import styles from './index.module.css';
+import useSearch from './useSearch';
+
 export default function App() {
-  const [query, setQuery] = useState('')
-  const [pageNumber, setPageNumber] = useState(1)
+  const [pageNumber, setPageNumber] = useState(1);
+  const { items, hasMore, loading, error } = useSearch(pageNumber);
+  const observer = useRef();
 
-  const {
-    books,
-    hasMore,
-    loading,
-    error
-  } = useBookSearch(query, pageNumber)
-
-  const observer = useRef()
-  const lastBookElementRef = useCallback(node => {
-    if (loading) return
-    if (observer.current) observer.current.disconnect()
-    observer.current = new IntersectionObserver(entries => {
-      if (entries[0].isIntersecting && hasMore) {
-        setPageNumber(prevPageNumber => prevPageNumber + 1)
+  const lastBookElementRef = useCallback(
+    (node) => {
+      if (loading) return;
+      if (observer.current) observer.current.disconnect();
+      observer.current = new IntersectionObserver((entries) => {
+        if (entries[0].isIntersecting && hasMore) {
+          setPageNumber((prevPageNumber) => prevPageNumber + 1);
+        }
+      });
+      if (node) {
+        observer.current.observe(node);
       }
-    })
-    if (node) observer.current.observe(node)
-  }, [loading, hasMore])
-
-  function handleSearch(e) {
-    setQuery(e.target.value)
-    setPageNumber(1)
-  }
+    },
+    [loading, hasMore]
+  );
 
   return (
     <>
-      <input type="text" value={query} onChange={handleSearch}></input>
-      {books.map((book, index) => {
-        if (books.length === index + 1) {
-          return <div className={`${styles['book-title']} ${index%2 ? styles.odd :styles.even}`} ref={lastBookElementRef} key={book}>{book}</div>
+      {items?.map((item, index) => {
+        if (items.length === index + 1) {
+          return (
+            <div className={`${styles['book-title']}`} ref={lastBookElementRef} key={item}>
+              {item}
+            </div>
+          );
         } else {
-          return <div className={`${styles['book-title']} ${index%2 ? styles.odd :styles.even}`} key={book}>{book}</div>
+          return (
+            <div className={`${styles['book-title']}`} key={item}>
+              {item}
+            </div>
+          );
         }
       })}
-      {loading && query!==''&& <div className={styles.loader}></div>}
+
+      {loading && <div className={styles.loader}></div>}
       <div>{error && 'Error'}</div>
     </>
-  )
+  );
 }

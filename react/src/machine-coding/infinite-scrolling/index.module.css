@@ -1,10 +1,11 @@
 .loader {
-  border: 16px solid #f3f3f3; /* Light grey */
-  border-top: 16px solid #3498db; /* Blue */
+  border: 8px solid #f3f3f3; /* Light grey */
+  border-top: 8px solid #3498db; /* Blue */
   border-radius: 50%;
-  width: 120px;
-  height: 120px;
+  width: 60px;
+  height: 60px;
   animation: spin 2s linear infinite;
+  margin: 1rem auto;
 }
 
 @keyframes spin {
@@ -15,29 +16,11 @@
     transform: rotate(360deg);
   }
 }
-.book-title{
-  border-radius: 6px;
-  padding: 1em;
-  margin: 2em;
-  flex: 0 0 17.3vw;
-  height: 17.3vw;
-  display: block;
-  background: #fff;
-  transition: all 300ms;
-  color: #555;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  overflow: hidden;
-}
-.even{
-  
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
-  rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-}
-.odd{
-  
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
-}
 
+.book-title {
+  padding: 2em;
+  margin: 2em 0;
+  border: 1px solid black;
+  border-radius: 6px;
+  text-align: center;
+}
