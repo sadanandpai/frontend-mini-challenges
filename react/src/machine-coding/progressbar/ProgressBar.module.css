@@ -1,0 +1,23 @@
+.App {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bg-progress {
+  height: 3rem;
+  width: 15rem;
+  background-color: rgba(0, 0, 255, 0.3);
+  position: relative;
+  border-radius: 50px;
+  overflow: hidden;
+}
+
+.fg-progress {
+  height: 5rem;
+  width: 15rem;
+  background-color: rgba(0, 0, 255, 0.5);
+  position: absolute;
+  transition: transform 100ms ease-in-out;
+}

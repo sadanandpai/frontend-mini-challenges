@@ -42,6 +42,14 @@ export const challenges = [
     tags: [],
   },
   {
+    title: 'Progressbar',
+    link: '#/6/progressbar',
+    difficulty: 'medium',
+    developer: 'dhanu084',
+    tags: [],
+    isNew: true,
+  },
+  {
     title: 'Toast Popup',
     link: '#/6/toast-popup',
     difficulty: 'medium',
