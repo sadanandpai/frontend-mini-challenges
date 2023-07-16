@@ -103,4 +103,12 @@ export const challenges = [
     tags: [],
     isNew: true,
   },
+  {
+    title: 'Infinite Scrolling (online)',
+    link: '#/14/infinite-scrolling',
+    difficulty: 'hard',
+    developer: 'ayush-dutt-sharma',
+    tags: [],
+    isNew: true,
+  },
 ];
