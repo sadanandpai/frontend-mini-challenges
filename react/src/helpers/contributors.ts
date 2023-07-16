@@ -9,5 +9,6 @@ export const contributors = new Map([
   ['insharahAyyubi', { name: 'Insharah Ayyubi', pic: 'https://avatars.githubusercontent.com/u/103804673' }],
   ['rashidtvmr', { name: 'Rashid', pic: 'https://avatars.githubusercontent.com/u/58169715' }],
   ['gauravsinhaweb', { name: 'Gaurav Sinha', pic: 'https://avatars.githubusercontent.com/u/75125943' }],
-  ['ayush-dutt-sharma',{name: 'Ayush Dutt Sharma', pic:'https://avatars.githubusercontent.com/u/73738613?v=4'}]
+  ['ayush-dutt-sharma', { name: 'Ayush Dutt Sharma', pic: 'https://avatars.githubusercontent.com/u/73738613?v=4' }],
+  ['dhanu084', { name: 'Dhanush Kiran', pic: 'https://avatars.githubusercontent.com/u/54932658?v=4' }],
 ]);

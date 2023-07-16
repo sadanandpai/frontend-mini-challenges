@@ -14,6 +14,7 @@ import TelephoneFormatter from '@/machine-coding/telephone-formatter';
 import Toast from '@/machine-coding/toast-popup/toast';
 import TodoList from '@/machine-coding/todo-list/todo';
 import InfiniteScrolling from '@/machine-coding/infinite-scrolling';
+import ProgressBar from '@/machine-coding/progressbar/App';
 import { useParams } from 'react-router-dom';
 
 const reactChallenges = [
@@ -31,7 +32,8 @@ const reactChallenges = [
   <FileExplorer />,
   <Autocomplete />,
   <AutocompleteOnline />,
-  <InfiniteScrolling />
+  <InfiniteScrolling />,
+  <ProgressBar />,
 ];
 
 function Challenge() {

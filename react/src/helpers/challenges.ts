@@ -111,4 +111,12 @@ export const challenges = [
     tags: [],
     isNew: true,
   },
+  {
+    title: 'Progressbar',
+    link: '#/15/progressbar',
+    difficulty: 'medium',
+    developer: 'dhanu084',
+    tags: [],
+    isNew: true,
+  },
 ];
