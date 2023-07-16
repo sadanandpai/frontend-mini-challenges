@@ -24,7 +24,6 @@ const reactChallenges = [
   <LightDarkMode />,
   <GuessNumber />,
   <TelephoneFormatter />,
-  <ProgressBar />,
   <Toast />,
   <PasswordStrength />,
   <TodoList />,
@@ -34,6 +33,7 @@ const reactChallenges = [
   <Autocomplete />,
   <AutocompleteOnline />,
   <InfiniteScrolling />,
+  <ProgressBar />,
 ];
 
 function Challenge() {
