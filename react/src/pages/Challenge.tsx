@@ -5,16 +5,16 @@ import Counter from '@/machine-coding/counter/counter';
 import FileExplorer from '@/machine-coding/file-explorer/App';
 import GuessNumber from '@/machine-coding/guess-number/App';
 import Header from '@/components/header/header';
+import InfiniteScrolling from '@/machine-coding/infinite-scrolling';
 import InvestmentCalc from '@/machine-coding/investment-calculator/App';
 import LightDarkMode from '@/machine-coding/light-dark-mode/App';
 import PasswordStrength from '@/machine-coding/password-strength/passwordStrength';
+import ProgressBar from '@/machine-coding/progressbar/App';
 import StarRating from '@/machine-coding/star-rating/App';
 import Stopwatch from '@/machine-coding/stopwatch/App';
 import TelephoneFormatter from '@/machine-coding/telephone-formatter';
 import Toast from '@/machine-coding/toast-popup/toast';
 import TodoList from '@/machine-coding/todo-list/todo';
-import InfiniteScrolling from '@/machine-coding/infinite-scrolling';
-import ProgressBar from '@/machine-coding/progressbar/App';
 import { useParams } from 'react-router-dom';
 
 const reactChallenges = [
@@ -29,11 +29,11 @@ const reactChallenges = [
   <TodoList />,
   <InvestmentCalc />,
   <Stopwatch />,
+  <ProgressBar />,
+  <InfiniteScrolling />,
   <FileExplorer />,
   <Autocomplete />,
   <AutocompleteOnline />,
-  <InfiniteScrolling />,
-  <ProgressBar />,
 ];
 
 function Challenge() {
