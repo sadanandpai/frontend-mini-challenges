@@ -9,11 +9,44 @@ const App = () => {
     const [winner, setWinner] = useState(null);
     const [[xWins, oWins, draw], setPlayerWins] = useState([0, 0, 0]);
 
+    useEffect(() => {
+        computeWin();
+    }, [squares]);
+
+    useEffect(() => {
+        if (winner === 'X') {
+            setPlayerWins([xWins + 1, oWins, draw]);
+        } else if (winner === 'O') {
+            setPlayerWins([xWins, oWins + 1, draw]);
+        } else if (winner === null && squares.filter(square => square === null).length === 0) {
+            setPlayerWins([xWins, oWins, draw + 1]);
+        }
+    }, [winner, squares]);
+
+    const computeWin = () => {
+        setIsX(!isX);
+        for (const combo of winningCombos) {
+            const [a, b, c] = combo;
+            if (squares[a] !== null && squares[a] === squares[b] && squares[a] === squares[c]) {
+                setWinner(squares[a] === 1 ? 'X' : 'O');
+                return;
+            }
+        }
+    };
+
     const onEntry = (iTh) => {
+        if (squares[iTh] === null && winner === null) {
+            setSquares(prevSquares => {
+                const _prevSquares = [...prevSquares];
+                _prevSquares[iTh] = isX ? 1 : 0;
+                return _prevSquares;
+            });
+        }
     };
 
     const rematch = () => {
-
+        setSquares(initialArray);
+        setWinner(null);
     };
 
     return (
@@ -36,7 +69,12 @@ const App = () => {
                 </div>
                 <div className={style["grid-container"]}>
                     {squares.map((square, i) => (
-                        <Squares />
+                        <Squares
+                            key={i}
+                            iTh={i}
+                            value={square}
+                            onEntry={onEntry}
+                        />
                     ))}
                 </div>
                 <button onClick={rematch}>Rematch</button>
@@ -46,10 +84,17 @@ const App = () => {
 };
 
 const Squares = ({ value, iTh, onEntry }) => {
+    useEffect(() => {
+        console.log({ value });
+    }, []);
+
+    const handleClick = () => {
+        onEntry(iTh);
+    };
 
     return (
-        <div className={style["grid-item"]} >
-            <div >
+        <div className={style["grid-item"]} onClick={handleClick}>
+            <div style={{ opacity: value !== null ? 1 : 0, transition: 'all .1s ease-in-out' }}>
                 {value !== null ? (value === 1 ? 'X' : 'O') : 'X'}
             </div>
         </div>
