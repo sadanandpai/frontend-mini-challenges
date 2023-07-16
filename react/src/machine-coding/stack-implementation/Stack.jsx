@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import './Stack.css';
+import './Stack.module.css';
 const Stack = () => {
   const [stack, setStack] = useState([]);
   const [inputVal, setInputVal] = useState('');
