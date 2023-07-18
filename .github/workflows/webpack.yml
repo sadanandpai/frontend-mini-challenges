@@ -20,12 +20,24 @@ jobs:
         git config user.name "Sadanand Pai"
         git config user.email "sadypai@gmail.com"
         
-    - name: setup deployment
+    - name: setup react deployment
       run: |
         cd react
         npm install
         rm -rf dist
         npm run build
         git add dist -f
-        git commit -m "build files from github action"
+        git commit -m "react build files - github action"
         git push
+        cd ..
+        
+    - name: setup angular deployment
+      run: |
+        cd angular
+        npm install
+        rm -rf dist
+        npm run build
+        git add dist -f
+        git commit -m "angular build files - github action"
+        git push
+        cd ..
