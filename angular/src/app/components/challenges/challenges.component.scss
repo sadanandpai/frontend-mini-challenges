@@ -1,0 +1,24 @@
+.challenge-grid {
+  display: grid;
+  grid-gap: 1.5rem;
+  grid-template-columns: repeat(1, 1fr);
+  margin: 2rem 0;
+}
+
+@media screen and (min-width: 480px) {
+  .challengeGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .challengeGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .challengeGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

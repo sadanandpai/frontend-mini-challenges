@@ -1,0 +1,15 @@
+<h2>
+  {{ counter }}
+</h2>
+
+<section>
+  <button (click)="decrement()">-</button>
+  <button (click)="increment()">+</button>
+
+  <p>
+    Increment / Decrement by
+    <input type="number" type="number" [formControl]="inputControl" />
+  </p>
+
+  <button (click)="reset()">Reset</button>
+</section>
