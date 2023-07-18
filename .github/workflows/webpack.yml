@@ -27,7 +27,7 @@ jobs:
         rm -rf dist
         npm run build
         git add dist -f
-        git commit -m "react build files - github action"
+        git diff HEAD --quiet || git commit -m "react build files - github action"
         git push
         cd ..
         
