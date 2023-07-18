@@ -26,8 +26,7 @@ jobs:
           rm -rf dist
           npm run build
           git add dist -f
-          git diff HEAD --quiet || git commit -m "react build files - github action"
-          git push
+          git diff HEAD --quiet || (git commit -m "react build files - github action" && git push)
           cd ..
 
   build-angular:
@@ -47,8 +46,7 @@ jobs:
           cd angular
           npm install
           rm -rf dist
-          npm run build --baseHref=/frontend-mini-challenges/angular/dist/angular/
+          npm run build
           git add dist -f
-          git commit -m "angular build files - github action"
-          git push
+          git diff HEAD --quiet || (git commit -m "angular build files - github action" && git push)
           cd ..
