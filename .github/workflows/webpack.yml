@@ -2,44 +2,53 @@ name: Node.js CI
 
 on:
   push:
-    branches: [ "main" ]
+    branches: ["main"]
   pull_request:
-    branches: [ "main" ]
+    branches: ["main"]
 
 jobs:
-  build:
-
+  build-react:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
-    
-    # Runs a single command using the runners shell
-    - name: setup git config
-      run: |
-        git config user.name "Sadanand Pai"
-        git config user.email "sadypai@gmail.com"
-        
-    - name: setup angular deployment
-      run: |
-        cd angular
-        npm install
-        rm -rf dist
-        npm run build --baseHref=/frontend-mini-challenges/angular/dist/angular/
-        git add dist -f
-        git commit -m "angular build files - github action"
-        git push
-        cd ..
-        
-    - name: setup react deployment
-      run: |
-        cd react
-        npm install
-        rm -rf dist
-        npm run build
-        git add dist -f
-        git diff HEAD --quiet || git commit -m "react build files - github action"
-        git push
-        cd ..
-        
-    
+      - uses: actions/checkout@v3
+
+      # Runs a single command using the runners shell
+      - name: setup git config
+        run: |
+          git config user.name "Sadanand Pai"
+          git config user.email "sadypai@gmail.com"
+
+      - name: setup react deployment
+        run: |
+          cd react
+          npm install
+          rm -rf dist
+          npm run build
+          git add dist -f
+          git diff HEAD --quiet || git commit -m "react build files - github action"
+          git push
+          cd ..
+
+  build-angular:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      # Runs a single command using the runners shell
+      - name: setup git config
+        run: |
+          git config user.name "Sadanand Pai"
+          git config user.email "sadypai@gmail.com"
+
+      - name: setup angular deployment
+        run: |
+          cd angular
+          npm install
+          rm -rf dist
+          npm run build --baseHref=/frontend-mini-challenges/angular/dist/angular/
+          git add dist -f
+          git commit -m "angular build files - github action"
+          git push
+          cd ..
