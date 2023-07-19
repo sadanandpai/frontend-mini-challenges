@@ -52,6 +52,14 @@ export const challenges = [
     isNew: true,
   },
   {
+    title: 'Meme Generator',
+    link: 'meme-generator',
+    difficulty: 'medium',
+    developer: 'noorulaink00',
+    tags: [],
+    isNew: true,
+  },
+  {
     title: 'Toast Popup',
     link: 'toast-popup',
     difficulty: 'medium',
