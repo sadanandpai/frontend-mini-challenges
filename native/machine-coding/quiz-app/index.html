@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet" />
+    <link rel="icon" type="image/svg+xml" href="../../logo.svg" />
+    <script src="../../helpers/header.js" type="module" defer></script>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>quiz's time</title>
+  </head>
+  <body>
+    <header>
+      <h1 class="main__header">
+        <span style="color: goldenrod">Q</span>u<span style="color: darksalmon">i</span>z's
+        <span style="color: blueviolet">T</span>im<span style="color: crimson">e</span>
+      </h1>
+    </header>
+
+    <div class="alert__container">
+      <div class="correct__alert" id="correct__alert">Good Job!</div>
+      <div class="wrong__alert" id="wrong__alert">Sorry! Try again</div>
+    </div>
+
+    <section class="loading__container" id="loading__container">
+      <img class="loadingGIF" src="./assets/giphy.gif" alt="loading..." />
+    </section>
+
+    <section class="main__container" id="main__container">
+      <h2 class="emoji">🤔</h2>
+      <h1 class="question" id="question"></h1>
+      <hr />
+      <form class="submitForm" id="submitForm">
+        <div class="multiple__container">
+          <input type="radio" id="choice_1" name="choices" required />
+          <label id="choice1" for="choice_1"> </label>
+        </div>
+        <div class="multiple__container">
+          <input type="radio" id="choice_2" name="choices" required />
+          <label id="choice2" for="choice_2"></label>
+        </div>
+        <div class="multiple__container">
+          <input type="radio" id="choice_3" name="choices" required />
+          <label id="choice3" for="choice_3"></label>
+        </div>
+        <div class="multiple__container">
+          <input type="radio" id="choice_4" name="choices" required />
+          <label id="choice4" for="choice_4"></label>
+        </div>
+        <button class="btn" type="submit">Submit</button>
+      </form>
+    </section>
+  </body>
+</html>
