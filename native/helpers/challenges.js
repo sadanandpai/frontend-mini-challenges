@@ -206,6 +206,14 @@ export const challenges = [
     isNew: true,
   },
   {
+    title: 'Quiz App',
+    link: 'quiz-app',
+    difficulty: 'medium',
+    developer: 'kei-k',
+    tags: [],
+    isNew: true,
+  },
+  {
     title: 'Area Selector',
     link: 'area-selector',
     difficulty: 'medium',
