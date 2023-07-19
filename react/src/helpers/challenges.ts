@@ -60,6 +60,28 @@ export const challenges = new Map([
     },
   ],
   [
+    'tic-tac-toe',
+    {
+      title: 'Tic Tac Toe',
+      link: 'tic-tac-toe',
+      difficulty: 'easy',
+      developer: 'rashidtvmr',
+      tags: [],
+      isNew: true,
+    },
+  ],
+  [
+    'stack',
+    {
+      title: 'Stack',
+      link: 'stack',
+      difficulty: 'easy',
+      developer: 'rashidtvmr',
+      tags: [],
+      isNew: true,
+    },
+  ],
+  [
     'toast-popup',
     {
       title: 'Toast Popup',
@@ -87,7 +109,6 @@ export const challenges = new Map([
       difficulty: 'medium',
       developer: 'deepakrajkranti',
       tags: [],
-      isNew: true,
     },
   ],
   [
@@ -163,17 +184,6 @@ export const challenges = new Map([
       link: 'autocomplete-online',
       difficulty: 'hard',
       developer: 'deepu0',
-      tags: [],
-      isNew: true,
-    },
-  ],
-  [
-    'tic-tac-toe',
-    {
-      title: 'Tic Tac Toe',
-      link: 'tic-tac-toe',
-      difficulty: 'easy',
-      developer: 'rashidtvmr',
       tags: [],
       isNew: true,
     },

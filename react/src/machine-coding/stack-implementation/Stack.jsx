@@ -1,4 +1,4 @@
-import { styles } from './Stack.module.css';
+import styles from './stack.module.css';
 import { useState } from 'react';
 
 const Stack = () => {
@@ -16,9 +16,7 @@ const Stack = () => {
   };
 
   const popHandler = () => {
-    const cloneStack = [...stack];
-    cloneStack.pop();
-    setStack(cloneStack);
+    setStack(stack.slice(0, -1));
   };
 
   const peekHandler = () => {
@@ -49,7 +47,6 @@ const Stack = () => {
   return (
     <div className={styles.container}>
       <div className={styles.stack}>
-        <h1>Stack</h1>
         <input type="text" value={inputVal} onChange={onChangeHandler} required />
 
         <div className={styles.btn_root}>

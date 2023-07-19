@@ -1,11 +1,5 @@
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
 .stack {
+  margin-top: 1rem;
   max-width: 500px;
   padding: 20px;
   border: 1px solid #ccc;
