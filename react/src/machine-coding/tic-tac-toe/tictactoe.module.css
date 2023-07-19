@@ -16,7 +16,6 @@
   grid-template-columns: repeat(3, 1fr);
   background-color: #fff;
   width: 300px;
-  /* max-width: 100%; */
   margin: 0 auto;
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
   border-radius: 8px;
@@ -24,9 +23,7 @@
 }
 
 .grid-item {
-  /* border-radius: 8px; */
   background-color: rgba(255, 255, 255, 0.8);
-  /* border: 1px solid rgba(0, 0, 0, 0.8); */
   padding: 20px;
   font-size: 30px;
   text-align: center;
@@ -40,7 +37,7 @@
   box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 }
 
-button {
+.container button {
   font-weight: bold;
   padding: 15px 15px;
   border-radius: 8px;

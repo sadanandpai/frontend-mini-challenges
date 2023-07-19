@@ -1,5 +1,6 @@
+import { styles } from './Stack.module.css';
 import { useState } from 'react';
-import './Stack.module.css';
+
 const Stack = () => {
   const [stack, setStack] = useState([]);
   const [inputVal, setInputVal] = useState('');
@@ -46,12 +47,12 @@ const Stack = () => {
   };
 
   return (
-    <div className="container">
-      <div className="stack">
+    <div className={styles.container}>
+      <div className={styles.stack}>
         <h1>Stack</h1>
         <input type="text" value={inputVal} onChange={onChangeHandler} required />
 
-        <div className="btn_root">
+        <div className={styles.btn_root}>
           <button onClick={pushHandler}>Push</button>
           <button onClick={popHandler}>Pop</button>
           <button onClick={peekHandler}>Peek</button>
@@ -64,7 +65,7 @@ const Stack = () => {
 
         {stack?.map((element, index) => {
           return (
-            <div key={index} className="stack-element">
+            <div key={index} className={styles.stackElement}>
               <p>{element}</p>
             </div>
           );

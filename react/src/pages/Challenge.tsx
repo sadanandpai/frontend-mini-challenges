@@ -9,45 +9,45 @@ import InfiniteScrolling from '@/machine-coding/infinite-scrolling';
 import InvestmentCalc from '@/machine-coding/investment-calculator/App';
 import LightDarkMode from '@/machine-coding/light-dark-mode/App';
 import PasswordStrength from '@/machine-coding/password-strength/passwordStrength';
-import Stack from '@/machine-coding/stack-implementation/Stack';
 import ProgressBar from '@/machine-coding/progressbar/App';
+import Stack from '@/machine-coding/stack-implementation/Stack';
 import StarRating from '@/machine-coding/star-rating/App';
 import Stopwatch from '@/machine-coding/stopwatch/App';
 import TelephoneFormatter from '@/machine-coding/telephone-formatter';
+import TicTacToe from '@/machine-coding/tic-tac-toe/App';
 import Toast from '@/machine-coding/toast-popup/toast';
 import TodoList from '@/machine-coding/todo-list/todo';
-import TicTacToe from '@/machine-coding/tic-tac-toe/App';
 import { useParams } from 'react-router-dom';
 
-const reactChallenges = [
-  <Counter />,
-  <Accordion />,
-  <StarRating />,
-  <LightDarkMode />,
-  <GuessNumber />,
-  <TelephoneFormatter />,
-  <Toast />,
-  <PasswordStrength />,
-  <TodoList />,
-  <InvestmentCalc />,
-  <Stopwatch />,
-  <ProgressBar />,
-  <InfiniteScrolling />,
-  <FileExplorer />,
-  <Autocomplete />,
-  <AutocompleteOnline />,
-  <TicTacToe />,
-  <Stack />
-];
+const reactChallenges = {
+  counter: <Counter />,
+  accordion: <Accordion />,
+  'star-Rating': <StarRating />,
+  'light-dark-mode': <LightDarkMode />,
+  'Guess-the-number': <GuessNumber />,
+  'telephone-formatter': <TelephoneFormatter />,
+  'toast-popup': <Toast />,
+  'password-strength': <PasswordStrength />,
+  'todo-list': <TodoList />,
+  'investment-calculator': <InvestmentCalc />,
+  stopwatch: <Stopwatch />,
+  progressbar: <ProgressBar />,
+  'infinite-scrolling': <InfiniteScrolling />,
+  'file-explorer': <FileExplorer />,
+  'autocomplete-offline': <Autocomplete />,
+  'autocomplete-online': <AutocompleteOnline />,
+  'tic-tac-toe': <TicTacToe />,
+  // <Stack />
+};
 
 function Challenge() {
   const params = useParams();
-  const level = params?.level ?? 0;
+  const id = params?.id ?? '';
 
   return (
     <div className="container">
-      <Header heading={params.name} />
-      {reactChallenges[+level]}
+      <Header id={id} />
+      {reactChallenges[id]}
     </div>
   );
 }
