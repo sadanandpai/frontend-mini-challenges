@@ -2,16 +2,17 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="../../logo.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./main.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
     <title>Lift Simulation</title>
     <script src="../../helpers/header.js" type="module" defer></script>
+    <script src="./main.js" type="module" defer></script>
+    <link rel="stylesheet" href="./main.css" />
   </head>
   <body>
     <main id="main" class="main">
       <section id="form" class="form">
-        <p>max number of floors should be 99 and lift 4</p>
+        <p>Max number of floors should be 99 and lift 4</p>
         <form id="form1">
           <label for="input-floor">Enter Floor no.</label>
           <input min="2" max="8" value="2" id="input-floor" type="number" />
@@ -24,5 +25,4 @@
       <div id="content" class="content"></div>
     </main>
   </body>
-  <script src="./main.js"></script>
 </html>

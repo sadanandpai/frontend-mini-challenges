@@ -1,0 +1,51 @@
+.App {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.bg-progress {
+  height: 3rem;
+  width: 15rem;
+  background-color: rgba(0, 0, 255, 0.3);
+  position: relative;
+  border-radius: 50px;
+  overflow: hidden;
+}
+
+.fg-progress {
+  height: 5rem;
+  width: 15rem;
+  background-color: rgba(0, 0, 255, 0.5);
+  position: absolute;
+  transition: transform 10ms ease-in-out;
+}
+
+.controls {
+  margin-top: 2.5rem;
+  width: 70%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.controls button {
+  background-color: rgba(0, 0, 255, 0.5);
+  color: #fff;
+  width: 7rem;
+  border: none;
+  padding: 1.2rem 2rem;
+}
+
+.controls button:hover {
+  color: rgba(0, 0, 255, 0.5);
+  background-color: rgba(0, 0, 255, 0.3);
+  transform: scale(1.1);
+}
+
+.slidecontainer {
+  margin-top: 2rem;
+  width: 100%;
+  text-align: center;
+}

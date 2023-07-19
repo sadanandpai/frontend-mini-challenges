@@ -22,14 +22,6 @@ export const challenges = [
     isNew: true,
   },
   {
-    title:'Lift Simulation',
-    link:'lift-simulation',
-    difficulty:'medium',
-    developer:'gauravsinhaweb',
-    tags:[],
-    isNew:true
-  },
-  {
     title: 'Telephone formatter',
     link: 'telephone-formatter',
     difficulty: 'easy',
@@ -43,8 +35,14 @@ export const challenges = [
     developer: 'sadanandpai',
     tags: [],
   },
-  { title: 'Accordion', link: '#' },
-
+  {
+    title: 'Accordion',
+    link: 'accordion',
+    difficulty: 'easy',
+    developer: 'rashidtvmr',
+    isNew: true,
+    tags: [],
+  },
   {
     title: 'Multi Typing',
     link: 'multi-typing',
@@ -126,6 +124,14 @@ export const challenges = [
     tags: [],
   },
   {
+    title: 'Lift Simulation',
+    link: 'lift-simulation',
+    difficulty: 'medium',
+    developer: 'gauravsinhaweb',
+    tags: [],
+    isNew: true,
+  },
+  {
     title: 'Tic-Tac-Toe',
     link: 'tic-tac-toe',
     difficulty: 'medium',
@@ -204,6 +210,14 @@ export const challenges = [
     link: 'otp-input',
     difficulty: 'medium',
     developer: 'sadanandpai',
+    tags: [],
+    isNew: true,
+  },
+  {
+    title: 'Quiz App',
+    link: 'quiz-app',
+    difficulty: 'medium',
+    developer: 'Kei-K23',
     tags: [],
     isNew: true,
   },

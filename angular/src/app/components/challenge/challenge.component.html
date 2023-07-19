@@ -1,0 +1,13 @@
+<a class="challengeCard" [routerLink]="'machine-coding/' + challenge.link">
+  <span *ngIf="challenge.isNew" class="new">New</span>
+  <div>
+    <h3>{{ challenge.title }}</h3>
+
+    <div *ngIf="challenge.developer" class="developer">
+      <img [src]="contributors.get(challenge.developer)?.pic" alt="" />
+      <span class="name">{{
+        contributors.get(challenge.developer)?.name
+        }}</span>
+    </div>
+  </div>
+</a>

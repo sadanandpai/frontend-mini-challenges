@@ -8,8 +8,12 @@
     <script src="index.js" type="module" defer></script>
     <script src="../../helpers/header.js" type="module" defer></script>
     <link rel="stylesheet" href="style.css" />
+    <title>password-generator</title>
   </head>
   <body>
+    <div id="clipboard-container" class="clipboard-container">
+      <p>Copied to clipboard</p>
+    </div>
     <div class="container text-center">
       <form class="password-form">
         <div class="input-holder">
@@ -24,7 +28,6 @@
             />
           </button>
         </div>
-
         <div>
           <label>
             Character length
@@ -55,6 +58,13 @@
 
         <input type="submit" class="btn btn-primary" value="Generate" />
       </form>
+
+      <div class="rememberPass-container">
+        <label
+          >Remember your password:
+          <p id="rememberPass">Remember your password with the first character of each word in this sentence.</p>
+        </label>
+      </div>
     </div>
   </body>
 </html>
