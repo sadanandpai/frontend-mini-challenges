@@ -1,7 +1,15 @@
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { bootstrapApplication } from '@angular/platform-browser';
+import { AppComponent } from './app/app.component';
+import { provideRouter } from '@angular/router';
+import { routes } from './app/routes';
+import { APP_BASE_HREF } from '@angular/common';
 
-import { AppModule } from './app/app.module';
-
-
-platformBrowserDynamic().bootstrapModule(AppModule)
-  .catch(err => console.error(err));
+bootstrapApplication(AppComponent, {
+  providers: [
+    provideRouter(routes),
+    {
+      provide: APP_BASE_HREF,
+      useValue: '/frontend-mini-challenges/angular/dist/angular/'
+    }
+  ]
+}).catch(err => console.error(err));

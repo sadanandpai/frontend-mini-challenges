@@ -1,4 +1,4 @@
-import { Challenge } from '../types/interfaces/challenge.intf';
+import { Challenge } from '../models/challenge.model';
 
 export const challenges: Map<string, Challenge> = new Map([
   [
