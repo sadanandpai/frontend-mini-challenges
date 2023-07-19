@@ -7,6 +7,8 @@ const upperCaseEl = document.querySelector('#uc');
 const numbersEl = document.querySelector('#numbers');
 const symbolsEl = document.querySelector('#symbols');
 const copyBtnEl = document.querySelector('.copy-btn');
+const clipboardNoti = document.querySelector('#clipboard-container');
+const rememberPass = document.querySelector('#rememberPass');
 
 let charLength = 10;
 const specialChars = [
@@ -34,6 +36,63 @@ const specialChars = [
   '{',
   '}',
 ];
+
+// word for abbreviate letter
+const APLHABETWORDS = {
+  a: 'apple',
+  b: 'banana',
+  c: 'cat',
+  d: 'dog',
+  e: 'elephant',
+  f: 'fox',
+  g: 'grape',
+  h: 'horse',
+  i: 'ice cream',
+  j: 'jellyfish',
+  k: 'kiwi',
+  l: 'lion',
+  m: 'monkey',
+  n: 'nest',
+  o: 'orange',
+  p: 'pear',
+  q: 'queen',
+  r: 'rabbit',
+  s: 'snake',
+  t: 'tiger',
+  u: 'umbrella',
+  v: 'vase',
+  w: 'watermelon',
+  x: 'xylophone',
+  y: 'yak',
+  z: 'zebra',
+  A: 'Astronaut',
+  B: 'Bicycle',
+  C: 'Camera',
+  D: 'Dolphin',
+  E: 'Eagle',
+  F: 'Fireworks',
+  G: 'Globe',
+  H: 'Helicopter',
+  I: 'Island',
+  J: 'Jellyfish',
+  K: 'Kangaroo',
+  L: 'Lightning',
+  M: 'Mountain',
+  N: 'Nightingale',
+  O: 'Octopus',
+  P: 'Penguin',
+  Q: 'Quokka',
+  R: 'River',
+  S: 'Starfish',
+  T: 'Telescope',
+  U: 'Unicorn',
+  V: 'Volcano',
+  W: 'Waterfall',
+  X: 'X-ray',
+  Y: 'Yacht',
+  Z: 'Zipline',
+};
+
 const functionMap = {
   upper: () => String.fromCodePoint(65 + Math.floor(Math.random() * 26)),
   lower: () => String.fromCodePoint(97 + Math.floor(Math.random() * 26)),
@@ -41,7 +100,7 @@ const functionMap = {
   symbols: () => specialChars[Math.floor(Math.random() * specialChars.length)],
 };
 
-const updateCharLength = length => {
+const updateCharLength = (length) => {
   charLengthEl.textContent = length;
   charLength = length;
 };
@@ -77,12 +136,37 @@ const generatePassword = (length, options) => {
   return insertAtRandomPlaces(minimumCriteriaMatchingPassword, lengthCompletionPassword);
 };
 
-copyBtnEl.addEventListener('click', e => {
+const rememberPassword = (pass) => {
+  let rememberPass = ''; // init the empty string
+
+  const strToArr = pass.split(''); // convert the string into array to perform map method
+  strToArr.map((pass) => {
+    if (APLHABETWORDS[pass]) {
+      rememberPass += ` ${APLHABETWORDS[pass]}`;
+    } else {
+      rememberPass += ` ${pass}`;
+    }
+  });
+
+  return rememberPass.trim();
+};
+
+copyBtnEl.addEventListener('click', (e) => {
   e.preventDefault();
   window.navigator.clipboard.writeText(passwordInputEl.value);
+  // check if the password is already generated
+  if (!passwordInputEl) {
+    return;
+  } else {
+    // add animation when click on copyBtnEl
+    clipboardNoti.classList.add('clipboard-container-active');
+    setTimeout(() => {
+      clipboardNoti.classList.remove('clipboard-container-active');
+    }, 1000);
+  }
 });
 
-passwordFormEl.addEventListener('submit', e => {
+passwordFormEl.addEventListener('submit', (e) => {
   e.preventDefault();
 
   const password = generatePassword(charLength, {
@@ -92,16 +176,18 @@ passwordFormEl.addEventListener('submit', e => {
     symbols: symbolsEl.checked,
   });
   passwordInputEl.value = password;
+
+  rememberPass.innerText = rememberPassword(passwordInputEl.value); // add
 });
 
-passwordFormEl.addEventListener('change', e => {
+passwordFormEl.addEventListener('change', (e) => {
   if (e.target.type === 'range') {
     updateCharLength(e.target.value);
   }
 
   if (e.target.type === 'checkbox') {
     const checkboxes = Array.from(passwordFormEl.querySelectorAll('[type="checkbox"]'));
-    const selectedCheckboxes = checkboxes.filter(cb => cb.checked).length;
+    const selectedCheckboxes = checkboxes.filter((cb) => cb.checked).length;
 
     if (selectedCheckboxes === 0) {
       e.target.checked = true;

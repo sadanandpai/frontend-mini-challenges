@@ -1,16 +1,26 @@
 @import url(../../helpers/core.css);
 
+
+/* center the main container  */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 .password-form {
   border: 1px solid #ccc;
   display: inline-flex;
   flex-direction: column;
   padding: 1rem;
+  margin-top: 4rem;
   gap: 1rem;
   font-size: 1.25rem;
-  min-width: min(100%, 40ch);
+  box-shadow: 0.7rem 1.2rem 0.9rem rgba(0, 0, 0, 0.5);
 }
 
-.password-form > div {
+.password-form>div {
   display: flex;
   gap: 1rem;
   text-align: left;
@@ -42,6 +52,59 @@ input {
 
 .copy-btn:active {
   animation: copy-animation 0.01s linear forwards;
+}
+
+.btn {
+  cursor: pointer;
+}
+
+/* add clipboard-container */
+.rememberPass-container {
+  border-bottom: 1px solid #ccc;
+}
+
+.clipboard-container {
+  position: absolute;
+  top: -90px;
+}
+
+.clipboard-container-active {
+  animation: clipboard-animation 1s linear;
+}
+
+.clipboard-container>p {
+  padding: 0.4rem 0.8rem;
+  background-color: rgb(41, 41, 131);
+  border-radius: 0.5rem;
+  color: #fff;
+  font-weight: 600;
+}
+
+/* animation for clipboard notification  */
+@keyframes clipboard-animation {
+  10% {
+    top: -90px;
+  }
+
+  20% {
+    top: 5px;
+  }
+
+  40% {
+    top: 5px;
+  }
+
+  60% {
+    top: 5px;
+  }
+
+  80% {
+    top: 5px;
+  }
+
+  100% {
+    top: -90px;
+  }
 }
 
 @keyframes copy-animation {
