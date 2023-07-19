@@ -9,6 +9,7 @@ import InfiniteScrolling from '@/machine-coding/infinite-scrolling';
 import InvestmentCalc from '@/machine-coding/investment-calculator/App';
 import LightDarkMode from '@/machine-coding/light-dark-mode/App';
 import PasswordStrength from '@/machine-coding/password-strength/passwordStrength';
+import Stack from '@/machine-coding/stack-implementation/Stack';
 import ProgressBar from '@/machine-coding/progressbar/App';
 import StarRating from '@/machine-coding/star-rating/App';
 import Stopwatch from '@/machine-coding/stopwatch/App';
@@ -35,7 +36,8 @@ const reactChallenges = [
   <FileExplorer />,
   <Autocomplete />,
   <AutocompleteOnline />,
-  <TicTacToe />
+  <TicTacToe />,
+  <Stack />
 ];
 
 function Challenge() {
