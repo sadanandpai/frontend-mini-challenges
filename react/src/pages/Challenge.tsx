@@ -35,7 +35,7 @@ const reactChallenges = [
   <FileExplorer />,
   <Autocomplete />,
   <AutocompleteOnline />,
-  <TicTacToe />
+  <TicTacToe />,
   <Stack />
 ];
 
