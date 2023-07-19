@@ -1,11 +1,10 @@
-import { RouterModule, Routes } from '@angular/router';
+import { Routes } from '@angular/router';
 
 import { ChallengeContainerComponent } from './components/challenge-container/challenge-container.component';
 import { CounterComponent } from './machine-coding/counter/counter.component';
 import { HomeComponent } from './components/home/home.component';
-import { NgModule } from '@angular/core';
 
-const routes: Routes = [
+export const routes: Routes = [
   {
     path: '',
     component: HomeComponent,
@@ -22,9 +21,3 @@ const routes: Routes = [
     ],
   },
 ];
-
-@NgModule({
-  imports: [RouterModule.forRoot(routes, { useHash: true })],
-  exports: [RouterModule],
-})
-export class AppRoutingModule {}
