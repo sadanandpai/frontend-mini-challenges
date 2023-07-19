@@ -1,0 +1,21 @@
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.logo {
+  width: 35px;
+  height: 35px;
+  vertical-align: text-bottom;
+}
+
+nav::after {
+  content: "";
+  position: absolute;
+  width: 110%;
+  bottom: 10px;
+  left: -5%;
+  box-shadow: 0 5px 0 2px grey;
+}

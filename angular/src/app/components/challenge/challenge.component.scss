@@ -1,0 +1,83 @@
+.challengeCard {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 10px;
+  position: relative;
+  overflow: hidden;
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.15);
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+  }
+
+  h3 {
+    color: chocolate;
+    font-size: 1.25rem;
+  }
+
+  &.disabled h3 {
+    color: grey;
+  }
+
+  &.disabled {
+    box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.1);
+    cursor: not-allowed;
+  }
+
+  &.disabled:hover {
+    transform: scale(1);
+  }
+
+  a {
+    color: chocolate;
+    text-decoration: none;
+  }
+
+  .new {
+    position: absolute;
+    top: 0.75rem;
+    right: -1.75rem;
+    width: 6rem;
+    color: white;
+    font-size: 1rem;
+    text-align: center;
+    background: red;
+    transform: rotate(45deg);
+  }
+
+  .developer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-size: 0.8rem;
+  }
+
+  img {
+    border-radius: 50%;
+    height: 25px;
+    width: 25px;
+    margin-right: 0.5rem;
+  }
+
+  .name {
+    color: black;
+  }
+
+  &.easy {
+    border: 2px solid green;
+  }
+
+  &.medium {
+    border: 2px solid orange;
+  }
+
+  &.hard {
+    border: 2px solid red;
+  }
+}
