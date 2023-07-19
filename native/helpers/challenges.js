@@ -209,7 +209,7 @@ export const challenges = [
     title: 'Quiz App',
     link: 'quiz-app',
     difficulty: 'medium',
-    developer: 'kei-k',
+    developer: 'Kei-K23',
     tags: [],
     isNew: true,
   },
