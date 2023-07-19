@@ -19,20 +19,14 @@ import TodoList from '@/machine-coding/todo-list/todo';
 import { useParams } from 'react-router-dom';
 
 const reactChallenges = [
-  <Accordion />,
-  <Autocomplete />,
-  <AutocompleteOnline />,
   <Counter />,
-  <FileExplorer />,
-  <GuessNumber />,
-  <InvestmentCalc />,
-  <LightDarkMode />,
-  <PasswordStrength />,
-  <Stack />,
+  <Accordion />,
   <StarRating />,
-  <Stopwatch />,
+  <LightDarkMode />,
+  <GuessNumber />,
   <TelephoneFormatter />,
   <Toast />,
+  <PasswordStrength />,
   <TodoList />,
   <InvestmentCalc />,
   <Stopwatch />,
@@ -41,6 +35,8 @@ const reactChallenges = [
   <FileExplorer />,
   <Autocomplete />,
   <AutocompleteOnline />,
+  <TicTacToe />
+  <Stack />
 ];
 
 function Challenge() {
