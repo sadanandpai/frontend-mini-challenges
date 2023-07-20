@@ -76,7 +76,7 @@ export const challenges = new Map([
       title: 'Stack',
       link: 'stack',
       difficulty: 'easy',
-      developer: 'rashidtvmr',
+      developer: 'kumaratul60',
       tags: [],
       isNew: true,
     },
