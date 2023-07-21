@@ -119,4 +119,12 @@ export const challenges = [
     tags: [],
     isNew: true,
   },
+  {
+    title: 'Tic Tac Toe',
+    link: '#/16/tictactoe',
+    difficulty: 'hard',
+    developer: 'dhanu084',
+    tags: [],
+    isNew: true,
+  },
 ];
