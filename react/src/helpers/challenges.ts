@@ -127,4 +127,12 @@ export const challenges = [
     tags: [],
     isNew: true,
   },
+  {
+    title: 'Food Recipe',
+    link: '#/17/food-recipe',
+    difficulty: 'medium',
+    developer: 'kei-k',
+    tags: [],
+    isNew: true,
+  },
 ];
