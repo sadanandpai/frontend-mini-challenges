@@ -90,7 +90,7 @@ const App = () => {
         <h2>Scores</h2>
         {Object.keys(wins).map((p) => (
           <div key={p} className={styles['score']}>
-            {p}
+            {p === 'D' ? 'Draws' : p}
           </div>
         ))}
         <br />
