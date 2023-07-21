@@ -5,8 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "build-prod": "ng build --c=production --base-href=/frontend-mini-challenges/angular/dist/angular && npm run copy-index",
-    "copy-index": "cp dist/angular/index.html dist/angular/404.html",
+    "build-prod": "ng build --c=production --base-href=/frontend-mini-challenges/angular/dist/angular/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
