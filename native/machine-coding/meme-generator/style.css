@@ -1,0 +1,47 @@
+@import url(../../helpers/core.css);
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.meme-generator {
+  text-align: center;
+}
+
+.meme-generator img {
+  height: 430px;
+  object-fit: cover;
+}
+
+.meme {
+  width: 100%;
+  padding: 20px 50px;
+}
+
+.generate-meme-btn {
+  padding: 8px 20px;
+  border: none;
+  border-left: 4px solid #222;
+  border-right: 4px solid #222;
+  margin-bottom: 24px;
+  font-size: 20px;
+  color: #108070;
+  font-weight: bold;
+  background: #fff;
+  cursor: pointer;
+  transition: all 400ms ease;
+}
+
+.generate-meme-btn:hover {
+  padding: 8px 36px;
+  border-left: 8px solid #222;
+  border-right: 8px solid #222;
+  letter-spacing: 3px;
+}
+
+.meme-author {
+  margin: 8px;
+}

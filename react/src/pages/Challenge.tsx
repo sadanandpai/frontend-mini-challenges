@@ -10,6 +10,7 @@ import InvestmentCalc from '@/machine-coding/investment-calculator/App';
 import LightDarkMode from '@/machine-coding/light-dark-mode/App';
 import PasswordStrength from '@/machine-coding/password-strength/passwordStrength';
 import ProgressBar from '@/machine-coding/progressbar/App';
+import Stack from '@/machine-coding/stack-implementation/Stack';
 import StarRating from '@/machine-coding/star-rating/App';
 import Stopwatch from '@/machine-coding/stopwatch/App';
 import TelephoneFormatter from '@/machine-coding/telephone-formatter';
@@ -18,34 +19,35 @@ import TodoList from '@/machine-coding/todo-list/todo';
 import TicTacToe from '@/machine-coding/tictactoe/App';
 import { useParams } from 'react-router-dom';
 
-const reactChallenges = [
-  <Counter />,
-  <Accordion />,
-  <StarRating />,
-  <LightDarkMode />,
-  <GuessNumber />,
-  <TelephoneFormatter />,
-  <Toast />,
-  <PasswordStrength />,
-  <TodoList />,
-  <InvestmentCalc />,
-  <Stopwatch />,
-  <ProgressBar />,
-  <InfiniteScrolling />,
-  <FileExplorer />,
-  <Autocomplete />,
-  <AutocompleteOnline />,
-  <TicTacToe />,
-];
+const reactChallenges = {
+  counter: <Counter />,
+  accordion: <Accordion />,
+  'star-Rating': <StarRating />,
+  'light-dark-mode': <LightDarkMode />,
+  'Guess-the-number': <GuessNumber />,
+  'telephone-formatter': <TelephoneFormatter />,
+  'toast-popup': <Toast />,
+  'password-strength': <PasswordStrength />,
+  'todo-list': <TodoList />,
+  'investment-calculator': <InvestmentCalc />,
+  stopwatch: <Stopwatch />,
+  progressbar: <ProgressBar />,
+  'infinite-scrolling': <InfiniteScrolling />,
+  'file-explorer': <FileExplorer />,
+  'autocomplete-offline': <Autocomplete />,
+  'autocomplete-online': <AutocompleteOnline />,
+  'tic-tac-toe': <TicTacToe />,
+  stack: <Stack />,
+};
 
 function Challenge() {
   const params = useParams();
-  const level = params?.level ?? 0;
+  const id = params?.id ?? '';
 
   return (
     <div className="container">
-      <Header heading={params.name} />
-      {reactChallenges[+level]}
+      <Header id={id} />
+      {reactChallenges[id]}
     </div>
   );
 }
