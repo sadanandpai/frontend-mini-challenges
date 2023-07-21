@@ -10,7 +10,7 @@ import ReactDOM from 'react-dom/client';
 
 const router = createHashRouter([
   {
-    path: '/:level/:name',
+    path: '/:id',
     element: <Challenge />,
   },
   {

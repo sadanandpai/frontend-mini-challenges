@@ -5,13 +5,12 @@ import styles from './challenge-grid.module.scss';
 function ChallengeGrid() {
   return (
     <div className={styles.challengeGrid}>
-      {challenges.map((challenge) => (
+      {Array.from(challenges.values()).map((challenge) => (
         <a
           key={challenge.title}
-          className={`${styles.challengeCard} ${challenge.link === '#' && styles.disabled} ${
-            styles[challenge.difficulty]
-          }`}
-          href={challenge.link} >
+          className={`${styles.challengeCard} ${styles[challenge.difficulty]}`}
+          href={'#/' + challenge.link}
+        >
           {challenge.isNew && <span className={styles.new}>New</span>}
           <div>
             <h3>{challenge.title}</h3>

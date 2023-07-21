@@ -1,12 +1,12 @@
 import { challenges } from '@/helpers/challenges';
 import styles from './header.module.css';
 
-function Header({ heading = 'Challenge' }: { heading?: string }) {
+function Header({ id }: { id: string }) {
   return (
     <nav className={styles.nav}>
       <a href="#/challenges">Home</a>
 
-      <h1>{getChallengeTitle(heading)}</h1>
+      <h1>{challenges.get(id)?.title}</h1>
 
       <a href="https://github.com/sadanandpai/frontend-mini-challenges/">
         <img
@@ -21,7 +21,7 @@ function Header({ heading = 'Challenge' }: { heading?: string }) {
 
 export default Header;
 
-const getChallengeTitle = (challengeParam: string): string | undefined => {
-  const challenge = challenges.find((item) => item.link.includes(challengeParam));
-  return challenge?.title || 'Challenge';
-};
+// const getChallengeTitle = (challengeParam: string): string | undefined => {
+//   const challenge = Array.from(challenges.values()).find((item) => item.link.includes(challengeParam));
+//   return challenge?.title || 'Challenge';
+// };
