@@ -47,7 +47,7 @@ jobs:
           cd angular
           npm install
           rm -rf dist
-          npm run build
+          npm run build-prod
           git add dist -f
           git commit -m "angular build files - github action"
           git push
