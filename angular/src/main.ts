@@ -9,7 +9,7 @@ bootstrapApplication(AppComponent, {
     provideRouter(routes),
     {
       provide: APP_BASE_HREF,
-      useValue: '/frontend-mini-challenges/angular/dist/angular/'
+      useValue: '/frontend-mini-challenges/angular/'
     }
   ]
 }).catch(err => console.error(err));
