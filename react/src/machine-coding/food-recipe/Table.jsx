@@ -1,3 +1,5 @@
+import styles from './Food.module.css';
+
 export default function Table({ data }) {
   const produceIngredientsAndMeasureArray = (ingredients) => {
     const ingredientsAndMeasureArray = [];
@@ -12,7 +14,7 @@ export default function Table({ data }) {
   };
 
   return (
-    <table>
+    <table className={styles['recipe_table']}>
       <thead>
         <tr>
           <th>No.</th>

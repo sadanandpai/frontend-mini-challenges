@@ -126,26 +126,26 @@ dialog {
 
 /* modal dialog table */
 
-table {
+.recipe_table {
     width: 100%;
     border-collapse: collapse;
     margin: 1.8rem auto;
     font-size: 1rem;
 }
 
-th,
-td {
+.recipe_table th,
+.recipe_table td {
     height: 3.12rem;
     text-align: left;
     padding-left: 1.25rem;
 }
 
-th {
+.recipe_table th {
     background-color: #9fa732;
     color: #fff;
 }
 
-tr:nth-child(even) {
+.recipe_table tr:nth-child(even) {
     background-color: #f9ffa3;
 }
 
