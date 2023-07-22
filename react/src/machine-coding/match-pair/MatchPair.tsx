@@ -4,21 +4,22 @@ import Grid from './components/Grid';
 import { getShuffledSymbols } from './helpers/symbol.helper';
 import styles from './styles.module.css';
 
+const size = 4;
+const matchLength = 2;
+
 const getTiles = (size: number) =>
-  getShuffledSymbols((size * size) / 2, true).map((symbol) => ({ symbol, isOpen: false }));
+  getShuffledSymbols((size * size) / matchLength, true).map((symbol) => ({ symbol, isOpen: false }));
 
 function MatchPair() {
-  const size = 4;
   const [tiles, setTiles] = useState(() => getTiles(size));
-  const [isOver, setIsOver] = useState(false);
   const [openTiles, setOpenTiles] = useState<number[]>([]);
-  const timerId = useRef<any>();
+  const timerId = useRef<number>();
   const attempts = useRef<number>(0);
   const matches = useRef<number>(0);
   const isResetting = useRef(false);
 
   const resetGrid = () => {
-    timerId.current = null;
+    timerId.current = undefined;
     attempts.current = 0;
     matches.current = 0;
 
@@ -31,7 +32,7 @@ function MatchPair() {
   };
 
   const closePreviousTiles = () => {
-    if (openTiles.length < 2) {
+    if (openTiles.length < matchLength) {
       return;
     }
 
@@ -40,7 +41,7 @@ function MatchPair() {
       const newTiles = [...tiles];
       newTiles[idx0] = { symbol: tiles[idx0].symbol, isOpen: false };
       newTiles[idx1] = { symbol: tiles[idx1].symbol, isOpen: false };
-      setOpenTiles(openTiles.slice(2));
+      setOpenTiles(openTiles.slice(matchLength));
       return newTiles;
     });
   };
@@ -62,21 +63,22 @@ function MatchPair() {
 
   useEffect(() => {
     // If previous tiles are matching close them
-    if (openTiles.length === 2) {
+    if (openTiles.length === matchLength) {
       if (tiles[openTiles[0]].symbol === tiles[openTiles[1]].symbol) {
         setOpenTiles([]);
-        matches.current += 2;
+        matches.current += matchLength;
       } else {
-        timerId.current = setTimeout(() => {
+        timerId.current = window.setTimeout(() => {
           closePreviousTiles();
         }, 3000);
       }
     }
 
-    if (openTiles.length === 3) {
-      clearTimeout(timerId.current);
+    if (openTiles.length === matchLength + 1) {
+      window.clearTimeout(timerId.current);
       closePreviousTiles();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [tiles]);
 
   return (

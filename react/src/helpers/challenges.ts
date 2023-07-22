@@ -150,7 +150,7 @@ export const challenges = new Map([
       title: 'Food Recipe',
       link: 'food-recipe',
       difficulty: 'medium',
-      developer: 'kei-k',
+      developer: 'Kei-K23',
       tags: [],
       isNew: true,
     },

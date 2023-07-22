@@ -12,4 +12,5 @@ export const contributors = new Map([
   ['ayush-dutt-sharma', { name: 'Ayush Dutt Sharma', pic: 'https://avatars.githubusercontent.com/u/73738613' }],
   ['dhanu084', { name: 'Dhanush Kiran', pic: 'https://avatars.githubusercontent.com/u/54932658' }],
   ['kumaratul60', { name: 'Atul Kumar Awasthi', pic: 'https://avatars.githubusercontent.com/u/53579888' }],
+  ['Kei-K23', { name: 'Kei-K', pic: 'https://avatars.githubusercontent.com/u/134714087' }],
 ]);

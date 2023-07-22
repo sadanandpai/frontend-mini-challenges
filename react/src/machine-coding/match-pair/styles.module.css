@@ -3,8 +3,16 @@
   margin: 20px 0;
 }
 
+.layout output {
+  font-size: 1.25rem;
+}
+
+.layout p {
+  margin: 0;
+}
+
 .button {
-  margin: 20px 0;
+  margin: 40px 0 20px;
 }
 
 .grid {
@@ -41,14 +49,6 @@
 
 .frontface {
   transform: rotateY(0deg);
-}
-
-.layout output {
-  font-size: 1.25rem;
-}
-
-.layout p {
-  margin: 0;
 }
 
 @media screen and (min-width: 768px) {
