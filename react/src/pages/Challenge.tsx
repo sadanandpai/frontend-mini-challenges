@@ -3,11 +3,13 @@ import Autocomplete from '@/machine-coding/autocomplete-offline/autocomplete';
 import AutocompleteOnline from '@/machine-coding/autocomplete-offline/autocompleteOnline';
 import Counter from '@/machine-coding/counter/counter';
 import FileExplorer from '@/machine-coding/file-explorer/App';
+import FoodRecipe from '@/machine-coding/food-recipe/App';
 import GuessNumber from '@/machine-coding/guess-number/App';
 import Header from '@/components/header/header';
 import InfiniteScrolling from '@/machine-coding/infinite-scrolling';
 import InvestmentCalc from '@/machine-coding/investment-calculator/App';
 import LightDarkMode from '@/machine-coding/light-dark-mode/App';
+import MatchPair from '@/machine-coding/match-pair/MatchPair';
 import PasswordStrength from '@/machine-coding/password-strength/passwordStrength';
 import ProgressBar from '@/machine-coding/progressbar/App';
 import Stack from '@/machine-coding/stack-implementation/Stack';
@@ -17,7 +19,6 @@ import TelephoneFormatter from '@/machine-coding/telephone-formatter';
 import TicTacToe from '@/machine-coding/tic-tac-toe/App';
 import Toast from '@/machine-coding/toast-popup/toast';
 import TodoList from '@/machine-coding/todo-list/todo';
-import FoodRecipe from '@/machine-coding/food-recipe/App';
 import { useParams } from 'react-router-dom';
 
 const reactChallenges = {
@@ -40,6 +41,7 @@ const reactChallenges = {
   'tic-tac-toe': <TicTacToe />,
   stack: <Stack />,
   'food-recipe': <FoodRecipe />,
+  'match-pair': <MatchPair />,
 };
 
 function Challenge() {

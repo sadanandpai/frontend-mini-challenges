@@ -156,11 +156,22 @@ export const challenges = new Map([
     },
   ],
   [
+    'match-pair',
+    {
+      title: 'Match Pair',
+      link: 'match-pair',
+      difficulty: 'medium',
+      developer: 'sadanandpai',
+      tags: [],
+      isNew: true,
+    },
+  ],
+  [
     'infinite-scrolling',
     {
       title: 'Infinite Scrolling (online)',
       link: 'infinite-scrolling',
-      difficulty: 'hard',
+      difficulty: 'medium',
       developer: 'ayush-dutt-sharma',
       tags: [],
       isNew: true,

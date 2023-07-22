@@ -1,0 +1,58 @@
+.layout {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.button {
+  margin: 20px 0;
+}
+
+.grid {
+  display: inline-grid;
+  font-size: 2rem;
+}
+
+.tile {
+  position: relative;
+}
+
+.frontface,
+.backface {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  background-color: khaki;
+  box-shadow: 0 5px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  transition: all 1s;
+  transform: rotateY(0deg);
+}
+
+.backface {
+  transform: rotateY(180deg);
+}
+
+.frontface {
+  transform: rotateY(0deg);
+}
+
+.layout output {
+  font-size: 1.25rem;
+}
+
+.layout p {
+  margin: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .grid {
+    font-size: 3rem;
+  }
+}
