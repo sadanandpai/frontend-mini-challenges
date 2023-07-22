@@ -145,6 +145,17 @@ export const challenges = new Map([
     },
   ],
   [
+    'food-recipe',
+    {
+      title: 'Food Recipe',
+      link: 'food-recipe',
+      difficulty: 'medium',
+      developer: 'kei-k',
+      tags: [],
+      isNew: true,
+    },
+  ],
+  [
     'infinite-scrolling',
     {
       title: 'Infinite Scrolling (online)',
