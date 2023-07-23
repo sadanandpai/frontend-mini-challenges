@@ -1,27 +1,22 @@
-import { usePasswordStrength } from './hooks/usePasswordStrength';
 import styles from './passwordStrength.module.scss';
-
+import { usePasswordStrength } from './hooks/usePasswordStrength';
 
 const PasswordStrength = () => {
   const [password, passwordStrength, passwordScore, passwordIndicators, handlePasswordChange] = usePasswordStrength();
 
   return (
     <div className={styles.main}>
-      <div>
-        <label htmlFor="password-length">Enter the password</label>
-        <br />
-        <br />
-        <input
-          type="text"
-          id="password"
-          min="8"
-          max="32"
-          autoFocus
-          autoComplete="off"
-          value={password}
-          onChange={handlePasswordChange}
-        />
-      </div>
+      <input
+        type="text"
+        id="password"
+        min="8"
+        max="32"
+        autoFocus
+        autoComplete="off"
+        placeholder="Enter the password"
+        value={password}
+        onChange={handlePasswordChange}
+      />
 
       <div className={styles.indicators}>
         <span className={passwordIndicators.lc ? styles.active : ''}>Lowercase</span>

@@ -1,16 +1,16 @@
-import { useEffect, useState } from "react";
-import styles from "./Password.module.css";
-import { ALPHABET_WORDS } from "./alphabet";
-import PasswordTable from "./PasswordTable";
-import SavePassword from "./SavePassword";
-import GeneratePassAndCopyBtn from "./GeneratePassAndCopyBtn";
-import GeneratePass from "./GeneratePass";
-import Form from "./Form";
+import { useEffect, useState } from 'react';
+
+import { ALPHABET_WORDS } from './alphabet';
+import Form from './Form';
+import GeneratePass from './GeneratePass';
+import GeneratePassAndCopyBtn from './GeneratePassAndCopyBtn';
+import PasswordTable from './PasswordTable';
+import SavePassword from './SavePassword';
+import styles from './Password.module.css';
+
 export default function App() {
-  const [generatedPassword, setGeneratedPassword] = useState("");
-  const [rememberPassword, setRememberPassword] = useState(
-    "There is no password to remember! Please generate one"
-  );
+  const [generatedPassword, setGeneratedPassword] = useState('');
+  const [rememberPassword, setRememberPassword] = useState('There is no password to remember! Please generate one');
   const [isChecked, setIsChecked] = useState({
     isCheckedLowerCha: true,
     isCheckedUpperCha: true,
@@ -18,12 +18,11 @@ export default function App() {
     isCheckedSymbols: false,
   });
   const [passwordLength, setPasswordLength] = useState(6);
-
   const [saveNameAndPass, setSaveNameAndPass] = useState([]);
-  const [notificationMessage, setNotificationMessage] = useState("");
+  const [notificationMessage, setNotificationMessage] = useState('');
 
   useEffect(() => {
-    const storedData = getLocalStorage("PASS");
+    const storedData = getLocalStorage('PASS');
     if (storedData) {
       setSaveNameAndPass(storedData);
     }
@@ -46,20 +45,13 @@ export default function App() {
   };
 
   const handleSavePasswordAndName =
-    (
-      name,
-      pass,
-      checkName,
-      callableSetLocalStorage,
-      callableCheckPasswordNameExit,
-      callableShowTextNotification
-    ) =>
+    (name, pass, checkName, callableSetLocalStorage, callableCheckPasswordNameExit, callableShowTextNotification) =>
     () => {
       const isNameExit = callableCheckPasswordNameExit(checkName, name);
 
       if (name.length !== 0) {
         if (isNameExit.length > 0) {
-          callableShowTextNotification("name already taken!");
+          callableShowTextNotification('name already taken!');
           return;
         }
 
@@ -67,11 +59,11 @@ export default function App() {
         setSaveNameAndPass((prevState) => {
           const updatedState = [...prevState, { name, pass }];
           console.log(updatedState); // Access the updated state
-          callableSetLocalStorage("PASS", updatedState);
+          callableSetLocalStorage('PASS', updatedState);
           return updatedState;
         });
       } else {
-        callableShowTextNotification("cannot save without name!");
+        callableShowTextNotification('cannot save without name!');
         return;
       }
     };
@@ -102,42 +94,25 @@ export default function App() {
 
     // generate random symbols
     symbolCha: () => {
-      const symbolCha = [
-        "!",
-        "@",
-        "#",
-        "$",
-        "%",
-        "^",
-        "&",
-        "*",
-        "(",
-        ")",
-        "_",
-        "+",
-        "-",
-        "=",
-        "/",
-        "|",
-      ];
+      const symbolCha = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '_', '+', '-', '=', '/', '|'];
       const randomIndex = Math.floor(Math.random() * symbolCha.length);
       return symbolCha[randomIndex];
     },
   };
 
   const shuffleString = (password) => {
-    const arrayPass = password.split(""); // change string into array
+    const arrayPass = password.split(''); // change string into array
     for (let i = arrayPass.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * i + 1); // random number base on array length
       [arrayPass[i], arrayPass[j]] = [arrayPass[j], arrayPass[i]]; // shuffle by using array destructuring
     }
 
-    return arrayPass.join(""); // change array back into string
+    return arrayPass.join(''); // change array back into string
   };
 
   const PasswordToRemember = (password, alphabet) => {
-    const passArr = password.split("");
-    let formatPass = "";
+    const passArr = password.split('');
+    let formatPass = '';
     passArr.map((cha) => {
       if (alphabet[cha]) {
         formatPass += ` ${alphabet[cha]}`;
@@ -149,45 +124,40 @@ export default function App() {
     setRememberPassword(formatPass.trim());
   };
 
-  const passwordGenerate =
-    (isCheckedType, length, random, callablePasswordToRemember, alphabet) =>
-    () => {
-      let passwordGenerate = "";
-      const {
-        isCheckedLowerCha: lower,
-        isCheckedUpperCha: upper,
-        isCheckedNumber: number,
-        isCheckedSymbols: symbolCha,
-      } = isCheckedType;
-      const charTypeCount = lower + upper + number + symbolCha;
-      const charTypeArray = [
-        { lower },
-        { upper },
-        { number },
-        { symbolCha },
-      ].filter((type) => Object.values(type)[0] === true);
+  const passwordGenerate = (isCheckedType, length, random, callablePasswordToRemember, alphabet) => () => {
+    let passwordGenerate = '';
+    const {
+      isCheckedLowerCha: lower,
+      isCheckedUpperCha: upper,
+      isCheckedNumber: number,
+      isCheckedSymbols: symbolCha,
+    } = isCheckedType;
+    const charTypeCount = lower + upper + number + symbolCha;
+    const charTypeArray = [{ lower }, { upper }, { number }, { symbolCha }].filter(
+      (type) => Object.values(type)[0] === true
+    );
 
-      if (charTypeCount === 0) {
-        return "";
-      }
+    if (charTypeCount === 0) {
+      return '';
+    }
 
-      // loop through the array of type
-      for (let i = 0; i < length; i += charTypeCount) {
-        charTypeArray.forEach((type) => {
-          const typeName = Object.keys(type)[0];
-          passwordGenerate += random[typeName]();
-        });
-      }
-      passwordGenerate = shuffleString(passwordGenerate).slice(0, length);
-      setGeneratedPassword(passwordGenerate);
-      callablePasswordToRemember(passwordGenerate, alphabet);
-    };
+    // loop through the array of type
+    for (let i = 0; i < length; i += charTypeCount) {
+      charTypeArray.forEach((type) => {
+        const typeName = Object.keys(type)[0];
+        passwordGenerate += random[typeName]();
+      });
+    }
+    passwordGenerate = shuffleString(passwordGenerate).slice(0, length);
+    setGeneratedPassword(passwordGenerate);
+    callablePasswordToRemember(passwordGenerate, alphabet);
+  };
 
   // copy result value when click to copy btn using navigator clipboard api
   const handleCopyText = (e) => {
     // return if password is null
     e.preventDefault();
-    if (generatedPassword === "") return;
+    if (generatedPassword === '') return;
     navigator.clipboard.writeText(generatedPassword);
   };
 
@@ -195,15 +165,13 @@ export default function App() {
     setNotificationMessage(message);
 
     setTimeout(() => {
-      setNotificationMessage("");
+      setNotificationMessage('');
     }, 1000);
   };
 
   return (
-    <div className={styles["App"]}>
-      <div className={styles["main_section"]}>
-        <h1 className={styles["main_header"]}>Generate strong password</h1>
-
+    <div className={styles['App']}>
+      <div className={styles['main_section']}>
         <Form
           handleChange={handleChange}
           isChecked={isChecked}
@@ -218,7 +186,7 @@ export default function App() {
           showTextNotification={showTextNotification}
         />
 
-        <div className={styles["third_section"]}>
+        <div className={styles['third_section']}>
           <label>Password remember shortcut: </label>
           <p>{rememberPassword}</p>
         </div>
@@ -246,8 +214,8 @@ export default function App() {
         />
       </div>
 
-      <div className={styles["sixth_section"]}>
-        <h2 className={styles["second_header"]}>All your saved password</h2>
+      <div className={styles['sixth_section']}>
+        <h2 className={styles['second_header']}>All your saved password</h2>
         <PasswordTable saveNameAndPass={saveNameAndPass} />
       </div>
     </div>

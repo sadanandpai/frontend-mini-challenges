@@ -10,6 +10,7 @@ import InfiniteScrolling from '@/machine-coding/infinite-scrolling';
 import InvestmentCalc from '@/machine-coding/investment-calculator/App';
 import LightDarkMode from '@/machine-coding/light-dark-mode/App';
 import MatchPair from '@/machine-coding/match-pair/MatchPair';
+import PasswordGenerator from '@/machine-coding/password-generator/App';
 import PasswordStrength from '@/machine-coding/password-strength/passwordStrength';
 import ProgressBar from '@/machine-coding/progressbar/App';
 import Stack from '@/machine-coding/stack-implementation/Stack';
@@ -19,7 +20,6 @@ import TelephoneFormatter from '@/machine-coding/telephone-formatter';
 import TicTacToe from '@/machine-coding/tic-tac-toe/App';
 import Toast from '@/machine-coding/toast-popup/toast';
 import TodoList from '@/machine-coding/todo-list/todo';
-import PasswordGenerator '@/machine-coding/password-generator/App'; 
 import { useParams } from 'react-router-dom';
 
 const reactChallenges = {
@@ -43,7 +43,7 @@ const reactChallenges = {
   stack: <Stack />,
   'food-recipe': <FoodRecipe />,
   'match-pair': <MatchPair />,
-  'password-generator' : <PasswordGenerator/>,
+  'password-generator': <PasswordGenerator />,
 };
 
 function Challenge() {

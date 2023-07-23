@@ -1,5 +1,5 @@
-import { useState } from "react";
-import styles from "./Password.module.css";
+import styles from './Password.module.css';
+import { useState } from 'react';
 
 export default function SavePassword({
   generatedPassword,
@@ -11,9 +11,9 @@ export default function SavePassword({
   notificationMessage,
 }) {
   const [isSave, setIsSave] = useState(false);
-  const [passwordName, setPasswordName] = useState("");
+  const [passwordName, setPasswordName] = useState('');
   return (
-    <div className={styles["fifth_section"]}>
+    <div className={styles['fifth_section']}>
       <label title="save your password" htmlFor="checkToSave">
         Save password:
       </label>
@@ -22,19 +22,19 @@ export default function SavePassword({
         type="checkbox"
         checked={isSave}
         onChange={() => setIsSave(!isSave)}
-        disabled={generatedPassword == "" ? true : false}
+        disabled={generatedPassword == '' ? true : false}
       />
       {isSave && (
         <div>
           <input
-            className={styles["inputText"]}
+            className={styles['inputText']}
             type="text"
             placeholder="name your password"
             value={passwordName}
             onChange={(e) => setPasswordName(e.target.value)}
           />
           <button
-            className={styles["btn"]}
+            className={styles['btn']}
             title="save password"
             onClick={handleSavePasswordAndName(
               passwordName,
@@ -47,12 +47,8 @@ export default function SavePassword({
           >
             save
           </button>
-          {(notificationMessage === "cannot save without name!" && (
-            <span>{notificationMessage}</span>
-          )) ||
-            (notificationMessage === "name already taken!" && (
-              <span>{notificationMessage}</span>
-            ))}
+          {(notificationMessage === 'cannot save without name!' && <span>{notificationMessage}</span>) ||
+            (notificationMessage === 'name already taken!' && <span>{notificationMessage}</span>)}
         </div>
       )}
     </div>

@@ -1,4 +1,4 @@
-import styles from "./Password.module.css";
+import styles from './Password.module.css';
 
 export default function GeneratePassAndCopyBtn({
   isChecked,
@@ -12,33 +12,25 @@ export default function GeneratePassAndCopyBtn({
   notificationMessage,
 }) {
   return (
-    <div className={styles["fourth_section"]}>
+    <div className={styles['fourth_section']}>
       <button
-        className={styles["btn"]}
+        className={styles['btn']}
         title="generate password"
-        onClick={passwordGenerate(
-          { ...isChecked },
-          passwordLength,
-          randomPassword,
-          PasswordToRemember,
-          ALPHABET_WORDS
-        )}
+        onClick={passwordGenerate({ ...isChecked }, passwordLength, randomPassword, PasswordToRemember, ALPHABET_WORDS)}
       >
         generate password
       </button>
       <button
-        className={styles["btn"]}
+        className={styles['btn']}
         title="copy password"
         onClick={(e) => {
           handleCopyText(e);
-          showTextNotification("copied1");
+          showTextNotification('copied1');
         }}
       >
         copy
       </button>
-      {notificationMessage === "copied1" && (
-        <span>{notificationMessage.slice(0, 6)}</span>
-      )}
+      {notificationMessage === 'copied1' && <span>{notificationMessage.slice(0, 6)}</span>}
     </div>
   );
 }

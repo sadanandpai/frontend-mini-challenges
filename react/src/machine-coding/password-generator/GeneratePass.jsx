@@ -1,35 +1,28 @@
-import styles from "./Password.module.css";
+import styles from './Password.module.css';
 
-export default function GeneratePass({
-  generatedPassword,
-  handleCopyText,
-  showTextNotification,
-  notificationMessage,
-}) {
+export default function GeneratePass({ generatedPassword, handleCopyText, showTextNotification, notificationMessage }) {
   return (
-    <div className={styles["second_section"]}>
+    <div className={styles['second_section']}>
       <label>Your generated password: </label>
       <div>
         <input
-          className={styles["inputText"]}
+          className={styles['inputText']}
           type="text"
           placeholder="Your generated password will appear here"
           value={generatedPassword}
           readOnly
         />
         <button
-          className={styles["btn"]}
+          className={styles['btn']}
           title="copy password"
           onClick={(e) => {
             handleCopyText(e);
-            showTextNotification("copied2");
+            showTextNotification('copied2');
           }}
         >
           copy
         </button>
-        {notificationMessage === "copied2" && (
-          <span>{notificationMessage.slice(0, 6)}</span>
-        )}
+        {notificationMessage === 'copied2' && <span>{notificationMessage.slice(0, 6)}</span>}
       </div>
     </div>
   );

@@ -1,8 +1,8 @@
-import styles from "./Password.module.css";
+import styles from './Password.module.css';
 
 export default function PasswordTable({ saveNameAndPass }) {
   return (
-    <table className={styles["password-table"]}>
+    <table className={styles['password-table']}>
       <thead>
         <tr>
           <th>Name of password</th>
