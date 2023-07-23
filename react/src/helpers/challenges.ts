@@ -156,6 +156,17 @@ export const challenges = new Map([
     },
   ],
   [
+    'password-generator',
+    {
+      title: 'Password Generator',
+      link: 'password-generator',
+      difficulty: 'medium',
+      developer: 'Kei-K23',
+      tags: [],
+      isNew: true,
+    },
+  ],
+  [
     'match-pair',
     {
       title: 'Match Pair',
