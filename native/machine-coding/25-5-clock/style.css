@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #eee;
+}
+
+main {
+  background-color: #fff;
+  max-width: 500px;
+  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 2rem;
+}
+
+h1 {
+  text-align: center;
+}
+
+.controller-wrapper {
+  width: 100%;
+  justify-content: space-around;
+  display: flex;
+  gap: 1rem;
+  margin: 8px;
+}
+
+.controller {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 4px;
+}
+
+.time-control {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.button-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.duration-button {
+  padding: 4px;
+  background-color: #bbb;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.duration-button:hover {
+  background-color: #999;
+}
+
+.duration-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(187, 187, 187, 0.5);
+}
+.timer-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.timer-wrapper h3 {
+  margin-bottom: 0.5rem;
+}
+
+.time {
+  font-size: 3.2rem;
+  font-weight: bold;
+  font-family: monospace;
+}
+
+.timer-display {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.timer-display button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.timer-display button:hover {
+  background-color: #0056b3;
+}
+
+.timer-display button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.5);
+}
+.last-minute {
+ color: #de3163;
+}
