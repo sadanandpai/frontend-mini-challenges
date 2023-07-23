@@ -229,6 +229,14 @@ export const challenges = [
     tags: [],
   },
   {
+    title: '25-5 Clock',
+    link: '25-5-clock',
+    difficulty: 'medium',
+    developer: 'caesar003',
+    tags: [],
+    isNew: true,
+  },
+  {
     title: 'Carousel',
     link: 'carousel',
     difficulty: 'medium',
@@ -304,11 +312,4 @@ export const challenges = [
   { title: 'Emoji Editor', link: '#' },
   { title: 'Sort Table', link: '#' },
   { title: 'Infinite Scroll', link: '#' },
-  {
-    title: '25-5 Clock',
-    link: '25-5-clock',
-    developer: 'caesar003',
-    tags: [],
-    isNew: true,
-  },
 ];

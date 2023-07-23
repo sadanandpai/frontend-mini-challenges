@@ -1,16 +1,4 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  background-color: #eee;
-}
+@import url(../../helpers/core.css);
 
 main {
   background-color: #fff;
@@ -18,10 +6,7 @@ main {
   box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   padding: 2rem;
-}
-
-h1 {
-  text-align: center;
+  margin: auto;
 }
 
 .controller-wrapper {
@@ -69,6 +54,7 @@ h1 {
   outline: none;
   box-shadow: 0 0 0 2px rgba(187, 187, 187, 0.5);
 }
+
 .timer-wrapper {
   width: 100%;
   display: flex;
@@ -85,6 +71,7 @@ h1 {
   font-size: 3.2rem;
   font-weight: bold;
   font-family: monospace;
+  margin: 0;
 }
 
 .timer-display {

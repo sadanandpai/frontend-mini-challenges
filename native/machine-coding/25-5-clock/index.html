@@ -1,68 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <title></title>
+  <head>
     <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="../../logo.svg" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="../../helpers/header.js" type="module"></script>
+    <title>25 + 5 Clock</title>
     <link href="./style.css" rel="stylesheet" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet" />
-</head>
+    <script src="./index.js" type="module"></script>
+  </head>
 
-<body>
+  <body>
     <main>
-        <h1>25+5 Clock</h1>
-        <div class="controller-wrapper">
-            <div>
-                <h4>Break length</h4>
-                <div class="controller">
-                    <p class="time-control" id="breaklen"></p>
-                    <div class="button-wrapper">
-                        <button class="duration-button" data-target="break" data-direction="up">
-                            <i class="fas fa-chevron-up"></i>
-                        </button>
-                        <button class="duration-button" data-target="break" data-direction="down">
-                            <i class="fas fa-chevron-down"></i>
-                        </button>
-                    </div>
-                </div>
+      <div class="controller-wrapper">
+        <div>
+          <h4>Break length</h4>
+          <div class="controller">
+            <p class="time-control" id="breaklen"></p>
+            <div class="button-wrapper">
+              <button class="duration-button" data-target="break" data-direction="up">
+                <i class="fas fa-chevron-up"></i>
+              </button>
+              <button class="duration-button" data-target="break" data-direction="down">
+                <i class="fas fa-chevron-down"></i>
+              </button>
             </div>
-            <div>
-                <h4>Session Length</h4>
-                <div class="controller">
-                    <p class="time-control" id="sesslen"></p>
-                    <div class="button-wrapper">
-                        <button class="duration-button" data-target="session" data-direction="up">
-                            <i class="fas fa-chevron-up"></i>
-                        </button>
-                        <button class="duration-button" data-target="session" data-direction="down">
-                            <i class="fas fa-chevron-down"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
-        <div class="timer-wrapper">
-            <h3 class="timer-header"></h3>
-            <p class="time"><span id="minute"></span><span>:</span><span id="second"></span></p>
-            <div class="timer-display">
-
-                <button id="play">
-                    <i id="playicon" class="fas fa-play"></i>
-                </button>
-                <button id="reset">
-                    <i class="fa fa-refresh"></i>
-                </button>
+        <div>
+          <h4>Session Length</h4>
+          <div class="controller">
+            <p class="time-control" id="sesslen"></p>
+            <div class="button-wrapper">
+              <button class="duration-button" data-target="session" data-direction="up">
+                <i class="fas fa-chevron-up"></i>
+              </button>
+              <button class="duration-button" data-target="session" data-direction="down">
+                <i class="fas fa-chevron-down"></i>
+              </button>
             </div>
+          </div>
         </div>
+      </div>
+      <div class="timer-wrapper">
+        <h3 class="timer-header"></h3>
+        <p class="time"><span id="minute"></span><span>:</span><span id="second"></span></p>
+        <div class="timer-display">
+          <button id="play">
+            <i id="playicon" class="fas fa-play"></i>
+          </button>
+          <button id="reset">
+            <i class="fa fa-refresh"></i>
+          </button>
+        </div>
+      </div>
     </main>
     <audio id="beep">
-        <source
-            src="https://raw.githubusercontent.com/freeCodeCamp/cdn/master/build/testable-projects-fcc/audio/BeepSound.wav"
-            type="audio/wav">
+      <source
+        src="https://raw.githubusercontent.com/freeCodeCamp/cdn/master/build/testable-projects-fcc/audio/BeepSound.wav"
+        type="audio/wav"
+      />
     </audio>
-
-    <script src="./index.js"></script>
-</body>
-
+  </body>
 </html>
