@@ -32,16 +32,19 @@
   gap: 0.5rem;
 }
 
-.days span:nth-child(7n + 1) {
+.days button:nth-child(7n + 1) {
   color: red;
 }
 
-.days span:not(:empty) {
+.days button:not(:empty) {
+  background-color: transparent;
+  border: none;
   height: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  font-size: 1rem;
 }
 
 .today {
@@ -72,7 +75,7 @@
   background-color: lightgrey;
 }
 
-.selected {
+.days button.selected {
   border: 1px solid green;
   border-radius: 50%;
 }

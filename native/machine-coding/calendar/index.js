@@ -108,7 +108,7 @@ todayBtn.addEventListener('click', () => {
   calendarProxy.month = calendarProxy.today.getMonth();
   calendarProxy.year = calendarProxy.today.getFullYear();
 });
-daysEl.addEventListener('click', e => {
+daysEl.addEventListener('click', (e) => {
   if (e.target.className.includes('date')) {
     calendarProxy.selectedDate = e.target.textContent;
   }

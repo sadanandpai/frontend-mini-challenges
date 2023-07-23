@@ -16,7 +16,7 @@ const WEEK_DAYS = ['S', 'M', 'T', 'W', 'T', 'F', 'S'];
 
 export const getMonthsFragment = () => {
   const fragment = document.createDocumentFragment();
-  MONTHS.map(month => {
+  MONTHS.map((month) => {
     const option = document.createElement('option');
     option.textContent = month;
     fragment.appendChild(option);
@@ -37,9 +37,9 @@ export const getYearsFragment = (date = proxy.today) => {
   return fragment;
 };
 
-export const getWeekDaysFragment = type => {
+export const getWeekDaysFragment = (type) => {
   const fragment = document.createDocumentFragment();
-  WEEK_DAYS.map(weekDay => {
+  WEEK_DAYS.map((weekDay) => {
     const span = document.createElement(type);
     span.textContent = weekDay;
     fragment.appendChild(span);
@@ -59,10 +59,10 @@ export const getDaysFragment = (month, year) => {
   }
 
   for (let date = 1; date <= lastDate; date++) {
-    const span = document.createElement('span');
-    span.textContent = date;
-    span.classList.add('date-' + date);
-    fragment.appendChild(span);
+    const button = document.createElement('button');
+    button.textContent = date;
+    button.classList.add('date-' + date);
+    fragment.appendChild(button);
   }
 
   return fragment;
