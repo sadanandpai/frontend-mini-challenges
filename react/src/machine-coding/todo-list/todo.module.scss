@@ -53,6 +53,11 @@
       background-color: red;
       margin-left: 10px;
     }
+    .completed {
+      text-decoration: line-through;
+      color: darkgray;
+      font-style: italic;
+    }
   }
 }
 
