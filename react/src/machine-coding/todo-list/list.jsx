@@ -1,9 +1,9 @@
 import styles from "./todo.module.scss";
 
-function List({ items, handleEditClick, handleDeleteClick }) {
+function List({ items, handleEditClick, handleDeleteClick, handleCompleteClick }) {
   return items.map((item, idx) => (
-    <li className={styles.item} key={item.id}>
-      <span>{item.value}</span>
+    <li className={styles.item} key={item.id} title="Double click to mark completed" onDoubleClick={() => handleCompleteClick(item)}>
+      <span className={item.isDone ? styles.completed: ""}>{item.value}</span>
       <div>
         <button
           className={styles.editBtn}

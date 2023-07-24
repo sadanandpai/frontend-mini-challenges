@@ -20,7 +20,7 @@ const Todo = () => {
   };
 
   const addItem = (value) => {
-    setItems(items.concat({ value, id: new Date().getTime() }));
+    setItems(items.concat({ value, id: new Date().getTime(), isDone: false }));
   };
 
   const updateItem = (value) => {
@@ -30,6 +30,13 @@ const Todo = () => {
     setItems(newItems);
     setEditInfo(null);
   };
+
+  const handleCompleteClick = (value) => {
+      const newItems = [...items];
+      const item = newItems.find((item) => item.id === value.id);
+      item.isDone = !value.isDone;
+      setItems(newItems);
+  }
 
   const handleEditClick = ({ id, value }) => {
     setValue(value);
@@ -74,6 +81,7 @@ const Todo = () => {
         items={items}
         handleEditClick={handleEditClick}
         handleDeleteClick={handleDeleteClick}
+        handleCompleteClick={handleCompleteClick}
       />
     </div>
   );
