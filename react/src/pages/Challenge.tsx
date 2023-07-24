@@ -1,6 +1,7 @@
 import Accordion from '@/machine-coding/accordion/App';
 import Autocomplete from '@/machine-coding/autocomplete-offline/autocomplete';
 import AutocompleteOnline from '@/machine-coding/autocomplete-offline/autocompleteOnline';
+import ColumnTable from '@/machine-coding/column-table/ColumnTable';
 import Counter from '@/machine-coding/counter/counter';
 import FileExplorer from '@/machine-coding/file-explorer/App';
 import FoodRecipe from '@/machine-coding/food-recipe/App';
@@ -44,6 +45,7 @@ const reactChallenges = {
   'food-recipe': <FoodRecipe />,
   'match-pair': <MatchPair />,
   'password-generator': <PasswordGenerator />,
+  'column-table': <ColumnTable />,
 };
 
 function Challenge() {

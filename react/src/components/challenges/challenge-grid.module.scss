@@ -1,7 +1,7 @@
 .challengeGrid {
   display: grid;
   grid-gap: 1.5rem;
-  grid-template-columns: repeat(1, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   margin: 2rem 0;
 }
 
@@ -10,7 +10,7 @@
   position: relative;
   overflow: hidden;
   background-color: white;
-  border: 1px solid rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.15);
   box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.15);
   transition: all 0.2s ease-in-out;
 
@@ -20,8 +20,9 @@
   }
 
   h3 {
-    color: chocolate;
+    color: green;
     font-size: 1.25rem;
+    font-weight: 500;
   }
 
   &.disabled h3 {
@@ -44,14 +45,13 @@
 
   .new {
     position: absolute;
-    top: 0.75rem;
-    right: -1.75rem;
-    width: 6rem;
+    top: 0;
+    right: 0;
+    width: 4rem;
     color: white;
     font-size: 1rem;
     text-align: center;
-    background: red;
-    transform: rotate(45deg);
+    background-color: rgb(84, 84, 84);
   }
 
   .developer {
@@ -73,33 +73,11 @@
     color: black;
   }
 
-  &.easy {
-    border: 2px solid green;
+  &.medium h3 {
+    color: rgb(75, 75, 255);
   }
 
-  &.medium {
-    border: 2px solid orange;
-  }
-
-  &.hard {
-    border: 2px solid red;
-  }
-}
-
-@media screen and (min-width: 480px) {
-  .challengeGrid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .challengeGrid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media screen and (min-width: 1400px) {
-  .challengeGrid {
-    grid-template-columns: repeat(4, 1fr);
+  &.hard h3 {
+    color: orangered;
   }
 }

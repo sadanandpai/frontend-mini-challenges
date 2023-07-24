@@ -102,6 +102,17 @@ export const challenges = new Map([
     },
   ],
   [
+    'column-table',
+    {
+      title: 'Column Table',
+      link: 'column-table',
+      difficulty: 'medium',
+      developer: 'sadanandpai',
+      tags: [],
+      isNew: true,
+    },
+  ],
+  [
     'todo-list',
     {
       title: 'Todo List',
@@ -207,7 +218,6 @@ export const challenges = new Map([
       difficulty: 'hard',
       developer: 'deepu0',
       tags: [],
-      isNew: true,
     },
   ],
   [
@@ -218,7 +228,6 @@ export const challenges = new Map([
       difficulty: 'hard',
       developer: 'deepu0',
       tags: [],
-      isNew: true,
     },
   ],
 ]);
