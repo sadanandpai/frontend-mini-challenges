@@ -183,7 +183,14 @@ export const challenges = [
     developer: 'sadanandpai',
     tags: [],
   },
-  { title: 'Navigation Bar', link: '#' },
+  {
+    title: 'Navigation Bar',
+    link: 'navigation-bar',
+    difficulty: 'medium',
+    developer: 'christian-lee1398',
+    tags: [],
+    isNew: true,
+  },
   {
     title: 'Match Pair',
     link: 'match-pair',
