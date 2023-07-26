@@ -1,0 +1,26 @@
+@import url(../../helpers/core.css);
+
+.size {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+}
+
+.table {
+  margin: 1rem auto;
+}
+
+.cell {
+  border: 1px solid black;
+  height: 50px;
+  width: 50px;
+  padding-left: 0;
+}
+
+@media screen and (min-width: 450px) {
+  .size {
+    flex-direction: row;
+  }
+}
