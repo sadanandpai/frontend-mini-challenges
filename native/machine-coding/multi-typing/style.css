@@ -5,45 +5,32 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
 }
 
-.container .text {
+.text {
   position: relative;
   color: #32043d;
-  font-size: 50px;
+  font-size: 2.5rem;
   font-weight: 600;
 }
 
-.container .text.first-text {
-  color: #b8e3ea;
+.text.first-text {
+  color: brown;
 }
 
-.text.second-text::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background: white;
-  border-left: 2px solid #32043d;
-  animation: animate 4s steps(10) infinite;
+.text.second-text {
+  border: none;
+  padding-right: 4px;
+  border-right: 2px solid black;
+  min-height: 3rem;
 }
 
-@keyframes animate {
-  40%,
-  60% {
-    left: calc(100% + 4px);
+@media screen and (min-width: 768px) {
+  .text {
+    font-size: 4rem;
   }
 
-  100% {
-    left: 0;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .container {
-    margin-left: 30px;
+  .text.second-text {
+    min-height: 4rem;
   }
 }
