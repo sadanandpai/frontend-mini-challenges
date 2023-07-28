@@ -1,0 +1,31 @@
+<div class="app">
+    <form (ngSubmit)="check()">
+        <label htmlFor="input">Guess a Number between 0 and 100</label>
+        <input id="input" type="number" [(ngModel)]="num" placeholder="Guess-Number" />
+        <div class="widget">
+            <button type="reset" (click)="restart()">
+                Reset
+            </button>
+            <button type="submit" [disabled]="disable">
+                Check
+            </button>
+        </div>
+    </form>
+    <div class="text">
+        <ng-container *ngIf="low">
+            <p>
+                Your guess is <b>Less</b> than the actual number
+            </p>
+        </ng-container>
+        <ng-container *ngIf="high">
+            <p>
+                Your guess is <b>Higher</b> than the actual number
+            </p>
+        </ng-container>
+        <ng-container *ngIf="hi">
+            <p>
+                Your guess is <b>right</b>
+            </p>
+        </ng-container>
+    </div>
+</div>

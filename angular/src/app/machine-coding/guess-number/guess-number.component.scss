@@ -1,0 +1,43 @@
+.app {
+    display: flex;
+    flex-direction: column;
+    max-width: 25%;
+    margin: 10px auto;
+  }
+  .app input {
+    text-align: center;
+    height: 30px;
+    padding: 20px;
+    outline: none;
+  }
+  .app .widget {
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-around;
+  }
+  .app .text p {
+    text-align: center;
+  }
+  .app form {
+    display: flex;
+    flex-direction: column;
+  }
+  .app form label {
+    padding: 10px;
+  }
+  .app form button {
+    margin-top: 10px;
+    min-width: 40%;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  @media (max-width: 600px) {
+    .app .widget {
+      margin-top: 5px;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  

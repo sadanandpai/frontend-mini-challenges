@@ -3,6 +3,7 @@ import { Routes } from '@angular/router';
 import { ChallengeContainerComponent } from './components/challenge-container/challenge-container.component';
 import { CounterComponent } from './machine-coding/counter/counter.component';
 import { HomeComponent } from './components/home/home.component';
+import { GuessNumberComponent } from './machine-coding/guess-number/guess-number.component';
 
 export const routes: Routes = [
   {
@@ -17,6 +18,11 @@ export const routes: Routes = [
         path: 'counter',
         component: CounterComponent,
         data: { title: 'counter' },
+      },
+      {
+        path: 'guess-number',
+        component: GuessNumberComponent,
+        data: { title: 'Guess number' },
       },
     ],
   },
