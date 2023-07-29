@@ -5,6 +5,7 @@ import { CounterComponent } from './machine-coding/counter/counter.component';
 import { HomeComponent } from './components/home/home.component';
 import { GuessNumberComponent } from './machine-coding/guess-number/guess-number.component';
 import { TodoAppComponent } from './machine-coding/todo-list/todo-app/todo-app.component';
+import { StackComponent } from './machine-coding/stack/stack.component';
 
 export const routes: Routes = [
   {
@@ -24,6 +25,11 @@ export const routes: Routes = [
         path: 'guess-number',
         component: GuessNumberComponent,
         data: { title: 'Guess number' },
+      },
+      {
+        path: 'stack',
+        component: StackComponent,
+        data: { title: 'Stack' },
       },
       {
         path: 'todo-list',
