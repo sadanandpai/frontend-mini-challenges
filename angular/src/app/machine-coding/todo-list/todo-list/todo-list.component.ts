@@ -5,11 +5,11 @@ import { CommonModule } from '@angular/common';
   selector: 'app-todo-list',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './list.component.html',
-  styleUrls: ['./list.component.scss'],
-  // changeDetection: ChangeDetectionStrategy.OnPush,
+  templateUrl: './todo-list.component.html',
+  styleUrls: ['./todo-list.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ListComponent {
+export class TodoListComponent {
   // TODO; change type of list
   @Input() items: any[] = [];
   @Output() edit = new EventEmitter();

@@ -4,7 +4,7 @@ import { ChallengeContainerComponent } from './components/challenge-container/ch
 import { CounterComponent } from './machine-coding/counter/counter.component';
 import { HomeComponent } from './components/home/home.component';
 import { GuessNumberComponent } from './machine-coding/guess-number/guess-number.component';
-import { ItemComponent } from './machine-coding/todo/item/item.component';
+import { TodoAppComponent } from './machine-coding/todo-list/todo-app/todo-app.component';
 
 export const routes: Routes = [
   {
@@ -27,7 +27,7 @@ export const routes: Routes = [
       },
       {
         path: 'todo-list',
-        component: ItemComponent,
+        component: TodoAppComponent,
         data: { title: 'Todo list' },
       },
     ],

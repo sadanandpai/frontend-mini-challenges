@@ -1,19 +1,19 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { ListComponent } from '../list/list.component';
+import { TodoListComponent } from '../todo-list/todo-list.component';
 
 @Component({
-  selector: 'app-item',
+  selector: 'app-todo-app',
   standalone: true,
   imports: [
     FormsModule,
-    ListComponent,
+    TodoListComponent,
   ],
-  templateUrl: './item.component.html',
-  styleUrls: ['./item.component.scss'],
-  // changeDetection: ChangeDetectionStrategy.OnPush,
+  templateUrl: './todo-app.component.html',
+  styleUrls: ['./todo-app.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ItemComponent {
+export class TodoAppComponent {
 
   editInfo!: any;
   value = '';
