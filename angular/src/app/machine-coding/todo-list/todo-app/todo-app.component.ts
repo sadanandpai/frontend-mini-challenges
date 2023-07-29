@@ -2,6 +2,11 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { TodoListComponent } from '../todo-list/todo-list.component';
 
+export interface TodoItem {
+  id: number;
+  value: string;
+}
+
 @Component({
   selector: 'app-todo-app',
   standalone: true,
@@ -15,9 +20,9 @@ import { TodoListComponent } from '../todo-list/todo-list.component';
 })
 export class TodoAppComponent {
 
-  editInfo!: any;
+  editInfo: TodoItem | null | undefined;
   value = '';
-  items: any[] = [];
+  items: TodoItem[] = [];
 
   edit({ id, value }: any): void {
     this.value = value;
@@ -52,8 +57,10 @@ export class TodoAppComponent {
 
   updateItem(value: string) {
     const newItems = [...this.items];
-    const item = newItems.find((item) => item.id === this.editInfo.id);
-    item.value = value;
+    const item = newItems.find((item) => item.id === this.editInfo?.id);
+    if (item) {
+      item.value = value;
+    }
     this.items = newItems;
     this.editInfo = null;
   };

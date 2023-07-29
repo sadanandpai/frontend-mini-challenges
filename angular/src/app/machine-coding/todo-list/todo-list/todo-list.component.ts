@@ -1,5 +1,6 @@
 import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { TodoItem } from '../todo-app/todo-app.component';
 
 @Component({
   selector: 'app-todo-list',
@@ -10,8 +11,7 @@ import { CommonModule } from '@angular/common';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class TodoListComponent {
-  // TODO; change type of list
-  @Input() items: any[] = [];
-  @Output() edit = new EventEmitter();
-  @Output() delete = new EventEmitter();
+  @Input() items: TodoItem[] = [];
+  @Output() edit = new EventEmitter<TodoItem>();
+  @Output() delete = new EventEmitter<number>();
 }
