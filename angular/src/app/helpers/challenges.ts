@@ -12,4 +12,26 @@ export const challenges: Map<string, Challenge> = new Map([
       isNew: true,
     },
   ],
+  [
+    'guess-number',
+    {
+      title: 'Guess Number',
+      link: 'guess-number',
+      difficulty: 'easy',
+      developer: 'pankajparkar',
+      tags: [],
+      isNew: true,
+    },
+  ],
+  [
+    'todo-list',
+    {
+      title: 'Todo list',
+      link: 'todo-list',
+      difficulty: 'easy',
+      developer: 'pankajparkar',
+      tags: [],
+      isNew: true,
+    },
+  ]
 ]);
