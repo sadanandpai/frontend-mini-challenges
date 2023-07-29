@@ -22,5 +22,16 @@ export const challenges: Map<string, Challenge> = new Map([
       tags: [],
       isNew: true,
     },
+  ],
+  [
+    'todo-list',
+    {
+      title: 'Todo list',
+      link: 'todo-list',
+      difficulty: 'easy',
+      developer: 'pankajparkar',
+      tags: [],
+      isNew: true,
+    },
   ]
 ]);

@@ -1,0 +1,48 @@
+.App {
+  margin: auto;
+
+  button {
+    color: white;
+    padding: 0.5rem 0.75rem;
+    border-radius: 6px;
+    transform: scale(1);
+    transition: all 0.33s;
+    border: none;
+  }
+
+  button:hover {
+    transform: scale(1.1);
+    transition: all 0.33s;
+  }
+
+  button:disabled {
+    cursor: not-allowed;
+    transform: scale(1);
+    background-color: grey;
+  }
+
+  form {
+    margin-top: 10px;
+    width: 100%;
+
+    input {
+      width: 100%;
+      height: 80%;
+      border-radius: 6px;
+      padding: 0.5rem;
+    }
+
+    button {
+      margin-top: 10px;
+      background-color: blue;
+      margin-right: 0.5rem;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .App {
+    width: 50%;
+  }
+}
+  

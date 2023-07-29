@@ -1,0 +1,11 @@
+<li class="item" *ngFor="let item of items; let idx=index;">
+    <span>{{item.value}}</span>
+    <div>
+        <button class="editBtn" (click)="edit.emit(item)">
+            Edit
+        </button>
+        <button class="deleteBtn" (click)="delete.emit(idx)">
+            Delete
+        </button>
+    </div>
+</li>

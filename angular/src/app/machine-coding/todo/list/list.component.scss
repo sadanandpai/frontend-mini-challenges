@@ -1,0 +1,36 @@
+
+.item {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .editBtn {
+        background-color: green;
+    }
+
+    .deleteBtn {
+        background-color: red;
+        margin-left: 10px;
+    }
+}
+
+button {
+    color: white;
+    padding: 0.5rem 0.75rem;
+    border-radius: 6px;
+    transform: scale(1);
+    transition: all 0.33s;
+    border: none;
+  }
+
+  button:hover {
+    transform: scale(1.1);
+    transition: all 0.33s;
+  }
+
+  button:disabled {
+    cursor: not-allowed;
+    transform: scale(1);
+    background-color: grey;
+  }

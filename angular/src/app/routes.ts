@@ -4,6 +4,7 @@ import { ChallengeContainerComponent } from './components/challenge-container/ch
 import { CounterComponent } from './machine-coding/counter/counter.component';
 import { HomeComponent } from './components/home/home.component';
 import { GuessNumberComponent } from './machine-coding/guess-number/guess-number.component';
+import { ItemComponent } from './machine-coding/todo/item/item.component';
 
 export const routes: Routes = [
   {
@@ -23,6 +24,11 @@ export const routes: Routes = [
         path: 'guess-number',
         component: GuessNumberComponent,
         data: { title: 'Guess number' },
+      },
+      {
+        path: 'todo-list',
+        component: ItemComponent,
+        data: { title: 'Todo list' },
       },
     ],
   },
