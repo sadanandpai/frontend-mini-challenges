@@ -21,6 +21,7 @@ import TelephoneFormatter from '@/machine-coding/telephone-formatter';
 import TicTacToe from '@/machine-coding/tic-tac-toe/App';
 import Toast from '@/machine-coding/toast-popup/toast';
 import TodoList from '@/machine-coding/todo-list/todo';
+import TableColorizer from '@/machine-coding/table-colorizer/TableColorizer';
 import { useParams } from 'react-router-dom';
 
 const reactChallenges = {
@@ -46,6 +47,7 @@ const reactChallenges = {
   'match-pair': <MatchPair />,
   'password-generator': <PasswordGenerator />,
   'column-table': <ColumnTable />,
+  'table-colorizer': <TableColorizer />,
 };
 
 function Challenge() {
