@@ -1,10 +1,10 @@
 .App {
+  margin-top: 2rem;
   font-family: sans-serif;
   text-align: center;
-  margin-top: 2rem;
 }
 
 .star {
-  cursor: pointer;
   font-size: 30px;
+  cursor: pointer;
 }

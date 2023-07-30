@@ -1,9 +1,9 @@
 .result {
   max-width: 60rem;
   padding: 1rem;
+  text-align: right;
   table-layout: fixed;
   border-spacing: 1rem;
-  text-align: right;
 }
 
 .result thead {
@@ -16,13 +16,13 @@
   color: blueviolet;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (width <= 400px) {
   .result {
-    padding: 0;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
+    padding: 0;
   }
 
   .result tbody {
@@ -30,13 +30,13 @@
   }
 }
 
-@media screen and (max-width: 300px) {
+@media screen and (width <= 300px) {
   .result {
-    padding: 0;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
+    padding: 0;
   }
 
   .result thead {

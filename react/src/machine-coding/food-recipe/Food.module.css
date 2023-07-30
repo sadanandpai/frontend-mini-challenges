@@ -1,23 +1,24 @@
 :root {
     --font-m: 16px;
+
     /* Set the base font size, adjust this as needed */
 }
 
 .App {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
 }
 
 .meal_container {
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
     flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
     width: 50%;
     padding: 1rem 1.3rem;
     margin-top: 3rem;
@@ -26,8 +27,8 @@
 }
 
 .meal_name {
-    text-align: center;
     font-size: 1.6rem;
+    text-align: center;
 }
 
 .meal_img {
@@ -38,31 +39,31 @@
 .tags_container,
 .modal_tags_container {
     display: flex;
-    align-items: center;
     flex-wrap: wrap;
-    list-style: none;
     gap: 1rem;
+    align-items: center;
+    padding-inline-start: 0;
     font-size: 1.2rem;
-    padding-inline-start: 0px;
+    list-style: none;
 }
 
 .tag,
 .modal_tag {
     padding: 0.4rem 0.7rem;
-    background-color: rgb(226, 176, 68);
     cursor: pointer;
+    background-color: rgb(226 176 68);
     transition: all 0.3s ease-in;
 }
 
 .tag:hover,
 .modal_tag:hover {
-    background-color: rgb(0, 153, 153);
     color: #ececec;
+    background-color: rgb(0 153 153);
 }
 
 dialog {
-    width: 70%;
     top: 3%;
+    width: 70%;
 }
 
 .modal_meal_img {
@@ -78,12 +79,17 @@ dialog {
 .foodBtn,
 .openBtn {
     padding: 0.4rem 0.9rem;
-    background-color: #fff;
     font-size: 1.3rem;
-    border: 0.2rem solid black;
     font-weight: 700;
     cursor: pointer;
+    background-color: #fff;
+    border: 0.2rem solid black;
     transition: background-color 0.2s ease-in;
+}
+
+.openBtn {
+    margin-top: 2rem;
+    font-size: 1.1rem;
 }
 
 .foodBtn:hover,
@@ -100,49 +106,42 @@ dialog {
     position: absolute;
     top: -1.3rem;
     right: -1.3rem;
-    background-color: rgb(223, 72, 72);
-    color: #fff;
-    font-weight: 700;
-    border-radius: 50%;
-    padding: 0rem 0.6rem;
+    padding: 0 0.6rem;
     font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
     cursor: pointer;
+    background-color: rgb(223 72 72);
+    border-radius: 50%;
     transition: background-color 0.2s ease-in;
 }
 
 .closeBtn:hover {
-    background-color: rgb(199, 64, 64);
+    background-color: rgb(199 64 64);
 }
 
 .closeBtn:active {
-    background-color: rgb(175, 55, 55);
+    background-color: rgb(175 55 55);
 }
-
-.openBtn {
-    margin-top: 2rem;
-    font-size: 1.1rem;
-}
-
 
 /* modal dialog table */
-
 .recipe_table {
     width: 100%;
-    border-collapse: collapse;
     margin: 1.8rem auto;
     font-size: 1rem;
+    border-collapse: collapse;
 }
 
 .recipe_table th,
 .recipe_table td {
     height: 3.12rem;
-    text-align: left;
     padding-left: 1.25rem;
+    text-align: left;
 }
 
 .recipe_table th {
-    background-color: #9fa732;
     color: #fff;
+    background-color: #9fa732;
 }
 
 .recipe_table tr:nth-child(even) {
@@ -150,7 +149,7 @@ dialog {
 }
 
 /* Responsive for mobile and tablet */
-@media screen and (max-width: 768px) {
+@media screen and (width <= 768px) {
     .meal_container {
         width: 88%;
         padding: 0.5rem;
@@ -200,7 +199,7 @@ dialog {
     }
 }
 
-@media screen and (min-width: 1300px) {
+@media screen and (width >= 1300px) {
     .meal_container {
         width: 40%;
     }
@@ -210,7 +209,7 @@ dialog {
     }
 }
 
-@media screen and (min-width: 1700px) {
+@media screen and (width >= 1700px) {
     .meal_container {
         width: 35%;
     }

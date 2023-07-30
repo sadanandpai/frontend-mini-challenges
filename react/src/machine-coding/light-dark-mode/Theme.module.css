@@ -17,8 +17,8 @@
 }
 
 .main {
-  background-color: var(--clr-bcg);
   padding: 10px;
+  background-color: var(--clr-bcg);
   transition: 0.3s linear;
 }
 
@@ -27,11 +27,11 @@
 }
 
 .main button {
-  margin-top: 10px;
-  color: var(--clr-font);
-  background-color: var(--clr-primary);
   padding: 10px;
-  border: none;
-  cursor: pointer;
+  margin-top: 10px;
   font-size: 16px;
+  color: var(--clr-font);
+  cursor: pointer;
+  background-color: var(--clr-primary);
+  border: none;
 }

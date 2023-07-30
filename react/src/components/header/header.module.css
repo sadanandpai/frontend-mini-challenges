@@ -1,8 +1,8 @@
 .nav {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: relative;
 }
 
 .logo {
@@ -12,10 +12,10 @@
 }
 
 nav::after {
-  content: "";
   position: absolute;
-  width: 110%;
   bottom: 10px;
   left: -5%;
+  width: 110%;
+  content: "";
   box-shadow: 0 5px 0 2px grey;
 }

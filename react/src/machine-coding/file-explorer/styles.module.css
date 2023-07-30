@@ -1,22 +1,22 @@
 .app {
-  font-size: 1.2rem;
   margin-top: 1rem;
+  font-size: 1.2rem;
 }
 
 .list {
-  list-style-type: none;
-  padding-left: 0;
-  margin-bottom: 0.5em;
-  height: 1.5em;
   display: flex;
   align-items: center;
+  height: 1.5em;
+  padding-left: 0;
+  margin-bottom: 0.5em;
+  list-style-type: none;
 }
 
 .list button {
   font-size: 1em;
+  cursor: pointer;
   background-color: transparent;
   border: none;
-  cursor: pointer;
 }
 
 .list.editList {
@@ -41,10 +41,10 @@
   display: none;
   align-items: center;
   justify-content: center;
-  background-color: transparent;
   padding: 0;
-  border: none;
   cursor: pointer;
+  background-color: transparent;
+  border: none;
 }
 
 .list:hover button {

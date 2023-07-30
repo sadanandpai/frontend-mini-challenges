@@ -1,8 +1,8 @@
 .main {
-  text-align: center;
   width: 90%;
   margin: auto;
   margin-top: 1rem;
+  text-align: center;
 
   form {
     display: flex;
@@ -30,8 +30,8 @@
   }
 
   .toastContainer {
-    display: flex;
     position: fixed;
+    display: flex;
     flex-direction: column;
     gap: 0.5rem;
   }
@@ -40,20 +40,21 @@
     padding: 0.5em;
     background-color: pink;
     border-radius: 0.25rem;
-    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+    box-shadow: 0 4px 10px 0 rgb(0 0 0 / 25%);
   }
+
   .success {
     background-color: #00b300;
   }
-  
+
   .error {
-    background-color: #ff0000;
+    background-color: #f00;
   }
-  
+
   .warning {
     background-color: #ffa500;
   }
-  
+
   .info {
     background-color: lightyellow;
   }
@@ -61,22 +62,22 @@
   .toast::before {
     min-width: 1rem;
     padding: 0.1em 0.5em;
-    font-weight: bold;
     font-size: 0.85em;
+    font-weight: bold;
   }
-  
+
   .success::before {
     content: '✓';
   }
-  
+
   .error::before {
     content: '✗';
   }
-  
+
   .warning::before {
     content: '⚠';
   }
-  
+
   .info::before {
     content: 'ⓘ';
   }
@@ -109,15 +110,15 @@
 
   .tcLeftTop .toast,
   .tcLeftBottom .toast {
-    animation: appearFromLeft 0.1s ease-in forwards;
+    animation: appear-from-left 0.1s ease-in forwards;
   }
 
   .tcLeftTop .toast.fade-out-left,
   .tcLeftBottom .toast.fade-out-left {
-    animation: fadeOutToLeft 0.1s ease-in forwards;
+    animation: fade-out-to-left 0.1s ease-in forwards;
   }
 
-  @keyframes appearFromLeft {
+  @keyframes appear-from-left {
     0% {
       transform: translateX(-200%);
     }
@@ -127,7 +128,7 @@
     }
   }
 
-  @keyframes fadeOutToLeft {
+  @keyframes fade-out-to-left {
     0% {
       transform: translateX(0);
     }
@@ -139,15 +140,15 @@
 
   .tcRightTop .toast,
   .tcRightBottom .toast {
-    animation: appearFromRight 0.1s ease-in forwards;
+    animation: appear-from-right 0.1s ease-in forwards;
   }
 
   .tcRightTop .toast.fade-out-right,
   .tcRightBottom .toast.fade-out-right {
-    animation: fadeOutToRight 0.1s ease-in forwards;
+    animation: fade-out-right 0.1s ease-in forwards;
   }
 
-  @keyframes appearFromRight {
+  @keyframes appear-from-right {
     0% {
       transform: translateX(200%);
     }
@@ -157,7 +158,7 @@
     }
   }
 
-  @keyframes fadeOutToRight {
+  @keyframes fade-out-right {
     0% {
       transform: translateX(0);
     }
