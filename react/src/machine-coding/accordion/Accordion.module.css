@@ -1,15 +1,15 @@
 .App {
+  margin-top: 1rem;
   font-family: sans-serif;
   text-align: center;
-  margin-top: 1rem;
 }
 
 .accordion {
-  border: 1px solid rgb(218, 212, 212);
   padding: 10px;
+  margin-bottom: 10px;
   font-size: 14px;
   text-align: left;
-  margin-bottom: 10px;
+  border: 1px solid rgb(218 212 212);
 }
 
 .accordion-title {
@@ -19,19 +19,19 @@
 }
 
 .accordion-icon {
-  background: transparent;
-  border-color: transparent;
-  width: 2rem;
-  height: 2rem;
-  background: rgb(209, 209, 209);
   display: flex;
   align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  color: white;
-  font-size: 20px;
-  cursor: pointer;
-  margin-left: 1rem;
   align-self: center;
+  justify-content: center;
+  width: 2rem;
   min-width: 2rem;
+  height: 2rem;
+  margin-left: 1rem;
+  font-size: 20px;
+  color: white;
+  cursor: pointer;
+  background: transparent;
+  background: rgb(209 209 209);
+  border-color: transparent;
+  border-radius: 50%;
 }

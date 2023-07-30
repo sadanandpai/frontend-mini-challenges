@@ -1,15 +1,15 @@
 .form {
-  padding: 1rem;
   max-width: 30rem;
+  padding: 1rem;
   margin: 1rem 0;
-  border-radius: 4px;
   border: 1px solid black;
+  border-radius: 4px;
 }
 
 .input-group {
   display: flex;
-  justify-content: space-evenly;
   gap: 1.5rem;
+  justify-content: space-evenly;
 }
 
 .form label {
@@ -23,33 +23,33 @@
 .form input {
   width: 100%;
   padding: 0.5rem;
+  font-size: 1rem;
+  background-color: transparent;
   border: 1px solid #76c0ae;
   border-radius: 0.25rem;
-  background-color: transparent;
-  font-size: 1rem;
 }
 
 .actions {
   display: flex;
-  justify-content: center;
   gap: 1rem;
+  justify-content: center;
 }
 
 .button {
   padding: 0.5rem 1rem;
+  font-family: 'Roboto Condensed', sans-serif;
+  color: #c2e9e0;
+  cursor: pointer;
+  background: linear-gradient(180deg, #1f584b, #17493d);
   border: none;
   border-radius: 0.25rem;
-  background: linear-gradient(180deg, #1f584b, #17493d);
-  color: #c2e9e0;
-  font-family: 'Roboto Condensed', sans-serif;
-  cursor: pointer;
 }
 
 .buttonAlt {
   font-family: 'Roboto Condensed', sans-serif;
-  border: none;
-  background: transparent;
   cursor: pointer;
+  background: transparent;
+  border: none;
 }
 
 .button:hover {
@@ -57,16 +57,16 @@
 }
 
 .buttonAlt:hover {
-  background: transparent;
   color: #91e1d0;
+  background: transparent;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (width <= 400px) {
   .form {
-    max-width: 20rem;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
+    max-width: 20rem;
   }
 }

@@ -1,19 +1,19 @@
 .main {
-  text-align: center;
   width: 90%;
   margin: auto;
+  text-align: center;
 
   input {
     width: 94%;
-    margin-bottom: 0.5rem;
     padding: 0.5rem 1rem;
+    margin-bottom: 0.5rem;
     font-size: 1rem;
   }
 
   .suggestions {
     width: 93%;
-    margin: auto;
     padding-inline-start: 0;
+    margin: auto;
   }
 
   li {
@@ -22,9 +22,9 @@
     height: 40px;
     padding-left: 1rem;
     margin-bottom: 0.1rem;
-    background-color: beige;
-    cursor: pointer;
     list-style: none;
+    cursor: pointer;
+    background-color: beige;
   }
 
   li.highlight {
@@ -32,7 +32,7 @@
     outline: 1px solid;
   }
 
-  @media (min-width: 768px) {
+  @media (width >= 768px) {
     input,
     .suggestions {
       width: 50%;

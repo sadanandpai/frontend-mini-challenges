@@ -1,0 +1,13 @@
+<div class="App">
+    <form (ngSubmit)="submit()" novalidate>
+        <input name="newTodoTitle" type="text" placeholder="Enter your todo" [(ngModel)]="value" />
+        <button type="submit" [disabled]="!value">
+            {{editInfo ? "Update" : "Submit"}}
+        </button>
+        <button type="reset" (click)="cancel()" [disabled]="!(value || editInfo)">
+            Cancel
+        </button>
+    </form>
+
+    <app-todo-list [items]="items" (edit)="edit($event)" (delete)="delete($event)" />
+</div>

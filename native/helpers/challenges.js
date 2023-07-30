@@ -44,6 +44,14 @@ export const challenges = [
     tags: [],
   },
   {
+    title: 'Navigation Bar',
+    link: 'navigation-bar',
+    difficulty: 'easy',
+    developer: 'christian-lee1398',
+    tags: [],
+    isNew: true,
+  },
+  {
     title: 'Multi Typing',
     link: 'multi-typing',
     difficulty: 'easy',
@@ -72,6 +80,14 @@ export const challenges = [
     difficulty: 'medium',
     developer: 'sadanandpai',
     tags: [],
+  },
+  {
+    title: 'Column Table',
+    link: 'column-table',
+    difficulty: 'medium',
+    developer: 'sadanandpai',
+    tags: [],
+    isNew: true,
   },
   {
     title: 'Password Strength',
@@ -182,14 +198,6 @@ export const challenges = [
     difficulty: 'medium',
     developer: 'sadanandpai',
     tags: [],
-  },
-  {
-    title: 'Navigation Bar',
-    link: 'navigation-bar',
-    difficulty: 'medium',
-    developer: 'christian-lee1398',
-    tags: [],
-    isNew: true,
   },
   {
     title: 'Match Pair',

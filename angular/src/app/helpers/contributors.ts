@@ -6,4 +6,11 @@ export const contributors = new Map([
       pic: 'https://avatars.githubusercontent.com/u/12962887',
     },
   ],
+  [
+    'pankajparkar',
+    {
+      name: 'Pankaj Parkar',
+      pic: 'https://avatars.githubusercontent.com/u/5320044',
+    },
+  ],
 ]);

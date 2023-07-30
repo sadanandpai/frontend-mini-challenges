@@ -1,10 +1,10 @@
 .container {
   display: flex;
-  justify-content: center;
   align-items: center;
-  text-align: center;
+  justify-content: center;
   font-size: 20px;
   font-weight: bold;
+  text-align: center;
 }
 
 .mx-5 {
@@ -14,38 +14,35 @@
 .grid-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  background-color: #fff;
   width: 300px;
   margin: 0 auto;
-  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
-  border-radius: 8px;
   overflow: hidden;
+  background-color: #fff;
 }
 
 .grid-item {
-  background-color: rgba(255, 255, 255, 0.8);
+  height: 80px;
   padding: 20px;
   font-size: 30px;
   text-align: center;
-  height: 80px;
   cursor: pointer;
+  border: 1px solid grey;
   transition: all 0.2s ease;
-  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 }
 
 .grid-item:hover {
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  box-shadow: rgb(50 50 93 / 15%) 0 30px 60px -12px inset;
 }
 
 .container button {
-  font-weight: bold;
-  padding: 15px 15px;
-  border-radius: 8px;
+  padding: 15px;
   margin: 20px auto;
+  font-weight: bold;
   border: none;
+  border-radius: 8px;
 }
 
-@media (max-width: 300px) {
+@media (width <= 300px) {
   .grid-container {
     width: 100%;
   }

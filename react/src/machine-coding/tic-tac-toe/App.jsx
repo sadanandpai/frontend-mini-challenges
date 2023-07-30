@@ -1,7 +1,7 @@
 import { initialArray, winningCombos } from './constant';
 import { useEffect, useState } from 'react';
 
-import style from './tictactoe.module.css';
+import styles from './tictactoe.module.css';
 
 const App = () => {
   const [squares, setSquares] = useState(initialArray);
@@ -11,6 +11,7 @@ const App = () => {
 
   useEffect(() => {
     computeWin();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [squares]);
 
   useEffect(() => {
@@ -21,6 +22,7 @@ const App = () => {
     } else if (winner === null && squares.filter((square) => square === null).length === 0) {
       setPlayerWins([xWins, oWins, draw + 1]);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [winner, squares]);
 
   const computeWin = () => {
@@ -50,15 +52,15 @@ const App = () => {
   };
 
   return (
-    <div className={style['container']}>
+    <div className={styles['container']}>
       <div>
         Status: {winner ? `Winner ${winner}` : 'Playing'}
-        <div className={style['container']}>
-          <div className={style['mx-5']}>
+        <div className={styles['container']}>
+          <div className={styles['mx-5']}>
             <div>X</div>
             <div>{xWins} Wins</div>
           </div>
-          <div className={style['mx-5']}>
+          <div className={styles['mx-5']}>
             <div>O</div>
             <div>{oWins} Wins</div>
           </div>
@@ -67,7 +69,7 @@ const App = () => {
             <div>{draw} Draws</div>
           </div>
         </div>
-        <div className={style['grid-container']}>
+        <div className={styles['grid-container']}>
           {squares.map((square, i) => (
             <Squares key={i} iTh={i} value={square} onEntry={onEntry} />
           ))}
@@ -88,7 +90,7 @@ const Squares = ({ value, iTh, onEntry }) => {
   };
 
   return (
-    <div className={style['grid-item']} onClick={handleClick}>
+    <div className={styles['grid-item']} onClick={handleClick}>
       <div style={{ opacity: value !== null ? 1 : 0, transition: 'all .1s ease-in-out' }}>
         {value !== null ? (value === 1 ? 'X' : 'O') : 'X'}
       </div>

@@ -1,24 +1,24 @@
 .watch-container {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   margin-top: 1rem;
 }
 
 .watch {
-  background: #b4161b;
-  height: 250px;
-  width: 250px;
-  border-radius: 50%;
-  padding: 20px;
-  text-align: center;
+  position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  width: 250px;
+  height: 250px;
+  padding: 20px;
+  text-align: center;
+  background: #b4161b;
   background: linear-gradient(145deg, #cacaca, #f0f0f0);
-  box-shadow: 0px 0px 20px #bebebe;
-  position: relative;
+  border-radius: 50%;
+  box-shadow: 0 0 20px #bebebe;
 }
 
 .watch-heading {
@@ -33,25 +33,25 @@
   color: #b4161b;
 }
 
+.watch-btn {
+  height: 40px;
+  padding: 0 10px;
+  margin: 20px auto;
+  margin: 20px 2px 0;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  background: linear-gradient(-45deg, #e81cff 0%, #40c9ff 100%);
+  border: none;
+  border-radius: 12px;
+}
+
 .watch-btn:disabled {
   cursor: not-allowed;
   background: linear-gradient(-45deg, #e81cff80 0%, #40c9ff80 100%);
 }
 
-.watch-btn {
-  border-radius: 12px;
-  margin: 20px auto;
-  background: linear-gradient(-45deg, #e81cff 0%, #40c9ff 100%);
-  color: #ffffff;
-  font-weight: bold;
-  text-transform: uppercase;
-  border: none;
-  margin: 20px 2px 0;
-  height: 40px;
-  padding: 0 10px;
-}
-
-@media (max-width: 300px) {
+@media (width <= 300px) {
   .watch {
     width: 230px;
     height: 230px;

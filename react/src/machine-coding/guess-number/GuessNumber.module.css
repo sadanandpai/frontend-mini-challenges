@@ -4,39 +4,46 @@
   max-width: 25%;
   margin: 10px auto;
 }
+
 .app input {
-  text-align: center;
   height: 30px;
   padding: 20px;
+  text-align: center;
   outline: none;
 }
+
 .app .widget {
-  margin-top: 5px;
   display: flex;
   justify-content: space-around;
+  margin-top: 5px;
 }
+
 .app .text p {
   text-align: center;
 }
+
 .app form {
   display: flex;
   flex-direction: column;
 }
+
 .app form label {
   padding: 10px;
 }
+
 .app form button {
-  margin-top: 10px;
   min-width: 40%;
   padding: 10px;
-  border: none;
-  cursor: pointer;
+  margin-top: 10px;
   font-size: 16px;
+  cursor: pointer;
+  border: none;
 }
-@media (max-width: 600px) {
+
+@media (width <= 600px) {
   .app .widget {
-    margin-top: 5px;
     display: flex;
     flex-direction: column;
+    margin-top: 5px;
   }
 }
