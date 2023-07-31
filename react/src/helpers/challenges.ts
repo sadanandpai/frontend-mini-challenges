@@ -230,4 +230,14 @@ export const challenges = new Map([
       tags: [],
     },
   ],
+  [
+    '25-5-clock',
+    {
+      title: '25-5 Clock',
+      link: '25-5-clock',
+      difficulty: 'easy',
+      developer: 'caesar003',
+      tags: [],
+    },
+  ],
 ]);
