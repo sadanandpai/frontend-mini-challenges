@@ -245,6 +245,14 @@ export const challenges = [
     isNew: true,
   },
   {
+    title: 'Hangman Game',
+    link: 'hangman-game',
+    difficulty: 'medium',
+    developer: 'Kei-K23',
+    tags: [],
+    isNew: true,
+  },
+  {
     title: 'Area Selector',
     link: 'area-selector',
     difficulty: 'medium',

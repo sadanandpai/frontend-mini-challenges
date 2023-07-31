@@ -1,0 +1,255 @@
+@import url(../../helpers/core.css);
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #bbb;
+}
+
+/* show hide modal for when game finish  */
+.game-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.show-modal {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.modal-context {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 450px;
+    padding: 0.8rem 1rem;
+    border-radius: 0.7rem;
+    background-color: #fff;
+}
+
+.modal-context img {
+    width: 150px;
+    /* margin-right: 1.5rem; */
+}
+
+.modal-result {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin: 1rem 0rem;
+}
+
+.modal-correctWord {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.modal-correctWord b {
+    color: rgb(39, 181, 237);
+    font-size: 1.3rem;
+}
+
+/* main game container  */
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 400px;
+    background-color: #fff;
+    border-radius: 0.4rem;
+    box-shadow: 0.5rem 0.5rem 1.2rem rgba(0, 0, 0, 0.3);
+    padding: 3rem 1.5rem 1rem;
+    gap: 3rem;
+}
+
+.main-title {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.7rem;
+    margin-bottom: 1rem;
+}
+
+.img-container img {
+    max-width: 250px;
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.correctWord-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 1rem 0;
+    gap: 1rem;
+}
+
+.correctWord-list .character {
+    width: 2rem;
+    border-bottom: 0.2rem solid black;
+    list-style-type: none;
+    margin: 1rem 0.2rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+}
+
+.correctWord-list .character.set {
+    margin: -0.28rem 0 1rem;
+}
+
+.hint-text {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.wrong-guesses {
+    font-size: 1.2rem;
+    color: red;
+}
+
+.keyboard-container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 400px;
+    justify-content: center;
+    align-items: center;
+    column-gap: 0.2rem;
+    row-gap: 0.3rem;
+    margin-top: 1rem;
+}
+
+.keys {
+    padding: 0.4rem 0.8rem;
+    font-size: 1.2rem;
+    background-color: skyblue;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 0.4rem;
+    transition: all 0.1s ease-in;
+    text-transform: uppercase;
+}
+
+.keys:hover {
+    background-color: rgb(158, 208, 228);
+}
+
+.keys:active {
+    background-color: rgb(171, 211, 226);
+    transform: scale(0.95);
+}
+
+.keys:disabled {
+    background-color: rgb(191, 214, 223);
+}
+
+/* button section  */
+.btn {
+    padding: 0.5rem 1rem;
+    border: 0.16rem solid black;
+    border-radius: .5rem;
+    cursor: pointer;
+    background-color: #ccc;
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: all 0.1s ease-in;
+}
+
+.btn:hover {
+    background-color: #ddd;
+}
+
+.btn:active {
+    background-color: #eee;
+    transform: scale(0.95);
+}
+
+@media (max-width: 999px) {
+    .main-container {
+        width: 90%;
+        gap: 2.2rem;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 1.2rem 1.5rem;
+    }
+
+    .hint-text {
+        font-size: 1.1rem;
+    }
+
+    .correctWord-list {
+        margin: 0.5rem 0;
+        gap: 0.5rem;
+    }
+
+    .correctWord-list .character {
+        font-size: 1rem;
+    }
+
+    .img-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .img-container img {
+        max-width: 150px;
+    }
+
+    .modal-context {
+        width: 60%;
+    }
+
+    .modal-context img {
+        width: 90px;
+    }
+
+    .keyboard-container {
+        max-width: 350px;
+        column-gap: 0.1rem;
+        row-gap: 0.2rem;
+        margin-top: 0.5rem;
+    }
+}
+
+@media (min-width: 1000px) and (max-width: 1599px) {
+    .main-container {
+        width: 90%;
+        gap: 2.5rem;
+    }
+}
+
+@media (min-width: 1600px) {
+    .main-container {
+        width: 70%;
+        gap: 2.5rem;
+    }
+}
