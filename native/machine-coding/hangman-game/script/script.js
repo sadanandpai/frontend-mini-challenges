@@ -77,6 +77,7 @@ function playGame() {
           if (e.target.innerText.toLowerCase() === letter) {
             currentWordList[index] = letter;
             document.querySelectorAll('.character')[index].innerText = letter;
+
             document.querySelectorAll('.character')[index].classList.add('set');
           }
         });
