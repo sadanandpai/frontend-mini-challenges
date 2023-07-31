@@ -82,6 +82,17 @@ export const challenges = new Map([
     },
   ],
   [
+    'table-colorizer',
+    {
+      title: 'Table Colorizer',
+      link: 'table-colorizer',
+      difficulty: 'easy',
+      developer: 'ravi02205',
+      tags: [],
+      isNew: true,
+    },
+  ],
+  [
     'toast-popup',
     {
       title: 'Toast Popup',
