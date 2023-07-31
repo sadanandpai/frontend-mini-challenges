@@ -3,7 +3,6 @@ import { contributors } from '@/helpers/contributors';
 import styles from './challenge-grid.module.scss';
 
 function ChallengeGrid() {
-  alert(Array.from(challenges.values()))
   return (
     <div className={styles.challengeGrid}>
       {Array.from(challenges.values()).map((challenge) => (
