@@ -24,8 +24,7 @@ jobs:
           rm -rf dist
           npm run build
           git add dist -f
-          git commit -m "react build files - github action"
-          git push
+          git diff --staged --quiet || (git commit -m "react build files - github action" && git push)
           cd ..
 
   build-angular:
@@ -47,6 +46,5 @@ jobs:
           rm -rf dist
           npm run build-prod
           git add dist -f
-          git commit -m "angular build files - github action"
-          git push
+          git diff --staged --quiet || (git commit -m "angular build files - github action" && git push)
           cd ..
