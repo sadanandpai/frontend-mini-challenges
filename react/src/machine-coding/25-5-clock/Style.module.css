@@ -1,0 +1,89 @@
+.container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.clockWrapper {
+  max-width: 500px;
+  padding: 1.5rem;
+  background-color: #f3f3f3;
+  border-radius: 1rem;
+  border: 2px solid #ccc;
+}
+
+.timeSection {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.timeSection div {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.timeSection p {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.timeAdjustment {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+.timeAdjustment .timeAdjustmentButton {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.timerDisplay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.timerDisplay p:first-child {
+  text-transform: capitalize;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.timerDisplay p span {
+  font-family: monospace;
+  font-weight: bold;
+  font-size: 3rem;
+}
+
+.buttonGroup {
+  display: flex;
+}
+
+.buttonGroup button,
+.timeAdjustmentButton button {
+  border: none;
+  color: #007bff;
+  background-color: transparent;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.buttonGroup button:hover,
+.timeAdjustmentButton button:hover {
+  color: #0056b3;
+}
+
+.lastMinute {
+   color: red;
+}
