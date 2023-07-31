@@ -1,5 +1,4 @@
 .color {
-    width: 40%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -10,44 +9,40 @@
 form.form {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     align-items: center;
+    justify-content: space-around;
     height: 70px;
 }
 
-.containers{
+.containers {
     display: flex;
-    width: 90%;
     flex-wrap: wrap;
     justify-content: center;
+    width: 90%;
     max-width: 200px;
     margin-top: 10px;
 }
 
-.container{
+.container {
     width: 30%;
-    border: 1px solid black;
     padding: 10px;
     text-align: center;
+    border: 1px solid black;
 }
 
-.container-color{
+.containerColor {
     width: 30%;
-    border: 1px solid black;
     padding: 10px;
+    color: white;
     text-align: center;
     background-color: red;
-    color: white;
-}
-
-.numberInput{
     border: 1px solid black;
-    padding: 0 10px;
-    border-radius: 15px;
-    margin: 10px 0;
-    height: 25px;
 }
 
-.buttons button{
-    
+.numberInput {
+    height: 25px;
+    padding: 0 10px;
+    margin: 10px 0;
+    border: 1px solid black;
+    border-radius: 15px;
 }

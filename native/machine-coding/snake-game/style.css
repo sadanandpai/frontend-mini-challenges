@@ -1,25 +1,10 @@
 @import url(../../helpers/core.css);
 
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
-body {
-    position: relative;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-direction: column;
-    height: 100vh;
-}
-
 .game-container {
     width: 80vmin;
     height: 75vmin;
     background-color: red;
-    margin-top: 3rem;
+    margin: 1rem auto;
 }
 
 .game-info {

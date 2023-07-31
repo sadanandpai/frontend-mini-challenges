@@ -1,39 +1,47 @@
 import React, { useRef, useState } from 'react';
-import style from "./table-colorizer.module.css";
+
+import styles from './table-colorizer.module.css';
+
+const length = 9;
+const numberList = Array.from(new Array(length), (_, i) => i);
 
 const TableColorizer = () => {
-    const [colorArray, setColorArray] = useState([]);
+  const [colorArray, setColorArray] = useState([]);
+  const colRef = useRef();
 
-    const colRef = useRef();
-
-    const arr = Array.apply(null, Array(9)).map(function (x, i) { return i; });
-
-    const handleClick = (e) => {
-        e.preventDefault();
-        if (parseInt(colRef.current.value) > 9 || parseInt(colRef.current.value) < 0) {
-            alert("enter Valid Number");
-        }
-        if (colorArray.indexOf(parseInt(colRef.current.value)) === -1) {
-            setColorArray((prev) => [...prev, parseInt(colRef.current.value)])
-        }
+  const onColorMe = (e) => {
+    e.preventDefault();
+    if (parseInt(colRef.current.value) > 9 || parseInt(colRef.current.value) < 0) {
+      alert('enter Valid Number');
     }
-    return (
-        <div className={style['color']}>
-            <form className={style['form']}>
-                <input type="number" className={style["numberInput"]} ref={colRef} />
-                <div className="buttons">
-                    <input type="submit" value="Color Me" onClick={handleClick} />
-                    <button className={style['clearBtn']} onClick={(e) => {e.preventDefault(); setColorArray([]) }}>Clear Me</button>
-                </div>
-            </form>
-            <div className={style["containers"]}>
-                {arr.map((e, p) => {
-                    return (<div key={p} className={colorArray.indexOf(e + 1) !== -1 ? style["container-color"] : style["container"]}>{e + 1}</div>)
-                })}
-            </div>
+    if (colorArray.indexOf(parseInt(colRef.current.value)) === -1) {
+      setColorArray((prev) => [...prev, parseInt(colRef.current.value)]);
+    }
+  };
 
+  return (
+    <div className={styles.color}>
+      <form className={styles.form}>
+        <input type="number" className={styles.numberInput} ref={colRef} />
+        <div className="buttons">
+          <input type="submit" value="Color Me" onClick={onColorMe} />
+          <button className={styles.clearBtn} onClick={() => setColorArray([])}>
+            Clear Me
+          </button>
         </div>
-    )
-}
+      </form>
 
-export default TableColorizer
+      <div className={styles.containers}>
+        {numberList.map((e, p) => {
+          return (
+            <div key={p} className={colorArray.indexOf(e + 1) !== -1 ? styles.containerColor : styles.container}>
+              {e + 1}
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+};
+
+export default TableColorizer;

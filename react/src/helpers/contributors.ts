@@ -14,4 +14,5 @@ export const contributors = new Map([
   ['kumaratul60', { name: 'Atul Kumar Awasthi', pic: 'https://avatars.githubusercontent.com/u/53579888' }],
   ['Kei-K23', { name: 'Kei-K', pic: 'https://avatars.githubusercontent.com/u/134714087' }],
   ['ravi02205', { name: 'Ravi Kumar Panchal', pic: 'https://avatars.githubusercontent.com/u/81222901' }],
+  ['caesar003', { name: 'Khaisar Muksid', pic: 'https://avatars.githubusercontent.com/u/37962465' }],
 ]);

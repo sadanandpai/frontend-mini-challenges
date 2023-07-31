@@ -20,16 +20,6 @@ export const challenges = new Map([
     },
   ],
   [
-    'star-Rating',
-    {
-      title: 'Star Rating',
-      link: 'star-Rating',
-      difficulty: 'easy',
-      developer: 'NikhilJHA01',
-      tags: [],
-    },
-  ],
-  [
     'light-dark-mode',
     {
       title: 'Light Dark Mode',
@@ -40,12 +30,33 @@ export const challenges = new Map([
     },
   ],
   [
+    'table-colorizer',
+    {
+      title: 'Table Colorizer',
+      link: 'table-colorizer',
+      difficulty: 'easy',
+      developer: 'ravi02205',
+      tags: [],
+      isNew: true,
+    },
+  ],
+  [
     'Guess-the-number',
     {
       title: 'Guess the number',
       link: 'Guess-the-number',
       difficulty: 'easy',
       developer: 'deepakrajkranti',
+      tags: [],
+    },
+  ],
+  [
+    'star-Rating',
+    {
+      title: 'Star Rating',
+      link: 'star-Rating',
+      difficulty: 'easy',
+      developer: 'NikhilJHA01',
       tags: [],
     },
   ],
@@ -82,14 +93,13 @@ export const challenges = new Map([
     },
   ],
   [
-    'table-colorizer',
+    '25-5-clock',
     {
-      title: 'Table Colorizer',
-      link: 'table-colorizer',
+      title: '25-5 Clock',
+      link: '25-5-clock',
       difficulty: 'easy',
-      developer: 'ravi02205',
+      developer: 'caesar003',
       tags: [],
-      isNew: true,
     },
   ],
   [
@@ -238,16 +248,6 @@ export const challenges = new Map([
       link: 'autocomplete-online',
       difficulty: 'hard',
       developer: 'deepu0',
-      tags: [],
-    },
-  ],
-  [
-    '25-5-clock',
-    {
-      title: '25-5 Clock',
-      link: '25-5-clock',
-      difficulty: 'easy',
-      developer: 'caesar003',
       tags: [],
     },
   ],
