@@ -1,13 +1,13 @@
-const hangmanImg = document.querySelector(".img-container img");
-const wordListContainer = document.querySelector(".correctWord-list");
-const hintText = document.querySelector(".hint-text b");
-const wrongGuess = document.querySelector(".wrong-guess b");
-const modal = document.querySelector(".game-modal");
-const modalImg = document.querySelector(".game-modal img");
-const modalResult = document.querySelector(".modal-result");
-const modalCorrectWord = document.querySelector(".modal-correctWord b");
-const playAgain = document.querySelector(".btn-again");
-const keyboardContainer = document.querySelector(".keyboard-container");
+const hangmanImg = document.querySelector('.img-container img');
+const wordListContainer = document.querySelector('.correctWord-list');
+const hintText = document.querySelector('.hint-text b');
+const wrongGuess = document.querySelector('.wrong-guess b');
+const modal = document.querySelector('.game-modal');
+const modalImg = document.querySelector('.game-modal img');
+const modalResult = document.querySelector('.modal-result');
+const modalCorrectWord = document.querySelector('.modal-correctWord b');
+const playAgain = document.querySelector('.btn-again');
+const keyboardContainer = document.querySelector('.keyboard-container');
 
 // init game state
 let currentWordList = [],
@@ -21,11 +21,11 @@ const maxGuesses = 6;
 function displayLists(lists) {
   const fragment = document.createDocumentFragment();
   Array.from(lists).map((_list) => {
-    const liEle = document.createElement("li");
-    liEle.classList.add("character");
+    const liEle = document.createElement('li');
+    liEle.classList.add('character');
     fragment.appendChild(liEle);
   });
-  wordListContainer.innerHTML = "";
+  wordListContainer.innerHTML = '';
   wordListContainer.appendChild(fragment);
 }
 
@@ -35,12 +35,12 @@ function resetGameState() {
   currentWordList = [];
   correctWordList = word;
   displayLists(correctWordList);
-  hangmanImg.src = "./../images/hangman-0.svg";
+  hangmanImg.src = './images/hangman-0.svg';
   hintText.innerText = hint;
-  wrongGuess.classList.add("wrong-guesses");
+  wrongGuess.classList.add('wrong-guesses');
   countToWrongGuesses = 0;
   wrongGuess.innerText = `${countToWrongGuesses} / ${maxGuesses}`;
-  modal.classList.remove("show-modal");
+  modal.classList.remove('show-modal');
   createKeyBoard();
 }
 
@@ -49,46 +49,46 @@ function createKeyBoard() {
   // create temp fragment for better performance
   const fragment = document.createDocumentFragment();
   for (let i = 97; i <= 122; i++) {
-    const button = document.createElement("button");
+    const button = document.createElement('button');
     button.innerText = String.fromCharCode(i);
-    button.classList.add("keys");
+    button.classList.add('keys');
     fragment.appendChild(button);
   }
-  keyboardContainer.innerHTML = "";
+  keyboardContainer.innerHTML = '';
   keyboardContainer.appendChild(fragment);
 }
 
 // check for win or lose
 function checkWinOrLoose(isWin) {
-  modal.classList.add("show-modal");
-  modalImg.src = `./../images/${isWin ? "victory" : "lost"}.gif`;
-  modalResult.innerText = `${isWin ? "You are awesome" : "Game Over"}`;
+  modal.classList.add('show-modal');
+  modalImg.src = `./images/${isWin ? 'victory' : 'lost'}.gif`;
+  modalResult.innerText = `${isWin ? 'You are awesome' : 'Game Over'}`;
   modalCorrectWord.innerText = correctWordList;
-  playAgain.addEventListener("click", main);
+  playAgain.addEventListener('click', main);
 }
 
 // main function for play game
 function playGame() {
-  const keys = document.querySelectorAll(".keys");
+  const keys = document.querySelectorAll('.keys');
   keys.forEach((key) => {
-    key.addEventListener("click", (e) => {
+    key.addEventListener('click', (e) => {
       if (correctWordList.includes(e.target.innerText.toLowerCase())) {
         Array.from(correctWordList).forEach((letter, index) => {
           if (e.target.innerText.toLowerCase() === letter) {
             currentWordList[index] = letter;
-            document.querySelectorAll(".character")[index].innerText = letter;
-            document.querySelectorAll(".character")[index].classList.add("set");
+            document.querySelectorAll('.character')[index].innerText = letter;
+            document.querySelectorAll('.character')[index].classList.add('set');
           }
         });
       } else {
         countToWrongGuesses++;
         wrongGuess.innerText = `${countToWrongGuesses} / ${maxGuesses}`;
-        hangmanImg.src = `./../images/hangman-${countToWrongGuesses}.svg`;
+        hangmanImg.src = `./images/hangman-${countToWrongGuesses}.svg`;
       }
       key.disabled = true;
-      key.classList.add("disabled");
+      key.classList.add('disabled');
       if (countToWrongGuesses === 6) checkWinOrLoose(false);
-      if (currentWordList.join("") === correctWordList) checkWinOrLoose(true);
+      if (currentWordList.join('') === correctWordList) checkWinOrLoose(true);
     });
   });
 }

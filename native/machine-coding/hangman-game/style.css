@@ -1,21 +1,5 @@
 @import url(../../helpers/core.css);
 
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
-body {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 100vh;
-    background-color: #bbb;
-}
-
 /* show hide modal for when game finish  */
 .game-modal {
     position: fixed;
@@ -81,6 +65,7 @@ body {
     box-shadow: 0.5rem 0.5rem 1.2rem rgba(0, 0, 0, 0.3);
     padding: 3rem 1.5rem 1rem;
     gap: 3rem;
+    margin: auto;
 }
 
 .main-title {
