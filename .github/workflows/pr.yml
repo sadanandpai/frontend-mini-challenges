@@ -1,0 +1,34 @@
+name: Node.js CI
+
+on:
+  pull_request:
+    branches: ["main"]
+
+jobs:
+  build-react:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: setup react deployment
+        run: |
+          cd react
+          npm install
+          rm -rf dist
+          npm run build
+          cd ..
+
+  build-angular:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: setup angular deployment
+        run: |
+          cd angular
+          npm install
+          rm -rf dist
+          npm run build-prod
+          cd ..
