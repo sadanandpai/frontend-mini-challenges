@@ -237,6 +237,14 @@ export const challenges = [
     isNew: true,
   },
   {
+    title: 'Snake Game',
+    link: 'snake-game',
+    difficulty: 'medium',
+    developer: 'Kei-K23',
+    tags: [],
+    isNew: true,
+  },
+  {
     title: 'Area Selector',
     link: 'area-selector',
     difficulty: 'medium',
