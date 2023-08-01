@@ -9,7 +9,7 @@ function Size({ rows, setRows, columns, setColumns }) {
         name="rows"
         id="rows"
         min="2"
-        max="8"
+        max="9"
         value={rows}
         onChange={(e) => setRows(+e.target.value)}
       />
@@ -20,7 +20,7 @@ function Size({ rows, setRows, columns, setColumns }) {
         name="columns"
         id="columns"
         min="2"
-        max="8"
+        max="9"
         value={columns}
         onChange={(e) => setColumns(+e.target.value)}
       />
