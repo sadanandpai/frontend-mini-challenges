@@ -13,6 +13,7 @@
     />
     <link rel="stylesheet" href="./helpers/core.css" />
     <link rel="stylesheet" href="./style.css" />
+    <script defer src="https://js.bugfender.com/bugfender-v2.js" id="bugFenderScript"></script>
     <script src="./index.js" type="module"></script>
 
     <script type="text/javascript">
@@ -28,6 +29,16 @@
         y = l.getElementsByTagName(r)[0];
         y.parentNode.insertBefore(t, y);
       })(window, document, 'clarity', 'script', 'i80mpp28ya');
+    </script>
+
+    <script type="text/javascript">
+      document.getElementById('bugFenderScript').addEventListener('load', () => {
+        if (window.location.hostname !== 'localhost') {
+          window.Bugfender.init({
+            appKey: '4qTOiIjXmvLeD09teClfkoVZx5daMNyM',
+          });
+        }
+      });
     </script>
   </head>
   <body>

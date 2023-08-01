@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@bugfender/sdk": "^2.2.4",
     "@mui/icons-material": "^5.13.7",
     "axios": "^1.4.0",
     "framer-motion": "^10.12.18",
