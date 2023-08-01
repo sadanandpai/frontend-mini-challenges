@@ -32,3 +32,10 @@ jobs:
           rm -rf dist
           npm run build-prod
           cd ..
+  
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Deploy PR Preview
+        uses: rossjrw/pr-preview-action@v1.4.4
