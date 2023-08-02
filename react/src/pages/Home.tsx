@@ -23,12 +23,12 @@ function Home() {
       />
 
       <div className={styles.routes}>
-        <a href="https://sadanandpai.github.io/frontend-mini-challenges/native/">
+        <a href="/frontend-mini-challenges/native/">
           View challenges in
           <br />
           JavaScript
         </a>
-        <a href="https://sadanandpai.github.io/frontend-mini-challenges/react/dist/#/challenges">
+        <a href="/frontend-mini-challenges/react/dist/#/challenges">
           View challenges in
           <br />
           React
