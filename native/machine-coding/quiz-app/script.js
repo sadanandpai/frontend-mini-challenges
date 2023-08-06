@@ -79,7 +79,7 @@ function checkAnswer(correctAns) {
       const selectedValue = selectedAnswer.value;
       const correctAnswerElement = document.querySelector(`input[value="${correctAns}"]`);
 
-      if (selectedValue === correctAnswerElement.value) {
+      if (correctAnswerElement && selectedValue === correctAnswerElement.value) {
         displayAlert('correct');
         setTimeout(() => {
           clearDisplayAlert();
