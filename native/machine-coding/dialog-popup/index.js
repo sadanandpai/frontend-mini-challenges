@@ -1,26 +1,20 @@
-const openDialogButtons = document.querySelectorAll('[data-dialog-target]');
-const closeDialogButtons = document.querySelectorAll('[data-close-button]');
+const openDialogButton = document.querySelector('[data-dialog-target]');
+const closeDialogButton = document.querySelector('[data-close-button]');
 const overlay = document.getElementById('overlay');
 
-openDialogButtons.forEach((button) => {
-  button.addEventListener('click', () => {
-    const dialog = document.querySelector(button.dataset.dialogTarget);
-    openDialog(dialog);
-  });
+openDialogButton.addEventListener('click', () => {
+  const dialog = document.querySelector(openDialogButton.dataset.dialogTarget);
+  openDialog(dialog);
 });
 
-closeDialogButtons.forEach((button) => {
-  button.addEventListener('click', () => {
-    const dialog = button.closest('.dialog');
-    closeDialog(dialog);
-  });
+closeDialogButton.addEventListener('click', () => {
+  const dialog = closeDialogButton.closest('.dialog');
+  closeDialog(dialog);
 });
 
 overlay.addEventListener('click', () => {
-  const dialogs = document.querySelectorAll('.dialog.active');
-  dialogs.forEach((dialog) => {
-    closeDialog(dialog);
-  });
+  const dialog = document.querySelector('.dialog.active');
+  closeDialog(dialog);
 });
 
 function openDialog(dialog) {
