@@ -34,12 +34,3 @@ function closeDialog(dialog) {
   dialog.classList.remove('active');
   overlay.classList.remove('active');
 }
-
-function changeTheme() {
-  const theme = document.body.classList;
-  if (theme.value) {
-    theme.remove('dark-theme');
-  } else {
-    theme.add('dark-theme');
-  }
-}
