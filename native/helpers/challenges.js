@@ -191,7 +191,14 @@ export const challenges = [
     tags: [],
     isNew: true,
   },
-  { title: 'Dialog Popup', link: '#' },
+  {
+    title: 'Dialog Popup',
+    link: 'dialog-popup',
+    difficulty: 'medium',
+    developer: 'sahankatta',
+    tags: [],
+    isNew: true,
+  },
   {
     title: 'Basic calculator',
     link: 'basic-calculator',
