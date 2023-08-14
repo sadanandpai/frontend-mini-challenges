@@ -1,108 +1,28 @@
 @import url(../../helpers/core.css);
 
-/* Light Theme */
-:root {
-  --background: white;
-  --font: black;
-  --mid: #7d7d7d;
-}
-
-h3,
-div,
-i,
 button {
-  padding: 0;
-  margin: 0;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 2px;
+  padding: 3px 7px;
+  text-align: center;
 }
-
-/* Dialog */
-.dialog {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(0);
-  transition: 200ms ease-in-out;
-  z-index: 10;
-  background-color: var(--background);
-  max-width: 350px;
-  max-height: 98vh;
-  padding: 15px;
-  border-radius: 5px;
+button:hover {
+  cursor: pointer;
+  background-color: aqua;
+}
+dialog {
+  border: 1px solid black;
+  border-radius: 3px;
+  padding: 10px;
+  max-width: 325px;
   width: 80%;
 }
-
-.dialog.active {
-  transform: translate(-50%, -50%) scale(1);
+h4 {
+  padding: 0px;
+  margin: 0px;
+  border-bottom: 1px solid black;
 }
-
-/* Dialog Header */
-.dialog-head {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-bottom: 5px;
-  border-bottom: 1px solid var(--font);
-}
-
-/* Dialog Body */
-.dialog-body {
-  padding: 10px 2px 5px;
-}
-
-/* Dialog Close Button */
-.close {
-  cursor: pointer;
-  outline: none;
-  border: none;
-  background: none;
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: var(--font);
-}
-
-/* Overlay */
-#overlay {
-  position: fixed;
-  opacity: 0;
-  top: 0;
-  left: 0;
-  right: 0;
-  transition: 200ms ease-in-out;
-  bottom: 0;
-  pointer-events: none;
-}
-
-#overlay.active {
-  opacity: 0.8;
-  pointer-events: all;
-  background-color: var(--mid);
-}
-
-/* Dialog Button */
-.btn {
-  box-shadow: 2px 2px 0 0 var(--background), 4px 4px 0 0 var(--font);
-  transition: 200ms;
-  background: var(--background);
-  border: 1px solid var(--font);
-  color: var(--font);
-  padding: 15px 20px;
-  border-radius: 2px;
-  cursor: pointer;
-}
-
-.btn:hover {
-  box-shadow: 3px 3px 0 0 var(--background), 6px 6px 0 0 var(--font);
-  transform: translate(-2px, -2px);
-  background-color: var(--font);
-  color: var(--background);
-}
-
-/* Container */
-.btn-container {
-  height: 70vh;
-  width: 80vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
+.dialogContent {
+  padding: 10px;
 }
