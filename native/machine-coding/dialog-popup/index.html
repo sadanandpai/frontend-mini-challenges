@@ -6,26 +6,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="index.css" />
-    <script src="index.js" defer></script>
+    <script src="index.js" type="module"></script>
     <script src="../../helpers/header.js" type="module"></script>
   </head>
   <body>
     <div class="container text-center">
-      <div class="btn-container">
-        <button class="btn" data-dialog-target="#dialog">Open Dailog Popup</button>
-      </div>
-      <div class="dialog" id="dialog">
-        <div class="dialog-head">
-          <h3>Dialog Header</h3>
-          <button data-close-button class="close">&times;</button>
+      <dialog id="dialogPopup">
+        <!-- Dialog Head -->
+        <div><h4>Header</h4></div>
+        <!-- Dialog Body -->
+        <div>
+          <div class="dialogContent">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus reprehenderit tempora exercitationem, hic vel
+            iure deserunt? Tempore corporis eveniet architecto qui aliquid quam quis, voluptate
+          </div>
+          <button id="closeDialog">Close Dialog</button>
         </div>
-        <div class="dialog-body">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus labore perspiciatis sint consequuntur aut
-          praesentium qui expedita repudiandae saepe vero officiis, consectetur nam, similique fuga! Aliquid ipsum
-          voluptates error beatae.
-        </div>
-      </div>
-      <div id="overlay"></div>
+      </dialog>
+      <p>
+        <button id="showDialog">Show Dialog</button>
+      </p>
     </div>
   </body>
 </html>
