@@ -11,7 +11,7 @@
   vertical-align: text-bottom;
 }
 
-nav::after {
+.nav::after {
   position: absolute;
   bottom: 10px;
   left: -5%;

@@ -1,40 +1,27 @@
+import Navbar from '@/components/navbar/Navbar';
 import styles from './styles.module.scss';
 
 function Home() {
   return (
-    <div className="container text-center">
-      <h1 className={styles.h1}>
-        Frontend Mini Challenges
-        <a href="https://github.com/sadanandpai/frontend-mini-challenges/">
+    <>
+      <Navbar />
+      <main className="container text-center">
+        <figure>
           <img
-            className={styles.github}
-            src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
-            alt="github repo"
+            className={styles.hero}
+            src="https://github.com/sadanandpai/frontend-mini-challenges/raw/main/cover.png"
+            loading="lazy"
+            alt="brand"
           />
-        </a>
-      </h1>
-      <h3>Collection of frontend challenges for learning and interviews</h3>
+          <figcaption>Collection of frontend challenges for learning and interviews</figcaption>
+        </figure>
 
-      <img
-        className={styles.hero}
-        src="https://github.com/sadanandpai/frontend-mini-challenges/raw/main/cover.png"
-        loading="lazy"
-        alt="brand"
-      />
-
-      <div className={styles.routes}>
-        <a href="/frontend-mini-challenges/native/">
-          View challenges in
-          <br />
-          JavaScript
-        </a>
-        <a href="/frontend-mini-challenges/react/dist/#/challenges">
-          View challenges in
-          <br />
-          React
-        </a>
-      </div>
-    </div>
+        <h2 className={styles.links}>
+          <a href="/frontend-mini-challenges/native/">JavaScript challenges</a>
+          <a href="/frontend-mini-challenges/react/dist/#/challenges">React challenges</a>
+        </h2>
+      </main>
+    </>
   );
 }
 

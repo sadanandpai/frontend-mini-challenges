@@ -1,45 +1,16 @@
-.h1 {
-  justify-content: center;
-
-  .github {
-    width: 35px;
-    height: 35px;
-    margin-left: 0.5rem;
-    vertical-align: text-bottom;
-  }
-}
-
 .hero {
   width: min(80vh, 80vw);
 }
 
-.routes {
+.links {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
   justify-content: center;
+  margin-top: 2rem;
+  font-weight: 500;
 
   a {
-    min-width: 12rem;
-    padding: 1rem 2rem;
-    font-size: 1.2rem;
-    line-height: 2rem;
-    color: white;
-    background-color: darkorchid;
-    border-radius: 0.5rem;
-    transition: all 0.33s;
-  }
-
-  a:hover {
-    transform: scale(1.1);
-  }
-}
-
-@media screen and (width >= 375px) {
-  .routes {
-    a {
-      flex-shrink: 0;
-      padding: 1rem 4rem;
-    }
+    flex-basis: fill;
   }
 }

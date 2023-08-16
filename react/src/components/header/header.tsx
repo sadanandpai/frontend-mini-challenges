@@ -20,8 +20,3 @@ function Header({ id }: { id: string }) {
 }
 
 export default Header;
-
-// const getChallengeTitle = (challengeParam: string): string | undefined => {
-//   const challenge = Array.from(challenges.values()).find((item) => item.link.includes(challengeParam));
-//   return challenge?.title || 'Challenge';
-// };
