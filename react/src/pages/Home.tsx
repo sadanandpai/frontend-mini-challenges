@@ -8,7 +8,7 @@ function Home() {
       <Navbar />
       <div className="container">
         <main className="container text-center">
-          <figure>
+          <figure className={styles.figure}>
             <img
               className={styles.hero}
               src="https://github.com/sadanandpai/frontend-mini-challenges/raw/main/cover.png"

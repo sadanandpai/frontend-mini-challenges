@@ -3,7 +3,7 @@ import styles from './navbar.module.scss';
 function Navbar() {
   return (
     <nav className={styles.navbar}>
-      <a className={styles.logo} href="/">
+      <a className={styles.logo} href="/frontend-mini-challenges/">
         <img src="/frontend-mini-challenges/react/dist/logo.png" alt="logo" height={40} width={40} />
         <span>Frontend Mini Challenges</span>
       </a>
