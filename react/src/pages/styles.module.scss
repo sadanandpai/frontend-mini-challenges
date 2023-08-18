@@ -1,24 +1,3 @@
-.hero {
-  width: min(80vh, 80vw);
-}
-
-.figure {
-  margin: 0;
-}
-
-.links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: center;
-  margin-top: 2rem;
-  font-weight: 500;
-
-  a {
-    flex-basis: fill;
-  }
-}
-
 .hr {
   margin: 4rem 0;
 }

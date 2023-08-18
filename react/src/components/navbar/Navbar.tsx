@@ -9,8 +9,7 @@ function Navbar() {
       </a>
 
       <div className={styles.challenges}>
-        <a href="/frontend-mini-challenges/native/">JavaScript challenges</a>
-        <a href="/frontend-mini-challenges/react/dist/#/challenges">React challenges</a>
+        <a href="#contributors">Contributors</a>
       </div>
 
       <a href="https://github.com/sadanandpai/frontend-mini-challenges/">

@@ -21,7 +21,9 @@ function Contribution() {
 
   return (
     <>
-      <h2 className={styles.heading}>Contributors</h2>
+      <h2 className={styles.heading} id="contributors">
+        Contributors
+      </h2>
       <section className={styles.contributionContainer}>
         {contributors.map((contributor) => (
           <Contributor key={contributor.login} contributor={contributor} />
