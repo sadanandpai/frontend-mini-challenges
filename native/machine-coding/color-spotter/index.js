@@ -14,90 +14,70 @@ const getRandomColors = function () {
   };
 };
 
-var element = document.getElementById('board');
-var startingSize = 4;
-// updateStartingSize(startingSize);
-var gameSize = startingSize;
+const board = document.getElementById('board');
+const initSize = 3;
+let size = initSize,
+  score = 0,
+  maxScore = 0,
+  clickAllowed = true;
 
-// Scores
-var score = 0;
-var maxScore = 0;
-
-// Do not allow click while board is shaking
-var clickAllowed = true;
-
-createBoard(element, gameSize);
-
-function createBoard(element, size) {
-  var gridDocFragment = document.createDocumentFragment();
-
-  var gridColor = getRandomColors();
-  var oddCellX = Math.ceil(Math.random() * size);
-  var oddCellY = Math.ceil(Math.random() * size);
+function createBoard(board, size) {
+  const gridFragment = document.createDocumentFragment();
+  const colors = getRandomColors();
+  const oddCellX = Math.ceil(Math.random() * size);
+  const oddCellY = Math.ceil(Math.random() * size);
 
   for (let i = 1; i <= size; i++) {
-    var row = document.createElement('div');
     for (let j = 1; j <= size; j++) {
-      var col = document.createElement('div');
-      col.dataset.locX = i;
-      col.dataset.locY = j;
-      col.classList.add('box');
+      var cell = document.createElement('div');
+      cell.dataset.locX = i;
+      cell.dataset.locY = j;
+      cell.classList.add('box');
 
       if (i === oddCellX && j === oddCellY) {
-        col.style.backgroundColor = gridColor.oddColor;
-        col.classList.add('odd-box');
+        cell.style.backgroundColor = colors.oddColor;
+        cell.classList.add('odd-box');
       } else {
-        col.style.backgroundColor = gridColor.color;
+        cell.style.backgroundColor = colors.color;
       }
 
-      row.appendChild(col);
+      gridFragment.appendChild(cell);
     }
-    gridDocFragment.appendChild(row);
   }
-  element.appendChild(gridDocFragment);
+
+  board.appendChild(gridFragment);
+  board.style.gridTemplateRows = `repeat(${size}, 1fr)`;
+  board.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
 }
 
-document.addEventListener('click', event => {
+document.addEventListener('click', (event) => {
   if (!clickAllowed) return;
-  if (event.target.classList.contains('box')) {
-    if (event.target.classList.contains('odd-box')) {
-      element.innerHTML = '';
-      document.getElementById('score').textContent = ++score;
-      createBoard(element, ++gameSize);
-      document.getElementById('statingSizeSelector').disabled = true;
-    } else {
-      clickAllowed = false;
-      document.querySelector('.odd-box').style.border = '2px solid red';
-      shakeTheGrid(function () {
-        updateScores();
-        element.innerHTML = '';
-        gameSize = startingSize;
-        createBoard(element, gameSize);
-        clickAllowed = true;
-      });
-    }
+
+  if (!event.target.classList.contains('box')) {
+    return;
+  }
+
+  if (event.target.classList.contains('odd-box')) {
+    board.innerHTML = '';
+    document.getElementById('score').textContent = ++score;
+    createBoard(board, ++size);
+  } else {
+    clickAllowed = false;
+    document.querySelector('.odd-box').style.border = '2px solid red';
+    shakeTheGrid(function () {
+      updateScores();
+      board.innerHTML = '';
+      size = initSize;
+      createBoard(board, size);
+      clickAllowed = true;
+    });
   }
 });
-
-document.getElementById('statingSizeSelector').addEventListener('input', function () {
-  updateStartingSize(this.value);
-});
-
-function updateStartingSize(value) {
-  document.getElementById('statingSizeSelectorOutput').textContent = value;
-  startingSize = value;
-  gameSize = startingSize;
-
-  if (score === 0) {
-    element.innerHTML = '';
-    createBoard(element, gameSize);
-  }
-}
 
 function shakeTheGrid(callback) {
-  element.classList.add('shake');
+  board.classList.add('shake');
   setTimeout(() => {
-    element.classList.remove('shake');
+    board.classList.remove('shake');
     callback();
   }, 2000);
 }
@@ -109,5 +89,6 @@ function updateScores() {
   }
   score = 0;
   document.getElementById('score').textContent = score;
-  document.getElementById('statingSizeSelector').disabled = false;
 }
+
+createBoard(board, size);

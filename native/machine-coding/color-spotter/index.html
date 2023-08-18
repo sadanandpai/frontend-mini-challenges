@@ -11,11 +11,11 @@
   </head>
   <body>
     <div class="container text-center">
-      <strong>Score: <span id="score">0</span></strong
-      ><br />
-      Max Score so far: <span id="maxScore">0</span><br />
-      Select starting size: <input type="range" id="statingSizeSelector" value="4" min="2" max="6" />
-      <output id="statingSizeSelectorOutput"></output>
+      <div class="score-container">
+        <span>Score: <strong id="score">0</strong></span>
+        <span>Max Score: <strong id="maxScore">0</strong></span>
+      </div>
+
       <div id="board"></div>
     </div>
   </body>
