@@ -1,0 +1,33 @@
+.heading {
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: max(5%, 50px);
+  width: 100%;
+  padding: 0 5%;
+  margin-bottom: 4rem;
+
+  article {
+    flex-basis: 0;
+    flex-grow: 1;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 50%);
+
+    h3 {
+      font-size: 1.4rem;
+      font-weight: 500;
+    }
+  }
+}
+
+@media screen and (width >= 768px) {
+  .features {
+    flex-direction: row;
+  }
+}

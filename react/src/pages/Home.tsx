@@ -1,40 +1,26 @@
+import Contribution from '@/components/contribution/Contribution';
+import Features from '@/components/features/features';
+import Footer from '@/components/footer/Footer';
+import Hero from '@/components/hero/Hero';
+import Navbar from '@/components/navbar/Navbar';
+import Testimonials from '@/components/testimonials/testimonials';
 import styles from './styles.module.scss';
 
 function Home() {
   return (
-    <div className="container text-center">
-      <h1 className={styles.h1}>
-        Frontend Mini Challenges
-        <a href="https://github.com/sadanandpai/frontend-mini-challenges/">
-          <img
-            className={styles.github}
-            src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
-            alt="github repo"
-          />
-        </a>
-      </h1>
-      <h3>Collection of frontend challenges for learning and interviews</h3>
-
-      <img
-        className={styles.hero}
-        src="https://github.com/sadanandpai/frontend-mini-challenges/raw/main/cover.png"
-        loading="lazy"
-        alt="brand"
-      />
-
-      <div className={styles.routes}>
-        <a href="/frontend-mini-challenges/native/">
-          View challenges in
-          <br />
-          JavaScript
-        </a>
-        <a href="/frontend-mini-challenges/react/dist/#/challenges">
-          View challenges in
-          <br />
-          React
-        </a>
+    <>
+      <Navbar />
+      <div className={styles.container}>
+        <Hero />
+        <hr className={styles.hr} />
+        <Features />
+        <hr className={styles.hr} />
+        <Testimonials />
+        <hr className={styles.hr} />
+        <Contribution />
+        <Footer />
       </div>
-    </div>
+    </>
   );
 }
 

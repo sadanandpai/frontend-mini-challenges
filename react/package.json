@@ -20,7 +20,9 @@
     "react-dom": "^18.2.0",
     "react-icons": "^4.10.1",
     "react-router-dom": "^6.13.0",
-    "sort-by": "^1.2.0"
+    "react-router-hash-link": "^2.4.3",
+    "sort-by": "^1.2.0",
+    "swiper": "^10.2.0"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.17.0",

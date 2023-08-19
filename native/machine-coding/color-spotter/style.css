@@ -1,31 +1,25 @@
 @import url(../../helpers/core.css);
 
-#board {
+.score-container {
   display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-  width: 300px;
-  height: 300px;
+  justify-content: space-between;
+  width: min(calc(100vh - 140px), 90vw);
+  margin: 0.5rem auto;
+}
+
+#board {
+  display: grid;
   margin: auto;
-  margin-top: 10px;
   border: 3px solid black;
   border-radius: 5px;
-}
-
-@media screen and (min-width: 768px) {
-  #board {
-    width: 500px;
-    height: 500px;
-  }
-}
-
-#board div {
-  display: flex;
-  flex-grow: 1;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  width: min(calc(100vh - 140px), 90vw);
 }
 
 .box {
   border: 1.5px solid whitesmoke;
+  aspect-ratio: 1/1;
 }
 
 .shake {

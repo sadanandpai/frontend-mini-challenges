@@ -1,0 +1,37 @@
+.heading {
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.contributionContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.contributor {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  margin: 0 1rem;
+  transition: 0.5s all;
+
+  img {
+    width: 100%;
+    height: 100%;
+    border: 2px solid orange;
+    border-radius: 50%;
+  }
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+@media screen and (width >= 768px) {
+  .contributor {
+    width: 80px;
+    height: 80px;
+  }
+}

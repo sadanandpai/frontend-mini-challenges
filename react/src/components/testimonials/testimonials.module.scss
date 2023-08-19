@@ -1,0 +1,39 @@
+.heading {
+  text-align: center;
+}
+
+.testimonial {
+  width: 70%;
+  padding: 1rem;
+  margin: auto;
+
+  .heading {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+    }
+
+    h4,
+    h5 {
+      font-weight: 500;
+    }
+  }
+
+  p {
+    padding: 0.5rem 0 1rem;
+    font-weight: normal;
+    text-align: center;
+  }
+}
+
+@media screen and (width >= 768px) {
+  .testimonial {
+    width: 50%;
+  }
+}
