@@ -36,6 +36,14 @@ export const challenges = [
     tags: [],
   },
   {
+    title: 'Skeleton Loader',
+    link: 'skeleton-loader',
+    difficulty: 'easy',
+    developer: 'sahankatta',
+    tags: [],
+    isNew: true,
+  },
+  {
     title: 'Accordion',
     link: 'accordion',
     difficulty: 'easy',
@@ -57,7 +65,6 @@ export const challenges = [
     difficulty: 'easy',
     developer: 'noorulaink00',
     tags: [],
-    isNew: true,
   },
   {
     title: 'Dialog Popup',
@@ -168,14 +175,6 @@ export const challenges = [
     difficulty: 'medium',
     developer: 'sadanandpai',
     tags: [],
-  },
-  {
-    title: 'Skeleton Loader',
-    link: 'skeleton-loader',
-    difficulty: 'medium',
-    developer: 'sahankatta',
-    tags: [],
-    isNew: true,
   },
   {
     title: 'Chips Input',
@@ -344,7 +343,6 @@ export const challenges = [
     difficulty: 'hard',
     developer: 'sadanandpai',
     tags: [],
-    isNew: true,
   },
   {
     title: 'Typeahead / Autocomplete (online)',
@@ -352,7 +350,6 @@ export const challenges = [
     difficulty: 'hard',
     developer: 'sadanandpai',
     tags: [],
-    isNew: true,
   },
   { title: 'Emoji Editor', link: '#' },
   { title: 'Sort Table', link: '#' },
