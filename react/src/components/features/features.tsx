@@ -3,11 +3,11 @@ import styles from './features.module.scss';
 const features = [
   {
     title: 'Free and open-source',
-    info: 'Every challenge comes with the solution in multiple tech stacks and totally free forever',
+    info: 'Every challenge comes with the solution in multiple tech stacks & totally free forever',
   },
   {
     title: 'Designed for inteviews',
-    info: 'The challenges are collection handpicked from various interviews of top companies',
+    info: 'The challenges are handpicked collection from various interviews of top companies',
   },
   {
     title: 'Community vetted solutions',

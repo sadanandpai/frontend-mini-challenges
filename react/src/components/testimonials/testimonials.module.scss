@@ -31,3 +31,9 @@
     text-align: center;
   }
 }
+
+@media screen and (width >= 768px) {
+  .testimonial {
+    width: 50%;
+  }
+}

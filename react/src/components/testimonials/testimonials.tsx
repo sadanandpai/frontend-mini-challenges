@@ -27,6 +27,18 @@ function Testimonials() {
         {testimonials.map((testimonial) => (
           <Testimonial testimonial={testimonial} key={testimonial.id} />
         ))}
+
+        <swiper-slide>
+          <article className={styles.testimonial}>
+            <h3 className="text-center">
+              If you are benefited from these challenges for interviews or learning, please consider adding your
+              testimonial by submitting the details{' '}
+              <a href="https://forms.gle/2hJGa3foKuPctiWE7" target="_blank">
+                here
+              </a>
+            </h3>
+          </article>
+        </swiper-slide>
       </swiper-container>
     </section>
   );
