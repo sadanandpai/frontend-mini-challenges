@@ -1,3 +1,4 @@
+import { HashLink } from 'react-router-hash-link';
 import styles from './navbar.module.scss';
 
 function Navbar() {
@@ -9,7 +10,9 @@ function Navbar() {
       </a>
 
       <div className={styles.challenges}>
-        <a href="#contributors">Contributors</a>
+        <HashLink to="/#whyUs">Why us?</HashLink>
+        <HashLink to="/#testimonials">Testimonials</HashLink>
+        <HashLink to="/#contributors">Contributors</HashLink>
       </div>
 
       <a href="https://github.com/sadanandpai/frontend-mini-challenges/">

@@ -1,3 +1,10 @@
+.container {
+  max-width: min(90%, 1440px);
+  margin: 0 auto;
+}
+
 .hr {
-  margin: 4rem 0;
+  margin: 3rem 0;
+  border: none;
+  border-top: 1px solid lightgray;
 }

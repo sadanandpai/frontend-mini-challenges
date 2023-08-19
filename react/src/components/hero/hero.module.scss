@@ -3,6 +3,10 @@
   flex-direction: column;
   justify-content: space-between;
   text-align: center;
+
+  p {
+    margin-bottom: 2rem;
+  }
 }
 
 .figure {
@@ -29,6 +33,10 @@
   .hero {
     flex-direction: row;
     text-align: left;
+
+    p {
+      margin-bottom: 3rem;
+    }
   }
 
   .figure .heroImage {
