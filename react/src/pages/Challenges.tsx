@@ -1,29 +1,16 @@
 import ChallengeGrid from '@/components/challenges/ChallengeGrid';
+import Navbar from '@/components/navbar/Navbar';
 
 function App() {
   return (
-    <div className="container text-center">
-      <h1>
-        Frontend Mini Challenges&nbsp;
-        <a href="https://github.com/sadanandpai/frontend-mini-challenges/">
-          <img
-            style={{
-              width: '35px',
-              height: '35px',
-              verticalAlign: 'text-bottom',
-            }}
-            src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
-            alt="github repo"
-          />
-        </a>
-      </h1>
-
-      <h4>Challenges built using React</h4>
-
-      <a href="/frontend-mini-challenges/native">Switch to JavaScript version</a>
-
-      <ChallengeGrid />
-    </div>
+    <>
+      <Navbar>
+        <a href="/frontend-mini-challenges/native">JavaScript Mini Challenges</a>
+      </Navbar>
+      <div className="container text-center">
+        <ChallengeGrid />
+      </div>
+    </>
   );
 }
 
