@@ -1,0 +1,48 @@
+@import url(../../helpers/core.css);
+
+h3 {
+  margin-bottom: 5px;
+}
+p {
+  margin: 0px;
+}
+.card {
+  max-width: 300px;
+  max-height: 300px;
+  border-radius: 5px;
+  padding: 15px;
+  border: 1px solid #c1c1c1;
+  margin: 0 auto;
+}
+.skeleton-loader {
+  background: #ddd;
+  min-height: 15px;
+  position: relative;
+  overflow: hidden;
+  margin: 0px 0px 8px 0px;
+  border-radius: 2px;
+}
+.skeleton-loader:last-child {
+  width: 70%;
+  margin-bottom: 0px;
+}
+.skeleton-loader::before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, transparent, #fff, transparent);
+  transform: translateX(-100%);
+  animation: skeleton-loader 1s infinite;
+}
+@keyframes skeleton-loader {
+  100% {
+    transform: translateX(100%);
+  }
+}
+.img{
+  height: 150px;
+  border-radius: 3px;
+  margin-bottom: 15px;
+}
