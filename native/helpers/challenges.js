@@ -169,7 +169,14 @@ export const challenges = [
     developer: 'sadanandpai',
     tags: [],
   },
-  { title: 'Skeleton Loader', link: '#' },
+  {
+    title: 'Skeleton Loader',
+    link: 'skeleton-loader',
+    difficulty: 'medium',
+    developer: 'sahankatta',
+    tags: [],
+    isNew: true,
+  },
   {
     title: 'Chips Input',
     link: 'chips-input',
