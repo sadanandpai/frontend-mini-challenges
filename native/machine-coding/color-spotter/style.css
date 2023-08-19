@@ -20,6 +20,7 @@
 .box {
   border: 1.5px solid whitesmoke;
   aspect-ratio: 1/1;
+  cursor: pointer;
 }
 
 .shake {

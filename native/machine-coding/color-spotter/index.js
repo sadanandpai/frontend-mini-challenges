@@ -18,7 +18,7 @@ const board = document.getElementById('board');
 const initSize = 3;
 let size = initSize,
   score = 0,
-  maxScore = 0,
+  maxScore = +localStorage.getItem('maxScore'),
   clickAllowed = true;
 
 function createBoard(board, size) {
@@ -29,7 +29,7 @@ function createBoard(board, size) {
 
   for (let i = 1; i <= size; i++) {
     for (let j = 1; j <= size; j++) {
-      var cell = document.createElement('div');
+      var cell = document.createElement('button');
       cell.dataset.locX = i;
       cell.dataset.locY = j;
       cell.classList.add('box');
@@ -48,6 +48,24 @@ function createBoard(board, size) {
   board.appendChild(gridFragment);
   board.style.gridTemplateRows = `repeat(${size}, 1fr)`;
   board.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
+}
+
+function shakeTheGrid(callback) {
+  board.classList.add('shake');
+  setTimeout(() => {
+    board.classList.remove('shake');
+    callback();
+  }, 2000);
+}
+
+function updateScores() {
+  if (score > maxScore) {
+    document.getElementById('maxScore').textContent = score;
+    maxScore = score;
+    localStorage.setItem('maxScore', maxScore);
+  }
+  score = 0;
+  document.getElementById('score').textContent = score;
 }
 
 document.addEventListener('click', (event) => {
@@ -74,21 +92,5 @@ document.addEventListener('click', (event) => {
   }
 });
 
-function shakeTheGrid(callback) {
-  board.classList.add('shake');
-  setTimeout(() => {
-    board.classList.remove('shake');
-    callback();
-  }, 2000);
-}
-
-function updateScores() {
-  if (score > maxScore) {
-    document.getElementById('maxScore').textContent = score;
-    maxScore = score;
-  }
-  score = 0;
-  document.getElementById('score').textContent = score;
-}
-
 createBoard(board, size);
+document.getElementById('maxScore').textContent = maxScore;
