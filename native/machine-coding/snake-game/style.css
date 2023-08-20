@@ -1,123 +1,123 @@
 @import url(../../helpers/core.css);
 
 .game-container {
-    width: 80vmin;
-    height: 75vmin;
-    background-color: red;
-    margin: 1rem auto;
+  width: 80vmin;
+  height: 75vmin;
+  background-color: red;
+  margin: 1rem auto;
 }
 
 .game-info {
-    display: flex;
-    justify-content: space-between;
-    padding: 0.5rem 1.4rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 1.4rem;
 }
 
 .main-game {
-    width: 100%;
-    height: 100%;
-    display: grid;
-    grid-template: repeat(35, 1fr) / repeat(35, 1fr);
-    background-color: black;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template: repeat(35, 1fr) / repeat(35, 1fr);
+  background-color: black;
 }
 
 .main-game .food {
-    background-color: yellow;
+  background-color: yellow;
 }
 
 .main-game .snake {
-    background-color: blueviolet;
+  background-color: blueviolet;
 }
 
 .game-control {
-    display: none;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.2rem 1.4rem;
-    background-color: red;
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.2rem 1.4rem;
+  background-color: red;
 }
 
 .game-container .arrow {
-    width: 5rem;
-    font-size: 2rem;
-    background-color: rgb(104, 104, 235);
-    border: none;
-    border-radius: 0.5rem;
-    outline: none;
-    padding: 0.1rem 0.7rem;
-    cursor: pointer;
+  width: 5rem;
+  font-size: 2rem;
+  background-color: rgb(104, 104, 235);
+  border: none;
+  border-radius: 0.5rem;
+  outline: none;
+  padding: 0.1rem 0.7rem;
+  cursor: pointer;
 }
 
 /* modal container  */
 .modal-container {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    width: 100%;
-    height: 100%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, 0.7);
-    z-index: 9999;
-    opacity: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    pointer-events: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 9999;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
 }
 
 .show-modal {
-    opacity: 1;
-    pointer-events: all;
+  opacity: 1;
+  pointer-events: all;
 }
 
 .modal-context {
-    width: 30%;
-    background-color: #ccc;
-    text-align: center;
+  width: 30%;
+  background-color: #ccc;
+  text-align: center;
 }
 
 .game-over {
-    margin: 0.4rem 0rem 1rem;
-    text-transform: uppercase;
-    text-decoration: underline;
+  margin: 0.4rem 0rem 1rem;
+  text-transform: uppercase;
+  text-decoration: underline;
 }
 
 .game-score,
 .game-highestScore {
-    margin: 0.4rem 0rem;
+  margin: 0.4rem 0rem;
 }
 
 .btn {
-    padding: 0.3rem 0.6rem;
-    margin: 0.4rem 0rem 1rem;
-    font-size: 1rem;
-    border: 0.19rem solid black;
-    background-color: #ccc;
-    cursor: pointer;
+  padding: 0.3rem 0.6rem;
+  margin: 0.4rem 0rem 1rem;
+  font-size: 1rem;
+  border: 0.19rem solid black;
+  background-color: #ccc;
+  cursor: pointer;
 }
 
 .btn:hover {
-    background-color: #ddd;
+  background-color: #ddd;
 }
 
 .btn:active {
-    background-color: #eee;
-    transform: scale(0.9);
+  background-color: #eee;
+  transform: scale(0.9);
 }
 
-@media (max-width : 500px) {
-    .game-container {
-        width: 90vmin;
-        height: 90vmin;
-        background-color: red;
-        margin-top: 3rem;
-    }
+@media (max-width: 500px) {
+  .game-container {
+    width: 90vmin;
+    height: 90vmin;
+    background-color: red;
+    margin-top: 3rem;
+  }
 
-    .game-control {
-        display: flex;
-    }
+  .game-control {
+    display: flex;
+  }
 
-    .modal-context {
-        width: 50%;
-    }
+  .modal-context {
+    width: 50%;
+  }
 }
