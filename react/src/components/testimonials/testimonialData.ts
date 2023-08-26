@@ -5,6 +5,6 @@ export const testimonials = [
     role: 'Frontend Engineer',
     img: 'https://avatars.githubusercontent.com/u/1111111',
     comment:
-      'Great resource for learning and frontend interview preparation. It helped me to crack broswer coding rounds of multiple compnaies',
+      'Great resource for learning and frontend interview preparation. It helped me to crack browser coding rounds of multiple companies',
   },
 ];
