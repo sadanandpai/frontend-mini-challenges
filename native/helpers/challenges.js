@@ -83,6 +83,14 @@ export const challenges = [
     isNew: true,
   },
   {
+    title: 'Bill Split',
+    link: 'bill-spill',
+    difficulty: 'medium',
+    developer: 'Sukomal07',
+    tags: [],
+    isNew: true,
+  },
+  {
     title: 'Toast Popup',
     link: 'toast-popup',
     difficulty: 'medium',
@@ -354,12 +362,4 @@ export const challenges = [
   { title: 'Emoji Editor', link: '#' },
   { title: 'Sort Table', link: '#' },
   { title: 'Infinite Scroll', link: '#' },
-  {
-    title: 'bill-spill',
-    link: 'bill-spill',
-    difficulty: 'medium',
-    developer: 'sukomal07',
-    tags: [],
-    isNew: true,
-  }
 ];
