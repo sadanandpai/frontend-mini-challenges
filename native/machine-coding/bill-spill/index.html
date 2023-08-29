@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bill Spill</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h4 class="title">Bill Spill</h4>
+        <div class="bill-container">
+            <div class="left">
+                <div class="input-container">
+                    <label for="amount">Bill</label>
+                    <div class="amount-container">
+                        <span>&#8377;</span>
+                        <input type="number" class="amount" name="amount" id="amount" autofocus>
+                    </div>
+                </div>
+                <div class="tip-container">
+                    <label>Select Tip</label>
+                    <div class="btn-tip">
+                        <button class="btn" id="five">5&#37;</button>
+                        <button class="btn" id="ten">10&#37;</button>
+                        <button class="btn" id="fifteen">15&#37;</button>
+                        <button class="btn" id="twentyFive">25&#37;</button>
+                        <button class="btn" id="fifty">50&#37;</button>
+                        <button class="btn" id="seventyfive">75&#37;</button>
+                    </div>
+                    <div class="customTip">
+                        <input type="number" id="customTip" placeholder="Custom Tip" disabled>
+                    </div>
+                </div>
+                <div class="people-container">
+                    <label>Number Of People</label>
+                    <input type="number" id="person" placeholder="No of people" disabled>
+                </div>
+                <button id="generate-bill" class="generate">Generate Bill</button>
+            </div>
+            <div class="right">
+                <div class="total-amount">
+                    <div class="tip-amount">
+                        <h4>Tip amount</h4>
+                        <span class="tipValue"></span>
+                    </div>
+                    <div class="total">
+                        <h4>Total</h4>
+                        <span class="totalValue"></span>
+                    </div>
+                    <div class="total">
+                        <h4>Each Person Bill</h4>
+                        <span class="bill"></span>
+                    </div>
+                </div>
+                <button id="reset">Reset</button>
+            </div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>
