@@ -24,10 +24,6 @@ function Testimonials() {
         }}
         modules={[Pagination, Navigation]}
       >
-        {testimonials.map((testimonial) => (
-          <Testimonial testimonial={testimonial} key={testimonial.id} />
-        ))}
-
         <swiper-slide>
           <article className={styles.testimonial}>
             <h3 className="text-center">
@@ -39,6 +35,10 @@ function Testimonials() {
             </h3>
           </article>
         </swiper-slide>
+
+        {testimonials.map((testimonial) => (
+          <Testimonial testimonial={testimonial} key={testimonial.id} />
+        ))}
       </swiper-container>
     </section>
   );
