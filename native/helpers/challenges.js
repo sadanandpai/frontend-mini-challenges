@@ -354,4 +354,12 @@ export const challenges = [
   { title: 'Emoji Editor', link: '#' },
   { title: 'Sort Table', link: '#' },
   { title: 'Infinite Scroll', link: '#' },
+  {
+    title: 'bill-spill',
+    link: 'bill-spill',
+    difficulty: 'medium',
+    developer: 'sukomal07',
+    tags: [],
+    isNew: true,
+  }
 ];
