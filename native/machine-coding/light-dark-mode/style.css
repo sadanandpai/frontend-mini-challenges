@@ -4,6 +4,11 @@
   transition: 0.25s;
 }
 
+body.dark .navbar-app {
+  background: linear-gradient(180deg, yellow 0%, black 100%);
+  box-shadow: 0 4px 4px 0 rgba(255, 255, 255, 0.1);
+}
+
 .inner-container {
   margin: 1rem 0;
   padding: 2.5%;
