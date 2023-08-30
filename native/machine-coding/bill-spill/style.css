@@ -161,12 +161,13 @@ input[type='number']::-webkit-outer-spin-button {
 .total-amount {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 20px;
 }
 
 .tip-amount {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .tip-amount > h4 {
@@ -183,6 +184,7 @@ input[type='number']::-webkit-outer-spin-button {
 .total {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .total > h4 {
