@@ -10,21 +10,30 @@ if (window.location.hostname !== 'localhost') {
 const challengeLink = window.location.pathname.split('machine-coding/')[1].slice(0, -1);
 const challenge = challenges.find((challenge) => challenge.link === challengeLink);
 
-const navbarHTML = `<div class='left'>
-  <a href="/frontend-mini-challenges/native/" class="back">
-    &lt;
-  </a>
-  <a class="logo" href="/frontend-mini-challenges/">
-    <img src="https://sadanandpai.github.io/frontend-mini-challenges/react/dist/logo.png" alt="logo" />
-  </a>
+const navbarHTML = `
+  <div class='left'>
+    <a href="/frontend-mini-challenges/native/" class="back">
+      &lt;
+    </a>
+    <a class="logo" href="/frontend-mini-challenges/">
+      <img src="https://sadanandpai.github.io/frontend-mini-challenges/react/dist/logo.png" alt="logo" />
+    </a>
   </div>
 
   <h1>${challenge.title}</h1>
 
   <div class="right">
-  <a href="https://github.com/sadanandpai/frontend-mini-challenges/" target="blank">
-    <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="github repo" class="github" />
-  </a>
+    ${
+      challenge.youtube
+        ? `<a href="https://www.youtube.com/watch?v=9OIeUtXX3SA" target="blank">
+          <img src="https://cdn-icons-png.flaticon.com/256/1384/1384060.png" alt="youtube solution" class="github" />
+        </a>`
+        : ''
+    }
+    
+    <a href="https://github.com/sadanandpai/frontend-mini-challenges/" target="blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="github repo" class="github" />
+    </a>
   </div>
 `;
 

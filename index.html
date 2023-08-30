@@ -19,8 +19,12 @@
   </head>
   <body>
     <script>
-      window.location =
-        "https://sadanandpai.github.io/frontend-mini-challenges/react/dist/";
+      if (window.location.hostname === "localhost") {
+        window.location = "native/";
+      } else {
+        window.location =
+          "https://sadanandpai.github.io/frontend-mini-challenges/react/dist/";
+      }
     </script>
   </body>
 </html>

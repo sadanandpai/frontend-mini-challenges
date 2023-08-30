@@ -144,4 +144,5 @@ button.btn:disabled,
   width: 30px;
   height: 30px;
   vertical-align: text-bottom;
+  margin-left: 1rem;
 }
