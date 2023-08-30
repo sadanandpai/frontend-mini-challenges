@@ -4,6 +4,7 @@ export const challenges = [
     link: 'counter',
     difficulty: 'easy',
     developer: 'sadanandpai',
+    youtube: 'https://youtu.be/9OIeUtXX3SA',
     tags: [],
   },
   {
@@ -11,6 +12,7 @@ export const challenges = [
     link: 'guess-the-number',
     difficulty: 'easy',
     developer: 'sadanandpai',
+    youtube: 'https://youtu.be/L1Da3GWEGpY',
     tags: [],
   },
   {
