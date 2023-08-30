@@ -25,7 +25,7 @@ const navbarHTML = `
   <div class="right">
     ${
       challenge.youtube
-        ? `<a href="https://www.youtube.com/watch?v=9OIeUtXX3SA" target="blank">
+        ? `<a href=${challenge.youtube} target="blank">
           <img src="https://cdn-icons-png.flaticon.com/256/1384/1384060.png" alt="youtube solution" class="github" />
         </a>`
         : ''
