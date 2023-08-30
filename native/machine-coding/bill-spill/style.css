@@ -1,49 +1,33 @@
 @import url(../../helpers/core.css);
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-body {
-  background: #d6bcff;
-}
-.container {
-  width: 90%;
-  margin: auto;
-  padding-top: 3%;
-}
-.title {
-  text-align: center;
-  color: #6f3cff;
-  font-size: 30px;
-}
 .bill-container {
   margin: auto;
-  margin-top: 50px;
   display: flex;
-  padding: 38px;
   background-color: #fff;
   justify-content: space-between;
   border-radius: 10px;
   max-width: 700px;
   gap: 20px;
 }
+
 .left {
   width: 100%;
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
+
 .input-container {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
+
 .input-container > label {
   color: #6f3cff;
   font-size: 20px;
 }
+
 .amount-container {
   display: flex;
   width: 100%;
@@ -55,6 +39,7 @@ body {
   gap: 10px;
   color: #6f3cff;
 }
+
 .amount-container > input {
   border: none;
   outline: none;
@@ -64,6 +49,7 @@ body {
   font-size: 20px;
   color: #6f3cff;
 }
+
 input[type='number']::-webkit-inner-spin-button,
 input[type='number']::-webkit-outer-spin-button {
   -webkit-appearance: none;
@@ -71,15 +57,18 @@ input[type='number']::-webkit-outer-spin-button {
   appearance: none;
   margin: 0;
 }
+
 .tip-container {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
+
 .tip-container > label {
   color: #6f3cff;
   font-size: 20px;
 }
+
 .btn-tip {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(65px, 1fr));
@@ -89,6 +78,7 @@ input[type='number']::-webkit-outer-spin-button {
 .customTip {
   width: 100%;
 }
+
 .customTip > input {
   width: 100%;
   height: 35px;
@@ -99,6 +89,7 @@ input[type='number']::-webkit-outer-spin-button {
   background-color: #ccc;
   color: #6f3cff;
 }
+
 .btn {
   padding: 10px;
   border: none;
@@ -107,24 +98,29 @@ input[type='number']::-webkit-outer-spin-button {
   font-size: 20px;
   cursor: not-allowed;
 }
+
 .btn.true {
   background-color: #9c60ff;
   cursor: pointer;
 }
+
 .btn.active {
   background-color: #9c60ff;
   border: 3px solid #4200ff;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25);
 }
+
 .people-container {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
+
 .people-container > label {
   color: #6f3cff;
   font-size: 20px;
 }
+
 .people-container > input {
   width: 100%;
   height: 35px;
@@ -135,6 +131,7 @@ input[type='number']::-webkit-outer-spin-button {
   background-color: #ccc;
   color: #6f3cff;
 }
+
 .generate {
   width: 100%;
   height: 40px;
@@ -144,10 +141,12 @@ input[type='number']::-webkit-outer-spin-button {
   cursor: not-allowed;
   color: white;
 }
+
 .generate.active {
   background-color: #9c60ff;
   cursor: pointer;
 }
+
 .right {
   background: #9c60ff;
   width: 100%;
@@ -158,6 +157,7 @@ input[type='number']::-webkit-outer-spin-button {
   padding: 30px;
   border-radius: 10px;
 }
+
 .total-amount {
   display: flex;
   flex-direction: column;
@@ -169,29 +169,35 @@ input[type='number']::-webkit-outer-spin-button {
   justify-content: space-between;
   align-items: center;
 }
+
 .tip-amount > h4 {
   font-size: 16px;
   color: #fff;
 }
+
 .tip-amount > span {
   font-size: 25px;
   color: #c39fff;
   font-weight: 700;
 }
+
 .total {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
 .total > h4 {
   font-size: 16px;
   color: #fff;
 }
+
 .total > span {
   font-size: 25px;
   color: #c39fff;
   font-weight: 700;
 }
+
 #reset {
   padding: 12px;
   border: none;
@@ -202,6 +208,7 @@ input[type='number']::-webkit-outer-spin-button {
   width: 100%;
   cursor: not-allowed;
 }
+
 #reset.active {
   background-color: #ffffff;
   color: #9c60ff;
