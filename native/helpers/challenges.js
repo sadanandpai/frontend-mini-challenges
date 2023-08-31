@@ -36,7 +36,6 @@ export const challenges = [
     difficulty: 'easy',
     developer: 'sahankatta',
     tags: [],
-    isNew: true,
   },
   {
     title: 'Light & Dark mode',
@@ -44,6 +43,14 @@ export const challenges = [
     difficulty: 'easy',
     developer: 'sadanandpai',
     tags: [],
+  },
+  {
+    title: 'Color Generator',
+    link: 'color-generator',
+    difficulty: 'easy',
+    developer: 'Sukomal07',
+    tags: [],
+    isNew: true,
   },
   {
     title: 'Skeleton Loader',
@@ -67,7 +74,6 @@ export const challenges = [
     difficulty: 'easy',
     developer: 'christian-lee1398',
     tags: [],
-    isNew: true,
   },
   {
     title: 'Multi Typing',
@@ -142,14 +148,6 @@ export const challenges = [
     difficulty: 'medium',
     developer: 'sadanandpai',
     tags: [],
-  },
-  {
-    title: 'Color Generator',
-    link: 'color-generator',
-    difficulty: 'easy',
-    developer: 'Sukomal07',
-    tags: [],
-    isNew: true,
   },
   {
     title: 'Color Spotter',
@@ -257,7 +255,6 @@ export const challenges = [
     difficulty: 'medium',
     developer: 'sadanandpai',
     tags: [],
-    isNew: true,
   },
   {
     title: 'Quiz App',
@@ -296,7 +293,6 @@ export const challenges = [
     difficulty: 'medium',
     developer: 'caesar003',
     tags: [],
-    isNew: true,
   },
   {
     title: 'Carousel',
