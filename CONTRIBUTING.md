@@ -15,7 +15,9 @@
 
 - The challenge should be added as a separate folder that should be named with the name of the challenge inside `/native/machine-coding/`
 - Challenge should have a minimum of index.html
+- Import navbar js file in the head `<script src="../../helpers/navbar.js" type="module"></script>`
 - JavaScript and CSS code if exists should have separate file[s]
+- Include standard styles in css at top of CSS file `@import url(../../helpers/core.css);`
 - Challenge should be added to the array of challenges `/native/helpers/challenges.js`
 
 ##### Steps to Contribute React Challenge

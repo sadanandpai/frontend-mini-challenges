@@ -1,24 +1,12 @@
 @import url(../../helpers/core.css);
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-body {
-  height: 100vh;
-  margin: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: Arial, sans-serif;
-  background: linear-gradient(to right, #f6d365, #fda085);
-}
 .gradient {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: calc(100vh - 73px);
   background: linear-gradient(to right, red, yellow);
+  margin-top: -15px;
 }
+
 .btn-container {
   position: absolute;
   top: 50%;
@@ -29,10 +17,12 @@ body {
   justify-content: center;
   margin-top: 20px;
 }
+
 .btn {
   display: block;
   padding: 10px 20px;
-  background-color: gray;
+  background-color: black;
+  color: white;
   border: none;
   border-radius: 5px;
   font-size: 16px;
@@ -40,9 +30,10 @@ body {
   cursor: pointer;
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
   transition: transform 0.2s ease-in-out;
-  margin-right: 10px;
+  margin-right: 20px;
 }
+
 .btn:hover {
-  transform: translateY(-10px);
+  transform: scale(1.05);
   box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3);
 }
