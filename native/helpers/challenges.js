@@ -142,6 +142,14 @@ export const challenges = [
     tags: [],
   },
   {
+    title: 'Color Generator',
+    link: 'color-generator',
+    difficulty: 'easy',
+    developer: 'Sukomal07',
+    tags: [],
+    isNew: true,
+  },
+  {
     title: 'Color Spotter',
     link: 'color-spotter',
     difficulty: 'medium',
