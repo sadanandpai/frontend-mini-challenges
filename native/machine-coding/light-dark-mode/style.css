@@ -5,8 +5,14 @@
 }
 
 body.dark .navbar-app {
-  background: linear-gradient(180deg, yellow 0%, black 100%);
+  background: linear-gradient(to bottom, #292929, #121212);
   box-shadow: 0 4px 4px 0 rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+body.dark .navbar-app a img {
+  -webkit-filter: invert(1);
+  filter: invert(1);
 }
 
 .inner-container {
@@ -16,14 +22,14 @@ body.dark .navbar-app {
 }
 
 body.dark,
-#innnerThemeSwitch:checked + .inner-container,
-body.dark #innnerThemeSwitch:checked + .inner-container {
+#innnerThemeSwitch:checked+.inner-container,
+body.dark #innnerThemeSwitch:checked+.inner-container {
   color: canvas;
   background-color: canvasText;
 }
 
-#innnerThemeSwitch + .inner-container,
-body.dark #innnerThemeSwitch + .inner-container {
+#innnerThemeSwitch+.inner-container,
+body.dark #innnerThemeSwitch+.inner-container {
   color: canvasText;
   background-color: canvas;
 }
