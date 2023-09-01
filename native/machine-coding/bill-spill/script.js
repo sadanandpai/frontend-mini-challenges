@@ -15,9 +15,11 @@ let people = 0;
 function validateInput() {
   if (billValue > 0 && tip > 0 && people > 0) {
     generateBill.classList.add('active');
+    generateBill.disabled = false;
     return true;
   } else {
     generateBill.classList.remove('active');
+    generateBill.disabled = true;
     return false;
   }
 }
@@ -27,10 +29,12 @@ function validateBill() {
   tipButton.forEach((btn) => {
     if (billValue > 0) {
       btn.classList.add('true');
+      btn.disabled = false;
       customTip.disabled = false;
       noOfPeople.disabled = false;
     } else {
       btn.classList.remove('true');
+      btn.disabled = true;
       customTip.disabled = true;
       noOfPeople.disabled = true;
     }
@@ -76,6 +80,7 @@ function calculate() {
     totalValue.innerHTML = '&#8377;' + totalAmount.toFixed(2);
     eachPersonBill.innerHTML = '&#8377;' + divideBill.toFixed(2);
     resetBtn.classList.add('active');
+    resetBtn.disabled = false;
   }
 }
 
@@ -84,15 +89,20 @@ function handleReset() {
   validateBill();
   tipButton.forEach((btn) => {
     btn.classList.remove('true');
+    btn.disabled = true;
   });
+  tip = '';
+  customTip.value = '';
   selectTip();
   noOfPeople.value = '';
   setPeopleValue();
+  validateInput();
+  generateBill.disabled = true
   tipValue.innerHTML = '';
   totalValue.innerHTML = '';
   eachPersonBill.innerHTML = '';
   resetBtn.classList.remove('active');
-  validateInput();
+  resetBtn.disabled = true;
 }
 
 amount.addEventListener('input', validateBill);
