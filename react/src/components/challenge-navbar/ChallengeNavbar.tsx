@@ -7,7 +7,7 @@ interface Props {
 function ChallengeNavbar({ title }: Props) {
   return (
     <nav className={styles.navbar}>
-      <div className={styles.links}>
+      <div className={styles.left}>
         <a href="#/challenges" className={styles.back}>
           &lt;
         </a>
@@ -18,9 +18,11 @@ function ChallengeNavbar({ title }: Props) {
 
       <h1>{title}</h1>
 
-      <a href="https://github.com/sadanandpai/frontend-mini-challenges/" target="blank">
-        <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="github repo" className={styles.github} />
-      </a>
+      <div className={styles.right}>
+        <a href="https://github.com/sadanandpai/frontend-mini-challenges/" target="blank">
+          <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="github repo" className={styles.github} />
+        </a>
+      </div>
     </nav>
   );
 }

@@ -4,6 +4,7 @@ export const challenges = [
     link: 'counter',
     difficulty: 'easy',
     developer: 'sadanandpai',
+    youtube: 'https://youtu.be/9OIeUtXX3SA',
     tags: [],
   },
   {
@@ -11,6 +12,7 @@ export const challenges = [
     link: 'guess-the-number',
     difficulty: 'easy',
     developer: 'sadanandpai',
+    youtube: 'https://youtu.be/L1Da3GWEGpY',
     tags: [],
   },
   {
@@ -29,11 +31,26 @@ export const challenges = [
     tags: [],
   },
   {
+    title: 'Dialog Popup',
+    link: 'dialog-popup',
+    difficulty: 'easy',
+    developer: 'sahankatta',
+    tags: [],
+  },
+  {
     title: 'Light & Dark mode',
     link: 'light-dark-mode',
     difficulty: 'easy',
     developer: 'sadanandpai',
     tags: [],
+  },
+  {
+    title: 'Color Generator',
+    link: 'color-generator',
+    difficulty: 'easy',
+    developer: 'Sukomal07',
+    tags: [],
+    isNew: true,
   },
   {
     title: 'Skeleton Loader',
@@ -57,7 +74,6 @@ export const challenges = [
     difficulty: 'easy',
     developer: 'christian-lee1398',
     tags: [],
-    isNew: true,
   },
   {
     title: 'Multi Typing',
@@ -67,10 +83,10 @@ export const challenges = [
     tags: [],
   },
   {
-    title: 'Dialog Popup',
-    link: 'dialog-popup',
+    title: 'Bill Split',
+    link: 'bill-spill',
     difficulty: 'easy',
-    developer: 'sahankatta',
+    developer: 'Sukomal07',
     tags: [],
     isNew: true,
   },
@@ -79,14 +95,6 @@ export const challenges = [
     link: 'meme-generator',
     difficulty: 'medium',
     developer: 'noorulaink00',
-    tags: [],
-    isNew: true,
-  },
-  {
-    title: 'Bill Split',
-    link: 'bill-spill',
-    difficulty: 'medium',
-    developer: 'Sukomal07',
     tags: [],
     isNew: true,
   },
@@ -140,14 +148,6 @@ export const challenges = [
     difficulty: 'medium',
     developer: 'sadanandpai',
     tags: [],
-  },
-  {
-    title: 'Color Generator',
-    link: 'color-generator',
-    difficulty: 'easy',
-    developer: 'Sukomal07',
-    tags: [],
-    isNew: true,
   },
   {
     title: 'Color Spotter',
@@ -255,7 +255,6 @@ export const challenges = [
     difficulty: 'medium',
     developer: 'sadanandpai',
     tags: [],
-    isNew: true,
   },
   {
     title: 'Quiz App',
@@ -294,7 +293,6 @@ export const challenges = [
     difficulty: 'medium',
     developer: 'caesar003',
     tags: [],
-    isNew: true,
   },
   {
     title: 'Carousel',
