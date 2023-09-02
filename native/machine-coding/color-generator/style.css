@@ -1,46 +1,7 @@
 @import url(../../helpers/core.css);
 
-<<<<<<< HEAD
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-=======
-.gradient {
-  width: 100%;
-  height: calc(100vh - 73px);
-  background: linear-gradient(to right, red, yellow);
-  margin-top: -15px;
-}
-
-.btn-container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 20px;
-}
-
-.btn {
-  display: block;
-  padding: 10px 20px;
-  background-color: black;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
-  font-weight: 500;
-  cursor: pointer;
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
-  transition: transform 0.2s ease-in-out;
-  margin-right: 20px;
-}
-
-.btn:hover {
-  transform: scale(1.05);
-  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3);
->>>>>>> 1916d5c46061c54cb68618db22d9c7f5b7979220
 }
