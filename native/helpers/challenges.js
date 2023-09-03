@@ -84,7 +84,7 @@ export const challenges = [
   },
   {
     title: 'Bill Split',
-    link: 'bill-spill',
+    link: 'bill-spilt',
     difficulty: 'easy',
     developer: 'Sukomal07',
     tags: [],
