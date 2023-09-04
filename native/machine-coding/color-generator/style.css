@@ -22,7 +22,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 .slider-container {
   position: relative;
@@ -82,6 +82,62 @@
   background-color: black;
   display: flex;
   border-radius: 50%;
+}
+.input-group {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 30px;
+  width: 100%;
+}
+.input-group > div {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.input-group > div > label {
+  font-weight: 500;
+}
+.input-group > div > input {
+  width: 100%;
+  padding: 0px 14px;
+  height: 45px;
+  box-shadow: inset #d8d8da 0 0 0 1px, inset white 0 0 0 100px !important;
+  border: none;
+  font-size: 15px;
+  border-radius: 10px;
+  text-align: center;
+}
+.input-group > div > select {
+  width: 100%;
+  padding: 0px 14px;
+  height: 45px;
+  border: none;
+  font-size: 15px;
+  border-radius: 10px;
+  box-shadow: inset #d8d8da 0 0 0 1px;
+  text-align: left;
+  cursor: pointer;
+}
+.buttons {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+.buttons > button {
+  width: 100%;
+  height: 45px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: inset #d8d8da 0 0 0 1px;
+  background: transparent;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.buttons .copyBtn {
+  background: #0066ff;
+  color: white;
 }
 
 .preview {
