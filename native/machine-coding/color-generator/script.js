@@ -1,28 +1,57 @@
-function generateGradient() {
-  let colors = [];
-  for (let i = 0; i < 2; i++) {
-    colors.push(getRandomColor());
+// Get references to HTML elements
+const slider = document.querySelector('.slider');
+const leftButton = document.querySelector('.leftButton');
+const rightButton = document.querySelector('.rightButton');
+const colorInput = document.getElementById('color');
+const positionInput = document.getElementById('position');
+const rotationInput = document.getElementById('rotation');
+const typeInput = document.getElementById('type');
+const randomButton = document.getElementById('random');
+const preview = document.querySelector('.preview');
+
+
+
+let isDragging = false
+
+function slide(button, event) {
+  isDragging = true
+  const initialX = event.clientX - button.getBoundingClientRect().left;
+  function onMouseMove(event) {
+    if (isDragging) {
+      const newPosition = Math.min(428, Math.max(0, event.clientX - slider.getBoundingClientRect().left - initialX));
+      button.style.transform = `translate3d(${newPosition}px, -50%, 0px)`;
+    }
   }
-  let gradient = 'linear-gradient(to right, ' + colors[0] + ', ' + colors[1] + ')';
-  document.querySelector('.gradient').style.background = gradient;
+  function onMouseUp() {
+    isDragging = false;
+    document.removeEventListener('mousemove', onMouseMove);
+    document.removeEventListener('mouseup', onMouseUp);
+  }
+
+  document.addEventListener('mousemove', onMouseMove);
+  document.addEventListener('mouseup', onMouseUp);
 }
 
-function getRandomColor() {
-  let letters = '0123456789ABCDEF';
-  let color = '#';
-  for (let i = 0; i < 6; i++) {
-    color += letters[Math.floor(Math.random() * 16)];
-  }
-  return color;
-}
+leftButton.addEventListener('mousedown', (event) => {
+  event.preventDefault();
+  leftButton.classList.add('active')
+  rightButton.classList.remove('active')
+  slide(leftButton, event)
+});
 
-function copyGradient() {
-  let gradient = document.querySelector('.gradient').style.background;
-  let tempInput = document.createElement('input');
-  tempInput.value = gradient;
-  document.body.appendChild(tempInput);
-  tempInput.select();
-  document.execCommand('copy');
-  document.body.removeChild(tempInput);
-  alert('Gradient copied to clipboard: ' + gradient);
-}
+
+rightButton.addEventListener('mousedown', (event) => {
+  event.preventDefault();
+  leftButton.classList.remove('active')
+  rightButton.classList.add('active')
+  slide(rightButton, event)
+});
+
+
+
+
+
+
+
+
+

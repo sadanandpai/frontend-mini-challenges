@@ -5,9 +5,12 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+.title {
+  font-size: 40px;
+  text-align: center;
+  padding: 3% 0;
+}
 .gradient {
-  height: 100vh;
   display: flex;
   gap: 30px;
   justify-content: center;
@@ -82,6 +85,10 @@
   background-color: black;
   display: flex;
   border-radius: 50%;
+}
+.active {
+  box-shadow: #0066ff 0 0 0 1px, rgba(0, 0, 0, 0.05) 0 10px 10px -5px, inset #fff 0 0 0 6px;
+  z-index: 3;
 }
 .input-group {
   display: grid;
