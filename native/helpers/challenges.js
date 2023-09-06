@@ -47,7 +47,7 @@ export const challenges = [
   {
     title: 'Color Generator',
     link: 'color-generator',
-    difficulty: 'easy',
+    difficulty: 'medium',
     developer: 'Sukomal07',
     tags: [],
     isNew: true,
