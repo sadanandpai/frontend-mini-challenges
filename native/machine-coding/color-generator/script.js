@@ -168,25 +168,48 @@ rightButton.addEventListener('touchstart', (event) => {
 });
 
 // create gradient from input
-function handleColorInput(input, colorVariable) {
-  const hexValue = input.value;
+
+leftcolorInput.addEventListener('input', () => {
+  const hexValue = leftcolorInput.value;
   if (/^#[0-9A-F]{6}$/i.test(hexValue)) {
     const rgbColor = hexToRgb(hexValue);
     if (rgbColor) {
-      colorVariable = `rgb(${rgbColor.r}, ${rgbColor.g}, ${rgbColor.b})`;
+      randomColor1 = `rgb(${rgbColor.r}, ${rgbColor.g}, ${rgbColor.b})`;
       updateGradient();
+      leftButtonSpan.style.background = `${randomColor1} ${leftPosition}%`;
     }
   }
-}
-
-leftcolorInput.addEventListener('input', () => {
-  handleColorInput(leftcolorInput, randomColor1);
-  leftButtonSpan.style.background = `${randomColor1} ${leftPosition}%`;
 });
 
 rightcolorInput.addEventListener('input', () => {
-  handleColorInput(rightcolorInput, randomColor2);
-  rightButtonSpan.style.background = `${randomColor2} ${leftPosition}%`;
+  const hexValue = rightcolorInput.value;
+  if (/^#[0-9A-F]{6}$/i.test(hexValue)) {
+    const rgbColor = hexToRgb(hexValue);
+    if (rgbColor) {
+      randomColor2 = `rgb(${rgbColor.r}, ${rgbColor.g}, ${rgbColor.b})`;
+      updateGradient();
+      rightButtonSpan.style.background = `${randomColor2} ${leftPosition}%`;
+    }
+  }
+});
+// chhange position 
+
+positionInput.addEventListener('change', (event) => {
+  const userInput = parseInt(positionInput.value);
+  if (!isNaN(userInput) && userInput >= 0 && userInput <= 100) {
+    if (leftButton.classList.contains('active')) {
+      leftPosition = userInput;
+      updateGradient();
+    } else if (rightButton.classList.contains('active')) {
+      rightPosition = userInput;
+      updateGradient();
+    } else {
+      leftButton.classList.add('active');
+      leftPosition = userInput;
+      updateGradient();
+    }
+    positionInput.value = `${userInput}%`;
+  }
 });
 
 // change on input
