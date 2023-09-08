@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="../../logo.svg" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="../../helpers/navbar.js" type="module"></script>
+    <script src="./script.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="gradient">
+      <div class="controlls">
+        <div class="slider-container">
+          <div class="leftButton">
+            <span></span>
+          </div>
+          <span class="slider"></span>
+          <div class="rightButton">
+            <span></span>
+          </div>
+        </div>
+        <div class="input-group">
+          <div>
+            <label for="leftcolor">Left Color</label>
+            <input type="text" placeholder="#F4D941" id="leftcolor" />
+          </div>
+          <div>
+            <label for="rightcolor">Right Color</label>
+            <input type="text" placeholder="#F4D941" id="rightcolor" />
+          </div>
+          <div>
+            <label for="position">Position</label>
+            <input type="text" value="0%" id="position" />
+          </div>
+          <div>
+            <label for="rotation">Rotation</label>
+            <input type="text" id="rotation" />
+          </div>
+        </div>
+        <div class="buttons">
+          <button class="randomBtn" id="random">Random</button>
+          <button class="copyBtn" id="copy">Copy CSS</button>
+        </div>
+      </div>
+      <div class="preview" id="preview">
+        <span class="full-screen"
+          ><img src="https://cdn-icons-png.flaticon.com/128/7344/7344574.png" alt="full screen" class="full-screenImg"
+        /></span>
+        <span class="close"
+          ><img src="https://cdn-icons-png.flaticon.com/128/2961/2961937.png" alt="close" class="closeImg"
+        /></span>
+      </div>
+    </div>
+  </body>
+</html>

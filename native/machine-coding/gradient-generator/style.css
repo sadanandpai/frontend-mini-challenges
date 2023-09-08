@@ -5,12 +5,14 @@
   text-align: center;
   padding: 3% 0;
 }
+
 .gradient {
   display: flex;
   gap: 30px;
   justify-content: center;
   align-items: center;
 }
+
 .controlls {
   position: relative;
   min-width: 500px;
@@ -23,6 +25,7 @@
   align-items: center;
   justify-content: space-around;
 }
+
 .slider-container {
   position: relative !important;
   width: 100%;
@@ -30,6 +33,7 @@
   justify-content: space-between;
   align-items: center;
 }
+
 .leftButton {
   position: absolute;
   top: 50%;
@@ -46,17 +50,20 @@
   justify-content: center;
   transform: translate3d(0px, -50%, 0px);
 }
+
 .leftButton > span {
   width: 15px;
   height: 15px;
   display: flex;
   border-radius: 50%;
 }
+
 .slider {
   width: 100%;
   height: 12px;
   border-radius: 10px;
 }
+
 .rightButton {
   position: absolute;
   top: 50%;
@@ -72,30 +79,36 @@
   align-items: center;
   justify-content: center;
 }
+
 .rightButton > span {
   width: 15px;
   height: 15px;
   display: flex;
   border-radius: 50%;
 }
+
 .active {
   box-shadow: #0066ff 0 0 0 1px, rgba(0, 0, 0, 0.05) 0 10px 10px -5px, inset #fff 0 0 0 6px;
   z-index: 3;
 }
+
 .input-group {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   gap: 30px;
   width: 100%;
 }
+
 .input-group > div {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
+
 .input-group > div > label {
   font-weight: 500;
 }
+
 .input-group > div > input {
   width: 100%;
   padding: 0px 14px;
@@ -107,6 +120,7 @@
   text-align: center;
   text-transform: uppercase;
 }
+
 .input-group > div > select {
   width: 100%;
   padding: 0px 14px;
@@ -118,12 +132,14 @@
   text-align: left;
   cursor: pointer;
 }
+
 .buttons {
   width: 100%;
   display: flex;
   justify-content: center;
   gap: 30px;
 }
+
 .buttons > button {
   width: 100%;
   height: 45px;
@@ -135,6 +151,7 @@
   font-weight: bold;
   cursor: pointer;
 }
+
 .buttons .copyBtn {
   background: #0066ff;
   color: white;
@@ -147,6 +164,7 @@
   border-radius: 10px;
   box-shadow: inset rgba(0, 0, 0, 0.075) 0 0 0 1px;
 }
+
 .preview .full-screen {
   width: 20px;
   height: 20px;
@@ -155,10 +173,12 @@
   right: 4%;
   cursor: pointer;
 }
+
 .full-screenImg {
   width: 20px;
   height: 20px;
 }
+
 .close {
   display: none;
   position: absolute;
@@ -171,6 +191,7 @@
   width: 40px;
   height: 40px;
 }
+
 .full-screen-mode {
   position: fixed;
   top: 0;

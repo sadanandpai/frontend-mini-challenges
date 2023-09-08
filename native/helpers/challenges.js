@@ -45,14 +45,6 @@ export const challenges = [
     tags: [],
   },
   {
-    title: 'Color Generator',
-    link: 'color-generator',
-    difficulty: 'medium',
-    developer: 'Sukomal07',
-    tags: [],
-    isNew: true,
-  },
-  {
     title: 'Skeleton Loader',
     link: 'skeleton-loader',
     difficulty: 'easy',
@@ -162,6 +154,14 @@ export const challenges = [
     difficulty: 'medium',
     developer: 'sadanandpai',
     tags: [],
+  },
+  {
+    title: 'Gradient Generator',
+    link: 'gradient-generator',
+    difficulty: 'medium',
+    developer: 'Sukomal07',
+    tags: [],
+    isNew: true,
   },
   {
     title: 'Transfer List',

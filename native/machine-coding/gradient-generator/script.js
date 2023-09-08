@@ -15,7 +15,6 @@ const fullScreenBtn = document.querySelector('.full-screen');
 const closeBtn = document.querySelector('.close');
 
 //initial values
-
 let isDragging = false;
 let linearGradientValue;
 let rotation = 90;
@@ -26,16 +25,11 @@ let leftPosition = 0;
 let rightPosition = 100;
 let sliderWidth = parseInt(slider.getBoundingClientRect().width - 20);
 
-//update Gradient 
-
 function updateGradient() {
   linearGradientValue = `linear-gradient(${rotation}deg, ${randomColor1} ${leftPosition}%, ${randomColor2} ${rightPosition}%)`;
   preview.style.background = linearGradientValue;
   slider.style.background = linearGradientValue;
 }
-
-
-// generate random color
 
 function getRandomColor() {
   const r = Math.floor(Math.random() * 256);
@@ -43,7 +37,7 @@ function getRandomColor() {
   const b = Math.floor(Math.random() * 256);
   return `rgb(${r}, ${g}, ${b})`;
 }
-// convert to hex value
+
 function rgbToHex(r, g, b) {
   const toHex = (number) => {
     const hex = number.toString(16);
@@ -70,9 +64,6 @@ function hexToRgb(hex) {
 
   return { r, g, b };
 }
-
-
-// setRandom Color
 
 function setRandomColors() {
   randomColor1 = getRandomColor();
@@ -112,7 +103,9 @@ function slide(button, event) {
   function onMouseMove(event) {
     if (isDragging) {
       const clientX = event.type.startsWith('touch') ? event.touches[0].clientX : event.clientX;
-      const newPosition = parseInt(Math.min(sliderWidth, Math.max(0, clientX - slider.getBoundingClientRect().left - initialX)));
+      const newPosition = parseInt(
+        Math.min(sliderWidth, Math.max(0, clientX - slider.getBoundingClientRect().left - initialX))
+      );
 
       if (button === leftButton) {
         leftPosition = parseInt((newPosition / sliderWidth) * 100);
@@ -193,8 +186,8 @@ rightcolorInput.addEventListener('input', () => {
     }
   }
 });
-// chhange position 
 
+// chhange position
 positionInput.addEventListener('change', () => {
   const userInput = parseInt(positionInput.value);
   newPositionInPx = (userInput / 100) * sliderWidth;
@@ -227,7 +220,7 @@ rotationInput.addEventListener('change', () => {
   }
 });
 
-//generate random gradient on click 
+//generate random gradient on click
 randomButton.addEventListener('click', setRandomColors);
 copyButton.addEventListener('click', () => {
   document.execCommand('copy');
@@ -261,4 +254,3 @@ window.addEventListener('load', () => {
 window.addEventListener('resize', () => {
   handleWindowResize();
 });
-
