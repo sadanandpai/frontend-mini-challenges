@@ -21,6 +21,7 @@ let linearGradientValue;
 let rotation = 90;
 let randomColor1;
 let randomColor2;
+let newPositionInPx;
 let leftPosition = 0;
 let rightPosition = 100;
 let sliderWidth = parseInt(slider.getBoundingClientRect().width - 20);
@@ -194,18 +195,22 @@ rightcolorInput.addEventListener('input', () => {
 });
 // chhange position 
 
-positionInput.addEventListener('change', (event) => {
+positionInput.addEventListener('change', () => {
   const userInput = parseInt(positionInput.value);
+  newPositionInPx = (userInput / 100) * sliderWidth;
   if (!isNaN(userInput) && userInput >= 0 && userInput <= 100) {
     if (leftButton.classList.contains('active')) {
       leftPosition = userInput;
+      leftButton.style.transform = `translate3d(${newPositionInPx}px, -50%, 0px)`;
       updateGradient();
     } else if (rightButton.classList.contains('active')) {
       rightPosition = userInput;
+      rightButton.style.transform = `translate3d(${newPositionInPx}px, -50%, 0px)`;
       updateGradient();
     } else {
       leftButton.classList.add('active');
       leftPosition = userInput;
+      leftButton.style.transform = `translate3d(${newPositionInPx}px, -50%, 0px)`;
       updateGradient();
     }
     positionInput.value = `${userInput}%`;
