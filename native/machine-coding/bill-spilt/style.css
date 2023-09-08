@@ -35,9 +35,10 @@
   height: 35px;
   padding: 10px;
   align-items: center;
-  background-color: #ccc;
   font-size: 20px;
   gap: 10px;
+  border: 1px solid black;
+  border-radius: 4px;
   color: #6f3cff;
 }
 
@@ -106,7 +107,7 @@ input[type='number']::-webkit-outer-spin-button {
 }
 
 .btn.active {
-  border: 4px solid rgba(255, 0, 0, 0.888);
+  outline: 4px solid rgba(255, 162, 0, 0.888);
 }
 
 .people-container {

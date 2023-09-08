@@ -2,7 +2,7 @@ import { addBugFender } from './analytics/bug-fender.js';
 import { addClarity } from './analytics/clarity.js';
 import { challenges } from './challenges.js';
 
-if (window.location.hostname !== 'localhost') {
+if (window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1') {
   addClarity();
   addBugFender();
 }
