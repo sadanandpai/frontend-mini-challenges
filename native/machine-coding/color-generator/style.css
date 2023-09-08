@@ -1,39 +1,198 @@
 @import url(../../helpers/core.css);
 
-.gradient {
-  width: 100%;
-  height: calc(100vh - 73px);
-  background: linear-gradient(to right, red, yellow);
-  margin-top: -15px;
+.title {
+  font-size: 40px;
+  text-align: center;
+  padding: 3% 0;
 }
-
-.btn-container {
+.gradient {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+}
+.controlls {
+  position: relative;
+  min-width: 500px;
+  min-height: 400px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.slider-container {
+  position: relative !important;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.leftButton {
   position: absolute;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.15) 0 0 0 1px, rgba(0, 0, 0, 0.05) 0 10px 10px -5px, inset #fff 0 0 0 6px;
+  cursor: -webkit-grab;
+  transition: border 0.15s ease, box-shadow 0.15s ease;
+  z-index: 2;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 20px;
+  transform: translate3d(0px, -50%, 0px);
 }
-
-.btn {
-  display: block;
-  padding: 10px 20px;
-  background-color: black;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
+.leftButton > span {
+  width: 15px;
+  height: 15px;
+  display: flex;
+  border-radius: 50%;
+}
+.slider {
+  width: 100%;
+  height: 12px;
+  border-radius: 10px;
+}
+.rightButton {
+  position: absolute;
+  top: 50%;
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.15) 0 0 0 1px, rgba(0, 0, 0, 0.05) 0 10px 10px -5px, inset #fff 0 0 0 6px;
+  cursor: -webkit-grab;
+  transition: border 0.15s ease, box-shadow 0.15s ease;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.rightButton > span {
+  width: 15px;
+  height: 15px;
+  display: flex;
+  border-radius: 50%;
+}
+.active {
+  box-shadow: #0066ff 0 0 0 1px, rgba(0, 0, 0, 0.05) 0 10px 10px -5px, inset #fff 0 0 0 6px;
+  z-index: 3;
+}
+.input-group {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 30px;
+  width: 100%;
+}
+.input-group > div {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.input-group > div > label {
   font-weight: 500;
+}
+.input-group > div > input {
+  width: 100%;
+  padding: 0px 14px;
+  height: 45px;
+  box-shadow: inset #d8d8da 0 0 0 1px, inset white 0 0 0 100px !important;
+  border: none;
+  font-size: 15px;
+  border-radius: 10px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.input-group > div > select {
+  width: 100%;
+  padding: 0px 14px;
+  height: 45px;
+  border: none;
+  font-size: 15px;
+  border-radius: 10px;
+  box-shadow: inset #d8d8da 0 0 0 1px;
+  text-align: left;
   cursor: pointer;
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
-  transition: transform 0.2s ease-in-out;
-  margin-right: 20px;
+}
+.buttons {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+.buttons > button {
+  width: 100%;
+  height: 45px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: inset #d8d8da 0 0 0 1px;
+  background: transparent;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.buttons .copyBtn {
+  background: #0066ff;
+  color: white;
 }
 
-.btn:hover {
-  transform: scale(1.05);
-  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3);
+.preview {
+  position: relative;
+  min-width: 500px;
+  min-height: 400px;
+  border-radius: 10px;
+  box-shadow: inset rgba(0, 0, 0, 0.075) 0 0 0 1px;
+}
+.preview .full-screen {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 6%;
+  right: 4%;
+  cursor: pointer;
+}
+.full-screenImg {
+  width: 20px;
+  height: 20px;
+}
+.close {
+  display: none;
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  cursor: pointer;
+}
+
+.closeImg {
+  width: 40px;
+  height: 40px;
+}
+.full-screen-mode {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+}
+
+@media only screen and (max-width: 900px) {
+  .title {
+    font-size: 25px;
+  }
+  .gradient {
+    flex-direction: column;
+  }
+  .controlls {
+    min-width: 90%;
+    gap: 30px;
+  }
+  .preview {
+    min-width: 90%;
+    margin-bottom: 20px;
+  }
 }
