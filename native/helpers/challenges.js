@@ -45,7 +45,7 @@ export const challenges = [
     tags: [],
   },
   {
-    title: 'Color Generator',
+    title: 'Color Gradient Generator',
     link: 'color-generator',
     difficulty: 'medium',
     developer: 'Sukomal07',
