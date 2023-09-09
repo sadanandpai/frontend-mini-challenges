@@ -1,7 +1,6 @@
 .app {
   display: flex;
   flex-direction: column;
-  max-width: 25%;
   margin: 10px auto;
 }
 
@@ -14,6 +13,7 @@
 
 .app .widget {
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
   margin-top: 5px;
 }
@@ -40,10 +40,12 @@
   border: none;
 }
 
-@media (width <= 600px) {
+@media (width >= 768px) {
+  .app {
+    width: 25%;
+  }
+  
   .app .widget {
-    display: flex;
-    flex-direction: column;
-    margin-top: 5px;
+    flex-direction: row;
   }
 }

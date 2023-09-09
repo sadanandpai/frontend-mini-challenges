@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from 'react';
 
-import styles from "./GuessNumber.module.css";
+import styles from './GuessNumber.module.css';
 
 export default function App() {
   const [l1, setL1] = useState();
@@ -48,6 +48,8 @@ export default function App() {
           id="input"
           type="number"
           value={num}
+          min="0"
+          max="100"
           placeholder="Guess-Number"
           onChange={(e) => setNum(Number(e.target.value))}
         />
@@ -55,7 +57,7 @@ export default function App() {
           <button type="reset" onClick={() => restart()}>
             Reset
           </button>
-          <button type="submit" onClick={(e) => check(e)} disabled={disable}>
+          <button type="submit" disabled={disable}>
             Check
           </button>
         </div>
