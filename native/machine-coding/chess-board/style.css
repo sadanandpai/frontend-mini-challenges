@@ -1,15 +1,13 @@
 @import url(../../helpers/core.css);
 
-* {
-  box-sizing: border-box;
-}
-
 .board {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
   margin: auto;
   border: 2px solid black;
+  width: min(90vw, 100vh - 160px);
+  height: min(90vw, 100vh - 160px);
 }
 
 .board > div {

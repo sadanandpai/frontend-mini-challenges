@@ -1,8 +1,5 @@
 const gridSize = 8;
 const board = document.querySelector('.board');
-const size = Math.min(window.innerWidth, window.innerHeight - 100) - 50;
-board.style.width = size + 'px';
-board.style.height = size + 'px';
 
 function createBoard(element, rows, cols = rows) {
   var gridDocFragment = document.createDocumentFragment();

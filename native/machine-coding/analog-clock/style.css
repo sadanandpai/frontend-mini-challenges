@@ -1,9 +1,9 @@
 @import url(../../helpers/core.css);
 
 .clock {
-  height: 300px;
-  width: 300px;
-  margin: auto;
+  height: min(80vh, 80vw);
+  width: min(80vh, 80vw);
+  margin: 2rem auto 0;
   border-radius: 50%;
   border: 2px solid black;
   display: flex;

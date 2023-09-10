@@ -15,7 +15,7 @@ for (let i = 0; i < clockDigits.length; i++) {
   clockDigitsEl.appendChild(digitsEl);
 }
 
-const getTimeInAngles = date => {
+const getTimeInAngles = (date) => {
   return {
     seconds: (clockDigits.length / 2) * date.getSeconds(),
     minutes: (clockDigits.length / 2) * date.getMinutes() + date.getSeconds() / 10,
