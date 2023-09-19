@@ -1,5 +1,5 @@
-import { FieldData } from './initialData';
-import styles from './styles.module.scss';
+import { FieldData } from '../utils/initialData';
+import styles from '../styles.module.scss';
 
 interface Props {
   fields: FieldData;

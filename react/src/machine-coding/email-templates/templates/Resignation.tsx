@@ -1,4 +1,4 @@
-import { FieldData } from '../initialData';
+import { FieldData } from '../utils/initialData';
 
 function Resignation({ name, companyName, effectiveDate, lastDate }: Partial<FieldData>) {
   console.log(effectiveDate);

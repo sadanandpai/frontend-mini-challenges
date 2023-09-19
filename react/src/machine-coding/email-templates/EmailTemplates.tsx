@@ -1,9 +1,9 @@
-import { FieldData, initialData } from './initialData';
+import { FieldData, initialData } from './utils/initialData';
 import { useReducer, useState } from 'react';
 
-import Fields from './Fields';
+import Fields from './components/Fields';
 import Resignation from './templates/Resignation';
-import TemplateSelector from './TemplateSelector';
+import TemplateSelector from './components/TemplateSelector';
 
 function EmailTemplates() {
   const [template, setTemplate] = useState('jobApplication');

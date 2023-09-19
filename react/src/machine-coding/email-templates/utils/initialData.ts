@@ -8,8 +8,8 @@ export interface FieldData {
 }
 
 export const initialData: FieldData = {
-  name: '',
-  companyName: '',
+  name: 'John Doe',
+  companyName: 'TwitX',
   effectiveDate: '',
   lastDate: '',
   position: '',
