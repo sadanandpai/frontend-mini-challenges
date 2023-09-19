@@ -51,6 +51,16 @@ export const challenges = new Map([
     },
   ],
   [
+    'email-templates',
+    {
+      title: 'Email Templates',
+      link: 'email-templates',
+      difficulty: 'medium',
+      developer: 'sadanandpai',
+      tags: [],
+    },
+  ],
+  [
     'star-Rating',
     {
       title: 'Star Rating',

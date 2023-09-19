@@ -1,0 +1,21 @@
+.select {
+  padding: 0.25rem;
+  font-size: 1rem;
+}
+
+.form {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 25px;
+  justify-content: space-between;
+  margin-top: 20px;
+
+  .formField {
+    white-space: nowrap;
+  }
+}
+
+.formInput {
+  padding: 0.25rem;
+  font-size: 1rem;
+}

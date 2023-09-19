@@ -12,9 +12,33 @@
   <body>
     <div class="container text-center">
       <div class="carousel" id="carousel">
-        <div class="handle left-handle" id="leftHandle"><</div>
-        <div class="handle right-handle" id="rightHandle">></div>
+        <button class="handle left-handle" id="leftHandle"><</button>
+        <button class="handle right-handle" id="rightHandle">></button>
       </div>
+
+      <form>
+        <div>
+          <label for="infinite">Infinite scroll</label>
+          <input type="checkbox" name="infinite" id="infinite" />
+        </div>
+        <div>
+          <label for="autoplay">Autoplay</label>
+          <input type="checkbox" name="autoplay" id="autoplay" />
+        </div>
+        <div>
+          <label for="autoplayInterval">Autoplay Interval</label>
+          <input
+            type="range"
+            name="autoplayInterval"
+            id="autoplayInterval"
+            min="1000"
+            max="5000"
+            value="3000"
+            step="1000"
+            disabled
+          />
+        </div>
+      </form>
     </div>
   </body>
 </html>

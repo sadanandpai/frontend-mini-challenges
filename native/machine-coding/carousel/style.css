@@ -27,7 +27,6 @@ img {
   width: 40px;
   height: 40px;
   padding: 8px 10px;
-  border: 2px solid black;
   border-radius: 50%;
   cursor: pointer;
   user-select: none;
@@ -51,17 +50,28 @@ img {
   justify-content: center;
   height: 20px;
   column-gap: 10px;
+  padding: 0;
 }
 
-.dot-holder > span {
-  width: 10px;
-  height: 10px;
+.dot-holder li {
+  list-style: none;
+}
+
+.dot-holder button {
+  width: 15px;
+  height: 15px;
   background: white;
-  border: 1px solid blue;
+  border: none;
   border-radius: 50%;
   box-shadow: 0 0 0 2px white inset;
+  background-color: lightgrey;
+  cursor: pointer;
 }
 
 .dot-holder .selected {
-  background-color: green;
+  background-color: blue;
+}
+
+form div {
+  margin: 10px 0;
 }

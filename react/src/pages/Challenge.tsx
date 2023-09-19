@@ -4,6 +4,7 @@ import AutocompleteOnline from '@/machine-coding/autocomplete-offline/autocomple
 import ChallengeNavbar from '@/components/challenge-navbar/ChallengeNavbar';
 import ColumnTable from '@/machine-coding/column-table/ColumnTable';
 import Counter from '@/machine-coding/counter/counter';
+import EmailTemplates from '@/machine-coding/email-templates/EmailTemplates';
 import FileExplorer from '@/machine-coding/file-explorer/App';
 import FoodRecipe from '@/machine-coding/food-recipe/App';
 import GuessNumber from '@/machine-coding/guess-number/App';
@@ -51,6 +52,7 @@ const reactChallenges = {
   'column-table': <ColumnTable />,
   'table-colorizer': <TableColorizer />,
   '25-5-clock': <TwentyfiveFiveClock />,
+  'email-templates': <EmailTemplates />,
 };
 
 function Challenge() {
