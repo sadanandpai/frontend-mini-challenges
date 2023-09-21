@@ -9,7 +9,7 @@
 
 .fw-bold {
   font-weight: bolder;
-  margin: 4px 0;
+  margin: 20px 0;
 }
 
 .accordion-header {
@@ -53,12 +53,6 @@
   overflow: hidden;
   transition: max-height 0.3s ease;
   border-radius: 12px;
-}
-
-.accordion-panel.open {
-  max-height: 1000px;
-  transition: max-height 0.3s ease;
-  margin: 10px 0;
 }
 
 .accordion-content {
