@@ -105,6 +105,7 @@ export const challenges = [
     link: 'toast-popup',
     difficulty: 'medium',
     developer: 'sadanandpai',
+    youtube: 'https://youtu.be/-p3N5bJXEK8',
     tags: [],
   },
   {
