@@ -1,56 +1,56 @@
 /* ExpensesList.css */
 
-.main-container {
-    max-width: 500px;
-    margin: 20px auto;
-    padding: 20px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    background-color: #fff;
-}
+.mainContainer {
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  background-color: #fff;
 
-h2 {
+  h2 {
     border-bottom: 2px solid #eee;
     padding-bottom: 10px;
     margin-bottom: 15px;
     font-size: 24px;
     color: #333;
-}
+  }
 
-ul {
+  ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-}
+  }
 
-li {
+  li {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 0;
     border-bottom: 1px solid #eee;
-}
+  }
 
-li:last-child {
+  li:last-child {
     border-bottom: none;
-}
+  }
 
-.btn-red {
+  .btnRed {
     padding: 5px 10px;
     font-size: 14px;
     color: #fff;
-    background-color: #FF4136; /* Red color for delete */
+    background-color: #ff4136; /* Red color for delete */
     border: none;
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.2s;
-}
+  }
 
-.btn-red:hover {
-    background-color: #FF3013;
-}
+  .btnRed:hover {
+    background-color: #ff3013;
+  }
 
-.btn-red:disabled {
+  .btnRed:disabled {
     background-color: #ccc;
     cursor: not-allowed;
+  }
 }

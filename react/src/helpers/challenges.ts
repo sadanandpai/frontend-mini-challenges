@@ -51,6 +51,28 @@ export const challenges = new Map([
     },
   ],
   [
+    'pagination',
+    {
+      title: 'Pagination',
+      link: 'pagination',
+      difficulty: 'easy',
+      developer: 'Pancratzia',
+      tags: [],
+      isNew: true,
+    },
+  ],
+  [
+    'stack',
+    {
+      title: 'Stack',
+      link: 'stack',
+      difficulty: 'easy',
+      developer: 'kumaratul60',
+      tags: [],
+      isNew: true,
+    },
+  ],
+  [
     'star-Rating',
     {
       title: 'Star Rating',
@@ -82,12 +104,12 @@ export const challenges = new Map([
     },
   ],
   [
-    'stack',
+    'expense-tracker',
     {
-      title: 'Stack',
-      link: 'stack',
+      title: 'Expense Tracker',
+      link: 'expense-tracker',
       difficulty: 'easy',
-      developer: 'kumaratul60',
+      developer: 'harsh472000',
       tags: [],
       isNew: true,
     },
@@ -100,17 +122,6 @@ export const challenges = new Map([
       difficulty: 'easy',
       developer: 'caesar003',
       tags: [],
-    },
-  ],
-  [
-    'expense-tracker',
-    {
-      title: 'Expense Tracker',
-      link: 'expense-tracker',
-      difficulty: 'easy',
-      developer: 'harsh472000',
-      tags: [],
-      isNew: true
     },
   ],
   [
@@ -272,5 +283,4 @@ export const challenges = new Map([
       tags: [],
     },
   ],
-  
 ]);

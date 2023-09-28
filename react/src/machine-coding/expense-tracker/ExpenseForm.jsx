@@ -1,10 +1,11 @@
-import React, { useState } from "react";
-import './css/ExpenseForm.css';
+import React, { useState } from 'react';
+
+import styles from './css/ExpenseForm.module.scss';
 
 function ExpenseForm({ onAddExpense }) {
-  const [date, setDate] = useState("");
-  const [amount, setAmount] = useState("");
-  const [category, setCategory] = useState("");
+  const [date, setDate] = useState('');
+  const [amount, setAmount] = useState('');
+  const [category, setCategory] = useState('');
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -12,21 +13,16 @@ function ExpenseForm({ onAddExpense }) {
       id: Date.now(),
       date,
       amount: parseFloat(amount),
-      category
+      category,
     });
-    setDate("");
-    setAmount("");
-    setCategory("");
+    setDate('');
+    setAmount('');
+    setCategory('');
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input
-        type="date"
-        value={date}
-        onChange={(e) => setDate(e.target.value)}
-        required
-      />
+    <form onSubmit={handleSubmit} className={styles.form}>
+      <input type="date" value={date} onChange={(e) => setDate(e.target.value)} required />
       <input
         type="number"
         value={amount}

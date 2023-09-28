@@ -1,8 +1,8 @@
-import React from 'react';
-import styles from './App.module.css';
 import { FOODS } from './data/data.js';
-import { useState } from 'react';
+import React from 'react';
 import { Table } from './components/Table/Table';
+import styles from './App.module.css';
+import { useState } from 'react';
 
 const App = () => {
   const ITEMS_PER_PAGE = 10;
@@ -18,7 +18,6 @@ const App = () => {
 
   return (
     <div className={styles.pagination_container}>
-      <h1 className={styles.title}>Food Pagination Example</h1>
       <Table
         data={paginatedData}
         currentPage={currentPage}

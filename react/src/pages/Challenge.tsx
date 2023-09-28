@@ -5,6 +5,7 @@ import ChallengeNavbar from '@/components/challenge-navbar/ChallengeNavbar';
 import ColumnTable from '@/machine-coding/column-table/ColumnTable';
 import Counter from '@/machine-coding/counter/counter';
 import EmailTemplates from '@/machine-coding/email-templates/EmailTemplates';
+import ExpenseTracker from '@/machine-coding/expense-tracker/App';
 import FileExplorer from '@/machine-coding/file-explorer/App';
 import FoodRecipe from '@/machine-coding/food-recipe/App';
 import GuessNumber from '@/machine-coding/guess-number/App';
@@ -12,6 +13,7 @@ import InfiniteScrolling from '@/machine-coding/infinite-scrolling';
 import InvestmentCalc from '@/machine-coding/investment-calculator/App';
 import LightDarkMode from '@/machine-coding/light-dark-mode/App';
 import MatchPair from '@/machine-coding/match-pair/MatchPair';
+import Pagination from '@/machine-coding/pagination/App';
 import PasswordGenerator from '@/machine-coding/password-generator/App';
 import PasswordStrength from '@/machine-coding/password-strength/passwordStrength';
 import ProgressBar from '@/machine-coding/progressbar/App';
@@ -23,7 +25,6 @@ import TelephoneFormatter from '@/machine-coding/telephone-formatter';
 import TicTacToe from '@/machine-coding/tic-tac-toe/App';
 import Toast from '@/machine-coding/toast-popup/toast';
 import TodoList from '@/machine-coding/todo-list/todo';
-import ExpenseTracker from '@/machine-coding/expense-tracker/App'
 import TwentyfiveFiveClock from '@/machine-coding/25-5-clock';
 import { challenges } from '@/helpers/challenges';
 import { useParams } from 'react-router-dom';
@@ -54,7 +55,8 @@ const reactChallenges = {
   'table-colorizer': <TableColorizer />,
   '25-5-clock': <TwentyfiveFiveClock />,
   'email-templates': <EmailTemplates />,
-  'expense-tracker': <ExpenseTracker />
+  'expense-tracker': <ExpenseTracker />,
+  pagination: <Pagination />,
 };
 
 function Challenge() {

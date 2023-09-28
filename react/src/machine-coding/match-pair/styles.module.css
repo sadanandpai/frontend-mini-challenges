@@ -36,7 +36,7 @@
   user-select: none;
   background-color: khaki;
   border-radius: 4px;
-  box-shadow: 0 5px 4px rgb(0 0 0 / 15%);
+  box-shadow: 0 5px 4px rgb(0, 0, 0, 15%);
   transition: all 1s;
   transform: rotateY(0deg);
   backface-visibility: hidden;

@@ -42,7 +42,8 @@
 
 @media (width >= 768px) {
   .app {
-    width: 25%;
+    width: 50%;
+    max-width: 500px;
   }
   
   .app .widget {
