@@ -23,6 +23,7 @@ import TelephoneFormatter from '@/machine-coding/telephone-formatter';
 import TicTacToe from '@/machine-coding/tic-tac-toe/App';
 import Toast from '@/machine-coding/toast-popup/toast';
 import TodoList from '@/machine-coding/todo-list/todo';
+import ExpenseTracker from '@/machine-coding/expense-tracker/App'
 import TwentyfiveFiveClock from '@/machine-coding/25-5-clock';
 import { challenges } from '@/helpers/challenges';
 import { useParams } from 'react-router-dom';
@@ -53,6 +54,7 @@ const reactChallenges = {
   'table-colorizer': <TableColorizer />,
   '25-5-clock': <TwentyfiveFiveClock />,
   'email-templates': <EmailTemplates />,
+  'expense-tracker': <ExpenseTracker />
 };
 
 function Challenge() {
