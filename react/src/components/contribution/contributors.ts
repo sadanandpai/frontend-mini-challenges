@@ -99,4 +99,9 @@ export const existingContributors = [
     avatar_url: 'https://avatars.githubusercontent.com/u/112691480?v=4',
     html_url: 'https://github.com/kalyan0922',
   },
+  {
+    login: 'harsh472000',
+    avatar_url: 'https://avatars.githubusercontent.com/u/55913938?v=4',
+    html_url: 'https://github.com/harsh472000',
+  }
 ];

@@ -103,6 +103,17 @@ export const challenges = new Map([
     },
   ],
   [
+    'expense-tracker',
+    {
+      title: 'Expense Tracker',
+      link: 'expense-tracker',
+      difficulty: 'easy',
+      developer: 'harsh472000',
+      tags: [],
+      isNew: true
+    },
+  ],
+  [
     'email-templates',
     {
       title: 'Email Templates',
@@ -261,4 +272,5 @@ export const challenges = new Map([
       tags: [],
     },
   ],
+  
 ]);
