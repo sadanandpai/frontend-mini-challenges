@@ -1,0 +1,53 @@
+.pagination_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: min(95%, 800px);
+    margin: 0 auto;
+}
+
+.title{
+    margin: 2rem 0;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.pagination{
+    width: 100%;
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.pagination button{
+    margin: 0 1rem;
+}
+
+.container_for_table{
+    width: 100%;
+}
+
+.table{
+    width: 100%;
+    text-align: center;
+}
+
+.thead tr th{
+    border: 1px solid beige;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    background-color: beige;
+}
+
+.tbody tr td{
+    border-bottom: 1px solid beige;
+    border-left: 1px solid beige;
+    border-right: 1px solid beige;
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+}
