@@ -379,4 +379,11 @@ export const challenges = [
   { title: 'Emoji Editor', link: '#' },
   { title: 'Sort Table', link: '#' },
   { title: 'Infinite Scroll', link: '#' },
+  {
+    title: 'Food Website',
+    link: 'https://65072ad6fbb37b52ebcf0b6c--radiant-macaron-33a884.netlify.app/#',
+    difficulty: 'Moderate',
+    developer: 'apu52',
+    tags: [],
+  },
 ];
