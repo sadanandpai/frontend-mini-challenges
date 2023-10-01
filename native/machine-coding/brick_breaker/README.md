@@ -7,7 +7,7 @@
 ## **Description 📃**
 - This is a classic Brick Breaking Game made using HTML & CSS only that we all know and love!
 
-## **functionalities 🎮**
+## **Functionalities 🎮**
 - Features of a classic Brick Breaking Game
 - Shows Remaining number of bricks on the top
 <br>
