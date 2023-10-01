@@ -17,14 +17,8 @@
 
 <br>
 
-## **Screenshots 📸**
+## **Working video 📹**
 ![brick](https://github.com/5h0ov/frontend-mini-challenges/assets/83227649/d7a4ef3e-6036-4ce2-b78a-dd5b352a69df)
 
 <br>
-<!-- add your screenshots like this -->
 
-  
-<br>
-
-## **Working video 📹**
-<!-- add your working video over here -->
