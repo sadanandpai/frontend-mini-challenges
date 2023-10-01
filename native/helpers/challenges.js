@@ -363,6 +363,13 @@ export const challenges = [
     tags: [],
   },
   {
+    title: 'Tilting Maze Game',
+    link: 'tilting-maze',
+    difficulty: 'hard',
+    developer: '5h0ov',
+    tags: [],
+  },
+  {
     title: 'Typeahead / Autocomplete (offline)',
     link: 'type-ahead',
     difficulty: 'hard',
