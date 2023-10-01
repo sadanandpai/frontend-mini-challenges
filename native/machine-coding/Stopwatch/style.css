@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap'); 
+
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&display=swap');
+*,
+*:before,
+*:after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #8c52ff;
+}
+
+.container {
+  background-color: #fff;
+  width: 40%;
+  min-width: 500px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  padding: 20px 0;
+  padding-bottom: 50px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.338);
+}
+
+.timer-display {
+  position: relative;
+  width: 92%;
+  background: #fff;
+  left: 4%;
+  font-family: "Roboto mono", monospace;
+  color: #8c52ff;
+  font-size: 30px;
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 5px;
+  box-shadow: 0 0 20px rgba(65, 5, 145, 0.25);
+}
+
+.buttons {
+  width: 90%;
+  margin: 60px auto 0 auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+.buttons button {
+  width: 120px;
+  height: 45px;
+  background-color: #8c52ff;
+  color: #fff;
+  border: none;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+}
+
+.buttons button:nth-last-child(2) {
+  background-color: #e35209;
+}
+
+.buttons button:nth-last-child(1) {
+  background-color: #f7df1e;
+}
+
+.buttons button:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+}
+.laps-container{
+  width: 88%;
+  margin: auto;
+  margin-top: 10px;
+  padding: 0 16px;
+  text-align: center;
+}
+.laps-container button{
+  height: 45px;
+  width: 100%;
+  border: none;
+  background-color: rgb(14, 171, 14);
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+  color: whitesmoke;
+}
+.laps-items{
+  position: absolute;
+  left: 50%;
+  top: 75%;
+  width: 40%;
+  min-width: 500px;
+  transform: translate(-50%);
+  /* background-color: #4f11cc; */
+  margin-top: 10px;
+  padding: 10px 0;
+  /* display: none; */
+}
+
+.laps-items .items{
+  list-style-type: none;
+  margin-top: 5px;
+  background-color: whitesmoke;
+  border-radius: 10px;
+  text-align: center;
+  padding: 10px 25px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/*  Media  Queries */
+@media screen and (max-width: 480px) {
+  .container{
+    min-width: fit-content;
+  }
+  .timer-display{
+    padding: 40px 0;
+    font-size: 26px;
+  }
+  .laps-container{
+    width: 95%;
+    padding: 0 10px;
+  }
+  .laps-items{
+    min-width: 354px;
+    top: 73%;
+  }
+}
