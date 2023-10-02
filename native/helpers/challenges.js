@@ -100,10 +100,9 @@ export const challenges = [
     tags: [],
     isNew: true,
   },
-  
   {
-    title: 'Bricker Breaker Game',
-    link: 'brick_breaker',
+    title: 'Brick Breaker',
+    link: 'brick-breaker',
     difficulty: 'medium',
     developer: '5h0ov',
     tags: [],
