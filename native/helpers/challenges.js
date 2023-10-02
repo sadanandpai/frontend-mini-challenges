@@ -371,6 +371,13 @@ export const challenges = [
     tags: [],
   },
   {
+    title: 'Shopping Cart',
+    link: 'shopping-cart',
+    difficulty: 'hard',
+    developer: 'Bhanu-code',
+    tags: [],
+  },
+  {
     title: 'Typeahead / Autocomplete (offline)',
     link: 'type-ahead',
     difficulty: 'hard',
@@ -387,4 +394,5 @@ export const challenges = [
   { title: 'Emoji Editor', link: '#' },
   { title: 'Sort Table', link: '#' },
   { title: 'Infinite Scroll', link: '#' },
+  
 ];
