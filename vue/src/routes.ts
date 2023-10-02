@@ -1,18 +1,24 @@
 import type { RouteRecordRaw } from 'vue-router'
 
+import Challenges from './pages/challenges.vue'
+import Challenge from './pages/challenge.vue'
+
+// All challenge components static imports here...
+import Counter from './machine-coding/counter/index.vue'
+
 const routes: RouteRecordRaw[] = [
-  { path: '/', component: () => import('./pages/challenges.vue') },
+  { path: '/', component: Challenges },
   {
     path: '/challenges',
     redirect: '/',
-    component: () => import('./pages/challenge.vue'),
+    component: Challenge,
     children: [
 
       // All challenge components here...
 
       {
         path: '/counter',
-        component: () => import('./machine-coding/counter/index.vue')
+        component: Counter
       }
     ]
   }
