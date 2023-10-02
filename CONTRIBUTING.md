@@ -37,4 +37,4 @@
 - The solution should be broken down into components as per requirement
 - CSS should be strictly **scoped CSS** to prevent pollution in global space
 - Challenge should be added, to its respective position, in the array of challenges `/vue/src/helpers/challenges.ts`
-- The component should be imported (preferably as a dynamic import) and added as a separate route in the `/vue/src/routes.ts` file.
+- The component should be (statically) imported and added as a separate route in the `/vue/src/routes.ts` file.
