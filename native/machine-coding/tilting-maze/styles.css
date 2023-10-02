@@ -1,14 +1,6 @@
 body {
-  --background-color: #ede6e3;
-  --wall-color: #36382e;
-  --joystick-color: #210124;
-  --joystick-head-color: rgba(255, 0, 0, 0.91);
-  --ball-color: #a90af2;
-  --end-color: #8b91dc;
-  --text-color: #210124;
-
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background-color: var(--background-color);
+  background-color: #ede6e3;
 }
 
 html,
@@ -46,13 +38,13 @@ body {
 #end {
   width: 65px;
   height: 65px;
-  border: 5px dashed var(--end-color);
+  border: 5px dashed #8b91dc;
   border-radius: 50%;
 }
 
 #joystick {
   position: relative;
-  background-color: var(--joystick-color);
+  background-color: #210124;
   border-radius: 50%;
   width: 50px;
   height: 50px;
@@ -65,7 +57,7 @@ body {
 
 #joystick-head {
   position: relative;
-  background-color: var(--joystick-head-color);
+  background-color: rgba(255, 0, 0, 0.91);
   border-radius: 50%;
   width: 20px;
   height: 20px;
@@ -98,7 +90,7 @@ body {
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
 
-  border-bottom: 10px solid var(--joystick-color);
+  border-bottom: 10px solid #210124;
 }
 
 .joystick-arrow:nth-of-type(2) {
@@ -110,7 +102,7 @@ body {
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
 
-  border-top: 10px solid var(--joystick-color);
+  border-top: 10px solid #210124;
 }
 
 .joystick-arrow:nth-of-type(3) {
@@ -122,7 +114,7 @@ body {
   border-top: 10px solid transparent;
   border-bottom: 10px solid transparent;
 
-  border-left: 10px solid var(--joystick-color);
+  border-left: 10px solid #210124;
 }
 
 .joystick-arrow:nth-of-type(4) {
@@ -134,7 +126,7 @@ body {
   border-top: 10px solid transparent;
   border-bottom: 10px solid transparent;
 
-  border-right: 10px solid var(--joystick-color);
+  border-right: 10px solid #210124;
 }
 
 #note {
@@ -142,7 +134,7 @@ body {
   grid-column: 2;
   text-align: center;
   font-size: 0.7em;
-  color: var(--text-color);
+  color: #210124;
   transition: opacity 2s;
 }
 
@@ -155,14 +147,14 @@ a:visited {
   margin-top: -5px;
   margin-left: -5px;
   border-radius: 50%;
-  background-color: var(--ball-color);
+  background-color: #a90af2;
   width: 10px;
   height: 10px;
 }
 
 .wall {
   position: absolute;
-  background-color: var(--wall-color);
+  background-color: #36382e;
   transform-origin: top center;
   margin-left: -5px;
 }
