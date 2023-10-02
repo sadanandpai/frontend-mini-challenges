@@ -19,7 +19,7 @@ function Hero() {
         </h3>
 
         <h3 className={styles.link}>
-          <a href="/frontend-mini-challenges/vue/#/dist/">VueJs Mini challenges</a>
+          <a href="/frontend-mini-challenges/vue/dist/#/">VueJs Mini challenges</a>
         </h3>
       </div>
 
