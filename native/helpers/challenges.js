@@ -100,6 +100,15 @@ export const challenges = [
     tags: [],
     isNew: true,
   },
+  
+  {
+    title: 'Bricker Breaker Game',
+    link: 'brick_breaker',
+    difficulty: 'medium',
+    developer: '5h0ov',
+    tags: [],
+    isNew: true,
+  },
   {
     title: 'Toast Popup',
     link: 'toast-popup',
