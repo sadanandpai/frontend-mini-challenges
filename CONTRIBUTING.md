@@ -9,7 +9,7 @@
 - Write clean and understandable code
 - Add comments wherever necessary
 - Build it responsively if mobile compatible
-- Try to maintain the challenges in the order of their difficult
+- Try to maintain the challenges in the order of their difficulty
 
 ##### Steps to Contribute JavaScript Challenge
 
@@ -28,3 +28,13 @@
 - CSS should be strictly **module CSS** to prevent pollution in global space
 - Challenge should be added to the array of challenges `/react/src/helpers/challenges.ts`
 - The component should be imported and added to their respective position in the array of challenges in `/react/src/pages/challenge/Challenge.tsx`
+
+
+##### Steps to Contribute VueJs Challenge
+
+- The challenge should be added as a separate folder that should be named with the name of the challenge inside `/vue/src/machine-coding/`
+- Challenge folder should have at least one `.vue` file
+- The solution should be broken down into components as per requirement
+- CSS should be strictly **scoped CSS** to prevent pollution in global space
+- Challenge should be added, to its respective position, in the array of challenges `/vue/src/helpers/challenges.ts`
+- The component should be imported (preferably as a dynamic import) and added as a separate route in the `/vue/src/routes.ts` file.

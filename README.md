@@ -17,10 +17,11 @@
 
 ## About
 
-This repo is created to list down all the popular frontend challenges which are recommended for learning and interviews. Challenges are solved both in vanilla JavaScript and React. You can both play with the UI and view the solutions.
+This repo is created to list down all the popular frontend challenges which are recommended for learning and interviews. Challenges are solved in vanilla JavaScript, React, and VueJs. You can both play with the UI and view the solutions.
 
 - Solutions to JavaScript challenges: [Click here](https://github.com/sadanandpai/frontend-mini-challenges/tree/main/native/machine-coding)
 - Solutions to React challenges: [Click here](https://github.com/sadanandpai/frontend-mini-challenges/tree/main/react/src/machine-coding)
+- Solutions to VueJs challenges: [Click here](https://github.com/sadanandpai/frontend-mini-challenges/tree/main/vue/src/machine-coding)
 
 <br/>
 
@@ -31,6 +32,10 @@ This repo is created to list down all the popular frontend challenges which are 
   - The challenges are standalone modules. Those can be viewed directly by opening the index file or live server
 - React Challenges
   - navigate to `react/`
+  - `npm install` (only one time installation is needed for all the challenges)
+  - `npm run dev`
+- VueJs Challenges
+  - navigate to `vue/`
   - `npm install` (only one time installation is needed for all the challenges)
   - `npm run dev`
 
