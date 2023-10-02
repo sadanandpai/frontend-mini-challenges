@@ -101,6 +101,14 @@ export const challenges = [
     isNew: true,
   },
   {
+    title: 'Brick Breaker',
+    link: 'brick-breaker',
+    difficulty: 'medium',
+    developer: '5h0ov',
+    tags: [],
+    isNew: true,
+  },
+  {
     title: 'Toast Popup',
     link: 'toast-popup',
     difficulty: 'medium',

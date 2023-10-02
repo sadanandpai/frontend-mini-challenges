@@ -5,7 +5,7 @@
 html {
   box-sizing: border-box;
   font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  scroll-behavior: smooth;  
+  scroll-behavior: smooth;
 }
 
 *,
@@ -33,7 +33,6 @@ a {
   text-align: center;
 }
 
-/* Button styling for global */
 button {
   cursor: pointer;
 }
