@@ -29,14 +29,17 @@ var mouseY = 0;
 /**********General GamePlay***********/
 
 window.onload = function () {
-  canvas = document.getElementById('gameCanvas');
-  canvasContext = canvas.getContext('2d');
+  canvas = document.getElementById("gameCanvas");
+  canvasContext = canvas.getContext("2d");
   var framesPerSecond = 30;
   setInterval(updateAll, 1000 / framesPerSecond);
 
-  canvas.addEventListener('mousemove', updateMousePos);
+  canvas.addEventListener("mousemove", updateMousePos);
+
   brickReset();
   ballRest();
+  canvas.addEventListener("touchstart", touchStart);
+  canvas.addEventListener("touchmove", touchMove);
 };
 
 function updateAll() {
@@ -72,6 +75,7 @@ function ballMove() {
   ballY += ballSpeedY;
   // ballY
   if (ballY > canvas.height) {
+    // ballSpeedY = -ballSpeedY;
     ballRest();
     brickReset();
   } else if (ballY < 0 && ballSpeedY > 0.0) {
@@ -98,7 +102,12 @@ function ballBrickColl() {
   var ballBrickCol = Math.floor(ballX / BRICK_W);
   var ballBrickRow = Math.floor(ballY / BRICK_H);
   var brickIndexUnderBall = rowColToArrayIndex(ballBrickCol, ballBrickRow);
-  if (ballBrickCol >= 0 && ballBrickCol < BRICK_COLS && ballBrickRow >= 0 && ballBrickRow < BRICK_ROWS) {
+  if (
+    ballBrickCol >= 0 &&
+    ballBrickCol < BRICK_COLS &&
+    ballBrickRow >= 0 &&
+    ballBrickRow < BRICK_ROWS
+  ) {
     if (isBrickAtColRow(ballBrickCol, ballBrickRow)) {
       brickGrid[brickIndexUnderBall] = false;
       brickCount--;
@@ -136,11 +145,12 @@ function ballBrickColl() {
   } else {
     updateScore(brickCount); // Update the score with the remaining brick count
   }
+  // colorText(ballBrickCol+","+ballBrickRow+": "+brickIndexUnderBall, mouseX, mouseY, 'white');
 }
 
 function updateScore(score) {
-  var scoreElement = document.getElementById('score');
-  scoreElement.textContent = 'Bricks Remaining: ' + score;
+  var scoreElement = document.getElementById("score");
+  scoreElement.textContent = "Bricks Remaining: " + score;
 }
 
 function paddleMove() {
@@ -179,6 +189,7 @@ function updateMousePos(evt) {
 
   mouseX = evt.clientX - rect.left - root.scrollLeft;
   mouseY = evt.clientY - rect.top - root.scrollTop;
+
   paddleX = mouseX - PADDLE_WIDTH / 2;
 
   // cheat to test ball in any position
@@ -187,15 +198,36 @@ function updateMousePos(evt) {
   // ballSpeedY = 4;
   // ballSpeedY = -4;
 }
+function touchStart(evt) {
+  var touch = evt.touches[0];
+  mouseX = touch.clientX;
+  mouseY = touch.clientY;
+  evt.preventDefault(); // Prevent default touch event behavior
+}
+
+function touchMove(evt) {
+  var touch = evt.touches[0];
+  mouseX = touch.clientX;
+  mouseY = touch.clientY;
+  paddleX = mouseX - PADDLE_WIDTH / 2;
+  evt.preventDefault(); // Prevent default touch event behavior
+}
+
 
 /**********GamePlay Draw functions***********/
 function playArea() {
   // gameCanvas
-  colorRect(0, 0, canvas.width, canvas.height, 'white');
+  colorRect(0, 0, canvas.width, canvas.height, "white");
   // ball
   colorCircle();
   // paddle
-  colorRect(paddleX, canvas.height - PADDLE_DIST_FROM_EDGE, PADDLE_WIDTH, PADDLE_THICKNESS, 'black');
+  colorRect(
+    paddleX,
+    canvas.height - PADDLE_DIST_FROM_EDGE,
+    PADDLE_WIDTH,
+    PADDLE_THICKNESS,
+    "black"
+  );
 
   drawbricks();
 }
@@ -219,17 +251,30 @@ function drawbricks() {
     for (var eachCol = 0; eachCol < BRICK_COLS; eachCol++) {
       var arrayIndex = rowColToArrayIndex(eachCol, eachRow);
       if (brickGrid[arrayIndex]) {
-        colorRect(BRICK_W * eachCol, BRICK_H * eachRow, BRICK_W - BRICK_GAP, BRICK_H - BRICK_GAP, 'green');
+        colorRect(
+          BRICK_W * eachCol,
+          BRICK_H * eachRow,
+          BRICK_W - BRICK_GAP,
+          BRICK_H - BRICK_GAP,
+          "green"
+        );
       } // if brick
     } // each brick
   } // each brickrow
 } // drawbricks
 
 function colorCircle() {
-  var gradient = canvasContext.createRadialGradient(ballX, ballY, 0, ballX, ballY, 10);
-  gradient.addColorStop(0, 'blue');
-  gradient.addColorStop(0.5, 'grey');
-  gradient.addColorStop(1, 'black');
+  var gradient = canvasContext.createRadialGradient(
+    ballX,
+    ballY,
+    0,
+    ballX,
+    ballY,
+    10
+  );
+  gradient.addColorStop(0, "blue");
+  gradient.addColorStop(0.5, "grey");
+  gradient.addColorStop(1, "black");
 
   canvasContext.fillStyle = gradient;
   canvasContext.beginPath();
