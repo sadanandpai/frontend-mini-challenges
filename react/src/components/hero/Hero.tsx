@@ -17,6 +17,10 @@ function Hero() {
         <h3 className={styles.link}>
           <a href="/frontend-mini-challenges/react/dist/#/challenges">React Mini challenges</a>
         </h3>
+
+        <h3 className={styles.link}>
+          <a href="/frontend-mini-challenges/vue/#/dist/">VueJs Mini challenges</a>
+        </h3>
       </div>
 
       <figure className={styles.figure}>
