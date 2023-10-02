@@ -5,6 +5,7 @@ import Challenge from './pages/challenge.vue'
 
 // All challenge components static imports here...
 import Counter from './machine-coding/counter/index.vue'
+import TelephoneFormatter from './machine-coding/telephone-formatter/index.vue'
 
 const routes: RouteRecordRaw[] = [
   { path: '/', component: Challenges },
@@ -19,6 +20,10 @@ const routes: RouteRecordRaw[] = [
       {
         path: '/counter',
         component: Counter
+      },
+      {
+        path: '/telephone-formatter',
+        component: TelephoneFormatter
       }
     ]
   }

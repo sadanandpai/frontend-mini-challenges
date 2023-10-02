@@ -78,7 +78,7 @@ export const challenges = new Map<string, Challenge>([
     'telephone-formatter',
     {
       title: 'Telephone formatter',
-      link: "#",
+      link: "/telephone-formatter",
       difficulty: 'easy',
     },
   ],
