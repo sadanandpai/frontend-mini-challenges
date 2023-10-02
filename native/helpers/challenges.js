@@ -107,7 +107,6 @@ export const challenges = [
     difficulty: 'medium',
     developer: '5h0ov',
     tags: [],
-    youtube: 'https://www.youtube.com/channel/UCYWgCjYT8_05-rLq0Xmbm-Q',
     isNew: true,
   },
   {
