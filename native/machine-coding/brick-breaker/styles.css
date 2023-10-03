@@ -21,3 +21,8 @@ body {
   color: white;
   padding: 10px;
 }
+@media only screen and (max-width: 800px) {
+  #gameCanvas {
+    width: 100%;
+  }
+}
