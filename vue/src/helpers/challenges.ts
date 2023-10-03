@@ -43,11 +43,13 @@ export const challenges = new Map<string, Challenge>([
     },
   ],
   [
-    'Guess-the-number',
+    'guess-the-number',
     {
       title: 'Guess the number',
-      link: "#",
+      link: "/guess-the-number",
       difficulty: 'easy',
+      developer: 'arpansaha13',
+      tags: [],
     },
   ],
   [
@@ -67,7 +69,7 @@ export const challenges = new Map<string, Challenge>([
     },
   ],
   [
-    'star-Rating',
+    'star-rating',
     {
       title: 'Star Rating',
       link: "#",
@@ -163,9 +165,9 @@ export const challenges = new Map<string, Challenge>([
     },
   ],
   [
-    'progressbar',
+    'progress-bar',
     {
-      title: 'Progressbar',
+      title: 'Progress Bar',
       link: '#',
       difficulty: 'medium',
     },
