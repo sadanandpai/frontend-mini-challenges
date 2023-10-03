@@ -30,8 +30,10 @@ export const challenges = new Map<string, Challenge>([
     'light-dark-mode',
     {
       title: 'Light Dark Mode',
-      link: '#',
+      link: '/light-dark-mode',
       difficulty: 'easy',
+      developer: 'arpansaha13',
+      tags: [],
     },
   ],
   [
@@ -82,6 +84,8 @@ export const challenges = new Map<string, Challenge>([
       title: 'Telephone formatter',
       link: "/telephone-formatter",
       difficulty: 'easy',
+      developer: 'arpansaha13',
+      tags: [],
     },
   ],
   [

@@ -7,6 +7,7 @@ import Challenge from './pages/challenge.vue'
 import Counter from './machine-coding/counter/index.vue'
 import TelephoneFormatter from './machine-coding/telephone-formatter/index.vue'
 import GuessTheNumber from './machine-coding/guess-the-number/index.vue'
+import LightDarkMode from './machine-coding/light-dark-mode/index.vue'
 
 const routes: RouteRecordRaw[] = [
   { path: '/', component: Challenges },
@@ -30,6 +31,10 @@ const routes: RouteRecordRaw[] = [
       {
         path: '/guess-the-number',
         component: GuessTheNumber
+      },
+      {
+        path: '/light-dark-mode',
+        component: LightDarkMode
       }
     ]
   }
