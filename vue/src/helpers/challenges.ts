@@ -40,8 +40,10 @@ export const challenges = new Map<string, Challenge>([
     'table-colorizer',
     {
       title: 'Table Colorizer',
-      link: '#',
+      link: '/table-colorizer',
       difficulty: 'easy',
+      developer: 'arpansaha13',
+      tags: [],
     },
   ],
   [
