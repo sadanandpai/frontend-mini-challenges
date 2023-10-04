@@ -125,6 +125,16 @@ export const challenges = new Map([
     },
   ],
   [
+    'bmi-calculator',
+    {
+      title: 'BMI Calculator',
+      link: 'bmi-calculator',
+      difficulty: 'easy',
+      developer: 'ashikjhonson',
+      tags: [],
+    },
+  ],
+  [
     'email-templates',
     {
       title: 'Email Templates',
