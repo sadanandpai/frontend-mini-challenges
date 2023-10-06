@@ -293,4 +293,14 @@ export const challenges = new Map([
       tags: [],
     },
   ],
+  [
+    'qr-code-generator',
+    {
+      title: 'QR code generator',
+      link: 'qr-code-generator',
+      difficulty: 'easy',
+      developer: 'Krishnakalani111',
+      tags: [],
+    },
+  ],
 ]);

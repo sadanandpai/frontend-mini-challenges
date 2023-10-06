@@ -27,6 +27,7 @@ import TicTacToe from '@/machine-coding/tic-tac-toe/App';
 import Toast from '@/machine-coding/toast-popup/toast';
 import TodoList from '@/machine-coding/todo-list/todo';
 import TwentyfiveFiveClock from '@/machine-coding/25-5-clock';
+import QRCodeGenerator from '@/machine-coding/qr-code-generator/App.jsx';
 import { challenges } from '@/helpers/challenges';
 import { useParams } from 'react-router-dom';
 
@@ -59,6 +60,7 @@ const reactChallenges = {
   'email-templates': <EmailTemplates />,
   'expense-tracker': <ExpenseTracker />,
   pagination: <Pagination />,
+  'qr-code-generator':<QRCodeGenerator/>,
 };
 
 function Challenge() {
