@@ -9,4 +9,5 @@ export const contributors = new Map([
   ['christian-lee1398', { name: 'Christian Lee', pic: 'https://avatars.githubusercontent.com/u/83561483' }],
   ['Sukomal07', { name: 'Sukomal Dutta', pic: 'https://avatars.githubusercontent.com/u/100500478' }],
   ['5h0ov', { name: 'Shuvadipta Das', pic: 'https://avatars.githubusercontent.com/u/83227649' }],
+  ['shruti-sen2004', { name: 'Shruti Sen', pic: 'https://avatars.githubusercontent.com/u/115914670' }],
 ]);

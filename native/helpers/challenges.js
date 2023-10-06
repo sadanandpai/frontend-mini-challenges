@@ -110,7 +110,7 @@ export const challenges = [
   },
   {
     title: 'Weather App',
-    link: 'Weather App',
+    link: 'weather-app',
     difficulty: 'medium',
     developer: 'shruti-sen2004',
     tags: [],
