@@ -1,0 +1,55 @@
+.App{
+    .container{
+        display: flex;        
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+
+        .input{
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+
+            input{
+                margin-bottom: 10px;
+                background-color: skyblue;
+                border-radius: 10px;
+                outline: none;
+                padding:10px;
+                width: 100px;
+                font-weight: bold;
+            }
+
+            .calculateButton{
+                cursor: pointer;
+                background-color: black;
+                color: white;
+                width: fit-content;
+                border-radius: 5px;
+                align-self: center;
+                padding: 5px 15px;
+            }
+        }   
+        .card{
+            margin: 20px 0px;
+            padding: 0px 20px;
+            background-color: burlywood;
+            border-radius: 10px;            
+
+            h1, h3{
+                text-align: center;
+                margin: 10px;
+            }            
+
+            .ranges{
+                padding-top: 16px;
+                font-weight: bold;
+            }
+
+            p{
+                margin: 5px;
+            }
+        }     
+    }
+}
