@@ -19,7 +19,6 @@
 body {
   background-color: rgb(70, 68, 68);
   font-family: 'Montserrat', sans-serif;
-  overflow-y: hidden;
 }
 body .main_container {
   padding: 3rem;
