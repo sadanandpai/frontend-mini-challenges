@@ -7,33 +7,32 @@ const App = () => {
   const [quote, setQuote] = useState<string | null>(null);
   const [author, setAuthor] = useState<string | null>(null);
   useEffect(() => {
-    submitHandler();
+    submitHandler(); // Generate Quotes when the page reloads
   }, []);
   const submitHandler = async (e?: React.FormEvent) => {
     if (e) {
-      e.preventDefault();
+      e.preventDefault(); //prevent page reload after clicking the button
     }
     try {
-      console.log(inputValue);
-      const res = await axios.get('https://api.quotable.io/quotes/random?tags=' + inputValue);
+      const res = await axios.get('https://api.quotable.io/quotes/random?tags=' + inputValue); //fetching the quote
 
       if (res.data && res.data.length > 0) {
         const newQuote = res.data[0].content;
         const newAuthor = res.data[0].author;
-        console.log(newQuote);
-        setQuote(newQuote);
-        setAuthor(`- ${newAuthor}`);
+        setQuote(newQuote); //setting the new quote
+        setAuthor(`- ${newAuthor}`); //setting the new author
       } else {
+        //message if quote not found
         setQuote('Sorry No Quotes Found Related to the given tags');
         setAuthor(null);
       }
     } catch (e) {
-      console.log(e);
+      console.log(e); //catch errors
     }
   };
 
   if (!quote) {
-    return <>Loading....</>;
+    return <>Loading....</>; //Load while the quote is being fetched
   }
 
   return (
