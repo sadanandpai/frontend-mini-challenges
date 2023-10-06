@@ -60,8 +60,10 @@ export const challenges = new Map<string, Challenge>([
     'pagination',
     {
       title: 'Pagination',
-      link: "#",
+      link: "/pagination",
       difficulty: 'easy',
+      developer: 'arpansaha13',
+      tags: [],
     },
   ],
   [
