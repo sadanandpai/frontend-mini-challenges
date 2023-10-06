@@ -109,6 +109,14 @@ export const challenges = [
     isNew: true,
   },
   {
+    title: 'Weather App',
+    link: 'Weather App',
+    difficulty: 'medium',
+    developer: 'shruti-sen2004',
+    tags: [],
+    isNew: true,
+  },
+  {
     title: 'Toast Popup',
     link: 'toast-popup',
     difficulty: 'medium',
