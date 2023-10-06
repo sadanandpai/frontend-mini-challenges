@@ -1,7 +1,7 @@
 import Accordion from '@/machine-coding/accordion/App';
 import Autocomplete from '@/machine-coding/autocomplete-offline/autocomplete';
 import AutocompleteOnline from '@/machine-coding/autocomplete-offline/autocompleteOnline';
-import BMICalculator from '@/machine-coding/bmi-calculator/BMICalculator';
+import BMICalculator from '@/machine-coding/bmi-calculator/App';
 import ChallengeNavbar from '@/components/challenge-navbar/ChallengeNavbar';
 import ColumnTable from '@/machine-coding/column-table/ColumnTable';
 import Counter from '@/machine-coding/counter/counter';
@@ -55,7 +55,7 @@ const reactChallenges = {
   'column-table': <ColumnTable />,
   'table-colorizer': <TableColorizer />,
   '25-5-clock': <TwentyfiveFiveClock />,
-  'bmi-calculator': <BMICalculator/>,
+  'bmi-calculator': <BMICalculator />,
   'email-templates': <EmailTemplates />,
   'expense-tracker': <ExpenseTracker />,
   pagination: <Pagination />,

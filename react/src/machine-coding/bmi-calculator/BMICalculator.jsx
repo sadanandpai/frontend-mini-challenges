@@ -1,10 +1,9 @@
-import style from './BMI.module.scss';
 import BMICard from './BMICard';
+import style from './BMI.module.scss';
 
 const BMICalculator = ({ handleHeightChange, handleWeightChange, BMI, calculateBMI, category }) => {
   return (
     <div className={style.container}>
-      <h1>BMI Calculator</h1>
       <div className={style.input}>
         <label htmlFor="height">
           Height <span>(in cm)</span>

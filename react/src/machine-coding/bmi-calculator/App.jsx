@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
+
 import BMICalculator from './BMICalculator';
 import style from './BMI.module.scss';
 
@@ -29,6 +30,7 @@ const App = () => {
       setHeight(0);
     }
   };
+
   const handleWeightChange = (event) => {
     try {
       const weight = parseFloat(event.target.value).toFixed(2);
@@ -41,6 +43,7 @@ const App = () => {
       setHeight(0);
     }
   };
+
   const calculateBMI = () => {
     if (height && weight) {
       const value = (weight / ((height * height) / 10000)).toFixed(2);
@@ -49,6 +52,7 @@ const App = () => {
       });
     }
   };
+
   return (
     <div className={style.App}>
       <BMICalculator
