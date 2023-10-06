@@ -22,9 +22,10 @@ const App = () => {
         const newAuthor = res.data[0].author;
         console.log(newQuote);
         setQuote(newQuote);
-        setAuthor(newAuthor);
+        setAuthor(`- ${newAuthor}`);
       } else {
         setQuote('Sorry No Quotes Found Related to the given tags');
+        setAuthor(null);
       }
     } catch (e) {
       console.log(e);
@@ -39,7 +40,7 @@ const App = () => {
     <>
       <div className={styles['container']}>
         <div className={styles['quote']}>{quote}</div>
-        <div className={styles['author']}>- {author}</div>
+        <div className={styles['author']}>{author}</div>
         <form onSubmit={submitHandler}>
           <div>
             <p>
