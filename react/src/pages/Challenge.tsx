@@ -27,6 +27,7 @@ import TicTacToe from '@/machine-coding/tic-tac-toe/App';
 import Toast from '@/machine-coding/toast-popup/toast';
 import TodoList from '@/machine-coding/todo-list/todo';
 import TwentyfiveFiveClock from '@/machine-coding/25-5-clock';
+import QuoteGenerator from '@/machine-coding/quote-generator/App';
 import { challenges } from '@/helpers/challenges';
 import { useParams } from 'react-router-dom';
 
@@ -58,6 +59,7 @@ const reactChallenges = {
   'bmi-calculator': <BMICalculator />,
   'email-templates': <EmailTemplates />,
   'expense-tracker': <ExpenseTracker />,
+  'quote-generator': <QuoteGenerator />,
   pagination: <Pagination />,
 };
 

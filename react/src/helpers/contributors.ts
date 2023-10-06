@@ -18,4 +18,5 @@ export const contributors = new Map([
   ['harsh472000', { name: 'Harsh Meghani', pic: 'https://avatars.githubusercontent.com/u/55913938' }],
   ['Pancratzia', { name: 'Laura Ortega', pic: 'https://avatars.githubusercontent.com/u/54899954' }],
   ['ashikjhonson', { name: 'Ashik Jhonson', pic: 'https://avatars.githubusercontent.com/u/97791612' }],
+  ['viditagrawal56', { name: 'Vidit Agrawal', pic: 'https://avatars.githubusercontent.com/u/52532308' }],
 ]);
