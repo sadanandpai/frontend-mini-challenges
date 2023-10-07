@@ -10,6 +10,17 @@ export const challenges = new Map([
     },
   ],
   [
+    'random-quote-generator',
+    {
+      title: 'Random Quote Generator',
+      link: 'quote-generator',
+      difficulty: 'easy',
+      developer: 'viditagrawal56',
+      isNew: true,
+      tags: [],
+    },
+  ],
+  [
     'accordion',
     {
       title: 'Accordion',
