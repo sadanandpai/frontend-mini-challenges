@@ -12,7 +12,7 @@ body, ul {
 }
 
 footer {
-    background-color: #333;
+    background-color: #7f3535;
     color: #fff;
     padding: 20px;
     border-top: 2px solid #555;
@@ -26,11 +26,15 @@ footer {
 
 .footer-logo img {
     max-width: 100px;
+    background: white;
+    border-radius: 85px;
 }
 
 .footer-links ul,
 .footer-social ul {
     list-style: none;
+    font-size: 25px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     padding: 0;
 }
 
@@ -59,12 +63,13 @@ footer {
 }
 
 /* Media query for responsiveness */
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) {
     .footer-content {
-        flex-direction: column;
-        text-align: center;
+        flex-direction: row; /* Display elements in a row on larger screens */
+        justify-content: space-between; /* Add spacing between elements */
+        align-items: center; /* Vertically align content */
+        text-align: left; /* Reset text alignment */
     }
-
     .footer-logo img {
         margin-bottom: 10px;
     }
