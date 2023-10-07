@@ -10,6 +10,7 @@ import GuessTheNumber from './machine-coding/guess-the-number/index.vue'
 import LightDarkMode from './machine-coding/light-dark-mode/index.vue'
 import TableColorizer from './machine-coding/table-colorizer/index.vue'
 import Pagination from './machine-coding/pagination/index.vue'
+import Accordion from './machine-coding/accordion/index.vue'
 
 const routes: RouteRecordRaw[] = [
   { path: '/', component: Challenges },
@@ -45,6 +46,10 @@ const routes: RouteRecordRaw[] = [
       {
         path: '/pagination',
         component: Pagination,
+      },
+      {
+        path: '/accordion',
+        component: Accordion,
       },
     ]
   }
