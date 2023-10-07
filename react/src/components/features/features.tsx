@@ -6,7 +6,7 @@ const features = [
     info: 'Every challenge comes with the solution in multiple tech stacks & totally free forever',
   },
   {
-    title: 'Designed for inteviews',
+    title: 'Designed for interviews',
     info: 'The challenges are handpicked collection from various interviews of top companies',
   },
   {
