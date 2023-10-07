@@ -8,6 +8,14 @@ export const challenges = [
     tags: [],
   },
   {
+    title: 'Sorting Visualizer',
+    link: 'sorting-visualizer',
+    difficulty: 'medium',
+    developer: 'viditagrawal56',
+    tags: [],
+    isNew: true,
+  },
+  {
     title: 'Guess the number',
     link: 'guess-the-number',
     difficulty: 'easy',
