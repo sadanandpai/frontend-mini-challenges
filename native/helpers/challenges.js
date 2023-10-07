@@ -76,7 +76,7 @@ export const challenges = [
   },
   {
     title: 'Footer',
-    link: 'footer',
+    link: 'Footer',
     difficulty: 'easy',
     developer: 'AbhineshJha',
     youtube: 'https://youtu.be/FRRlFLfdvBE?si=HWn88BwJGTJvEBUD',
