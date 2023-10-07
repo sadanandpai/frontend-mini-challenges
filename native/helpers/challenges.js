@@ -407,6 +407,13 @@ export const challenges = [
     developer: 'sadanandpai',
     tags: [],
   },
+  {
+    title: 'MadStory Generator',
+    link: 'MadStory_generator',
+    difficulty: 'easy',
+    developer: 'hritik',
+    tags: [],
+  },
   { title: 'Emoji Editor', link: '#' },
   { title: 'Sort Table', link: '#' },
   { title: 'Infinite Scroll', link: '#' },
