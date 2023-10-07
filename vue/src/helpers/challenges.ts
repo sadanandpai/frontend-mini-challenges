@@ -30,32 +30,40 @@ export const challenges = new Map<string, Challenge>([
     'light-dark-mode',
     {
       title: 'Light Dark Mode',
-      link: '#',
+      link: '/light-dark-mode',
       difficulty: 'easy',
+      developer: 'arpansaha13',
+      tags: [],
     },
   ],
   [
     'table-colorizer',
     {
       title: 'Table Colorizer',
-      link: '#',
+      link: '/table-colorizer',
       difficulty: 'easy',
+      developer: 'arpansaha13',
+      tags: [],
     },
   ],
   [
-    'Guess-the-number',
+    'guess-the-number',
     {
       title: 'Guess the number',
-      link: "#",
+      link: "/guess-the-number",
       difficulty: 'easy',
+      developer: 'arpansaha13',
+      tags: [],
     },
   ],
   [
     'pagination',
     {
       title: 'Pagination',
-      link: "#",
+      link: "/pagination",
       difficulty: 'easy',
+      developer: 'arpansaha13',
+      tags: [],
     },
   ],
   [
@@ -67,7 +75,7 @@ export const challenges = new Map<string, Challenge>([
     },
   ],
   [
-    'star-Rating',
+    'star-rating',
     {
       title: 'Star Rating',
       link: "#",
@@ -78,8 +86,10 @@ export const challenges = new Map<string, Challenge>([
     'telephone-formatter',
     {
       title: 'Telephone formatter',
-      link: "#",
+      link: "/telephone-formatter",
       difficulty: 'easy',
+      developer: 'arpansaha13',
+      tags: [],
     },
   ],
   [
@@ -163,9 +173,9 @@ export const challenges = new Map<string, Challenge>([
     },
   ],
   [
-    'progressbar',
+    'progress-bar',
     {
-      title: 'Progressbar',
+      title: 'Progress Bar',
       link: '#',
       difficulty: 'medium',
     },
