@@ -10,6 +10,8 @@
   </div>
 </template>
 
+<!-- The AccordionGroup handles the open state of all accordions under it -->
+
 <script setup lang="ts">
 import { type PropType, reactive, watch, ref } from 'vue'
 import Accordion from './Accordion.vue'
@@ -24,6 +26,7 @@ const props = defineProps({
     type: Array as PropType<AccordionData[]>,
     required: true,
   },
+  /** Whether multiple accordions can be open at the same time or not */
   allowMultipleOpen: {
     type: Boolean,
     default: true,
@@ -31,9 +34,11 @@ const props = defineProps({
 })
 
 const open = reactive(Array(props.data.length).fill(false))
-const prev = ref(null)
 
-function update(val, i) {
+/** Record the index of the previous accordion that was opened/closed */
+const prev = ref<number | null>(null)
+
+function update(val: boolean, i: number) {
   if (!props.allowMultipleOpen && prev.value !== null) {
     open[prev.value] = false
   }
@@ -42,6 +47,7 @@ function update(val, i) {
 }
 
 watch(props, (newProps) => {
+  // If `allowMultipleOpen` is toggled, then close all accordions except the immediate previous one
   if (!newProps.allowMultipleOpen) {
     open.fill(false)
     if (prev.value) open[prev.value] = true
