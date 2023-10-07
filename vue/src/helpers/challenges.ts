@@ -22,8 +22,10 @@ export const challenges = new Map<string, Challenge>([
     'accordion',
     {
       title: 'Accordion',
-      link: '#',
+      link: '/accordion',
       difficulty: 'easy',
+      developer: 'arpansaha13',
+      tags: [],
     },
   ],
   [
