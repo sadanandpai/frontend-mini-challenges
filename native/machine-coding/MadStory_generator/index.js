@@ -7,9 +7,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const generateButton = document.getElementById("generate");
     const playAgainButton = document.getElementById("play-again");
     const shareStoryTwitterButton = document.getElementById("share-story-twitter");
-    const shareStoryFacebookButton = document.getElementById("share-story-facebook");
-    const shareStoryLinkedButton = document.getElementById("share-story-linkedin");
+    
     const storyDiv = document.getElementById("story");
+    const shareWhatsAppButton = document.getElementById("share-whatsapp");
 
     function generateStory() {
         const noun = nounInput.value;
@@ -51,18 +51,27 @@ document.addEventListener("DOMContentLoaded", function () {
         
         window.open(twitterURL, "_blank");
     });
-    shareStoryFacebookButton.addEventListener("click", function () {
-        const story = storyDiv.textContent;
-        const encodedStory = encodeURIComponent(story);
-        const facebookURL = `https://www.facebook.com/sharer/sharer.php?u=${encodedStory}`;
-        
-        window.open(facebookURL, "_blank");
-    });
-    shareStoryLinkedButton.addEventListener("click", function () {
-        const story = storyDiv.textContent;
-        const encodedStory = encodeURIComponent(story);
-        const linkedinURL = `https://www.linkedin.com/shareArticle?mini=true&url=${encodedStory}`;
-        
-        window.open(linkedinURL, "_blank");
-    });
+    
+    shareWhatsAppButton.addEventListener("click", shareOnWhatsApp);
+    function shareOnWhatsApp() {
+        const storyText = storyDiv.textContent;
+    
+        // Encode the story text for sharing
+        const encodedStory = encodeURIComponent(storyText);
+    
+        // WhatsApp sharing URL (replace with your actual URL)
+        const whatsappShareURL = `whatsapp://send?text=${encodedStory}`;
+    
+        // Check if WhatsApp is available
+        if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+            window.open(whatsappShareURL);
+        } else {
+            alert("WhatsApp sharing is only available on mobile devices with WhatsApp installed.");
+        }
+    }
+    
+    // Add an event listener for the "Share on WhatsApp" button
+    
+    
+  
 });

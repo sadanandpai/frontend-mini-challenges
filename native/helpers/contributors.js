@@ -11,4 +11,5 @@ export const contributors = new Map([
   ['5h0ov', { name: 'Shuvadipta Das', pic: 'https://avatars.githubusercontent.com/u/83227649' }],
   ['shruti-sen2004', { name: 'Shruti Sen', pic: 'https://avatars.githubusercontent.com/u/115914670' }],
   ['AbhineshJha', { name: 'ABHINESH KUMAR JHA', pic: 'https://avatars.githubusercontent.com/u/142514166' }],
+  ['hritik', { name: 'Hritik Bhattacharya', pic: 'https://avatars.githubusercontent.com/u/44370586?v=4' }],
 ]);
