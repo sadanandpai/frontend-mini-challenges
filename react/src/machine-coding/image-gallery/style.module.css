@@ -1,0 +1,55 @@
+/* Styles for the Image Gallery */
+.image-gallery-container {
+  text-align: center;
+  margin: 20px;
+}
+
+.gallery-heading {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.gallery-para {
+  text-decoration: underline;
+}
+
+.image-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.image-wrapper {
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.image-wrapper:hover {
+  transform: scale(1.1);
+}
+
+.gallery-image {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Styles for the Selected Image */
+.selected-image {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.selected-heading {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.selected-img {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}

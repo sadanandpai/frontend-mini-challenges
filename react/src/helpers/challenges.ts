@@ -21,6 +21,17 @@ export const challenges = new Map([
     },
   ],
   [
+    'image-gallery',
+    {
+      title: 'Image Gallery',
+      link: 'image-gallery',
+      difficulty: 'easy',
+      developer: 'Bhushan1019',
+      isNew: true,
+      tags: [],
+    },
+  ],
+  [
     'accordion',
     {
       title: 'Accordion',
