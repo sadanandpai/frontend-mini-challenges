@@ -10,6 +10,17 @@ export const challenges = new Map([
     },
   ],
   [
+    'quote-generator',
+    {
+      title: 'Quote Generator',
+      link: 'quote-generator',
+      difficulty: 'easy',
+      developer: 'viditagrawal56',
+      isNew: true,
+      tags: [],
+    },
+  ],
+  [
     'accordion',
     {
       title: 'Accordion',
@@ -26,6 +37,16 @@ export const challenges = new Map([
       link: 'light-dark-mode',
       difficulty: 'easy',
       developer: 'NikhilJHA01',
+      tags: [],
+    },
+  ],
+  [
+    'qr-code-generator',
+    {
+      title: 'QR generator',
+      link: 'qr-code-generator',
+      difficulty: 'easy',
+      developer: 'Krishnakalani111',
       tags: [],
     },
   ],
@@ -290,16 +311,6 @@ export const challenges = new Map([
       link: 'autocomplete-online',
       difficulty: 'hard',
       developer: 'deepu0',
-      tags: [],
-    },
-  ],
-  [
-    'qr-code-generator',
-    {
-      title: 'QR code generator',
-      link: 'qr-code-generator',
-      difficulty: 'easy',
-      developer: 'Krishnakalani111',
       tags: [],
     },
   ],

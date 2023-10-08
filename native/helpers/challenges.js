@@ -83,6 +83,15 @@ export const challenges = [
     tags: [],
   },
   {
+    title: 'Footer',
+    link: 'Footer',
+    difficulty: 'easy',
+    developer: 'AbhineshJha',
+    youtube: 'https://youtu.be/FRRlFLfdvBE?si=HWn88BwJGTJvEBUD',
+    tags: [],
+    isNew: true,
+  },
+  {
     title: 'Multi Typing',
     link: 'multi-typing',
     difficulty: 'easy',

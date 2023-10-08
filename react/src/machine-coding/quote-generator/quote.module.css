@@ -1,0 +1,41 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  text-align: center;
+}
+
+.input-field {
+  padding: 0.6rem 3rem;
+}
+
+.quote {
+  margin: 1rem 0;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.author {
+  margin: 1rem 0;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+
+.generate-button {
+  padding: 0.6em 1.2em;
+  font-family: inherit;
+  font-size: 1em;
+  font-weight: 500;
+  color: white;
+  cursor: pointer;
+  background-color: #1a1a1a;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  transition: all 0.25s;
+}
+
+.generate-button:hover {
+  background-color: #646cff;
+}
