@@ -386,4 +386,11 @@ export const challenges = [
     developer: 'apu52',
     tags: [],
   },
+  {
+    title: 'Frontend Notebook',
+    link: 'https://apu52.github.io/FrontendWebsite/',
+    difficulty: 'Beginner',
+    developer: 'apu52',
+    tags: [],
+  },
 ];
