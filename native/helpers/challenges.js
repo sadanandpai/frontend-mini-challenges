@@ -386,4 +386,11 @@ export const challenges = [
     developer: 'apu52',
     tags: [],
   },
+  {
+    title: 'Hotstar Clone',
+    link: 'https://apu52.github.io/HotstarClone/',
+    difficulty: 'moderate',
+    developer: 'apu52',
+    tags: [],
+  },
 ];
