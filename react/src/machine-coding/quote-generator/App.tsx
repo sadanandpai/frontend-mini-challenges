@@ -1,13 +1,18 @@
 import { useEffect, useState } from 'react';
+
 import axios from 'axios';
 import styles from './quote.module.css';
+
 const App = () => {
   const [inputValue, setInputValue] = useState<string>('');
   const [quote, setQuote] = useState<string | null>(null);
   const [author, setAuthor] = useState<string | null>(null);
+
   useEffect(() => {
     submitHandler(); // Generate Quotes when the page reloads
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
   const submitHandler = async (e?: React.FormEvent) => {
     if (e) {
       e.preventDefault(); //prevent page reload after clicking the button

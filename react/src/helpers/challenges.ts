@@ -10,9 +10,9 @@ export const challenges = new Map([
     },
   ],
   [
-    'random-quote-generator',
+    'quote-generator',
     {
-      title: 'Random Quote Generator',
+      title: 'Quote Generator',
       link: 'quote-generator',
       difficulty: 'easy',
       developer: 'viditagrawal56',
@@ -37,6 +37,16 @@ export const challenges = new Map([
       link: 'light-dark-mode',
       difficulty: 'easy',
       developer: 'NikhilJHA01',
+      tags: [],
+    },
+  ],
+  [
+    'qr-code-generator',
+    {
+      title: 'QR generator',
+      link: 'qr-code-generator',
+      difficulty: 'easy',
+      developer: 'Krishnakalani111',
       tags: [],
     },
   ],
@@ -301,16 +311,6 @@ export const challenges = new Map([
       link: 'autocomplete-online',
       difficulty: 'hard',
       developer: 'deepu0',
-      tags: [],
-    },
-  ],
-  [
-    'qr-code-generator',
-    {
-      title: 'QR code generator',
-      link: 'qr-code-generator',
-      difficulty: 'easy',
-      developer: 'Krishnakalani111',
       tags: [],
     },
   ],
