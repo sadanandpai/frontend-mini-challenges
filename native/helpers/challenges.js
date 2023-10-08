@@ -386,4 +386,11 @@ export const challenges = [
     developer: 'apu52',
     tags: [],
   },
+  {
+    title: 'Unit Converter',
+    link: 'https://apu52.github.io/Unit-converter/',
+    difficulty: 'moderate',
+    developer: 'apu52',
+    tags: [],
+  },
 ];
