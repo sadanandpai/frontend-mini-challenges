@@ -8,6 +8,15 @@ export const challenges = [
     tags: [],
   },
   {
+    title: 'hotel-website',
+    link : 'hotel-website',
+    difficulty : 'medium',
+    developer : 'pranav514',
+    tags : [],
+    isNew : true,
+
+  },
+  {
     title: 'Guess the number',
     link: 'guess-the-number',
     difficulty: 'easy',
