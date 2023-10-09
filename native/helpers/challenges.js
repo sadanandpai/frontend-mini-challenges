@@ -101,6 +101,16 @@ export const challenges = [
     isNew: true,
   },
   {
+    title: 'blobmaker',
+    link: 'blobmaker',
+    difficulty: 'easy',
+    developer: 'AbhineshJha',
+    tags: [],
+    isNew: true,
+  },
+
+
+  {
     title: 'Meme Generator',
     link: 'meme-generator',
     difficulty: 'medium',
