@@ -15,6 +15,7 @@ const createAnchorElement = (challenge) => {
     card.classList.add(challenge.difficulty);
   }
 
+  // remove hidden class if challenge is new
   if (challenge.isNew) {
     challengeCard.querySelector('.new').classList.remove('hidden');
   }
