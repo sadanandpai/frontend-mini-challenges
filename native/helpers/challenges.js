@@ -416,6 +416,13 @@ export const challenges = [
     developer: 'sadanandpai',
     tags: [],
   },
+  {
+    title: 'Quiz App with Timer',
+    link: 'Quiz-app-with-timer',
+    difficulty: 'medium',
+    developer: 'Vivek-GuptaXCode',
+    tags: [],
+  },
   { title: 'Emoji Editor', link: '#' },
   { title: 'Sort Table', link: '#' },
   { title: 'Infinite Scroll', link: '#' },
