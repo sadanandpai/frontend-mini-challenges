@@ -325,4 +325,15 @@ export const challenges = new Map([
       tags: [],
     },
   ],
+  [
+    'word-count',
+    {
+      title: 'Word Count',
+      link: 'word-count',
+      difficulty: 'medium',
+      developer: 'Sumitwarrior7',
+      tags: [],
+      isNew: true,
+    },
+  ],
 ]);
