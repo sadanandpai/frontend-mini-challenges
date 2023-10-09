@@ -8,6 +8,14 @@ export const challenges = [
     tags: [],
   },
   {
+    title:'Hotel-website',
+    link:'Hotel-website',
+    difficulty: 'medium',
+    developer:'pranav514',
+    tags:[],
+    isNew: true,
+  },
+  {
     title: 'Sorting Visualizer',
     link: 'sorting-visualizer',
     difficulty: 'medium',
