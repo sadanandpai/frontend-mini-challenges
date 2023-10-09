@@ -103,5 +103,10 @@ export const existingContributors = [
     login: 'harsh472000',
     avatar_url: 'https://avatars.githubusercontent.com/u/55913938?v=4',
     html_url: 'https://github.com/harsh472000',
+  },
+  {
+    login: 'ozguraktas5',
+    avatar_url: 'https://avatars.githubusercontent.com/u/114170361?s=400&u=e7d689f21ce71e62ddd38a1c2eec454f8d1169fa&v=4',
+    html_url: 'https://github.com/ozguraktas5',
   }
 ];

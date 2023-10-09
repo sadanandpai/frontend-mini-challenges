@@ -1,5 +1,16 @@
 export const challenges = new Map([
   [
+    'carousel',
+    {
+      title: 'Carousel',
+      link: 'carousel',
+      difficulty: 'easy',
+      developer: 'ozguraktas5',
+      tags: [],
+    }
+  ]
+  ,
+  [
     'counter',
     {
       title: 'Counter',

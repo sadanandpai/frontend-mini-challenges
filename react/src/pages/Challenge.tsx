@@ -19,6 +19,7 @@ import PasswordGenerator from '@/machine-coding/password-generator/App';
 import PasswordStrength from '@/machine-coding/password-strength/passwordStrength';
 import ProgressBar from '@/machine-coding/progressbar/App';
 import QRCodeGenerator from '@/machine-coding/qr-code-generator/App.jsx';
+import CarouselApp from '@/machine-coding/carousel/App.jsx';
 import QouteGenerator from '@/machine-coding/quote-generator/App.tsx';
 import Stack from '@/machine-coding/stack-implementation/Stack';
 import StarRating from '@/machine-coding/star-rating/App';
@@ -33,7 +34,10 @@ import ImageGallery from '@/machine-coding/image-gallery/App.tsx';
 import { challenges } from '@/helpers/challenges';
 import { useParams } from 'react-router-dom';
 
+
+
 const reactChallenges = {
+  'carousel': <CarouselApp />,
   counter: <Counter />,
   accordion: <Accordion />,
   'star-Rating': <StarRating />,
