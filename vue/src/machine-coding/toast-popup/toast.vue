@@ -17,7 +17,7 @@
 </template>
 
 <script setup lang="ts">
-import { type PropType, watch, toRef } from 'vue'
+import { type PropType, watch, toRef, ref } from 'vue'
 import { Horizontal, ToastType, Vertical } from './enums'
 
 const props = defineProps({
@@ -51,10 +51,18 @@ const props = defineProps({
 const emit = defineEmits(['update:model-value'])
 
 const modelValue = toRef(props, 'modelValue')
-const close = () => emit('update:model-value', false)
+const timeoutId = ref<number | null>(null)
+
+const close = () => {
+  if (timeoutId.value !== null) {
+    clearTimeout(timeoutId.value)
+    timeoutId.value = null
+  }
+  emit('update:model-value', false)
+}
 
 watch(modelValue, (newVal) => {
-  if (newVal) setTimeout(close, props.timeout)
+  if (newVal) timeoutId.value = setTimeout(close, props.timeout)
 })
 </script>
 
