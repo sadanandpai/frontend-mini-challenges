@@ -15,6 +15,10 @@ const Stack = () => {
       setOutPut(`Enter a value`);
       return;
     }
+    if (stack.length === 10) {
+      setOutPut('Stack is Full');
+      return;
+    }
     setStack([...stack, inputVal]);
     setOutPut(`${inputVal} is pushed into the Stack`);
     setInputVal('');
@@ -47,7 +51,7 @@ const Stack = () => {
 
   const isFullHandler = () => {
     // console.log('isFullHandler');
-    if (stack.length === 5) {
+    if (stack.length === 10) {
       setOutPut('Stack is Full');
     } else {
       setOutPut('Stack is not full');
