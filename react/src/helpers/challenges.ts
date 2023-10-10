@@ -10,6 +10,28 @@ export const challenges = new Map([
     },
   ],
   [
+    'quote-generator',
+    {
+      title: 'Quote Generator',
+      link: 'quote-generator',
+      difficulty: 'easy',
+      developer: 'viditagrawal56',
+      isNew: true,
+      tags: [],
+    },
+  ],
+  [
+    'image-gallery',
+    {
+      title: 'Image Gallery',
+      link: 'image-gallery',
+      difficulty: 'easy',
+      developer: 'Bhushan1019',
+      isNew: true,
+      tags: [],
+    },
+  ],
+  [
     'accordion',
     {
       title: 'Accordion',
@@ -26,6 +48,16 @@ export const challenges = new Map([
       link: 'light-dark-mode',
       difficulty: 'easy',
       developer: 'NikhilJHA01',
+      tags: [],
+    },
+  ],
+  [
+    'qr-code-generator',
+    {
+      title: 'QR generator',
+      link: 'qr-code-generator',
+      difficulty: 'easy',
+      developer: 'Krishnakalani111',
       tags: [],
     },
   ],
@@ -121,6 +153,16 @@ export const challenges = new Map([
       link: '25-5-clock',
       difficulty: 'easy',
       developer: 'caesar003',
+      tags: [],
+    },
+  ],
+  [
+    'bmi-calculator',
+    {
+      title: 'BMI Calculator',
+      link: 'bmi-calculator',
+      difficulty: 'easy',
+      developer: 'ashikjhonson',
       tags: [],
     },
   ],
@@ -281,6 +323,17 @@ export const challenges = new Map([
       difficulty: 'hard',
       developer: 'deepu0',
       tags: [],
+    },
+  ],
+  [
+    'word-count',
+    {
+      title: 'Word Count',
+      link: 'word-count',
+      difficulty: 'medium',
+      developer: 'Sumitwarrior7',
+      tags: [],
+      isNew: true,
     },
   ],
 ]);

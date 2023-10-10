@@ -1,0 +1,66 @@
+@import url(../../helpers/core.css);
+
+.bar {
+  padding: 5px 12px;
+  display: flex;
+  justify-content: center;
+  width: 30px;
+  background: rgb(224, 81, 172);
+  margin: 3px;
+  border: 2px solid rgb(23, 23, 24);
+  color: whitesmoke;
+}
+
+body .main_container {
+  padding: 3rem;
+  height: 85vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+body .main_container #container {
+  padding: 5rem 0rem;
+  height: 80%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.btn {
+  border-radius: 30px;
+  font-size: 17px;
+  font-weight: 400;
+  padding: 1rem;
+  margin: 0rem 1rem;
+  border: 0;
+  cursor: pointer;
+  transition: ease-in 0.2s;
+  box-shadow: 0 0.35rem 0 rgb(23, 23, 24);
+  border: 3.5px solid rgb(23, 23, 24);
+}
+
+.btn:hover {
+  color: whitesmoke;
+  background-color: rgb(224, 81, 172);
+}
+
+.title_btn {
+  border-radius: 30px;
+  font-size: 25px;
+  font-weight: 700;
+  padding: 1rem 4rem;
+  margin: 0rem 1rem;
+  border: 0;
+  transition: ease-in 0.2s;
+  box-shadow: 0 0.35rem 0 rgb(23, 23, 24);
+  border: 3.5px solid rgb(23, 23, 24);
+  background-color: white;
+}
+
+@media screen and (width <= 400px) {
+  .title_btn {
+    padding: 0.6rem 2rem;
+    font-size: 18px;
+  }
+}
