@@ -427,3 +427,12 @@ export const challenges = [
   { title: 'Sort Table', link: '#' },
   { title: 'Infinite Scroll', link: '#' },
 ];
+{
+    title: 'AI Chess Game',
+    link: 'AI-CHESS-Game',
+    difficulty: 'hard',
+    developer: 'AnkitaSikdar005',
+    tags: [],
+    isNew: true
+  },
+
