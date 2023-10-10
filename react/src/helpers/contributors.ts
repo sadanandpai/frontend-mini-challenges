@@ -1,4 +1,9 @@
-export const contributors = new Map([
+interface Contributor {
+  name: string
+  pic: string
+}
+
+export const contributors = new Map<string, Contributor>([
   ['sadanandpai', { name: 'Sadanand Pai', pic: 'https://avatars.githubusercontent.com/u/12962887' }],
   ['NikhilJHA01', { name: 'Nikhil Jha', pic: 'https://avatars.githubusercontent.com/u/63518046' }],
   ['noorulaink00', { name: 'Noor Ul Ain Khan', pic: 'https://avatars.githubusercontent.com/u/65324193' }],
