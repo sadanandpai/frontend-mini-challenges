@@ -1,7 +1,13 @@
 # Unit-converter
 
 # Description
-This is my 1st project in my internship of Code Clause where I have made a very simple Stopwatch using i)HTML
+
+
+
+
+This is a simple Front-end JS program that converts measurements between feet and inches, and vice versa. It takes both integer and decimal values as input and provides accurate conversions.
+This is my project where I have made a very simple Unit Converter using 
+i)HTML
 ii)CSS &
 iii)JS
 
