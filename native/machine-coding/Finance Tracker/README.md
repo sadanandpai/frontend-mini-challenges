@@ -1,8 +1,13 @@
 # Personal Finance Tracker
 
-![Personal Finance Tracker Screenshot](financetracker.png)
-
+## Description
 The Personal Finance Tracker is a web application that helps you manage your personal finances. It allows you to keep track of your income and expenses, view your balance, and stay on top of your financial goals.
+
+<h1 align="center">
+  👉<a href="https://sm-financetracker.netlify.app" target="_blank" rel="noopener noreferrer">Live Demo</a>
+</h1>
+
+![Personal Finance Tracker Screenshot](https://github.com/sujitmahapatra/frontend-mini-challenges/blob/0a36075c73786b8f1ebd360c11938ca416bf70a7/native/machine-coding/Finance%20Tracker/Finance%20Tracker.png)
 
 ## Features
 
