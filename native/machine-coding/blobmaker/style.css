@@ -1,13 +1,4 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    outline: none;
-    font-family: "Roboto Mono", monospace;
-    font-weight: 400;
-    color: #010120;
-}
-
+@import url(../../helpers/core.css);
 body {
     background-color: lightgoldenrodyellow
 }
