@@ -40,8 +40,193 @@
         }
       });
     </script>
+        <style>
+
+:root {
+    --bg: rgb(137, 144, 158);
+    --bg-input: #141419;
+}
+
+
+:root{
+    --bg:linear-gradient(to top right, #363690 41%, #3ec7f5 100%);
+   
+    --bg-input: #e1e1ed;
+}
+
+
+/* light mode edited */
+
+.light-mode {
+    --bg: linear-gradient(to left, #2a2d30, #080a0c);
+    --bg-input: #fcf9f9;
+}
+
+body {
+    background: var(--bg);
+    color: var(--color-text);
+    /*font-weight: 500;
+    display: flex;*/
+}
+
+.switch {
+    position: absolute;
+    margin-left: -9999px;
+    visibility: hidden;
+}
+
+.switch+label {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    user-select: none;
+}
+
+.switch+label {
+    padding: 2px;
+    width: 52px;
+    height: 27px;
+    background-color: var(--color-border), rgba(23, 21, 21, 0.3);
+    border-radius: 100px;
+}
+
+.switch+label:before,
+.switch+label:after {
+    display: block;
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    bottom: 1px;
+    content: "";
+}
+
+.switch+label:before {
+    right: 1px;
+    background-color: var(--bg-input);
+    border-radius: 60px;
+    transition: all 0.4s;
+}
+
+.switch+label:after {
+    width: 30px;
+    background-color: #fff;
+    border-radius: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition: all 0.4s;
+}
+
+.switch:checked+label:before {
+    background-color: #f3eff5;
+}
+
+.switch:checked+label:after {
+    transform: translateX(30px);
+}
+
+              
+          .social-media {
+      display: flex;
+      justify-content: center;
+    }
+    /* github */
+    .social-icon {
+      height: 46px;
+      width: 46px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 0.45rem;
+      color: #333;
+      border-radius: 50%;
+      border: 1px solid #333;
+      text-decoration: none;
+      font-size: 1.1rem;
+      transition: 0.3s;
+    }
+    
+    .social-icon:hover {
+      color:white;
+    background-color:black;
+    }
+    /* facebook */
+    .face{
+      height: 46px;
+      width: 46px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 0.45rem;
+      color: #333;
+      border-radius: 50%;
+      border: 1px solid #333;
+      text-decoration: none;
+      font-size: 1.1rem;
+      transition: 0.3s;
+    }
+    
+    .face:hover {
+      color:white;
+    background-color:rgb(30, 83, 206);
+    }
+    /* instagram */
+    .insta {
+      height: 46px;
+      width: 46px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 0.45rem;
+      color: #333;
+      border-radius: 50%;
+      border: 1px solid #333;
+      text-decoration: none;
+      font-size: 1.1rem;
+      transition: 0.3s;
+    }
+    .insta:hover {
+      color:white;
+      background: linear-gradient(to left, #ff0066 0%, #ff9933 100%);
+    }
+    
+    
+    /* linedin */
+    .linkedin {
+      height: 46px;
+      width: 46px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 0.45rem;
+      color: #333;
+      border-radius: 50%;
+      border: 1px solid #333;
+      text-decoration: none;
+      font-size: 1.1rem;
+      transition: 0.3s;
+    }
+    
+    .linkedin:hover {
+      color:white;
+    background-color:rgb(37, 104, 219);
+    }
+    
+    
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
   </head>
   <body>
+
+
+
+
+
+
+
+
+
+
     <nav class="navbar">
       <a class="logo" href="/frontend-mini-challenges/">
         <img src="./logo.png" alt="logo" />
@@ -52,7 +237,18 @@
         <a href="/frontend-mini-challenges/react/dist/#/challenges">React Mini Challenges</a>
         <a href="/frontend-mini-challenges/vue/dist/#/">VueJs Mini Challenges</a>
       </div>
-
+      <label for="switch" >
+        <input type="checkbox" id="switch" class="switch">
+        <label for="switch" style="background-color: black; color: #080a0c;"></label>
+  </label>
+      <script>
+        const $html = document.querySelector("html");
+        const $checkbox = document.querySelector("#switch");
+        
+        $checkbox.addEventListener("change", function() {
+            $html.classList.toggle("light-mode");
+        });
+        </script>
       <a href="https://github.com/sadanandpai/frontend-mini-challenges/" target="blank">
         <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="github repo" class="github" />
       </a>
@@ -72,8 +268,37 @@
             <img class="developer-img" src="" alt="" />
             <span class="developer-name"></span>
           </div>
+
+
+
+
+
+
         </div>
       </a>
     </template>
+
+
+
+<div class="social-media" style="background: aliceblue; padding: 20px;">
+
+<a href="#" class="social-icon">
+  <i class="fa-brands fa-github"></i>
+  </a>
+
+ 
+
+<a href="#" class="face">
+  <i class="fa-brands fa-facebook"></i>
+</a>
+
+<a href=" " class="insta">
+  <i class="fa-brands fa-instagram" ></i>
+</a>
+<a href="# " class="linkedin">
+  <i class="fa-brands fa-linkedin"></i>
+</a>
+</div>
+
   </body>
 </html>
