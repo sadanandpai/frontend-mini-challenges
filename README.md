@@ -1,7 +1,8 @@
 <div align="center">
   <h1>Frontend Mini Challenges</h1>
   <h3>Collection of frontend challenges for learning and interviews</h3>
-  <a href="https://sadanandpai.github.io/frontend-mini-challenges/"><img src="cover.png" alt="web programming" width="500px" /></a>
+  ![image](https://github.com/sadanandpai/frontend-mini-challenges/assets/98145879/d4d81b42-7890-4bf4-bbdb-78a8dc8244e2)
+[Web Programming](https://sadanandpai.github.io/frontend-mini-challenges/)
 
 [![](https://img.shields.io/github/stars/sadanandpai/frontend-mini-challenges?style=for-the-badge)](#stars)
 [![](https://img.shields.io/github/forks/sadanandpai/frontend-mini-challenges?style=for-the-badge)](#forks)
