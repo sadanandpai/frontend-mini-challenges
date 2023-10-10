@@ -401,6 +401,6 @@ export const challenges = [
     difficulty: 'hard',
     developer: 'AnkitaSikdar005',
     tags: [],
-     isNew:true;
+    isNew: true
   },
 
