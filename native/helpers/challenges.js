@@ -8,6 +8,14 @@ export const challenges = [
     tags: [],
   },
   {
+      title:'currency-converter',
+      link:'currency-converter',
+      difficulty:'easy',
+      developer:'pranav514',
+      tags:[],
+      isNew:true,
+  },
+  {
     title: 'Guess the number',
     link: 'guess-the-number',
     difficulty: 'easy',

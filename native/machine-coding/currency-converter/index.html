@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="../../helpers/navbar.js" type="module"></script>
+    <title>Currency Converter</title>
+</head>
+<body>
+    <div class="converter">
+        <h1>Currency Converter</h1>
+        <div class="input-container">
+            <input type="number" id="amount" placeholder="Enter amount">
+            <select id="fromCurrency">
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+                <option value="GBP">GBP</option>
+                <option value="INR">INR</option>
+                <!-- Add more currencies here -->
+            </select>
+        </div>
+        <div class="input-container">
+            <input type="number" id="result" placeholder="Result" disabled>
+            <select id="toCurrency">
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+                <option value="GBP">GBP</option>
+                <option value="INR">INR</option>
+                <!-- Add more currencies here -->
+            </select>
+        </div>
+        <button onclick="convertCurrency()">Convert</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
