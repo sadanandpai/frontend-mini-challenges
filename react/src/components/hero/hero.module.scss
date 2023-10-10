@@ -12,9 +12,14 @@
 .figure {
   margin: 0;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
   .heroImage {
     width: min(80vh, 80vw);
+    aspect-ratio: calc(1120/736);
   }
 }
 

@@ -7,5 +7,11 @@ export const contributors = new Map([
   ['Kei-K23', { name: 'Kei-K', pic: 'https://avatars.githubusercontent.com/u/134714087' }],
   ['caesar003', { name: 'Khaisar Muksid', pic: 'https://avatars.githubusercontent.com/u/37962465' }],
   ['christian-lee1398', { name: 'Christian Lee', pic: 'https://avatars.githubusercontent.com/u/83561483' }],
-  ['Sukomal07', { name: 'Sukomal Dutta', pic: 'https://avatars.githubusercontent.com/u/100500478?v=4' }],
+  ['Sukomal07', { name: 'Sukomal Dutta', pic: 'https://avatars.githubusercontent.com/u/100500478' }],
+  ['5h0ov', { name: 'Shuvadipta Das', pic: 'https://avatars.githubusercontent.com/u/83227649' }],
+  ['shruti-sen2004', { name: 'Shruti Sen', pic: 'https://avatars.githubusercontent.com/u/115914670' }],
+  ['Kushal347', { name: 'Kushal Agrawal', pic: 'https://avatars.githubusercontent.com/u/115914670' }],
+  ['AbhineshJha', { name: 'ABHINESH KUMAR JHA', pic: 'https://avatars.githubusercontent.com/u/142514166' }],
+  ['hritik', { name: 'Hritik Bhattacharya', pic: 'https://avatars.githubusercontent.com/u/44370586?v=4' }],
+  ['viditagrawal56', { name: 'Vidit Agrawal', pic: 'https://avatars.githubusercontent.com/u/52532308?v=4' }],
 ]);

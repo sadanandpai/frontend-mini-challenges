@@ -75,6 +75,15 @@ export const challenges = [
     tags: [],
   },
   {
+    title: 'Footer',
+    link: 'Footer',
+    difficulty: 'easy',
+    developer: 'AbhineshJha',
+    youtube: 'https://youtu.be/FRRlFLfdvBE?si=HWn88BwJGTJvEBUD',
+    tags: [],
+    isNew: true,
+  },
+  {
     title: 'Multi Typing',
     link: 'multi-typing',
     difficulty: 'easy',
@@ -97,6 +106,22 @@ export const challenges = [
     difficulty: 'medium',
     developer: 'noorulaink00',
     youtube: 'https://youtu.be/LHo9Hi47MTo',
+    tags: [],
+    isNew: true,
+  },
+  {
+    title: 'Brick Breaker',
+    link: 'brick-breaker',
+    difficulty: 'medium',
+    developer: '5h0ov',
+    tags: [],
+    isNew: true,
+  },
+  {
+    title: 'Weather App',
+    link: 'weather-app',
+    difficulty: 'medium',
+    developer: 'shruti-sen2004',
     tags: [],
     isNew: true,
   },
@@ -276,6 +301,14 @@ export const challenges = [
     isNew: true,
   },
   {
+    title: 'Sorting Visualizer',
+    link: 'sorting-visualizer',
+    difficulty: 'medium',
+    developer: 'viditagrawal56',
+    tags: [],
+    isNew: true,
+  },
+  {
     title: 'Snake Game',
     link: 'snake-game',
     difficulty: 'medium',
@@ -363,6 +396,13 @@ export const challenges = [
     tags: [],
   },
   {
+    title: 'Tilting Maze Game',
+    link: 'tilting-maze',
+    difficulty: 'hard',
+    developer: '5h0ov',
+    tags: [],
+  },
+  {
     title: 'Typeahead / Autocomplete (offline)',
     link: 'type-ahead',
     difficulty: 'hard',
@@ -376,9 +416,17 @@ export const challenges = [
     developer: 'sadanandpai',
     tags: [],
   },
+  {
+    title: 'MadStory Generator',
+    link: 'MadStory_generator',
+    difficulty: 'easy',
+    developer: 'hritik',
+    tags: [],
+  },
   { title: 'Emoji Editor', link: '#' },
   { title: 'Sort Table', link: '#' },
   { title: 'Infinite Scroll', link: '#' },
+
   {
     title: 'Food Website',
     link: 'https://65072ad6fbb37b52ebcf0b6c--radiant-macaron-33a884.netlify.app/#',
@@ -386,4 +434,14 @@ export const challenges = [
     developer: 'apu52',
     tags: [],
   },
+
+  // {
+  //   title: 'AI Chess Game',
+  //   link: 'AI-CHESS-Game',
+  //   difficulty: 'hard',
+  //   developer: 'AnkitaSikdar005',
+  //   tags: [],
+  //   isNew: true,
+  // },
+
 ];
