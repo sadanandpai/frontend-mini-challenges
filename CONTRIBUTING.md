@@ -30,7 +30,7 @@
 - The component should be imported and added to their respective position in the array of challenges in `/react/src/pages/challenge/Challenge.tsx`
 
 
-##### Steps to Contribute VueJs Challenge
+#### Steps to Contribute VueJs Challenge
 
 - The challenge should be added as a separate folder that should be named with the name of the challenge inside `/vue/src/machine-coding/`
 - Challenge folder should have at least one `.vue` file
