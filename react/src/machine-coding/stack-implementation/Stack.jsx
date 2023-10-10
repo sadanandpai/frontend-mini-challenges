@@ -11,12 +11,26 @@ const Stack = () => {
   };
 
   const pushHandler = () => {
+    if (inputVal=='') {
+      setOutPut(`Enter a value`);
+      return;
+    }
+    if (stack.length === 10) {
+      setOutPut('Stack is Full');
+      return;
+    }
     setStack([...stack, inputVal]);
+    setOutPut(`${inputVal} is pushed into the Stack`);
     setInputVal('');
   };
 
   const popHandler = () => {
+    if (!stack.length) {
+      setOutPut('Stack is empty');
+      return 
+    }
     setStack(stack.slice(0, -1));
+    setOutPut(`${stack[stack.length - 1]} is popped from the Stack `);
   };
 
   const peekHandler = () => {
@@ -37,7 +51,7 @@ const Stack = () => {
 
   const isFullHandler = () => {
     // console.log('isFullHandler');
-    if (stack.length === 5) {
+    if (stack.length === 10) {
       setOutPut('Stack is Full');
     } else {
       setOutPut('Stack is not full');
@@ -47,7 +61,7 @@ const Stack = () => {
   return (
     <div className={styles.container}>
       <div className={styles.stack}>
-        <input type="text" value={inputVal} onChange={onChangeHandler} required />
+        <input type="text" placeholder='Enter a value' value={inputVal} onChange={onChangeHandler} required />
 
         <div className={styles.btn_root}>
           <button onClick={pushHandler}>Push</button>
@@ -60,13 +74,14 @@ const Stack = () => {
 
         <h3>{outPut}</h3>
 
-        {stack?.map((element, index) => {
+        {stack.slice().reverse().map((element, index) => {
           return (
-            <div key={index} className={styles.stackElement}>
-              <p>{element}</p>
-            </div>
+           <div key={index} className={styles.stackElement}>
+           <p>{element}</p>
+           </div>
           );
-        })}
+         })}
+
       </div>
     </div>
   );
