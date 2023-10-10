@@ -8,6 +8,14 @@ export const challenges = [
     tags: [],
   },
   {
+    title: 'Personal Finance Tracker',
+    link: 'native/machine-coding/Finance Tracker',
+    difficulty: 'medium',
+    developer: 'sujitmahapatra',
+    tags: ['finance', 'web-app', 'javascript', 'css'],
+    isNew: true,
+  },
+  {
     title: 'Guess the number',
     link: 'guess-the-number',
     difficulty: 'easy',
