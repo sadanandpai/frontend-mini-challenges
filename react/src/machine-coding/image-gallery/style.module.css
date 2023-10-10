@@ -1,12 +1,7 @@
 /* Styles for the Image Gallery */
 .image-gallery-container {
-  text-align: center;
   margin: 20px;
-}
-
-.gallery-heading {
-  font-size: 24px;
-  margin-bottom: 20px;
+  text-align: center;
 }
 
 .gallery-para {
@@ -16,8 +11,8 @@
 .image-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   gap: 20px;
+  justify-content: center;
 }
 
 .image-wrapper {
@@ -34,7 +29,7 @@
   height: 200px;
   object-fit: cover;
   border-radius: 10px;
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 30%);
 }
 
 /* Styles for the Selected Image */
@@ -44,12 +39,12 @@
 }
 
 .selected-heading {
-  font-size: 20px;
   margin-bottom: 10px;
+  font-size: 20px;
 }
 
 .selected-img {
   max-width: 100%;
   border-radius: 10px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 50%);
 }

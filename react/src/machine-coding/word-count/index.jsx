@@ -1,22 +1,33 @@
 // WordCounter.js
 
-import React, { useState, useEffect } from 'react';
-import styles from './styles.module.css';
+import React, { useEffect, useRef, useState } from 'react';
+
+import styles from './styles.module.scss';
+
+const saveData = ({ text, wordCount, charCount, paraCount }) => {
+  localStorage.setItem('text', text);
+  localStorage.setItem('words', wordCount);
+  localStorage.setItem('chars', charCount);
+  localStorage.setItem('paras', paraCount);
+};
 
 function WordCounter() {
   const [text, setText] = useState('');
   const [wordCount, setWordCount] = useState(0);
   const [charCount, setCharCount] = useState(0);
   const [paraCount, setParaCount] = useState(0);
-  const [charLimit, setCharLimit] = useState('');
-  const [highlightWord, setHighlightWord] = useState('');
+  const firstLoad = useRef(true);
 
   useEffect(() => {
     loadData();
   }, []);
 
   useEffect(() => {
-    saveData();
+    if (firstLoad.current) {
+      firstLoad.current = false;
+      return;
+    }
+    saveData({ text, wordCount, charCount, paraCount });
   }, [text, wordCount, charCount, paraCount]);
 
   const countWords = () => {
@@ -36,33 +47,6 @@ function WordCounter() {
     setParaCount(0);
   };
 
-  const highlightWords = () => {
-    const highlightedText = text.replace(
-      new RegExp(highlightWord, 'g'),
-      `<span class="${styles.highlighted}">$&</span>`
-    );
-
-    setText(highlightedText);
-  };
-
-  const checkCharacterLimit = () => {
-    const charLimitInt = parseInt(charLimit);
-    const characters = text.length;
-
-    if (charLimitInt && characters > charLimitInt) {
-      setCharCount(`Characters: ${characters} (Exceeding limit)`);
-    } else {
-      setCharCount(`Characters: ${characters}`);
-    }
-  };
-
-  const saveData = () => {
-    localStorage.setItem('text', text);
-    localStorage.setItem('words', wordCount);
-    localStorage.setItem('chars', charCount);
-    localStorage.setItem('paras', paraCount);
-  };
-
   const loadData = () => {
     setText(localStorage.getItem('text') || '');
     setWordCount(localStorage.getItem('words') || 0);
@@ -72,7 +56,6 @@ function WordCounter() {
 
   return (
     <div className={styles.container}>
-      <h1>Word Counter</h1>
       <textarea
         id="text-input"
         placeholder="Enter your text here..."
@@ -81,15 +64,8 @@ function WordCounter() {
       ></textarea>
       <div className={styles.controls}>
         <div id="word-count">Words: {wordCount}</div>
-        <div id="char-count">{charCount}</div>
-        <div id="para-count">Paragraphs: {paraCount}</div>
-        <input
-          type="number"
-          id="char-limit"
-          placeholder="Character Limit"
-          value={charLimit}
-          onChange={(e) => setCharLimit(e.target.value)}
-        />
+        <div id="char-count">Chars: {charCount}</div>
+        <div id="para-count">Paras: {paraCount}</div>
         <button id="count-button" onClick={countWords}>
           Count
         </button>
