@@ -48,3 +48,25 @@ jobs:
           git add dist -f
           git diff --staged --quiet || (git commit -m "angular build files - github action" && git push)
           cd ..
+
+  build-vue:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      # Runs a single command using the runners shell
+      - name: setup git config
+        run: |
+          git config user.name "Sadanand Pai"
+          git config user.email "sadypai@gmail.com"
+
+      - name: setup vue deployment
+        run: |
+          cd vue
+          npm install
+          rm -rf dist
+          npm run build
+          git add dist -f
+          git diff --staged --quiet || (git commit -m "vue build files - github action" && git push)
+          cd ..
