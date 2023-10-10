@@ -6,7 +6,7 @@
 [![](https://img.shields.io/github/stars/sadanandpai/frontend-mini-challenges?style=for-the-badge)](#stars)
 [![](https://img.shields.io/github/forks/sadanandpai/frontend-mini-challenges?style=for-the-badge)](#forks)
 
-  <h4><p>Show your support by giving a ⭐ to this repo</p></h4>
+  <p>Show your support by giving a ⭐ to this repo</p>
 
   <h3>
     <a href="https://sadanandpai.github.io/frontend-mini-challenges/">View all challenges in JavaScript & React</a>
