@@ -3,7 +3,7 @@ import styles from './column-table.module.scss';
 function Size({ rows, setRows, columns, setColumns }) {
   return (
     <section className={styles.size}>
-      <label htmlFor="rows">Rows</label>
+      <label htmlFor="rows">Rows :: {rows}</label>
       <input
         type="range"
         name="rows"
@@ -14,7 +14,7 @@ function Size({ rows, setRows, columns, setColumns }) {
         onChange={(e) => setRows(+e.target.value)}
       />
 
-      <label htmlFor="columns">Columns</label>
+      <label htmlFor="columns">Columns :: {columns}</label>
       <input
         type="range"
         name="columns"

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="../../logo.svg" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="../../helpers/navbar.js" type="module"></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Mad Libs</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>MAD LIBS</h1>
+      <div class="form">
+        <label for="noun">NOUN:</label>
+        <input type="text" id="noun" />
+
+        <br />
+        <label for="verb">VERB:</label>
+        <input type="text" id="verb" />
+        <br />
+        <label for="adjective">ADJECTIVE:</label>
+        <input type="text" id="adjective" />
+        <br />
+        <label for="adverb">ADVERB:</label>
+        <input type="text" id="adverb" />
+        <br />
+        <button id="generate">Generate Story</button>
+      </div>
+      <div class="story" id="story"></div>
+      <div >
+        <button id="play-again">Play Again</button>
+        <button id="share-story-twitter">Twitter</button>
+      </div>
+      <br />
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

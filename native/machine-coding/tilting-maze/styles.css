@@ -1,0 +1,191 @@
+@import url(../../helpers/core.css);
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #ede6e3;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+#center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+#game {
+  display: grid;
+  grid-template-columns: auto 150px;
+  grid-template-rows: 1fr auto 1fr;
+  gap: 30px;
+  perspective: 600px;
+}
+
+#maze {
+  position: relative;
+  grid-row: 1 / -1;
+  grid-column: 1;
+  width: 350px;
+  height: 315px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#end {
+  width: 65px;
+  height: 65px;
+  border: 5px dashed #8b91dc;
+  border-radius: 50%;
+}
+
+#joystick {
+  position: relative;
+  background-color: #210124;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 50px;
+  grid-row: 2;
+}
+
+#joystick-head {
+  position: relative;
+  background-color: rgba(255, 0, 0, 0.91);
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  cursor: grab;
+
+  animation-name: glow;
+  animation-duration: 0.6s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+  animation-delay: 4s;
+}
+
+@keyframes glow 
+{
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}
+
+.joystick-arrow:nth-of-type(1) {
+  position: absolute;
+  bottom: 55px;
+
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+
+  border-bottom: 10px solid #210124;
+}
+
+.joystick-arrow:nth-of-type(2) {
+  position: absolute;
+  top: 55px;
+
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+
+  border-top: 10px solid #210124;
+}
+
+.joystick-arrow:nth-of-type(3) {
+  position: absolute;
+  left: 55px;
+
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+
+  border-left: 10px solid #210124;
+}
+
+.joystick-arrow:nth-of-type(4) {
+  position: absolute;
+  right: 55px;
+
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+
+  border-right: 10px solid #210124;
+}
+
+#note {
+  grid-row: 3;
+  grid-column: 2;
+  text-align: center;
+  font-size: 0.7em;
+  color: #210124;
+  transition: opacity 2s;
+}
+
+a:visited {
+  color: inherit;
+}
+
+.ball {
+  position: absolute;
+  margin-top: -5px;
+  margin-left: -5px;
+  border-radius: 50%;
+  background-color: #a90af2;
+  width: 10px;
+  height: 10px;
+}
+
+.wall {
+  position: absolute;
+  background-color: #36382e;
+  transform-origin: top center;
+  margin-left: -5px;
+}
+
+.wall::before,
+.wall::after {
+  display: block;
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: inherit;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.wall::before {
+  top: -5px;
+}
+
+.wall::after {
+  bottom: -5px;
+}
+
+.black-hole {
+  position: absolute;
+  margin-top: -9px;
+  margin-left: -9px;
+  border-radius: 50%;
+  background-color: black;
+  width: 18px;
+  height: 18px;
+}

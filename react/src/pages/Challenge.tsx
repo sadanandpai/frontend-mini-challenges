@@ -1,6 +1,7 @@
 import Accordion from '@/machine-coding/accordion/App';
 import Autocomplete from '@/machine-coding/autocomplete-offline/autocomplete';
 import AutocompleteOnline from '@/machine-coding/autocomplete-offline/autocompleteOnline';
+import BMICalculator from '@/machine-coding/bmi-calculator/App';
 import ChallengeNavbar from '@/components/challenge-navbar/ChallengeNavbar';
 import ColumnTable from '@/machine-coding/column-table/ColumnTable';
 import Counter from '@/machine-coding/counter/counter';
@@ -17,6 +18,8 @@ import Pagination from '@/machine-coding/pagination/App';
 import PasswordGenerator from '@/machine-coding/password-generator/App';
 import PasswordStrength from '@/machine-coding/password-strength/passwordStrength';
 import ProgressBar from '@/machine-coding/progressbar/App';
+import QRCodeGenerator from '@/machine-coding/qr-code-generator/App.jsx';
+import QouteGenerator from '@/machine-coding/quote-generator/App.tsx';
 import Stack from '@/machine-coding/stack-implementation/Stack';
 import StarRating from '@/machine-coding/star-rating/App';
 import Stopwatch from '@/machine-coding/stopwatch/App';
@@ -26,6 +29,8 @@ import TicTacToe from '@/machine-coding/tic-tac-toe/App';
 import Toast from '@/machine-coding/toast-popup/toast';
 import TodoList from '@/machine-coding/todo-list/todo';
 import TwentyfiveFiveClock from '@/machine-coding/25-5-clock';
+import ImageGallery from '@/machine-coding/image-gallery/App.tsx';
+import WordCounter from '@/machine-coding/word-count';
 import { challenges } from '@/helpers/challenges';
 import { useParams } from 'react-router-dom';
 
@@ -54,9 +59,14 @@ const reactChallenges = {
   'column-table': <ColumnTable />,
   'table-colorizer': <TableColorizer />,
   '25-5-clock': <TwentyfiveFiveClock />,
+  'bmi-calculator': <BMICalculator />,
   'email-templates': <EmailTemplates />,
   'expense-tracker': <ExpenseTracker />,
   pagination: <Pagination />,
+  'qr-code-generator': <QRCodeGenerator />,
+  'quote-generator': <QouteGenerator />,
+  'image-gallery': <ImageGallery />,
+  'word-count': <WordCounter />,
 };
 
 function Challenge() {
