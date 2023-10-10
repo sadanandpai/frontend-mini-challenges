@@ -39,3 +39,4 @@ const createAnchorElement = (challenge) => {
 
 const challengeGridEl = document.getElementById('challengeGrid');
 challenges.map(createAnchorElement).forEach((el) => challengeGridEl.appendChild(el));
+
