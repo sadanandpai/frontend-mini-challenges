@@ -434,4 +434,12 @@ export const challenges = [
   //   tags: [],
   //   isNew: true,
   // },
+  {
+    title: 'Stack Queue Visualize',
+    link: 'Stack Queue Visualize',
+    difficulty: 'Easy',
+    developer: 'Mapur2',
+    tags: [],
+    isNew: true
+  }
 ];
