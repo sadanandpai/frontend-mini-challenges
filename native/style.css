@@ -96,13 +96,13 @@ a img {
 
 
 :root {
-    --bg: rgb(137, 144, 158);
+    --bg: rgb(120, 122, 125);
     --bg-input: #141419;
 }
 
 
 :root{
-    --bg:linear-gradient(to top right, #363690 41%, #3ec7f5 100%);
+    --bg:rgb(56, 77, 148);
    
     --bg-input: #e1e1ed;
 }
@@ -111,7 +111,7 @@ a img {
 /* light mode edited */
 
 .light-mode {
-    --bg: linear-gradient(to left, #2a2d30, #080a0c);
+    --bg: linear-gradient(to left, #000000, #1a1c1e);
     --bg-input: #fcf9f9;
 }
 
@@ -140,7 +140,7 @@ body {
     padding: 2px;
     width: 52px;
     height: 27px;
-    background-color: var(--color-border), rgba(23, 21, 21, 0.3);
+    background-color: var(--color-border), rgba(0, 0, 0, 0.3);
     border-radius: 100px;
 }
 
