@@ -1,8 +1,8 @@
 ---
-name: Add new Project
-about: Add your New Front-end projects in this template
+name: Add New Project
+about: Add your New Front-end projects to this template
 title: ''
-labels: good first issue, hacktoberfest-accepted, New project
+labels: new-challenge
 assignees: ''
 
 ---
