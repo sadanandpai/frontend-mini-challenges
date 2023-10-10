@@ -426,6 +426,7 @@ export const challenges = [
   { title: 'Emoji Editor', link: '#' },
   { title: 'Sort Table', link: '#' },
   { title: 'Infinite Scroll', link: '#' },
+
   {
 
     title: 'Stopwatch',
@@ -442,4 +443,14 @@ export const challenges = [
     isNew: true,
 
   },
+
+  // {
+  //   title: 'AI Chess Game',
+  //   link: 'AI-CHESS-Game',
+  //   difficulty: 'hard',
+  //   developer: 'AnkitaSikdar005',
+  //   tags: [],
+  //   isNew: true,
+  // },
+
 ];
