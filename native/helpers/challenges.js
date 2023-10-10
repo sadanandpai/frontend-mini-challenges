@@ -84,6 +84,13 @@ export const challenges = [
     isNew: true,
   },
   {
+    title: 'MadStory Generator',
+    link: 'MadStory_generator',
+    difficulty: 'easy',
+    developer: 'hritik',
+    tags: [],
+  },
+  {
     title: 'Multi Typing',
     link: 'multi-typing',
     difficulty: 'easy',
@@ -101,14 +108,13 @@ export const challenges = [
     isNew: true,
   },
   {
-    title: 'blobmaker',
+    title: 'Blob Maker',
     link: 'blobmaker',
     difficulty: 'easy',
     developer: 'AbhineshJha',
     tags: [],
     isNew: true,
   },
-
 
   {
     title: 'Meme Generator',
@@ -424,13 +430,6 @@ export const challenges = [
     link: 'type-ahead-online',
     difficulty: 'hard',
     developer: 'sadanandpai',
-    tags: [],
-  },
-  {
-    title: 'MadStory Generator',
-    link: 'MadStory_generator',
-    difficulty: 'easy',
-    developer: 'hritik',
     tags: [],
   },
   { title: 'Emoji Editor', link: '#' },
