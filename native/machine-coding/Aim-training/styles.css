@@ -1,0 +1,85 @@
+body {
+    text-align: center;
+  }
+  
+  h1 {
+    color: #333;
+  }
+  
+  #gameContainer {
+    margin-top: 50px;
+    position: relative;
+  }
+  
+  #score,
+  #highScore,
+  #timer {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  #bubbles {
+    position: relative;
+    width: 600px;
+    height: 400px;
+    margin: 0 auto;
+    background-color: #ccc;
+    border: 2px solid #333;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .bubble {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #f00;
+    cursor: pointer;
+    transition: top 0.5s ease-in-out, left 0.5s ease-in-out;
+  }
+  
+  .bubble:hover {
+    background-color: #f00;
+    transform: scale(1.2);
+  }
+  
+  #scoreValue,
+  #highScoreValue {
+    font-weight: bold;
+  }
+  
+  #timerValue {
+    font-weight: bold;
+    animation: blink 1s infinite;
+  }
+  
+  .start-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  @keyframes countdown {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    #bubbles {
+      width: 80%;
+      height: 300px;
+    }
+  }

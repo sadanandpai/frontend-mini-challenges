@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Aim training</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+<body>
+  <div style="text-align: center;
+  margin-top: 10px;
+  font-size: 30px; "><i style="color:black;" class="fas fa-home home-icon"></i></a></div>
+  <h1>Aim training</h1>
+  <div id="gameContainer">
+    <div id="score">Score: <span id="scoreValue">0</span></div>
+    <div id="highScore">High Score: <span id="highScoreValue">0</span></div>
+    <div id="timer">Time Left: <span id="timerValue">30</span> seconds</div>
+    <div id="bubbles"></div>
+  </div>
+  <button id="startButton" class="start-button">Start Game</button>
+  <audio id="popSound" src="pop.wav"></audio>
+  <audio id="endSound" src="end.wav"></audio>
+  <script src="script.js"></script>
+</body>
+</html>
