@@ -1,4 +1,14 @@
-export const challenges = new Map([
+interface Challenge {
+  title: string
+  link: string
+  difficulty: string
+  developer?: string
+  contributors?: string[]
+  tags?: string[]
+  isNew?: boolean
+}
+
+export const challenges = new Map<string, Challenge>([
   [
     'counter',
     {
