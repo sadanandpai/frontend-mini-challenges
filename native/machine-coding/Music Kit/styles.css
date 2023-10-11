@@ -1,13 +1,7 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
 /* Set a background color */
 body {
   background-color: #f0f0f0;
-  font-family: 'Arvo', serif;
 }
 
 /* Style the header */
@@ -40,7 +34,6 @@ body {
   outline: none;
   border: 10px solid #404B69;
   font-size: 5rem;
-  font-family: 'Arvo', cursive;
   line-height: 2;
   font-weight: 900;
   color: #DA0463;
@@ -113,7 +106,6 @@ footer {
   outline: none;
   border: 10px solid #404B69;
   font-size: 5rem;
-  font-family: 'Arvo', cursive;
   line-height: 2;
   font-weight: 900;
   color: #DA0463;
