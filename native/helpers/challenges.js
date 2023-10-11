@@ -8,6 +8,15 @@ export const challenges = [
     tags: [],
   },
   {
+    title: 'simon-game',
+    link: 'simon-game',
+    difficulty: 'easy',
+    developer : 'VishakhaSainani',
+    tags:[],
+    isNew:true,
+
+  },
+  {
     title: 'Guess the number',
     link: 'guess-the-number',
     difficulty: 'easy',
