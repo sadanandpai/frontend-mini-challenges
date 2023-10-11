@@ -41,4 +41,3 @@ const nav = document.createElement('nav');
 nav.className = 'navbar-app';
 nav.innerHTML = navbarHTML;
 document.body.prepend(nav);
-document.title = challenge.title;
