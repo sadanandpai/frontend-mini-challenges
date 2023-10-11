@@ -8,15 +8,6 @@ export const challenges = [
     tags: [],
   },
   {
-    title: 'simon-game',
-    link: 'simon-game',
-    difficulty: 'easy',
-    developer : 'VishakhaSainani',
-    tags:[],
-    isNew:true,
-
-  },
-  {
     title: 'Guess the number',
     link: 'guess-the-number',
     difficulty: 'easy',
@@ -31,7 +22,6 @@ export const challenges = [
     developer: 'sadanandpai',
     youtube: 'https://youtu.be/crCZEJ6Lmgc',
     tags: [],
-    isNew: true,
   },
   {
     title: 'Telephone formatter',
@@ -64,7 +54,6 @@ export const challenges = [
     developer: 'sahankatta',
     youtube: 'https://youtu.be/FEtTRjq1P6I',
     tags: [],
-    isNew: true,
   },
   {
     title: 'Accordion',
@@ -72,7 +61,6 @@ export const challenges = [
     difficulty: 'easy',
     developer: 'rashidtvmr',
     youtube: 'https://youtu.be/03KFXudVaoo',
-    isNew: true,
     tags: [],
   },
   {
@@ -117,6 +105,14 @@ export const challenges = [
     isNew: true,
   },
   {
+    title: 'Simon game',
+    link: 'simon-game',
+    difficulty: 'easy',
+    developer: 'VishakhaSainani',
+    tags: [],
+    isNew: true,
+  },
+  {
     title: 'Blob Maker',
     link: 'blobmaker',
     difficulty: 'easy',
@@ -132,7 +128,6 @@ export const challenges = [
     developer: 'noorulaink00',
     youtube: 'https://youtu.be/LHo9Hi47MTo',
     tags: [],
-    isNew: true,
   },
   {
     title: 'Brick Breaker',
@@ -171,7 +166,6 @@ export const challenges = [
     difficulty: 'medium',
     developer: 'sadanandpai',
     tags: [],
-    isNew: true,
   },
   {
     title: 'Password Strength',
@@ -193,7 +187,6 @@ export const challenges = [
     difficulty: 'medium',
     developer: 'sadanandpai',
     tags: [],
-    isNew: true,
   },
   {
     title: 'Pixel Art',
