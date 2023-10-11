@@ -1,8 +1,4 @@
-@import url(../../helpers/core.css);
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
     background-image: linear-gradient(to bottom, #3498db, #1abc9c);
 }
 
