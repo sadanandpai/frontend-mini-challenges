@@ -409,9 +409,10 @@ export const challenges = [
   },
   { title: 'Emoji Editor', link: '#' },
   { title: 'Sort Table', link: '#' },
-  { title: 'Infinite Scroll', 
+  { 
+    title: 'Infinite Scroll', 
     link: 'infinite-scroll', 
-    difficulty: 'hard', 
+    difficulty: 'medium', 
     developer: 'srijanB7', 
     tags:[],
   },
