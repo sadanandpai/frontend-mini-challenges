@@ -426,6 +426,13 @@ export const challenges = [
     tags: [],
   },
   {
+    title: 'Aim Training',
+    link: 'Aim-training',
+    difficulty: 'medium',
+    developer: 'Killer2OP',
+    tags: [],
+  },
+  {
     title: 'Typeahead / Autocomplete (online)',
     link: 'type-ahead-online',
     difficulty: 'hard',
