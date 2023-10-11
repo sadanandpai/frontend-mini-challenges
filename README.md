@@ -64,5 +64,4 @@ If you want to contribute, improve or suggest changes to this repo, then check o
 ---
 
 ### License
-
-This repository is [MIT licensed](./LICENSE).
+This repository is licensed under [MIT licensed](./LICENSE).
