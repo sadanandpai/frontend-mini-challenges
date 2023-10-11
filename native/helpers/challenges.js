@@ -8,8 +8,8 @@ export const challenges = [
     tags: [],
   },
   {
-    title: 'Personal Finance Tracker',
-    link: 'native/machine-coding/Finance Tracker',
+    title: 'Finance Tracker',
+    link: 'finance-tracker',
     difficulty: 'medium',
     developer: 'sujitmahapatra',
     tags: ['finance', 'web-app', 'javascript', 'css'],
