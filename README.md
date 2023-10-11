@@ -65,4 +65,14 @@ If you want to contribute, improve or suggest changes to this repo, then check o
 
 ### License
 
-This repository is [MIT licensed](./LICENSE).
+<table>
+  <tr>
+     <td>
+       <p align="center"> <img src="https://user-images.githubusercontent.com/66154908/175827109-a9f2f54a-f63e-4e07-bd83-a1f760246b56.png" width="80%"></img>
+    </td>
+    <td> 
+      <img src="https://img.shields.io/badge/License-MIT-yellow.svg"/> <br> 
+This repository is licensed under the <a href="./LICENSE">MIT LICENSE</a> <img width=2300/>
+    </td>
+  </tr>
+</table>
