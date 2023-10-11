@@ -5,7 +5,6 @@ let end = start + 14;
 let posts = [];
 let isFetching = false;
 
-
 //Add Posts to DOM
 function addPosts() {
   posts.forEach((post, ind) => {
@@ -17,27 +16,31 @@ function addPosts() {
   });
 }
 
-function showLoader() {
-  loader.style.display = 'block';
+function handleLoader(loaderStatus) {
+  loader.style.display = loaderStatus;
 }
 
 //api call
 const url = `https://jsonplaceholder.typicode.com/posts?_start=${start}&_end=${end}`;
-async function getPosts() {
+
+function getPosts() {
   isFetching = true;
-  try {
-    const res = await fetch(url);
-    const json = await res.json();
-    posts = json;
-    addPosts(posts);
-    console.log(posts);
-    start = end;
-    end = start + 14;
-  } catch (err) {
-    console.log(err);
-  } finally {
-    isFetching = false;
-  }
+  handleLoader('block');
+  setTimeout(async () => {
+    try {
+      const res = await fetch(url);
+      const json = await res.json();
+      posts = json;
+      addPosts(posts);
+      start = end;
+      end = start + 14;
+    } catch (err) {
+      console.log(err);
+    } finally {
+      isFetching = false;
+      handleLoader('none');
+    }
+  }, 500);
 }
 
 //initial Load for posts
@@ -46,14 +49,11 @@ getPosts();
 //scroll eventListener
 window.addEventListener('scroll', () => {
   if (isFetching) {
-    showLoader();
+    handleLoader('block');
     return;
   }
 
-  if (
-    window.innerHeight + window.scrollY >=
-    window.document.body.offsetHeight
-  ) {
+  if (window.innerHeight + window.scrollY >= window.document.body.offsetHeight) {
     getPosts();
   }
 });
