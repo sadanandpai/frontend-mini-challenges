@@ -8,14 +8,6 @@ export const challenges = [
     tags: [],
   },
   {
-    title: 'Sorting Visualizer',
-    link: 'sorting-visualizer',
-    difficulty: 'medium',
-    developer: 'viditagrawal56',
-    tags: [],
-    isNew: true,
-  },
-  {
     title: 'Guess the number',
     link: 'guess-the-number',
     difficulty: 'easy',
@@ -92,6 +84,13 @@ export const challenges = [
     isNew: true,
   },
   {
+    title: 'MadStory Generator',
+    link: 'MadStory_generator',
+    difficulty: 'easy',
+    developer: 'hritik',
+    tags: [],
+  },
+  {
     title: 'Multi Typing',
     link: 'multi-typing',
     difficulty: 'easy',
@@ -108,6 +107,15 @@ export const challenges = [
     tags: [],
     isNew: true,
   },
+  {
+    title: 'Blob Maker',
+    link: 'blobmaker',
+    difficulty: 'easy',
+    developer: 'AbhineshJha',
+    tags: [],
+    isNew: true,
+  },
+
   {
     title: 'Meme Generator',
     link: 'meme-generator',
@@ -309,6 +317,14 @@ export const challenges = [
     isNew: true,
   },
   {
+    title: 'Sorting Visualizer',
+    link: 'sorting-visualizer',
+    difficulty: 'medium',
+    developer: 'viditagrawal56',
+    tags: [],
+    isNew: true,
+  },
+  {
     title: 'Snake Game',
     link: 'snake-game',
     difficulty: 'medium',
@@ -426,4 +442,12 @@ export const challenges = [
   { title: 'Emoji Editor', link: '#' },
   { title: 'Sort Table', link: '#' },
   { title: 'Infinite Scroll', link: '#' },
+  // {
+  //   title: 'AI Chess Game',
+  //   link: 'AI-CHESS-Game',
+  //   difficulty: 'hard',
+  //   developer: 'AnkitaSikdar005',
+  //   tags: [],
+  //   isNew: true,
+  // },
 ];

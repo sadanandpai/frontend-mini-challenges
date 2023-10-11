@@ -1,0 +1,88 @@
+@import url(../../helpers/core.css);
+
+.wrapper {
+  background-color: #ffff;
+  width: 45%;
+  min-width: 550px;
+  padding: 30px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  border-radius: 8px;
+}
+
+.output {
+  background-color: #eef3f8;
+  width: 100%;
+  min-height: 250px;
+  padding: 20px 0;
+  overflow: hidden;
+  border-radius: 5px;
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+
+#blob {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  background: linear-gradient(#d94a4a, #c22222);
+  box-shadow: 15px 20px 30px rgba(0, 0, 0, 0.15);
+}
+
+.dimesions {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin: 20px 0 40px 0;
+}
+
+label {
+  font-weight: 500;
+}
+
+input[type='number'] {
+  height: 40px;
+  width: 80px;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #a0a0b0;
+  border-radius: 3px;
+}
+
+input[type='number']:focus {
+  background-color: #f1f5fa;
+  border-color: #c22222;
+  color: #c22222;
+}
+
+.sliders {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+}
+
+input[type='text'] {
+  width: 82%;
+  margin-top: 50px;
+  padding: 10px;
+  font-size: 12px;
+  border: none;
+  background-color: #f1eff9;
+  border-radius: 3px;
+}
+
+button {
+  width: 12%;
+  margin-left: 4%;
+  padding: 10px 0;
+  background-color: #c22222;
+  border: none;
+  cursor: pointer;
+  border-radius: 3px;
+  color: #fff;
+  font-size: 12px;
+}

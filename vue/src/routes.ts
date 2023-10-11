@@ -11,6 +11,7 @@ import LightDarkMode from './machine-coding/light-dark-mode/index.vue'
 import TableColorizer from './machine-coding/table-colorizer/index.vue'
 import Pagination from './machine-coding/pagination/index.vue'
 import Accordion from './machine-coding/accordion/index.vue'
+import ToastPopup from './machine-coding/toast-popup/index.vue'
 
 const routes: RouteRecordRaw[] = [
   { path: '/', component: Challenges },
@@ -50,6 +51,10 @@ const routes: RouteRecordRaw[] = [
       {
         path: '/accordion',
         component: Accordion,
+      },
+      {
+        path: '/toast-popup',
+        component: ToastPopup,
       },
     ]
   }

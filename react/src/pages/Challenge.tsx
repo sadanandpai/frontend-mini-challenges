@@ -29,6 +29,8 @@ import TicTacToe from '@/machine-coding/tic-tac-toe/App';
 import Toast from '@/machine-coding/toast-popup/toast';
 import TodoList from '@/machine-coding/todo-list/todo';
 import TwentyfiveFiveClock from '@/machine-coding/25-5-clock';
+import ImageGallery from '@/machine-coding/image-gallery/App.tsx';
+import WordCounter from '@/machine-coding/word-count';
 import { challenges } from '@/helpers/challenges';
 import { useParams } from 'react-router-dom';
 
@@ -63,6 +65,8 @@ const reactChallenges = {
   pagination: <Pagination />,
   'qr-code-generator': <QRCodeGenerator />,
   'quote-generator': <QouteGenerator />,
+  'image-gallery': <ImageGallery />,
+  'word-count': <WordCounter />,
 };
 
 function Challenge() {

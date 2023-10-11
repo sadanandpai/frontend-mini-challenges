@@ -1,4 +1,14 @@
-export const challenges = new Map([
+interface Challenge {
+  title: string
+  link: string
+  difficulty: string
+  developer?: string
+  contributors?: string[]
+  tags?: string[]
+  isNew?: boolean
+}
+
+export const challenges = new Map<string, Challenge>([
   [
     'counter',
     {
@@ -16,6 +26,17 @@ export const challenges = new Map([
       link: 'quote-generator',
       difficulty: 'easy',
       developer: 'viditagrawal56',
+      isNew: true,
+      tags: [],
+    },
+  ],
+  [
+    'image-gallery',
+    {
+      title: 'Image Gallery',
+      link: 'image-gallery',
+      difficulty: 'easy',
+      developer: 'Bhushan1019',
       isNew: true,
       tags: [],
     },
@@ -312,6 +333,17 @@ export const challenges = new Map([
       difficulty: 'hard',
       developer: 'deepu0',
       tags: [],
+    },
+  ],
+  [
+    'word-count',
+    {
+      title: 'Word Count',
+      link: 'word-count',
+      difficulty: 'medium',
+      developer: 'Sumitwarrior7',
+      tags: [],
+      isNew: true,
     },
   ],
 ]);

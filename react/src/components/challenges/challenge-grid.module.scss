@@ -19,6 +19,10 @@
     transform: scale(1.05);
   }
 
+  .avatarContainer > *:not(:first-child) {
+    margin-top: 0.5rem;
+  }
+
   h3 {
     font-size: 1.25rem;
     font-weight: 500;
@@ -60,13 +64,13 @@
     justify-content: center;
     font-size: 0.8rem;
     color: black;
-  }
 
-  img {
-    width: 25px;
-    height: 25px;
-    margin-right: 0.5rem;
-    border-radius: 50%;
+    & > img {
+      width: 25px;
+      height: 25px;
+      margin-right: 0.5rem;
+      border-radius: 50%;
+    }
   }
 
   .name {
