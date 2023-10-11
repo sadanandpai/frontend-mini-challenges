@@ -24,7 +24,6 @@ function showLoader() {
 //api call
 const url = `https://jsonplaceholder.typicode.com/posts?_start=${start}&_end=${end}`;
 async function getPosts() {
-  console.log('inside');
   isFetching = true;
   try {
     const res = await fetch(url);
@@ -55,8 +54,6 @@ window.addEventListener('scroll', () => {
     window.innerHeight + window.scrollY >=
     window.document.body.offsetHeight
   ) {
-   
-    console.log('end');
     getPosts();
   }
 });
