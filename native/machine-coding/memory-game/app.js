@@ -1,3 +1,4 @@
+// This is an array of all the cards that we'll be using
 const cardArray = [
     {
         name: 'fries',
@@ -50,14 +51,17 @@ const cardArray = [
 
 ]
 
+// We use a formula that I found somewhere to shuffle all cards
 cardArray.sort(()=>0.5 - Math.random())
 
+// We here declare the variables that we'll be using later on, all are self-explanatory
 const gridDisplay = document.querySelector('#grid')
 const resultDisplay  = document.querySelector('#result')
 let cardsChosen = []
 let cardsChosenIds = []
 const cardsWon = []
 
+// This function is to create our board that the user will see upon visiting the website
 function createBoard() {
     for (let i = 0; i<cardArray.length; i++){
         const card = document.createElement('img');
@@ -70,6 +74,8 @@ function createBoard() {
 
 createBoard()
 
+
+// This function checks if the two cards chosen are the same ones or not, includes error handling
 function checkMatch(){
     const cards = document.querySelectorAll('#grid img')
     const optionOneId = cardsChosenIds[0]
@@ -95,17 +101,20 @@ function checkMatch(){
     resultDisplay.textContent = cardsWon.length
     cardsChosen = []
     cardsChosenIds = []
+    // Case of finding all matches
     if (cardsWon.length == cardArray.length/2){
         resultDisplay.textContent = 'Congrats you found them all!'
     }
 }
 
+// Animation of flipping the card, this is called when the user clicks on the image
 function flipCard() {
     const cardId = this.getAttribute('data-id')
     cardsChosen.push(cardArray[cardId].name)
     cardsChosenIds.push(cardId)
     this.setAttribute('src',cardArray[cardId].img)
 
+    // Checks if 2 cards are chosen, and then call the checkMatch function
     if(cardsChosen.length == 2){
         setTimeout(checkMatch, 50)
     }
