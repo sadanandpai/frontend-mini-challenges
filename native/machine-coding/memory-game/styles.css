@@ -1,0 +1,19 @@
+*{
+    background-color: aquamarine;
+    justify-content: center;
+}
+
+#grid{
+    padding-top: 2%;
+    padding-left: 38%;
+    width: 400px;
+    height: 300px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#score{
+    padding-left: 38%;
+    font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
+}
