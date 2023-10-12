@@ -386,6 +386,13 @@ export const challenges = [
     tags: [],
   },
   {
+    title: 'Quote Generator',
+    link: 'quote-generator',
+    difficulty: 'medium',
+    developer: 'aaadityag',
+    tags: [],
+  },
+  {
     title: 'Paginator',
     link: 'paginator',
     difficulty: 'hard',
@@ -437,4 +444,5 @@ export const challenges = [
   { title: 'Emoji Editor', link: '#' },
   { title: 'Sort Table', link: '#' },
   { title: 'Infinite Scroll', link: '#' },
+  
 ];
