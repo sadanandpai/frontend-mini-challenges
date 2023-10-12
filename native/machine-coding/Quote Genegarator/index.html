@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quote Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="../../helpers/header.js" type="module"></script>
+</head>
+
+<body>
+    <div class="q-box">
+        <h2>Quote of the day</h2>
+        <blockquote id="quote">Loading..</blockquote>
+        <span id="auth">Loading...</span>
+        <div>
+            <button onclick="getQ(url)">New Quote</button>
+            <button onclick="tweet()"><img src="tweetX.png" alt="twitter">Tweet</button>
+        </div>
+    </div>
+    <script>
+        const quote = document.getElementById("quote");
+        const author = document.getElementById("auth");
+
+        const url = "https://api.quotable.io/random?maxLength=100";
+
+        let twee = '';
+        async function getQ(url){
+            const response = await fetch(url);
+            let data = await response.json();
+            console.log(data);
+            quote.innerHTML = data.content;
+            author.innerHTML = data.author;
+            twee = data.content;
+        }
+        getQ(url);
+
+        function tweet(){
+            window.open("https://twitter.com/intent/tweet?text=" + quote.innerHTML + "---- by" + author.innerHTML + "Tweet Window", "width = 600px, height = 300px");
+        }
+    </script>
+</body>
+    <!-- made by / https://github.com/AaadityaG -->
+</html>
