@@ -1,18 +1,4 @@
-
 /* Set a background color */
-body {
-  background-color: #f0f0f0;
-
-}
-
-/* Style the header */
-#title {
-  text-align: center;
-  font-size: 2rem;
-  padding: 2rem;
-  background-color: #333;
-  color: #fff;
-}
 
 /* Style the drum buttons */
 .set {
@@ -33,17 +19,14 @@ body {
   cursor: pointer;
   transition: background-color 0.2s, transform 0.2s;
   outline: none;
-  border: 10px solid #404B69;
+  border: 10px solid #404b69;
   font-size: 5rem;
   line-height: 2;
   font-weight: 900;
-  color: #DA0463;
-  text-shadow: 3px 0 #DBEDF3;
+  color: #da0463;
+  text-shadow: 3px 0 #dbedf3;
   width: 150px;
   height: 150px;
-  
-  
-  
 }
 
 /* Add hover effect to drum buttons */
@@ -53,49 +36,41 @@ body {
   transform: scale(1.1);
 }
 
-/* Style the footer */
-footer {
-  text-align: center;
-  background-color: #333;
-  color: #fff;
-  padding: 3rem 0;
-  font-size: 1rem;
-}
-
 .w {
-  background-image: url("images/tom1.png");
+  background-image: url('images/tom1.png');
 }
 
 .a {
-  background-image: url("images/tom2.png");
+  background-image: url('images/tom2.png');
 }
 
 .s {
-  background-image: url("images/tom3.png");
+  background-image: url('images/tom3.png');
 }
 
 .d {
-  background-image: url("images/tom4.png");
+  background-image: url('images/tom4.png');
 }
 
 .j {
-  background-image: url("images/snare.png");
+  background-image: url('images/snare.png');
 }
 
 .k {
-  background-image: url("images/crash.png");
+  background-image: url('images/crash.png');
 }
 
 .l {
-  background-image: url("images/kick.png");
+  background-image: url('images/kick.png');
 }
 
 .set {
-  margin: 10% auto;
+  display: flex;
+  flex-wrap: wrap;  
 }
 
 .pressed {
-  box-shadow: 0 3px 4px 0 #DBEDF3;
+  box-shadow: 0 3px 4px 0 #dbedf3;
   opacity: 0.5;
 }
 
@@ -105,12 +80,12 @@ footer {
 
 .drum {
   outline: none;
-  border: 10px solid #404B69;
+  border: 10px solid #404b69;
   font-size: 5rem;
   line-height: 2;
   font-weight: 900;
-  color: #DA0463;
-  text-shadow: 3px 0 #DBEDF3;
+  color: #da0463;
+  text-shadow: 3px 0 #dbedf3;
   border-radius: 15px;
   display: inline-block;
   width: 150px;
@@ -118,4 +93,10 @@ footer {
   text-align: center;
   margin: 10px;
   background-color: white;
+}
+
+@media (width >= 768px) {
+  .set {
+    margin: 10% auto;
+  }
 }
