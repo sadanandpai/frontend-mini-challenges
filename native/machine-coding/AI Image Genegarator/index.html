@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Image Generator</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="../../helpers/navbar.js" type="module"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>AI Image Generator</h1>
+      <p>
+        Write a prompt below (such as): 
+        cat on street, human on moon, apple on chair<br>
+        -> To download images - click on image
+      </p>
+      <form class="gen-form">
+        <input
+          type="text"
+          id="user-prompt"
+          placeholder="Type your prompt here..."
+          autocomplete="off"
+        />
+        <button type="button" id="generate">Generate</button>
+      </form>
+      <div class="result">
+        <div id="loading">Generating...
+          <div class="spin">
+            <div class="hourglassBackground">
+              <div class="hourglassContainer">
+                <div class="hourglassCurves"></div>
+                <div class="hourglassCapTop"></div>
+                <div class="hourglassGlassTop"></div>
+                <div class="hourglassSand"></div>
+                <div class="hourglassSandStream"></div>
+                <div class="hourglassCapBottom"></div>
+                <div class="hourglassGlass"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="image-grid"></div>
+      </div>
+    </div>
+    <!-- made by / https://github.com/AaadityaG -->
+    <script src="script.js"></script>
+  </body>
+</html>
