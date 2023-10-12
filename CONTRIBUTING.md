@@ -5,10 +5,16 @@
 
 #### Challenge contribution
 
+- The repo encourages the addition of new challenges that have been developed and modified by you
+- Copy-paste codes from other Repos are not accepted as of now
+- Challenges can be built by referring to the concepts used in other codebases and YouTube but should be developed on your own
+
+#### Standards
+
 - Use modern JavaScript and coding standards
 - Write clean and understandable code
 - Add comments wherever necessary
-- Build it responsively if mobile compatible
+- Build it responsively if mobile mobile-compatible
 - Try to maintain the challenges in the order of their difficulty
 
 ##### Steps to Contribute JavaScript Challenge
