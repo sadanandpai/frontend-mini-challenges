@@ -6,6 +6,7 @@
   justify-content: center;
   align-items: center;
   margin-top: 2rem;
+  flex-wrap: wrap;  
 }
 
 .drum {
@@ -15,24 +16,24 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 0.5rem;
   cursor: pointer;
   transition: background-color 0.2s, transform 0.2s;
-  outline: none;
   border: 10px solid #404b69;
   font-size: 5rem;
   line-height: 2;
   font-weight: 900;
   color: #da0463;
   text-shadow: 3px 0 #dbedf3;
-  width: 150px;
-  height: 150px;
+  width: 115px;
+  height: 115px;
+  border-radius: 15px;
+  margin: 10px;
 }
 
 /* Add hover effect to drum buttons */
 .drum:hover {
   background-color: #333;
-  color: #fff;
+  color: blue;
   transform: scale(1.1);
 }
 
@@ -64,11 +65,6 @@
   background-image: url('images/kick.png');
 }
 
-.set {
-  display: flex;
-  flex-wrap: wrap;  
-}
-
 .pressed {
   box-shadow: 0 3px 4px 0 #dbedf3;
   opacity: 0.5;
@@ -78,25 +74,13 @@
   color: red;
 }
 
-.drum {
-  outline: none;
-  border: 10px solid #404b69;
-  font-size: 5rem;
-  line-height: 2;
-  font-weight: 900;
-  color: #da0463;
-  text-shadow: 3px 0 #dbedf3;
-  border-radius: 15px;
-  display: inline-block;
-  width: 150px;
-  height: 150px;
-  text-align: center;
-  margin: 10px;
-  background-color: white;
-}
-
 @media (width >= 768px) {
   .set {
     margin: 10% auto;
+  }
+
+  .drum {
+    width: 150px;
+    height: 150px;
   }
 }

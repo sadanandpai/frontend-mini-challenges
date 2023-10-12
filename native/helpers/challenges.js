@@ -56,6 +56,14 @@ export const challenges = [
     tags: [],
   },
   {
+    title: 'Music Kit',
+    link: 'music-kit',
+    difficulty: 'easy',
+    developer: 'shivam200446',
+    tags: [],
+    isNew: true,
+  },
+  {
     title: 'Currency Converter',
     link: 'currency-converter',
     difficulty: 'easy',
@@ -434,15 +442,6 @@ export const challenges = [
     developer: 'sadanandpai',
     tags: [],
   },
-   {
-    title: 'Music Kit',
-    link: 'music-kit',
-    difficulty: 'easy',
-    developer: 'shivam200446',
-    tags: [],
-    isNew: true,
-  },
-  
   { title: 'Emoji Editor', link: '#' },
   { title: 'Sort Table', link: '#' },
   { title: 'Infinite Scroll', link: '#' },
