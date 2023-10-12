@@ -437,4 +437,11 @@ export const challenges = [
   { title: 'Emoji Editor', link: '#' },
   { title: 'Sort Table', link: '#' },
   { title: 'Infinite Scroll', link: '#' },
+  {
+    title: 'AI Image Generator',
+    link: 'ai-image-generator',
+    difficulty: 'medium',
+    developer: 'aaadityag',
+    tags: [],
+  },
 ];
