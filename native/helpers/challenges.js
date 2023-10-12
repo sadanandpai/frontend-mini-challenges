@@ -422,6 +422,14 @@ export const challenges = [
     difficulty: 'easy',
     developer: 'hritik',
     tags: [],
+    
+  },
+   {
+    title: 'Music Kit',
+    link: 'Music Kit',
+    difficulty: 'easy',
+    developer: 'shivam200446',
+    tags: [],
   },
   { title: 'Emoji Editor', link: '#' },
   { title: 'Sort Table', link: '#' },
