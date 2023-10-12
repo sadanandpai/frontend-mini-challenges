@@ -145,14 +145,6 @@ export const challenges = [
     tags: [],
   },
   {
-    title: 'Brick Breaker',
-    link: 'brick-breaker',
-    difficulty: 'medium',
-    developer: '5h0ov',
-    tags: [],
-    isNew: true,
-  },
-  {
     title: 'Weather App',
     link: 'weather-app',
     difficulty: 'medium',
@@ -429,13 +421,6 @@ export const challenges = [
     tags: [],
   },
   {
-    title: 'Tilting Maze Game',
-    link: 'tilting-maze',
-    difficulty: 'hard',
-    developer: '5h0ov',
-    tags: [],
-  },
-  {
     title: 'Typeahead / Autocomplete (offline)',
     link: 'type-ahead',
     difficulty: 'hard',
@@ -452,12 +437,4 @@ export const challenges = [
   { title: 'Emoji Editor', link: '#' },
   { title: 'Sort Table', link: '#' },
   { title: 'Infinite Scroll', link: '#' },
-  // {
-  //   title: 'AI Chess Game',
-  //   link: 'AI-CHESS-Game',
-  //   difficulty: 'hard',
-  //   developer: 'AnkitaSikdar005',
-  //   tags: [],
-  //   isNew: true,
-  // },
 ];
