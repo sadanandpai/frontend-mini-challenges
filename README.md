@@ -1,68 +1,152 @@
-<div align="center">
-  <h1>Frontend Mini Challenges</h1>
-  <h3>Collection of frontend challenges for learning and interviews</h3>
-  <a href="https://sadanandpai.github.io/frontend-mini-challenges/"><img src="cover.png" alt="web programming" width="500px" /></a>
+# <p align="center">Frontend Mini Challanges</p>
 
-[![](https://img.shields.io/github/stars/sadanandpai/frontend-mini-challenges?style=for-the-badge)](#stars)
-[![](https://img.shields.io/github/forks/sadanandpai/frontend-mini-challenges?style=for-the-badge)](#forks)
+<p align="center">
+  <a href="https://sadanandpai.github.io/frontend-mini-challenges/"><img src="cover.png" alt="web programming" width="300px" /></a>
+</p>
+  <p align="center">
+    <a href="https://github.com/sadanandpai/frontend-mini-challenges/blob/master/LICENSE" target="blank">
+      <img src="https://img.shields.io/github/license/sadanandpai/frontend-mini-challenges?style=for-the-badge&logo=appveyor" alt="License" />
+    </a>
+    <a href="https://github.com/sadanandpai/frontend-mini-challenges/fork" target="blank">
+      <img src="https://img.shields.io/github/forks/sadanandpai/frontend-mini-challenges?style=for-the-badge&logo=appveyor" alt="Forks"/>
+    </a>
+    <a href="https://github.com/sadanandpai/frontend-mini-challenges/stargazers" target="blank">
+    <img src="https://img.shields.io/github/stars/sadanandpai/frontend-mini-challenges?style=for-the-badge&logo=appveyor" alt="Star"/>
+    </a>
+    <a href="https://github.com/sadanandpai/frontend-mini-challenges/issues" target="blank">
+      <img src="https://img.shields.io/github/issues/sadanandpai/frontend-mini-challenges.svg?style=for-the-badge&logo=appveyor" alt="Click Vote Issue"/>
+    </a>
+    <a href="https://github.com/sadanandpai/frontend-mini-challenges/pulls" target="blank">
+      <img src="https://img.shields.io/github/issues-pr/sadanandpai/frontend-mini-challenges.svg?style=for-the-badge&logo=appveyor" alt="Click Vote Open Pull Request"/>
+    </a>
+  </p>
 
-  <p>Show your support by giving a ⭐ to this repo</p>
+  <p align="center"><strong>Show your support by giving a ⭐ to this repo</strong></p>
 
-  <h3>
-    <a href="https://sadanandpai.github.io/frontend-mini-challenges/">View all challenges in JavaScript & React</a>
-  </h3>
-</div>
+## Table of Content
 
-<br/>
+- [About](#about)
+- [Setting up](#setting-up)
+- [Challenges](#challenges)
+  - [Online](#online)
+  - [Locally](#locally)
+    - [Javascript Challenge](#javascript-challenge)
+    - [React Challenge](#react-challenge)
+    - [Vue.js Challenge](#vuejs-challenge)
+- [Contributing Guide](#contributing-guide)
+- [Stargazers](#stargazers)
+- [Forkers](#stargazers)
+- [Contributors](#contributors)
+- [License](#license)
 
 ## About
 
-This repo is created to list down all the popular frontend challenges which are recommended for learning and interviews. Challenges are solved in vanilla JavaScript, React and VueJs. You can both play with the UI and view the solutions.
+Introducing an all-inclusive repository, meticulously curated to present a trove of top-tier frontend challenges that not only serve as prime learning material but also as your secret weapon for acing those critical interviews. From the elegant simplicity of `vanilla javaScript` to the dynamic realms of `React` and `Vue.js`, we've got it all covered. Dive in, explore the intuitive user interfaces, and unlock the treasure trove of solutions to propel your skills to new heights. This is your **passport** to mastery in the world of frontend development.
 
-- Solutions to JavaScript challenges: [Click here](https://github.com/sadanandpai/frontend-mini-challenges/tree/main/native/machine-coding)
-- Solutions to React challenges: [Click here](https://github.com/sadanandpai/frontend-mini-challenges/tree/main/react/src/machine-coding)
-- Solutions to VueJs challenges: [Click here](https://github.com/sadanandpai/frontend-mini-challenges/tree/main/vue/src/machine-coding)
+## Setting up
 
-<br/>
+1. Clone the repository
 
-## Local setup
+   ```bash
+   git clone https://github.com/sadanandpai/frontend-mini-challenges
+   ```
 
-- Clone the repo
-- JavaScript Challenges
-  - The challenges are standalone modules. Those can be viewed directly by opening the index file or live server.
-- React Challenges
-  - navigate to `react/`
-  - `npm install` (only one time installation is needed for all the challenges)
-  - `npm run dev`
-- VueJs Challenges
-  - navigate to `vue/`
-  - `npm install` (only one time installation is needed for all the challenges)
-  - `npm run dev`
+2. Change the directory using `cd`
 
-<br/>
+   ```bash
+   cd frontend-mini-challanges
+   ```
+
+## Challenges
+
+Frontend Mini Challanges provides three kinds of challanges as listed below:
+
+- [Javascript Challenge](#javascript-challenge)
+- [React Challenge](#react-challenge)
+- [Vue.js Challenge](#vuejs-challenge)
+
+And, whether you prefer to roll up your sleeves and tackle these challenges locally on your own development environment or dive right in online, we've got you covered
+
+### Online
+
+For those who prefer the online experience, look no further! Head over to [Frontend Mini Challanges](https://sadanandpai.github.io/frontend-mini-challenges/react/dist/) to embark on your frontend journey right away. Dive into the challenges, experiment with the user interfaces, and access solutions seamlessly. Happy coding!
+
+### Locally
+
+#### Javascript Challenge
+
+Javascript challenge are standalone modules. It can be viewed directly by opening the [`index.html`](./index.html) file directly or [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer).
+
+![Opening `index.html` file with Live Server Locally](./res/liveserver.png)
+
+> Solutions to `JavaScript` challenges: [Click here](https://github.com/sadanandpai/frontend-mini-challenges/tree/main/native/machine-coding)
+
+#### React Challenge
+
+1. Navigate to the `react/` folder in the repository.
+
+   ```bash
+   cd react
+   ```
+
+2. Install the required modules.
+
+   ```bash
+   npm i
+   ```
+
+   _Note: nodejs must be install in your local machine if you don't have one you can download from [here](https://nodejs.org/en)._
+
+3. Running the `react` challanges.
+
+   ```bash
+   npm run dev
+   ```
+
+> Solutions to `react` challenges: [Click here](https://github.com/sadanandpai/frontend-mini-challenges/tree/main/react/src/machine-coding)
+
+#### Vue,.js Challenge
+
+1. Navigate to the `vue/` folder in the repository.
+
+   ```bash
+   cd react
+   ```
+
+2. Install the required modules.
+
+   ```bash
+   npm i
+   ```
+
+   _Note: nodejs must be install in your local machine if you don't have one you can download from [here]https://vuejs.org/)._
+
+3. Running the `vue` challanges.
+
+   ```bash
+   npm run dev
+   ```
+
+> Solutions to `vuejs` challenges: [Click here](https://github.com/sadanandpai/frontend-mini-challenges/tree/main/vue/src/machine-coding)
 
 ## Contributing Guide
 
 If you want to contribute, improve or suggest changes to this repo, then check out the [Contributing Guide](https://github.com/sadanandpai/frontend-mini-challenges/blob/main/CONTRIBUTING.md)
 
-<br/>
-
-### Stargazers
+## Stargazers
 
 [![Stargazers repo roster for @sadanandpai/frontend-mini-challenges](https://reporoster.com/stars/sadanandpai/frontend-mini-challenges)](https://github.com/sadanandpai/frontend-mini-challenges/stargazers)
 
-### Forkers
+## Forkers
 
 [![Forkers repo roster for @sadanandpai/frontend-mini-challenges](https://reporoster.com/forks/sadanandpai/frontend-mini-challenges)](https://github.com/sadanandpai/frontend-mini-challenges/network/members)
 
-### Contributors
+## Contributors
 
 <a href="https://github.com/sadanandpai/frontend-mini-challenges/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=sadanandpai/frontend-mini-challenges" />
 </a>
 
----
-
-### License
+## License
 
 This repository is [MIT licensed](./LICENSE).
