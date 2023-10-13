@@ -28,7 +28,7 @@ favIcon.setAttribute('href', '../../logo.svg');
 
 // Add all tagsto the head
 const headTags = [navbarScript, coreStyles, metaUTF, metaName, metaHTTP, favIcon];
-headTags.forEach((tag) => document.head.appendChild(tag));
+headTags.forEach((tag) => document.head.prepend(tag));
 
 // Add title
 const challengeLink = window.location.pathname.split('machine-coding/')[1].slice(0, -1);
