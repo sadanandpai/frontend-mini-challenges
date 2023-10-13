@@ -1,11 +1,11 @@
 interface Challenge {
-  title: string
-  link: string
-  difficulty: string
-  developer?: string
-  contributors?: string[]
-  tags?: string[]
-  isNew?: boolean
+  title: string;
+  link: string;
+  difficulty: string;
+  developer?: string;
+  contributors?: string[];
+  tags?: string[];
+  isNew?: boolean;
 }
 
 export const challenges = new Map<string, Challenge>([
@@ -340,6 +340,17 @@ export const challenges = new Map<string, Challenge>([
     {
       title: 'Word Count',
       link: 'word-count',
+      difficulty: 'medium',
+      developer: 'Sumitwarrior7',
+      tags: [],
+      isNew: true,
+    },
+  ],
+  [
+    'temperature-converter',
+    {
+      title: 'Temperature Converter',
+      link: 'temperature-converter',
       difficulty: 'medium',
       developer: 'Sumitwarrior7',
       tags: [],

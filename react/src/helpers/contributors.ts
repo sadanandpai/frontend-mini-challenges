@@ -1,6 +1,6 @@
 interface Contributor {
-  name: string
-  pic: string
+  name: string;
+  pic: string;
 }
 
 export const contributors = new Map<string, Contributor>([
@@ -26,4 +26,5 @@ export const contributors = new Map<string, Contributor>([
   ['Krishnakalani111', { name: 'Krishna Kalani', pic: 'https://avatars.githubusercontent.com/u/88764668' }],
   ['viditagrawal56', { name: 'Vidit Agrawal', pic: 'https://avatars.githubusercontent.com/u/52532308' }],
   ['Bhushan1019', { name: 'Bhushan Patil', pic: 'https://avatars.githubusercontent.com/u/121352274' }],
+  ['Sumitwarrior7', { name: 'Cool Dude 69', pic: 'https://avatars.githubusercontent.com/u/108853577' }],
 ]);
