@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./index.js"></script>
+    <script src="../../helpers/header.js" type="module"></script>
+    <link rel="stylesheet" href="./index.css">
+    <title>Movie Info Website</title>
+</head>
+<body>
+    <header>
+        <h1>Movie Info Website</h1>
+    </header>
+    <main>
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="Search for a movie">
+            <button id="search-button">Search</button>
+        </div>
+        <div class="movie-info">
+            <div class="poster">
+                <img id="movie-poster" src="" alt="Movie Poster">
+            </div>
+            <div class="details">
+                <h2 id="movie-title"></h2>
+                <p>Genre: <span id="movie-genre"></span></p>
+                <p>Cast: <span id="movie-cast"></span></p>
+                <p>IMDb Rating: <span id="movie-rating"></span></p>
+                <p>Released Date: <span id="movie-released"></span></p>
+                <p>Director: <span id="movie-director"></span></p>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>
