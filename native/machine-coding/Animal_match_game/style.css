@@ -1,0 +1,113 @@
+/* Default styling */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+}
+
+body {
+	margin: 0;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: linear-gradient(#2b73af, #131124);
+	font-family: cursive;
+}
+
+/* Container of the game */
+.app {
+	height: 600px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+}
+
+h1 {
+	margin: 0;
+	color: white;
+}
+
+/* Main picture of the game */
+.whole-body {
+	width: 200px;
+	height: 200px;
+	background-color: rgb(180, 220, 255);
+	border-radius: 50%;
+	font-size: 140px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	line-height: 210px;
+	margin-top: 20px;
+	box-shadow: 0 0 0 15px rgba(180, 220, 255, 0.2);
+	user-select: none;
+}
+
+/* Play again button styling */
+.again {
+	display: inline-block;
+	font-size: 20px;
+	background-color: white;
+	color: darkblue;
+	padding: 10px;
+	border-radius: 5px;
+	margin: 1.5rem 0;
+	user-select: none;
+}
+
+.again:hover {
+	background-color: rgba(255, 255, 255, 0.8);
+	cursor: pointer;
+	font-size: 1.4rem;
+	transition: all 0.3s;
+}
+
+.again:active {
+	background-color: rgba(255, 255, 255, 0.6);
+	transform: translate(2px, 2px);
+}
+
+/* Styling of the different option buttons */
+.selector {
+	display: flex;
+	position: relative;
+}
+
+.face {
+	width: 60px;
+	height: 60px;
+	background-color: rgba(255, 255, 255, 0.2);
+	border-radius: 50%;
+	font-size: 35px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	line-height: 70px;
+	cursor: pointer;
+	user-select: none;
+	transition: all 0.4s;
+}
+
+.face:not(:last-child) {
+	margin-right: 25px;
+}
+
+.face:hover {
+	font-size: 42px;
+	background-color: rgba(255, 255, 255, 0.4);
+}
+
+/* Styling of wrong and right answer */
+.right {
+	background-color: lightgreen;
+	font-size: 42px;
+	width: 64px;
+	height: 64px;
+}
+
+.wrong {
+	background-color: lightsalmon;
+}
