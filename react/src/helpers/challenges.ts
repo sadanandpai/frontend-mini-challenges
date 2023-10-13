@@ -346,4 +346,15 @@ export const challenges = new Map<string, Challenge>([
       isNew: true,
     },
   ],
+  [
+    'text-analyzer',
+    {
+      title: 'Text Analyzer',
+      link: 'text-ananlyzer',
+      difficulty: 'medium',
+      developer: 'JiyaGupta-cs',
+      tags: [],
+      isNew: true,
+    },
+  ],
 ]);
