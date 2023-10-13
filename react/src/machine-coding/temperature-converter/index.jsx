@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+
 import styles from './styles.module.css';
 
 function TemperatureConverter() {
@@ -21,23 +22,28 @@ function TemperatureConverter() {
     }
 
     if (fromScale === 'celsius' && toScale === 'fahrenheit') {
-      setOutputTemperature((inputTemp * 9) / 5 + 32);
+      let outputTemp = (inputTemp * 9) / 5 + 32;
+      if (outputTemp % 1 !== 0) {
+        outputTemp = outputTemp.toFixed(2);
+      }
+      setOutputTemperature(outputTemp);
     } else if (fromScale === 'fahrenheit' && toScale === 'celsius') {
-      setOutputTemperature(((inputTemp - 32) * 5) / 9);
-    } else {
-      // Handle other conversions here
+      let outputTemp = ((inputTemp - 32) * 5) / 9;
+      if (outputTemp % 1 !== 0) {
+        outputTemp = outputTemp.toFixed(2);
+      }
+      setOutputTemperature(outputTemp);
     }
   };
 
   return (
     <div className={styles.container}>
       <div className={styles.card}>
-        <h1 className={styles.cardTitle}>Temperature Converter</h1>
         <div className={styles.formGroup}>
           <label>Enter Temperature</label>
           <div className={styles.inputGroup}>
             <input
-              type="text"
+              type="number"
               className={`form-control ${styles.input}`}
               placeholder="Enter temperature"
               value={inputTemperature}
@@ -58,8 +64,9 @@ function TemperatureConverter() {
           Convert
         </button>
         <div className={styles.outputGroup}>
-          <p>Converted Temperature:</p>
-          <p>{outputTemperature}</p>
+          <p>
+            Converted Temperature: <strong>{outputTemperature}</strong>
+          </p>
           <select
             className={`form-control ${styles.select}`}
             value={toScale}
