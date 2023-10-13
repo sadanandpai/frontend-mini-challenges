@@ -453,4 +453,12 @@ export const challenges = [
   { title: 'Emoji Editor', link: '#' },
   { title: 'Sort Table', link: '#' },
   { title: 'Infinite Scroll', link: '#' },
+  {
+    title: 'Fitness Tracker',
+    link: 'fitness-tracker',
+    difficulty: 'easy',
+    developer: 'CrypticRevenger',
+    tags: [],
+    isNew: true,
+  },
 ];
