@@ -1,0 +1,111 @@
+:root {
+  /* Default body colors */
+  --bg-body: #f3f4f6;
+  --text-body: #111827;
+
+  /* Navbar-specific colors */
+  --bg-navbar: #f9fafb;
+  --shadow-navbar: rgba(0 0 0 / 0.1);
+  --bg-navbar-logo-img: transparent;
+
+  /* Native home colors (challenge list page) */
+  --bg-challenge-card: #f9fafb;
+  --border-challenge-card: rgba(0, 0, 0, 0.15);
+  --shadow-challenge-card: var(--shadow-navbar);
+  --shadow-challenge-card-scaled: rgba(0 0 0 / 0.25);
+
+  /* Footer-specific colors (same as navbar) */
+  --bg-footer: var(--bg-navbar);
+  --shadow-footer: var(--shadow-navbar);
+
+  /* Links */
+  --text-link: blue;
+}
+
+
+/* Dark override for above variables */
+
+:root.dark {
+  /* Default body colors */
+  --bg-body: #030712;
+  --text-body: #e5e7eb;
+
+  /* Navbar-specific colors */
+  --bg-navbar: var(--bg-body);
+  --shadow-navbar: #1f2937;
+  --bg-navbar-logo-img: #d1d5db;
+
+  /* Native home colors (challenge list page) */
+  --bg-challenge-card: #111827;
+  --border-challenge-card: var(--shadow-navbar);
+  --shadow-challenge-card: var(--shadow-navbar);
+  --shadow-challenge-card-scaled: #374151;
+
+  /* Footer-specific colors (same as navbar) */
+  --bg-footer: var(--bg-navbar);
+  --shadow-footer: var(--shadow-navbar);
+
+  /* Links */
+  --text-link: #6366f1;
+
+  color-scheme: dark;
+}
+
+
+
+
+
+.switch {
+  position: absolute;
+  margin-left: -9999px;
+  visibility: hidden;
+}
+
+.switch+label {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+
+.switch+label {
+  padding: 2px;
+  width: 52px;
+  height: 27px;
+  background-color: var(--color-border), rgba(0, 0, 0, 0.3);
+  border-radius: 100px;
+}
+
+.switch+label:before,
+.switch+label:after {
+  display: block;
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  bottom: 1px;
+  content: "";
+}
+
+.switch+label:before {
+  right: 1px;
+  background-color: var(--bg-input);
+  border-radius: 60px;
+  transition: all 0.4s;
+}
+
+.switch+label:after {
+  width: 30px;
+  background-color: #fff;
+  border-radius: 100%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  transition: all 0.4s;
+}
+
+.switch:checked+label:before {
+  background-color: #f3eff5;
+}
+
+.switch:checked+label:after {
+  transform: translateX(30px);
+}
