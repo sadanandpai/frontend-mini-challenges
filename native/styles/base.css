@@ -13,12 +13,6 @@ a {
   color: var(--text-link);
 }
 
-a.github-repo-link > img {
-  width: 35px;
-  height: 35px;
-  vertical-align: text-bottom;
-}
-
 .hidden {
   /* Ignore all specificity for this class */
   display: none !important;
