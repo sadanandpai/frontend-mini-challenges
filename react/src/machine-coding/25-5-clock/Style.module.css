@@ -1,22 +1,22 @@
 .container {
-  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
 }
 
 .container * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 .clockWrapper {
   max-width: 500px;
   padding: 1.5rem;
   background-color: #f3f3f3;
-  border-radius: 1rem;
   border: 2px solid #ccc;
+  border-radius: 1rem;
 }
 
 .timeSection {
@@ -41,6 +41,7 @@
   gap: 0.5rem;
   align-items: center;
 }
+
 .timeAdjustment .timeAdjustmentButton {
   display: flex;
   flex-direction: column;
@@ -50,20 +51,19 @@
 .timerDisplay {
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 1rem;
+  align-items: center;
 }
 
 .timerDisplay p:first-child {
-  text-transform: capitalize;
   font-size: 1.5rem;
   font-weight: bold;
+  text-transform: capitalize;
 }
 
 .timerDisplay p span {
-  font-family: monospace;
-  font-weight: bold;
   font-size: 3rem;
+  font-weight: bold;
 }
 
 .buttonGroup {
@@ -72,10 +72,10 @@
 
 .buttonGroup button,
 .timeAdjustmentButton button {
-  border: none;
   color: #007bff;
-  background-color: transparent;
   cursor: pointer;
+  background-color: transparent;
+  border: none;
   transition: color 0.2s ease;
 }
 
@@ -85,5 +85,5 @@
 }
 
 .lastMinute {
-   color: red;
+  color: red;
 }
