@@ -1,3 +1,11 @@
+const movieTitle = document.getElementById('movie-title');
+const movieGenre = document.getElementById('movie-genre');
+const movieCast = document.getElementById('movie-cast');
+const movieRating = document.getElementById('movie-rating');
+const movieReleased = document.getElementById('movie-released');
+const movieDirector = document.getElementById('movie-director');
+const moviePoster = document.getElementById('movie-poster');
+
 document.addEventListener('DOMContentLoaded', function() {
     // Run this code when the page is fully loaded and ready
     const movieInfoDiv = document.querySelector('.movie-info');
@@ -16,13 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
         fetch(`https://www.omdbapi.com/?t=${query}&apikey=${apiKey}`)
             .then(response => response.json())
             .then(data => {
-                const movieTitle = document.getElementById('movie-title');
-                const movieGenre = document.getElementById('movie-genre');
-                const movieCast = document.getElementById('movie-cast');
-                const movieRating = document.getElementById('movie-rating');
-                const movieReleased = document.getElementById('movie-released');
-                const movieDirector = document.getElementById('movie-director');
-                const moviePoster = document.getElementById('movie-poster');
+                
 
                 movieTitle.textContent = data.Title;
                 movieGenre.textContent = data.Genre;
