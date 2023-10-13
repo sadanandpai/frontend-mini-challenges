@@ -453,4 +453,11 @@ export const challenges = [
   { title: 'Emoji Editor', link: '#' },
   { title: 'Sort Table', link: '#' },
   { title: 'Infinite Scroll', link: '#' },
+  {
+    title: 'Movie-Info-App',
+    link: 'Movie-Info-App',
+    difficulty: 'medium',
+    developer: 'sadanandpai',
+    tags: [],
+  },
 ];
