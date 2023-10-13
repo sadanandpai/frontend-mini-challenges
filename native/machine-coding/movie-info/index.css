@@ -72,7 +72,7 @@ main {
 
 .poster {
     flex: 1;
-    padding: 100px;
+    padding: 100px 100px 0 100px;
     margin-top: 5%;
 }
 
