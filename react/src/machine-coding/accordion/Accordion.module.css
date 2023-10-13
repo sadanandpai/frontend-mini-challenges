@@ -1,6 +1,5 @@
 .App {
   margin-top: 1rem;
-  font-family: sans-serif;
   text-align: center;
 }
 
@@ -9,7 +8,7 @@
   margin-bottom: 10px;
   font-size: 14px;
   text-align: left;
-  border: 1px solid rgb(218 212 212);
+  border: 1px solid rgb(218, 212, 212);
 }
 
 .accordion-title {
@@ -31,7 +30,7 @@
   color: white;
   cursor: pointer;
   background: transparent;
-  background: rgb(209 209 209);
+  background: rgb(209, 209, 209);
   border-color: transparent;
   border-radius: 50%;
 }
