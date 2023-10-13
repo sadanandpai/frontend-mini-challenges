@@ -1,0 +1,47 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card {
+  margin-top: -30rem;
+  width: 30rem;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.cardTitle {
+  text-align: center;
+}
+
+.formGroup {
+  margin: 20px 0;
+}
+
+.inputGroup {
+  display: flex;
+  align-items: center;
+}
+
+.input {
+  margin: 0;
+}
+
+.select {
+  margin: 0 10px;
+}
+
+.convertButton {
+  margin-top: 10px;
+}
+
+.outputGroup {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
