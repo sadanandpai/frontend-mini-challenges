@@ -1,6 +1,6 @@
 const $html = document.querySelector('html');
-const $switch = document.querySelector('#switch');
+const $switch = document.querySelector('#dark-toggle');
 
-$switch.addEventListener('change', () => {
+$switch.addEventListener('click', () => {
     $html.classList.toggle('dark');
 });

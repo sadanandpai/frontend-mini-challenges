@@ -13,7 +13,7 @@ a {
   color: var(--text-link);
 }
 
-a img {
+a.github-repo-link > img {
   width: 35px;
   height: 35px;
   vertical-align: text-bottom;
