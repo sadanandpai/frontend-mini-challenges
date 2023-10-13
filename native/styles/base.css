@@ -1,0 +1,19 @@
+body {
+  background-color: var(--bg-body);
+  color: var(--text-body);
+  transition: all 150ms ease-in-out;
+}
+
+h1 {
+  align-items: center;
+  justify-content: center;
+}
+
+a {
+  color: var(--text-link);
+}
+
+.hidden {
+  /* Ignore all specificity for this class */
+  display: none !important;
+}
