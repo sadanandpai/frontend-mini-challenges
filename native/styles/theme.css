@@ -10,6 +10,7 @@
 
   /* Native home colors (challenge list page) */
   --bg-challenge-card: #f9fafb;
+  --bg-challenge-card-new: rgb(84, 84, 84);
   --border-challenge-card: rgba(0, 0, 0, 0.15);
   --shadow-challenge-card: var(--shadow-navbar);
   --shadow-challenge-card-scaled: rgba(0 0 0 / 0.25);
@@ -37,6 +38,7 @@
 
   /* Native home colors (challenge list page) */
   --bg-challenge-card: #111827;
+  --bg-challenge-card-new: #374151;
   --border-challenge-card: var(--shadow-navbar);
   --shadow-challenge-card: var(--shadow-navbar);
   --shadow-challenge-card-scaled: #374151;
