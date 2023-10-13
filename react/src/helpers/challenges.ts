@@ -115,6 +115,28 @@ export const challenges = new Map<string, Challenge>([
     },
   ],
   [
+    'word-count',
+    {
+      title: 'Word Count',
+      link: 'word-count',
+      difficulty: 'easy',
+      developer: 'Sumitwarrior7',
+      tags: [],
+      isNew: true,
+    },
+  ],
+  [
+    'temperature-converter',
+    {
+      title: 'Temperature Converter',
+      link: 'temperature-converter',
+      difficulty: 'easy',
+      developer: 'Sumitwarrior7',
+      tags: [],
+      isNew: true,
+    },
+  ],
+  [
     'star-Rating',
     {
       title: 'Star Rating',
@@ -333,28 +355,6 @@ export const challenges = new Map<string, Challenge>([
       difficulty: 'hard',
       developer: 'deepu0',
       tags: [],
-    },
-  ],
-  [
-    'word-count',
-    {
-      title: 'Word Count',
-      link: 'word-count',
-      difficulty: 'medium',
-      developer: 'Sumitwarrior7',
-      tags: [],
-      isNew: true,
-    },
-  ],
-  [
-    'temperature-converter',
-    {
-      title: 'Temperature Converter',
-      link: 'temperature-converter',
-      difficulty: 'medium',
-      developer: 'Sumitwarrior7',
-      tags: [],
-      isNew: true,
     },
   ],
 ]);
