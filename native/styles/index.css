@@ -1,0 +1,9 @@
+/* All color variables */
+@import url(./theme.css);
+
+/* Base styles */
+@import url(./base.css);
+
+/* Component specific styles */
+@import url(./navbar.css);
+@import url(./challenge.css);

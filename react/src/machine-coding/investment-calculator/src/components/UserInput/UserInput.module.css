@@ -37,7 +37,6 @@
 
 .button {
   padding: 0.5rem 1rem;
-  font-family: 'Roboto Condensed', sans-serif;
   color: #c2e9e0;
   cursor: pointer;
   background: linear-gradient(180deg, #1f584b, #17493d);
@@ -46,7 +45,6 @@
 }
 
 .buttonAlt {
-  font-family: 'Roboto Condensed', sans-serif;
   cursor: pointer;
   background: transparent;
   border: none;
