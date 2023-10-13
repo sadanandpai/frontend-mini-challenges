@@ -457,7 +457,7 @@ export const challenges = [
     title: 'Movie-Info-App',
     link: 'Movie-Info-App',
     difficulty: 'medium',
-    developer: 'sadanandpai',
+    developer: 'AckermanLevi1',
     tags: [],
   },
 ];
