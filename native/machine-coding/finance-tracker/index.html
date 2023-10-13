@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="../../helpers/header.js" type="module"></script>
+    <script src="index.js" type="module"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <section id="balance">
+        <h2>Your Balance: <span id="balance-amount">$0.00</span></h2>
+      </section>
+
+      <section id="add-transaction">
+        <h2>Add Transaction</h2>
+        <label for="description">Description:</label>
+        <input type="text" id="description" placeholder="Enter description" />
+        <label for="amount">Amount:</label>
+        <input type="number" id="amount" placeholder="Enter amount" />
+        <select id="transaction-type">
+          <option value="income">Income</option>
+          <option value="expense">Expense</option>
+        </select>
+        <button id="add-button">Add Transaction</button>
+      </section>
+
+      <section id="transactions">
+        <h2>Transactions</h2>
+        <ul id="transaction-list">
+          <!-- Transaction items will be dynamically added here -->
+        </ul>
+      </section>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="../../helpers/header.js" type="module"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="container converter">
+      <div class="input-container">
+        <input type="number" id="amount" placeholder="Enter amount" />
+        <select id="fromCurrency">
+          <!-- Existing currency options -->
+          <option value="custom">Custom</option>
+        </select>
+      </div>
+      <div class="input-container">
+        <input type="number" id="result" placeholder="Result" disabled />
+        <select id="toCurrency">
+          <!-- Existing currency options -->
+          <option value="custom">Custom</option>
+        </select>
+      </div>
+      <button id="convertButton">Convert</button>
+      <div class="input-container">
+        <input type="text" id="customCurrency" placeholder="Custom Currency (e.g., CAD)" />
+        <button id="addCurrencyButton">Add Currency</button>
+      </div>
+    </div>
+  </body>
+</html>

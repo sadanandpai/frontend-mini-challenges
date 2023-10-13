@@ -8,6 +8,14 @@ export const challenges = [
     tags: [],
   },
   {
+    title: 'Dice Game',
+    link: 'dice-game',
+    difficulty: 'easy',
+    developer: 'shivam200446',
+    tags: [],
+    isNew: true,
+  },
+  {
     title: 'Guess the number',
     link: 'guess-the-number',
     difficulty: 'easy',
@@ -22,7 +30,6 @@ export const challenges = [
     developer: 'sadanandpai',
     youtube: 'https://youtu.be/crCZEJ6Lmgc',
     tags: [],
-    isNew: true,
   },
   {
     title: 'Telephone formatter',
@@ -55,6 +62,21 @@ export const challenges = [
     developer: 'sahankatta',
     youtube: 'https://youtu.be/FEtTRjq1P6I',
     tags: [],
+  },
+  {
+    title: 'Music Kit',
+    link: 'music-kit',
+    difficulty: 'easy',
+    developer: 'shivam200446',
+    tags: [],
+    isNew: true,
+  },
+  {
+    title: 'Currency Converter',
+    link: 'currency-converter',
+    difficulty: 'easy',
+    developer: 'pranav514',
+    tags: [],
     isNew: true,
   },
   {
@@ -63,7 +85,6 @@ export const challenges = [
     difficulty: 'easy',
     developer: 'rashidtvmr',
     youtube: 'https://youtu.be/03KFXudVaoo',
-    isNew: true,
     tags: [],
   },
   {
@@ -108,6 +129,14 @@ export const challenges = [
     isNew: true,
   },
   {
+    title: 'Simon game',
+    link: 'simon-game',
+    difficulty: 'easy',
+    developer: 'VishakhaSainani',
+    tags: [],
+    isNew: true,
+  },
+  {
     title: 'Blob Maker',
     link: 'blobmaker',
     difficulty: 'easy',
@@ -115,7 +144,14 @@ export const challenges = [
     tags: [],
     isNew: true,
   },
-
+  {
+    title: 'Finance Tracker',
+    link: 'finance-tracker',
+    difficulty: 'medium',
+    developer: 'sujitmahapatra',
+    tags: ['finance', 'web-app', 'javascript', 'css'],
+    isNew: true,
+  },
   {
     title: 'Meme Generator',
     link: 'meme-generator',
@@ -123,15 +159,6 @@ export const challenges = [
     developer: 'noorulaink00',
     youtube: 'https://youtu.be/LHo9Hi47MTo',
     tags: [],
-    isNew: true,
-  },
-  {
-    title: 'Brick Breaker',
-    link: 'brick-breaker',
-    difficulty: 'medium',
-    developer: '5h0ov',
-    tags: [],
-    isNew: true,
   },
   {
     title: 'Weather App',
@@ -162,7 +189,6 @@ export const challenges = [
     difficulty: 'medium',
     developer: 'sadanandpai',
     tags: [],
-    isNew: true,
   },
   {
     title: 'Password Strength',
@@ -184,7 +210,6 @@ export const challenges = [
     difficulty: 'medium',
     developer: 'sadanandpai',
     tags: [],
-    isNew: true,
   },
   {
     title: 'Pixel Art',
@@ -412,13 +437,6 @@ export const challenges = [
     tags: [],
   },
   {
-    title: 'Tilting Maze Game',
-    link: 'tilting-maze',
-    difficulty: 'hard',
-    developer: '5h0ov',
-    tags: [],
-  },
-  {
     title: 'Typeahead / Autocomplete (offline)',
     link: 'type-ahead',
     difficulty: 'hard',
@@ -442,12 +460,4 @@ export const challenges = [
   { title: 'Emoji Editor', link: '#' },
   { title: 'Sort Table', link: '#' },
   { title: 'Infinite Scroll', link: '#' },
-  // {
-  //   title: 'AI Chess Game',
-  //   link: 'AI-CHESS-Game',
-  //   difficulty: 'hard',
-  //   developer: 'AnkitaSikdar005',
-  //   tags: [],
-  //   isNew: true,
-  // },
 ];
