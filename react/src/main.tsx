@@ -10,7 +10,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 
 const appKey = '4qTOiIjXmvLeD09teClfkoVZx5daMNyM';
-
+  
 if (window.location.hostname !== 'localhost') {
   Bugfender.init({
     appKey,

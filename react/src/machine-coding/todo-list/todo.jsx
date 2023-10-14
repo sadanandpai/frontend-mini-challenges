@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-
+import React, { useEffect, useState } from "react";
 import List from "./list";
 import styles from "./todo.module.scss";
 
@@ -8,14 +7,25 @@ const Todo = () => {
   const [items, setItems] = useState([]);
   const [editInfo, setEditInfo] = useState(null);
 
-  const submitHandler = (event) => {
+
+  useEffect(() => {
+    const storedItems = localStorage.getItem("todoItems");
+    if (storedItems) {
+      setItems(JSON.parse(storedItems));
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("todoItems", JSON.stringify(items));
+  }, [items]);
+
+  const submitHandler = (event) => {  
     event.preventDefault();
     if (editInfo) {
       updateItem(value);
     } else {
       addItem(value);
     }
-
     setValue("");
   };
 
@@ -32,11 +42,11 @@ const Todo = () => {
   };
 
   const handleCompleteClick = (value) => {
-      const newItems = [...items];
-      const item = newItems.find((item) => item.id === value.id);
-      item.isDone = !value.isDone;
-      setItems(newItems);
-  }
+    const newItems = [...items];
+    const item = newItems.find((item) => item.id === value.id);
+    item.isDone = !value.isDone;
+    setItems(newItems);
+  };
 
   const handleEditClick = ({ id, value }) => {
     setValue(value);
