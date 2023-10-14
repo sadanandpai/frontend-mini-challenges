@@ -1,4 +1,4 @@
-@import url(./dark-toggle.css);
+@import './dark-toggle.css';
 
 .navbar {
   display: flex;
@@ -26,14 +26,14 @@
 }
 
 .navbar .logo span {
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 500;
   color: var(--text-body);
 }
 
 .navbar > div:last-child {
   display: flex;
-  gap: 2rem;
+  gap: 0.5rem;
   align-items: center;
 }
 
@@ -41,7 +41,7 @@
   display: none;
 }
 
-.navbar a#github-repo-link {
+.navbar #github-repo-link {
   display: inline-block;
   color: var(--text-body);
 }
@@ -53,9 +53,21 @@
 }
 
 @media screen and (width >= 768px) {
+  .navbar .logo {
+    gap: 1rem;
+  }
+
+  .navbar .logo span {
+    font-size: 1.2rem;
+  }
+
   .navbar .links {
     display: flex;
     gap: 2rem;
     align-items: center;
+  }
+
+  .navbar > div:last-child {
+    gap: 2rem;
   }
 }
