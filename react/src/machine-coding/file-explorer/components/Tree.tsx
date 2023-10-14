@@ -12,6 +12,7 @@ interface Props {
   onNodeAdditon: (a: NodeIntf, b: NodeIntf) => void;
   onNodeDeletion: (a: NodeIntf, b: NodeIntf) => void;
   onNodeUpdate: (a: NodeIntf, b: NodeIntf, c: string) => void;
+  validateNode: (a: NodeOrNull, b: NodeIntf | null, c: string) => boolean;
 }
 
 function Tree({
@@ -20,6 +21,7 @@ function Tree({
   onNodeAdditon,
   onNodeDeletion,
   onNodeUpdate,
+  validateNode,
 }: Props) {
   const [expanded, setExpanded] = useState(false);
   const [isNew, setIsNew] = useState(false);
@@ -36,8 +38,10 @@ function Tree({
     setExpanded(true);
   };
 
+  const validateNodeOnNew = (name: string) => validateNode(node, null, name);
+
   const onComplete = (name: string) => {
-    if (name) {
+    if (name && validateNodeOnNew(name)) {
       onNodeAdditon(node, {
         name,
         id: new Date().getTime().toString(),
@@ -57,6 +61,7 @@ function Tree({
         onNodeDeletion={onNodeDeletion}
         onNodeUpdate={onNodeUpdate}
         onNew={onNew}
+        validateNode={validateNode}
       />
 
       {expanded && (
@@ -70,6 +75,7 @@ function Tree({
                 onNodeAdditon={onNodeAdditon}
                 onNodeDeletion={onNodeDeletion}
                 onNodeUpdate={onNodeUpdate}
+                validateNode={validateNode}
               />
             ) : (
               <File
@@ -78,6 +84,7 @@ function Tree({
                 parent={node}
                 onNodeDeletion={onNodeDeletion}
                 onNodeUpdate={onNodeUpdate}
+                validateNode={validateNode}
               />
             )
           )}
@@ -85,7 +92,7 @@ function Tree({
           {isNew && (
             <li className={`${styles.list} ${styles.editList}`}>
               {isFolderRef.current ? "📁" : "📄"}&nbsp;
-              <EditableInput onComplete={onComplete} />
+              <EditableInput onComplete={onComplete} validateNode={validateNodeOnNew} />
             </li>
           )}
         </div>

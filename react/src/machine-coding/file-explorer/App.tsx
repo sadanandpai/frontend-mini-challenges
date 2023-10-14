@@ -1,4 +1,4 @@
-import { NodeIntf } from "./utils/node.interface";
+import type { NodeIntf, NodeOrNull } from "./utils/node.interface";
 import Tree from "./components/Tree";
 import { fileExplorerData } from "./utils/data";
 import styles from "./styles.module.css";
@@ -37,7 +37,7 @@ function App() {
     setData(updatedData);
   };
 
-  const onNodeUpdate = (parent: NodeIntf, node: NodeIntf, name) => {
+  const onNodeUpdate = (parent: NodeIntf, node: NodeIntf, name: string) => {
     const updatedData = { ...data };
     const nodes = parent.nodes?.map((n) => n) ?? [];
     const idx = nodes.findIndex((n) => n.id === node.id);
@@ -51,6 +51,22 @@ function App() {
     setData(updatedData);
   };
 
+  /**
+   * Validate the name of node
+   * @param parent
+   * @param node The current node. If `null`, then it means it is going to be a "new" node
+   * @param name
+   */
+  const validateNode = (parent: NodeOrNull, node: NodeIntf | null, name: string): boolean => {
+    if (parent === null) return true;
+    if (typeof parent.nodes === 'undefined') return true;
+    if (name === '') return false;
+
+    // Find a node with same name
+    const idx = parent.nodes?.findIndex((n) => n.id !== node?.id && n.name === name);
+    return idx === -1;
+  }
+
   return (
     <div className={styles.app}>
       <Tree
@@ -59,6 +75,7 @@ function App() {
         onNodeAdditon={onNodeAdditon}
         onNodeDeletion={onNodeDeletion}
         onNodeUpdate={onNodeUpdate}
+        validateNode={validateNode}
       />
     </div>
   );
