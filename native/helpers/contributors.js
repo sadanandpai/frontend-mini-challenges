@@ -27,6 +27,15 @@ export const contributors = new Map([
     { name: 'Sukomal Dutta', pic: 'https://avatars.githubusercontent.com/u/100500478' },
   ],
   ['5h0ov', { name: 'Shuvadipta Das', pic: 'https://avatars.githubusercontent.com/u/83227649' }],
+
+  ['shruti-sen2004', { name: 'Shruti Sen', pic: 'https://avatars.githubusercontent.com/u/115914670' }],
+  ['Kushal347', { name: 'Kushal Agrawal', pic: 'https://avatars.githubusercontent.com/u/115914670' }],
+  ['AbhineshJha', { name: 'ABHINESH KUMAR JHA', pic: 'https://avatars.githubusercontent.com/u/142514166' }],
+  ['Vivek-GuptaXCode', { name: 'Vivek Kumar Gupta', pic: 'https://avatars.githubusercontent.com/u/145761266' }],
+  ['hritik', { name: 'Hritik Bhattacharya', pic: 'https://avatars.githubusercontent.com/u/44370586?v=4' }],
+  ['viditagrawal56', { name: 'Vidit Agrawal', pic: 'https://avatars.githubusercontent.com/u/52532308?v=4' }],
+]);
+
   [
     'shruti-sen2004',
     { name: 'Shruti Sen', pic: 'https://avatars.githubusercontent.com/u/115914670' },
@@ -56,3 +65,4 @@ export const contributors = new Map([
     { name: 'Shivam', pic: 'https://avatars.githubusercontent.com/u/127589548?s=96&v=4' },
   ],
 ]);
+
