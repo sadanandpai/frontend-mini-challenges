@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import List from "./list";
 import styles from "./todo.module.scss";
 
@@ -7,19 +7,20 @@ const Todo = () => {
   const [items, setItems] = useState([]);
   const [editInfo, setEditInfo] = useState(null);
 
+  const isInitialMount = useRef(true);
 
   useEffect(() => {
-    const storedItems = localStorage.getItem("todoItems");
-    if (storedItems) {
-      setItems(JSON.parse(storedItems));
+    if (!isInitialMount.current) {
+      const storedItems = localStorage.getItem("todoItems");
+      if (storedItems) {
+        setItems(JSON.parse(storedItems));
+      }
+    } else {
+      isInitialMount.current = false;
     }
   }, []);
 
-  useEffect(() => {
-    localStorage.setItem("todoItems", JSON.stringify(items));
-  }, [items]);
-
-  const submitHandler = (event) => {  
+  const submitHandler = (event) => {
     event.preventDefault();
     if (editInfo) {
       updateItem(value);
@@ -27,6 +28,7 @@ const Todo = () => {
       addItem(value);
     }
     setValue("");
+    localStorage.setItem("todoItems", JSON.stringify(items));
   };
 
   const addItem = (value) => {
@@ -64,6 +66,7 @@ const Todo = () => {
       setEditInfo(null);
     }
     setItems(items.filter((_, i) => i !== idx));
+    localStorage.setItem("todoItems", JSON.stringify(items));
   };
 
   return (
