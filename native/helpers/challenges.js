@@ -454,8 +454,8 @@ export const challenges = [
   { title: 'Sort Table', link: '#' },
   { title: 'Infinite Scroll', link: '#' },
   {
-    title: 'Movie-Info-App(online)',
-    link: 'Movie-Info-App',
+    title: 'movie-info(online)',
+    link: 'movie-info',
     difficulty: 'medium',
     developer: 'AckermanLevi1',
     tags: [],
