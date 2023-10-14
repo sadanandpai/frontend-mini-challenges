@@ -7,7 +7,7 @@ import { useState } from "react";
 function App() {
   const [data, setData] = useState<NodeIntf>(fileExplorerData as NodeIntf);
 
-  const onNodeAdditon = (parent: NodeIntf, node: NodeIntf) => {
+  const onNodeAddition = (parent: NodeIntf, node: NodeIntf) => {
     const updatedData = { ...data };
     const nodes = [...(parent.nodes ?? [])];
 
@@ -72,7 +72,7 @@ function App() {
       <Tree
         node={data}
         parent={null}
-        onNodeAdditon={onNodeAdditon}
+        onNodeAddition={onNodeAddition}
         onNodeDeletion={onNodeDeletion}
         onNodeUpdate={onNodeUpdate}
         validateNode={validateNode}

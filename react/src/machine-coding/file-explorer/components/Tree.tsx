@@ -9,7 +9,7 @@ import styles from "../styles.module.css";
 interface Props {
   node: NodeIntf;
   parent: NodeOrNull;
-  onNodeAdditon: (a: NodeIntf, b: NodeIntf) => void;
+  onNodeAddition: (a: NodeIntf, b: NodeIntf) => void;
   onNodeDeletion: (a: NodeIntf, b: NodeIntf) => void;
   onNodeUpdate: (a: NodeIntf, b: NodeIntf, c: string) => void;
   validateNode: (a: NodeOrNull, b: NodeIntf | null, c: string) => boolean;
@@ -18,7 +18,7 @@ interface Props {
 function Tree({
   node,
   parent,
-  onNodeAdditon,
+  onNodeAddition,
   onNodeDeletion,
   onNodeUpdate,
   validateNode,
@@ -42,7 +42,7 @@ function Tree({
 
   const onComplete = (name: string) => {
     if (name && validateNodeOnNew(name)) {
-      onNodeAdditon(node, {
+      onNodeAddition(node, {
         name,
         id: new Date().getTime().toString(),
         isFolder: isFolderRef.current,
@@ -72,7 +72,7 @@ function Tree({
                 key={childNode.id}
                 node={childNode}
                 parent={node}
-                onNodeAdditon={onNodeAdditon}
+                onNodeAddition={onNodeAddition}
                 onNodeDeletion={onNodeDeletion}
                 onNodeUpdate={onNodeUpdate}
                 validateNode={validateNode}
