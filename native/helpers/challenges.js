@@ -89,6 +89,14 @@ export const challenges = [
     isNew: true,
   },
   {
+    title: 'Digital Clock',
+    link: 'CLOCK',
+    difficulty: 'easy',
+    developer: 'Shivam200446',
+    tags: [],
+    isNew: true,
+  },
+  {
     title: 'MadStory Generator',
     link: 'MadStory_generator',
     difficulty: 'easy',
