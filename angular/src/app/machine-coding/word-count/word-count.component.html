@@ -1,0 +1,16 @@
+<div class="container">
+  <textarea id="text-input" placeholder="Enter your text here..." [(ngModel)]="text"
+    [ngModelOptions]="{updateOn: 'change'}">
+  </textarea>
+  <div class="controls">
+    <div id="word-count">Words: {{wordCount}}</div>
+    <div id="char-count">Chars: {{charCount}}</div>
+    <div id="para-count">Paras: {{paraCount}}</div>
+    <button id="count-button" (click)="countWords()">
+      Count
+    </button>
+    <button id="clear-button" (click)="clearText()">
+      Clear
+    </button>
+  </div>
+</div>

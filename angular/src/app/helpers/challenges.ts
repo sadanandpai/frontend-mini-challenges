@@ -55,5 +55,16 @@ export const challenges: Map<string, Challenge> = new Map([
       tags: [],
       isNew: true,
     },
+  ],
+  [
+    'word-count',
+    {
+      title: 'Word Count',
+      link: 'word-count',
+      difficulty: 'easy',
+      developer: 'pankajparkar',
+      tags: [],
+      isNew: true,
+    },
   ]
 ]);
