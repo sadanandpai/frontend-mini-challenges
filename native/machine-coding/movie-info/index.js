@@ -1,35 +1,36 @@
 
-const movieTitle = document.getElementById('movie-title');
-const movieGenre = document.getElementById('movie-genre');
-const movieCast = document.getElementById('movie-cast');
-const movieRating = document.getElementById('movie-rating');
-const movieReleased = document.getElementById('movie-released');
-const movieDirector = document.getElementById('movie-director');
-const moviePoster = document.getElementById('movie-poster');
+const $movieTitle = document.getElementById('movie-title');
+const $movieGenre = document.getElementById('movie-genre');
+const $movieCast = document.getElementById('movie-cast');
+const $movieRating = document.getElementById('movie-rating');
+const $movieReleased = document.getElementById('movie-released');
+const $movieDirector = document.getElementById('movie-director');
+const $moviePoster = document.getElementById('movie-poster');
 const apiKey = 'adff2bf8';
 
-const movieInfoDiv = document.querySelector('.movie-info');
-movieInfoDiv.style.display = 'none';
+const $movieInfo = document.querySelector('.movie-info');
+$movieInfo.classList.add('hidden');
 
-const searchButton = document.getElementById('search-button');
-const searchInput = document.getElementById('search-input');
+const searchForm = document.getElementById('search-form');
 
-searchButton.addEventListener('click', () => {
-    const query = searchInput.value;
+searchForm.addEventListener('submit', (e) => {
+    e.preventDefault()
+
+    const formData = new FormData(searchForm)
+    const query = formData.get('movie-name');
 
     function updateMovieInfo(data) {
         if (data.Response === "False") {
             alert("Please enter a valid movie name.");
-            
         } else {
-            movieTitle.textContent = data.Title;
-            movieGenre.textContent = data.Genre;
-            movieCast.textContent = data.Actors;
-            movieRating.textContent = data.imdbRating;
-            movieReleased.textContent = data.Released;
-            movieDirector.textContent = data.Director;
-            moviePoster.src = data.Poster;
-            movieInfoDiv.style.display = 'block';
+            $movieTitle.textContent = data.Title;
+            $movieGenre.textContent = data.Genre;
+            $movieCast.textContent = data.Actors;
+            $movieRating.textContent = data.imdbRating;
+            $movieReleased.textContent = data.Released;
+            $movieDirector.textContent = data.Director;
+            $moviePoster.src = data.Poster;
+            $movieInfo.classList.remove('hidden');
         }
     }
 

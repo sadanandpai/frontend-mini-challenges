@@ -1,113 +1,85 @@
-/* Reset default margin and padding for the page */
-body, h1, p {
-    margin: 0;
-    padding: 0;
+.container {
+    max-width: 36rem;
 }
 
-/* Set background image and styles for the body */
-body {
-    background-image: url('https://img.freepik.com/free-photo/assortment-cinema-elements-red-background-with-copy-space_23-2148457848.jpg?w=1380&t=st=1697217223~exp=1697217823~hmac=fb98e196d954c9a841de136c18083f1a3d2a7059878372928e8628e676225272');
-    background-size: cover;
-    background-position: center;
-    color: #333;
+.hidden {
+    display: none !important;
 }
 
-/* Center the main content vertically and horizontally */
-main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+/* Search form */
+
+#search-form > .field > label {
+  display: block;
+  font-size: small;
+  font-weight: 500;
+  margin-bottom: 1px;
 }
 
-/* Style the search bar */
-.search-bar {
-    background-color:transparent;
-    padding: 20px;
-    border-radius: 10px;
-    width: 80%;
-    max-width:500px;
-    text-align: center;
-    position: absolute;
-    top:50px;
+#search-form > .field > input {
+    display: block;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    max-width: 28rem;
+    width: 100%;
 }
 
-#search-input {
-    width: 50%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+#search-form > .button-container {
+    margin-top: 1rem;
 }
 
-#search-button {
-    font-size:medium;
-    background-color:black;
+#search-form > .button-container > button {
+    font-size: medium;
+    background-color: black;
     color: white;
     border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    margin-left: 100px;
+    border-radius: 6px;
+    padding: 0.5rem 1rem;
     cursor: pointer;
 }
 
-/* Center the search button within the search bar */
-#search-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 10px;
-}
+/* Movie info */
 
-/* Additional styles for the movie info section */
 .movie-info {
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 20px;
-    border-radius: 10px;
-    margin-top: 1%;
-    display: flex;
-    align-items: center;
-    
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
 }
 
-.poster {
-    flex: 1;
-    padding: 100px 100px 0 100px;
-    margin-top: 5%;
+.movie-info > .poster {
+    max-width: 24rem;
+    margin: auto;
+    order: 2;
 }
 
-#movie-poster {
-    max-width: 100%;
-    height: auto;
+.movie-info > .poster > img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
-.details {
-    flex: 2;
-    padding: 20px;
-    text-align: left;
+@media screen and (width >= 640px) {
+    .movie-info {
+        grid-template-columns: 1fr 1fr;
+    }
+    .movie-info > .poster {
+        order: -1;
+    }
 }
 
-/* Additional styles for the movie details */
-h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
+/* Movie details */
+.movie-info > .details h2 {
+    font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
 }
 
-p {
-    font-size: 16px;
-    margin-bottom: 5px;
-}
-
-/* Style the spans inside the movie details */
-span {
+.movie-info > .details p {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
     font-weight: bold;
 }
-.navbar {
-    background-color: #333; /* Change this to your desired background color */
-    height: 10px; /* Adjust the height according to your design */
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000; /* Ensure the navbar is above other elements */
+
+.movie-info > .details p > span {
+    font-weight: normal;
 }
