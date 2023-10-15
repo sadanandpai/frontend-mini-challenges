@@ -417,6 +417,13 @@ export const challenges = [
     tags: [],
   },
   {
+    title: 'Quiz App with Timer',
+    link: 'quiz-app-with-timer',
+    difficulty: 'medium',
+    developer: 'Vivek-GuptaXCode',
+    tags: [],
+  },
+  {
     title: 'Paginator',
     link: 'paginator',
     difficulty: 'hard',
@@ -463,13 +470,6 @@ export const challenges = [
     link: 'type-ahead-online',
     difficulty: 'hard',
     developer: 'sadanandpai',
-    tags: [],
-  },
-  {
-    title: 'Quiz App with Timer',
-    link: 'Quiz-app-with-timer',
-    difficulty: 'medium',
-    developer: 'Vivek-GuptaXCode',
     tags: [],
   },
   { title: 'Emoji Editor', link: '#' },
