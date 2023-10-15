@@ -1,0 +1,5 @@
+<div class="grid-item" (click)="action.emit()">
+    <div [ngStyle]="{opacity: value !== null ? 1 : 0, transition: 'all .1s ease-in-out' }">
+        {{ value !== null ? (value == 1) ? 'X' : 'O' : 'X'}}
+    </div>
+</div>

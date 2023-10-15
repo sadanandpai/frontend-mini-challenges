@@ -6,6 +6,7 @@ import { HomeComponent } from './components/home/home.component';
 import { GuessNumberComponent } from './machine-coding/guess-number/guess-number.component';
 import { TodoAppComponent } from './machine-coding/todo-list/todo-app/todo-app.component';
 import { StackComponent } from './machine-coding/stack/stack.component';
+import { TicTacToeComponent } from './machine-coding/tic-tac-toe/tic-tac-toe/tic-tac-toe.component';
 
 export const routes: Routes = [
   {
@@ -30,6 +31,11 @@ export const routes: Routes = [
         path: 'stack',
         component: StackComponent,
         data: { title: 'Stack' },
+      },
+      {
+        path: 'tic-tac-toe',
+        component: TicTacToeComponent,
+        data: { title: 'Tic tac toe' },
       },
       {
         path: 'todo-list',
