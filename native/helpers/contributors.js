@@ -7,13 +7,21 @@ export const contributors = new Map([
     'noorulaink00',
     { name: 'Noor Ul Ain Khan', pic: 'https://avatars.githubusercontent.com/u/65324193' },
   ],
-  ['sahankatta', { name: 'Sahan Katta', pic: 'https://avatars.githubusercontent.com/u/65811236' }],
-  ['rashidtvmr', { name: 'Rashid', pic: 'https://avatars.githubusercontent.com/u/58169715' }],
+  [
+    'sahankatta',
+    { name: 'Sahan Katta', pic: 'https://avatars.githubusercontent.com/u/65811236' }
+  ],
+  [
+    'rashidtvmr',
+    { name: 'Rashid', pic: 'https://avatars.githubusercontent.com/u/58169715' }
+  ],
   [
     'gauravsinhaweb',
     { name: 'Gaurav Sinha', pic: 'https://avatars.githubusercontent.com/u/75125943' },
   ],
-  ['Kei-K23', { name: 'Kei-K', pic: 'https://avatars.githubusercontent.com/u/134714087' }],
+  [
+    'Kei-K23', { name: 'Kei-K', pic: 'https://avatars.githubusercontent.com/u/134714087' }
+  ],
   [
     'caesar003',
     { name: 'Khaisar Muksid', pic: 'https://avatars.githubusercontent.com/u/37962465' },
@@ -26,7 +34,10 @@ export const contributors = new Map([
     'Sukomal07',
     { name: 'Sukomal Dutta', pic: 'https://avatars.githubusercontent.com/u/100500478' },
   ],
-  ['5h0ov', { name: 'Shuvadipta Das', pic: 'https://avatars.githubusercontent.com/u/83227649' }],
+  [
+    '5h0ov',
+    { name: 'Shuvadipta Das', pic: 'https://avatars.githubusercontent.com/u/83227649' }
+  ],
   [
     'shruti-sen2004',
     { name: 'Shruti Sen', pic: 'https://avatars.githubusercontent.com/u/115914670' },
@@ -54,6 +65,10 @@ export const contributors = new Map([
   [
     'shivam200446',
     { name: 'Shivam', pic: 'https://avatars.githubusercontent.com/u/127589548?s=96&v=4' },
+  ],
+  [
+    'Vivek-GuptaXCode',
+    { name: 'Vivek Kumar Gupta', pic: 'https://avatars.githubusercontent.com/u/145761266' }
   ],
   [
     'CrypticRevenger',

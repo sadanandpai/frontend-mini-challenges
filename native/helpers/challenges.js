@@ -417,6 +417,13 @@ export const challenges = [
     tags: [],
   },
   {
+    title: 'Quiz App with Timer',
+    link: 'quiz-app-with-timer',
+    difficulty: 'medium',
+    developer: 'Vivek-GuptaXCode',
+    tags: [],
+  },
+  {
     title: 'Paginator',
     link: 'paginator',
     difficulty: 'hard',
