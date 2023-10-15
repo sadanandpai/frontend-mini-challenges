@@ -1,0 +1,64 @@
+name: Bug Report
+description: File a bug report
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |-
+        ## Before you submit...
+        Please keep a few things in mind while writing this issue:
+
+        - Use a short and precise title
+        - Fill out the text fields with as much detail as possible.
+        - If there are relevant screenshots and/or code samples, then please do not hesitate to add them. It will help!
+
+  - type: dropdown
+    attributes:
+      label: Framework/code-stack
+      description: Which framework or code stack is the bug related to?
+      multiple: false
+      options:
+        - Native (HTML, CSS, and JS)
+        - React
+        - Vue
+      default: 0
+    validations:
+      required: true
+      
+  - type: input
+    id: scope
+    attributes:
+      label: Scope
+      description: >
+        Which challenge is the bug related to?
+        If the bug is not challenge-specific, but rather related to the core application itself, then please write "Core application"
+      placeholder: ex. Counter
+    validations:
+      required: true
+      
+  - type: textarea
+    attributes:
+      label: Description
+      description: Give a clear and concise description of what the bug is.
+    validations:
+      required: true
+      
+  - type: textarea
+    attributes:
+      label: Expected behaviour
+      description: A clear and concise description of what you expected to happen.
+    validations:
+      required: true
+      
+  - type: textarea
+    attributes:
+      label: Suggested Solutions
+      description: >
+        If applicable, suggest solutions that could resolve the bug.
+        It would help maintainers/contributors to not waste time looking for the solution.
+        Even pointing the line causing the bug would be great!
+
+  - type: textarea
+    attributes:
+      label: Additional Context
+      description: Anything else you would like to add?
