@@ -6,6 +6,7 @@ import Hero from '@/components/hero/Hero';
 import Navbar from '@/components/navbar/Navbar';
 import Testimonials from '@/components/testimonials/testimonials';
 import styles from './styles.module.scss';
+import ScrollBtn from '@/components/scroll-to-top/ScrollBtn';
 
 function Home() {
   return (
@@ -25,6 +26,7 @@ function Home() {
         <hr className={styles.hr} />
         <Contribution />
         <Footer />
+        <ScrollBtn/>
       </div>
     </>
   );
