@@ -65,4 +65,5 @@ export const contributors = new Map([
  [
     'AckermanLevi1',
     { name: 'Aryan Bhargava', pic: 'https://avatars.githubusercontent.com/u/114604529?v=4' },
+ ]
 ]);
