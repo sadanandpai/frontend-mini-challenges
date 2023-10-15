@@ -410,6 +410,13 @@ export const challenges = [
     tags: [],
   },
   {
+    title: 'Movie-info app (online)',
+    link: 'movie-info',
+    difficulty: 'medium',
+    developer: 'AckermanLevi1',
+    tags: [],
+  },
+  {
     title: 'Paginator',
     link: 'paginator',
     difficulty: 'hard',
@@ -468,5 +475,4 @@ export const challenges = [
   { title: 'Emoji Editor', link: '#' },
   { title: 'Sort Table', link: '#' },
   { title: 'Infinite Scroll', link: '#' },
-
 ];
