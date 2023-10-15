@@ -56,12 +56,11 @@ export const contributors = new Map([
     { name: 'Shivam', pic: 'https://avatars.githubusercontent.com/u/127589548?s=96&v=4' },
   ],
   [
-<<<<<<< HEAD
-    'AckermanLevi1',
-    { name: 'Aryan Bhargava', pic: 'https://avatars.githubusercontent.com/u/114604529?v=4' },
-=======
     'CrypticRevenger',
     { name: 'Spandan Tripathy', pic: 'https://avatars.githubusercontent.com/u/128175097?v=4' },
->>>>>>> 4f6fd5dfcf584230c8ef0bc6dd7695470f31c498
+  ],
+  [
+    'AckermanLevi1',
+    { name: 'Aryan Bhargava', pic: 'https://avatars.githubusercontent.com/u/114604529?v=4' },
   ],
 ]);
