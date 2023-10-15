@@ -1,0 +1,27 @@
+  .topBtn {
+    margin:0;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    background: none;
+    border: none;
+    border-radius: 100%;
+    background-color: rgba(31, 6, 255, 68.7%);
+    padding: 15px;
+    cursor: pointer;
+    position: fixed;
+    right: 2.5rem;
+    bottom: 2rem;
+    transition: all;
+    transition-duration: 300ms;
+
+    svg{
+        color: #ffffff;
+      }
+
+      &:hover {
+        transform: scale(1.1);
+        transition: all; 
+        transition-duration: 300ms;
+      }
+  }
