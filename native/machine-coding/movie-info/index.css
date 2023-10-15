@@ -30,7 +30,7 @@ main {
     max-width:500px;
     text-align: center;
     position: absolute;
-    top:0%;
+    top:50px;
 }
 
 #search-input {
@@ -101,4 +101,13 @@ p {
 /* Style the spans inside the movie details */
 span {
     font-weight: bold;
+}
+.navbar {
+    background-color: #333; /* Change this to your desired background color */
+    height: 10px; /* Adjust the height according to your design */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Ensure the navbar is above other elements */
 }

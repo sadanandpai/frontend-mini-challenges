@@ -145,6 +145,14 @@ export const challenges = [
     isNew: true,
   },
   {
+    title: 'Fitness Tracker',
+    link: 'fitness-tracker',
+    difficulty: 'easy',
+    developer: 'CrypticRevenger',
+    tags: [],
+    isNew: true,
+  },
+  {
     title: 'Finance Tracker',
     link: 'finance-tracker',
     difficulty: 'medium',
@@ -453,6 +461,7 @@ export const challenges = [
   { title: 'Emoji Editor', link: '#' },
   { title: 'Sort Table', link: '#' },
   { title: 'Infinite Scroll', link: '#' },
+<<<<<<< HEAD
   {
     title: 'movie-info(online)',
     link: 'movie-info',
@@ -460,4 +469,7 @@ export const challenges = [
     developer: 'AckermanLevi1',
     tags: [],
   },
+=======
+
+>>>>>>> 4f6fd5dfcf584230c8ef0bc6dd7695470f31c498
 ];

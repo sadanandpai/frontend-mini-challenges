@@ -27,6 +27,24 @@
   font-size: 1em;
 }
 
+.editableInputContainer {
+  position: relative;
+}
+
+.editableInputError {
+  position: absolute;
+  top: 100%;
+  background-color: #7f1d1d;
+  border: 1px solid red;
+  font-size: small;
+  color: #f87171;
+  padding: 0.5rem;
+}
+
+.editableInputError > p {
+  margin: 0;
+}
+
 .indent {
   margin-left: 30px;
 }

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="../../helpers/header.js" type="module"></script>
+    <script src="index.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body class="light-mode">
+    <div class="container light-mode">
+      <button id="dark-mode-toggle">Dark</button>
+
+      <!-- Fitness Tracker Content -->
+      <div id="workout-form">
+        <h2>Add a Workout</h2>
+        <label for="workout">Workout Type: </label>
+        <input type="text" id="workout" />
+        <label for="duration">Duration (minutes): </label>
+        <input type="number" id="duration" />
+        <button id="add-button">Add</button>
+      </div>
+      <div id="workout-list">
+        <h2>Workout Log</h2>
+        <ul id="workouts">
+          <!-- Workout items will be displayed here -->
+        </ul>
+      </div>
+      <p id="error-message" style="color: #e74c3c"></p>
+      <!-- Add the error message element -->
+    </div>
+  </body>
+</html>

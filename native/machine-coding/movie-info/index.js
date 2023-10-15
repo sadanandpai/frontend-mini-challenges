@@ -18,14 +18,19 @@ searchButton.addEventListener('click', () => {
     const query = searchInput.value;
 
     function updateMovieInfo(data) {
-        movieTitle.textContent = data.Title;
-        movieGenre.textContent = data.Genre;
-        movieCast.textContent = data.Actors;
-        movieRating.textContent = data.imdbRating;
-        movieReleased.textContent = data.Released;
-        movieDirector.textContent = data.Director;
-        moviePoster.src = data.Poster;
-        movieInfoDiv.style.display = 'block';
+        if (data.Response === "False") {
+            alert("Please enter a valid movie name.");
+            
+        } else {
+            movieTitle.textContent = data.Title;
+            movieGenre.textContent = data.Genre;
+            movieCast.textContent = data.Actors;
+            movieRating.textContent = data.imdbRating;
+            movieReleased.textContent = data.Released;
+            movieDirector.textContent = data.Director;
+            moviePoster.src = data.Poster;
+            movieInfoDiv.style.display = 'block';
+        }
     }
 
     fetch(`https://www.omdbapi.com/?t=${query}&apikey=${apiKey}`)
