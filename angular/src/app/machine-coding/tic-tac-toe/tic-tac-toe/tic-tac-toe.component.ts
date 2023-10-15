@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CommonModule, NgFor } from '@angular/common';
+import { NgFor } from '@angular/common';
 import { SquareComponent } from '../square/square.component';
 
 export const size = 3;
