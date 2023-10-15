@@ -1,12 +1,7 @@
 import { Routes } from '@angular/router';
 
 import { ChallengeContainerComponent } from './components/challenge-container/challenge-container.component';
-import { CounterComponent } from './machine-coding/counter/counter.component';
 import { HomeComponent } from './components/home/home.component';
-import { GuessNumberComponent } from './machine-coding/guess-number/guess-number.component';
-import { TodoAppComponent } from './machine-coding/todo-list/todo-app/todo-app.component';
-import { StackComponent } from './machine-coding/stack/stack.component';
-import { TicTacToeComponent } from './machine-coding/tic-tac-toe/tic-tac-toe/tic-tac-toe.component';
 
 export const routes: Routes = [
   {
@@ -39,7 +34,7 @@ export const routes: Routes = [
       },
       {
         path: 'todo-list',
-        loadComponent: () => import('./machine-coding/todo-list/todo-list/todo-list.component').then((m) => m.TodoListComponent),
+        loadComponent: () => import('./machine-coding/todo-list/todo-app/todo-app.component').then((m) => m.TodoAppComponent),
         data: { title: 'Todo list' },
       },
 
