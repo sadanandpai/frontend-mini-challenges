@@ -1,0 +1,19 @@
+.grid-item {
+  height: 80px;
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid grey;
+  transition: all .2s ease;
+}
+
+.grid-item:hover {
+  box-shadow: #32325d26 0 30px 60px -12px inset;
+}
+
+@media (max-width: 300px) {
+  .grid-item {
+    height: 70px;
+  }
+}
