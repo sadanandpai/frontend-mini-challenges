@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="../../helpers/header.js" type="module"></script>
+    <script src="./index.js" defer></script>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <form id="search-form">
+          <div class="field">
+            <label for="search">Search for a movie</label>
+            <input type="text" id="search" name="movie-name" />
+          </div>
+          <div class="button-container">
+            <button type="submit">Search</button>
+          </div>
+        </form>
+
+        <section class="movie-info">
+          <div class="poster">
+            <img id="movie-poster" src="" alt="Movie Poster" />
+          </div>
+          <div class="details">
+            <h2 id="movie-title"></h2>
+            <p>Genre: <span id="movie-genre"></span></p>
+            <p>Cast: <span id="movie-cast"></span></p>
+            <p>IMDb Rating: <span id="movie-rating"></span></p>
+            <p>Released Date: <span id="movie-released"></span></p>
+            <p>Director: <span id="movie-director"></span></p>
+          </div>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>

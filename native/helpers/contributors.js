@@ -59,4 +59,8 @@ export const contributors = new Map([
     'CrypticRevenger',
     { name: 'Spandan Tripathy', pic: 'https://avatars.githubusercontent.com/u/128175097?v=4' },
   ],
+  [
+    'AckermanLevi1',
+    { name: 'Aryan Bhargava', pic: 'https://avatars.githubusercontent.com/u/114604529?v=4' },
+  ],
 ]);
