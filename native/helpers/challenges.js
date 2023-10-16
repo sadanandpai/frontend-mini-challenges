@@ -358,6 +358,14 @@ export const challenges = [
     isNew: true,
   },
   {
+    title: 'Steps Bar',
+    link: 'steps-bar',
+    difficulty: 'medium',
+    developer: 'HridoyHazard',
+    tags: [],
+    isNew: true,
+  },
+  {
     title: 'Snake Game',
     link: 'snake-game',
     difficulty: 'medium',
