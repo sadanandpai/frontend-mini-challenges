@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Assignment-8</title>
+</head>
+
+<body>
+    <h1>REGISTRATION FORM</h1>
+    <div class="box">
+
+
+        <div class="formsection">
+            <form>
+                <div class="name">
+                    <label for="firstname">FIRST NAME:</label>
+                    <input type="text" id="firstname" placeholder="First Name">
+                    <br>
+                    <br>
+
+                    <label for="lastname">LAST NAME:</label>
+                    <input type="text" id="lastname" placeholder="Last Name">
+                </div>
+                <br>
+
+                <div class="phone">
+                    <label for="phoneno">PHONE NO:&nbsp;</label>
+                    <input type="text" id="phoneno" placeholder="PhoneNo.">
+                </div>
+                <br>
+
+                <div class="mail">
+                    <label for="email">EMAIL ID:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                    <input type="text" id="email" placeholder="Email">
+                </div>
+                <br>
+
+                <div class="password">
+                    <label for="password">PASSWORD:</label>
+                    <input type="password" id="password" placeholder="Password">
+                </div>
+                <br>
+                <br>
+                <div class="TnC">
+                    <label for="tnc">TERMS AND CONDITIONS:</label> <br><br>
+                    <input type="checkbox" id="tnc" required>
+                    <p>I agree to the given Terms and Conditions.</p>
+
+                </div>
+                <br>
+                <br>
+
+                <div class="button">
+                    <button onclick="callvariables()" type="button">SUBMIT</button>
+                </div>
+        </div>
+        </form>
+
+        <div class="image">
+            <img src="bg.jpg" id="img" alt="image">
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,91 @@
+body{
+    display: flex;
+    /* border: 1px solid black; */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+h1{
+    font-family: 'Libre Baskerville', serif;
+    font-size: 40px;
+    border-bottom: 3px solid black;
+
+}
+h1::before{
+    content: "";
+    background: url(bgimage.jpg) no-repeat center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-size: 100%;
+    z-index: -3;
+    opacity: 0.5;;
+}
+
+.formsection{
+    display: flex;
+    align-items: center;
+    /* background-color: white; */
+    margin-right: 0%;
+    padding-left: 30px;
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+
+}
+#img{
+    height: 470px;
+    padding-left: 50px;
+    margin-left: 0%;
+    margin-bottom: 0px;
+}
+.box{
+    display: flex;
+    flex-wrap: wrap;
+    border: 3px ridge black;
+    border-radius: 5px;
+    margin-top: 80px;
+    background-color: rgb(232, 231, 231);
+}
+p{
+    display: inline;
+}
+
+label{
+    margin-right: 5px;
+}
+input{
+    border: 1px groove black;
+    border-radius: 4px;
+    margin-left: 7px;
+    text-align: center;
+    align-content: center;
+    padding-top: 2px;
+    padding-bottom: 2px;
+
+}
+::placeholder{
+    text-align: center;
+}
+
+.button{
+    
+    display: flex;
+    justify-content: center;
+}
+button{
+    background-color: rgb(166, 165, 165);
+    padding: 7px;
+    border: 3px ridge rgb(122, 122, 122);
+    border-radius: 3px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+button:hover{
+    cursor: pointer;
+    background-color: rgb(26, 232, 26);
+    transition: 0.3s;
+    border-color: rgb(5, 158, 5);
+}
