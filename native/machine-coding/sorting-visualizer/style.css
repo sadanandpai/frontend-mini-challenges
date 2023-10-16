@@ -1,28 +1,19 @@
 @import url(../../helpers/core.css);
+
 .bar {
-  padding: 10px 12px;
+  padding: 5px 12px;
   display: flex;
   justify-content: center;
-  width: 25px;
+  width: 30px;
   background: rgb(224, 81, 172);
   margin: 3px;
-  border: 3.5px solid rgb(23, 23, 24);
+  border: 2px solid rgb(23, 23, 24);
   color: whitesmoke;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  background-color: rgb(70, 68, 68);
-  font-family: 'Montserrat', sans-serif;
-}
 body .main_container {
   padding: 3rem;
-  height: 100vh;
+  height: 85vh;
   width: 100%;
   display: flex;
   align-items: center;
@@ -45,17 +36,13 @@ body .main_container #container {
   border: 0;
   cursor: pointer;
   transition: ease-in 0.2s;
-  box-shadow: 0.3rem 0.35rem 0 rgb(23, 23, 24);
+  box-shadow: 0 0.35rem 0 rgb(23, 23, 24);
   border: 3.5px solid rgb(23, 23, 24);
 }
 
 .btn:hover {
-  font-size: 15px;
   color: whitesmoke;
   background-color: rgb(224, 81, 172);
-  padding: 1rem;
-  box-shadow: 0rem 0rem 0 rgb(23, 23, 24);
-  border: 3.5px solid rgb(23, 23, 24);
 }
 
 .title_btn {
@@ -66,7 +53,7 @@ body .main_container #container {
   margin: 0rem 1rem;
   border: 0;
   transition: ease-in 0.2s;
-  box-shadow: 0.3rem 0.35rem 0 rgb(23, 23, 24);
+  box-shadow: 0 0.35rem 0 rgb(23, 23, 24);
   border: 3.5px solid rgb(23, 23, 24);
   background-color: white;
 }

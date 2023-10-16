@@ -1,7 +1,7 @@
 .stack {
   max-width: 500px;
   padding: 20px;
-  margin-top: 1rem;
+  margin: 1rem auto 0rem auto;
   border: 1px solid #ccc;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgb(0 0 0 / 10%);
@@ -26,6 +26,8 @@
   display: flex;
   justify-content: center;
   margin-bottom: 20px;
+  flex-wrap: wrap;
+  row-gap: 1rem;
 }
 
 .stack .btn_root button {
@@ -56,6 +58,15 @@
 
 .stack p {
   margin: 5px 0;
+}
+.stack .stackElement{
+  padding: 0.1rem;
+  margin-bottom: 1rem;
+  background-color: #007bff34;
+  border-radius: 3px;
+}
+.stack .stackElement p{
+  text-align: center;
 }
 
 @keyframes slide-in {

@@ -1,0 +1,76 @@
+/* WordCounter.module.css */
+
+.container {
+  max-width: 600px;
+  padding: 20px;
+  margin: 0 auto;
+  margin-top: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+
+  h1 {
+    color: #333;
+    text-align: center;
+  }
+
+  textarea {
+    width: 100%;
+    height: 150px;
+    padding: 10px;
+    margin-bottom: 10px;
+    resize: none;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  .controls {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  #char-limit {
+    width: 80px;
+  }
+
+  button {
+    padding: 8px 16px;
+    margin-top: 10px;
+    color: #fff;
+    cursor: pointer;
+    background-color: #333;
+    border: none;
+    border-radius: 5px;
+  }
+
+  button:hover {
+    background-color: #555;
+  }
+
+  .highlight {
+    margin-top: 20px;
+  }
+
+  input[type='text'] {
+    width: 200px;
+    padding: 5px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  .highlight-button {
+    color: #fff;
+    background-color: #f2a154;
+  }
+
+  .highlight-button:hover {
+    background-color: #f93;
+  }
+
+  .highlighted {
+    font-weight: bold;
+    background-color: yellow;
+  }
+}

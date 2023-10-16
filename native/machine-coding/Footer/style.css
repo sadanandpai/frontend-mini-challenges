@@ -1,0 +1,80 @@
+@import url(../../helpers/core.css);
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* Define styles for the footer */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+footer {
+  background-color: #7f3535;
+  color: #fff;
+  padding: 20px;
+  border-top: 2px solid #555;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-logo img {
+  max-width: 100px;
+  background: white;
+  border-radius: 85px;
+}
+
+.footer-links ul,
+.footer-social ul {
+  list-style: none;
+  font-size: 25px;
+  padding: 0;
+}
+
+.footer-links ul li,
+.footer-social ul li {
+  margin: 5px 0;
+}
+
+.footer-links a,
+.footer-social a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.footer-contact p {
+  margin: 10px 0;
+}
+
+.footer-contact a {
+  color: #fff;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 10px;
+}
+
+/* Media query for responsiveness */
+@media screen and (min-width: 768px) {
+  .footer-content {
+    flex-direction: row; /* Display elements in a row on larger screens */
+    justify-content: space-between; /* Add spacing between elements */
+    align-items: center; /* Vertically align content */
+    text-align: left; /* Reset text alignment */
+  }
+  .footer-logo img {
+    margin-bottom: 10px;
+  }
+
+  .footer-links ul,
+  .footer-social ul {
+    text-align: center;
+  }
+}

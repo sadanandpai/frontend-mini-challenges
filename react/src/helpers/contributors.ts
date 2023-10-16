@@ -1,4 +1,9 @@
-export const contributors = new Map([
+interface Contributor {
+  name: string;
+  pic: string;
+}
+
+export const contributors = new Map<string, Contributor>([
   ['sadanandpai', { name: 'Sadanand Pai', pic: 'https://avatars.githubusercontent.com/u/12962887' }],
   ['NikhilJHA01', { name: 'Nikhil Jha', pic: 'https://avatars.githubusercontent.com/u/63518046' }],
   ['noorulaink00', { name: 'Noor Ul Ain Khan', pic: 'https://avatars.githubusercontent.com/u/65324193' }],
@@ -19,4 +24,7 @@ export const contributors = new Map([
   ['Pancratzia', { name: 'Laura Ortega', pic: 'https://avatars.githubusercontent.com/u/54899954' }],
   ['ashikjhonson', { name: 'Ashik Jhonson', pic: 'https://avatars.githubusercontent.com/u/97791612' }],
   ['Krishnakalani111', { name: 'Krishna Kalani', pic: 'https://avatars.githubusercontent.com/u/88764668' }],
+  ['viditagrawal56', { name: 'Vidit Agrawal', pic: 'https://avatars.githubusercontent.com/u/52532308' }],
+  ['Bhushan1019', { name: 'Bhushan Patil', pic: 'https://avatars.githubusercontent.com/u/121352274' }],
+  ['Sumitwarrior7', { name: 'Cool Dude 69', pic: 'https://avatars.githubusercontent.com/u/108853577' }],
 ]);

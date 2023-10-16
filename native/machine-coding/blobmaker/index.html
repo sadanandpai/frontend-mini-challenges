@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="../../logo.svg" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="../../helpers/navbar.js" type="module"></script>
+    <script src="app.js" defer></script>
+    <title>Blob Maker</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="output">
+        <div id="blob"></div>
+      </div>
+      <div class="dimesions">
+        <div>
+          <label for="blog-height"> Height </label>
+          <input type="number" value="200" id="blob-height" />
+        </div>
+        <div>
+          <label for="blog-width"> Width </label>
+          <input type="number" value="200" id="blob-width" />
+        </div>
+      </div>
+      <div class="sliders">
+        <input type="range" value="30" />
+        <input type="range" value="80" />
+        <input type="range" value="60" />
+        <input type="range" value="40" />
+      </div>
+      <input type="text" id="css-code" readonly />
+      <button id="copy">Copy</button>
+    </div>
+  </body>
+</html>

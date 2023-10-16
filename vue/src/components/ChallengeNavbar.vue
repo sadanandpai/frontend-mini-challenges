@@ -1,9 +1,9 @@
 <template>
   <nav class="navbar">
     <div class="left">
-      <a href="#/" class="back">
+      <RouterLink to="/" class="back">
         &lt;
-      </a>
+      </RouterLink>
       <a class="logo" href="/frontend-mini-challenges/">
         <img src="/logo.png" alt="logo" />
       </a>
@@ -20,6 +20,7 @@
 </template>
 
 <script setup lang="ts">
+import { RouterLink } from 'vue-router'
 defineProps({
   title: {
     type: String,

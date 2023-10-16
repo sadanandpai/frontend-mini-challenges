@@ -130,8 +130,10 @@ export const challenges = new Map<string, Challenge>([
     'toast-popup',
     {
       title: 'Toast Popup',
-      link: '#',
+      link: '/toast-popup',
       difficulty: 'medium',
+      developer: 'arpansaha13',
+      tags: [],
     },
   ],
   [

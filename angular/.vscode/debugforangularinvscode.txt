@@ -1,0 +1,34 @@
+In VS Code environment: Left Click Manage (Left Bottom Corner) > Extensions (or Ctrl+Shift+X).
+
+Extensions
+
+Open the Extensions view. Then type 'chrome' in the search box. You'll see the extensions: Debugger for Chrome.
+
+Debugger
+
+Press the Install button for Debugger for Chrome.
+
+3. Configure Debug Environment
+In the VS Code environment: Click the Run Button on the left side (or Ctrl+Shift+D).
+
+Debug icon
+
+If running and debugging are not yet configured (no launch.json has been created), VS Code shows the Run start view.
+
+Debug Window
+
+You can configure the environment by creating launch.json the file yourself manually, but you can do that automatically by Clicking the Run and Debug button to open the Select Environment dialog box.
+
+Debug Environment
+
+Select Chrome. Then VS Code will create a launch.json
+
+
+
+ 
+
+You might need to change the port to what your app is running on, say, 4200.
+
+4. Start Debugging
+Now, in VS Code, if you Click the Run Button on the left side (or Ctrl+Shift+D), you will have a debugging environment like this,
+

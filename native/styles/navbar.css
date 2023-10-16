@@ -1,0 +1,73 @@
+@import './dark-toggle.css';
+
+.navbar {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: var(--bg-navbar);
+  box-shadow: 0 1px 3px 0 var(--shadow-navbar), 0 1px 2px -1px var(--shadow-navbar);
+  transition: all 150ms ease-in-out;
+}
+
+.navbar .logo {
+  display: flex;
+  flex-grow: 1;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.navbar .logo img {
+  width: 40px;
+  height: 40px;
+  background-color: var(--bg-navbar-logo-img);
+  transition: all 150ms ease-in-out;
+}
+
+.navbar .logo span {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-body);
+}
+
+.navbar > div:last-child {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.navbar .links {
+  display: none;
+}
+
+.navbar #github-repo-link {
+  display: inline-block;
+  color: var(--text-body);
+}
+
+.navbar .github {
+  display: block;
+  width: 30px;
+  height: 30px;
+}
+
+@media screen and (width >= 768px) {
+  .navbar .logo {
+    gap: 1rem;
+  }
+
+  .navbar .logo span {
+    font-size: 1.2rem;
+  }
+
+  .navbar .links {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .navbar > div:last-child {
+    gap: 2rem;
+  }
+}

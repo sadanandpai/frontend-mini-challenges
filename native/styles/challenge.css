@@ -1,0 +1,85 @@
+.challenge-grid {
+  grid-gap: 1.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  margin: 2rem 0;
+}
+
+.challenge-card {
+  padding: 10px;
+  position: relative;
+  overflow: hidden;
+  background-color: var(--bg-challenge-card);
+  border: 1px solid var(--border-challenge-card);
+  border-radius: 0.25rem;
+  box-shadow: 0 10px 15px -3px var(--shadow-challenge-card), 0 4px 6px -4px var(--shadow-challenge-card);
+  transition: all 150ms ease-in-out;
+}
+
+.challenge-card:hover {
+  box-shadow: 0 6px 8px 0 var(--shadow-challenge-card-scaled);
+  transform: scale(1.05);
+}
+
+.challenge-card.disabled h3 {
+  color: grey;
+}
+
+.challenge-card.disabled {
+  box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.1);
+}
+
+.challenge-card.disabled:hover {
+  transform: scale(1);
+}
+
+.challenge-card.medium h3 {
+  color: rgb(75, 75, 255);
+}
+
+.challenge-card.hard h3 {
+  color: orangered;
+}
+
+.challenge-card h3 {
+  color: green;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.challenge-card a {
+  color: green;
+  text-decoration: none;
+}
+
+.challenge-card .new {
+  display: inline-block;
+  padding: 0.2rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 4rem;
+  color: white;
+  font-size: small;
+  font-weight: 500;
+  text-align: center;
+  background-color: var(--bg-challenge-card-new);
+}
+
+.dark .challenge-card .new {
+  color: #e5e7eb;
+}
+
+.challenge-card .developer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-body);
+  font-size: 0.8rem;
+}
+
+.challenge-card .developer-img {
+  border-radius: 50%;
+  height: 25px;
+  width: 25px;
+  margin-right: 0.5rem;
+}

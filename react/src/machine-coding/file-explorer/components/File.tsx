@@ -1,5 +1,5 @@
 import Input from "./Input";
-import { NodeIntf } from "../utils/node.interface";
+import type { NodeIntf, NodeOrNull } from "../utils/node.interface";
 import styles from "../styles.module.css";
 import { useState } from "react";
 
@@ -8,13 +8,16 @@ interface Props {
   parent: NodeIntf;
   onNodeDeletion: (a: NodeIntf, b: NodeIntf) => void;
   onNodeUpdate: (a: NodeIntf, b: NodeIntf, c: string) => void;
+  validateNode: (a: NodeOrNull, b: NodeIntf | null, c: string) => boolean;
 }
 
-function File({ node, parent, onNodeDeletion, onNodeUpdate }: Props) {
+function File({ node, parent, onNodeDeletion, onNodeUpdate, validateNode }: Props) {
   const [isEditable, setIsEditable] = useState(false);
 
+  const validateNodeOnUpdate = (name: string) => validateNode(parent, node, name);
+
   const onComplete = (value) => {
-    onNodeUpdate(parent, node, value);
+    if (validateNodeOnUpdate(value)) onNodeUpdate(parent, node, value);
     setIsEditable(false);
   };
 
@@ -22,7 +25,7 @@ function File({ node, parent, onNodeDeletion, onNodeUpdate }: Props) {
     return (
       <li className={`${styles.list} ${styles.editList}`}>
         📄&nbsp;
-        <Input defaultValue={node.name} onComplete={onComplete} />
+        <Input defaultValue={node.name} onComplete={onComplete} validateNode={validateNodeOnUpdate} />
       </li>
     );
   }

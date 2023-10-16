@@ -1,0 +1,86 @@
+/* Set a background color */
+
+/* Style the drum buttons */
+.set {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  flex-wrap: wrap;  
+}
+
+.drum {
+  border: 2px solid #333;
+  background-color: #fff;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s;
+  border: 10px solid #404b69;
+  font-size: 5rem;
+  line-height: 2;
+  font-weight: 900;
+  color: #da0463;
+  text-shadow: 3px 0 #dbedf3;
+  width: 115px;
+  height: 115px;
+  border-radius: 15px;
+  margin: 10px;
+}
+
+/* Add hover effect to drum buttons */
+.drum:hover {
+  background-color: #333;
+  color: blue;
+  transform: scale(1.1);
+}
+
+.w {
+  background-image: url('images/tom1.png');
+}
+
+.a {
+  background-image: url('images/tom2.png');
+}
+
+.s {
+  background-image: url('images/tom3.png');
+}
+
+.d {
+  background-image: url('images/tom4.png');
+}
+
+.j {
+  background-image: url('images/snare.png');
+}
+
+.k {
+  background-image: url('images/crash.png');
+}
+
+.l {
+  background-image: url('images/kick.png');
+}
+
+.pressed {
+  box-shadow: 0 3px 4px 0 #dbedf3;
+  opacity: 0.5;
+}
+
+.red {
+  color: red;
+}
+
+@media (width >= 768px) {
+  .set {
+    margin: 10% auto;
+  }
+
+  .drum {
+    width: 150px;
+    height: 150px;
+  }
+}

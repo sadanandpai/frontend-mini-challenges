@@ -1,4 +1,14 @@
-export const challenges = new Map([
+interface Challenge {
+  title: string;
+  link: string;
+  difficulty: string;
+  developer?: string;
+  contributors?: string[];
+  tags?: string[];
+  isNew?: boolean;
+}
+
+export const challenges = new Map<string, Challenge>([
   [
     'counter',
     {
@@ -6,6 +16,28 @@ export const challenges = new Map([
       link: 'counter',
       difficulty: 'easy',
       developer: 'sadanandpai',
+      tags: [],
+    },
+  ],
+  [
+    'quote-generator',
+    {
+      title: 'Quote Generator',
+      link: 'quote-generator',
+      difficulty: 'easy',
+      developer: 'viditagrawal56',
+      isNew: true,
+      tags: [],
+    },
+  ],
+  [
+    'image-gallery',
+    {
+      title: 'Image Gallery',
+      link: 'image-gallery',
+      difficulty: 'easy',
+      developer: 'Bhushan1019',
+      isNew: true,
       tags: [],
     },
   ],
@@ -26,6 +58,16 @@ export const challenges = new Map([
       link: 'light-dark-mode',
       difficulty: 'easy',
       developer: 'NikhilJHA01',
+      tags: [],
+    },
+  ],
+  [
+    'qr-code-generator',
+    {
+      title: 'QR generator',
+      link: 'qr-code-generator',
+      difficulty: 'easy',
+      developer: 'Krishnakalani111',
       tags: [],
     },
   ],
@@ -68,6 +110,28 @@ export const challenges = new Map([
       link: 'stack',
       difficulty: 'easy',
       developer: 'kumaratul60',
+      tags: [],
+      isNew: true,
+    },
+  ],
+  [
+    'word-count',
+    {
+      title: 'Word Count',
+      link: 'word-count',
+      difficulty: 'easy',
+      developer: 'Sumitwarrior7',
+      tags: [],
+      isNew: true,
+    },
+  ],
+  [
+    'temperature-converter',
+    {
+      title: 'Temperature Converter',
+      link: 'temperature-converter',
+      difficulty: 'easy',
+      developer: 'Sumitwarrior7',
       tags: [],
       isNew: true,
     },
@@ -290,16 +354,6 @@ export const challenges = new Map([
       link: 'autocomplete-online',
       difficulty: 'hard',
       developer: 'deepu0',
-      tags: [],
-    },
-  ],
-  [
-    'qr-code-generator',
-    {
-      title: 'QR code generator',
-      link: 'qr-code-generator',
-      difficulty: 'easy',
-      developer: 'Krishnakalani111',
       tags: [],
     },
   ],

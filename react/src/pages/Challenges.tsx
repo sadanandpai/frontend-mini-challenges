@@ -1,5 +1,6 @@
 import ChallengeGrid from '@/components/challenges/ChallengeGrid';
 import Navbar from '@/components/navbar/Navbar';
+import ScrollBtn from '@/components/scroll-to-top/ScrollBtn';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
 
       <div className="container text-center">
         <ChallengeGrid />
+        <ScrollBtn/>
       </div>
     </>
   );

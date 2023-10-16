@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="stack">
+        <input type="text" name="inputVal" [(ngModel)]="inputVal" required />
+
+        <div class="btn_root">
+            <button (click)="push()">Push</button>
+            <button (click)="pop()">Pop</button>
+            <button (click)="peek()">Peek</button>
+            <button (click)="isEmpty()">IsEmpty</button>
+            <button (click)="isFull()">IsFull</button>
+        </div>
+        <hr />
+
+        <h3>{{outPut}}</h3>
+
+        <div class="stackElement" *ngFor="let element of stack">
+            <p>{{element}}</p>
+        </div>
+    </div>
+</div>

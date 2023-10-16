@@ -18,6 +18,8 @@ import Pagination from '@/machine-coding/pagination/App';
 import PasswordGenerator from '@/machine-coding/password-generator/App';
 import PasswordStrength from '@/machine-coding/password-strength/passwordStrength';
 import ProgressBar from '@/machine-coding/progressbar/App';
+import QRCodeGenerator from '@/machine-coding/qr-code-generator/App.jsx';
+import QouteGenerator from '@/machine-coding/quote-generator/App.tsx';
 import Stack from '@/machine-coding/stack-implementation/Stack';
 import StarRating from '@/machine-coding/star-rating/App';
 import Stopwatch from '@/machine-coding/stopwatch/App';
@@ -27,7 +29,9 @@ import TicTacToe from '@/machine-coding/tic-tac-toe/App';
 import Toast from '@/machine-coding/toast-popup/toast';
 import TodoList from '@/machine-coding/todo-list/todo';
 import TwentyfiveFiveClock from '@/machine-coding/25-5-clock';
-import QRCodeGenerator from '@/machine-coding/qr-code-generator/App.jsx';
+import ImageGallery from '@/machine-coding/image-gallery/App.tsx';
+import WordCounter from '@/machine-coding/word-count';
+import TemperatureConverter from '@/machine-coding/temperature-converter';
 import { challenges } from '@/helpers/challenges';
 import { useParams } from 'react-router-dom';
 
@@ -60,7 +64,11 @@ const reactChallenges = {
   'email-templates': <EmailTemplates />,
   'expense-tracker': <ExpenseTracker />,
   pagination: <Pagination />,
-  'qr-code-generator':<QRCodeGenerator/>,
+  'qr-code-generator': <QRCodeGenerator />,
+  'quote-generator': <QouteGenerator />,
+  'image-gallery': <ImageGallery />,
+  'word-count': <WordCounter />,
+  'temperature-converter': <TemperatureConverter />,
 };
 
 function Challenge() {

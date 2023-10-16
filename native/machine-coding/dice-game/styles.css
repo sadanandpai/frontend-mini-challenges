@@ -1,0 +1,86 @@
+.container {
+  text-align: center;
+  max-width: 500px;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  background-color: #1f1f1f;
+  color: #fff;
+}
+
+/* Style the heading */
+.container h1 {
+  font-size: 2rem;
+  color: #ff6b6b;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  margin: 10px;
+}
+
+/* Style the dice sections */
+.dice-holder {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.dice {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Style the player names */
+.dice p {
+  font-size: 32px;
+  color: #ff6b6b;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+/* Style the dice images */
+.img1,
+.img2 {
+  width: 150px;
+  height: 150px;
+  margin-top: 20px;
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.4));
+  transition: transform 0.3s ease-in-out;
+}
+.img1:hover,
+.img2:hover {
+  transform: rotate(180deg) scale(1.1);
+}
+
+.dice-background {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 200px;
+  background-size: cover;
+  opacity: 0.2;
+  z-index: -1;
+}
+
+@media screen and (width >=600px) {
+  .container {
+    padding: 50px;
+    margin: 50px auto;
+  }
+
+  .container h1 {
+    font-size: 2rem;
+  }
+
+  .dice-holder {
+    flex-direction: row;
+    gap: 50px;
+  }
+
+  .dice p {
+    margin-top: 20px;
+  }
+}
