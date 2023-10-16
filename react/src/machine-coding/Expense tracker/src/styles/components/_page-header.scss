@@ -1,0 +1,35 @@
+.page-header {
+  align-items: center;
+  color: var(--color-txt-main);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 50rem;
+  padding: 10% 0;
+
+  > * {
+    margin: 2% 0;
+  }
+}
+
+@media (min-width: 800px) {
+  .page-header {
+    padding: 2% 0;
+
+    > * {
+      margin: 0 0 2%;
+    }
+  }
+}
+
+.page-header__title {
+  --font-size: clamp(1.5rem, 5vw, 2rem);
+  font-size: var(--font-size);
+  font-weight: 700;
+  line-height: 1.2;
+  width: 25rem;
+
+  span {
+    font-size: calc(var(--font-size) * 0.85);
+  }
+}

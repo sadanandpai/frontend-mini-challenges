@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should correctly render ExpenseSummary with 1 expense 1`] = `
+<Fragment>
+  <h1
+    className="page-header__title"
+  >
+    You've spent 
+    $2.35
+     
+    <br />
+    <span>
+      in a total of 
+      1
+       
+      expense
+    </span>
+  </h1>
+</Fragment>
+`;
+
+exports[`should correctly render ExpenseSummary with multiple expenses 1`] = `
+<Fragment>
+  <h1
+    className="page-header__title"
+  >
+    You've spent 
+    $10445023.49
+     
+    <br />
+    <span>
+      in a total of 
+      23
+       
+      expenses
+    </span>
+  </h1>
+</Fragment>
+`;

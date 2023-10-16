@@ -1,0 +1,101 @@
+.filter-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 20rem;
+
+  label {
+    display: flex;
+    color: var(--color-txt-grey);
+    flex-direction: column;
+    font-size: .9rem;
+
+    span {
+      padding-left: .5rem;
+    }
+    
+    &:first-of-type {
+      width: 35%;
+    }
+
+    &:nth-of-type(2) {
+      width: 58%;
+    }
+  }
+
+  .filter-form--item {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: none;
+    border-radius: var(--round-borders);
+    box-shadow: 
+      0 3px 6px var(--color-shadow),
+      -2px -1px 8px 1px hsl(0, 0, 100%);
+    color: var(--color-txt-grey);
+    font-size: 1rem;
+    font-weight: 300;
+    height: 2.5rem;
+    margin-bottom: 4%;
+    width: 100%;
+
+    &__sort {
+      background-image: 
+        url('data:image/svg+xml;utf8,<svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 9.65685L7.41421 11.0711L11.6569 6.82843L15.8995 11.0711L17.3137 9.65685L11.6569 4L6 9.65685Z" fill="%23a8a8a8" /><path d="M6 14.4433L7.41421 13.0291L11.6569 17.2717L15.8995 13.0291L17.3137 14.4433L11.6569 20.1001L6 14.4433Z" fill="%23a8a8a8" /></svg>');
+      background-repeat: no-repeat;
+      background-position-x: 90%;
+      background-position-y: 11px;
+      cursor: pointer;
+      padding-left: 1em;
+    }
+
+    &__search {
+      color: var(--color-txt-main);
+      padding: 0 1em;
+
+      &::placeholder {
+        color: var(--color-txt-grey);
+      }
+    }
+  }
+}
+
+/************** React Dates - DateRange filter **************/
+.DateRangePicker {
+  width: 100%;
+}
+
+.DateInput {
+  width: 5rem;
+
+  &_input {
+    border-bottom: none;
+    color: var(--color-txt-grey);
+    cursor: pointer;
+    font-size: 1rem;
+    padding: .5em 1em;
+  }
+}
+
+.DateRangePickerInput {
+  border-radius: var(--round-borders);
+  box-shadow: 
+    0 3px 6px var(--color-shadow),
+    -2px -1px 6px 1px hsla(0, 0, 100%, .16);
+  overflow: hidden;
+}
+
+.DateRangePickerInput_arrow_svg {
+  fill: var(--color-txt-main);
+  height: 20px;
+  vertical-align: text-bottom;
+  width: 20px;
+}
+
+.CalendarDay__selected, .CalendarDay__selected:active, .CalendarDay__selected:hover {
+  background: var(--color-main);
+}
+
+.DateRangePicker_picker {
+  z-index: 3;
+}

@@ -1,0 +1,62 @@
+
+.expense-form {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 35rem;
+  > * {
+    margin-bottom: 1rem;
+  }
+}
+
+.expense-form--item {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: none;
+  border-radius: var(--round-borders);
+  box-shadow: 
+        0 3px 6px var(--color-shadow),
+        -2px -1px 6px 1px hsla(0, 0, 100%, .16);
+  color: var(--color-txt-main);
+  font-size: 1rem;
+  font-weight: 300;
+  height: 2.5rem;
+  padding: 1em 1.5em;
+  width: 100%;
+
+  &__amount {
+    margin-right: 8%;
+    width: calc(92% - 5rem);
+  }
+
+  &__description {
+    font-size: 1rem;
+    height: 10rem;
+    resize: none;
+  }
+
+  &::placeholder {
+    color: var(--color-txt-grey);
+  }
+}
+
+label[for=submit] {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.form__error {
+  color: var(--color-error);
+  margin: 0 0 1rem 0;
+  font-weight: 700;
+}
+
+/************** React Dates - SingleDate filter **************/
+.SingleDatePickerInput {
+  box-shadow: 
+    0 3px 6px var(--color-shadow),
+    -2px -1px 6px 1px hsla(0, 0, 100%, .16);
+  border-radius: var(--round-borders);
+  overflow: hidden;
+}

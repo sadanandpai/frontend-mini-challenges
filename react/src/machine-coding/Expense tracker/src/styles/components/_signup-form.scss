@@ -1,0 +1,60 @@
+.sign-up--container {
+  background: var(--color-main);
+  border-radius: var(--round-borders);
+  color: white;
+  height: clamp(11rem, 50vh, 25rem);
+  margin: 5vh auto;
+  width: 100%;
+  max-width: 25rem;
+}
+
+.sign-up--form {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  width: 100%;
+
+  input {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: var(--color-secondary);
+    border: none;
+    border-radius: var(--round-borders);
+    box-shadow: 3px 3px 6px var(--color-shadow);
+    color: var(--color-txt-main);
+    font-size: 1rem;
+    font-weight: 300;
+    height: 2rem;
+    margin-bottom: 4%;
+    padding: 0 4%;
+    width: 70%;
+
+    &::placeholder {
+      color: var(--color-txt-grey);
+    }
+  }
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 4%;
+  }
+
+  button {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: none;
+    background: var(--color-accent);
+    color: white;
+    font-size: 1rem;
+    padding: .5rem 2rem;
+    margin-top: .5rem;
+
+    &:hover {
+      animation: wiggle .2s 2 forwards;
+    }
+  }
+}

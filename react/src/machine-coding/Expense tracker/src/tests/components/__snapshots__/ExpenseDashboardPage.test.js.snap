@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render Header correctly 1`] = `
+<Fragment>
+  <Connect(ExpenseSummary) />
+  <Connect(ExpenseListFilters) />
+  <Connect(ExpenseList) />
+</Fragment>
+`;

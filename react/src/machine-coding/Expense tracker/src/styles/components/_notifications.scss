@@ -1,0 +1,23 @@
+.Toastify__toast {
+  --box-size: clamp(10rem, 80vw, 15rem);
+  border-radius: var(--round-borders);
+  bottom: 1em;
+  font-size: 1em;
+  font-weight: 300;
+  margin: 0 auto;
+  text-align: center;
+  width: var(--box-size);
+}
+
+.Toastify__toast--success {
+  background: var(--color-accent);
+  color: var(--color-txt-main);
+}
+
+.Toastify__toast--warning {
+  background-color: var(--color-txt-main);
+}
+
+.Toastify__toast--error {
+  background-color: var(--color-error);
+}

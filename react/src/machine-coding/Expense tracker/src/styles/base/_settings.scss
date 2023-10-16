@@ -1,0 +1,13 @@
+:root {
+  /***** Colors  *****/
+  --color-main: linear-gradient(to right, hsl(246, 94%, 67%),  hsl(265, 94%, 67%));
+  --color-secondary: hsl(248, 30%, 95%);
+  --color-accent: linear-gradient(to right bottom,  hsl(150, 62%, 65%), hsl(176, 68%, 64%));
+  --color-error: hsl(0, 69%, 60%);
+  --color-txt-main: hsl(222, 20%, 35%);
+  --color-txt-grey: hsl(0, 0%, 66%);
+  --color-shadow:  hsla(0, 0%, 0%, 0.16);
+
+  /***** Spaces  *****/
+  --round-borders: 2rem;
+}

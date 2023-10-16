@@ -1,0 +1,27 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  background: var(--color-secondary);
+  font-family: 'Montserrat', sans-serif;
+  font-smooth: always;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.6;
+  min-height: 100vh;
+  scroll-behavior: smooth;
+}
+
+*:focus,
+*:active:focus {
+  outline: none;
+}
+
+*:focus-visible {
+  outline: 2px dashed hsl(176, 68%, 64%);
+  outline-offset: .2rem;
+}
