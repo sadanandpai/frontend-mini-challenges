@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ScanVerse</title>
+    <!-- Html5Qrcode javascript  -->
+    <script src="./scripts/html5-qrcode.min.js"></script>
+    <script src="./scripts/qrcode.js"></script>
+    <script src="../../helpers/header.js" type="module"></script>
+    <!-- Linking Bootstrap  -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Linking Custom Stylesheet -->
+    <link rel="stylesheet" href="./styles/styles.css" />
+
+    <link rel="icon" href="./images/logo.png" />
+  </head>
+
+  <body>
+    <main>
+      <!-- QR Scanner  -->
+      <div class="scannerContainer">
+        <div class="blackBlurBg">
+          <img id="logo" src="./images/logo.png" alt="logo" />
+          <button
+            id="readerStartBtn"
+            type="button"
+            class="btn btn-dark"
+            onclick="startScan()"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Scan QR
+          </button>
+
+          <!-- QR Scan and Result Display -->
+          <div id="readerContainer" class="hidden">
+            <div id="reader"></div>
+          </div>
+
+          <div id="resultContainer" class="hidden">
+            <div id="scanStatus" class="alert alert-success" role="alert">
+              Pending!
+            </div>
+            <div id="data" class="alert alert-primary" role="alert">
+              <span class="result">
+                Extracted Data: <span id="content"></span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- QR Generator -->
+      <div class="generatorContainer">
+        <form id="form">
+          <div class="typeNumber">
+            <label for="typeNumber">Type Number</label>
+            <input name="typeNumber" type="number" max="40" min="0" required />
+          </div>
+          <div class="data">
+            <label for="data">Data</label>
+            <input type="text" name="data" required="" />
+          </div>
+          <div class="errorCorrectionLevel">
+            <label for="errorCorrectionLevel">Error Correction Level</label>
+            <select name="errorCorrectionLevel" id="errorCorrectionLevel">
+              <option value="L">L</option>
+              <option value="M">M</option>
+              <option value="Q">Q</option>
+              <option value="H">H</option>
+            </select>
+          </div>
+          <div class="submit">
+            <a type="submit" id="submit" href="#">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              Generate QR
+            </a>
+          </div>
+        </form>
+        <div id="placeHolder"></div>
+      </div>
+    </main>
+    <script src="./scripts/index.js"></script>
+  </body>
+</html>

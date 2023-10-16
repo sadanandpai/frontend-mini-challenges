@@ -1,0 +1,374 @@
+@import url("https://fonts.googleapis.com/css2?family=Ysabeau+Infant&display=swap"); 
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Ysabeau Infant", sans-serif;
+}
+
+img{
+  max-width: 100%;
+}
+
+body{
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.scannerContainer, .generatorContainer{
+  width: 99vw;
+  min-height: 100vh;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.97) inset;
+  background: url("../images/moon.jpg") no-repeat center;
+  background-size: cover;
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid white;
+  border-radius: .625rem;
+}
+
+.scannerContainer .blackBlurBg{
+  min-width: 15vw;
+  min-height: 40vh;
+  padding: 1rem 0;
+  flex-shrink: 0;
+  border-radius: .9rem;
+  filter: drop-shadow(2px 2px 10px rgba(0,0,0,.6));
+  border: 3px solid #000;
+  border-radius: .625rem;
+  box-shadow: 0 5px 20px rgba(0,0,0,.6);
+  backdrop-filter: blur(40px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  position: relative;
+}
+
+#logo{
+  border: 2px solid #fff;
+  width: 150px;
+  height: auto;
+  border-radius: .8rem;
+}
+
+#readerStartBtn, #generatorStartBtn{
+  background-color: #000;
+  width: 10rem;
+  transition: transform 0.2s ease, background-color 0.4s ease;
+  font-family: "Ysabeau Infant", sans-serif;
+  font-weight: 600;
+  box-shadow: 0 0 2px 1px #fff inset;
+}
+
+#readerStartBtn:hover, #generatorStartBtn:hover {
+  background-color: rgb(119, 119, 119);
+  border: 2px solid black;
+  transform: scale(1.07);
+  font-weight: 800;
+  color: #000;
+}
+
+#readerContainer {
+  margin: 1rem;
+  border: 4px solid #a1a0a0;
+  border-radius: 0.625rem;
+  padding: 0.7rem;
+  background-color: #000;
+  filter: drop-shadow("5px 5px 5px white");
+}
+
+#reader {
+  width: 600px;
+  background-color: white;
+  border-radius: 0.625rem;
+}
+
+#resultContainer{
+  margin: 1rem 1rem 0 1rem;
+  text-align: center;
+  font-size: 1.5rem;
+  font-family: "Ysabeau Infant", sans-serif;
+}
+
+#scanStatus, #data{
+  max-width: 75vw;
+  overflow-y: auto;
+  background-color: #fff;
+}
+
+.hidden{
+  display: none;
+}
+
+span.result{
+  color: #000;
+}
+
+#content {
+  color: #0e2954;
+}
+
+#placeholder{
+  display: none;
+}
+
+#form{
+  padding: 1rem;
+  width: 15vw;
+  display: flex;
+  flex-direction: column;
+  filter: drop-shadow(2px 2px 10px rgba(0,0,0,.6));
+  border: 3px solid #000;
+  border-radius: .625rem;
+  box-shadow: 0 5px 20px rgba(0,0,0,.6);
+  backdrop-filter: blur(40px);
+}
+
+form > div{
+  position: relative;
+  margin: .2rem 0;
+}
+
+input{
+  border: none;
+  color: #fff;
+  background-color: transparent;
+  border-bottom: 1px solid #fff;
+  width: 100%;
+  padding-top: .5rem;
+}
+
+input:focus, select:focus{
+  outline: none;
+}
+
+label{
+  pointer-events: none;
+  padding: 3px 0 0 3px;
+  position: absolute;
+  bottom: .8rem;
+  color: #fff;
+  transition: .5s;
+}
+
+form > div label:has(+input:focus),
+form > div label:has(+input:valid),
+form > div label:has(+input:out-of-range){
+  font-size: .8rem;
+  left: 0px;
+  padding: 0%;
+  top: 0px;
+  color: #837979;
+}
+
+div.errorCorrectionLevel{
+  position: relative;
+  padding-top: 1.5rem;
+}
+
+div.errorCorrectionLevel > label{
+  top: 0px;
+}
+
+input, select{
+  margin: .5rem 0;
+}
+
+select{
+  width: 100%;
+  color: #000;
+  background-color: #d6d6d6;
+}
+
+.submitBtn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: .7rem;
+  width: 100%;
+  text-align: center;
+  height: 4rem;
+}
+
+
+form .submit{
+  width: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+#form a{
+  position: relative;
+}
+
+form a {
+  background-color: #000;
+  width: 60%;
+  margin: 1rem 0;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  box-shadow: 0 0 2px 1px #fff inset;
+  color: #fff;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: .5s;
+  border-radius: .3rem;
+}
+
+form a:hover {
+  font-weight: bold;
+  background: rgb(119, 119, 119);
+  color: #000;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgb(119, 119, 119),
+              0 0 25px rgb(119, 119, 119),
+              0 0 40px rgb(119, 119, 119),
+              0 0 50px rgb(119, 119, 119);
+}
+
+.blackBlurBg button{
+  position: relative;
+  overflow: hidden;
+}
+
+#form a span, .blackBlurBg button span  {
+  position: absolute;
+  display: block;
+}
+
+#form a span:nth-child(1), .blackBlurBg button span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #ff0000);
+  animation: btn-anim1 1s linear infinite;
+}
+
+@keyframes btn-anim1 {
+  0% {
+    left: -100%;
+  }
+  50%,100% {
+    left: 100%;
+  }
+}
+
+#form a span:nth-child(2), .blackBlurBg button span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #21ff04);
+  animation: btn-anim2 1s linear infinite;
+  animation-delay: .25s
+}
+
+@keyframes btn-anim2 {
+  0% {
+    top: -100%;
+  }
+  50%,100% {
+    top: 100%;
+  }
+}
+
+#form a span:nth-child(3), .blackBlurBg  button span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #0385ff);
+  animation: btn-anim3 1s linear infinite;
+  animation-delay: .5s
+}
+
+@keyframes btn-anim3 {
+  0% {
+    right: -100%;
+  }
+  50%,100% {
+    right: 100%;
+  }
+}
+
+#form a span:nth-child(4), .blackBlurBg button span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #eeff00);
+  animation: btn-anim4 1s linear infinite;
+  animation-delay: .75s
+}
+
+@keyframes btn-anim4 {
+  0% {
+    bottom: -100%;
+  }
+  50%,100% {
+    bottom: 100%;
+  }
+}
+
+
+/* Responsiveness */
+
+@media screen and (max-width: 768px){
+  
+  #logo{
+    width: 100px;
+    top: 2rem;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+
+  .scannerContainer .blackBlurBg{
+    min-height: 40vh;
+    width: 80vw;
+    padding: 1rem 0;
+  }
+
+  #readerContainer{
+    max-width: 80%;
+  }
+
+  #reader{
+    max-width: 100%;
+  }
+
+  #resultContainer{
+    font-size: 1rem;
+  }
+
+  #readerContainer + #result{
+    font-size: 1rem;
+  }
+
+  #form{
+    min-height: 40vh;
+    width: 80vw;
+  }
+}
+
+
+@media screen and (max-width: 480px){
+  form a{
+    width: 80%;
+  }
+}

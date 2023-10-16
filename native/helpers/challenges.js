@@ -410,6 +410,13 @@ export const challenges = [
     tags: [],
   },
   {
+    title: 'QR Scanner and Generator',
+    link: 'qr-generator',
+    difficulty: 'medium',
+    developer: 'singodiyashubham87',
+    tags: [],
+  },
+  {
     title: 'Movie-info app (online)',
     link: 'movie-info',
     difficulty: 'medium',
