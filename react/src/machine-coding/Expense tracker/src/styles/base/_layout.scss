@@ -1,0 +1,8 @@
+#app > * {
+  display: grid;
+  grid-template-columns: 1fr 80vw 1fr;
+
+  & > * {
+    grid-column: 2 / 3;
+  }
+}

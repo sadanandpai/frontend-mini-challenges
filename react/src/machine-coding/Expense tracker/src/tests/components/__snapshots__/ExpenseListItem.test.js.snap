@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render expense list item 1`] = `
+<li
+  className="expense-list-item"
+>
+  <Link
+    to="/edit/1"
+  >
+    <div>
+      <h3
+        className="expense-list-item__description"
+      >
+        Gum
+      </h3>
+      <span
+        className="expense-list-item__date"
+      >
+        01 January 1970
+      </span>
+    </div>
+    <h3
+      className="expense-list-item__price"
+    >
+      € 1,95
+    </h3>
+  </Link>
+</li>
+`;

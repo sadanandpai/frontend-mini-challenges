@@ -1,0 +1,11 @@
+@keyframes wiggle {
+  33% {
+    transform: rotate(-3deg);
+  }
+  66% {
+    tranform: rotate(3deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}

@@ -1,0 +1,12 @@
+# Directories
+node_modules/
+public/dist/
+.netlify/
+
+# Log files
+yarn-error.log
+
+# Environment files
+.env
+.env.test
+.env.development

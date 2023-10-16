@@ -1,0 +1,66 @@
+{
+  "plugins": [
+    "jest",
+    "react"
+  ],
+  "parser": "babel-eslint",
+  "env": {
+    "jest/globals": true,
+    "browser": true,
+    "es6": true,
+    "node": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 7,
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "rules": {
+    "global-require": 0,
+    "comma-spacing": [
+      "warn",
+      {
+        "before": false,
+        "after": true
+      }
+    ],
+    "implicit-arrow-linebreak": [
+      "warn",
+      "beside"
+    ],
+    "eqeqeq": [
+      "warn",
+      "smart"
+    ],
+    "func-style": [
+      "error",
+      "expression"
+    ],
+    "indent": [
+      "warn",
+      2
+    ],
+    "linebreak-style": [
+      "error",
+      "unix"
+    ],
+    "no-multiple-empty-lines": [
+      "error",
+      {
+        "max": 2,
+        "maxEOF": 1
+      }
+    ],
+    "quotes": [
+      "error",
+      "single"
+    ],
+    "semi": [
+      "error",
+      "always"
+    ],
+    "no-var": "error",
+    "prefer-arrow-callback": "error"
+   }
+}
