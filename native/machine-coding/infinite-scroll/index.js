@@ -1,4 +1,4 @@
-const container = document.querySelector('.image-container');
+const container = document.querySelector('.post-container');
 const loader = document.querySelector('.loader');
 let start = 0;
 let end = start + 14;
