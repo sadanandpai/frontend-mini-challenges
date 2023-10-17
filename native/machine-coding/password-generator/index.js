@@ -9,6 +9,9 @@ const symbolsEl = document.querySelector('#symbols');
 const copyBtnEl = document.querySelector('.copy-btn');
 const clipboardNoti = document.querySelector('#clipboard-container');
 const rememberPass = document.querySelector('#rememberPass');
+const indicator = document.querySelector("[data-indicator]");
+
+setIndicator("#ccc");
 
 let charLength = 10;
 const specialChars = [
@@ -93,6 +96,38 @@ const APLHABETWORDS = {
   Z: 'Zipline',
 };
 
+function setIndicator(color){
+  indicator.style.backgroundColor = color;
+  indicator.style.boxShadow = `0px 0px 12px 1px ${color}`;
+}
+
+// FUNCTION TO CALCULATE STRENGTH 
+function calcStrength(){
+  let hasUpper = false;
+  let hasLower = false;
+  let hasNum = false;
+  let hasSym = false;
+
+  if(upperCaseEl.checked) hasUpper=true;
+  if(lowerCaseEl.checked) hasLower=true;
+  if(numbersEl.checked) hasNum = true;
+  if(symbolsEl.checked) hasSym = true;
+
+  console.log(hasLower,hasUpper, hasNum, hasSym);
+
+  if( hasUpper && hasLower && (hasNum || hasSym) && charLength >=8){
+      setIndicator("#0f0");
+  }else if( (hasLower || hasUpper) &&
+      (hasNum || hasSym) &&
+      charLength >=6
+  ) {
+      setIndicator("#ff0");
+  } else{
+      setIndicator("#f00");
+  }
+}
+
+
 const functionMap = {
   upper: () => String.fromCodePoint(65 + Math.floor(Math.random() * 26)),
   lower: () => String.fromCodePoint(97 + Math.floor(Math.random() * 26)),
@@ -176,6 +211,7 @@ passwordFormEl.addEventListener('submit', (e) => {
     symbols: symbolsEl.checked,
   });
   passwordInputEl.value = password;
+  calcStrength();
 
   rememberPass.innerText = rememberPassword(passwordInputEl.value); // add
 });

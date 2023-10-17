@@ -40,6 +40,21 @@ input {
   cursor: pointer;
 }
 
+/* ADDED STYLE FOR STRENGTH CONTAINER */
+.strength-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.indicator{
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+}
+
 .copy-btn:active {
   transform: scale(0.5);
 }
