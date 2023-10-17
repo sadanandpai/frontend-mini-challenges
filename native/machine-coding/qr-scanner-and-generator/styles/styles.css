@@ -1,11 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Ysabeau+Infant&display=swap"); 
 
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Ysabeau Infant", sans-serif;
-}
 
 img{
   max-width: 100%;
