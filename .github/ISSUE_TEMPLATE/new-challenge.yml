@@ -1,0 +1,54 @@
+name: New challenge
+description: Add a new mini-challenge
+title: "[New]: "
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: |-
+        ## Before you submit...
+        Please keep a few things in mind while writing this issue:
+
+        - Use a short and precise title
+        - Fill out the text fields with as much detail as possible.
+        - If there are relevant screenshots, then please do not hesitate to add them.
+
+  - type: dropdown
+    attributes:
+      label: Framework/code-stack
+      description: Which framework or code stack would you like to add the new mini-challenge to?
+      multiple: false
+      options:
+        - Native (HTML, CSS, and JS)
+        - React
+        - Vue
+      default: 0
+    validations:
+      required: true
+      
+  - type: textarea
+    attributes:
+      label: Description
+      description: Give a clear and concise description of what the mini-challenge is about. You may also write the problem statement here.
+    validations:
+      required: true
+      
+  - type: textarea
+    attributes:
+      label: Similar challenges
+      description: >
+        Are there any similar mini-challenges in the same framework/code stack as this one?
+        If no, then please write "No".
+        If yes, then explain how this new mini-challenge is different from the already available one.
+    validations:
+      required: true
+      
+  - type: textarea
+    attributes:
+      label: Screenshots
+      description: Screenshots are optional but recommended
+        
+  - type: textarea
+    attributes:
+      label: Additional Context
+      description: Anything else you would like to add?
