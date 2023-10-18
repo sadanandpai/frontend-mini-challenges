@@ -16,6 +16,14 @@ export const challenges = [
     isNew: true,
   },
   {
+    title: 'ATM Simulator',
+    link: 'ATM Simulator',
+    difficulty: 'easy',
+    developer: 'Bratajit-03',
+    tags: [],
+    isNew: true,
+  },
+  {
     title: 'Guess the number',
     link: 'guess-the-number',
     difficulty: 'easy',
