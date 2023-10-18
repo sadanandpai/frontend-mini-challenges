@@ -16,8 +16,7 @@ fileInput.onchange = ({target})=>{
       let splitName = fileName.split('.');
       fileName = splitName[0].substring(0, 13) + "... ." + splitName[1];
     }
-    uploadFile(fileName); //calling uploadFile with passing file name as an argument
-  }
+     }
 }
 
 
