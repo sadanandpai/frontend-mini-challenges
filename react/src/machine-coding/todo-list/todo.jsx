@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-
 import List from "./list";
 import styles from "./todo.module.scss";
 
@@ -8,6 +7,43 @@ const Todo = () => {
   const [items, setItems] = useState([]);
   const [editInfo, setEditInfo] = useState(null);
 
+  const addItem = (value) => {
+    setItems((prevItems) => [
+      ...prevItems,
+      { value, id: new Date().getTime(), isDone: false }
+    ]);
+  };
+
+  const updateItem = (newValue) => {
+    setItems((prevItems) =>
+      prevItems.map((item) =>
+        item.id === editInfo.id ? { ...item, value: newValue } : item
+      )
+    );
+    setEditInfo(null);
+  };
+
+  const handleCompleteClick = (id) => {
+    setItems((prevItems) =>
+      prevItems.map((item) =>
+        item.id === id ? { ...item, isDone: !item.isDone } : item
+      )
+    );
+  };
+
+  const handleEditClick = ({ id, value }) => {
+    setValue(value);
+    setEditInfo({ id, value });
+  };
+
+  const handleDeleteClick = (id) => {
+    if (editInfo?.id === id) {
+      setValue("");
+      setEditInfo(null);
+    }
+    setItems((prevItems) => prevItems.filter((item) => item.id !== id));
+  };
+
   const submitHandler = (event) => {
     event.preventDefault();
     if (editInfo) {
@@ -15,45 +51,12 @@ const Todo = () => {
     } else {
       addItem(value);
     }
-
     setValue("");
-  };
-
-  const addItem = (value) => {
-    setItems(items.concat({ value, id: new Date().getTime(), isDone: false }));
-  };
-
-  const updateItem = (value) => {
-    const newItems = [...items];
-    const item = newItems.find((item) => item.id === editInfo.id);
-    item.value = value;
-    setItems(newItems);
-    setEditInfo(null);
-  };
-
-  const handleCompleteClick = (value) => {
-      const newItems = [...items];
-      const item = newItems.find((item) => item.id === value.id);
-      item.isDone = !value.isDone;
-      setItems(newItems);
-  }
-
-  const handleEditClick = ({ id, value }) => {
-    setValue(value);
-    setEditInfo({ id, value });
   };
 
   const cancelHandler = () => {
     setValue("");
     setEditInfo(null);
-  };
-
-  const handleDeleteClick = (idx) => {
-    if (editInfo?.id === items[idx].id) {
-      setValue("");
-      setEditInfo(null);
-    }
-    setItems(items.filter((_, i) => i !== idx));
   };
 
   return (
