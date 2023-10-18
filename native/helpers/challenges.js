@@ -32,8 +32,8 @@ export const challenges = [
     tags: [],
   },
   {
-    title: 'File-Uploader',
-    link: 'File-Uploader',
+    title: 'FileUploader',
+    link: 'fileuploader',
     difficulty: 'easy',
     developer: 'avtech',
     tags: [],
