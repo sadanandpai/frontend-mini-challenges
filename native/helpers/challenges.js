@@ -17,7 +17,7 @@ export const challenges = [
   },
   {
     title: 'ATM Simulator',
-    link: 'ATM Simulator',
+    link: 'atm-simulator',
     difficulty: 'easy',
     developer: 'Bratajit-03',
     tags: [],
