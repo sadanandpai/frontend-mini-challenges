@@ -410,7 +410,7 @@ export const challenges = [
     tags: [],
   },
   {
-    title: 'QR Scanner and Generator',
+    title: 'qr-generator',
     link: 'qr-generator',
     difficulty: 'medium',
     developer: 'singodiyashubham87',
