@@ -358,10 +358,10 @@ export const challenges = new Map<string, Challenge>([
     },
   ],
   [
-    'color-mixer',
+    'your-sport',
     {
-      title: 'Color Mixer',
-      link: 'color-mixer',
+      title: 'Your Sport',
+      link: 'your-sport',
       difficulty: 'medium',
       developer: 'Sumitwarrior7',
       tags: [],
