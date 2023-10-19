@@ -1,19 +1,44 @@
-const form = document.querySelector("form"),
-fileInput = document.querySelector(".file-input"),
-uploadedArea = document.querySelector(".uploaded-area");
+const $form = document.querySelector("form"),
+$fileInput = document.querySelector("#file-input"),
+$selectedFileArea = document.querySelector("#selected-file-area");
 
-// form click event
-form.addEventListener("click", () =>{
-  fileInput.click();
+$form.addEventListener("click", () =>{
+  $fileInput.click();
 });
 
-fileInput.onchange = ({target})=>{
-  let file = target.files[0]; //getting file [0] this means if user has selected multiple files then get first one only
+$fileInput.onchange = ({target})=>{
+  const file = target.files[0]; // getting file [0] this means if user has selected multiple files then get first one only
+  let fileName = file.name;
   if(file){
-    let fileName = file.name; //getting file name
-    if(fileName.length >= 12){ //if file name length is greater than 12 then split it and add ...
-      let splitName = fileName.split('.');
-      fileName = splitName[0].substring(0, 13) + "... ." + splitName[1];
-    }
-      }
+    const fileNameWithoutExt = getFileNameWithoutExtension(fileName);
+    // if file name length is greater than 12 then split it and add ...
+    if(fileNameWithoutExt.length > 12) {
+      fileName = fileNameWithoutExt.substring(0, 12) + "... " + getExtension(fileName);
+    };
+  };
+  showSelectedFile(fileName);
+}
+
+function getFileNameWithoutExtension(fileName) {
+  // Get the index of the last .
+  const lastIndex = fileName.lastIndexOf('.');
+  return fileName.substr(0, lastIndex);
+}
+
+function getExtension(fileName) {
+  // Get the index of the last .
+  const lastIndex = fileName.lastIndexOf('.');
+  return fileName.slice(lastIndex);
+}
+
+function showSelectedFile(fileName) {
+  const selectedFileHTML = `<div class="row">
+    <i class="fas fa-file-alt"></i>
+    <div class="content">
+      <div class="details">
+        <span class="name">${fileName}</span>
+      </div>
+    </div>
+  </div>`;
+  $selectedFileArea.innerHTML = selectedFileHTML;
 }
