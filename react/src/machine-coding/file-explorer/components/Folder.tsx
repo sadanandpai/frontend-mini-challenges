@@ -12,6 +12,7 @@ interface Props {
   onNodeDeletion: (a: NodeIntf, b: NodeIntf) => void;
   onNodeUpdate: (a: NodeIntf, b: NodeIntf, c: string) => void;
   onNew: (a: boolean) => void;
+  validateNode: (a: NodeOrNull, b: NodeIntf | null, c: string) => boolean;
 }
 
 function Folder({
@@ -22,12 +23,15 @@ function Folder({
   onNodeDeletion,
   onNodeUpdate,
   onNew,
+  validateNode,
 }: Props) {
   const [isEditable, setIsEditable] = useState(false);
 
+  const validateNodeOnUpdate = (name: string) => validateNode(parent, node, name);
+
   const onComplete = (value: string) => {
     if (parent) {
-      onNodeUpdate(parent, node, value);
+      if (validateNodeOnUpdate(value)) onNodeUpdate(parent, node, value);
       setIsEditable(false);
     }
   };
@@ -36,7 +40,7 @@ function Folder({
     return (
       <li className={`${styles.list} ${styles.editList}`}>
         {expanded ? "📂" : "📁"}&nbsp;
-        <Input defaultValue={node?.name} onComplete={onComplete} />
+        <Input defaultValue={node?.name} onComplete={onComplete} validateNode={validateNodeOnUpdate} />
       </li>
     );
   }

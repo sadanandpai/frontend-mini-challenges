@@ -1,0 +1,35 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.mx-5 {
+  margin: 20px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  width: 300px;
+  margin: 0 auto;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.container button {
+  font-weight: bold;
+  padding: 15px 15px;
+  border-radius: 8px;
+  margin: 20px auto;
+  border: none;
+}
+
+@media (max-width: 300px) {
+  .grid-container {
+    width: 100%;
+  }
+}

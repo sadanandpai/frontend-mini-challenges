@@ -9,17 +9,19 @@ import styles from "../styles.module.css";
 interface Props {
   node: NodeIntf;
   parent: NodeOrNull;
-  onNodeAdditon: (a: NodeIntf, b: NodeIntf) => void;
+  onNodeAddition: (a: NodeIntf, b: NodeIntf) => void;
   onNodeDeletion: (a: NodeIntf, b: NodeIntf) => void;
   onNodeUpdate: (a: NodeIntf, b: NodeIntf, c: string) => void;
+  validateNode: (a: NodeOrNull, b: NodeIntf | null, c: string) => boolean;
 }
 
 function Tree({
   node,
   parent,
-  onNodeAdditon,
+  onNodeAddition,
   onNodeDeletion,
   onNodeUpdate,
+  validateNode,
 }: Props) {
   const [expanded, setExpanded] = useState(false);
   const [isNew, setIsNew] = useState(false);
@@ -36,9 +38,11 @@ function Tree({
     setExpanded(true);
   };
 
+  const validateNodeOnNew = (name: string) => validateNode(node, null, name);
+
   const onComplete = (name: string) => {
-    if (name) {
-      onNodeAdditon(node, {
+    if (name && validateNodeOnNew(name)) {
+      onNodeAddition(node, {
         name,
         id: new Date().getTime().toString(),
         isFolder: isFolderRef.current,
@@ -57,6 +61,7 @@ function Tree({
         onNodeDeletion={onNodeDeletion}
         onNodeUpdate={onNodeUpdate}
         onNew={onNew}
+        validateNode={validateNode}
       />
 
       {expanded && (
@@ -67,9 +72,10 @@ function Tree({
                 key={childNode.id}
                 node={childNode}
                 parent={node}
-                onNodeAdditon={onNodeAdditon}
+                onNodeAddition={onNodeAddition}
                 onNodeDeletion={onNodeDeletion}
                 onNodeUpdate={onNodeUpdate}
+                validateNode={validateNode}
               />
             ) : (
               <File
@@ -78,6 +84,7 @@ function Tree({
                 parent={node}
                 onNodeDeletion={onNodeDeletion}
                 onNodeUpdate={onNodeUpdate}
+                validateNode={validateNode}
               />
             )
           )}
@@ -85,7 +92,7 @@ function Tree({
           {isNew && (
             <li className={`${styles.list} ${styles.editList}`}>
               {isFolderRef.current ? "📁" : "📄"}&nbsp;
-              <EditableInput onComplete={onComplete} />
+              <EditableInput onComplete={onComplete} validateNode={validateNodeOnNew} />
             </li>
           )}
         </div>

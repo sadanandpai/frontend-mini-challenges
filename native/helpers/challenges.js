@@ -32,6 +32,14 @@ export const challenges = [
     tags: [],
   },
   {
+    title: 'File Uploader',
+    link: 'file-uploader',
+    difficulty: 'easy',
+    developer: 'avtech',
+    tags: [],
+    isNew: true,
+  },
+  {
     title: 'Telephone formatter',
     link: 'telephone-formatter',
     difficulty: 'easy',
@@ -141,6 +149,14 @@ export const challenges = [
     link: 'blobmaker',
     difficulty: 'easy',
     developer: 'AbhineshJha',
+    tags: [],
+    isNew: true,
+  },
+  {
+    title: 'Fitness Tracker',
+    link: 'fitness-tracker',
+    difficulty: 'easy',
+    developer: 'CrypticRevenger',
     tags: [],
     isNew: true,
   },
@@ -402,6 +418,20 @@ export const challenges = [
     tags: [],
   },
   {
+    title: 'Movie-info app (online)',
+    link: 'movie-info',
+    difficulty: 'medium',
+    developer: 'AckermanLevi1',
+    tags: [],
+  },
+  {
+    title: 'Quiz App with Timer',
+    link: 'quiz-app-with-timer',
+    difficulty: 'medium',
+    developer: 'Vivek-GuptaXCode',
+    tags: [],
+  },
+  {
     title: 'Paginator',
     link: 'paginator',
     difficulty: 'hard',
@@ -452,5 +482,11 @@ export const challenges = [
   },
   { title: 'Emoji Editor', link: '#' },
   { title: 'Sort Table', link: '#' },
-  { title: 'Infinite Scroll', link: '#' },
+  { 
+    title: 'Infinite Scroll', 
+    link: 'infinite-scroll', 
+    difficulty: 'medium', 
+    developer: 'srijanB7', 
+    tags:[],
+  },
 ];

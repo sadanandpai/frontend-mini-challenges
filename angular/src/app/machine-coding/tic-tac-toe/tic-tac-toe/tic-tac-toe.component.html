@@ -1,0 +1,25 @@
+<div class="container">
+    <div>
+        Status: {{!!winner ? 'Winner '+ winner : 'Playing'}}
+        <div class="container">
+            <div class="mx-5">
+                <div>X</div>
+                <div>{{xWins}} Wins</div>
+            </div>
+            <div class="mx-5">
+                <div>O</div>
+                <div>{{oWins}} Wins</div>
+            </div>
+            <div>
+                <div>=</div>
+                <div>{{draw}} Draws</div>
+            </div>
+        </div>
+        <div class="grid-container">
+            <ng-container *ngFor="let square of squares; let i = index;">
+                <app-square [iTh]="i" [value]="square" (action)="action(i)" />
+            </ng-container>
+        </div>
+        <button (click)="rematch()">Rematch</button>
+    </div>
+</div>

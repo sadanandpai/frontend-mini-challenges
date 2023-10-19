@@ -1,0 +1,14 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+.post {
+    padding: 1rem;
+    border: 1px solid;
+    border-radius: 8px;
+}
+
+.loader {
+    text-align: center;
+}

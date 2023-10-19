@@ -9,7 +9,7 @@
   <p>Show your support by giving a ⭐ to this repo</p>
 
   <h3>
-    <a href="https://sadanandpai.github.io/frontend-mini-challenges/">View all challenges in JavaScript & React</a>
+    <a href="https://sadanandpai.github.io/frontend-mini-challenges/">View all challenges of JavaScript, React and Vue</a>
   </h3>
 </div>
 

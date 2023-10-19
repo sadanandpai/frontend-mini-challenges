@@ -1,0 +1,83 @@
+@import '../../styles/dark-toggle.css';
+
+.navbar-app {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  background-color: var(--bg-navbar);
+  box-shadow: 0 1px 3px 0 var(--shadow-navbar), 0 1px 2px -1px var(--shadow-navbar);
+  transition: all 150ms ease-in-out;
+
+  --icon-container-size: 26px;
+  --github-svg-size: 26px;
+  --back-svg-size: 1rem;
+}
+
+.navbar-app h1 {
+  margin: 0;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+@media screen and (width >= 768px) {
+  .navbar-app {
+    --icon-container-size: 40px;
+    --github-svg-size: 30px;
+    --back-svg-size: 1.5rem;
+  }
+  .navbar-app h1 {
+    font-size: 1.5rem;
+  }
+}
+
+.navbar-app .left {
+  display: flex;
+  margin-right: auto;
+  gap: 0.5rem;
+  align-items: center;
+}
+.navbar-app .left .back {
+  width: var(--icon-container-size);
+  height: var(--icon-container-size);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-body);
+}
+.navbar-app .left .back > svg {
+  width: var(--back-svg-size);
+  height: var(--back-svg-size);
+}
+.navbar-app .left .logo {
+  display: flex;
+  align-items: center;
+}
+.navbar-app .left .logo img {
+  width: var(--icon-container-size);
+  height: var(--icon-container-size);
+  background-color: var(--bg-navbar-logo-img);
+  transition: all 150ms ease-in-out;
+}
+
+.navbar-app .right {
+  display: flex;
+  gap: 0.5rem;
+  margin-left: auto;
+}
+.navbar-app .right .github,
+.navbar-app .right .youtube {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--icon-container-size);
+  height: var(--icon-container-size);
+  color: var(--text-body);
+}
+.navbar-app .right .github > svg,
+.navbar-app .right .youtube > img {
+  width: var(--github-svg-size);
+  height: var(--github-svg-size);
+}

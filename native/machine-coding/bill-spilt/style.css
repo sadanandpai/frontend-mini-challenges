@@ -11,7 +11,7 @@
   margin-top: 20px;
 }
 
-.left {
+.inside_left {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -147,7 +147,7 @@ input[type='number']::-webkit-outer-spin-button {
   cursor: pointer;
 }
 
-.right {
+.inside_right {
   background: #34568b;
   width: 100%;
   display: flex;
