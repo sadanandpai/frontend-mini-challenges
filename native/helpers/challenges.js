@@ -358,6 +358,14 @@ export const challenges = [
     isNew: true,
   },
   {
+    title: 'ATM Simulator',
+    link: 'atm-simulator',
+    difficulty: 'medium',
+    developer: 'Bratajit-03',
+    tags: [],
+    isNew: true,
+  },
+  {
     title: 'Sorting Visualizer',
     link: 'sorting-visualizer',
     difficulty: 'medium',
