@@ -32,6 +32,7 @@ import TwentyfiveFiveClock from '@/machine-coding/25-5-clock';
 import ImageGallery from '@/machine-coding/image-gallery/App.tsx';
 import WordCounter from '@/machine-coding/word-count';
 import TemperatureConverter from '@/machine-coding/temperature-converter';
+import MarkDownEditor from '@/machine-coding/react-markdown-editor-app';
 import { challenges } from '@/helpers/challenges';
 import { useParams } from 'react-router-dom';
 
@@ -63,6 +64,7 @@ const reactChallenges = {
   'bmi-calculator': <BMICalculator />,
   'email-templates': <EmailTemplates />,
   'expense-tracker': <ExpenseTracker />,
+  'markdown-editor': <MarkDownEditor />,
   pagination: <Pagination />,
   'qr-code-generator': <QRCodeGenerator />,
   'quote-generator': <QouteGenerator />,
