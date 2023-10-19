@@ -1,11 +1,3 @@
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  
-}
-
-
 ::selection{
   color: #fff;
   background: #6990F2;
@@ -35,10 +27,8 @@
   border-radius: 5px;
   border: 2px dashed #6990F2;
 }
-form :where(i, p){
-  color: #6990F2;
-}
 form i{
+  color: #6990F2;
   font-size: 50px;
 }
 form p{
@@ -46,7 +36,7 @@ form p{
   font-size: 16px;
 }
 
-section .row{
+#selected-file-area .row{
   margin-bottom: 10px;
   background: #E9F0FF;
   list-style: none;
@@ -54,14 +44,16 @@ section .row{
   border-radius: 5px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
 }
-section .row i{
+#selected-file-area .row i{
+  display: block;
   color: #6990F2;
   font-size: 30px;
 }
-section .details span{
+#selected-file-area .row .content{
+  flex-grow: 1;
+  margin-left: 0.5rem;
+}
+#selected-file-area .details span{
   font-size: 14px;
 }
-
-
