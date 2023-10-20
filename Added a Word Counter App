@@ -1,0 +1,1067 @@
+Fixes #271.
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Word Counter</title>
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,900"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+    />
+
+    <style>
+      html {
+        box-sizing: border-box;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      *,
+      *:before,
+      *:after {
+        box-sizing: inherit;
+      }
+
+      b {
+        font-weight: bold;
+      }
+
+      body {
+        width: 700px;
+        margin: 0 auto;
+        background-color: #fafafa;
+        font-family: "Source Sans Pro", sans-serif;
+        color: #111;
+      }
+
+      .container {
+        margin: 2% auto;
+        padding: 15px;
+        background-color: #ffffff;
+        -webkit-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+        box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+      }
+
+      h1 {
+        font-size: 3rem;
+        font-weight: 900;
+        text-align: center;
+        margin: 1% 0 3%;
+      }
+
+      textarea {
+        width: 100%;
+        height: 250px;
+        padding: 10px;
+        border: 1px solid #d9d9d9;
+        outline: none;
+        font-size: 1rem;
+        resize: none;
+        line-height: 1.5rem;
+      }
+
+      textarea:hover {
+        border-color: #c0c0c0;
+      }
+
+      textarea:focus {
+        border-color: #4d90fe;
+      }
+
+      .output.row {
+        width: 100%;
+        border: 1px solid #ddd;
+        font-size: 1.4rem;
+        margin: 1% 0;
+        background-color: #f9f9f9;
+      }
+
+      .output.row div {
+        display: inline-block;
+        width: 42%;
+        padding: 10px 15px;
+        margin: 1%;
+      }
+
+      .output.row span {
+        font-weight: bold;
+        font-size: 1.5rem;
+      }
+
+      #readability {
+        width: 52%;
+        font-weight: bold;
+      }
+
+      #readability:hover {
+        background-color: #4d90fe;
+        color: #fff;
+        border-radius: 2px;
+        cursor: pointer;
+      }
+
+      #readability:active {
+        background-color: #307af3;
+      }
+
+      .keywords {
+        display: none;
+        margin: 4% 0 0;
+        font-size: 2rem;
+        font-weight: 900;
+      }
+
+      .keywords ul {
+        font-weight: 400;
+        border: 1px solid #ddd;
+        font-size: 1.4rem;
+        background-color: #f9f9f9;
+        margin: 2% 0;
+      }
+
+      .keywords li {
+        display: inline-block;
+        width: 44%;
+        padding: 10px;
+        margin: 1%;
+      }
+
+      @media (max-width: 750px) {
+        body {
+          width: 600px;
+        }
+        .output.row {
+          font-size: 1.2rem;
+        }
+        .output.row span {
+          font-size: 1.3rem;
+        }
+        .keywords ul {
+          font-size: 1.2rem;
+        }
+      }
+
+      @media (max-width: 600px) {
+        body {
+          width: 95%;
+        }
+        .output.row {
+          border: none;
+          background-color: #fff;
+        }
+        .output.row div {
+          display: block;
+          width: 100%;
+          padding: 10px 15px;
+          margin: 2% auto;
+          border: 1px solid #ddd;
+          font-size: 1.8rem;
+          background-color: #f9f9f9;
+        }
+        .output.row span {
+          font-size: 2rem;
+        }
+        #readability {
+          width: 100%;
+          font-size: 1.6rem;
+          font-weight: 400;
+        }
+        .keywords {
+          margin: 10% auto;
+        }
+        .keywords ul {
+          font-weight: 400;
+          border: none;
+          font-size: 1.8rem;
+          background-color: #f9f9f9;
+          margin: 5% 0;
+        }
+        .keywords li {
+          display: block;
+          width: 100%;
+          padding: 10px;
+          margin: 2% auto;
+          border: 1px solid #ddd;
+        }
+      }
+    </style>
+
+    <script>
+      window.console = window.console || function (t) {};
+    </script>
+  </head>
+
+  <body translate="no">
+    <div class="container">
+      <h1>Word Counter</h1>
+      <textarea placeholder="Enter your text here..."></textarea>
+      <div class="output row">
+        <div>Characters: <span id="characterCount">0</span></div>
+        <div>Words: <span id="wordCount">0</span></div>
+      </div>
+      <div class="output row">
+        <div>Sentences: <span id="sentenceCount">0</span></div>
+        <div>Paragraphs: <span id="paragraphCount">0</span></div>
+      </div>
+      <div class="output row">
+        <div>Reading Time: <span id="readingTime">0</span></div>
+      </div>
+      <div class="keywords">
+        Top keywords:
+        <ul id="topKeywords"></ul>
+      </div>
+    </div>
+
+    <script id="rendered-js">
+      "use strict";
+      var input = document.querySelectorAll("textarea")[0],
+        characterCount = document.querySelector("#characterCount"),
+        wordCount = document.querySelector("#wordCount"),
+        sentenceCount = document.querySelector("#sentenceCount"),
+        paragraphCount = document.querySelector("#paragraphCount"),
+        readingTime = document.querySelector("#readingTime"),
+        readability = document.querySelector("#readability"),
+        keywordsDiv = document.querySelectorAll(".keywords")[0],
+        topKeywords = document.querySelector("#topKeywords");
+
+      input.addEventListener("keyup", function () {
+        console.clear();
+
+        characterCount.innerHTML = input.value.length;
+
+        var words = input.value.match(/\b[-?(\w+)?]+\b/gi);
+
+        if (words) {
+          wordCount.innerHTML = words.length;
+        } else {
+          wordCount.innerHTML = 0;
+        }
+
+        if (words) {
+          var sentences = input.value.split(/[.|!|?]+/g);
+          console.log(sentences);
+          sentenceCount.innerHTML = sentences.length - 1;
+        } else {
+          sentenceCount.innerHTML = 0;
+        }
+
+        if (words) {
+          var paragraphs = input.value.replace(/\n$/gm, "").split(/\n/);
+          paragraphCount.innerHTML = paragraphs.length;
+        } else {
+          paragraphCount.innerHTML = 0;
+        }
+
+        if (words) {
+          var seconds = Math.floor((words.length * 60) / 275);
+          if (seconds > 59) {
+            var minutes = Math.floor(seconds / 60);
+            seconds = seconds - minutes * 60;
+            readingTime.innerHTML = minutes + "m " + seconds + "s";
+          } else {
+            readingTime.innerHTML = seconds + "s";
+          }
+        } else {
+          readingTime.innerHTML = "0s";
+        }
+
+        if (words) {
+          var nonStopWords = [];
+          var stopWords = [
+            "a",
+            "able",
+            "about",
+            "above",
+            "abst",
+            "accordance",
+            "according",
+            "accordingly",
+            "across",
+            "act",
+            "actually",
+            "added",
+            "adj",
+            "affected",
+            "affecting",
+            "affects",
+            "after",
+            "afterwards",
+            "again",
+            "against",
+            "ah",
+            "all",
+            "almost",
+            "alone",
+            "along",
+            "already",
+            "also",
+            "although",
+            "always",
+            "am",
+            "among",
+            "amongst",
+            "an",
+            "and",
+            "announce",
+            "another",
+            "any",
+            "anybody",
+            "anyhow",
+            "anymore",
+            "anyone",
+            "anything",
+            "anyway",
+            "anyways",
+            "anywhere",
+            "apparently",
+            "approximately",
+            "are",
+            "aren",
+            "arent",
+            "arise",
+            "around",
+            "as",
+            "aside",
+            "ask",
+            "asking",
+            "at",
+            "auth",
+            "available",
+            "away",
+            "awfully",
+            "b",
+            "back",
+            "be",
+            "became",
+            "because",
+            "become",
+            "becomes",
+            "becoming",
+            "been",
+            "before",
+            "beforehand",
+            "begin",
+            "beginning",
+            "beginnings",
+            "begins",
+            "behind",
+            "being",
+            "believe",
+            "below",
+            "beside",
+            "besides",
+            "between",
+            "beyond",
+            "biol",
+            "both",
+            "brief",
+            "briefly",
+            "but",
+            "by",
+            "c",
+            "ca",
+            "came",
+            "can",
+            "cannot",
+            "can't",
+            "cause",
+            "causes",
+            "certain",
+            "certainly",
+            "co",
+            "com",
+            "come",
+            "comes",
+            "contain",
+            "containing",
+            "contains",
+            "could",
+            "couldnt",
+            "d",
+            "date",
+            "did",
+            "didn't",
+            "different",
+            "do",
+            "does",
+            "doesn't",
+            "doing",
+            "done",
+            "don't",
+            "down",
+            "downwards",
+            "due",
+            "during",
+            "e",
+            "each",
+            "ed",
+            "edu",
+            "effect",
+            "eg",
+            "eight",
+            "eighty",
+            "either",
+            "else",
+            "elsewhere",
+            "end",
+            "ending",
+            "enough",
+            "especially",
+            "et",
+            "et-al",
+            "etc",
+            "even",
+            "ever",
+            "every",
+            "everybody",
+            "everyone",
+            "everything",
+            "everywhere",
+            "ex",
+            "except",
+            "f",
+            "far",
+            "few",
+            "ff",
+            "fifth",
+            "first",
+            "five",
+            "fix",
+            "followed",
+            "following",
+            "follows",
+            "for",
+            "former",
+            "formerly",
+            "forth",
+            "found",
+            "four",
+            "from",
+            "further",
+            "furthermore",
+            "g",
+            "gave",
+            "get",
+            "gets",
+            "getting",
+            "give",
+            "given",
+            "gives",
+            "giving",
+            "go",
+            "goes",
+            "gone",
+            "got",
+            "gotten",
+            "h",
+            "had",
+            "happens",
+            "hardly",
+            "has",
+            "hasn't",
+            "have",
+            "haven't",
+            "having",
+            "he",
+            "hed",
+            "hence",
+            "her",
+            "here",
+            "hereafter",
+            "hereby",
+            "herein",
+            "heres",
+            "hereupon",
+            "hers",
+            "herself",
+            "hes",
+            "hi",
+            "hid",
+            "him",
+            "himself",
+            "his",
+            "hither",
+            "home",
+            "how",
+            "howbeit",
+            "however",
+            "hundred",
+            "i",
+            "id",
+            "ie",
+            "if",
+            "i'll",
+            "im",
+            "immediate",
+            "immediately",
+            "importance",
+            "important",
+            "in",
+            "inc",
+            "indeed",
+            "index",
+            "information",
+            "instead",
+            "into",
+            "invention",
+            "inward",
+            "is",
+            "isn't",
+            "it",
+            "itd",
+            "it'll",
+            "its",
+            "itself",
+            "i've",
+            "j",
+            "just",
+            "k",
+            "keep",
+            "keeps",
+            "kept",
+            "kg",
+            "km",
+            "know",
+            "known",
+            "knows",
+            "l",
+            "largely",
+            "last",
+            "lately",
+            "later",
+            "latter",
+            "latterly",
+            "least",
+            "less",
+            "lest",
+            "let",
+            "lets",
+            "like",
+            "liked",
+            "likely",
+            "line",
+            "little",
+            "'ll",
+            "look",
+            "looking",
+            "looks",
+            "ltd",
+            "m",
+            "made",
+            "mainly",
+            "make",
+            "makes",
+            "many",
+            "may",
+            "maybe",
+            "me",
+            "mean",
+            "means",
+            "meantime",
+            "meanwhile",
+            "merely",
+            "mg",
+            "might",
+            "million",
+            "miss",
+            "ml",
+            "more",
+            "moreover",
+            "most",
+            "mostly",
+            "mr",
+            "mrs",
+            "much",
+            "mug",
+            "must",
+            "my",
+            "myself",
+            "n",
+            "na",
+            "name",
+            "namely",
+            "nay",
+            "nd",
+            "near",
+            "nearly",
+            "necessarily",
+            "necessary",
+            "need",
+            "needs",
+            "neither",
+            "never",
+            "nevertheless",
+            "new",
+            "next",
+            "nine",
+            "ninety",
+            "no",
+            "nobody",
+            "non",
+            "none",
+            "nonetheless",
+            "noone",
+            "nor",
+            "normally",
+            "nos",
+            "not",
+            "noted",
+            "nothing",
+            "now",
+            "nowhere",
+            "o",
+            "obtain",
+            "obtained",
+            "obviously",
+            "of",
+            "off",
+            "often",
+            "oh",
+            "ok",
+            "okay",
+            "old",
+            "omitted",
+            "on",
+            "once",
+            "one",
+            "ones",
+            "only",
+            "onto",
+            "or",
+            "ord",
+            "other",
+            "others",
+            "otherwise",
+            "ought",
+            "our",
+            "ours",
+            "ourselves",
+            "out",
+            "outside",
+            "over",
+            "overall",
+            "owing",
+            "own",
+            "p",
+            "page",
+            "pages",
+            "part",
+            "particular",
+            "particularly",
+            "past",
+            "per",
+            "perhaps",
+            "placed",
+            "please",
+            "plus",
+            "poorly",
+            "possible",
+            "possibly",
+            "potentially",
+            "pp",
+            "predominantly",
+            "present",
+            "previously",
+            "primarily",
+            "probably",
+            "promptly",
+            "proud",
+            "provides",
+            "put",
+            "q",
+            "que",
+            "quickly",
+            "quite",
+            "qv",
+            "r",
+            "ran",
+            "rather",
+            "rd",
+            "re",
+            "readily",
+            "really",
+            "recent",
+            "recently",
+            "ref",
+            "refs",
+            "regarding",
+            "regardless",
+            "regards",
+            "related",
+            "relatively",
+            "research",
+            "respectively",
+            "resulted",
+            "resulting",
+            "results",
+            "right",
+            "run",
+            "s",
+            "said",
+            "same",
+            "saw",
+            "say",
+            "saying",
+            "says",
+            "sec",
+            "section",
+            "see",
+            "seeing",
+            "seem",
+            "seemed",
+            "seeming",
+            "seems",
+            "seen",
+            "self",
+            "selves",
+            "sent",
+            "seven",
+            "several",
+            "shall",
+            "she",
+            "shed",
+            "she'll",
+            "shes",
+            "should",
+            "shouldn't",
+            "show",
+            "showed",
+            "shown",
+            "showns",
+            "shows",
+            "significant",
+            "significantly",
+            "similar",
+            "similarly",
+            "since",
+            "six",
+            "slightly",
+            "so",
+            "some",
+            "somebody",
+            "somehow",
+            "someone",
+            "somethan",
+            "something",
+            "sometime",
+            "sometimes",
+            "somewhat",
+            "somewhere",
+            "soon",
+            "sorry",
+            "specifically",
+            "specified",
+            "specify",
+            "specifying",
+            "still",
+            "stop",
+            "strongly",
+            "sub",
+            "substantially",
+            "successfully",
+            "such",
+            "sufficiently",
+            "suggest",
+            "sup",
+            "sure",
+            "t",
+            "take",
+            "taken",
+            "taking",
+            "tell",
+            "tends",
+            "th",
+            "than",
+            "thank",
+            "thanks",
+            "thanx",
+            "that",
+            "that'll",
+            "thats",
+            "that've",
+            "the",
+            "their",
+            "theirs",
+            "them",
+            "themselves",
+            "then",
+            "thence",
+            "there",
+            "thereafter",
+            "thereby",
+            "thered",
+            "therefore",
+            "therein",
+            "there'll",
+            "thereof",
+            "therere",
+            "theres",
+            "thereto",
+            "thereupon",
+            "there've",
+            "these",
+            "they",
+            "theyd",
+            "they'll",
+            "theyre",
+            "they've",
+            "think",
+            "this",
+            "those",
+            "thou",
+            "though",
+            "thoughh",
+            "thousand",
+            "throug",
+            "through",
+            "throughout",
+            "thru",
+            "thus",
+            "til",
+            "tip",
+            "to",
+            "together",
+            "too",
+            "took",
+            "toward",
+            "towards",
+            "tried",
+            "tries",
+            "truly",
+            "try",
+            "trying",
+            "ts",
+            "twice",
+            "two",
+            "u",
+            "un",
+            "under",
+            "unfortunately",
+            "unless",
+            "unlike",
+            "unlikely",
+            "until",
+            "unto",
+            "up",
+            "upon",
+            "ups",
+            "us",
+            "use",
+            "used",
+            "useful",
+            "usefully",
+            "usefulness",
+            "uses",
+            "using",
+            "usually",
+            "v",
+            "value",
+            "various",
+            "'ve",
+            "very",
+            "via",
+            "viz",
+            "vol",
+            "vols",
+            "vs",
+            "w",
+            "want",
+            "wants",
+            "was",
+            "wasn't",
+            "way",
+            "we",
+            "wed",
+            "welcome",
+            "we'll",
+            "went",
+            "were",
+            "weren't",
+            "we've",
+            "what",
+            "whatever",
+            "what'll",
+            "whats",
+            "when",
+            "whence",
+            "whenever",
+            "where",
+            "whereafter",
+            "whereas",
+            "whereby",
+            "wherein",
+            "wheres",
+            "whereupon",
+            "wherever",
+            "whether",
+            "which",
+            "while",
+            "whim",
+            "whither",
+            "who",
+            "whod",
+            "whoever",
+            "whole",
+            "who'll",
+            "whom",
+            "whomever",
+            "whos",
+            "whose",
+            "why",
+            "widely",
+            "willing",
+            "wish",
+            "with",
+            "within",
+            "without",
+            "won't",
+            "words",
+            "world",
+            "would",
+            "wouldn't",
+            "www",
+            "x",
+            "y",
+            "yes",
+            "yet",
+            "you",
+            "youd",
+            "you'll",
+            "your",
+            "youre",
+            "yours",
+            "yourself",
+            "yourselves",
+            "you've",
+            "z",
+            "zero",
+          ];
+          for (var i = 0; i < words.length; i++) {
+            if (window.CP.shouldStopExecution(0)) break;
+            if (
+              stopWords.indexOf(words[i].toLowerCase()) === -1 &&
+              isNaN(words[i])
+            ) {
+              nonStopWords.push(words[i].toLowerCase());
+            }
+          }
+
+          window.CP.exitedLoop(0);
+          var keywords = {};
+          for (var i = 0; i < nonStopWords.length; i++) {
+            if (window.CP.shouldStopExecution(1)) break;
+
+            if (nonStopWords[i] in keywords) {
+              keywords[nonStopWords[i]] += 1;
+            } else {
+              keywords[nonStopWords[i]] = 1;
+            }
+          }
+
+          window.CP.exitedLoop(1);
+          var sortedKeywords = [];
+          for (var keyword in keywords) {
+            sortedKeywords.push([keyword, keywords[keyword]]);
+          }
+          sortedKeywords.sort(function (a, b) {
+            return b[1] - a[1];
+          });
+
+          topKeywords.innerHTML = "";
+          for (var i = 0; i < sortedKeywords.length && i < 4; i++) {
+            if (window.CP.shouldStopExecution(2)) break;
+            var li = document.createElement("li");
+            li.innerHTML =
+              "<b>" + sortedKeywords[i][0] + "</b>: " + sortedKeywords[i][1];
+            topKeywords.appendChild(li);
+          }
+          window.CP.exitedLoop(2);
+        }
+
+        if (words) {
+          keywordsDiv.style.display = "block";
+        } else {
+          keywordsDiv.style.display = "none";
+        }
+      });
+
+      readability.addEventListener("click", function () {
+        readability.innerHTML = "Fetching score...";
+
+        var requestUrl =
+          "https://ipeirotis-readability-metrics.p.mashape.com/getReadabilityMetrics?text=";
+        var data = input.value;
+
+        var request = new XMLHttpRequest();
+        request.open("POST", encodeURI(requestUrl + data), true);
+        request.setRequestHeader(
+          "Content-Type",
+          "application/x-www-form-urlencoded; charset=UTF-8"
+        );
+        request.setRequestHeader(
+          "X-Mashape-Authorization",
+          "PQ4FOFuaR6mshI6qpnQKQvkDZQXjp1o6Zcqjsnug7GvNggTzUE"
+        );
+        request.send();
+
+        request.onload = function () {
+          if (this.status >= 200 && this.status < 400) {
+            readability.innerHTML = readingEase(
+              JSON.parse(this.response).FLESCH_READING
+            );
+          } else {
+            readability.innerHTML = "Not available.";
+          }
+        };
+
+        request.onerror = function () {
+          readability.innerHTML = "Not available.";
+        };
+      });
+
+      function readingEase(num) {
+        switch (true) {
+          case num <= 30:
+            return "Readability: College graduate.";
+            break;
+          case num > 30 && num <= 50:
+            return "Readability: College level.";
+            break;
+          case num > 50 && num <= 60:
+            return "Readability: 10th - 12th grade.";
+            break;
+          case num > 60 && num <= 70:
+            return "Readability: 8th - 9th grade.";
+            break;
+          case num > 70 && num <= 80:
+            return "Readability: 7th grade.";
+            break;
+          case num > 80 && num <= 90:
+            return "Readability: 6th grade.";
+            break;
+          case num > 90 && num <= 100:
+            return "Readability: 5th grade.";
+            break;
+          default:
+            return "Not available.";
+            break;
+        }
+      }
+    </script>
+  </body>
+</html>
