@@ -19,6 +19,17 @@ export const challenges = new Map<string, Challenge>([
       tags: [],
     },
   ],
+   [
+    'Number Guessing Game',
+    {
+      title: 'Number Guessing Game',
+      link: 'NumberGuessingGame',
+      difficulty: 'easy',
+      developer: 'Ohm',
+      tags: [],
+      isNew: true,
+    },
+  ],
   [
     'quote-generator',
     {
