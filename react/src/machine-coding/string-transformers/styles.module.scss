@@ -1,0 +1,35 @@
+.App {
+  max-width: 32rem;
+  margin: auto;
+}
+
+.textarea {
+  display: block;
+  width: 100%;
+  resize: vertical;
+}
+
+.buttonBox {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+
+  & > button {
+    padding: 0.4rem;
+  }
+}
+
+.output {
+  margin-top: 2rem;
+  text-align: center;
+
+  & > strong {
+    font-size: large;
+  }
+
+  & > p {
+    margin-top: 1rem;
+    margin-bottom: 0;
+  }
+}

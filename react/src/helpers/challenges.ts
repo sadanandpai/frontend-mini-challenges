@@ -157,6 +157,17 @@ export const challenges = new Map<string, Challenge>([
     },
   ],
   [
+    'string-transformers',
+    {
+      title: 'String transformers',
+      link: 'string-transformers',
+      difficulty: 'easy',
+      developer: 'arpansaha13',
+      tags: [],
+      isNew: true,
+    },
+  ],
+  [
     'tic-tac-toe',
     {
       title: 'Tic Tac Toe',

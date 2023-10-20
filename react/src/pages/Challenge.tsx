@@ -32,6 +32,7 @@ import TwentyfiveFiveClock from '@/machine-coding/25-5-clock';
 import ImageGallery from '@/machine-coding/image-gallery/App.tsx';
 import WordCounter from '@/machine-coding/word-count';
 import TemperatureConverter from '@/machine-coding/temperature-converter';
+import StringTransformers from '@/machine-coding/string-transformers';
 import { challenges } from '@/helpers/challenges';
 import { useParams } from 'react-router-dom';
 
@@ -69,6 +70,7 @@ const reactChallenges = {
   'image-gallery': <ImageGallery />,
   'word-count': <WordCounter />,
   'temperature-converter': <TemperatureConverter />,
+  'string-transformers': <StringTransformers />
 };
 
 function Challenge() {
