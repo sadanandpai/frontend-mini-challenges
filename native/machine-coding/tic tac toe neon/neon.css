@@ -1,0 +1,88 @@
+@import url(https://fonts.googleapis.com/css?family=Audiowide);
+*{
+    box-sizing: border-box;
+    font-family: "Audiowide", sans-serif;     
+    background-color: black;
+    color:white;
+}
+td{
+    border: 1px solid;
+    width: 100px;
+    height: 100px;
+}
+table{
+    font-size: 75px;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-collapse: collapse;
+}
+div{
+    display: flex;
+    align-content: center !important;
+    justify-content: center;
+}
+p{
+    position: absolute;
+    bottom: 0cm;
+    left:50%;
+    transform: translate(-50%, -50%) !important;
+    font-size: 40px;
+}
+turn{
+    font-size: 30px;
+    padding:30px;
+    position: absolute;
+    top: 10px;
+}
+.box:hover{
+    color:  rgb(255, 255, 255);
+    border: 2px solid white;
+    text-shadow: rgba(255, 1, 1, 0.859) 4px 4px 10px,  rgba(255, 1, 1, 0.859) -4px -5px 10px,
+    rgba(255, 1, 1, 0.859) 6px 6px 40px,  rgba(255, 1, 1, 0.859) -6px -6px 40px;
+    box-shadow:  rgba(255, 1, 1, 0.558) 4px 4px 10px inset,  rgba(255, 1, 1, 0.68) -4px -4px 10px inset,
+    rgba(215, 0, 0, 0.859) 6px 6px 16px inset,  rgba(214, 0, 0, 0.859) -6px -6px 16px inset, rgba(255, 1, 1, 0.335) 4px 4px 10px,  rgba(255, 1, 1, 0.317) -4px -4px 10px,
+    rgba(215, 0, 0, 0.362) 6px 6px 16px,  rgba(214, 0, 0, 0.35) -6px -6px 16px;
+}
+.box{
+    border: 2px solid white;
+    color: white;
+    text-shadow: rgba(1, 18, 255, 0.526) 4px 4px 10px,  rgba(1, 18, 255, 0.526) -4px -4px 10px,
+    rgba(1, 18, 255, 0.526) 6px 6px 40px,  rgba(1, 18, 255, 0.526) -6px -6px 40px;
+    box-shadow:  rgba(1, 18, 255, 0.526) 4px 4px 10px,  rgba(1, 18, 255, 0.526) -4px -7px 10px,
+    rgba(1, 18, 255, 0.271) 4px 4px 70px,  rgba(1, 18, 255, 0.283) -4px -4px 70px;
+}
+
+button{
+    background-color: rgba(1, 18, 255, 0.526);
+    border: 2px solid white;
+    color: white;
+    border-radius: 3px;
+    position: absolute;
+    bottom:  30%;
+    right: 20%;
+    padding: 10px;
+    font-size: larger;
+    transform: translate(-50%, -50%);
+}
+button:hover{
+    background-color: rgb(206, 0, 0);
+}
+score{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: 2px solid;
+    padding:10px ;
+    padding-top: 0px !important;
+}
+score p2,p1{
+    padding: 5px;
+    font-size: large;
+}
+h2{
+    padding-left: 10px;
+    margin: 10px;
+}
