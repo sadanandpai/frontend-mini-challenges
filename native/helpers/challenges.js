@@ -235,6 +235,13 @@ export const challenges = [
     tags: [],
   },
   {
+    title: 'Word Counter (online)',
+    link: 'word-counter',
+    difficulty: 'medium',
+    developer: 'AckermanLevi1',
+    tags: [],
+  },
+  {
     title: 'Color Spotter',
     link: 'color-spotter',
     difficulty: 'medium',
@@ -482,18 +489,11 @@ export const challenges = [
   },
   { title: 'Emoji Editor', link: '#' },
   { title: 'Sort Table', link: '#' },
-  { 
-    title: 'Infinite Scroll', 
-    link: 'infinite-scroll', 
-    difficulty: 'medium', 
-    developer: 'srijanB7', 
-    tags:[],
-  },
   {
-    title: 'Word-Counter (online)',
-    link: 'word-counter',
+    title: 'Infinite Scroll',
+    link: 'infinite-scroll',
     difficulty: 'medium',
-    developer: 'AckermanLevi1',
+    developer: 'srijanB7',
     tags: [],
   },
 ];
