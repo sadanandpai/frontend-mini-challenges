@@ -489,4 +489,11 @@ export const challenges = [
     developer: 'srijanB7', 
     tags:[],
   },
+  {
+    title: 'Word-Counter (online)',
+    link: 'word-counter',
+    difficulty: 'medium',
+    developer: 'AckermanLevi1',
+    tags: [],
+  },
 ];
