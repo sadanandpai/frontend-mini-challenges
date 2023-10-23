@@ -90,4 +90,8 @@ export const contributors = new Map([
     'pranav514',
     { name: 'Pranav', pic: 'https://avatars.githubusercontent.com/u/76992202?v=4'}
   ],
+  [
+    'amandeep-singh-parihar',
+    { name: 'Amandeep singh parihar', pic: 'https://avatars.githubusercontent.com/u/123322298?s=400&u=78bdffc86120a591c58b7c9a7003c7242341a2bf&v=4'}
+  ],
 ]);

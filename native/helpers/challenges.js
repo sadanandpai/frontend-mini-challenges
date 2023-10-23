@@ -460,6 +460,13 @@ export const challenges = [
     tags: [],
   },
   {
+    title: 'Password-generator',
+    link: 'Password-generator',
+    difficulty: 'hard',
+    developer: 'amandeep-singh-parihar',
+    tags: [],
+  },
+  {
     title: 'JSON Creator',
     link: 'json-creator',
     difficulty: 'hard',

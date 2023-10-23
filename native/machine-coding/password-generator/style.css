@@ -1,59 +1,72 @@
 @import url(../../helpers/core.css);
 
+/* Password Form */
 .password-form {
-  border: 1px solid #ccc;
-  display: inline-flex;
+  border: 1px solid #e0e0e0; /* Light gray border */
+  background-color: #f5f5f5; /* Light gray background */
+  display: flex;
   flex-direction: column;
-  padding: 1rem;
-  gap: 1rem;
+  padding: 1.5rem;
+  gap: 1.5rem;
   font-size: 1.25rem;
-  box-shadow: 0 1rem 0.9rem rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
 }
 
+/* Form Elements */
 .password-form > div {
   display: flex;
   gap: 1rem;
   text-align: left;
 }
 
+/* Input Fields */
 input {
-  padding: 0.5rem;
-  font-size: 1.5rem;
+  padding: 0.6rem;
+  font-size: 1.4rem;
+  border: 1px solid #ccc; /* Light gray border */
+  border-radius: 0.3rem;
 }
 
+/* Input Holder */
 .input-holder {
   position: relative;
 }
 
 .input-holder input {
-  position: relative;
   width: 100%;
-  padding-right: 2.5rem;
+  padding-right: 2rem;
 }
 
+/* Copy Button */
 .copy-btn {
   position: absolute;
   right: 0;
-  top: 0.75rem;
-  background-color: transparent;
+  top: 1rem;
+  background-color: #007bff; /* Blue button background */
+  color: #fff; /* White text color */
   border: none;
   cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 0.3rem;
 }
 
 .copy-btn:active {
-  transform: scale(0.5);
+  transform: scale(0.95);
 }
 
+/* Button */
 .btn {
   cursor: pointer;
 }
 
-/* add clipboard-container */
+/* Remember Password Container */
 .rememberPass-container {
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #e0e0e0;
   margin-top: 2rem;
 }
 
+/* Clipboard Notification Container */
 .clipboard-container {
   position: absolute;
   top: -90px;
@@ -64,20 +77,21 @@ input {
 }
 
 .clipboard-container > p {
-  padding: 0.4rem 0.8rem;
-  background-color: rgb(41, 41, 131);
-  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: #28a745; /* Green background */
+  border-radius: 0.3rem;
   color: #fff;
   font-weight: 600;
 }
 
+/* Media Query for Input Width */
 @media screen and (min-width: 576px) {
-  .input-holder input  {
+  .input-holder input {
     width: 30ch;
   }
 }
 
-/* animation for clipboard notification  */
+/* Animation for Clipboard Notification */
 @keyframes clipboard-animation {
   10% {
     top: -90px;
