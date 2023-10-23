@@ -496,4 +496,11 @@ export const challenges = [
     developer: 'srijanB7',
     tags: [],
   },
+  {
+    title: 'rock-paper-scissor (online)',
+    link: 'rock-paper-scissor',
+    difficulty: 'medium',
+    developer: 'AckermanLevi1',
+    tags: [],
+  },
 ];
