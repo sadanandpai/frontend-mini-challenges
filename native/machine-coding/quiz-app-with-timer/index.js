@@ -13,6 +13,7 @@ let questionCount = 0;
 let scoreCount = 0;
 let count = 11;
 let countdown;
+let selectedQuestions; // Declare selectedQuestions variable
 
 // Quiz questions array
 let quizArray;
@@ -25,14 +26,14 @@ function selectRandomQuestions(questions, count) {
 
 // Fetch the questions from the JSON file and initialize the quiz
 fetch("questions.json")
-    .then((response) => response.json())
-    .then((data) => {
-        quizArray = data;
-        initial(); // Initialize the quiz with random questions
-    })
-    .catch((error) => {
-        console.error("Error loading questions:", error);
-    });
+  .then((response) => response.json())
+  .then((data) => {
+    quizArray = data;
+    initial(); // Initialize the quiz with random questions
+  })
+  .catch((error) => {
+    console.error("Error loading questions:", error);
+  });
 
 // Restart Quiz
 restart.addEventListener("click", () => {
@@ -46,7 +47,7 @@ nextBtn.addEventListener(
   "click",
   (displayNext = () => {
     questionCount += 1;
-    if (questionCount == selectedQuestions.length) {
+    if (questionCount === selectedQuestions.length) {
       displayContainer.classList.add("hide");
       scoreContainer.classList.remove("hide");
       userScore.innerHTML =
@@ -67,7 +68,7 @@ const timerDisplay = () => {
   countdown = setInterval(() => {
     count--;
     timeLeft.innerHTML = `${count}s`;
-    if (count == 0) {
+    if (count === 0) {
       clearInterval(countdown);
       displayNext();
     }
