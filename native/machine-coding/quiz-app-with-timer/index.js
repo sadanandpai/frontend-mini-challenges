@@ -11,7 +11,7 @@ const startScreen = document.querySelector(".start-screen");
 const startButton = document.getElementById("start-button");
 let questionCount = 0;
 let scoreCount = 0;
-let count = 11;
+let count = 10; // Timer set to 10 seconds
 let countdown;
 let selectedQuestions; // Declare selectedQuestions variable
 
@@ -35,6 +35,26 @@ fetch("questions.json")
     console.error("Error loading questions:", error);
   });
 
+// Define the displayNext function
+function displayNext() {
+  questionCount += 1;
+  clearInterval(countdown); // Clear the timer interval
+
+  if (questionCount === selectedQuestions.length) {
+    displayContainer.classList.add("hide");
+    scoreContainer.classList.remove("hide");
+    userScore.innerHTML =
+      "Your score is " + scoreCount + " out of " + selectedQuestions.length;
+  } else {
+    count = 10; // Reset the timer immediately to 10 seconds
+    timeLeft.innerHTML = `${count}s`; // Update the timer display
+    countOfQuestion.innerHTML =
+      questionCount + 1 + " of " + selectedQuestions.length + " Question";
+    quizDisplay(questionCount);
+    timerDisplay(); // Start the timer for the next question
+  }
+}
+
 // Restart Quiz
 restart.addEventListener("click", () => {
   initial();
@@ -43,25 +63,7 @@ restart.addEventListener("click", () => {
 });
 
 // Next Button
-nextBtn.addEventListener(
-  "click",
-  (displayNext = () => {
-    questionCount += 1;
-    if (questionCount === selectedQuestions.length) {
-      displayContainer.classList.add("hide");
-      scoreContainer.classList.remove("hide");
-      userScore.innerHTML =
-        "Your score is " + scoreCount + " out of " + selectedQuestions.length;
-    } else {
-      countOfQuestion.innerHTML =
-        questionCount + 1 + " of " + selectedQuestions.length + " Question";
-      quizDisplay(questionCount);
-      count = 11;
-      clearInterval(countdown);
-      timerDisplay();
-    }
-  })
-);
+nextBtn.addEventListener("click", displayNext);
 
 // Timer
 const timerDisplay = () => {
@@ -82,7 +84,7 @@ const quizDisplay = (questionCount) => {
     card.classList.add("hide");
   });
   quizCards[questionCount].classList.remove("hide");
-};
+}
 
 // Quiz Creation
 function quizCreator() {
@@ -99,7 +101,7 @@ function quizCreator() {
     div.innerHTML += `
     <button class="option-div" onclick="checker(this)">${i.options[0]}</button>
      <button class="option-div" onclick="checker(this)">${i.options[1]}</button>
-      <button class="option-div" onclick="checker(this)">${i.options[2]}</button>
+      <button class="option-div" onclick "checker(this)">${i.options[2]}</button>
        <button class="option-div" onclick="checker(this)">${i.options[3]}</button>
     `;
     quizContainer.appendChild(div);
@@ -136,15 +138,21 @@ function initial() {
   quizContainer.innerHTML = "";
   questionCount = 0;
   scoreCount = 0;
-  count = 11;
+  count = 10; // Reset the timer to 10 seconds
   clearInterval(countdown);
 
   // Select 10 random questions from the pool of questions
   selectedQuestions = selectRandomQuestions(quizArray, 10);
 
-  timerDisplay();
+  timeLeft.innerHTML = `${count}s`; // Update the initial timer display
+  countOfQuestion.innerHTML =
+    questionCount + 1 + " of " + selectedQuestions.length + " Question";
+
   quizCreator();
   quizDisplay(questionCount);
+
+  // Start the timer for the first question
+  timerDisplay();
 }
 
 // Start button click event
@@ -159,3 +167,6 @@ window.onload = () => {
   startScreen.classList.remove("hide");
   displayContainer.classList.add("hide");
 };
+
+// Call initial() when the page loads
+initial();
