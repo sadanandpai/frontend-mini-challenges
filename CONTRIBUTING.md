@@ -1,7 +1,7 @@
 ### Contribution Guide
 
 - Feel free to contribute to this repo by raising the **pull request**
-- Spelling mistakes, improvements to answers, code comments, rephrasing of questions, additional details, or similar contributions are highly appreciated."
+- Spelling mistakes, improvements to answers, code comments, rephrasing of questions, additional details, or similar contributions are highly appreciated.
 
 #### Challenge contribution
 
