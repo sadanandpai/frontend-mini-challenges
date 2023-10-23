@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+
 import styles from './color.module.css'; // Import styles from the CSS module
 
 function mixColors(color1, color2) {
@@ -18,7 +19,7 @@ function mixColors(color1, color2) {
   return mixedColor;
 }
 
-function MixColors() {
+function ColorMixer() {
   const [color1, setColor1] = useState('#FF5733'); // Default color 1
   const [color2, setColor2] = useState('#33FF57'); // Default color 2
 
@@ -34,7 +35,7 @@ function MixColors() {
 
   return (
     <div className={styles['color-mixing-container']}>
-      <div className={styles['color-box-top']} style={{ backgroundColor: mixColors(color1, color2), width: '20%' }}>
+      <div className={styles['color-box-top']} style={{ backgroundColor: mixColors(color1, color2) }}>
         <p style={{ textAlign: 'center' }}>Mixed Color</p>
       </div>
       <div className={styles['color-inputs']}>
@@ -54,4 +55,4 @@ function MixColors() {
   );
 }
 
-export default MixColors;
+export default ColorMixer;

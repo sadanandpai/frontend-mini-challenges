@@ -19,32 +19,31 @@
   background-color: white;
   border: 2px solid #333;
   border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-p {
+.color-box-top p {
   font-size: 24px; /* Increased font size for the mixed color label */
   color: #333;
+  mix-blend-mode: difference;
 }
 
 .color-inputs {
   display: flex;
   flex-direction: column; /* Change to a column layout for center alignment */
-  align-items: center;
   gap: 20px;
-  background-color: white;
+  align-items: center;
   padding: 20px;
+  background-color: white;
   border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .color-input {
   display: flex;
-  align-items: center;
   gap: 10px; /* Add gap between label and input */
+  align-items: center;
 }
 
-label {
+.color-input label {
   font-size: 16px;
   color: #333;
 }
@@ -53,16 +52,15 @@ input[type='color'] {
   width: 60px;
   height: 60px;
   border: none;
-  border-radius: 50%;
 }
 
 .mix-button {
   padding: 10px 20px;
-  background-color: #ff5733;
   color: white;
+  cursor: pointer;
+  background-color: #ff5733;
   border: none;
   border-radius: 5px;
-  cursor: pointer;
   transition: background-color 0.3s;
 }
 
