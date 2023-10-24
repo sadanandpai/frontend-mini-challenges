@@ -1,29 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="icon" type="image/svg+xml" href="../../logo.svg" />
-    <script src="script.js" type="module"></script>
     <script src="../../helpers/header.js" type="module"></script>
-    <link rel="stylesheet" href="styles.css">
-</head>
+    <script src="script.js" type="module"></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
 
-<body>
+  <body>
     <div class="container">
-        <h1>ATM Simulator</h1>
-        <label for="pin">Enter PIN:</label>
-        <input type="password" id="pin" placeholder="Enter your PIN">
-        <button>Submit</button>
+      <label for="pin">Enter PIN:</label>
+      <input type="password" id="pin" placeholder="Enter your PIN (1234)" />
+      <button>Submit</button>
 
-        <div class="options">
-            <button>Check Balance</button>
-            <button>Deposit</button>
-            <button>Withdraw</button>
-            <button>Logout</button>
-        </div>
+      <div class="options">
+        <button>Check Balance</button>
+        <button>Deposit</button>
+        <button>Withdraw</button>
+        <button>Logout</button>
+      </div>
 
-        <div id="output"></div>
+      <div id="output"></div>
     </div>
-
-</body>
-
+  </body>
 </html>
