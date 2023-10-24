@@ -1,3 +1,17 @@
+// Get references to the buttons
+const authenticateButton = document.querySelector('button');
+const checkBalanceButton = document.querySelectorAll('.options button')[0];
+const depositButton = document.querySelectorAll('.options button')[1];
+const withdrawButton = document.querySelectorAll('.options button')[2];
+const logoutButton = document.querySelectorAll('.options button')[3];
+
+// Attach event listeners to the buttons
+authenticateButton.addEventListener('click', authenticate);
+checkBalanceButton.addEventListener('click', checkBalance);
+depositButton.addEventListener('click', deposit);
+withdrawButton.addEventListener('click', withdraw);
+logoutButton.addEventListener('click', logout);
+
 const correctPin = "1234";
 let isAuthenticated = false;
 let balance = 1000;
