@@ -105,6 +105,14 @@ export const challenges = [
     isNew: true,
   },
   {
+    title: 'Rock Paper Scissor',
+    link: 'rock-paper-scissor',
+    difficulty: 'easy',
+    developer: 'AckermanLevi1',
+    tags: [],
+    isNew: true,
+  },
+  {
     title: 'MadStory Generator',
     link: 'MadStory_generator',
     difficulty: 'easy',
@@ -235,6 +243,13 @@ export const challenges = [
     tags: [],
   },
   {
+    title: 'Word Counter (online)',
+    link: 'word-counter',
+    difficulty: 'medium',
+    developer: 'AckermanLevi1',
+    tags: [],
+  },
+  {
     title: 'Color Spotter',
     link: 'color-spotter',
     difficulty: 'medium',
@@ -290,6 +305,13 @@ export const challenges = [
     link: 'chips-input',
     difficulty: 'medium',
     developer: 'sadanandpai',
+    tags: [],
+  },
+  {
+    title: 'Infinite Scroll',
+    link: 'infinite-scroll',
+    difficulty: 'medium',
+    developer: 'srijanB7',
     tags: [],
   },
   {
@@ -482,11 +504,4 @@ export const challenges = [
   },
   { title: 'Emoji Editor', link: '#' },
   { title: 'Sort Table', link: '#' },
-  { 
-    title: 'Infinite Scroll', 
-    link: 'infinite-scroll', 
-    difficulty: 'medium', 
-    developer: 'srijanB7', 
-    tags:[],
-  },
 ];

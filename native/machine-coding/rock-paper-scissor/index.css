@@ -1,0 +1,32 @@
+body {
+  text-align: center;
+}
+
+h1 {
+  margin-top: 20px;
+}
+
+.choice, .c-choice {
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+#game {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#player,
+#computer {
+  width: 200px;
+}
+
+#result {
+  margin-top: 20px;
+}
+#computer {
+  display: none; /* Initially hidden */
+}

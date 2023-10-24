@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="../../helpers/header.js" type="module"></script>
+    <script src="index.js" defer></script>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="container">
+      <textarea placeholder="Enter your text here..."></textarea>
+      <div class="output row">
+        <div>Characters: <span id="characterCount">0</span></div>
+        <div>Words: <span id="wordCount">0</span></div>
+      </div>
+      <div class="output row">
+        <div>Sentences: <span id="sentenceCount">0</span></div>
+        <div>Paragraphs: <span id="paragraphCount">0</span></div>
+      </div>
+      <div class="output row">
+        <div>Reading Time: <span id="readingTime">0</span></div>
+        <div id="readability">Show readability score.</div>
+      </div>
+      <div class="keywords">
+        Top keywords:
+        <ul id="topKeywords"></ul>
+      </div>
+    </div>
+  </body>
+</html>
