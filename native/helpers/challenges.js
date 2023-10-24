@@ -169,6 +169,14 @@ export const challenges = [
     isNew: true,
   },
   {
+    title: 'ATM Simulator',
+    link: 'atm-simulator',
+    difficulty: 'easy',
+    developer: 'Bratajit-03',
+    tags: [],
+    isNew: true,
+  },
+  {
     title: 'Finance Tracker',
     link: 'finance-tracker',
     difficulty: 'medium',
