@@ -210,6 +210,17 @@ export const challenges = new Map<string, Challenge>([
     },
   ],
   [
+    'color-mixer',
+    {
+      title: 'Color Mixer',
+      link: 'color-mixer',
+      difficulty: 'medium',
+      developer: 'Sumitwarrior7',
+      tags: [],
+      isNew: true,
+    },
+  ],
+  [
     'email-templates',
     {
       title: 'Email Templates',
