@@ -32,6 +32,14 @@ export const challenges = [
     tags: [],
   },
   {
+    title: 'File Uploader',
+    link: 'file-uploader',
+    difficulty: 'easy',
+    developer: 'avtech',
+    tags: [],
+    isNew: true,
+  },
+  {
     title: 'Telephone formatter',
     link: 'telephone-formatter',
     difficulty: 'easy',
