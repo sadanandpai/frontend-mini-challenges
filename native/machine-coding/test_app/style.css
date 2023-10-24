@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border-radius: 8px;
+}
+
+body {
+    background-color: rgba(7, 4, 4, 0.89);
+}
+
+.head {
+    width: auto;
+    font-size: 30px;
+    /* border: 1px solid; */
+    padding: 10px;
+    font-weight: bold;
+    background-color: #c9bc12c5;
+    color: white;
+}
+
+.container {
+    text-align: center;
+    padding: 4px;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    /* background-color: #170566; */
+    width: 410px;
+    height: 523px;
+    /* box-shadow: 0px 3px 15px #d8ff003d; */
+}
+
+.qchart {
+    background-color: #efdede;
+    width: 400px;
+    height: 140px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    padding-top: 15px;
+    font-size: 28px;
+}
+
+.ans {
+    width: 400px;
+    height: 50px;
+    background-color: #f3f0eab8;
+    margin-bottom: 7px;
+    font-size: 25px;
+    padding-top: 5px;
+}
+
+#ans1:hover {
+    background-color: white;
+}  
+#ans2:hover {
+    background-color: white;
+} 
+#ans3:hover {
+    background-color: white;
+} 
+#ans4:hover {
+    background-color: white;
+}
+
+.result {
+    margin-top: 10px;
+    width: 400px;
+    height: 70px;
+    font-size: 30px;
+}
+
+.true , .false {
+    padding-top: 13px;
+    height: 70px;
+    width: 193px;
+    display: inline-block;
+    background-color: #c9bc12c5;
+}
+
