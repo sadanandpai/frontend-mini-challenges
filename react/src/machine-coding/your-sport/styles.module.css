@@ -1,64 +1,60 @@
-/* src/styles.module.css */
-.Sport {
+.sport {
   display: flex;
   justify-content: center;
-  align-items: center;
   min-height: 40vh;
-  background-color: #f0f0f0;
 }
 
-.Container {
+.container {
+  width: 400px;
+  padding: 20px;
   text-align: center;
   background-color: #fff;
-  padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  width: 400px;
 }
 
-.Header {
-  font-size: 24px;
+.header {
   padding: 10px;
+  font-size: 24px;
 }
 
-.Question {
-  font-size: 18px;
+.question {
   margin: 20px 0;
+  font-size: 18px;
   color: #333;
 }
 
-.Answers {
+.answers {
   display: flex;
-  justify-content: center;
   gap: 10px;
+  justify-content: center;
   margin-top: 20px;
 }
 
-.Button {
+.button {
   padding: 10px 20px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
   font-size: 16px;
+  color: #fff;
+  cursor: pointer;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
   transition: background-color 0.3s;
 }
 
-.Button:hover {
+.button:hover {
   background-color: #0056b3;
 }
 
-.ButtonStartOver {
-  background-color: #ff5050;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
+.buttonStartOver {
   font-size: 16px;
+  color: #fff;
+  cursor: pointer;
+  background-color: #ff5050;
+  border: none;
+  border-radius: 5px;
   transition: background-color 0.3s;
 }
 
-.ButtonStartOver:hover {
+.buttonStartOver:hover {
   background-color: #e63939;
 }

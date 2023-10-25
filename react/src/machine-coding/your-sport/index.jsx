@@ -1,5 +1,6 @@
 // src/App.js
 import React, { useState } from 'react';
+
 import styles from './styles.module.css';
 
 const questions = [
@@ -46,22 +47,22 @@ const YourSport = () => {
   };
 
   return (
-    <div className={styles.Sport}>
-      <div className={styles.Container}>
-        <h1 className={styles.Header}>Discover Your Natural Sport</h1>
-        <div className={styles.Question}>{step < questions.length ? questions[step] : ''}</div>
-        <div className={styles.Answers}>
+    <div className={styles.sport}>
+      <div className={styles.container}>
+        <h1 className={styles.header}>Discover Your Natural Sport</h1>
+        <div className={styles.question}>{step < questions.length ? questions[step] : ''}</div>
+        <div className={styles.answers}>
           {step < questions.length ? (
             <>
-              <button className={styles.Button} onClick={() => handleAnswer('Yes')}>
+              <button className={styles.button} onClick={() => handleAnswer('Yes')}>
                 Yes
               </button>
-              <button className={styles.Button} onClick={() => handleAnswer('No')}>
+              <button className={styles.button} onClick={() => handleAnswer('No')}>
                 No
               </button>
             </>
           ) : (
-            <button onClick={() => setStep(0)} className={styles.ButtonStartOver}>
+            <button onClick={() => setStep(0)} className={styles.buttonStartOver}>
               Start Over
             </button>
           )}
