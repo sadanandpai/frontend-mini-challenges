@@ -1,0 +1,60 @@
+.sport {
+  display: flex;
+  justify-content: center;
+  min-height: 40vh;
+}
+
+.container {
+  width: 400px;
+  padding: 20px;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.header {
+  padding: 10px;
+  font-size: 24px;
+}
+
+.question {
+  margin: 20px 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.answers {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  cursor: pointer;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+
+.buttonStartOver {
+  font-size: 16px;
+  color: #fff;
+  cursor: pointer;
+  background-color: #ff5050;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.buttonStartOver:hover {
+  background-color: #e63939;
+}

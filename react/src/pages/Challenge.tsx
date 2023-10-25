@@ -35,6 +35,7 @@ import Toast from '@/machine-coding/toast-popup/toast';
 import TodoList from '@/machine-coding/todo-list/todo';
 import TwentyfiveFiveClock from '@/machine-coding/25-5-clock';
 import WordCounter from '@/machine-coding/word-count';
+import YourSport from '@/machine-coding/your-sport';
 import { challenges } from '@/helpers/challenges';
 import { useParams } from 'react-router-dom';
 
@@ -75,6 +76,7 @@ const reactChallenges = {
   'temperature-converter': <TemperatureConverter />,
   'color-mixer': <ColorMixer />,
   'string-transformers': <StringTransformers />,
+  'your-sport': <YourSport />,
 };
 
 function Challenge() {
