@@ -13,27 +13,29 @@ let questionCount = 0;
 let scoreCount = 0;
 let count = 10; // Timer set to 10 seconds
 let countdown;
-let selectedQuestions; // Declare selectedQuestions variable
-
-// Quiz questions array
-let quizArray;
-
-// Function to shuffle and select random questions
-function selectRandomQuestions(questions, count) {
-  const shuffledQuestions = questions.slice().sort(() => Math.random() - 0.5);
-  return shuffledQuestions.slice(0, count);
-}
+let selectedQuestions = [];
 
 // Fetch the questions from the JSON file and initialize the quiz
 fetch("questions.json")
-  .then((response) => response.json())
+  .then((response) => {
+    if (!response.ok) {
+      throw new Error("Network response was not ok");
+    }
+    return response.json();
+  })
   .then((data) => {
-    quizArray = data;
-    initial(); // Initialize the quiz with random questions
+    selectedQuestions = selectRandomQuestions(data, 10);
+    initial();
   })
   .catch((error) => {
     console.error("Error loading questions:", error);
   });
+
+// Function to shuffle and select random questions
+function selectRandomQuestions(questions, count) {
+  const shuffledQuestions = questions.sort(() => Math.random() - 0.5);
+  return shuffledQuestions.slice(0, count);
+}
 
 // Define the displayNext function
 function displayNext() {
@@ -80,51 +82,51 @@ const timerDisplay = () => {
 // Display quiz
 const quizDisplay = (questionCount) => {
   const quizCards = document.querySelectorAll(".container-mid");
-  quizCards.forEach((card) => {
-    card.classList.add("hide");
-  });
-  quizCards[questionCount].classList.remove("hide");
+  if (questionCount < selectedQuestions.length) {
+    quizCards.forEach((card) => {
+      card.classList.add("hide");
+    });
+    quizCards[questionCount].classList.remove("hide");
+  }
 }
 
 // Quiz Creation
 function quizCreator() {
-  quizArray.sort(() => Math.random() - 0.5);
-  for (const i of selectedQuestions) {
-    i.options.sort(() => Math.random() - 0.5);
+  for (const question of selectedQuestions) {
     const div = document.createElement("div");
     div.classList.add("container-mid", "hide");
     countOfQuestion.innerHTML = 1 + " of " + selectedQuestions.length + " Question";
     const question_DIV = document.createElement("p");
     question_DIV.classList.add("question");
-    question_DIV.innerHTML = i.question;
+    question_DIV.innerHTML = question.question;
     div.appendChild(question_DIV);
-    div.innerHTML += `
-    <button class="option-div" onclick="checker(this)">${i.options[0]}</button>
-     <button class="option-div" onclick="checker(this)">${i.options[1]}</button>
-      <button class="option-div" onclick "checker(this)">${i.options[2]}</button>
-       <button class="option-div" onclick="checker(this)">${i.options[3]}</button>
-    `;
+    for (let i = 0; i < question.options.length; i++) {
+      const option = document.createElement("button");
+      option.classList.add("option-div");
+      option.textContent = question.options[i];
+      option.onclick = () => checker(option, question);
+      div.appendChild(option);
+    }
     quizContainer.appendChild(div);
   }
 }
 
 // Checker Function
-function checker(userOption) {
-  const userSolution = userOption.innerText;
-  const question =
-    document.getElementsByClassName("container-mid")[questionCount];
-  const options = question.querySelectorAll(".option-div");
+function checker(userOption, question) {
+  const userSolution = userOption.textContent;
+  const correctAnswer = question.correct;
+  const options = userOption.parentElement.querySelectorAll(".option-div");
 
-  if (userSolution === selectedQuestions[questionCount].correct) {
+  if (userSolution === correctAnswer) {
     userOption.classList.add("correct");
     scoreCount++;
   } else {
     userOption.classList.add("incorrect");
-    options.forEach((element) => {
-      if (element.innerText == selectedQuestions[questionCount].correct) {
-        element.classList.add("correct");
+    for (const option of options) {
+      if (option.textContent === correctAnswer) {
+        option.classList.add("correct");
       }
-    });
+    }
   }
 
   clearInterval(countdown);
@@ -139,12 +141,13 @@ function initial() {
   questionCount = 0;
   scoreCount = 0;
   count = 10; // Reset the timer to 10 seconds
-  clearInterval(countdown);
 
-  // Select 10 random questions from the pool of questions
-  selectedQuestions = selectRandomQuestions(quizArray, 10);
+  // Clear the timer
+  if (countdown) {
+    clearInterval(countdown);
+  }
 
-  timeLeft.innerHTML = `${count}s`; // Update the initial timer display
+  timeLeft.innerHTML = `${count}s`;
   countOfQuestion.innerHTML =
     questionCount + 1 + " of " + selectedQuestions.length + " Question";
 
