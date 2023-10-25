@@ -1,60 +1,64 @@
 /* src/styles.module.css */
 .Sport {
-  display: flex !important;
+  display: flex;
   justify-content: center;
   align-items: center;
-  height: 10rem;
+  min-height: 40vh;
   background-color: #f0f0f0;
 }
 
-.my-container {
-  display: flex !important;
+.Container {
   text-align: center;
   background-color: #fff;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 400px;
 }
 
-h1 {
-  justify-content: center !important;
-  font-size: 32px;
+.Header {
+  font-size: 24px;
+  padding: 10px;
 }
 
-.question {
-  font-size: 20px;
+.Question {
+  font-size: 18px;
   margin: 20px 0;
   color: #333;
-  margin-bottom: 2rem;
 }
 
-.answers {
+.Answers {
   display: flex;
   justify-content: center;
   gap: 10px;
   margin-top: 20px;
 }
 
-button {
-  margin-right: 2rem;
+.Button {
   padding: 10px 20px;
   background-color: #007bff;
   color: #fff;
   border: none;
   cursor: pointer;
   border-radius: 5px;
-  font-size: 18px;
+  font-size: 16px;
   transition: background-color 0.3s;
 }
 
-button:hover {
+.Button:hover {
   background-color: #0056b3;
 }
 
-button.start-over {
+.ButtonStartOver {
   background-color: #ff5050;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s;
 }
 
-button.start-over:hover {
+.ButtonStartOver:hover {
   background-color: #e63939;
 }

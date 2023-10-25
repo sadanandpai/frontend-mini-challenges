@@ -1,15 +1,17 @@
 // src/App.js
 import React, { useState } from 'react';
-import './styles.module.css';
+import styles from './styles.module.css';
 
 const questions = [
   'Do you enjoy team sports?',
   'Do you like running or endurance activities?',
   'Are you interested in individual sports?',
   'Do you prefer indoor or outdoor sports?',
+  'Are you a fan of water sports?',
+  'Do you like racket sports?',
 ];
 
-const Sport = () => {
+const YourSport = () => {
   const [step, setStep] = useState(0);
   const [answers, setAnswers] = useState(Array(questions.length).fill(null));
 
@@ -34,35 +36,39 @@ const Sport = () => {
       return 'Soccer';
     } else if (answers[2] === 'Yes' && answers[3] === 'Indoor') {
       return 'Table Tennis';
+    } else if (answers[4] === 'Yes') {
+      return 'Swimming';
+    } else if (answers[5] === 'Yes') {
+      return 'Tennis';
     } else {
       return 'Running';
     }
   };
 
   return (
-    <>
-      <div className="Sport">
-        <div className="my-container">
-          <h1>Discover Your Natural Sport</h1>
-          <div className="question" style={{ marginBottom: '1rem' }}>
-            {step < questions.length ? questions[step] : ''}
-          </div>
-          <div className="answers">
-            {step < questions.length ? (
-              <>
-                <button onClick={() => handleAnswer('Yes')}>Yes</button>
-                <button onClick={() => handleAnswer('No')}>No</button>
-              </>
-            ) : (
-              <button onClick={() => setStep(0)} className="start-over">
-                Start Over
+    <div className={styles.Sport}>
+      <div className={styles.Container}>
+        <h1 className={styles.Header}>Discover Your Natural Sport</h1>
+        <div className={styles.Question}>{step < questions.length ? questions[step] : ''}</div>
+        <div className={styles.Answers}>
+          {step < questions.length ? (
+            <>
+              <button className={styles.Button} onClick={() => handleAnswer('Yes')}>
+                Yes
               </button>
-            )}
-          </div>
+              <button className={styles.Button} onClick={() => handleAnswer('No')}>
+                No
+              </button>
+            </>
+          ) : (
+            <button onClick={() => setStep(0)} className={styles.ButtonStartOver}>
+              Start Over
+            </button>
+          )}
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
-export default Sport;
+export default YourSport;
