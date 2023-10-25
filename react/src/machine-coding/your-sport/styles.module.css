@@ -1,0 +1,64 @@
+/* src/styles.module.css */
+.Sport {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 40vh;
+  background-color: #f0f0f0;
+}
+
+.Container {
+  text-align: center;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 400px;
+}
+
+.Header {
+  font-size: 24px;
+  padding: 10px;
+}
+
+.Question {
+  font-size: 18px;
+  margin: 20px 0;
+  color: #333;
+}
+
+.Answers {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.Button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.Button:hover {
+  background-color: #0056b3;
+}
+
+.ButtonStartOver {
+  background-color: #ff5050;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.ButtonStartOver:hover {
+  background-color: #e63939;
+}
