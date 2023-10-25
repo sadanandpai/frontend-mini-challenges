@@ -5,6 +5,7 @@ interface Contributor {
 
 export const contributors = new Map<string, Contributor>([
   ['sadanandpai', { name: 'Sadanand Pai', pic: 'https://avatars.githubusercontent.com/u/12962887' }],
+  ['AdityaSuryawanshi', { name: 'Aditya Suryawanshi', pic: 'https://avatars.githubusercontent.com/u/124609794?v=4' }],
   ['NikhilJHA01', { name: 'Nikhil Jha', pic: 'https://avatars.githubusercontent.com/u/63518046' }],
   ['noorulaink00', { name: 'Noor Ul Ain Khan', pic: 'https://avatars.githubusercontent.com/u/65324193' }],
   ['deepu0', { name: 'Deepak Kumar', pic: 'https://avatars.githubusercontent.com/u/22304384' }],
