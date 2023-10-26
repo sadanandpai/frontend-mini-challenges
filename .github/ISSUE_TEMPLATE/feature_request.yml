@@ -1,6 +1,5 @@
 name: Feature request
 description: Add new features to existing mini-challenges or to the core app
-title: "[Feat]: "
 labels: [enhancement]
 body:
   - type: markdown
