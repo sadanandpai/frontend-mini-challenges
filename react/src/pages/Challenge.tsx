@@ -3,6 +3,7 @@ import Autocomplete from '@/machine-coding/autocomplete-offline/autocomplete';
 import AutocompleteOnline from '@/machine-coding/autocomplete-offline/autocompleteOnline';
 import BMICalculator from '@/machine-coding/bmi-calculator/App';
 import ChallengeNavbar from '@/components/challenge-navbar/ChallengeNavbar';
+import Background from '@/machine-coding/background-changer/Background';
 import ColorMixer from '@/machine-coding/color-mixer';
 import ColumnTable from '@/machine-coding/column-table/ColumnTable';
 import Counter from '@/machine-coding/counter/counter';
@@ -41,6 +42,7 @@ import { useParams } from 'react-router-dom';
 const reactChallenges = {
   counter: <Counter />,
   accordion: <Accordion />,
+  'background-changer': <Background />,
   'star-Rating': <StarRating />,
   'light-dark-mode': <LightDarkMode />,
   'Guess-the-number': <GuessNumber />,

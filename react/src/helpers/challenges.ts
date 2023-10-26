@@ -52,6 +52,17 @@ export const challenges = new Map<string, Challenge>([
     },
   ],
   [
+    'background-changer',
+    {
+      title: 'Background Changer',
+      link: 'background-changer',
+      developer: 'AdityaSuryawanshi',
+      difficulty: 'easy',
+      isNew:true,
+      tags: [],
+    },
+  ],
+  [
     'light-dark-mode',
     {
       title: 'Light Dark Mode',
