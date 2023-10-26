@@ -1,31 +1,33 @@
-import React from 'react'
+import React, { useEffect } from 'react';
+
 import styles from './background.module.css';
 
-const Background = () => {
-
-  const ChangeBg = () => {
-    var letters = '0123456789ABCDEF';
-    var color = '#';
-    for (var i = 0; i < 6; i++) {
+const getRandomColor = (color) => {
+  if (!color) {
+    const letters = '0123456789ABCDEF';
+    color = '#';
+    for (let i = 0; i < 6; i++) {
       color += letters[Math.floor(Math.random() * 16)];
     }
-
-    document.body.style.backgroundColor = color;
   }
 
+  return color;
+};
 
+const BackgroundChanger = () => {
+  const changeBodyBackground = (color) => {
+    document.body.style.backgroundColor = color;
+  };
+
+  useEffect(() => () => changeBodyBackground('unset'), []);
 
   return (
-    <>
-      <div className={styles.centerdiv}>
-        <button type="button" className={styles.button} onClick={ChangeBg}>
-          <div className={styles.buttontop}>Change Colour!!😎</div>
-          <div className={styles.buttonbottom}></div>
-          <div className={styles.buttonBase}></div>
-        </button>
-      </div>
-    </>
-  )
-}
+    <div className={styles.container}>
+      <button type="button" className={styles.button} onClick={() => changeBodyBackground(getRandomColor())}>
+        Change Color!! 😎
+      </button>
+    </div>
+  );
+};
 
-export default Background
+export default BackgroundChanger;
