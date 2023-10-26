@@ -11,4 +11,12 @@ export default defineConfig({
     },
   },
   base: "/frontend-mini-challenges/react/dist/",
+  server: {
+    watch: {
+      usePolling: true,
+    },
+    host: true, // Needed for the Docker Container port mapping to work
+    strictPort: true,
+    port: 5173, // You can replace this port with any port
+  }
 });
