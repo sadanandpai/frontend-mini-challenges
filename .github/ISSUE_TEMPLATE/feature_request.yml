@@ -1,0 +1,55 @@
+name: Feature request
+description: Add new features to existing mini-challenges or to the core app
+title: "[Feat]: "
+labels: [enhancement]
+body:
+  - type: markdown
+    attributes:
+      value: |-
+        ## Before you submit...
+        Please keep a few things in mind while writing this issue:
+
+        - Use a short and precise title
+        - Fill out the text fields with as much detail as possible.
+        - If there are relevant screenshots, then please do not hesitate to add them.
+
+  - type: dropdown
+    attributes:
+      label: Framework/code-stack
+      description: Which framework or code stack does the new feature belong to?
+      multiple: false
+      options:
+        - Native (HTML, CSS, and JS)
+        - React
+        - Vue
+      default: 0
+    validations:
+      required: true
+      
+  - type: input
+    id: scope
+    attributes:
+      label: Scope
+      description: >
+        Is the new feature related to a specific mini-challenge? If yes, then mention the challenge name.
+        If the new feature is for the core app itself, then write "Core application".
+      placeholder: ex. Counter
+    validations:
+      required: true
+      
+  - type: textarea
+    attributes:
+      label: Description
+      description: Give a clear and concise description of the new feature.
+    validations:
+      required: true
+      
+  - type: textarea
+    attributes:
+      label: Screenshots
+      description: If there are any relevant screenshots or a demo of the new feature, then please do not hesitate to add them.
+        
+  - type: textarea
+    attributes:
+      label: Additional Context
+      description: Anything else you would like to add?
