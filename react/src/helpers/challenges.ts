@@ -83,6 +83,17 @@ export const challenges = new Map<string, Challenge>([
     },
   ],
   [
+    'your-sport',
+    {
+      title: 'Your Sport',
+      link: 'your-sport',
+      difficulty: 'easy',
+      developer: 'Sumitwarrior7',
+      tags: [],
+      isNew: true,
+    },
+  ],
+  [
     'table-colorizer',
     {
       title: 'Table Colorizer',
