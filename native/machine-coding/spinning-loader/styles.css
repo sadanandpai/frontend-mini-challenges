@@ -1,4 +1,4 @@
-.loader {
+.loader-wrapper {
   display: block;
   position: absolute;
   top: 50%;
@@ -6,6 +6,11 @@
   transform: translate(-50%, -50%);
   width: 100px;
   height: 100px;
+}
+
+.loader {
+  width: 100%;
+  height: 100%;
   border: 10px solid #ccc;
   border-radius: 50%;
   border-top-color: #3498db;
