@@ -517,6 +517,13 @@ export const challenges = [
     developer: 'sadanandpai',
     tags: [],
   },
+  {
+    title: 'Maze Game',
+    link: 'Maze Game',
+    difficulty: 'easy',
+    developer: 'Yachika9925',
+    tags:[],
+  },
   { title: 'Emoji Editor', link: '#' },
   { title: 'Sort Table', link: '#' },
 ];
