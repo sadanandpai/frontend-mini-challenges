@@ -517,6 +517,13 @@ export const challenges = [
     developer: 'sadanandpai',
     tags: [],
   },
+  {
+    title: 'Tip-Calculator',
+    link: 'Tip-Calculator',
+    difficulty: 'easy',
+    developer: 'Yachika9925',
+    tags: [],
+  },
   { title: 'Emoji Editor', link: '#' },
   { title: 'Sort Table', link: '#' },
 ];
