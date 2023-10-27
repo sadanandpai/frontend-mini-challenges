@@ -94,4 +94,8 @@ export const contributors = new Map([
     'Bratajit-03',
     { name: 'Bratajit Das', pic: 'https://avatars.githubusercontent.com/u/106532791?v=4'}
   ],
+  [
+    'DhanushNehru',
+    { name: 'Dhanush Nehru', pic: 'https://avatars.githubusercontent.com/u/22955675?v=4'}
+  ],
 ]);
