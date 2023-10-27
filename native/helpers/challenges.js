@@ -72,6 +72,13 @@ export const challenges = [
     tags: [],
   },
   {
+    title: 'Spinning Loader',
+    link: 'spinning-loader',
+    difficulty: 'easy',
+    developer: 'DhanushNehru',
+    tags: [],
+  },
+  {
     title: 'Music Kit',
     link: 'music-kit',
     difficulty: 'easy',
@@ -512,11 +519,4 @@ export const challenges = [
   },
   { title: 'Emoji Editor', link: '#' },
   { title: 'Sort Table', link: '#' },
-  {
-    title: 'Spinning Loader',
-    link: 'spinning-loader',
-    difficulty: 'easy',
-    developer: 'DhanushNehru',
-    tags: [],
-  },
 ];
