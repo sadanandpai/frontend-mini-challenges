@@ -1,23 +1,22 @@
 .loader {
-    display: block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100px;
-    height: 100px;
-    border: 10px solid #ccc;
-    border-radius: 50%;
-    border-top-color: #3498db;
-    animation: spin 2s linear infinite;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+  border: 10px solid #ccc;
+  border-radius: 50%;
+  border-top-color: #3498db;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
   }
-  
-  @keyframes spin {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
+  to {
+    transform: rotate(360deg);
   }
-  
+}
