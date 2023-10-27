@@ -1,0 +1,35 @@
+.openbtn{
+background: green;
+color:white;
+padding:1rem 2rem ;
+border-radius: 0.2rem;
+}
+.overlay{
+    top:0;
+    left:0;
+    bottom:0;
+    right: 0;
+    position: fixed;
+    background: rgba(0,0,0,0.5);
+    width: 100vw;
+    height: 100vh;
+    cursor: pointer;
+}
+.modalWrapper {
+    background: white;
+    max-width: 400px;
+    position: fixed;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    padding: 2rem;
+    border-radius: 1rem;
+    
+}
+
+.closebtn{
+background: red;
+color: white;
+padding:.2rem .5rem ;
+border-radius: 0.2rem;
+}

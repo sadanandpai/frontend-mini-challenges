@@ -401,4 +401,14 @@ export const challenges = new Map<string, Challenge>([
       tags: [],
     },
   ],
+  [
+    'modal-popup',
+    {
+      title: 'Modal Popup',
+      link: 'modal-popup',
+      difficulty: 'easy',
+      developer: 'rishabhm05',
+      tags: [],
+    },
+  ],
 ]);
