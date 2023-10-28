@@ -409,6 +409,7 @@ export const challenges = new Map<string, Challenge>([
       difficulty: 'easy',
       developer: 'rishabhm05',
       tags: [],
+      isNew:true
     },
   ],
 ]);
