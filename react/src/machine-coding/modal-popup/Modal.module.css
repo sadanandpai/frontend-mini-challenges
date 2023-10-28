@@ -1,0 +1,39 @@
+.openbtn {
+  background: green;
+  color: white;
+  padding: 1rem 2rem ;
+  border-radius: 0.2rem;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.modalWrapper {
+  background: white;
+  max-width: 28rem;
+  padding: 1.5rem;
+  border-radius: 12px;
+}
+.modalWrapper p {
+  font-size: 14px;
+}
+
+@media only screen and (width >= 640px) {
+  .modalWrapper {
+    padding: 2rem;
+  }
+}
+
+.closebtn {
+  background: red;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.2rem;
+}

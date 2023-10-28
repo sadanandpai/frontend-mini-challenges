@@ -28,4 +28,5 @@ export const contributors = new Map<string, Contributor>([
   ['viditagrawal56', { name: 'Vidit Agrawal', pic: 'https://avatars.githubusercontent.com/u/52532308' }],
   ['Bhushan1019', { name: 'Bhushan Patil', pic: 'https://avatars.githubusercontent.com/u/121352274' }],
   ['Sumitwarrior7', { name: 'Cool Dude 69', pic: 'https://avatars.githubusercontent.com/u/108853577' }],
+  ['rishabhm05', {name:'Rishabh Mehta', pic:'https://avatars.githubusercontent.com/u/67910259'}]
 ]);

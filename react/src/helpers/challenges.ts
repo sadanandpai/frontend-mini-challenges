@@ -263,6 +263,17 @@ export const challenges = new Map<string, Challenge>([
     },
   ],
   [
+    'modal-popup',
+    {
+      title: 'Modal Popup',
+      link: 'modal-popup',
+      difficulty: 'medium',
+      developer: 'rishabhm05',
+      tags: [],
+      isNew: true,
+    },
+  ],
+  [
     'password-strength',
     {
       title: 'Password Strength',
