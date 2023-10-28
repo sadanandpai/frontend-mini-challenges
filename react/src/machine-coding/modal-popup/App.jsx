@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { createPortal } from 'react-dom'
 import styles from './Modal.module.css'
 import ModalPopup from './ModalPopup'
 import modaldata from './modaldata'
@@ -8,8 +9,18 @@ const App = () => {
 
   return (
     <>
-      <button className={styles.openbtn} onClick={()=>setShowModal(true)}>Open Modal</button>
-      <ModalPopup showModal={showModal} setShowModal={setShowModal} title={modaldata.title} content ={modaldata.content}/>
+      <button className={styles.openbtn} onClick={() => setShowModal(true)}>Open Modal</button>
+
+      {/* Ideally modal dialogs should be rendered as a direct child of the body */}
+      {createPortal(
+        <ModalPopup
+          showModal={showModal}
+          setShowModal={setShowModal}
+          title={modaldata.title}
+          content={modaldata.content}
+        />,
+        document.body
+      )}
     </>
   )
 }
