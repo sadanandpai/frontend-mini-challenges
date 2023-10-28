@@ -9,7 +9,7 @@ const ModalPopup = ({ showModal, setShowModal, title, content }) => {
             <div>
               <h3>{title}</h3>
               <p>{content}</p>
-              <button onClick={()=>setShowModal(false)} className={styles.closebtn}>Close </button>
+              <button onClick={() => setShowModal(false)} className={styles.closebtn}>Close</button>
             </div>
           </div>
         </div>
