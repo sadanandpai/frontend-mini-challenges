@@ -9,9 +9,13 @@ body:
         ## Before you submit...
         Please keep a few things in mind while writing this issue:
 
+        - Make sure the same challenge (or almost similar challenge) does not already exist.
+          - If a similar challenge exists, then consider adding any extra feature to the already-existing challenge instead of creating a new mini-challenge altogether.
         - Use a short and precise title
         - Fill out the text fields with as much detail as possible.
-        - If there are relevant screenshots, then please do not hesitate to add them.
+        - If there are relevant screenshots, please do not hesitate to add them.
+
+        **We often get duplicate PRs for challenges that already exist. Please go through the mini-challenges and make sure the one you are contributing does not exist already.**
 
   - type: dropdown
     attributes:
