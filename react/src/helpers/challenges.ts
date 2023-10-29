@@ -412,4 +412,15 @@ export const challenges = new Map<string, Challenge>([
       tags: [],
     },
   ],
+  [
+    'emoji-picker',
+    {
+      title: 'Emoji Picker',
+      link: 'emoji-picker',
+      difficulty: 'medium',
+      developer: 'jeevaramanathan',
+      tags: [],
+      isNew:true
+    },
+  ],
 ]);

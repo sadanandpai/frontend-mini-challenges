@@ -1,0 +1,174 @@
+/* app */
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* emoji component */
+.container {
+  height: 400px;
+  width: 100%;
+  margin-top: 20px;
+  background-color: rgb(249, 249, 249);
+  border-radius: 3px;
+  box-shadow: 0 0 3px 2px rgba(201, 201, 201, 0.933);
+  overflow-x: hidden;
+  overflow-y: scroll;
+  padding: 10px;
+  margin: 30px;
+}
+
+.container::-webkit-scrollbar,
+.container::-webkit-scrollbar-thumb {
+  border-radius: 13px;
+  width: 13px;
+  height: 40px;
+}
+
+.container::-webkit-scrollbar-thumb {
+  box-shadow: inset 10px 10px 10px 5px rgb(184, 184, 184);
+}
+
+.iconContainer {
+  height: 30%;
+  width: 30%;
+}
+
+.icon {
+  display: inline-block;
+  width: calc(100% / 3);
+  padding: 1px;
+  text-align: center;
+  font-size: 30px;
+  border: 3px solid transparent;
+  border-radius: 10px;
+  transition: border-color 0.3s;
+  cursor: pointer;
+}
+
+.icon:hover {
+  border-color: rgb(217, 217, 217);
+}
+
+.inputField {
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  border: 2px solid rgb(80, 66, 0);
+}
+.inputField:hover {
+  cursor: auto;
+  border: 2px solid rgb(80, 66, 0);
+}
+.toast {
+  position: fixed;
+  top: 20px;
+  width: 300px;
+  height: 30px;
+  background-color: rgb(128, 238, 128);
+  border-radius: 20px;
+  box-shadow: 0 0 3px 2px rgba(201, 201, 201, 0.933);
+  color: darkslategray;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #3498db;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 2s linear infinite;
+}
+
+.loaderContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.topSection {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.select {
+  padding: 10px;
+  margin-left: 20px;
+  width: 180px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  border: 2px solid rgb(80, 66, 0);
+  font-size: 14px;
+}
+
+.copyText {
+  font-size: small;
+  text-align: center;
+  color: #bababa;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 576px) {
+  .icon {
+    width: calc(100% / 6);
+  }
+}
+
+@media (min-width: 768px) {
+  .icon {
+    width: calc(100% / 8);
+  }
+  .container {
+    width: 500px;
+  }
+}
+
+@media (min-width: 992px) {
+  .icon {
+    width: calc(100% / 10);
+  }
+  .container {
+    width: 500px;
+  }
+}
+
+
+/* code component */
+pre {
+  background: #eee;
+  padding: 1rem;
+  overflow: auto;
+  border-radius: 3px;
+  max-width: 80ch;
+}
+
+pre code {
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.5;
+}
+
+.comments {
+  color: green;
+}
