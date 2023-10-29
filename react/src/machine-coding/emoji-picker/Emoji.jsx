@@ -87,7 +87,7 @@ const Emoji = () => {
             className={styles.inputField}
           ></input>
         </div>
-        {filteredEmojis?.length != 0 && <div className={styles.copyText}> Click on the Emoji to Copy</div>}
+        {filteredEmojis?.length != 0 && <div className={styles.copyText}> Click on an Emoji to Copy</div>}
       </div>
       <div className={styles.container}>
         {filteredEmojis?.length == 0 && search.trim() == '' && (
