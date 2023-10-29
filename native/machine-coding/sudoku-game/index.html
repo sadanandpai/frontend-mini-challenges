@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <script src="../../helpers/header.js" type="module"></script>
+</head>
+
+<body>
+
+    <div class="heading">
+        <h1>SUDOKU GAME</h1>
+    </div>
+
+    <div class="content">
+        <div class="data">
+
+
+            <div class="lts">
+                <div class="timer margin3"><span>Timer: </span> <span id="time_min">00</span>:<span id="time_sec">00</span></div>
+                <div class="score">SCORE = <span id="score">000</span></div>
+
+                <div id="game_type" class="level margin3">
+                    <h3>CHOOSE LEVEL</h3><br>
+                    <label><input type="radio" id="easy" class="label" name="diff_level" checked> Easy</label>
+                    <label><input type="radio" id="medium" class="label" name="diff_level"> Medium</label>
+                    <label><input type="radio" id="hard" class="label" name="diff_level"> Hard</label>
+                </div>
+            </div>
+
+            <div class="buttons margin3">
+                <button type="button" id="start" onclick="start()" style="--j:1">START</button>
+                <button type="button" id="replay" onclick="replay()" style="--j:2">NEW GAME</button>
+                <button type="button" id="answer" onclick="answer()" style="--j:3">GIVE UP</button>
+            </div>
+
+        </div>
+
+        <div class="game-area">
+            <div class="main" id="main">
+
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

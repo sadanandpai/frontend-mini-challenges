@@ -517,6 +517,14 @@ export const challenges = [
     developer: 'sadanandpai',
     tags: [],
   },
+  {
+    title: 'Sudoku Game',
+    link: 'sudoku-game',
+    difficulty: 'easy',
+    developer: 'asymtode712',
+    tags: [],
+    isNew: true,
+  },
   { title: 'Emoji Editor', link: '#' },
   { title: 'Sort Table', link: '#' },
 ];
