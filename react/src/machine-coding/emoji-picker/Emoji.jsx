@@ -13,6 +13,7 @@ const Emoji = () => {
   useEffect(() => {
     loadAllEmojis();
     loadCategories();
+    window.scrollTo(0,0);
   }, []);
 
   const loadAllEmojis = () => {
@@ -36,7 +37,9 @@ const Emoji = () => {
   const onChange = (e) => {
     let searchValue = e.target.value;
     setSearch(searchValue);
-    let filteredIcons = emojis.filter((icon) => icon.unicodeName.toLowerCase().includes(searchValue.trim().toLowerCase()));
+    let filteredIcons = emojis.filter((icon) =>
+      icon.unicodeName.toLowerCase().includes(searchValue.trim().toLowerCase())
+    );
     setFilteredEmojis(filteredIcons);
   };
 
@@ -87,7 +90,13 @@ const Emoji = () => {
             className={styles.inputField}
           ></input>
         </div>
-        {filteredEmojis?.length != 0 && <div className={styles.copyText}> Click on an Emoji to Copy</div>}
+        <div
+          className={`${styles.copyText} ${
+            filteredEmojis == null || filteredEmojis?.length === 0 ? styles.hidden : ''
+          }`}
+        >
+          Click on an Emoji to Copy
+        </div>
       </div>
       <div className={styles.container}>
         {filteredEmojis?.length == 0 && search.trim() == '' && (

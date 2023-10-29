@@ -10,14 +10,13 @@
 .container {
   height: 400px;
   width: 100%;
-  margin-top: 20px;
   background-color: rgb(249, 249, 249);
   border-radius: 3px;
   box-shadow: 0 0 3px 2px rgba(201, 201, 201, 0.933);
   overflow-x: hidden;
   overflow-y: scroll;
   padding: 10px;
-  margin: 30px;
+  margin: 26px;
 }
 
 .container::-webkit-scrollbar,
@@ -115,6 +114,11 @@
   font-size: small;
   text-align: center;
   color: #bababa;
+  opacity: 1;
+}
+
+.hidden {
+  opacity: 0;
 }
 
 @keyframes spin {
