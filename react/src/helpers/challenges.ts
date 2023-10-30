@@ -58,7 +58,7 @@ export const challenges = new Map<string, Challenge>([
       link: 'background-changer',
       developer: 'AdityaSuryawanshi',
       difficulty: 'easy',
-      isNew:true,
+      isNew: true,
       tags: [],
     },
   ],
@@ -410,6 +410,17 @@ export const challenges = new Map<string, Challenge>([
       difficulty: 'hard',
       developer: 'deepu0',
       tags: [],
+    },
+  ],
+  [
+    'programming-languages-multiverse',
+    {
+      title: 'Programming Languages Multiverse',
+      link: 'programming-languages-multiverse',
+      difficulty: 'medium',
+      developer: 'Sumitwarrior7',
+      tags: [],
+      isNew: true,
     },
   ],
 ]);
