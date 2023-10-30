@@ -20,6 +20,17 @@ export const challenges = new Map<string, Challenge>([
     },
   ],
   [
+    'programming-languages-multiverse',
+    {
+      title: 'Programming Languages Multiverse',
+      link: 'programming-languages-multiverse',
+      difficulty: 'easy',
+      developer: 'Sumitwarrior7',
+      tags: [],
+      isNew: true,
+    },
+  ],
+  [
     'quote-generator',
     {
       title: 'Quote Generator',
@@ -410,17 +421,6 @@ export const challenges = new Map<string, Challenge>([
       difficulty: 'hard',
       developer: 'deepu0',
       tags: [],
-    },
-  ],
-  [
-    'programming-languages-multiverse',
-    {
-      title: 'Programming Languages Multiverse',
-      link: 'programming-languages-multiverse',
-      difficulty: 'medium',
-      developer: 'Sumitwarrior7',
-      tags: [],
-      isNew: true,
     },
   ],
 ]);

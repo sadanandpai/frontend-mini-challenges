@@ -1,7 +1,6 @@
 .container {
-  text-align: center;
   padding: 20px;
-  font-family: Arial, sans-serif;
+  text-align: center;
 }
 
 .languageList {
@@ -11,14 +10,14 @@
 }
 
 .languageCard {
-  background-color: #f7f7f7;
-  border: 1px solid #ccc;
-  border-radius: 8px;
+  max-width: 300px;
   padding: 10px;
   margin: 10px;
   text-align: left;
-  max-width: 300px;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: #f7f7f7;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 10%);
   transition: transform 0.2s;
 }
 
@@ -27,15 +26,15 @@
 }
 
 .languageName {
+  margin-top: 0;
   font-size: 20px;
   color: #007bff;
-  margin-top: 0;
 }
 
 .info {
+  margin: 5px 0;
   font-size: 16px;
   color: #555;
-  margin: 5px 0;
 }
 
 .heading {
@@ -43,32 +42,3 @@
   color: #333;
 }
 
-/* Define the rainbow pulse animation */
-.rainbowPulseAnimation {
-  animation: rainbowPulse 4s linear infinite;
-  background: linear-gradient(30deg, #f06, #f90, #0f6, #06f, #90f, #f06);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  background-size: 200% 200%;
-  animation: pulse 3s linear infinite;
-}
-
-@keyframes pulse {
-  0%,
-  100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
-  }
-}
-
-@keyframes rainbowPulse {
-  0% {
-    background-position: 0 0;
-  }
-  100% {
-    background-position: 200% 200%;
-  }
-}
