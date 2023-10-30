@@ -518,9 +518,9 @@ export const challenges = [
     tags: [],
   },
   {
-    title: 'Sudoku Game',
-    link: 'sudoku-game',
-    difficulty: 'easy',
+    title: 'Sudoku',
+    link: 'sudoku',
+    difficulty: 'hard',
     developer: 'asymtode712',
     tags: [],
     isNew: true,

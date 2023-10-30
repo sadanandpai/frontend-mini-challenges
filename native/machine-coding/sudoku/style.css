@@ -1,0 +1,395 @@
+html{
+    overflow-x: hidden;
+}
+
+body{
+    background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
+}
+
+.heading {
+    height: 16vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.heading h1 {
+    font-size: 5rem;
+    font-weight: 900;
+    color: rgb(216, 57, 9);
+    text-shadow: .1rem .1rem .6rem rgb(216, 57, 9);
+    opacity: 0;
+    animation: slideDown .5s ease forwards;
+    animation-delay: .7s;
+}
+
+.content {
+    display: flex;
+    padding: 0 8%;
+    justify-content: center;
+    align-items: center;
+    height: 84vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.data {
+    height: 80vh;
+    width: 40vw;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.timer {
+    font-size: 3.5rem;
+    color: rgb(48, 2, 255);
+    font-weight:600;
+    opacity: 0;
+    animation: slideRight .5s ease forwards;
+    animation-delay: 1.5s;
+}
+
+.score {
+    height: 3.5rem;
+    width: auto;
+    margin: .5rem 0;
+    margin-bottom: 1rem;
+    color: rgb(48, 2, 255);
+    font-size: 2.5rem;
+    font-weight: 600;
+    opacity: 0;
+    animation: zoomIn 1s ease forwards;
+    animation-delay: 1.7s;
+}
+
+.score span{
+    color: rgb(216, 57, 9);
+}
+
+#time_min {
+    color: rgb(216, 57, 9);
+}
+
+#time_sec {
+    color: rgb(216, 57, 9);
+}
+
+h3 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: rgb(48, 2, 255);
+}
+
+.level {
+    opacity: 0;
+    animation: slideLeft .5s ease forwards;
+    animation-delay: 2s;
+}
+
+.margin3 {
+    margin: 2rem 0;
+}
+
+label {
+    height: 1.2rem;
+    font-size: 2rem;
+    font-weight: 400;
+    margin: .8rem .4rem 0 0;
+    color: rgb(216, 57, 9);
+    cursor: pointer;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+button {
+    height: 6rem;
+    width: 20rem;
+    margin: .4rem 0;
+    font-size: 2rem;
+    font-weight: 600;
+    background-color: rgb(39, 24, 250);
+    border: .4rem solid rgb(22, 227, 159);
+    border-radius: 4rem;
+    color: aqua;
+    cursor: pointer;
+    transition: .4s ease;
+    opacity: 0;
+    animation: slideTop .6s ease forwards;
+    animation-delay: calc(.3s * var(--j));
+}
+
+.buttons p {
+    opacity: 0;
+    animation: slideTop .6s ease forwards;
+    animation-delay: 1s;
+}
+
+button:hover {
+    background-color: rgb(46, 130, 215);
+    color: rgb(16, 208, 51);
+    box-shadow: 0 0 .6rem rgb(22, 227, 159);
+    height: 7rem;
+    width: 22rem;
+}
+
+.buttons p {
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: #0f2972;
+
+}
+
+.buttons p a {
+    text-decoration: none;
+    font-size: 3rem;
+}
+
+.game-area {
+    background: transparent;
+    height: 80vh;
+    width: 60vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main {
+    height: 47rem;
+    width: 47rem;
+    background: transparent;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto auto auto;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: .5rem;
+
+    /*
+    display: grid;
+    margin-left: 30%;
+    margin-top: -1%; */
+}
+
+.input {
+    height: 5rem;
+    width: 5rem;
+    border: .3rem solid rgb(22, 227, 159);
+    border-radius: .5rem;
+    margin: auto;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 300;
+    background-color: #0f2a72;
+    /* background-color: #0b1c49; */
+    color: white;
+    caret-color: transparent;
+    opacity: 0;
+    animation: slideLeft .5s ease forwards;
+    animation-delay: calc(.05s * var(--i));
+}
+
+
+
+
+
+/* media query for tablets */
+
+@media only screen and (max-width: 850px) {
+
+    .content {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100vw;
+        height: 130vh;
+        overflow: hidden;
+    }
+
+    .data {
+        height: 20vh;
+        width: 100vw;
+        background: transparent;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    button {
+        opacity: 0;
+        animation: slideLeft .6s ease forwards;
+        animation-delay: calc(.3s * var(--j));
+    }
+
+    .game-area {
+        height: 60vh;
+        width: 100vw;
+        justify-content: center;
+    }
+
+    .main {
+        height: 54rem;
+        width: 54rem;
+        border-radius: .5rem;
+    }
+
+    .input {
+        height: 5.6rem;
+        width: 5.6rem;
+        border: .3rem solid rgb(22, 227, 159);
+        border-radius: .5rem;
+        opacity: 0;
+        animation: zoomIn .4s ease forwards;
+        animation-delay: calc(.02s * var(--i));
+    }
+}
+
+
+
+
+
+
+@media (max-width: 480px){
+
+    .heading {
+        height: 10vh;
+    }
+
+    .heading h1 {
+        font-size: 4rem;
+        font-weight: 700;
+        color: rgb(216, 57, 9);
+        text-shadow: .1rem .1rem .4rem rgb(216, 57, 9);
+    }
+
+    .content {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100vw;
+        height: 150vh;
+        overflow: hidden;
+    }
+
+    .data {
+        height: 70vh;
+        width: 100vw;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    button {
+        opacity: 0;
+        animation: slideLeft .6s ease forwards;
+        animation-delay: calc(.3s * var(--j));
+    }
+
+    .game-area {
+        height: 70vh;
+        width: 100vw;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .main {
+        height: 96vw;
+        width: 96vw;
+        border-radius: .5rem;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .input {
+        height: 9.8vw;
+        width: 9.8vw;
+        border: .3rem solid rgb(22, 227, 159);
+        border-radius: .5rem;
+        opacity: 0;
+        animation: zoomIn .5s ease forwards;
+        animation-delay: calc(.03s * var(--i));
+    }
+}
+
+
+
+
+
+
+
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0;
+}
+
+
+
+
+
+
+@keyframes slideRight{
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideLeft{
+    0%{
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideTop{
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideDown{
+    0%{
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes zoomIn{
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
