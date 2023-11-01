@@ -28,6 +28,21 @@ const App = () => {
       otpinputref.current[index - 1].focus();
     }
   };
+  const handlePaste = (e) => {
+    e.preventDefault();
+    const pastedData = e.clipboardData.getData('text');
+    if (/^[0-9]*$/.test(pastedData)) {
+      const copyotpfields = [...otpfields];
+      for (let i = 0; i < copyotpfields.length; i++) {
+        if (i < pastedData.length) {
+          copyotpfields[i] = pastedData[i];
+        } else {
+          break;
+        }
+      }
+      setOtpFields(copyotpfields);
+    }
+  };
   return (
     <>
       <div className={styles.otpFields}>
@@ -37,6 +52,7 @@ const App = () => {
               <input
                 key={index}
                 onKeyDown={(e) => handleKeyDown(e, index)}
+                onPaste={handlePaste}
                 ref={(el) => (otpinputref.current[index] = el)}
                 onChange={(e) => handleOtp(e, index)}
                 value={otpfields[index]}
