@@ -423,4 +423,15 @@ export const challenges = new Map<string, Challenge>([
       tags: [],
     },
   ],
+  [
+    'otp',
+    {
+      title: 'OTP',
+      link: 'otp',
+      difficulty: 'medium',
+      developer: 'rishabhm05',
+      tags: [],
+      isNew: true,
+    },
+  ],
 ]);

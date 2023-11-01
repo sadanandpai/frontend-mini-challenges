@@ -38,6 +38,7 @@ import WordCounter from '@/machine-coding/word-count';
 import YourSport from '@/machine-coding/your-sport';
 import ModalPopup from '@/machine-coding/modal-popup/App';
 import ProgrammingLanguageMultiverse from '@/machine-coding/programming-languages-multiverse';
+import Otp from '@/machine-coding/otp/App';
 import { challenges } from '@/helpers/challenges';
 import { useParams } from 'react-router-dom';
 
@@ -81,6 +82,7 @@ const reactChallenges = {
   'your-sport': <YourSport />,
   'modal-popup': <ModalPopup />,
   'programming-languages-multiverse': <ProgrammingLanguageMultiverse />,
+  otp: <Otp />,
 };
 
 function Challenge() {
