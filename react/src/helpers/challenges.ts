@@ -382,6 +382,17 @@ export const challenges = new Map<string, Challenge>([
     },
   ],
   [
+    'otp',
+    {
+      title: 'OTP',
+      link: 'otp',
+      difficulty: 'medium',
+      developer: 'rishabhm05',
+      tags: [],
+      isNew: true,
+    },
+  ],
+  [
     'match-pair',
     {
       title: 'Match Pair',
@@ -432,17 +443,6 @@ export const challenges = new Map<string, Challenge>([
       difficulty: 'hard',
       developer: 'deepu0',
       tags: [],
-    },
-  ],
-  [
-    'otp',
-    {
-      title: 'OTP',
-      link: 'otp',
-      difficulty: 'medium',
-      developer: 'rishabhm05',
-      tags: [],
-      isNew: true,
     },
   ],
 ]);

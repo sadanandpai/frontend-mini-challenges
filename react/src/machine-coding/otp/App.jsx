@@ -1,8 +1,11 @@
-import React, { useState, useRef } from 'react';
+import React, { useRef, useState } from 'react';
+
 import styles from './otp.module.css';
+
 const App = () => {
-  let [otpfields, setOtpFields] = useState(Array(4).fill(''));
+  let [otpfields, setOtpFields] = useState(Array(6).fill(''));
   let otpinputref = useRef([]);
+
   const handleOtp = (e, index) => {
     const numericValue = e.target.value.replace(/[^0-9]/g, '');
     const singleDigitValue = numericValue.slice(0, 1);
@@ -13,6 +16,7 @@ const App = () => {
     }
     setOtpFields(copyotpfields);
   };
+
   const handleKeyDown = (e, index) => {
     if (e.key === 'Backspace') {
       e.preventDefault();
@@ -28,6 +32,7 @@ const App = () => {
       otpinputref.current[index - 1].focus();
     }
   };
+
   const handlePaste = (e) => {
     e.preventDefault();
     const pastedData = e.clipboardData.getData('text');
@@ -43,26 +48,25 @@ const App = () => {
       setOtpFields(copyotpfields);
     }
   };
+
   return (
-    <>
-      <div className={styles.otpFields}>
-        <div className={styles.otpinput}>
-          {otpfields.map((_, index) => {
-            return (
-              <input
-                key={index}
-                onKeyDown={(e) => handleKeyDown(e, index)}
-                onPaste={handlePaste}
-                ref={(el) => (otpinputref.current[index] = el)}
-                onChange={(e) => handleOtp(e, index)}
-                value={otpfields[index]}
-                type="number"
-              />
-            );
-          })}
-        </div>
+    <div className={styles.otpFields}>
+      <div className={styles.otpinput}>
+        {otpfields.map((_, index) => {
+          return (
+            <input
+              key={index}
+              onKeyDown={(e) => handleKeyDown(e, index)}
+              onPaste={handlePaste}
+              ref={(el) => (otpinputref.current[index] = el)}
+              onChange={(e) => handleOtp(e, index)}
+              value={otpfields[index]}
+              type="number"
+            />
+          );
+        })}
       </div>
-    </>
+    </div>
   );
 };
 
