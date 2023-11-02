@@ -39,6 +39,7 @@ import YourSport from '@/machine-coding/your-sport';
 import ModalPopup from '@/machine-coding/modal-popup/App';
 import EmojiPicker from '@/machine-coding/emoji-picker/App';
 import ProgrammingLanguageMultiverse from '@/machine-coding/programming-languages-multiverse';
+import Otp from '@/machine-coding/otp/App';
 import { challenges } from '@/helpers/challenges';
 import { useParams } from 'react-router-dom';
 
@@ -83,6 +84,7 @@ const reactChallenges = {
   'modal-popup':<ModalPopup/>,
   'emoji-picker':<EmojiPicker/>,
   'programming-languages-multiverse': <ProgrammingLanguageMultiverse />,
+  otp: <Otp />,
 };
 
 function Challenge() {
