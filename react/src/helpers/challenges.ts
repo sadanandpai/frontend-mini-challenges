@@ -22,7 +22,7 @@ export const challenges = new Map<string, Challenge>([
   [
     'programming-languages-multiverse',
     {
-      title: 'Programming Languages Multiverse',
+      title: 'Programming Multiverse',
       link: 'programming-languages-multiverse',
       difficulty: 'easy',
       developer: 'Sumitwarrior7',
