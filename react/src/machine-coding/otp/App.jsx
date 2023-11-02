@@ -7,11 +7,11 @@ const App = () => {
   let otpinputref = useRef([]);
 
   const handleOtp = (e, index) => {
-    const numericValue = e.target.value.replace(/[^0-9]/g, '');
+    const numericValue = e.target.value.replace(/\D/g, '');
     const singleDigitValue = numericValue.slice(0, 1);
     let copyotpfields = [...otpfields];
     copyotpfields[index] = singleDigitValue;
-    if (index < otpfields.length - 1) {
+    if (index < otpfields.length - 1 && singleDigitValue) {
       otpinputref.current[index + 1].focus();
     }
     setOtpFields(copyotpfields);
@@ -61,7 +61,7 @@ const App = () => {
               ref={(el) => (otpinputref.current[index] = el)}
               onChange={(e) => handleOtp(e, index)}
               value={otpfields[index]}
-              type="number"
+              type="text"
             />
           );
         })}
