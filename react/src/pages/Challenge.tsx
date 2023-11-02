@@ -37,6 +37,7 @@ import TwentyfiveFiveClock from '@/machine-coding/25-5-clock';
 import WordCounter from '@/machine-coding/word-count';
 import YourSport from '@/machine-coding/your-sport';
 import ModalPopup from '@/machine-coding/modal-popup/App';
+import EmojiPicker from '@/machine-coding/emoji-picker/App';
 import ProgrammingLanguageMultiverse from '@/machine-coding/programming-languages-multiverse';
 import { challenges } from '@/helpers/challenges';
 import { useParams } from 'react-router-dom';
@@ -79,7 +80,8 @@ const reactChallenges = {
   'color-mixer': <ColorMixer />,
   'string-transformers': <StringTransformers />,
   'your-sport': <YourSport />,
-  'modal-popup': <ModalPopup />,
+  'modal-popup':<ModalPopup/>,
+  'emoji-picker':<EmojiPicker/>,
   'programming-languages-multiverse': <ProgrammingLanguageMultiverse />,
 };
 
