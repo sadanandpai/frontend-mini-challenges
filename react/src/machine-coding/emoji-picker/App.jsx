@@ -1,12 +1,10 @@
-import styles from "./app.module.css"
 import Emoji from './Emoji';
-import Code from './Code'
+import styles from './app.module.css';
+
 export default function App() {
-  
-    return (
+  return (
     <div className={styles.main}>
-     <Emoji/>
-     <Code/>
+      <Emoji />
     </div>
   );
 }

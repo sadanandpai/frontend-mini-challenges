@@ -316,6 +316,17 @@ export const challenges = new Map<string, Challenge>([
     },
   ],
   [
+    'emoji-picker',
+    {
+      title: 'Emoji Picker',
+      link: 'emoji-picker',
+      difficulty: 'medium',
+      developer: 'jeevaramanathan',
+      tags: [],
+      isNew: true,
+    },
+  ],
+  [
     'investment-calculator',
     {
       title: 'Investment Calculator',
@@ -421,17 +432,6 @@ export const challenges = new Map<string, Challenge>([
       difficulty: 'hard',
       developer: 'deepu0',
       tags: [],
-    },
-  ],
-  [
-    'emoji-picker',
-    {
-      title: 'Emoji Picker',
-      link: 'emoji-picker',
-      difficulty: 'medium',
-      developer: 'jeevaramanathan',
-      tags: [],
-      isNew:true
     },
   ],
 ]);

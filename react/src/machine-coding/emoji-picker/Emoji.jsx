@@ -1,8 +1,10 @@
 import { useEffect, useState } from 'react';
-import styles from './app.module.css';
+
 import axios from 'axios';
+import styles from './app.module.css';
 
 const access_key = 'eb3aa13df1b14cc7bc614fc2d7f894f41b09d68a';
+
 const Emoji = () => {
   const [emojis, setEmojis] = useState([]);
   const [filteredEmojis, setFilteredEmojis] = useState([]);
@@ -13,7 +15,7 @@ const Emoji = () => {
   useEffect(() => {
     loadAllEmojis();
     loadCategories();
-    window.scrollTo(0,0);
+    window.scrollTo(0, 0);
   }, []);
 
   const loadAllEmojis = () => {
@@ -77,7 +79,11 @@ const Emoji = () => {
           <select className={styles.select} onChange={categoryChange}>
             <option>all</option>
             {category.map((item) => {
-              return <option value={item.slug}>{item.slug.replace('-', ' ')}</option>;
+              return (
+                <option value={item.slug} key={item.slug}>
+                  {item.slug.replace('-', ' ')}
+                </option>
+              );
             })}
           </select>
         </div>
@@ -98,6 +104,7 @@ const Emoji = () => {
           Click on an Emoji to Copy
         </div>
       </div>
+
       <div className={styles.container}>
         {filteredEmojis?.length == 0 && search.trim() == '' && (
           <div className={styles.loaderContainer}>
