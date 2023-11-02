@@ -47,14 +47,6 @@ If you want to contribute, improve or suggest changes to this repo, then check o
 
 <br/>
 
-### Stargazers
-
-[![Stargazers repo roster for @sadanandpai/frontend-mini-challenges](https://reporoster.com/stars/sadanandpai/frontend-mini-challenges)](https://github.com/sadanandpai/frontend-mini-challenges/stargazers)
-
-### Forkers
-
-[![Forkers repo roster for @sadanandpai/frontend-mini-challenges](https://reporoster.com/forks/sadanandpai/frontend-mini-challenges)](https://github.com/sadanandpai/frontend-mini-challenges/network/members)
-
 ### Contributors
 
 <a href="https://github.com/sadanandpai/frontend-mini-challenges/graphs/contributors">
