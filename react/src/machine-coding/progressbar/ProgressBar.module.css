@@ -38,6 +38,13 @@
   border: none;
 }
 
+@media (max-width: 768px) {
+  .controls {
+    width: 100%;
+    gap: 1rem;
+  }
+}
+
 .controls button:hover {
   color: rgb(0 0 255 / 50%);
   background-color: rgb(0 0 255 / 30%);
