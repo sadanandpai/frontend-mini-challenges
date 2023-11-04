@@ -40,6 +40,7 @@ import ModalPopup from '@/machine-coding/modal-popup/App';
 import EmojiPicker from '@/machine-coding/emoji-picker/App';
 import ProgrammingLanguageMultiverse from '@/machine-coding/programming-languages-multiverse';
 import Otp from '@/machine-coding/otp/App';
+import TrafficLights from '@/machine-coding/traffic-light/App';
 import { challenges } from '@/helpers/challenges';
 import { useParams } from 'react-router-dom';
 
@@ -81,10 +82,11 @@ const reactChallenges = {
   'color-mixer': <ColorMixer />,
   'string-transformers': <StringTransformers />,
   'your-sport': <YourSport />,
-  'modal-popup':<ModalPopup/>,
-  'emoji-picker':<EmojiPicker/>,
+  'modal-popup': <ModalPopup />,
+  'emoji-picker': <EmojiPicker />,
   'programming-languages-multiverse': <ProgrammingLanguageMultiverse />,
   otp: <Otp />,
+  'traffic-lights': <TrafficLights />,
 };
 
 function Challenge() {
