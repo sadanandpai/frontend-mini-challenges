@@ -28,7 +28,7 @@ const App = () => {
           <div
             key={config[light].id}
             className={styles.light}
-            style={{ background: `${currentActiveLight === light ? `${light}` : ''}` }}
+            style={{ background: currentActiveLight === light ? light : '' }}
           ></div>
         ))}
       </div>
