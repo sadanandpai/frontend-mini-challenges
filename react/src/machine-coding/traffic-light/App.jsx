@@ -5,25 +5,18 @@ const App = () => {
   const [currentActiveLight, setCurrentActiveLight] = useState('red');
   const [currentDuration, setCurrentDuration] = useState(config[currentActiveLight].duration);
   useEffect(() => {
-    let timer;
-
-    if (currentDuration <= 0) {
-      setCurrentDuration(config[currentActiveLight].duration);
-    } else {
-      timer = setInterval(() => {
-        setCurrentDuration(currentDuration - 1000);
-      }, 1000);
-    }
-    return () => clearInterval(timer);
-  }, [currentDuration]);
-  useEffect(() => {
     let timerId;
-    const { duration, next } = config[currentActiveLight];
-    timerId = setTimeout(() => {
-      setCurrentActiveLight(next);
-    }, duration);
-    return () => clearTimeout(timerId);
-  }, [currentActiveLight]);
+    timerId = setInterval(() => {
+      if (currentDuration <= 0) {
+        setCurrentActiveLight(config[currentActiveLight].next);
+        setCurrentDuration(Number(config[config[currentActiveLight].next].duration));
+      } else {
+        setCurrentDuration(currentDuration - 1000);
+      }
+    }, 1000);
+    return () => clearInterval(timerId);
+  }, [currentDuration, currentActiveLight]);
+
   return (
     <div className={styles.AppContainer}>
       <div className={styles.trafficWrapper}>
