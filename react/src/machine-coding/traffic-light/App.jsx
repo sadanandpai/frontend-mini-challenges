@@ -10,26 +10,16 @@ const App = () => {
   useEffect(() => {
     let timerId;
     if (currentDuration <= 0) {
-      setCurrentDuration(config[currentActiveLight].duration);
+      clearInterval(timerId);
+      setCurrentActiveLight(config[currentActiveLight].next);
+      setCurrentDuration(Number(config[config[currentActiveLight].next].duration));
     } else {
       timerId = setInterval(() => {
-        setCurrentDuration(currentDuration - 1000);
+        setCurrentDuration((prevDuration) => prevDuration - 1000);
       }, 1000);
     }
-
     return () => clearInterval(timerId);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [currentDuration]);
-
-  useEffect(() => {
-    let timerId;
-    const { duration, next } = config[currentActiveLight];
-    timerId = setTimeout(() => {
-      setCurrentActiveLight(next);
-    }, duration);
-
-    return () => clearTimeout(timerId);
-  }, [currentActiveLight]);
+  }, [currentDuration, currentActiveLight]);
 
   return (
     <div className={styles.AppContainer}>
@@ -38,7 +28,7 @@ const App = () => {
           <div
             key={config[light].id}
             className={styles.light}
-            style={{ background: `${currentActiveLight === light ? `${light}` : ''}` }}
+            style={{ background: currentActiveLight === light ? light : '' }}
           ></div>
         ))}
       </div>
