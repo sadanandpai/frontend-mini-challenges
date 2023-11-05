@@ -15,4 +15,5 @@ const config = {
     next: 'yellow',
   },
 };
+
 export default config;
