@@ -17,7 +17,7 @@
 
 ## About
 
-This repo is created to list down all the popular frontend challenges which are recommended for learning and interviews. Challenges are solved in vanilla JavaScript, React and VueJs. You can both play with the UI and view the solutions.
+This repo is created to list down all the popular frontend challenges that are recommended for learning and interviews. Challenges are solved in vanilla JavaScript, React and VueJs. You can both play with the UI and view the solutions.
 
 - Solutions to JavaScript challenges: [Click here](https://github.com/sadanandpai/frontend-mini-challenges/tree/main/native/machine-coding)
 - Solutions to React challenges: [Click here](https://github.com/sadanandpai/frontend-mini-challenges/tree/main/react/src/machine-coding)
@@ -32,18 +32,27 @@ This repo is created to list down all the popular frontend challenges which are 
   - The challenges are standalone modules. Those can be viewed directly by opening the index file or live server.
 - React Challenges
   - navigate to `react/`
-  - `npm install` (only one time installation is needed for all the challenges)
+  - `npm install` (only one-time installation is needed for all the challenges)
   - `npm run dev`
 - VueJs Challenges
   - navigate to `vue/`
-  - `npm install` (only one time installation is needed for all the challenges)
+  - `npm install` (only one-time installation is needed for all the challenges)
   - `npm run dev`
 
 <br/>
 
 ## Contributing Guide
 
-If you want to contribute, improve or suggest changes to this repo, then check out the [Contributing Guide](https://github.com/sadanandpai/frontend-mini-challenges/blob/main/CONTRIBUTING.md)
+If you want to contribute, improve, or suggest changes to this repo, then check out the [Contributing Guide](https://github.com/sadanandpai/frontend-mini-challenges/blob/main/CONTRIBUTING.md)
+
+<br/>
+
+### Project Maintainers
+
+<a href="https://github.com/sadanandpai"><img src="https://avatars.githubusercontent.com/u/12962887" alt="sadanand" height="150px" /></a>
+<a href="https://github.com/arpansaha13"><img src="https://avatars.githubusercontent.com/u/82361490" alt="arpan" height="150px" /></a>
+
+---
 
 <br/>
 
