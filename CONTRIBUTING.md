@@ -14,7 +14,7 @@
 - Use modern JavaScript and coding standards
 - Write clean and understandable code
 - Add comments wherever necessary
-- Build it responsively if mobile mobile-compatible
+- Build it responsively if your app is mobile-compatible
 - Try to maintain the challenges in the order of their difficulty
 
 ##### Steps to Contribute JavaScript Challenge
@@ -34,7 +34,7 @@
 - The App should be broken down into components, each having its own files.
 - CSS should strictly use **module CSS** to prevent pollution in the global space.
 - Challenge should be added to the array of challenges `/react/src/helpers/challenges.ts`
-- The component should be imported and added to their respective position in the array of challenges in `/react/src/pages/challenge/Challenge.tsx`
+- The component should be imported and added to their respective position in the array of challenges in `/react/src/pages/Challenge.tsx`
 
 ##### Steps to Contribute VueJs Challenge
 
