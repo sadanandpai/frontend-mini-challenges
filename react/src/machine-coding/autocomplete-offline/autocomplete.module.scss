@@ -9,6 +9,16 @@
     margin-bottom: 0.5rem;
     font-size: 1rem;
   }
+  input:disabled {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+
+  .retryTimer {
+    margin: 7px;
+    font-size: 24px;
+    font-weight: 600;
+    color: #f14f4f;
+  }
 
   .suggestions {
     width: 93%;
