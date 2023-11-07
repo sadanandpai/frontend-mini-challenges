@@ -13,7 +13,6 @@ interface AutocompleteResult {
 }
 const suggestionLength = 5;
 
-// The function to make API calls
 interface MakeApiRequestReturnType {
   items: string[],
   errorMsgFromApi: string
@@ -29,27 +28,30 @@ async function makeAPIRequest(text: string): Promise<MakeApiRequestReturnType> {
     );
 
     // The GitHub API responds with http 403 Forbidden when the rate limit is exceeded.
-    //
     if (response.status === 403) {
       // The API suspends further requests until a specified time. This specified time is included in the
       // response header under the key "x-ratelimit-reset"
       // https://docs.github.com/en/rest/guides/best-practices-for-using-the-rest-api?apiVersion=2022-11-28#handle-rate-limit-errors-appropriately
-      const timeOfLimitReset = parseFloat(response.headers.get('x-ratelimit-reset'))
+      const timeOfLimitReset = response.headers.get('x-ratelimit-reset');
 
-      // Following line of code will calculate the number of seconds between the time at which the rate-limit was
-      // breached and the time at which we can start making requests again.
-      result.timeDelta = Math.ceil(timeOfLimitReset - (new Date() / 1000))
-      result.errorMsgFromApi = "Too many requests. Please wait before trying again."
+      if (timeOfLimitReset !== null) {
+        const timeValue = parseFloat(timeOfLimitReset);
+
+        // Following line of code will calculate the number of seconds between the time at which the rate-limit was
+        // breached and the time at which we can start making requests again.
+        result.timeDelta = Math.ceil(timeValue - (Date.now() / 1000));
+      } else {
+        // Set timeDelta to 60 seconds if the "x-ratelimit-reset" header is not present or changes in the future
+        result.timeDelta = 60
+      }
     } else {
       const data = await response.json();
-      result.items = data.items.map((item:AutocompleteResult) => item.login)
+      result.items = data.items.map((item: AutocompleteResult) => item.login);
     }
 
     return result
-
   } catch (e) {
     result.errorMsgFromApi = "Error occurred while fetching suggestions"
-
     return result;
   }
 }
