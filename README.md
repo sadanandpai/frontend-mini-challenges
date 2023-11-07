@@ -1,19 +1,13 @@
-<div align="center">
-  <h1>Frontend Mini Challenges</h1>
-  <h3>Collection of frontend challenges for learning and interviews</h3>
-  <a href="https://sadanandpai.github.io/frontend-mini-challenges/"><img src="cover.png" alt="web programming" width="500px" /></a>
 
-[![](https://img.shields.io/github/stars/sadanandpai/frontend-mini-challenges?style=for-the-badge)](#stars)
-[![](https://img.shields.io/github/forks/sadanandpai/frontend-mini-challenges?style=for-the-badge)](#forks)
+#WIZRADS OF DESKTOP 
 
-  <p>Show your support by giving a ⭐ to this repo</p>
 
-  <h3>
-    <a href="https://sadanandpai.github.io/frontend-mini-challenges/">View all challenges of JavaScript, React and Vue</a>
-  </h3>
-</div>
 
-<br/>
+![image](https://github.com/sadanandpai/frontend-mini-challenges/assets/148706501/38ee084b-d133-4e1f-8d6e-5170ce8a542b)
+
+
+
+
 
 ## About
 
