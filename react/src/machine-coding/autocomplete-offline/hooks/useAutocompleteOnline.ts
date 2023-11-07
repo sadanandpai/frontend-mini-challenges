@@ -13,15 +13,46 @@ interface AutocompleteResult {
 }
 const suggestionLength = 5;
 
-async function makeAPIRequest(text: string): Promise<string[]> {
+interface MakeApiRequestReturnType {
+  items: string[],
+  errorMsgFromApi: string
+  timeDelta: number
+}
+
+async function makeAPIRequest(text: string): Promise<MakeApiRequestReturnType> {
+  const result = {items: [], errorMsgFromApi: "", timeDelta: 0}
+
   try {
     const response = await fetch(
       `https://api.github.com/search/users?per_page=${suggestionLength}&q=${text}`
     );
-    const data = await response.json();
-    return data.items.map((item: AutocompleteResult) => item.login);
+
+    // The GitHub API responds with http 403 Forbidden when the rate limit is exceeded.
+    if (response.status === 403) {
+      // The API suspends further requests until a specified time. This specified time is included in the
+      // response header under the key "x-ratelimit-reset"
+      // https://docs.github.com/en/rest/guides/best-practices-for-using-the-rest-api?apiVersion=2022-11-28#handle-rate-limit-errors-appropriately
+      const timeOfLimitReset = response.headers.get('x-ratelimit-reset');
+
+      if (timeOfLimitReset !== null) {
+        const timeValue = parseFloat(timeOfLimitReset);
+
+        // Following line of code will calculate the number of seconds between the time at which the rate-limit was
+        // breached and the time at which we can start making requests again.
+        result.timeDelta = Math.ceil(timeValue - (Date.now() / 1000));
+      } else {
+        // Set timeDelta to 60 seconds if the "x-ratelimit-reset" header is not present or changes in the future
+        result.timeDelta = 60
+      }
+    } else {
+      const data = await response.json();
+      result.items = data.items.map((item: AutocompleteResult) => item.login);
+    }
+
+    return result
   } catch (e) {
-    return [];
+    result.errorMsgFromApi = "Error occurred while fetching suggestions"
+    return result;
   }
 }
 
@@ -31,6 +62,7 @@ export function useAutocompleteOnline() {
   const [suggestionFocus, setSuggestionFocus] = useState<number | null>(null);
 
   const [isLoading, setIsLoading] = useState(false);
+  const [retryAfter, setRetryAfter] = useState(0)
 
   const [errorMessage, setErrorMessage] = useState("");
 
@@ -39,12 +71,19 @@ export function useAutocompleteOnline() {
       setIsLoading(true);
       try {
         const result = await makeAPIRequest(text);
-        if (result.length > 0) {
-          setSuggestions(result);
-          setErrorMessage("");
+
+        setRetryAfter(result.timeDelta)
+        if (!result.errorMsgFromApi) {
+          if (result.items.length > 0) {
+            setSuggestions(result.items)
+            setErrorMessage("")
+          } else {
+            setSuggestions([])
+            setErrorMessage("No results found")
+          }
         } else {
-          setSuggestions([]);
-          setErrorMessage("No results found");
+          setSuggestions([])
+          setErrorMessage(result.errorMsgFromApi)
         }
       } catch (error) {
         setSuggestions([]);
@@ -111,6 +150,17 @@ export function useAutocompleteOnline() {
     }
   }, [suggestionFocus, suggestions]);
 
+  // Start a countdown to zero as soon as the value of retryAfter changes
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      if (retryAfter > 0) {
+        setRetryAfter((prevVal) => prevVal - 1)
+      }
+    }, 1000)
+
+    return () => clearTimeout(timer)
+  }, [retryAfter])
+
   const handleSuggestionFocus = (index: number | null) => {
     setSuggestionFocus(index);
   };
@@ -121,6 +171,7 @@ export function useAutocompleteOnline() {
     isLoading,
     suggestionFocus,
     errorMessage,
+    retryAfter,
     handleInputChange,
     handleSuggestionClick,
     handleKeyDown,

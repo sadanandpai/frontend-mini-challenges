@@ -9,6 +9,7 @@ function AutocompleteOnline() {
     isLoading,
     suggestionFocus,
     errorMessage,
+    retryAfter,
     handleInputChange,
     handleSuggestionClick,
     handleKeyDown,
@@ -29,9 +30,11 @@ function AutocompleteOnline() {
         value={userText}
         onKeyDown={handleKeyDown}
         onChange={handleInputChange}
+        disabled={retryAfter !== 0}
       />
       {isLoading && <div id="loader" className={styles.loader}></div>}
       {errorMessage && <div id="info">{errorMessage}</div>}
+      {retryAfter !== 0 && <div className={styles.retryTimer}>{retryAfter}</div>}
       <ul className={styles.suggestions}>
         {suggestions.map((suggestion, index) => (
           <li
