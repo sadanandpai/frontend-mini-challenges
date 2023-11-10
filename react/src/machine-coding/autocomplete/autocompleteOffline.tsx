@@ -1,9 +1,7 @@
 import { useRef } from 'react';
-import { useAutoComplete } from './hooks/useAutocomplete.ts';
+import { useAutoComplete } from './hooks/useAutocompleteOffline.ts';
 import { suggestionsList } from './countryList.ts';
 import styles from './autocomplete.module.scss';
-
-
 
 const Autocomplete = () => {
   const [userText, handleInput, suggestionFocus, suggestions, handleKeyDown, handleClick, handleSuggestionFocus] = useAutoComplete(

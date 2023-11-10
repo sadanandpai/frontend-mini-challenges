@@ -1,6 +1,6 @@
 import Accordion from '@/machine-coding/accordion/App';
-import Autocomplete from '@/machine-coding/autocomplete-offline/autocomplete';
-import AutocompleteOnline from '@/machine-coding/autocomplete-offline/autocompleteOnline';
+import AutocompleteOffline from '@/machine-coding/autocomplete/autocompleteOffline';
+import AutocompleteOnline from '@/machine-coding/autocomplete/autocompleteOnline';
 import BMICalculator from '@/machine-coding/bmi-calculator/App';
 import ChallengeNavbar from '@/components/challenge-navbar/ChallengeNavbar';
 import Background from '@/machine-coding/background-changer/Background';
@@ -60,7 +60,7 @@ const reactChallenges = {
   progressbar: <ProgressBar />,
   'infinite-scrolling': <InfiniteScrolling />,
   'file-explorer': <FileExplorer />,
-  'autocomplete-offline': <Autocomplete />,
+  'autocomplete-offline': <AutocompleteOffline />,
   'autocomplete-online': <AutocompleteOnline />,
   'tic-tac-toe': <TicTacToe />,
   stack: <Stack />,
