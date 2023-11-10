@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="styles.css">
+  <script src="../../helpers/header.js" type="module"></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <h1>BMI Calculator</h1>
+    <form id="bmiForm">
+      <label for="height">Height (cm):</label>
+      <input type="number" id="height" placeholder="Enter height" required>
+
+      <label for="weight">Weight (kg):</label>
+      <input type="number" id="weight" placeholder="Enter weight" required>
+
+      <button type="submit">Calculate BMI</button>
+    </form>
+
+    <div id="result">
+      <h2>Your BMI:</h2>
+      <p id="bmiValue"></p>
+    </div>
+  </div>
+</body>
+</html>

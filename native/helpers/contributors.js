@@ -98,4 +98,8 @@ export const contributors = new Map([
     'DhanushNehru',
     { name: 'Dhanush Nehru', pic: 'https://avatars.githubusercontent.com/u/22955675?v=4'}
   ],
+  [
+    'itsayopapi',
+    { name: 'Ayomide Hassan', pic: 'https://avatars.githubusercontent.com/u/111683116?s=400&u=221fa8f0cdc1c0101bc5950a73e6e888dfb17b0a&v=4' },
+  ],
 ]);
