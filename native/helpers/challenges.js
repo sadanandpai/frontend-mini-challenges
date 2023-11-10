@@ -7,6 +7,14 @@ export const challenges = [
     youtube: 'https://youtu.be/9OIeUtXX3SA',
     tags: [],
   },
+   {
+    title: 'BMI Calculator',
+    link: 'bmi-calculator',
+    difficulty: 'easy',
+    developer: 'itsayopapi',
+    tags: [],
+    isNew: true,
+  },
   {
     title: 'Dice Game',
     link: 'dice-game',
@@ -519,13 +527,4 @@ export const challenges = [
   },
   { title: 'Emoji Editor', link: '#' },
   { title: 'Sort Table', link: '#' },
-];
- {
-    title: 'BMI Calculator',
-    link: 'bmi-calculator',
-    difficulty: 'easy',
-    developer: 'itsayopapi',
-    tags: ['html', 'css', 'javascript'],
-    isNew: true,
-  },
 ];
