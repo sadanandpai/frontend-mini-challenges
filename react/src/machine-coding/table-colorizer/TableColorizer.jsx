@@ -11,7 +11,7 @@ const TableColorizer = () => {
 
   const onColorMe = (e) => {
     e.preventDefault();
-    if (parseInt(colRef.current.value) > 9 || parseInt(colRef.current.value) < 0) {
+    if (parseInt(colRef.current.value) > 9 || parseInt(colRef.current.value) < 1) {
       alert('enter Valid Number');
     }
     if (colorArray.indexOf(parseInt(colRef.current.value)) === -1) {
