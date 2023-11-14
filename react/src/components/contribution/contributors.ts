@@ -284,4 +284,9 @@ export const existingContributors = [
     avatar_url: 'https://avatars.githubusercontent.com/u/141160800?s=60&v=4',
     html_url: 'https://github.com/AnshMeshram',
   },
+  {
+    login: 'proghax333',
+    avatar_url: 'https://avatars.githubusercontent.com/u/48588762?s=60&v=4',
+    html_url: 'https://github.com/proghax333',
+  },
 ];
