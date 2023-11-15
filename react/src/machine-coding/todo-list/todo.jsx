@@ -77,6 +77,10 @@ const Todo = () => {
         </button>
       </form>
 
+      <div className={styles.hint}>
+        <i>Double click on todo to toggle completion status</i>
+      </div>
+
       <List
         items={items}
         handleEditClick={handleEditClick}
