@@ -62,6 +62,12 @@
   }
 }
 
+.hint {
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+  color: #333;
+}
+
 @media screen and (width >= 768px) {
   .App {
     width: 50%;
