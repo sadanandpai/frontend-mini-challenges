@@ -6,7 +6,7 @@ function List({ items, handleEditClick, handleDeleteClick, handleCompleteClick }
       className={styles.item}
       key={item.id}
       title="Double click to mark completed"
-      onDoubleClick={() => handleCompleteClick(item)}
+      onDoubleClick={() => handleCompleteClick(item.id)}
     >
       <span className={item.isDone ? styles.completed : ''}>{item.value}</span>
       <div>
