@@ -1,7 +1,7 @@
 import styles from './todo.module.scss';
 
 function List({ items, handleEditClick, handleDeleteClick, handleCompleteClick }) {
-  return items.map((item, idx) => (
+  return items.map((item) => (
     <li
       className={styles.item}
       key={item.id}
