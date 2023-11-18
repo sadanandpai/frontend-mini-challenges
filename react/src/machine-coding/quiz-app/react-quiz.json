@@ -1,0 +1,120 @@
+{
+  "quiz": {
+    "topic": "React",
+    "level": "Intermediate",
+    "totalQuestions": 10,
+    "perQuestionScore": 5,
+    "questions": [
+      {
+        "question": "What is the purpose of state in React?",
+        "choices": [
+          "To store information that may change over time",
+          "To declare static values for components",
+          "To define global variables",
+          "None of the above"
+        ],
+        "type": "MCQs",
+        "correctAnswer": "To store information that may change over time"
+      },
+      {
+        "question": "What are hooks in React?",
+        "choices": [
+          "Functions that let you use state and other React features without writing a class",
+          "Functional components",
+          "Connections between components",
+          "None of the above"
+        ],
+        "type": "MCQs",
+        "correctAnswer": "Functions that let you use state and other React features without writing a class"
+      },
+      {
+        "question": "What is the purpose of key prop in React lists?",
+        "choices": [
+          "To uniquely identify a child component",
+          "To style elements within a list",
+          "To define the position of a component",
+          "None of the above"
+        ],
+        "type": "MCQs",
+        "correctAnswer": "To uniquely identify a child component"
+      },
+      {
+        "question": "What is the role of componentDidMount() in React?",
+        "choices": [
+          "It runs after the component output has been rendered to the DOM",
+          "It handles updates before rendering",
+          "It initializes state variables",
+          "None of the above"
+        ],
+        "type": "MCQs",
+        "correctAnswer": "It runs after the component output has been rendered to the DOM"
+      },
+      {
+        "question": "How can you pass data between components in React?",
+        "choices": [
+          "Using props",
+          "Directly modifying state",
+          "Using only functional components",
+          "None of the above"
+        ],
+        "type": "MCQs",
+        "correctAnswer": "Using props"
+      },
+      {
+        "question": "What is the purpose of React.Fragment?",
+        "choices": [
+          "To create an independent component",
+          "To wrap multiple elements without adding an extra node to the DOM",
+          "To handle routing in React applications",
+          "None of the above"
+        ],
+        "type": "MCQs",
+        "correctAnswer": "To wrap multiple elements without adding an extra node to the DOM"
+      },
+      {
+        "question": "What is the significance of shouldComponentUpdate() in React?",
+        "choices": [
+          "It determines if a component should re-render",
+          "It defines the initial state of a component",
+          "It helps to update the DOM directly",
+          "None of the above"
+        ],
+        "type": "MCQs",
+        "correctAnswer": "It determines if a component should re-render"
+      },
+      {
+        "question": "What is the main purpose of Redux in React applications?",
+        "choices": [
+          "To manage the state of the entire application",
+          "To define the structure of components",
+          "To handle routing between components",
+          "None of the above"
+        ],
+        "type": "MCQs",
+        "correctAnswer": "To manage the state of the entire application"
+      },
+      {
+        "question": "How does React handle events?",
+        "choices": [
+          "Using event handlers like onClick",
+          "By modifying the DOM directly",
+          "Through asynchronous processes only",
+          "None of the above"
+        ],
+        "type": "MCQs",
+        "correctAnswer": "Using event handlers like onClick"
+      },
+      {
+        "question": "What are the benefits of using PropTypes in React?",
+        "choices": [
+          "To enforce the type of props passed to components",
+          "To declare global variables",
+          "To initialize state variables",
+          "None of the above"
+        ],
+        "type": "MCQs",
+        "correctAnswer": "To enforce the type of props passed to components"
+      }
+    ]
+  }
+}

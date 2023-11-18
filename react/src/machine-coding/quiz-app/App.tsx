@@ -1,9 +1,12 @@
-import { FC } from "react";
-import styles from "./quiz.module.scss";
+import { FC } from 'react';
+import styles from './quiz.module.scss';
+import Quiz from './Quiz';
 
 const App: FC = () => {
   return (
-    <div>QUIZ APP</div>
+    <main className={styles.app}>
+      <Quiz />
+    </main>
   )
 }
 
