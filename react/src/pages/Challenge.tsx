@@ -41,6 +41,7 @@ import EmojiPicker from '@/machine-coding/emoji-picker/App';
 import ProgrammingLanguageMultiverse from '@/machine-coding/programming-languages-multiverse';
 import Otp from '@/machine-coding/otp/App';
 import TrafficLights from '@/machine-coding/traffic-light/App';
+import QuizApp from "@/machine-coding/quiz-app/App";
 import { challenges } from '@/helpers/challenges';
 import { useParams } from 'react-router-dom';
 
@@ -87,6 +88,7 @@ const reactChallenges = {
   'programming-languages-multiverse': <ProgrammingLanguageMultiverse />,
   otp: <Otp />,
   'traffic-lights': <TrafficLights />,
+  'quiz-app': <QuizApp />,
 };
 
 function Challenge() {
