@@ -1,0 +1,61 @@
+//variables
+$white: #FFFFFF;
+$black: #151417;
+$gray: #333642;
+$bord-size: 30rem;
+$shadow: rgba(0, 0, 0, 0.2) 0px 0px 25px;
+$base-font-size: 16px;
+
+.app {
+  width: 100%;
+  height: 85dvh;
+  background-color: red;
+}
+
+//mixins
+@mixin flex($direction: row, $justify: center, $align: center, $wrap: nowrap, $gap: 0) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+  flex-wrap: $wrap;
+  gap: $gap;
+}
+
+@mixin grid($columsn, $rows, $gap: 0) {
+  display: grid;
+  grid-template-columns: $columsn;
+  grid-template-rows: $rows;
+  gap: $gap;
+}
+
+//styles
+.app {
+  height: 85dvh;
+  width: 100%;
+  background-color: $gray;
+  @include flex();
+}
+
+.chess {
+  width: $bord-size;
+  height: $bord-size;
+  background-color: $black;
+  @include grid(repeat(8, 1fr), repeat(8, 1fr));
+  box-shadow: $shadow;
+  overflow: hidden;
+  background-color: $black;
+  color: $white;
+}
+
+.tile {
+  @include flex;
+  width: 100%;
+  height: 100%;
+  font-size: $base-font-size*2.5;
+}
+
+.tile_color {
+  background-color: $white;
+  overflow: hidden;
+  color: $black;
+}
