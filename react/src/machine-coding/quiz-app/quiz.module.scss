@@ -1,0 +1,142 @@
+// Variables
+$quiz-container: 30rem;
+$dark-blue: #2C3658;
+$blue: #699CF4;
+$light-green: #00fff2;
+$white: #FFFFFF;
+$radius: 1rem;
+$font-primary: 'Inter', sans-serif;
+$base-font-size: 1rem;
+$border-color: rgba($light-green, 0.5);
+$button-active-bg: rgba($dark-blue, 0.6);
+
+// Mixins
+@mixin flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+//styles
+.button {
+  all: unset;
+
+  padding: 0.5rem 1rem;
+  background: $dark-blue;
+  margin-left: auto;
+  border-radius: calc($radius - 0.8rem);
+  outline: none;
+  border: none;
+  cursor: pointer;
+
+  &:active {
+    transform: scale(0.98);
+  }
+
+  &:disabled {
+    background: rgba($dark-blue, 0.3);
+    cursor: not-allowed;
+
+    &:active {
+      transform: none;
+    }
+  }
+}
+
+.app {
+  width: 100%;
+  min-height: 85vh;
+  background-color: $dark-blue;
+  font-family: $font-primary;
+  @include flexCenter;
+  font-size: $base-font-size;
+}
+
+.quiz_container {
+  color: $white;
+  height: $quiz-container;
+  width: $quiz-container;
+  padding: 1rem 2rem;
+  background: $blue;
+  border-radius: $radius;
+  border-top: 5px solid $light-green;
+  transition: all 0.3s ease-in;
+
+  &_header {
+    @include flexCenter;
+    justify-content: space-between;
+  }
+
+  &_footer {
+    width: 100%;
+    display: inline-flex;
+    flex-direction: row-reverse;
+
+    button {
+      @extend .button;
+    }
+  }
+}
+
+.question {
+  min-height: calc($quiz-container - 10rem);
+
+  h2 {
+    min-height: 5rem;
+    font-size: 1.2 * $base-font-size;
+    font-weight: 600;
+    background: rgba($light-green, 0.2);
+    border-radius: calc($radius - 0.6rem);
+    padding: 1rem;
+    border: 2px solid $border-color;
+  }
+
+  &_choices {
+    list-style: none;
+    list-style-position: inside;
+    padding-left: 0;
+
+    &>* {
+      margin-block: 0.4rem;
+    }
+
+    &_choice {
+      padding: 0.5rem;
+      border: 2px solid rgba($dark-blue, 0.5);
+      border-radius: calc($radius - 0.6rem);
+      cursor: pointer;
+      background: rgba($dark-blue, 0.2);
+
+      &:active {
+        transform: scale(0.98);
+      }
+
+      &.selected {
+        background: $button-active-bg;
+      }
+    }
+  }
+}
+
+.quiz_result {
+  @include flexCenter;
+  height: 100%;
+
+  h3 {
+    background: rgba($light-green, 0.2);
+    border: 2px solid $border-color;
+    text-align: center;
+    padding: 0.5rem 1rem;
+    border-radius: calc($radius - 0.5rem);
+  }
+
+  table {
+    background-color: rgba($dark-blue, 0.5);
+    border-collapse: collapse;
+
+    tr>td {
+      padding: 1rem 2rem;
+      border: 2px solid $border-color;
+    }
+  }
+}

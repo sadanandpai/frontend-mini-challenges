@@ -371,6 +371,17 @@ export const challenges = new Map<string, Challenge>([
     },
   ],
   [
+    'quiz-app',
+    {
+      title: 'Quiz App',
+      link: 'quiz-app',
+      difficulty: 'medium',
+      developer: 'AbhilashMadi',
+      tags: [],
+      isNew: true,
+    }
+  ],
+  [
     'food-recipe',
     {
       title: 'Food Recipe',
