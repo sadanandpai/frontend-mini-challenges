@@ -30,7 +30,14 @@ const ChessBoard: FC = () => {
   };
 
   const boardRows: string =
-    'RNBQKBNR' + 'PPPPPPPP' + '        ' + '        ' + '        ' + '        ' + 'pppppppp' + 'rnbqkbnr';
+    'RNBQKBNR' +
+    'PPPPPPPP' +
+    '        ' +
+    '        ' +
+    '        ' +
+    '        ' +
+    'pppppppp' +
+    'rnbqkbnr';
 
   return (
     <section className={styles.chess}>
