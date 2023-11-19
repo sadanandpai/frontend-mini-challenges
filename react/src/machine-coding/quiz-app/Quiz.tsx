@@ -1,16 +1,9 @@
-import { FC, useState } from 'react';
+import { type FC, useState } from 'react';
 import Result from './Result';
-
-import styles from './quiz.module.scss';
 import { quiz } from './react-quiz.json';
-
-export type ResultObj = {
-  score: number;
-  correctAnswers: number;
-  wrongAnswers: number;
-}
-
-export const addLeadingZero = (number: number) => (number > 9 ? number : `0${number}`);
+import { addLeadingZero } from './utils';
+import type { ResultObj } from './types';
+import styles from './quiz.module.scss';
 
 const Quiz: FC = () => {
   const [activeQuestion, setActiveQuestion] = useState<number>(0)
@@ -72,7 +65,7 @@ const Quiz: FC = () => {
                 <li
                   onClick={() => onAnswerSelected(answer, index)}
                   key={answer}
-                  className={`${styles.question_choices_choice} 
+                  className={`${styles.question_choices_choice}
                   ${selectedAnswerIndex === index ? styles.selected : ""}`}
                 >
                   {answer}

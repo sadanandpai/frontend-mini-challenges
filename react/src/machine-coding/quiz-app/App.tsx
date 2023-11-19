@@ -1,6 +1,6 @@
-import { FC } from 'react';
-import styles from './quiz.module.scss';
+import type { FC } from 'react';
 import Quiz from './Quiz';
+import styles from './quiz.module.scss';
 
 const App: FC = () => {
   return (

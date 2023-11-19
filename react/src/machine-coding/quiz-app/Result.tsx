@@ -1,13 +1,14 @@
-import { FC } from 'react';
+import { type FC } from 'react';
+import { addLeadingZero } from './utils';
+import type { ResultObj } from './types';
 import styles from './quiz.module.scss';
-import { addLeadingZero, type ResultObj } from './Quiz';
 
-interface IResult {
+interface ResultProps {
   totalQuestions: number;
   result: ResultObj;
 }
 
-const Result: FC<IResult> = (props) => {
+const Result: FC<ResultProps> = (props) => {
   const { totalQuestions, result } = props;
 
   return (
