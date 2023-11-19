@@ -4,6 +4,7 @@ import { colorTile } from './utils';
 
 const ChessBoard: FC = () => {
   //instead of using an object here we can use Map too
+  //reference: https://qwerty.dev/chess-symbols-to-copy-and-paste
   /**
    * R - Rook
    * N - Knight
@@ -16,7 +17,7 @@ const ChessBoard: FC = () => {
     R: '♜',
     N: '♞',
     B: '♝',
-    Q: '♛', 
+    Q: '♛',
     K: '♚',
     P: '♟',
     r: '♖',
@@ -29,14 +30,7 @@ const ChessBoard: FC = () => {
   };
 
   const boardRows: string =
-    'RNBQKBNR' +
-    'PPPPPPPP' +
-    '        ' +
-    '        ' +
-    '        ' +
-    '        ' +
-    'pppppppp' +
-    'rnbqkbnr';
+    'RNBQKBNR' + 'PPPPPPPP' + '        ' + '        ' + '        ' + '        ' + 'pppppppp' + 'rnbqkbnr';
 
   return (
     <section className={styles.chess}>
