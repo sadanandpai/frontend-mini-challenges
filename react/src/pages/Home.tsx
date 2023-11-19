@@ -7,6 +7,7 @@ import Navbar from '@/components/navbar/Navbar';
 import Testimonials from '@/components/testimonials/testimonials';
 import styles from './styles.module.scss';
 import ScrollBtn from '@/components/scroll-to-top/ScrollBtn';
+import LeaderBoard from '@/components/leaderboard/LeaderBoard';
 
 function Home() {
   return (
@@ -25,6 +26,9 @@ function Home() {
         <Testimonials />
         <hr className={styles.hr} />
         <Contribution />
+        <hr className={styles.hr} />
+        <LeaderBoard/>
+
         <Footer />
         <ScrollBtn/>
       </div>

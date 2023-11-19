@@ -1,4 +1,4 @@
-interface Challenge {
+export interface Challenge {
   title: string;
   link: string;
   difficulty: string;

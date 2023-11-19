@@ -1,4 +1,4 @@
-interface Contributor {
+export interface Contributor {
   name: string;
   pic: string;
 }
