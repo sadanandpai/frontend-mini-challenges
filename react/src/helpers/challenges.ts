@@ -382,6 +382,17 @@ export const challenges = new Map<string, Challenge>([
     }
   ],
   [
+    'chess-board',
+    {
+      title: 'Chess Board',
+      link: 'chess-board',
+      difficulty: 'medium',
+      developer: 'AbhilashMadi',
+      tags: [],
+      isNew: true,
+    }
+  ],
+  [
     'food-recipe',
     {
       title: 'Food Recipe',
