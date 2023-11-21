@@ -6,6 +6,7 @@ export interface Contributor {
 export const contributorsList = [
   { username: 'sadanandpai', avatar: '12962887' },
   { username: 'arpansaha13', avatar: '82361490' },
+  { username: 'procodrr', avatar: '76770313' },
   { username: '5h0ov', avatar: '83227649' },
   { username: 'Sukomal07', avatar: '100500478' },
   { username: 'sujitmahapatra', avatar: '127632703' },
