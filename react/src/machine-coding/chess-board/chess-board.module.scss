@@ -1,8 +1,7 @@
 //variables
-$white: #FFFFFF;
+$white: #ffffff;
 $black: #151417;
 $gray: #333642;
-$bord-size: 30rem;
 $shadow: rgba(0, 0, 0, 0.2) 0px 0px 25px;
 $base-font-size: 16px;
 
@@ -37,8 +36,9 @@ $base-font-size: 16px;
 }
 
 .chess {
-  width: $bord-size;
-  height: $bord-size;
+  height: 100%;
+  min-height: 2.5rem;
+  aspect-ratio: 1;
   background-color: $black;
   @include grid(repeat(8, 1fr), repeat(8, 1fr));
   box-shadow: $shadow;
@@ -51,7 +51,7 @@ $base-font-size: 16px;
   @include flex;
   width: 100%;
   height: 100%;
-  font-size: $base-font-size*2.5;
+  font-size: 3.5em;
 }
 
 .tile_color {
