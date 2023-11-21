@@ -1,10 +1,16 @@
-import { existingContributors } from './contributors';
+import { Contributor } from './contributors-list';
 import styles from './contribution.module.scss';
 
-function Contributor({ contributor }: { contributor: (typeof existingContributors)[0] }) {
+function Contributor({ username, avatar }: Contributor) {
   return (
-    <a href={contributor.html_url} title={contributor.login} className={styles.contributor}>
-      <img src={contributor.avatar_url} alt={contributor.login} loading="lazy" />
+    <a
+      href={`https://github.com/${username}`}
+      title={username}
+      className={styles.contributor}
+      target="_blank"
+      rel="noreferrer"
+    >
+      <img src={`https://avatars.githubusercontent.com/u/${avatar}`} alt={username} loading="lazy" />
     </a>
   );
 }

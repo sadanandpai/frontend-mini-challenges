@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react';
 
 import Contributor from './Contributor';
-import { existingContributors } from './contributors';
+import { contributorsList } from './contributors-list';
 import styles from './contribution.module.scss';
 import { useAutoAnimate } from '@formkit/auto-animate/react';
 
 function Contribution() {
-  const [contributors, setContributors] = useState(existingContributors);
+  const [contributors, setContributors] = useState(contributorsList);
   const [parent] = useAutoAnimate();
 
   useEffect(() => {
@@ -27,7 +27,7 @@ function Contribution() {
       </h2>
       <section className={styles.contributionContainer} ref={parent}>
         {contributors.map((contributor) => (
-          <Contributor key={contributor.login} contributor={contributor} />
+          <Contributor key={contributor.username} {...contributor} />
         ))}
       </section>
     </>
