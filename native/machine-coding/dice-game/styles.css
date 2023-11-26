@@ -84,3 +84,15 @@
     margin-top: 20px;
   }
 }
+button{
+  padding:5px 20px;
+  margin:20px;
+  font-size:medium;
+  background-color: #ff6b6b;
+  border:none;
+  border-radius: 5px;
+}
+button:hover{
+  cursor: pointer;
+  background-color: #ff5151;
+}
