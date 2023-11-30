@@ -1,0 +1,47 @@
+/* stylelint-disable selector-max-type */
+/* stylelint-disable-next-line import-notation */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+html {
+  box-sizing: border-box;
+  font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  scroll-behavior: smooth;  
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  margin: 0;
+}
+
+a {
+  color: blue;
+  text-decoration: none;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Button styling for global */
+button {
+  cursor: pointer;
+}
+
+.btn.btn-primary {
+  padding: 10px 16px;
+  cursor: pointer;
+  background-color: cyan;
+  border: 1px solid grey;
+  border-radius: 4px;
+}

@@ -1,0 +1,50 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+
+  p {
+    margin-bottom: 2rem;
+  }
+}
+
+.figure {
+  margin: 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .heroImage {
+    width: min(80vh, 80vw);
+    aspect-ratio: calc(1120/736);
+  }
+}
+
+.link a {
+  display: inline-block;
+  padding: 1rem;
+  margin: 0.5rem 0;
+  font-weight: 400;
+  color: white;
+  background-color: rgba(31, 6, 255, 68.7%);
+  border-radius: 8px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 12%);
+}
+
+@media screen and (width >= 768px) {
+  .hero {
+    flex-direction: row;
+    text-align: left;
+
+    p {
+      margin-bottom: 3rem;
+    }
+  }
+
+  .figure .heroImage {
+    width: min(60vh, 60vw);
+  }
+}

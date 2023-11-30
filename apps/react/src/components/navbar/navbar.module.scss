@@ -1,0 +1,44 @@
+.navbar {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  padding: 1rem;
+  background: linear-gradient(180deg, lavenderblush 0%, white 100%);
+
+  .logo {
+    display: flex;
+    flex-grow: 1;
+    gap: 0.5rem;
+    align-items: center;
+
+    img {
+      width: 40px;
+      height: 40px;
+    }
+
+    span {
+      font-size: 1.2rem;
+      font-weight: 500;
+      color: #000;
+    }
+  }
+
+  .links {
+    display: none;
+    gap: 2rem;
+    align-items: center;
+    margin-left: auto;
+  }
+
+  .github {
+    width: 30px;
+    height: 30px;
+    vertical-align: text-bottom;
+  }
+}
+
+@media screen and (width >= 768px) {
+  .navbar .links {
+    display: flex;
+  }
+}

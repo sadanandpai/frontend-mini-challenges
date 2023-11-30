@@ -1,0 +1,20 @@
+{
+  "name": "@fmc/main",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nx run-many -t dev --maxParallel=5",
+    "build": "nx run-many -t build",
+    "copy-to-docs": "rm -rf docs && cp -r apps/host/dist docs && cp -r apps/javascript/dist docs/javascript && cp -r apps/react/dist docs/react && cp -r apps/vue/dist docs/vue && cp -r apps/angular/dist/angular/browser docs/angular",
+    "test": "nx test"
+  },
+  "private": true,
+  "dependencies": {},
+  "devDependencies": {
+    "@nx/js": "17.1.3",
+    "nx": "17.1.3"
+  },
+  "workspaces": [
+    "apps/*"
+  ]
+}

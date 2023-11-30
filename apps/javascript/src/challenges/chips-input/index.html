@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="../../logo.svg" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="index.js" type="module"></script>
+    <script src="../../helpers/header.js" type="module"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container text-center">
+      <form>
+        <input type="text" id="userInput" autocomplete="off" placeholder="Type & hit Enter" />
+      </form>
+
+      <div class="chips-display"></div>
+    </div>
+  </body>
+
+  <template id="chipTemplate">
+    <div class="chip flex-center">
+      <span class="chip-name"></span>
+      <button class="remove flex-center">&#x2715;</button>
+    </div>
+  </template>
+</html>

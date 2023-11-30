@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="../../logo.svg" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="index.js" type="module"></script>
+    <script src="../../helpers/header.js" type="module"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container text-center">
+      <div class="carousel" id="carousel">
+        <button class="handle left-handle" id="leftHandle">&lt;</button>
+        <button class="handle right-handle" id="rightHandle">&gt;</button>
+      </div>
+
+      <form>
+        <div>
+          <label for="infinite">Infinite scroll</label>
+          <input type="checkbox" name="infinite" id="infinite" />
+        </div>
+        <div>
+          <label for="autoplay">Autoplay</label>
+          <input type="checkbox" name="autoplay" id="autoplay" />
+        </div>
+        <div>
+          <label for="autoplayInterval">Autoplay Interval</label>
+          <input
+            type="range"
+            name="autoplayInterval"
+            id="autoplayInterval"
+            min="1000"
+            max="5000"
+            value="3000"
+            step="1000"
+            disabled
+          />
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

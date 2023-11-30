@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="../../logo.svg" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="index.js" type="module"></script>
+    <script src="../../helpers/header.js" type="module"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container text-center">
+      <div class="calendar">
+        <div class="controls">
+          <button class="prev">&lt;</button>
+          <select class="month"></select>
+          <select class="year"></select>
+          <button class="next">&gt;</button>
+        </div>
+        <div class="week-days"></div>
+        <div class="days"></div>
+        <button class="btn btn-primary btn-today">Today</button>
+        <p class="selected-date"></p>
+      </div>
+    </div>
+
+    <template class="calendar-template"> </template>
+  </body>
+</html>

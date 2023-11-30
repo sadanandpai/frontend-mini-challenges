@@ -5,44 +5,19 @@ on:
     branches: ["main"]
 
 jobs:
-  build-react:
+  build:
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v3
 
-      - name: setup react deployment
+      # Runs a single command using the runners shell
+      - name: setup git config
         run: |
-          cd react
+          git config user.name "Sadanand Pai"
+          git config user.email "sadypai@gmail.com"
+
+      - name: setup deployment
+        run: |
           npm install
-          rm -rf dist
           npm run build
-          cd ..
-
-  build-angular:
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v3
-
-      - name: setup angular deployment
-        run: |
-          cd angular
-          npm install
-          rm -rf dist
-          npm run build-prod
-          cd ..
-
-  build-vue:
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v3
-
-      - name: setup vue deployment
-        run: |
-          cd vue
-          npm install
-          rm -rf dist
-          npm run build
-          cd ..
