@@ -11,9 +11,9 @@ function Home() {
   return (
     <>
       <Navbar>
-        <a href="/#whyUs">Why us?</a>
-        <a href="/#testimonials">Testimonials</a>
-        <a href="/#contributors">Contributors</a>
+        <a href="#whyUs">Why us?</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#contributors">Contributors</a>
       </Navbar>
 
       <div className={styles.container}>
