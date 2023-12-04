@@ -1,11 +1,11 @@
-import './index.css';
-
+import React from 'react';
+import ReactDOM from 'react-dom/client';
 import { RouterProvider, createHashRouter } from 'react-router-dom';
 
 import Challenge from '@/pages/Challenge.tsx';
 import Challenges from '@/pages/Challenges.tsx';
-import React from 'react';
-import ReactDOM from 'react-dom/client';
+
+import './index.css';
 
 const router = createHashRouter([
   {
