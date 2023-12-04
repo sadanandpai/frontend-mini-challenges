@@ -1,6 +1,6 @@
 import { challenges } from './challenges.js';
 import './navbar.js';
-import '@fmc/shared-styles/core';
+import '../styles/challenge.css';
 
 const metaUTF = document.createElement('meta');
 metaUTF.setAttribute('charset', 'UTF-8');

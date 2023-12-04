@@ -5,13 +5,17 @@
     "*"
   ],
   "exports": {
-    ".": {
-      "import": "./index.css",
-      "require": "./index.css"
+    "./*": {
+      "import": "./common/*.css",
+      "require": "./common/*.css"
     },
-    "./core": {
-      "import": "./core.css",
-      "require": "./core.css"
+    "./challenge/*": {
+      "import": "./challenge/*",
+      "require": "./challenge/*"
+    },
+    "./challenge-grid/*": {
+      "import": "./challenge-grid/*",
+      "require": "./challenge-grid/*"
     }
   }
 }

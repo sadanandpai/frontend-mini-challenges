@@ -24,6 +24,10 @@ a {
   color: var(--text-link);
 }
 
+button {
+  cursor: pointer;
+}
+
 input:disabled,
 button:disabled {
   cursor: not-allowed;

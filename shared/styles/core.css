@@ -1,8 +1,0 @@
-/* All color variables */
-@import './common/theme.css';
-
-@import './common/base.css';
-@import './common/components.css';
-@import './common/utilities.css';
-
-@import './challenge/navbar.css';
