@@ -1,0 +1,31 @@
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+.hidden {
+  /* Ignore all specificity for this class */
+  display: none !important;
+}
+
+button.btn.btn-primary {
+  padding: 10px 16px;
+  background-color: cyan;
+  border: 1px solid grey;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button.btn:disabled,
+.btn.btn-primary:disabled {
+  cursor: not-allowed;
+}
+
+.btn.btn-primary.small {
+  padding: 4px 6px;
+}
+
+.disabled {
+  color: grey;
+  cursor: not-allowed;
+}

@@ -1,0 +1,54 @@
+:root {
+  /* Default body colors */
+  --bg-body: #f3f4f6;
+  --text-body: #111827;
+
+  /* Navbar-specific colors */
+  --bg-navbar: #f9fafb;
+  --shadow-navbar: rgba(0 0 0 / 0.1);
+  --bg-navbar-logo-img: transparent;
+
+  /* Native home colors (challenge list page) */
+  --bg-challenge-card: #f9fafb;
+  --bg-challenge-card-new: rgb(84, 84, 84);
+  --border-challenge-card: rgba(0, 0, 0, 0.15);
+  --shadow-challenge-card: var(--shadow-navbar);
+  --shadow-challenge-card-scaled: rgba(0 0 0 / 0.25);
+
+  /* Footer-specific colors (same as navbar) */
+  --bg-footer: var(--bg-navbar);
+  --shadow-footer: var(--shadow-navbar);
+
+  /* Links */
+  --text-link: blue;
+}
+
+
+/* Dark override for above variables */
+
+:root.dark {
+  /* Default body colors */
+  --bg-body: #030712;
+  --text-body: #e5e7eb;
+
+  /* Navbar-specific colors */
+  --bg-navbar: var(--bg-body);
+  --shadow-navbar: #1f2937;
+  --bg-navbar-logo-img: #d1d5db;
+
+  /* Native home colors (challenge list page) */
+  --bg-challenge-card: #111827;
+  --bg-challenge-card-new: #374151;
+  --border-challenge-card: var(--shadow-navbar);
+  --shadow-challenge-card: var(--shadow-navbar);
+  --shadow-challenge-card-scaled: #374151;
+
+  /* Footer-specific colors (same as navbar) */
+  --bg-footer: var(--bg-navbar);
+  --shadow-footer: var(--shadow-navbar);
+
+  /* Links */
+  --text-link: #6366f1;
+
+  color-scheme: dark;
+}
