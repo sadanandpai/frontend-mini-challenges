@@ -1,5 +1,3 @@
-@import url(../../helpers/core.css);
-
 input {
   width: 75%;
   margin-bottom: 1rem;
@@ -31,5 +29,5 @@ input {
 
 .chip.finalized .remove {
   display: inherit;
-  
+
 }

@@ -1,5 +1,3 @@
-@import url(../../helpers/core.css);
-
 .container {
   min-height: calc(100vh - 6rem);
   display: flex;

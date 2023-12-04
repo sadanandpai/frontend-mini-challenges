@@ -1,5 +1,3 @@
-@import url(../../helpers/core.css);
-
 :root{
     --size: min(14vh, 14vw);
     --transition-time: 1s;
@@ -67,7 +65,7 @@
 }
 
 .tile.match {
-    transform: rotateY(180deg); 
+    transform: rotateY(180deg);
 }
 
 .tile.back-tile.match {
