@@ -1,5 +1,6 @@
 import { challenges } from './src/helpers/challenges.js';
 import { contributors } from './src/helpers/contributors.js';
+import '@fmc/shared-styles';
 
 const challengeTemplate = document.getElementById('challengeTemplate');
 
