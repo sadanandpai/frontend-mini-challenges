@@ -1,44 +1,72 @@
 .navbar {
   display: flex;
-  gap: 2rem;
   align-items: center;
+  justify-content: space-between;
   padding: 1rem;
-  background: linear-gradient(180deg, lavenderblush 0%, white 100%);
+  margin-bottom: 1rem;
+  background-color: var(--bg-navbar);
+  box-shadow: 0 1px 3px 0 var(--shadow-navbar), 0 1px 2px -1px var(--shadow-navbar);
+  transition: all 150ms ease-in-out;
+
+  --icon-container-size: 26px;
+  --github-svg-size: 26px;
 
   .logo {
     display: flex;
-    flex-grow: 1;
     gap: 0.5rem;
     align-items: center;
 
     img {
-      width: 40px;
-      height: 40px;
+      width: var(--icon-container-size);
+      height: var(--icon-container-size);
     }
 
     span {
-      font-size: 1.2rem;
+      color: var(--text-body);
+      text-align: center;
       font-weight: 500;
-      color: #000;
+      font-size: 1rem;
     }
+  }
+
+  .right {
+    display: flex;
+    gap: 2rem;
   }
 
   .links {
     display: none;
-    gap: 2rem;
-    align-items: center;
-    margin-left: auto;
   }
 
   .github {
-    width: 30px;
-    height: 30px;
-    vertical-align: text-bottom;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--icon-container-size);
+    height: var(--icon-container-size);
+    color: var(--text-body);
+
+
+    & > svg {
+      width: var(--github-svg-size);
+      height: var(--github-svg-size);
+    }
   }
 }
 
 @media screen and (width >= 768px) {
-  .navbar .links {
-    display: flex;
+  .navbar {
+    --icon-container-size: 40px;
+    --github-svg-size: 30px;
+
+    .links {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .logo > span {
+      font-size: 1.2rem;
+    }
   }
 }
