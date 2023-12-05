@@ -1,6 +1,6 @@
 <template>
   <ChallengeNavbar :title="title" />
-  <div class="container">
+  <div class="challenge-container">
     <RouterView />
   </div>
 </template>
@@ -8,7 +8,7 @@
 <script setup lang="ts">
 import { ref, watch } from 'vue';
 import { RouterView, useRoute } from 'vue-router';
-import ChallengeNavbar from '@/components/ChallengeNavbar.vue'
+import ChallengeNavbar from '@/components/challenge/Navbar.vue'
 import { challenges } from '@/helpers/challenges';
 
 const route = useRoute()
@@ -23,8 +23,15 @@ watch(route, () => {
 </script>
 
 <style scoped>
-.container {
-  max-width: min(90%, 1200px);
+.challenge-container {
+  max-width: 76rem;
   margin: 0 auto;
+  padding: 1rem;
+  background-color: #f9fafb;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px 0 var(--shadow-navbar), 0 1px 2px -1px var(--shadow-navbar);
+}
+.dark .challenge-container {
+  background-color: #1f2937;
 }
 </style>

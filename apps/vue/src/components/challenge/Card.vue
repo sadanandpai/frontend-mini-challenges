@@ -1,44 +1,41 @@
 <template>
-  <div class="challenge-grid">
-    <template v-for="challenge in challenges.values()" :key="challenge.title">
-      <button v-if="challenge.link === '#'" class="challenge-card disabled" disabled>
-        <div>
-          <h3>{{challenge.title}}</h3>
-        </div>
-      </button>
+  <button v-if="challenge.link === '#'" class="challenge-card disabled" disabled>
+    <div>
+      <h3>{{challenge.title}}</h3>
+    </div>
+  </button>
 
-      <RouterLink
-        v-else
-        :class="['challenge-card', challenge.difficulty]"
-        :to="challenge.link"
-      >
-        <span v-if="challenge.isNew" class="new">New</span>
-        <div>
-          <h3>{{challenge.title}}</h3>
-          <div v-if="challenge.developer" class="developer">
-            <img :src="contributors.get(challenge.developer)?.pic" alt="" />
-            <span class="name">{{ contributors.get(challenge.developer)?.name }}</span>
-          </div>
-        </div>
-      </RouterLink>
-    </template>
-  </div>
+  <RouterLink
+    v-else
+    :class="['challenge-card', challenge.difficulty]"
+    :to="challenge.link"
+  >
+    <span v-if="challenge.isNew" class="new">New</span>
+    <div>
+      <h3>{{challenge.title}}</h3>
+      <div v-if="challenge.developer" class="developer">
+        <img :src="contributors.get(challenge.developer)?.pic" alt="" />
+        <span class="name">{{ contributors.get(challenge.developer)?.name }}</span>
+      </div>
+    </div>
+  </RouterLink>
 </template>
 
 <script setup lang="ts">
-import { RouterLink } from 'vue-router'
-import { challenges } from '@/helpers/challenges';
+import { type PropType } from 'vue';
+import { RouterLink } from 'vue-router';
 import { contributors } from '@/helpers/contributors';
+import type { Challenge } from '@/helpers/challenges';
+
+defineProps({
+  challenge: {
+    type: Object as PropType<Challenge>,
+    required: true,
+  }
+})
 </script>
 
 <style scoped lang="scss">
-.challenge-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  grid-gap: 1.5rem;
-  margin: 2rem 0;
-}
-
 .challenge-card {
   position: relative;
   padding: 10px;
