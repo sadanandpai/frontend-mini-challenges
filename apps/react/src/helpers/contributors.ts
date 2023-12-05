@@ -1,7 +1,4 @@
-interface Contributor {
-  name: string;
-  pic: string;
-}
+import type { Contributor } from '@fmc/shared-types'
 
 export const contributors = new Map<string, Contributor>([
   ['sadanandpai', { name: 'Sadanand Pai', pic: 'https://avatars.githubusercontent.com/u/12962887' }],

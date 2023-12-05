@@ -1,12 +1,4 @@
-interface Challenge {
-  title: string;
-  link: string;
-  difficulty: string;
-  developer?: string;
-  contributors?: string[];
-  tags?: string[];
-  isNew?: boolean;
-}
+import type { Challenge } from '@fmc/shared-types'
 
 export const challenges = new Map<string, Challenge>([
   [

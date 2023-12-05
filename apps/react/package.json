@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@fmc/shared-styles": "*",
+    "@fmc/shared-types": "*",
     "@formkit/auto-animate": "^0.7.0",
     "@mui/icons-material": "^5.13.7",
     "axios": "^1.4.0",

@@ -1,0 +1,13 @@
+{
+  "name": "@fmc/shared-types",
+  "private": true,
+  "files": [
+    "*"
+  ],
+  "exports": {
+    ".": {
+      "import": "./index.d.ts",
+      "require": "./index.d.ts"
+    }
+  }
+}

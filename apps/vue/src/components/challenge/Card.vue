@@ -25,7 +25,7 @@
 import { type PropType } from 'vue';
 import { RouterLink } from 'vue-router';
 import { contributors } from '@/helpers/contributors';
-import type { Challenge } from '@/helpers/challenges';
+import type { Challenge } from '@fmc/shared-types';
 
 defineProps({
   challenge: {
