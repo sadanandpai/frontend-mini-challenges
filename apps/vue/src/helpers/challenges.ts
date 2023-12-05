@@ -103,22 +103,6 @@ export const challenges = new Map<string, Challenge>([
     },
   ],
   [
-    'expense-tracker',
-    {
-      title: 'Expense Tracker',
-      link: "#",
-      difficulty: 'easy',
-    },
-  ],
-  [
-    '25-5-clock',
-    {
-      title: '25-5 Clock',
-      link: "#",
-      difficulty: 'easy',
-    },
-  ],
-  [
     'email-templates',
     {
       title: 'Email Templates',
@@ -161,14 +145,6 @@ export const challenges = new Map<string, Challenge>([
     },
   ],
   [
-    'investment-calculator',
-    {
-      title: 'Investment Calculator',
-      link: '#',
-      difficulty: 'medium',
-    },
-  ],
-  [
     'stopwatch',
     {
       title: 'Stopwatch',
@@ -180,14 +156,6 @@ export const challenges = new Map<string, Challenge>([
     'progress-bar',
     {
       title: 'Progress Bar',
-      link: '#',
-      difficulty: 'medium',
-    },
-  ],
-  [
-    'food-recipe',
-    {
-      title: 'Food Recipe',
       link: '#',
       difficulty: 'medium',
     },
