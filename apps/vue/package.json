@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc && vite build",
+    "build-baseless": "vue-tsc && vite build --base=/vue/",
     "preview": "vite preview"
   },
   "dependencies": {

@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
+    "build-baseless": "tsc && vite build --base=/javascript/",
     "preview": "vite preview"
   },
   "devDependencies": {
