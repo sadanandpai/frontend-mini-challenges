@@ -1,0 +1,48 @@
+.sentences-display {
+  width: 50%;
+  height: 100%;
+  margin: 0 0 1em auto;
+  padding: 5px;
+  overflow: hidden;
+  color: grey;
+  font-size: 2rem;
+  white-space: nowrap;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.sentences-display::first-letter {
+  color: black;
+}
+
+.key {
+  display: inline-block;
+  min-width: 5%;
+  height: 1.5em;
+  margin: 0.1em;
+  padding-top: 0.1em;
+  color: #000;
+  font-weight: bold;
+  font-weight: 400;
+  font-size: 1.5em;
+  text-align: center;
+  background-color: #fff;
+  border: 1px solid #000;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.key.active {
+  color: #fff;
+  background-color: green;
+}
+
+section {
+  width: 50%;
+  margin: 1rem auto;
+  color: #000;
+  font-weight: bold;
+  font-size: 2rem;
+  text-align: center;
+}

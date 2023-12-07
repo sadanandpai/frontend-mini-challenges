@@ -1,0 +1,12 @@
+.board {
+  display: inline-grid;
+}
+
+.box {
+  outline: 1px solid grey;
+}
+
+.info {
+  margin-top: 20px;
+  font-size: large;
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="../../logo.svg" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="index.js" type="module"></script>
+    <script src="../../helpers/header.js" type="module"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container text-center">
+      <form class="flex">
+        <select name="position" id="horizontal-position">
+          <option value="left">Left</option>
+          <option value="right">Right</option>
+        </select>
+
+        <select name="position" id="vertical-position">
+          <option value="top">Top</option>
+          <option value="bottom">Bottom</option>
+        </select>
+
+        <select name="type" id="type">
+          <option value="success">Success</option>
+          <option value="error">Error</option>
+          <option value="warning">Warning</option>
+          <option value="info">Info</option>
+        </select>
+
+        <input
+          type="text"
+          name="message"
+          id="message"
+          placeholder="Message"
+          value="This is a toast message!"
+        />
+
+        <label for="duration" class="flex"
+          >Duration <input type="range" name="duration" id="duration" min="3" max="10" value="5"
+        /></label>
+
+        <button type="button" class="btn btn-primary" id="show-toast">Show Toast</button>
+      </form>
+    </div>
+
+    <div class="toast-container tc-left-top flex"></div>
+    <div class="toast-container tc-left-bottom flex"></div>
+    <div class="toast-container tc-right-top flex"></div>
+    <div class="toast-container tc-right-bottom flex"></div>
+
+    <template id="toast-template">
+      <div class="toast flex">
+        <span class="toast-message"></span>
+        <button class="remove flex-center">&#x2715;</button>
+      </div>
+    </template>
+  </body>
+</html>

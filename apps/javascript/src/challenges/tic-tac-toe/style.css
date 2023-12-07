@@ -1,0 +1,21 @@
+.grid {
+  display: inline-grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.2rem;
+}
+
+.grid > button {
+  width: 5rem;
+  height: 5rem;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.row {
+  margin-top: 1rem;
+}
+
+.winner {
+  font-weight: bold;
+}

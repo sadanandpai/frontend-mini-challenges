@@ -1,0 +1,33 @@
+input {
+  width: 75%;
+  margin-bottom: 1rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+}
+
+.chips-display {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.chip {
+  margin: 0.5em;
+  padding: 0.5em 0.75em;
+  background-color: #eee;
+  border: 1px solid lightgrey;
+  border-radius: 1em;
+}
+
+.chip .remove {
+  all: unset;
+  display: none;
+  vertical-align: middle;
+  margin-left: 0.5em;
+  color: red;
+  cursor: pointer;
+}
+
+.chip.finalized .remove {
+  display: inherit;
+
+}

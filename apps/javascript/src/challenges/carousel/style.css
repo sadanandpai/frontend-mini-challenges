@@ -1,0 +1,75 @@
+.carousel {
+  position: relative;
+  width: 256px;
+  margin: auto;
+}
+
+.img-frame {
+  overflow: hidden;
+}
+
+.img-holder {
+  display: flex;
+  transition: 0.1s all;
+}
+
+img {
+  width: 256px;
+  height: 256px;
+}
+
+.handle {
+  position: absolute;
+  z-index: 1;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  padding: 8px 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  user-select: none;
+}
+
+.left-handle {
+  top: 50%;
+  left: 0;
+  transform: translate(-100%, -50%);
+}
+
+.right-handle {
+  top: 50%;
+  right: 0;
+  transform: translate(100%, -50%);
+}
+
+.dot-holder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 20px;
+  column-gap: 10px;
+  padding: 0;
+}
+
+.dot-holder li {
+  list-style: none;
+}
+
+.dot-holder button {
+  width: 15px;
+  height: 15px;
+  background: white;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px white inset;
+  background-color: lightgrey;
+  cursor: pointer;
+}
+
+.dot-holder .selected {
+  background-color: blue;
+}
+
+form div {
+  margin: 10px 0;
+}

@@ -1,0 +1,36 @@
+.method-list {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  width: 200px;
+  margin: 0.5rem;
+  padding: 0.2rem;
+}
+
+.method-list > div {
+  margin: 0.5rem 0;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 8px 0 rgba(44, 30, 30, 0.2);
+}
+
+.method-list > div > div {
+  margin: 5px 0;
+}
+
+select {
+  font-weight: bold;
+  letter-spacing: 0.25ch;
+  background-color: aqua;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  color: white;
+  font-size: 1.1rem;
+  background-color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}

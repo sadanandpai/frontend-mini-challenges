@@ -1,0 +1,103 @@
+.password-form {
+  border: 1px solid #ccc;
+  display: inline-flex;
+  flex-direction: column;
+  padding: 1rem;
+  gap: 1rem;
+  font-size: 1.25rem;
+  box-shadow: 0 1rem 0.9rem rgba(0, 0, 0, 0.15);
+}
+
+.password-form > div {
+  display: flex;
+  gap: 1rem;
+  text-align: left;
+}
+
+input {
+  padding: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.input-holder {
+  position: relative;
+}
+
+.input-holder input {
+  position: relative;
+  width: 100%;
+  padding-right: 2.5rem;
+}
+
+.copy-btn {
+  position: absolute;
+  right: 0;
+  top: 0.75rem;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.copy-btn:active {
+  transform: scale(0.5);
+}
+
+.btn {
+  cursor: pointer;
+}
+
+/* add clipboard-container */
+.rememberPass-container {
+  border-bottom: 1px solid #ccc;
+  margin-top: 2rem;
+}
+
+.clipboard-container {
+  position: absolute;
+  top: -90px;
+}
+
+.clipboard-container-active {
+  animation: clipboard-animation 1s linear;
+}
+
+.clipboard-container > p {
+  padding: 0.4rem 0.8rem;
+  background-color: rgb(41, 41, 131);
+  border-radius: 0.5rem;
+  color: #fff;
+  font-weight: 600;
+}
+
+@media screen and (min-width: 576px) {
+  .input-holder input  {
+    width: 30ch;
+  }
+}
+
+/* animation for clipboard notification  */
+@keyframes clipboard-animation {
+  10% {
+    top: -90px;
+  }
+
+  20% {
+    top: 5px;
+  }
+
+  40% {
+    top: 5px;
+  }
+
+  60% {
+    top: 5px;
+  }
+
+  80% {
+    top: 5px;
+  }
+
+  100% {
+    top: -90px;
+  }
+}

@@ -1,0 +1,34 @@
+#todoItemInput {
+  margin-bottom: 1rem;
+  padding: 0.25rem;
+  font-size: 1.25rem;
+}
+
+.no-elments {
+  display: none;
+}
+
+.list-container:empty ~ .no-elments {
+  display: block;
+  font-size: 2rem;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+button {
+  margin-left: 0.5rem;
+  color: white;
+  font-size: 1rem;
+  background: white;
+  border: none;
+  cursor: pointer;
+}
+
+button.edit {
+  transform: rotateY(180deg);
+}

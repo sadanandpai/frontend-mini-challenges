@@ -1,0 +1,16 @@
+.grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.row {
+  display: flex;
+}
+
+.box {
+  width: 60px;
+  height: 60px;
+  outline: 1px solid grey;
+}

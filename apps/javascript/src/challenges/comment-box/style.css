@@ -1,0 +1,35 @@
+p {
+  margin: 0.25rem 0;
+}
+
+.main-comment {
+  padding: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.comment-text[contenteditable='true'] {
+  outline: 1px solid #ccc;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.sub-comments {
+  margin-left: 2rem;
+}
+
+button {
+  margin: 0 10px;
+}
+
+input {
+  display: block;
+  margin: 0.5rem 0;
+}
+
+textarea {
+  resize: none;
+}
+
+#commentContainer > .comment:first-child > .main-comment:first-child {
+  background-color: azure;
+}

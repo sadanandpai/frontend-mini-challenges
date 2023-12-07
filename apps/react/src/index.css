@@ -1,0 +1,8 @@
+@import '@fmc/shared-styles/theme';
+@import '@fmc/shared-styles/base';
+@import '@fmc/shared-styles/components';
+@import '@fmc/shared-styles/utilities';
+
+html {
+  scroll-behavior: smooth;
+}

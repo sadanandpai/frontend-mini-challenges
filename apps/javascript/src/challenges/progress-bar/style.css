@@ -1,0 +1,26 @@
+.progress-bar {
+  height: 10px;
+  background-color: #ececec;
+}
+
+.progress {
+  width: 0%;
+  height: 100%;
+  background-color: rgb(79, 79, 241);
+}
+
+.progress-controller {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.progress-controller > button {
+  flex-basis: 15%;
+  margin: 0 10px;
+}
+
+button {
+  display: block;
+  margin: auto;
+}

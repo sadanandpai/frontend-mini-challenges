@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="../../logo.svg" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="index.js" type="module"></script>
+    <script src="../../helpers/header.js" type="module"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container text-center">
+      <p>Use up & down arrows to navigate on suggestions</p>
+      <input
+        type="search"
+        id="userInput"
+        autocomplete="off"
+        spellcheck="false"
+        type="text"
+        placeholder="Search for github username"
+        aria-label="Search"
+        role="combobox"
+        aria-autocomplete="list"
+      />
+      <div id="loader"></div>
+      <div id="info"></div>
+      <ul class="suggestions"></ul>
+    </div>
+  </body>
+</html>

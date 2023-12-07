@@ -1,0 +1,26 @@
+{
+  "name": "@fmc/vue",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc && vite build",
+    "build-baseless": "vue-tsc && vite build --base=/vue/",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@fmc/shared-styles": "*",
+    "@fmc/shared-types": "*",
+    "vue": "^3.3.9",
+    "vue-router": "^4.2.5"
+  },
+  "devDependencies": {
+    "@types/node": "^20.8.0",
+    "@vitejs/plugin-vue": "^4.2.3",
+    "sass": "^1.69.5",
+    "typescript": "^5.2.2",
+    "vite": "^5.0.0",
+    "vue-tsc": "^1.8.5"
+  }
+}

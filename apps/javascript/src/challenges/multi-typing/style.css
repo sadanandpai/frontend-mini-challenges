@@ -1,0 +1,34 @@
+.container {
+  min-height: calc(100vh - 6rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.text {
+  position: relative;
+  color: #32043d;
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+.text.first-text {
+  color: brown;
+}
+
+.text.second-text {
+  border: none;
+  padding-right: 4px;
+  border-right: 2px solid black;
+  min-height: 3rem;
+}
+
+@media screen and (min-width: 768px) {
+  .text {
+    font-size: 4rem;
+  }
+
+  .text.second-text {
+    min-height: 4rem;
+  }
+}

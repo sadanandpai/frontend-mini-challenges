@@ -1,0 +1,19 @@
+{
+  "name": "@fmc/javascript",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "build-baseless": "tsc && vite build --base=/javascript/",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "typescript": "^5.2.2",
+    "vite": "^5.0.0"
+  },
+  "dependencies": {
+    "@fmc/shared-styles": "*"
+  }
+}

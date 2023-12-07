@@ -1,0 +1,33 @@
+.slots {
+  display: flex;
+  justify-content: center;
+}
+
+.slot {
+  width: 5em;
+  height: 5em;
+}
+
+.board {
+  display: inline-grid;
+  background: grey;
+  border: 0.5em solid grey;
+}
+
+.box {
+  width: 5em;
+  height: 5em;
+  background: white;
+  border: 0.5em solid grey;
+  border-radius: 50%;
+}
+
+.active {
+  border: 0.5em solid white;
+  border-radius: 50%;
+}
+
+.button-holder {
+  margin: 20px;
+  font-size: large;
+}

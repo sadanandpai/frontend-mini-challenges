@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="../../helpers/header.js" type="module"></script>
+    <script src="script/script.js" type="module"></script>
+    <title>Hangman Game</title>
+  </head>
+  <body>
+    <div class="game-modal">
+      <div class="modal-context">
+        <img src="images/victory.gif" alt="gif" />
+        <p class="modal-result"></p>
+        <p class="modal-correctWord">Correct word: <b></b></p>
+        <button class="btn btn-again">Play Again</button>
+      </div>
+    </div>
+
+    <div class="main-container">
+      <div class="img-container">
+        <h1 class="main-title">Hangman Game</h1>
+        <img src="images/hangman-0.svg" alt="hangman-img" />
+      </div>
+      <div class="game-container">
+        <ul class="correctWord-list"></ul>
+        <p class="hint-text">
+          Question:
+          <b> </b>
+        </p>
+        <p class="wrong-guess">Wrong guesses: <b></b></p>
+        <div class="keyboard-container"></div>
+      </div>
+    </div>
+  </body>
+</html>

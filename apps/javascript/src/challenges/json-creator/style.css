@@ -1,0 +1,69 @@
+.container {
+  margin: 1rem;
+}
+
+input {
+  position: relative;
+  z-index: 1;
+  width: 100px;
+  padding: 4px;
+}
+
+.sub-item {
+  position: relative;
+  margin-left: 1.5rem;
+  padding: 20px 0 0 20px;
+}
+
+.sub-item::before {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  display: block;
+  width: 20px;
+  height: 1px;
+  background: black;
+  background: black;
+  content: '';
+}
+
+.sub-item::after {
+  position: absolute;
+  top: -10px;
+  left: 0;
+  display: block;
+  width: 1px;
+  height: 40px;
+  background: black;
+  background: black;
+  content: '';
+}
+
+.sub-item:not(:last-child)::after {
+  height: 100%;
+}
+
+.arrow {
+  display: inline-block;
+  cursor: pointer;
+  transition: all 0.15s;
+  user-select: none;
+}
+
+.arrow.open {
+  transform: rotate(90deg);
+  transition: all 0.15s;
+}
+
+.arrow:not(.open) ~ .sub-item,
+.arrow.hide {
+  display: none;
+}
+
+#json-holder > .json-container > .remove {
+  display: none;
+}
+
+.get-json-button {
+  margin: 1rem 0;
+}

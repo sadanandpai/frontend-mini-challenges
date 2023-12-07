@@ -1,0 +1,37 @@
+.display {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  font-size: 3rem;
+  column-gap: 0.5rem;
+}
+
+.display span {
+  order: 1;
+}
+
+.display #secMSB,
+.display #secLSB {
+  order: 2;
+}
+
+input {
+  width: 2rem;
+  margin: 0;
+  font-size: 3rem;
+  border: 1px solid grey;
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+}
+
+.display.progress input {
+  border-color: transparent;
+}
+
+button {
+  padding: 0.5rem 0.8rem;
+  border: 1px solid grey;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
+}

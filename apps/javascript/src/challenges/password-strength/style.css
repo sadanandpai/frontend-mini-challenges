@@ -1,0 +1,33 @@
+input {
+  width: 20rem;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+
+.indicators {
+  width: 20rem;
+  justify-content: space-between;
+  margin: 0.5rem auto 1rem;
+  font-size: 0.8rem;
+  color: lightgrey
+}
+
+.indicators .true{
+  color: green;
+}
+
+.progress-container {
+  position: relative;
+  width: 20rem;
+  height: 0.6rem;
+  margin: auto;
+  border-radius: 8px;
+  outline: 1px solid #ccc;
+}
+
+.progress-bar {
+  width: 0%;
+  height: 100%;
+  background: red;
+  transition: all 0.25s ease-in-out;
+}

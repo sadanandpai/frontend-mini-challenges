@@ -1,0 +1,22 @@
+.display {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem 0;
+  font-size: 3rem;
+}
+
+input {
+  width: 3.25rem;
+  margin: 0;
+  color: black;
+  font-size: 2rem;
+  text-align: center;
+  border: none;
+  border-bottom: 1px solid grey;
+  border-radius: 0;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+}

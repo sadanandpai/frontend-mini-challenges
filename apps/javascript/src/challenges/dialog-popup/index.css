@@ -1,0 +1,26 @@
+button {
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 2px;
+  padding: 3px 7px;
+  text-align: center;
+}
+button:hover {
+  cursor: pointer;
+  background-color: aqua;
+}
+dialog {
+  border: 1px solid black;
+  border-radius: 3px;
+  padding: 10px;
+  max-width: 325px;
+  width: 80%;
+}
+h4 {
+  padding: 0px;
+  margin: 0px;
+  border-bottom: 1px solid black;
+}
+.dialogContent {
+  padding: 10px;
+}
