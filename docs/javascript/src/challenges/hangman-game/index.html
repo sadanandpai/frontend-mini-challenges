@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hangman Game</title>
+    <script type="module" crossorigin src="/frontend-mini-challenges/javascript/assets/index-esjeUxYA.js"></script>
+    <link rel="modulepreload" crossorigin href="/frontend-mini-challenges/javascript/assets/modulepreload-polyfill-9p4a8sJU.js">
+    <link rel="modulepreload" crossorigin href="/frontend-mini-challenges/javascript/assets/challenges-Uq9k6NgB.js">
+    <link rel="modulepreload" crossorigin href="/frontend-mini-challenges/javascript/assets/navbar--MtIQtyW.js">
+    <link rel="modulepreload" crossorigin href="/frontend-mini-challenges/javascript/assets/header-kKXWU0A9.js">
+    <link rel="stylesheet" crossorigin href="/frontend-mini-challenges/javascript/assets/header-vfEOzBtH.css">
+    <link rel="stylesheet" crossorigin href="/frontend-mini-challenges/javascript/assets/index-M61AkX9X.css">
+  </head>
+  <body>
+    <div class="game-modal">
+      <div class="modal-context">
+        <img src="/frontend-mini-challenges/javascript/assets/victory-OYJro-8B.gif" alt="gif" />
+        <p class="modal-result"></p>
+        <p class="modal-correctWord">Correct word: <b></b></p>
+        <button class="btn btn-again">Play Again</button>
+      </div>
+    </div>
+
+    <div class="main-container">
+      <div class="img-container">
+        <h1 class="main-title">Hangman Game</h1>
+        <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='298.232'%20height='291'%20viewBox='0%200%20298.232%20291'%3e%3cg%20id='Group_688'%20data-name='Group%20688'%20transform='translate(-219%20-183)'%3e%3crect%20id='Rectangle_2974'%20data-name='Rectangle%202974'%20width='5'%20height='61.733'%20transform='translate(310.627%20183.247)%20rotate(45)'/%3e%3crect%20id='Rectangle_2966'%20data-name='Rectangle%202966'%20width='5'%20height='298.232'%20rx='2.5'%20transform='translate(517.232%20469)%20rotate(90)'/%3e%3crect%20id='Rectangle_2987'%20data-name='Rectangle%202987'%20width='5'%20height='289'%20rx='2.5'%20transform='translate(267%20183)'/%3e%3crect%20id='Rectangle_2988'%20data-name='Rectangle%202988'%20width='187'%20height='5'%20rx='2.5'%20transform='translate(267%20183)'/%3e%3crect%20id='Rectangle_2989'%20data-name='Rectangle%202989'%20width='5'%20height='49'%20rx='2.5'%20transform='translate(449%20184)'/%3e%3c/g%3e%3c/svg%3e" alt="hangman-img" />
+      </div>
+      <div class="game-container">
+        <ul class="correctWord-list"></ul>
+        <p class="hint-text">
+          Question:
+          <b> </b>
+        </p>
+        <p class="wrong-guess">Wrong guesses: <b></b></p>
+        <div class="keyboard-container"></div>
+      </div>
+    </div>
+  </body>
+</html>
