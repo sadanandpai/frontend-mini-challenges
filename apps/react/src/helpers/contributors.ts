@@ -1,4 +1,4 @@
-import type { Contributor } from '@fmc/shared-types'
+import type { Contributor } from '@fmc/shared-types';
 
 export const contributors = new Map<string, Contributor>([
   ['sadanandpai', { name: 'Sadanand Pai', pic: 'https://avatars.githubusercontent.com/u/12962887' }],
@@ -28,4 +28,5 @@ export const contributors = new Map<string, Contributor>([
   ['rishabhm05', { name: 'Rishabh Mehta', pic: 'https://avatars.githubusercontent.com/u/67910259' }],
   ['jeevaramanathan', { name: 'Jeeva Ramanathan', pic: 'https://avatars.githubusercontent.com/u/64531160' }],
   ['AbhilashMadi', { name: 'Abhilash', pic: 'https://avatars.githubusercontent.com/u/109837171' }],
+  ['AnkitKTrivedi', { name: 'Ankit Kumar Trivedi', pic: 'https://avatars.githubusercontent.com/u/38967951' }],
 ]);
