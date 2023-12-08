@@ -1,4 +1,4 @@
-import type { Challenge } from '@fmc/shared-types'
+import type { Challenge } from '@fmc/shared-types';
 
 export const challenges = new Map<string, Challenge>([
   [
@@ -371,7 +371,7 @@ export const challenges = new Map<string, Challenge>([
       developer: 'AbhilashMadi',
       tags: [],
       isNew: true,
-    }
+    },
   ],
   [
     'chess-board',
@@ -382,7 +382,7 @@ export const challenges = new Map<string, Challenge>([
       developer: 'AbhilashMadi',
       tags: [],
       isNew: true,
-    }
+    },
   ],
   [
     'food-recipe',
@@ -468,6 +468,17 @@ export const challenges = new Map<string, Challenge>([
       difficulty: 'hard',
       developer: 'deepu0',
       tags: [],
+    },
+  ],
+  [
+    'nested-dropdown',
+    {
+      title: 'Nested Dropdown',
+      link: 'nested-dropdown',
+      difficulty: 'medium',
+      developer: 'AnkitKTrivedi',
+      tags: [],
+      isNew: true,
     },
   ],
 ]);

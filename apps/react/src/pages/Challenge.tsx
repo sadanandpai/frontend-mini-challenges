@@ -17,6 +17,7 @@ import InfiniteScrolling from '@/challenges/infinite-scrolling';
 import InvestmentCalc from '@/challenges/investment-calculator/App';
 import LightDarkMode from '@/challenges/light-dark-mode/App';
 import MatchPair from '@/challenges/match-pair/MatchPair';
+import NestedDropdown from '@/challenges/nested-dropdown/App';
 import Pagination from '@/challenges/pagination/App';
 import PasswordGenerator from '@/challenges/password-generator/App';
 import PasswordStrength from '@/challenges/password-strength/passwordStrength';
@@ -91,6 +92,7 @@ const reactChallenges = {
   'traffic-lights': <TrafficLights />,
   'quiz-app': <QuizApp />,
   'chess-board': <ChessBoard />,
+  'nested-dropdown': <NestedDropdown />,
 };
 
 function Challenge() {
