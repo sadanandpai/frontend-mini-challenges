@@ -1,5 +1,5 @@
 import { newSpecPage } from '@stencil/core/testing';
-import { ChallengeGrid } from './challenge-grid';
+import { ChallengeGrid } from '../challenge-grid';
 
 describe('challenge-grid', () => {
   it('renders with slot content', async () => {

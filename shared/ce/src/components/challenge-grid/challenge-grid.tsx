@@ -7,8 +7,10 @@ import { Component, h } from '@stencil/core';
 })
 export class ChallengeGrid {
   render() {
-    return <div class='challenge-grid'>
-      <slot />
-    </div>;
+    return (
+      <div class="challenge-grid">
+        <slot />
+      </div>
+    );
   }
 }
