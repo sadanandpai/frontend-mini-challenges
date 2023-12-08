@@ -19,6 +19,7 @@ export const config: Config = {
     },
   ],
   testing: {
+    // verbose: true,
     browserHeadless: "new",
   },
 };
