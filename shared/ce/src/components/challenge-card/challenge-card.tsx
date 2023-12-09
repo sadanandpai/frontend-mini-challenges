@@ -17,7 +17,7 @@ export class ChallengeCard {
   render() {
     return (
       <a
-        class={`challenge-card ${!this.challenge.link && 'disabled'} ${this.challenge.difficulty}`}
+        class={`challenge-card ${!this.challenge.link ? 'disabled' : ''} ${this.challenge.difficulty}`}
         href={this.challenge.link}
       >
         {this.challenge.isNew && <span class='new'>New</span>}
