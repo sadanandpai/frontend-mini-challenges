@@ -454,7 +454,7 @@ export const challenges = [
     developer: 'sadanandpai',
     tags: [],
   },
-  { title: 'Stepper', link: '#' },
+  { title: 'Stepper', link: null },
   {
     title: 'Progress Bar',
     link: 'progress-bar',
@@ -525,6 +525,6 @@ export const challenges = [
     developer: 'sadanandpai',
     tags: [],
   },
-  { title: 'Emoji Editor', link: '#' },
-  { title: 'Sort Table', link: '#' },
+  { title: 'Emoji Editor', link: null },
+  { title: 'Sort Table', link: null },
 ];

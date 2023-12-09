@@ -4,4 +4,4 @@
 @import '@fmc/shared-styles/components';
 @import '@fmc/shared-styles/utilities';
 
-@import '@fmc/shared-styles/challenge/navbar.css';
+@import './navbar.css'

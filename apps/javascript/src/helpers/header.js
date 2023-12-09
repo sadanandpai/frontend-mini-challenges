@@ -1,6 +1,6 @@
 import { challenges } from './challenges.js';
 import './navbar.js';
-import '../styles/challenge.css';
+import '../styles/challenge-navbar.css';
 
 const metaUTF = document.createElement('meta');
 metaUTF.setAttribute('charset', 'UTF-8');
@@ -21,7 +21,7 @@ favIcon.setAttribute(
   'https://github.com/sadanandpai/frontend-mini-challenges/raw/main/shared/assets/logo.png'
 );
 
-// Add all tagsto the head
+// Add all tags to the head
 const headTags = [metaUTF, metaName, metaHTTP, favIcon];
 headTags.forEach((tag) => document.head.prepend(tag));
 

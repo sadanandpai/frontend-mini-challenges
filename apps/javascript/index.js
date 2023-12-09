@@ -1,45 +1,39 @@
-import { defineCustomElements } from '@fmc/ce/loader/index.js'
+import { defineCustomElements } from '@fmc/ce/loader/index.js';
 import { challenges } from './src/helpers/challenges.js';
 import { contributors } from './src/helpers/contributors.js';
-import './src/styles/challenge-grid.css';
+import './src/styles/index.css';
 
 defineCustomElements()
 
-const challengeTemplate = document.getElementById('challengeTemplate');
+const createChallengeCard = (challenge) => {
+  const challengeCard = document.createElement('challenge-card')
 
-const createAnchorElement = (challenge) => {
-  const challengeCard = challengeTemplate.content.cloneNode(true);
-
-  const card = challengeCard.querySelector('.challenge-card');
-  if (challenge.link === '#') {
-    card.classList.add('disabled');
-    card.title = 'To be developed';
-  } else {
-    card.href = `./src/challenges/${challenge.link}/`;
-    card.classList.add(challenge.difficulty);
+  const challengeProp = {
+    title: challenge.title,
+    link: challenge.link ? `./src/challenges/${challenge.link}/` : null,
+    difficulty: challenge.difficulty,
+    youtube: challenge.youtube,
+    tags: challenge.tags,
+    isNew: challenge.isNew,
   }
-
-  if (challenge.isNew) {
-    challengeCard.querySelector('.new').classList.remove('hidden');
-  }
-
-  const title = challengeCard.querySelector('.challenge-title');
-  title.textContent = challenge.title;
 
   if (challenge.developer) {
-    const developer = challengeCard.querySelector('.developer');
-    developer.classList.remove('hidden');
-
     const contributor = contributors.get(challenge.developer);
-    const developerName = challengeCard.querySelector('.developer-name');
-    const developerImg = challengeCard.querySelector('.developer-img');
-    developerImg.src = contributor?.pic;
-    developerImg.alt = contributor?.name;
-    developerName.textContent = contributor?.name;
+    challengeProp.developer = contributor
   }
 
+  if (challenge.contributors) {
+    challengeProp.contributors = []
+
+    for (const contributorName of contributors) {
+      const contributor = contributors.get(contributorName);
+      challengeProp.contributors.push(contributor)
+    }
+  }
+
+  challengeCard.challenge = challengeProp
   return challengeCard;
 };
 
 const challengeGridEl = document.getElementById('challengeGrid');
-challenges.map(createAnchorElement).forEach((el) => challengeGridEl.appendChild(el));
+challenges.map(createChallengeCard).forEach((el) => challengeGridEl.appendChild(el));
