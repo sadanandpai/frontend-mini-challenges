@@ -5,4 +5,5 @@
 @import '@fmc/shared-styles/utilities';
 
 @import '@fmc/shared-styles/challenge-grid/index.css';
-@import '@fmc/shared-styles/challenge-grid/navbar.css';
+
+@import './navbar.css'

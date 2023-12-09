@@ -1,6 +1,9 @@
+import { defineCustomElements } from '@fmc/ce/loader/index.js'
 import { challenges } from './src/helpers/challenges.js';
 import { contributors } from './src/helpers/contributors.js';
 import './src/styles/challenge-grid.css';
+
+defineCustomElements()
 
 const challengeTemplate = document.getElementById('challengeTemplate');
 

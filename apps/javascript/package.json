@@ -14,6 +14,7 @@
     "vite": "^5.0.0"
   },
   "dependencies": {
+    "@fmc/ce": "*",
     "@fmc/shared-styles": "*"
   }
 }
