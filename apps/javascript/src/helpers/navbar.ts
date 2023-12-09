@@ -1,10 +1,10 @@
 import { defineCustomElements } from '@fmc/ce/loader/index.js';
-import { challenges } from './challenges.js';
+import { challenges } from './challenges.ts';
 
 defineCustomElements()
 
 const challengeLink = window.location.pathname.split('/challenges/')[1].slice(0, -1);
-const challenge = challenges.find((challenge) => challenge.link === challengeLink);
+const challenge = challenges.find((challenge) => challenge.link === challengeLink)!;
 
 const backButton = `
   <a slot="left" href="/frontend-mini-challenges/javascript/" class="back">

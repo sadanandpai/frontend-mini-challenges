@@ -1,6 +1,7 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
+    "allowJs": true,
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
   },
   "include": ["src"]

@@ -1,14 +1,15 @@
-import { defineCustomElements } from '@fmc/ce/loader/index.js';
+import { defineCustomElements, type ChallengeCardProps } from '@fmc/ce/loader/index.js';
 import { challenges } from './src/helpers/challenges.js';
 import { contributors } from './src/helpers/contributors.js';
+import type { Challenge } from '@fmc/shared-types';
 import './src/styles/index.css';
 
 defineCustomElements()
 
-const createChallengeCard = (challenge) => {
+const createChallengeCard = (challenge: Challenge) => {
   const challengeCard = document.createElement('challenge-card')
 
-  const challengeProp = {
+  const challengeProp: ChallengeCardProps = {
     title: challenge.title,
     link: challenge.link ? `./src/challenges/${challenge.link}/` : null,
     difficulty: challenge.difficulty,
@@ -25,9 +26,9 @@ const createChallengeCard = (challenge) => {
   if (challenge.contributors) {
     challengeProp.contributors = []
 
-    for (const contributorName of contributors) {
+    for (const contributorName of challenge.contributors) {
       const contributor = contributors.get(contributorName);
-      challengeProp.contributors.push(contributor)
+      if (contributor) challengeProp.contributors.push(contributor)
     }
   }
 
@@ -35,5 +36,5 @@ const createChallengeCard = (challenge) => {
   return challengeCard;
 };
 
-const challengeGridEl = document.getElementById('challengeGrid');
+const challengeGridEl = document.getElementById('challengeGrid')!;
 challenges.map(createChallengeCard).forEach((el) => challengeGridEl.appendChild(el));

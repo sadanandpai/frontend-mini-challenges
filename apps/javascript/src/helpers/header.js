@@ -1,5 +1,5 @@
-import { challenges } from './challenges.js';
-import './navbar.js';
+import { challenges } from './challenges.ts';
+import './navbar.ts';
 import '../styles/challenge-navbar.css';
 
 const metaUTF = document.createElement('meta');
