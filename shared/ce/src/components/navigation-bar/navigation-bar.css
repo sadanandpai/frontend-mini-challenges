@@ -36,6 +36,7 @@
     display: flex;
     gap: 0.5rem;
     align-items: center;
+    text-decoration: none;
 
     & img,
     & svg {
@@ -51,6 +52,12 @@
 
   & .links {
     display: none;
+  }
+
+  & .icons {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
   }
 
   & .github {
