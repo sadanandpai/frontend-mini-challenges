@@ -385,6 +385,17 @@ export const challenges = new Map<string, Challenge>([
     },
   ],
   [
+    'nested-dropdown',
+    {
+      title: 'Nested Dropdown',
+      link: 'nested-dropdown',
+      difficulty: 'medium',
+      developer: 'AnkitKTrivedi',
+      tags: [],
+      isNew: true,
+    },
+  ],
+  [
     'food-recipe',
     {
       title: 'Food Recipe',
@@ -392,7 +403,6 @@ export const challenges = new Map<string, Challenge>([
       difficulty: 'medium',
       developer: 'Kei-K23',
       tags: [],
-      isNew: true,
     },
   ],
   [
@@ -468,17 +478,6 @@ export const challenges = new Map<string, Challenge>([
       difficulty: 'hard',
       developer: 'deepu0',
       tags: [],
-    },
-  ],
-  [
-    'nested-dropdown',
-    {
-      title: 'Nested Dropdown',
-      link: 'nested-dropdown',
-      difficulty: 'medium',
-      developer: 'AnkitKTrivedi',
-      tags: [],
-      isNew: true,
     },
   ],
 ]);
