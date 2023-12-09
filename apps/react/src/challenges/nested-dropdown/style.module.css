@@ -3,8 +3,7 @@
 }
 .nestedDropdown {
   display: flex;
-  align-items: center;
-  max-width: 30%;
+  justify-content: center;
   margin: 0 auto;
   padding: 0 20px;
   height: 58px;
@@ -13,6 +12,8 @@
 .dropdownMain {
   display: flex;
   list-style: none;
+  padding-inline-start: 0px;
+  min-width: 10rem;
 }
 
 .dropdownItems {
@@ -59,7 +60,6 @@
 }
 
 .dropdown {
-  position: absolute;
   right: 0;
   left: auto;
   box-shadow: 0 10px 15px - 3px rgba(46, 41, 51, 0.08), 0 4px 6px - 2px rgba(71, 63, 79, 0.16);
@@ -78,7 +78,24 @@
 }
 
 .dropdown.dropdownSubItems {
-  position: absolute;
   left: 100%;
   top: -7px;
+  min-width: 10rem;
+}
+
+@media (max-width: 820px) {
+  .dropdown.dropdownSubItems {
+    top: auto;
+    left: auto;
+    right: 0px;
+  }
+}
+
+@media (min-width: 820px) {
+  .dropdown {
+    position: absolute;
+  }
+  .dropdown.dropdownSubItems {
+    position: absolute;
+  }
 }
