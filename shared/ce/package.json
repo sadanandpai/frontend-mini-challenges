@@ -21,6 +21,7 @@
     "generate": "stencil generate"
   },
   "dependencies": {
+    "@fmc/shared-types": "*",
     "@stencil/core": "^4.7.0"
   },
   "devDependencies": {
