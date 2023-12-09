@@ -1,8 +1,6 @@
-import { useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import Dropdown from './Dropdown';
 import styles from './style.module.css';
-import { useEffect } from "react";
-import { useRef } from "react";
 
 const DropdownItems = ({ items, depthLevel }) => {
     const [dropdown, setDropdown] = useState(false);
