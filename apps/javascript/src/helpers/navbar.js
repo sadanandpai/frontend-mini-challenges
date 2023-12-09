@@ -23,7 +23,7 @@ const backButton = `
 const challengeTitle = `<span slot="left">${challenge.title}</span>`
 
 const youtubeLink = challenge?.youtube
-  ? `<a slot="right" href=${challenge.youtube} target="blank" class="youtube">
+  ? `<a slot="icon" href=${challenge.youtube} target="blank" class="youtube">
     <img src="https://cdn-icons-png.flaticon.com/256/1384/1384060.png" alt="youtube solution" />
   </a>`
   : ''
