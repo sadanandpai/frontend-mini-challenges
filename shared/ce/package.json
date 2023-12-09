@@ -21,10 +21,10 @@
     "generate": "stencil generate"
   },
   "dependencies": {
-    "@fmc/shared-types": "*",
     "@stencil/core": "^4.7.0"
   },
   "devDependencies": {
+    "@fmc/shared-types": "*",
     "@types/jest": "^29.5.6",
     "@types/node": "^16.18.11",
     "jest": "^29.7.0",

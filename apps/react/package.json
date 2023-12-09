@@ -12,7 +12,6 @@
   },
   "dependencies": {
     "@fmc/shared-styles": "*",
-    "@fmc/shared-types": "*",
     "@formkit/auto-animate": "^0.7.0",
     "@mui/icons-material": "^5.13.7",
     "axios": "^1.4.0",
@@ -28,6 +27,7 @@
     "sort-by": "^1.2.0"
   },
   "devDependencies": {
+    "@fmc/shared-types": "*",
     "@types/react": "^18.2.37",
     "@types/react-dom": "^18.2.15",
     "@typescript-eslint/eslint-plugin": "^6.10.0",
