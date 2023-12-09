@@ -4,7 +4,7 @@ export interface Challenge {
   /* Set the link to `null` if the solution is not available. */
   link: string | null;
 
-  difficulty?: 'easy' | 'medium' | 'hard';
+  difficulty: 'easy' | 'medium' | 'hard';
   developer?: string;
   contributors?: string[];
   youtube?: string;
