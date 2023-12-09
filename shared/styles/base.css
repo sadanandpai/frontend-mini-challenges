@@ -14,7 +14,6 @@ html {
 
 body {
   margin: 0;
-  background-color: var(--bg-body);
   color: var(--text-body);
   transition: all 150ms ease-in-out;
 }
