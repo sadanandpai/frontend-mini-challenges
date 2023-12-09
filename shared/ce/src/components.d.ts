@@ -8,6 +8,8 @@ import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface ChallengeGrid {
     }
+    interface NavigationBar {
+    }
 }
 declare global {
     interface HTMLChallengeGridElement extends Components.ChallengeGrid, HTMLStencilElement {
@@ -16,15 +18,25 @@ declare global {
         prototype: HTMLChallengeGridElement;
         new (): HTMLChallengeGridElement;
     };
+    interface HTMLNavigationBarElement extends Components.NavigationBar, HTMLStencilElement {
+    }
+    var HTMLNavigationBarElement: {
+        prototype: HTMLNavigationBarElement;
+        new (): HTMLNavigationBarElement;
+    };
     interface HTMLElementTagNameMap {
         "challenge-grid": HTMLChallengeGridElement;
+        "navigation-bar": HTMLNavigationBarElement;
     }
 }
 declare namespace LocalJSX {
     interface ChallengeGrid {
     }
+    interface NavigationBar {
+    }
     interface IntrinsicElements {
         "challenge-grid": ChallengeGrid;
+        "navigation-bar": NavigationBar;
     }
 }
 export { LocalJSX as JSX };
@@ -32,6 +44,7 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "challenge-grid": LocalJSX.ChallengeGrid & JSXBase.HTMLAttributes<HTMLChallengeGridElement>;
+            "navigation-bar": LocalJSX.NavigationBar & JSXBase.HTMLAttributes<HTMLNavigationBarElement>;
         }
     }
 }
