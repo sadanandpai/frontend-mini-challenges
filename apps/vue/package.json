@@ -11,11 +11,11 @@
   },
   "dependencies": {
     "@fmc/shared-styles": "*",
-    "@fmc/shared-types": "*",
     "vue": "^3.3.9",
     "vue-router": "^4.2.5"
   },
   "devDependencies": {
+    "@fmc/shared-types": "*",
     "@types/node": "^20.10.4",
     "@vitejs/plugin-vue": "^4.5.2",
     "sass": "^1.69.5",
