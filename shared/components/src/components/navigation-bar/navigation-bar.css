@@ -23,7 +23,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem;
+  padding: calc(1rem - var(--logo-size-increment) / 2);
   margin-bottom: 1rem;
   background-color: var(--bg-navbar);
   box-shadow: 0 1px 3px 0 var(--shadow-navbar), 0 1px 2px -1px var(--shadow-navbar);
@@ -31,6 +31,7 @@
 
   --icon-container-size: 26px;
   --github-svg-size: 26px;
+  --logo-size-increment: 8px;
 
   & .logo {
     display: flex;
@@ -40,8 +41,8 @@
 
     & img,
     & svg {
-      width: var(--icon-container-size);
-      height: var(--icon-container-size);
+      width: calc(var(--icon-container-size) + var(--logo-size-increment));
+      height: calc(var(--icon-container-size) + var(--logo-size-increment));
     }
   }
 
@@ -80,6 +81,7 @@
   .navbar {
     --icon-container-size: 40px;
     --github-svg-size: 30px;
+    --logo-size-increment: 6px;
 
     & .links {
       display: flex;
