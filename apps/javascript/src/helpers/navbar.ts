@@ -1,4 +1,4 @@
-import { defineCustomElements } from '@fmc/ce/loader/index.js';
+import { defineCustomElements } from '@fmc/components/loader/index.js';
 import { challenges } from './challenges.ts';
 
 defineCustomElements()

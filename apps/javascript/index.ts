@@ -1,4 +1,4 @@
-import { defineCustomElements, type ChallengeCardProps } from '@fmc/ce/loader/index.js';
+import { defineCustomElements, type ChallengeCardProps } from '@fmc/components/loader/index.js';
 import { challenges } from './src/helpers/challenges.js';
 import { contributors } from './src/helpers/contributors.js';
 import type { Challenge } from '@fmc/shared-types';

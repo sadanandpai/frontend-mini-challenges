@@ -1,5 +1,5 @@
 {
-  "name": "@fmc/ce",
+  "name": "@fmc/components",
   "description": "Stencil Component Starter",
   "main": "dist/index.cjs.js",
   "module": "dist/index.js",
