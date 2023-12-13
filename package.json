@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "nx run-many -t dev --maxParallel=5",
     "build": "nx run-many -t build",
-    "build-baseless": "nx run-many -t build-baseless",
+    "build-baseless": "nx run @fmc/components:build && nx run-many -t build-baseless",
     "stencil:start": "nx run @fmc/components:start",
     "copy-to-docs": "rm -rf docs && cp -r apps/host/dist docs && cp -r apps/javascript/dist docs/javascript && cp -r apps/react/dist docs/react && cp -r apps/vue/dist docs/vue && cp -r apps/angular/dist/angular/browser docs/angular",
     "test": "nx test"
