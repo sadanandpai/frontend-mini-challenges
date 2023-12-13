@@ -1,7 +1,7 @@
-import { defineCustomElements } from '@fmc/components/loader/index.js';
+import { defineCustomElement as defineNavigationBar } from '@fmc/components/dist/components/navigation-bar.js';
 import { challenges } from './challenges.ts';
 
-defineCustomElements()
+defineNavigationBar()
 
 const challengeLink = window.location.pathname.split('/challenges/')[1].slice(0, -1);
 const challenge = challenges.find((challenge) => challenge.link === challengeLink)!;

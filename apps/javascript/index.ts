@@ -1,10 +1,15 @@
-import { defineCustomElements, type ChallengeCardProps } from '@fmc/components/loader/index.js';
+import { defineCustomElement as defineChallengeCard, } from '@fmc/components/dist/components/challenge-card.js';
+import { defineCustomElement as defineChallengeGrid } from '@fmc/components/dist/components/challenge-grid.js';
+import { defineCustomElement as defineNavigationBar } from '@fmc/components/dist/components/navigation-bar.js';
+import type { ChallengeCardProps } from '@fmc/components/dist/types/index.js';
 import { challenges } from './src/helpers/challenges.js';
 import { contributors } from './src/helpers/contributors.js';
 import type { Challenge } from '@fmc/shared-types';
 import './src/styles/index.css';
 
-defineCustomElements()
+defineChallengeCard()
+defineChallengeGrid()
+defineNavigationBar()
 
 const createChallengeCard = (challenge: Challenge) => {
   const challengeCard = document.createElement('challenge-card')
