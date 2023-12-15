@@ -10,7 +10,11 @@ function Contributor({ username, avatar }: Contributor) {
       target="_blank"
       rel="noreferrer"
     >
-      <img src={`https://avatars.githubusercontent.com/u/${avatar}`} alt={username} loading="lazy" />
+      <img
+        src={`https://avatars.githubusercontent.com/u/${avatar}`}
+        alt={username}
+        loading="lazy"
+      />
     </a>
   );
 }

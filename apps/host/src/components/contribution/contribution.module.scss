@@ -3,6 +3,16 @@
   text-align: center;
 }
 
+.maintainerContainer {
+  text-align: center;
+  margin-bottom: 2rem;
+
+  .contributor {
+    width: 80px;
+    height: 80px;
+  }
+}
+
 .contributionContainer {
   display: flex;
   flex-wrap: wrap;
@@ -30,6 +40,11 @@
 }
 
 @media screen and (width >= 768px) {
+  .maintainerContainer .contributor {
+    width: 120px;
+    height: 120px;
+  }
+
   .contributor {
     width: 80px;
     height: 80px;

@@ -1,7 +1,10 @@
 import { useEffect, useState } from "react";
 
 import Contributor from "./Contributor";
-import { contributorsList } from "./contributors-list";
+import {
+  Contributor as IContributor,
+  maintainersList,
+} from "./contributors-list";
 import styles from "./contribution.module.scss";
 import { useAutoAnimate } from "@formkit/auto-animate/react";
 import axios from "axios";
@@ -17,11 +20,12 @@ async function getContributors() {
 }
 
 function Contribution() {
-  const [contributors, setContributors] = useState(contributorsList);
+  const [contributors, setContributors] = useState<IContributor[]>([]);
+  const [maintainers] = useState(maintainersList);
   const [parent] = useAutoAnimate();
 
   useEffect(() => {
-    getContributors().then(setContributors);
+    getContributors().then((list) => setContributors(list.slice(2)));
   }, []);
 
   useEffect(() => {
@@ -43,6 +47,12 @@ function Contribution() {
       <h2 className={styles.heading} id="contributors">
         Contributors
       </h2>
+
+      <section className={styles.maintainerContainer}>
+        <Contributor key={maintainers[0].username} {...maintainers[0]} />
+        <Contributor key={maintainers[1].username} {...maintainers[1]} />
+      </section>
+
       <section className={styles.contributionContainer} ref={parent}>
         {contributors.map((contributor) => (
           <Contributor key={contributor.username} {...contributor} />

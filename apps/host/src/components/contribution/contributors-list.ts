@@ -3,7 +3,7 @@ export interface Contributor {
   avatar: string;
 }
 
-export const contributorsList = [
-  { username: 'sadanandpai', avatar: '12962887' },
-  { username: 'arpansaha13', avatar: '82361490' },
+export const maintainersList: Contributor[] = [
+  { username: "sadanandpai", avatar: "12962887" },
+  { username: "arpansaha13", avatar: "82361490" },
 ];
