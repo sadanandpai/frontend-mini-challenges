@@ -7,7 +7,7 @@ navigation-bar {
 
   & span {
     color: var(--text-body);
-    font-weight: 500;
+    font-weight: bold;
     font-size: 1rem;
   }
 }

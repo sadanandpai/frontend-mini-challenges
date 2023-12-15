@@ -9,15 +9,23 @@ export class NavigationBar {
   render() {
     return (
       <nav class='navbar'>
-        <a class='logo' href="/frontend-mini-challenges/">
-          <img
-            src="https://github.com/sadanandpai/frontend-mini-challenges/raw/main/shared/assets/logo.png"
-            alt="logo"
-          />
-          <slot name="left" />
-        </a>
+        <div class="left">
+          <a class='logo' href="/frontend-mini-challenges/">
+            <img
+              src="https://github.com/sadanandpai/frontend-mini-challenges/raw/main/shared/assets/logo.png"
+              alt="logo"
+            />
+            <slot name="logo" />
+          </a>
 
-        <div class='right'>
+          <div class="left">
+            <slot name="left" />
+          </div>
+        </div>
+
+
+
+        <div class="right">
           <div class='links'>
             <slot name="right" />
           </div>

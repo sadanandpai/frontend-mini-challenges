@@ -13,11 +13,16 @@ navigation-bar {
 
   & a {
     color: var(--text-link);
+    border-radius: 4px;
+
+    &:hover {
+      background-color: #e5e7eb;
+    }
   }
 
   & span {
     color: var(--text-body);
-    font-weight: 500;
+    font-weight: bold;
     font-size: 1rem;
   }
 }

@@ -33,16 +33,22 @@
   --github-svg-size: 26px;
   --logo-size-increment: 8px;
 
-  & .logo {
+  & .left {
     display: flex;
     gap: 0.5rem;
     align-items: center;
-    text-decoration: none;
 
-    & img,
-    & svg {
-      width: calc(var(--icon-container-size) + var(--logo-size-increment));
-      height: calc(var(--icon-container-size) + var(--logo-size-increment));
+    & .logo {
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+      text-decoration: none;
+
+      & img,
+      & svg {
+        width: calc(var(--icon-container-size) + var(--logo-size-increment));
+        height: calc(var(--icon-container-size) + var(--logo-size-increment));
+      }
     }
   }
 
