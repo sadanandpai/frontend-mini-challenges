@@ -3,6 +3,10 @@
   --bg-body: #f3f4f6;
   --text-body: #111827;
 
+  --bg-navbar: #f9fafb;
+  --shadow-navbar: rgba(0 0 0 / 0.1);
+  --bg-navbar-logo-img: transparent;
+
   /* Footer-specific colors */
   --bg-footer: #f9fafb;
   --shadow-footer: rgba(0 0 0 / 0.1);
