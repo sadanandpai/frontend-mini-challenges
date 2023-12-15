@@ -12,6 +12,7 @@ import TableColorizer from "./challenges/table-colorizer/index.vue";
 import Pagination from "./challenges/pagination/index.vue";
 import Accordion from "./challenges/accordion/index.vue";
 import ToastPopup from "./challenges/toast-popup/index.vue";
+import PasswordStrength from "./challenges/password-strength/index.vue";
 
 const routes: RouteRecordRaw[] = [
   { path: "/", component: Challenges },
@@ -54,6 +55,10 @@ const routes: RouteRecordRaw[] = [
       {
         path: "/toast-popup",
         component: ToastPopup,
+      },
+      {
+        path: "/password-strength",
+        component: PasswordStrength,
       },
     ],
   },

@@ -117,8 +117,10 @@ export const challenges = new Map<string, Challenge>([
     'password-strength',
     {
       title: 'Password Strength',
-      link: '#',
+      link: "/password-strength",
       difficulty: 'medium',
+      developer: 'jaydadhaniya',
+      tags: [],
     },
   ],
   [
