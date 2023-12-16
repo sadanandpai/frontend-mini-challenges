@@ -65,8 +65,10 @@ export const challenges = new Map<string, Challenge>([
     'stack',
     {
       title: 'Stack',
-      link: "#",
+      link: "/stack",
       difficulty: 'easy',
+      developer: 'jaydadhaniya',
+      tags: [],
     },
   ],
   [

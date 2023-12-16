@@ -13,6 +13,7 @@ import Pagination from "./challenges/pagination/index.vue";
 import Accordion from "./challenges/accordion/index.vue";
 import ToastPopup from "./challenges/toast-popup/index.vue";
 import PasswordStrength from "./challenges/password-strength/index.vue";
+import Stack from "./challenges/stack/index.vue";
 
 const routes: RouteRecordRaw[] = [
   { path: "/", component: Challenges },
@@ -60,6 +61,10 @@ const routes: RouteRecordRaw[] = [
         path: "/password-strength",
         component: PasswordStrength,
       },
+      {
+        path: "/stack",
+        component: Stack
+      }
     ],
   },
 ];
