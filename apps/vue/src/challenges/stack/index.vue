@@ -43,8 +43,8 @@ function popItem() {
     if (!stack.value.length) {
         output.value = 'Stack is empty'
     } else {
-        output.value = `${stack.value[stack.value.length - 1]} is popped from the Stack`
-        stack.value = stack.value.slice(0, -1)
+        output.value = `${stack.value.at(-1)} is popped from the Stack`
+        stack.value.pop()
     }
 }
 
@@ -52,7 +52,7 @@ function peekItem() {
     if (!stack.value.length) {
         output.value = 'Stack is empty'
     } else {
-        output.value = `Last element is ${stack.value[stack.value.length - 1]}`
+        output.value = `Last element is ${stack.value.at(-1)}`
     }
 }
 
