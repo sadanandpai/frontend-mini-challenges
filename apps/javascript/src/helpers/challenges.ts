@@ -1,4 +1,4 @@
-import type { Challenge } from '@fmc/shared-types'
+import type { Challenge } from '@fmc/shared-types';
 
 export const challenges: Challenge[] = [
   {
@@ -9,7 +9,7 @@ export const challenges: Challenge[] = [
     youtube: 'https://youtu.be/9OIeUtXX3SA',
     tags: [],
   },
-   {
+  {
     title: 'BMI Calculator',
     link: 'bmi-calculator',
     difficulty: 'easy',
@@ -456,7 +456,6 @@ export const challenges: Challenge[] = [
     developer: 'sadanandpai',
     tags: [],
   },
-  { title: 'Stepper', link: null, difficulty: 'medium' },
   {
     title: 'Progress Bar',
     link: 'progress-bar',
@@ -527,6 +526,4 @@ export const challenges: Challenge[] = [
     developer: 'sadanandpai',
     tags: [],
   },
-  { title: 'Emoji Editor', link: null, difficulty: 'hard' },
-  { title: 'Sort Table', link: null, difficulty: 'hard' },
 ];

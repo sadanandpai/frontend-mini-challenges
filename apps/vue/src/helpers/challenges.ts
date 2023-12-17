@@ -1,4 +1,4 @@
-import type { Challenge } from '@fmc/shared-types'
+import type { Challenge } from '@fmc/shared-types';
 
 export const challenges = new Map<string, Challenge>([
   [
@@ -45,7 +45,7 @@ export const challenges = new Map<string, Challenge>([
     'guess-the-number',
     {
       title: 'Guess the number',
-      link: "/guess-the-number",
+      link: '/guess-the-number',
       difficulty: 'easy',
       developer: 'arpansaha13',
       tags: [],
@@ -55,7 +55,7 @@ export const challenges = new Map<string, Challenge>([
     'pagination',
     {
       title: 'Pagination',
-      link: "/pagination",
+      link: '/pagination',
       difficulty: 'easy',
       developer: 'arpansaha13',
       tags: [],
@@ -65,44 +65,20 @@ export const challenges = new Map<string, Challenge>([
     'stack',
     {
       title: 'Stack',
-      link: "/stack",
+      link: '/stack',
       difficulty: 'easy',
       developer: 'jaydadhaniya',
       tags: [],
     },
   ],
   [
-    'star-rating',
-    {
-      title: 'Star Rating',
-      link: "#",
-      difficulty: 'easy',
-    },
-  ],
-  [
     'telephone-formatter',
     {
       title: 'Telephone formatter',
-      link: "/telephone-formatter",
+      link: '/telephone-formatter',
       difficulty: 'easy',
       developer: 'arpansaha13',
       tags: [],
-    },
-  ],
-  [
-    'tic-tac-toe',
-    {
-      title: 'Tic Tac Toe',
-      link: "#",
-      difficulty: 'easy',
-    },
-  ],
-  [
-    'email-templates',
-    {
-      title: 'Email Templates',
-      link: '#',
-      difficulty: 'medium',
     },
   ],
   [
@@ -119,106 +95,10 @@ export const challenges = new Map<string, Challenge>([
     'password-strength',
     {
       title: 'Password Strength',
-      link: "/password-strength",
+      link: '/password-strength',
       difficulty: 'medium',
       developer: 'jaydadhaniya',
       tags: [],
-    },
-  ],
-  [
-    'column-table',
-    {
-      title: 'Column Table',
-      link: '#',
-      difficulty: 'medium',
-    },
-  ],
-  [
-    'todo-list',
-    {
-      title: 'Todo List',
-      link: '#',
-      difficulty: 'medium',
-    },
-  ],
-  [
-    'stopwatch',
-    {
-      title: 'Stopwatch',
-      link: '#',
-      difficulty: 'medium',
-    },
-  ],
-  [
-    'progress-bar',
-    {
-      title: 'Progress Bar',
-      link: '#',
-      difficulty: 'medium',
-    },
-  ],
-  [
-    'password-generator',
-    {
-      title: 'Password Generator',
-      link: '#',
-      difficulty: 'medium',
-    },
-  ],
-  [
-    'match-pair',
-    {
-      title: 'Match Pair',
-      link: '#',
-      difficulty: 'medium',
-    },
-  ],
-  [
-    'infinite-scrolling',
-    {
-      title: 'Infinite Scrolling (online)',
-      link: '#',
-      difficulty: 'medium',
-    },
-  ],
-  [
-    'file-explorer',
-    {
-      title: 'File Explorer',
-      link: '#',
-      difficulty: 'hard',
-    },
-  ],
-  [
-    'autocomplete-offline',
-    {
-      title: 'Typeahead / Autocomplete (offline)',
-      link: '#',
-      difficulty: 'hard',
-    },
-  ],
-  [
-    'autocomplete-online',
-    {
-      title: 'Typeahead / Autocomplete (online)',
-      link: '#',
-      difficulty: 'hard',
-    },
-  ],
-  [
-    'emoji-editor',
-    {
-      title: 'Emoji Editor',
-      link: '#',
-      difficulty: 'hard',
-    },
-  ],
-  [
-    'sort-table',
-    {
-      title: 'Sort Table',
-      link: '#',
-      difficulty: 'hard',
     },
   ],
 ]);
