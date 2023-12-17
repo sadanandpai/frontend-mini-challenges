@@ -1,4 +1,4 @@
-import { Component, h } from '@stencil/core';
+import { Component, Prop, h } from '@stencil/core';
 
 @Component({
   tag: 'navigation-bar',
@@ -6,6 +6,8 @@ import { Component, h } from '@stencil/core';
   shadow: true,
 })
 export class NavigationBar {
+  @Prop() challengeTitle?: string;
+
   render() {
     return (
       <nav class='navbar'>
@@ -18,12 +20,14 @@ export class NavigationBar {
             <slot name="logo" />
           </a>
 
-          <div class="left">
+          <div>
             <slot name="left" />
           </div>
+
+          {this.challengeTitle && <h1>{this.challengeTitle}</h1>}
         </div>
 
-
+        {this.challengeTitle && <h1>{this.challengeTitle}</h1>}
 
         <div class="right">
           <div class='links'>

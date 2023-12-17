@@ -14,6 +14,7 @@ export namespace Components {
     interface ChallengeGrid {
     }
     interface NavigationBar {
+        "challengeTitle"?: string;
     }
 }
 declare global {
@@ -48,6 +49,7 @@ declare namespace LocalJSX {
     interface ChallengeGrid {
     }
     interface NavigationBar {
+        "challengeTitle"?: string;
     }
     interface IntrinsicElements {
         "challenge-card": ChallengeCard;

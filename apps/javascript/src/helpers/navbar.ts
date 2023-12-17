@@ -20,8 +20,6 @@ const backButton = `
   </a>
 `
 
-const challengeTitle = `<span slot="left">${challenge.title}</span>`
-
 const youtubeLink = challenge?.youtube
   ? `<a slot="icon" href=${challenge.youtube} target="blank" class="youtube">
     <img src="https://cdn-icons-png.flaticon.com/256/1384/1384060.png" alt="youtube solution" />
@@ -29,7 +27,7 @@ const youtubeLink = challenge?.youtube
   : ''
 
 const navbar = document.createElement('navigation-bar');
-navbar.innerHTML += backButton
-navbar.innerHTML += challengeTitle
-navbar.innerHTML += youtubeLink
+navbar.challengeTitle = challenge.title;
+navbar.innerHTML += backButton;
+navbar.innerHTML += youtubeLink;
 document.body.prepend(navbar);
