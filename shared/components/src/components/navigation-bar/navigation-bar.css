@@ -1,0 +1,123 @@
+/* @import '../common/dark-toggle.css'; */
+
+:host {
+  display: block;
+
+  --text-body: #111827;
+
+  --bg-navbar: #f9fafb;
+  --shadow-navbar: rgba(0 0 0 / 0.1);
+  --bg-navbar-logo-img: transparent;
+}
+
+/* Dark override for above variables */
+/* .dark :host {
+  --text-body: #e5e7eb;
+
+  --bg-navbar: #030712;
+  --shadow-navbar: #1f2937;
+  --bg-navbar-logo-img: #d1d5db;
+} */
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: calc(1rem - var(--logo-size-increment) / 2);
+  margin-bottom: 1rem;
+  background-color: var(--bg-navbar);
+  box-shadow: 0 1px 3px 0 var(--shadow-navbar), 0 1px 2px -1px var(--shadow-navbar);
+  transition: all 150ms ease-in-out;
+
+  --icon-container-size: 26px;
+  --github-svg-size: 26px;
+  --logo-size-increment: 8px;
+
+  & h1 {
+    display: none;
+    margin: 0;
+    color: var(--text-body);
+    font-weight: bold;
+    font-size: 1rem;
+  }
+
+  & .left {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+
+    & h1 {
+      display: block;
+    }
+
+    & .logo {
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+      text-decoration: none;
+
+      & img,
+      & svg {
+        width: calc(var(--icon-container-size) + var(--logo-size-increment));
+        height: calc(var(--icon-container-size) + var(--logo-size-increment));
+      }
+    }
+  }
+
+  & .right {
+    display: flex;
+    gap: 1.5rem;
+
+    & .links {
+      display: none;
+    }
+
+    & .icons {
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+
+      & .github {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: var(--icon-container-size);
+        height: var(--icon-container-size);
+        color: var(--text-body);
+
+
+        & > svg {
+          width: var(--github-svg-size);
+          height: var(--github-svg-size);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (width >= 640px) {
+  .navbar {
+    & > h1 {
+      display: block;
+      font-size: 1.6rem;
+    }
+
+    & .left h1 {
+      display: none;
+    }
+  }
+}
+
+@media screen and (width >= 768px) {
+  .navbar {
+    --icon-container-size: 40px;
+    --github-svg-size: 30px;
+    --logo-size-increment: 6px;
+
+    & .right .links {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+    }
+  }
+}

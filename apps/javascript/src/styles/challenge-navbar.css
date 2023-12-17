@@ -1,0 +1,66 @@
+@import '@fmc/shared-styles/theme';
+
+@import '@fmc/shared-styles/base';
+@import '@fmc/shared-styles/components';
+@import '@fmc/shared-styles/utilities';
+
+navigation-bar {
+  color: var(--text-body);
+
+  --icon-container-size: 26px;
+  --github-svg-size: 26px;
+  --back-svg-size: 1rem;
+
+  & a {
+    color: var(--text-link);
+    border-radius: 4px;
+
+    &:hover {
+      background-color: #e5e7eb;
+    }
+  }
+
+  & span {
+    color: var(--text-body);
+    font-weight: bold;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (width >= 768px) {
+  navigation-bar {
+    --icon-container-size: 40px;
+    --github-svg-size: 30px;
+    --back-svg-size: 1.5rem;
+
+    & span {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+.back {
+  width: var(--icon-container-size);
+  height: var(--icon-container-size);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-body);
+}
+.back > svg {
+  width: var(--back-svg-size);
+  height: var(--back-svg-size);
+}
+
+.youtube {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--icon-container-size);
+  height: var(--icon-container-size);
+  color: var(--text-body);
+}
+.youtube > img {
+  width: var(--github-svg-size);
+  height: var(--github-svg-size);
+}

@@ -1,0 +1,19 @@
+navigation-bar {
+  color: var(--text-body);
+
+  & a {
+    color: var(--text-link);
+  }
+
+  & span {
+    color: var(--text-body);
+    font-weight: bold;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (width >= 768px) {
+  navigation-bar span {
+    font-size: 1.2rem;
+  }
+}

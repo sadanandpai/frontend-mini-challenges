@@ -1,5 +1,5 @@
 <template>
-  <button v-if="challenge.link === '#'" class="challenge-card disabled" disabled>
+  <button v-if="challenge.link === null" class="challenge-card disabled" disabled>
     <div>
       <h3>{{challenge.title}}</h3>
     </div>

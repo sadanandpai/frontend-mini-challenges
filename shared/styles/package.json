@@ -6,16 +6,8 @@
   ],
   "exports": {
     "./*": {
-      "import": "./common/*.css",
-      "require": "./common/*.css"
-    },
-    "./challenge/*": {
-      "import": "./challenge/*",
-      "require": "./challenge/*"
-    },
-    "./challenge-grid/*": {
-      "import": "./challenge-grid/*",
-      "require": "./challenge-grid/*"
+      "import": "./*.css",
+      "require": "./*.css"
     }
   }
 }
