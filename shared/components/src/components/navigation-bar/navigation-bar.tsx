@@ -1,4 +1,5 @@
-import { Component, Prop, h } from '@stencil/core';
+import { Component, Element, Prop, h } from '@stencil/core';
+import type { HTMLStencilElement } from '@stencil/core/internal';
 
 @Component({
   tag: 'navigation-bar',
@@ -7,6 +8,16 @@ import { Component, Prop, h } from '@stencil/core';
 })
 export class NavigationBar {
   @Prop() challengeTitle?: string;
+
+  private hasLeftSlot: boolean;
+  private hasRightSlot: boolean;
+
+  @Element() hostElement: HTMLStencilElement;
+
+  componentWillLoad() {
+      this.hasLeftSlot = !!this.hostElement.querySelector('[slot="left"]');
+      this.hasRightSlot = !!this.hostElement.querySelector('[slot="right"]');
+  }
 
   render() {
     return (
@@ -20,9 +31,9 @@ export class NavigationBar {
             <slot name="logo" />
           </a>
 
-          <div>
+          {this.hasLeftSlot && <div>
             <slot name="left" />
-          </div>
+          </div>}
 
           {this.challengeTitle && <h1>{this.challengeTitle}</h1>}
         </div>
@@ -30,9 +41,9 @@ export class NavigationBar {
         {this.challengeTitle && <h1>{this.challengeTitle}</h1>}
 
         <div class="right">
-          <div class='links'>
+          {this.hasRightSlot && <div class='links'>
             <slot name="right" />
-          </div>
+          </div>}
 
           <div class='icons'>
             <slot name="icon" />
