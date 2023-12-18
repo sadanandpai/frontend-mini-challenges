@@ -1,0 +1,8 @@
+{
+  "name": "@fmc/data",
+  "version": "1.0.0",
+  "description": "",
+  "exports": {
+    "./contributors": "./contributors.ts"
+  }
+}

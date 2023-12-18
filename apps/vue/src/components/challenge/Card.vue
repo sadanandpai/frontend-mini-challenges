@@ -24,7 +24,7 @@
 <script setup lang="ts">
 import { type PropType } from 'vue';
 import { RouterLink } from 'vue-router';
-import { contributors } from '@/helpers/contributors';
+import { contributors } from '@fmc/data/contributors';
 import type { Challenge } from '@fmc/shared-types';
 
 defineProps({
