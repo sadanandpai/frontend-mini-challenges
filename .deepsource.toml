@@ -1,5 +1,7 @@
 version = 1
 
+exclude_patterns = ["docs/**"]
+
 [[analyzers]]
 name = "javascript"
 
@@ -10,7 +12,3 @@ name = "javascript"
     "angular"
   ]
   environment = ["browser"]
-
-exclude_patterns = [
-  "docs/**",
-]
