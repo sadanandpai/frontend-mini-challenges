@@ -6,6 +6,7 @@ import Navbar from '@/components/navbar/Navbar';
 import Testimonials from '@/components/testimonials/testimonials';
 import ScrollBtn from '@/components/scroll-to-top/ScrollBtn';
 import styles from '@/styles.module.scss';
+import LeaderBoard from '@/components/leaderboard/leaderboard';
 
 function Home() {
   return (
@@ -13,6 +14,7 @@ function Home() {
       <Navbar>
         <a href="#whyUs">Why us?</a>
         <a href="#testimonials">Testimonials</a>
+        <a href="#leader-board">Leader Board</a>
         <a href="#contributors">Contributors</a>
       </Navbar>
 
@@ -22,6 +24,8 @@ function Home() {
         <Features />
         <hr className={styles.hr} />
         <Testimonials />
+        <hr className={styles.hr} />
+        <LeaderBoard />
         <hr className={styles.hr} />
         <Contribution />
         <Footer />
