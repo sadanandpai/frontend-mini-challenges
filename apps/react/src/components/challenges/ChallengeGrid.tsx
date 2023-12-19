@@ -1,5 +1,5 @@
 import { challenges } from '@/helpers/challenges';
-import { contributors } from '@fmc/data/contributors';
+import { contributors } from '@fmc/data/content';
 import { AvatarGroup } from './Avatar';
 import styles from './challenge-grid.module.scss';
 

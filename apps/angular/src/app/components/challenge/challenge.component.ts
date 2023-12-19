@@ -3,7 +3,7 @@ import { NgIf } from '@angular/common';
 import { RouterLink } from '@angular/router';
 
 import { Challenge } from 'src/app/models/challenge.model';
-import { contributors } from '@fmc/data/contributors';
+import { contributors } from '@fmc/data/content';
 
 @Component({
   standalone: true,

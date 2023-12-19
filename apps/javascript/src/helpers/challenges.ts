@@ -1,6 +1,6 @@
-import type { Challenge } from '@fmc/shared-types';
+import type { IChallenge } from '@fmc/data/types';
 
-export const challenges: Challenge[] = [
+export const challenges: IChallenge[] = [
   {
     title: 'Counter',
     link: 'counter',

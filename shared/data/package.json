@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "exports": {
-    "./contributors": "./contributors.ts"
+    "./content": "./content/index.ts",
+    "./types": "./types/index.ts"
   }
 }

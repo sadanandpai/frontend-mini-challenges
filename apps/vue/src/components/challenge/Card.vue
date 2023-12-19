@@ -24,12 +24,12 @@
 <script setup lang="ts">
 import { type PropType } from 'vue';
 import { RouterLink } from 'vue-router';
-import { contributors } from '@fmc/data/contributors';
-import type { Challenge } from '@fmc/shared-types';
+import { contributors } from '@fmc/data/content';
+import type { IChallenge } from '@fmc/data/types';
 
 defineProps({
   challenge: {
-    type: Object as PropType<Challenge>,
+    type: Object as PropType<IChallenge>,
     required: true,
   }
 })

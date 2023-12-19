@@ -1,5 +1,5 @@
-import { contributors } from '@fmc/data/contributors';
-import type { Challenge, Contributor } from '@fmc/shared-types';
+import { contributors } from '@fmc/data/content';
+import type { IChallenge, IContributor } from '@fmc/data/types';
 
 interface LeaderboardEntry {
   name: string;
@@ -10,10 +10,10 @@ interface LeaderboardEntry {
 export const generateLeaderboardData = (): Map<string, LeaderboardEntry> => {
   const leaderboardData: Map<string, LeaderboardEntry> = new Map();
 
-  [].forEach((challenge: Challenge) => {
+  [].forEach((challenge: IChallenge) => {
     if (challenge.developer && contributors.has(challenge.developer)) {
       const developer = challenge.developer;
-      const contributorInfo = contributors.get(developer) as Contributor;
+      const contributorInfo = contributors.get(developer) as IContributor;
 
       if (leaderboardData.has(developer)) {
         const currentDeveloper = leaderboardData.get(developer);

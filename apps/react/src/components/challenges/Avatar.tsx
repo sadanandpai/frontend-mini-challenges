@@ -1,4 +1,4 @@
-import { contributors } from '@fmc/data/contributors';
+import { contributors } from '@fmc/data/content';
 
 import styles from './avatar.module.css';
 

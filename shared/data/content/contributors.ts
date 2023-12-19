@@ -1,6 +1,6 @@
-import type { Contributor } from '@fmc/shared-types';
+import type { IContributor } from '@fmc/data/types';
 
-export const contributors = new Map<string, Contributor>([
+export const contributors = new Map<string, IContributor>([
   [
     'sadanandpai',
     { name: 'Sadanand Pai', pic: 'https://avatars.githubusercontent.com/u/12962887' },

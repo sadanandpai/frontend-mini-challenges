@@ -1,9 +1,9 @@
 import { Component, Prop, h } from '@stencil/core';
-import type { Challenge, Contributor } from '@fmc/shared-types'
+import type { IChallenge, IContributor } from '@fmc/data/types';
 
-export interface ChallengeCardProps extends Omit<Challenge, 'developer' | 'contributors'> {
-  developer?: Contributor
-  contributors?: Contributor[]
+export interface ChallengeCardProps extends Omit<IChallenge, 'developer' | 'contributors'> {
+  developer?: IContributor;
+  contributors?: IContributor[];
 }
 
 @Component({
@@ -12,23 +12,20 @@ export interface ChallengeCardProps extends Omit<Challenge, 'developer' | 'contr
   shadow: true,
 })
 export class ChallengeCard {
-  @Prop() challenge!: ChallengeCardProps
+  @Prop() challenge!: ChallengeCardProps;
 
   render() {
     return (
-      <a
-        class={`challenge-card ${!this.challenge.link ? 'disabled' : ''} ${this.challenge.difficulty}`}
-        href={this.challenge.link}
-      >
-        {this.challenge.isNew && <span class='new'>New</span>}
+      <a class={`challenge-card ${!this.challenge.link ? 'disabled' : ''} ${this.challenge.difficulty}`} href={this.challenge.link}>
+        {this.challenge.isNew && <span class="new">New</span>}
         <div>
           <h3>{this.challenge.title}</h3>
 
-          <div class='avatar-container'>
+          <div class="avatar-container">
             {this.challenge.developer && (
-              <div class='developer'>
+              <div class="developer">
                 <img src={this.challenge.developer.pic} alt="" />
-                <span class='name'>{this.challenge.developer.name}</span>
+                <span class="name">{this.challenge.developer.name}</span>
               </div>
             )}
             {/* TODO: create avatar group ce */}
