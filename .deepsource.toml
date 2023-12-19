@@ -10,4 +10,3 @@ name = "javascript"
     "angular"
   ]
   environment = ["browser"]
-  exclude_patterns = ["docs/"]
