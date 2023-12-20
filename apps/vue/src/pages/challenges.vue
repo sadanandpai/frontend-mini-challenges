@@ -8,7 +8,7 @@
     <div class="challenge-grid">
 
     <ChallengeCard
-      v-for="challenge in challenges.values()"
+      v-for="challenge in vueChallenges.values()"
       :key="challenge.title"
       :challenge="challenge"
     />
@@ -19,7 +19,7 @@
 <script setup lang="ts">
 import Navbar from '@/components/Navbar.vue';
 import ChallengeCard from '@/components/challenge/Card.vue';
-import { challenges } from '@/helpers/challenges';
+import { vueChallenges } from '@fmc/data/content';
 </script>
 
 <style scoped lang="scss">

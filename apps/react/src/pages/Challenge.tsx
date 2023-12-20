@@ -44,10 +44,10 @@ import Otp from '@/challenges/otp/App';
 import TrafficLights from '@/challenges/traffic-light/App';
 import QuizApp from '@/challenges/quiz-app/App';
 import ChessBoard from '@/challenges/chess-board/App';
-import { challenges } from '@/helpers/challenges';
+import { reactChallenges } from '@fmc/data/content';
 import { useParams } from 'react-router-dom';
 
-const reactChallenges = {
+const reactChallengesMap = {
   counter: <Counter />,
   accordion: <Accordion />,
   'background-changer': <Background />,
@@ -101,8 +101,8 @@ function Challenge() {
 
   return (
     <>
-      <ChallengeNavbar title={challenges.get(id)?.title} />
-      <div className="container">{reactChallenges[id]}</div>
+      <ChallengeNavbar title={reactChallenges.get(id)?.title} />
+      <div className="container">{reactChallengesMap[id]}</div>
     </>
   );
 }

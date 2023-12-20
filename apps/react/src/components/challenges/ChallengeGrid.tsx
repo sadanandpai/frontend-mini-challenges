@@ -1,4 +1,4 @@
-import { challenges } from '@/helpers/challenges';
+import { reactChallenges } from '@fmc/data/content';
 import { contributors } from '@fmc/data/content';
 import { AvatarGroup } from './Avatar';
 import styles from './challenge-grid.module.scss';
@@ -6,7 +6,7 @@ import styles from './challenge-grid.module.scss';
 function ChallengeGrid() {
   return (
     <div className={styles.challengeGrid}>
-      {Array.from(challenges.values()).map((challenge) => (
+      {Array.from(reactChallenges.values()).map((challenge) => (
         <a
           key={challenge.title}
           className={`${styles.challengeCard} ${styles[challenge.difficulty]}`}

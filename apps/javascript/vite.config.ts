@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite';
-import { challenges } from './src/helpers/challenges';
+import { jsChallenges } from '../../shared/data/content/index';
 
-const challengesPath = challenges
+const challengesPath = jsChallenges
   .filter((challenge) => challenge.link !== null)
   .map((challenge) => `./src/challenges/${challenge.link}/index.html`);
 

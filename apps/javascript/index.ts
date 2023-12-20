@@ -4,7 +4,7 @@ import { defineCustomElement as defineNavigationBar } from '@fmc/components/dist
 import type { ChallengeCardProps } from '@fmc/components/dist/types/index.js';
 import { contributors } from '@fmc/data/content';
 import type { IChallenge } from '@fmc/data/types';
-import { challenges } from './src/helpers/challenges.js';
+import { jsChallenges } from '@fmc/data/content';
 import './src/styles/index.css';
 
 defineChallengeCard();
@@ -16,7 +16,7 @@ const createChallengeCard = (challenge: IChallenge) => {
 
   const challengeProp: ChallengeCardProps = {
     title: challenge.title,
-    link: challenge.link ? `./src/challenges/${challenge.link}/` : null,
+    link: `./src/challenges/${challenge.link}/`,
     difficulty: challenge.difficulty,
     youtube: challenge.youtube,
     tags: challenge.tags,
@@ -42,4 +42,4 @@ const createChallengeCard = (challenge: IChallenge) => {
 };
 
 const challengeGridEl = document.getElementById('challengeGrid')!;
-challenges.map(createChallengeCard).forEach((el) => challengeGridEl.appendChild(el));
+jsChallenges.map(createChallengeCard).forEach((el) => challengeGridEl.appendChild(el));

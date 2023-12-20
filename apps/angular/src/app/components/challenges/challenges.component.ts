@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { challenges } from 'src/app/helpers/challenges';
+import { angularChallenges } from '@fmc/data/content';
 import { ChallengeComponent } from '../challenge/challenge.component';
 import { NgFor } from '@angular/common';
 
@@ -8,15 +8,15 @@ import { NgFor } from '@angular/common';
   selector: 'app-challenges',
   templateUrl: './challenges.component.html',
   styleUrls: ['./challenges.component.scss'],
-  imports: [ChallengeComponent, NgFor]
+  imports: [ChallengeComponent, NgFor],
 })
 export class ChallengesComponent {
-  public challenges = challenges.values();
+  public challenges = angularChallenges.values();
 
   ngOnInit() {
     // TODO: check why below only works with timeout
     setTimeout(() => {
-      this.challenges = challenges.values();
+      this.challenges = angularChallenges.values();
     });
   }
 }

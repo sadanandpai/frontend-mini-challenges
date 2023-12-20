@@ -1,4 +1,4 @@
-import type { IContributor } from '@fmc/data/types';
+import type { IContributor } from '../types/index';
 
 export const contributors = new Map<string, IContributor>([
   [

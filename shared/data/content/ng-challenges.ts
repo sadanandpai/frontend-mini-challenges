@@ -1,6 +1,6 @@
-import { Challenge } from '../models/challenge.model';
+import type { IChallenge } from '../types/challenge';
 
-export const challenges: Map<string, Challenge> = new Map([
+export const angularChallenges: Map<string, IChallenge> = new Map([
   [
     'counter',
     {
@@ -66,5 +66,5 @@ export const challenges: Map<string, Challenge> = new Map([
       tags: [],
       isNew: true,
     },
-  ]
+  ],
 ]);
