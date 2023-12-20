@@ -17,8 +17,9 @@ export const generateLeaderboardData = (): Map<string, LeaderboardEntry> => {
   leaderboardData.set('Rajj', {
     name: 'Raja Sekhar',
     pic: 'https://rajasekharthammineni.vercel.app/_next/image?url=%2Fstatic%2Fprofile-bg-blue.jpg&w=3840&q=75',
-    challengesCompleted: 10,
+    challengesCompleted: 5,
   });
+
   [].forEach((challenge: IChallenge) => {
     if (challenge.developer && contributors.has(challenge.developer)) {
       const developer = challenge.developer;

@@ -6,16 +6,17 @@ import Navbar from '@/components/navbar/Navbar';
 import Testimonials from '@/components/testimonials/testimonials';
 import ScrollBtn from '@/components/scroll-to-top/ScrollBtn';
 import styles from '@/styles.module.scss';
-import LeaderBoard from '@/components/leaderboard/leaderboard';
+import { HashLink } from 'react-router-hash-link';
+import { Link } from 'react-router-dom';
 
-function Home() {
+function HomePage() {
   return (
     <>
       <Navbar>
-        <a href="#whyUs">Why us?</a>
-        <a href="#testimonials">Testimonials</a>
-        <a href="#leader-board">Leader Board</a>
-        <a href="#contributors">Contributors</a>
+        <HashLink to="#whyUs">Why us?</HashLink>
+        <HashLink to="#testimonials">Testimonials</HashLink>
+        <HashLink to="#contributors">Contributors</HashLink>
+        <Link to="leaderboard">Leaderboard</Link>
       </Navbar>
 
       <div className={styles.container}>
@@ -25,8 +26,6 @@ function Home() {
         <hr className={styles.hr} />
         <Testimonials />
         <hr className={styles.hr} />
-        <LeaderBoard />
-        <hr className={styles.hr} />
         <Contribution />
         <Footer />
         <ScrollBtn />
@@ -35,4 +34,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default HomePage;

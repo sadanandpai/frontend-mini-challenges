@@ -1,7 +1,7 @@
-import { generateLeaderboardData } from '@/pages/leaderboard';
-import leaderBoardStyles from './leaderboard.module.css';
+import { generateLeaderboardData } from '@/helpers/generate-leaderboard';
+import classes from './leaderboard.module.css';
 
-export default function LeaderBoard() {
+export default function Leaderboard() {
   const data = generateLeaderboardData();
 
   const GetLeaderBoardTableBody = () => {
@@ -9,9 +9,7 @@ export default function LeaderBoard() {
       <tr key={contributor.name}>
         <td
           className={
-            index >= 1
-              ? leaderBoardStyles.leaderBoardTableData
-              : leaderBoardStyles.leaderBoardBorderBottomStyle
+            index >= 1 ? classes.leaderBoardTableData : classes.leaderBoardBorderBottomStyle
           }
         >
           {index}
@@ -19,24 +17,18 @@ export default function LeaderBoard() {
         <td
           className={
             index >= 1
-              ? `${leaderBoardStyles.leaderBoardTableData} ${leaderBoardStyles.leaderBoardContributorNameTd}`
-              : `${leaderBoardStyles.leaderBoardBorderBottomStyle} ${leaderBoardStyles.leaderBoardContributorNameTd}`
+              ? `${classes.leaderBoardTableData} ${classes.leaderBoardContributorNameTd}`
+              : `${classes.leaderBoardBorderBottomStyle} ${classes.leaderBoardContributorNameTd}`
           }
         >
           <span>
-            <img
-              className={leaderBoardStyles.leaderBoardContributorImg}
-              src={contributor.pic}
-              alt={''}
-            />
+            <img className={classes.leaderBoardContributorImg} src={contributor.pic} alt={''} />
           </span>
           <span>{contributor.name}</span>
         </td>
         <td
           className={
-            index >= 1
-              ? leaderBoardStyles.leaderBoardTableData
-              : leaderBoardStyles.leaderBoardBorderBottomStyle
+            index >= 1 ? classes.leaderBoardTableData : classes.leaderBoardBorderBottomStyle
           }
         >
           {contributor.challengesCompleted}
@@ -44,10 +36,19 @@ export default function LeaderBoard() {
       </tr>
     ));
   };
+
   return (
-    <>
-      <h2 id={'leader-board'} className={leaderBoardStyles.leaderBoardHeading}>Leader Board</h2>
-      <table width={"100%"} border={1} cellSpacing={0} cellPadding={10} style={{textAlign:"center"}}>
+    <div className="container">
+      <h2 id="leader-board" className={classes.leaderBoardHeading}>
+        Leaderboard
+      </h2>
+      <table
+        width="100%"
+        border={1}
+        cellSpacing={0}
+        cellPadding={10}
+        style={{ textAlign: 'center' }}
+      >
         <thead>
           <tr>
             <td>#</td>
@@ -57,6 +58,6 @@ export default function LeaderBoard() {
         </thead>
         <tbody>{GetLeaderBoardTableBody()}</tbody>
       </table>
-    </>
+    </div>
   );
 }
