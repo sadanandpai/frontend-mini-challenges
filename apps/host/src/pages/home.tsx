@@ -7,7 +7,6 @@ import Testimonials from '@/components/testimonials/testimonials';
 import ScrollBtn from '@/components/scroll-to-top/ScrollBtn';
 import styles from '@/styles.module.scss';
 import { HashLink } from 'react-router-hash-link';
-import { Link } from 'react-router-dom';
 
 function HomePage() {
   return (
@@ -16,7 +15,6 @@ function HomePage() {
         <HashLink to="#whyUs">Why us?</HashLink>
         <HashLink to="#testimonials">Testimonials</HashLink>
         <HashLink to="#contributors">Contributors</HashLink>
-        <Link to="leaderboard">Leaderboard</Link>
       </Navbar>
 
       <div className={styles.container}>
