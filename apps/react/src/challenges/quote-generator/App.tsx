@@ -36,7 +36,7 @@ const App = () => {
   };
 
   if (!quote) {
-    return <>Loading....</>; //Load while the quote is being fetched
+    return <span className={styles['loader']}></span>; //Load while the quote is being fetched
   }
 
   return (
