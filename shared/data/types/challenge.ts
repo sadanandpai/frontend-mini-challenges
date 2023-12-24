@@ -1,6 +1,6 @@
 export interface IChallenge {
   title: string;
-  link: string | null;
+  link: string;
   difficulty: 'easy' | 'medium' | 'hard';
   developer?: string;
   contributors?: string[];

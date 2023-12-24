@@ -9,7 +9,7 @@
 import { ref, watch } from 'vue';
 import { RouterView, useRoute } from 'vue-router';
 import ChallengeNavbar from '@/components/challenge/Navbar.vue'
-import { challenges } from '@/helpers/challenges';
+import { vueChallenges } from '@fmc/data/content';
 
 const route = useRoute()
 
@@ -18,7 +18,7 @@ const title = ref('')
 watch(route, () => {
   // Extract challenge-id from url (last segment)
   const challengeId = route.path.split('/').filter(Boolean).pop()!
-  title.value = challenges.get(challengeId)!.title
+  title.value = vueChallenges.get(challengeId)!.title
 }, { immediate: true })
 </script>
 

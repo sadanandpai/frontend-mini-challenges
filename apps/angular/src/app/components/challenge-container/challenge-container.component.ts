@@ -1,7 +1,7 @@
 import { Router, RouterOutlet } from '@angular/router';
 
 import { Component, inject } from '@angular/core';
-import { challenges } from 'src/app/helpers/challenges';
+import { angularChallenges } from '@fmc/data/content';
 import { NavbarComponent } from '../navbar/navbar.component';
 
 @Component({
@@ -9,10 +9,7 @@ import { NavbarComponent } from '../navbar/navbar.component';
   selector: 'app-challenge-container',
   templateUrl: './challenge-container.component.html',
   styleUrls: ['./challenge-container.component.scss'],
-  imports: [
-    NavbarComponent,
-    RouterOutlet,
-  ]
+  imports: [NavbarComponent, RouterOutlet],
 })
 export class ChallengeContainerComponent {
   public title = 'Challenge';
@@ -25,7 +22,7 @@ export class ChallengeContainerComponent {
       return;
     }
 
-    const challenge = challenges.get(challengeId);
+    const challenge = angularChallenges.get(challengeId);
 
     if (!challenge) {
       return;

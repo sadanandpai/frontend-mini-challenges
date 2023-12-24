@@ -1,4 +1,4 @@
-import { challenges } from './challenges.ts';
+import { jsChallenges } from '@fmc/data/content';
 import './navbar.ts';
 import '../styles/challenge-navbar.css';
 
@@ -27,5 +27,5 @@ headTags.forEach((tag) => document.head.prepend(tag));
 
 // Add title
 const challengeLink = window.location.pathname.split('/challenges/')[1].slice(0, -1);
-const challenge = challenges.find((challenge) => challenge.link === challengeLink);
+const challenge = jsChallenges.find((challenge) => challenge.link === challengeLink);
 document.title = challenge.title;

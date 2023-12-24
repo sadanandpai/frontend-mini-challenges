@@ -9,6 +9,16 @@ interface LeaderboardEntry {
 
 export const generateLeaderboardData = (): Map<string, LeaderboardEntry> => {
   const leaderboardData: Map<string, LeaderboardEntry> = new Map();
+  leaderboardData.set('Raj', {
+    name: 'Raja Sekhar Thammineni',
+    pic: 'https://rajasekharthammineni.vercel.app/_next/image?url=%2Fstatic%2Fprofile-bg-blue.jpg&w=3840&q=75',
+    challengesCompleted: 1,
+  });
+  leaderboardData.set('Rajj', {
+    name: 'Raja Sekhar',
+    pic: 'https://rajasekharthammineni.vercel.app/_next/image?url=%2Fstatic%2Fprofile-bg-blue.jpg&w=3840&q=75',
+    challengesCompleted: 5,
+  });
 
   [].forEach((challenge: IChallenge) => {
     if (challenge.developer && contributors.has(challenge.developer)) {

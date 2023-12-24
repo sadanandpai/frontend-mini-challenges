@@ -1,10 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import Home from './pages/home';
+import { RouterProvider, createHashRouter } from 'react-router-dom';
+import HomePage from './pages/home';
+import LeaderboardPage from './pages/leaderboard';
 import './index.css';
+
+const router = createHashRouter([
+  {
+    path: '/leaderboard',
+    element: <LeaderboardPage />,
+  },
+  {
+    path: '/',
+    element: <HomePage />,
+  },
+]);
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <Home />
+    <RouterProvider router={router} />
   </React.StrictMode>
 );

@@ -1,6 +1,6 @@
-import type { IChallenge } from '@fmc/data/types';
+import type { IChallenge } from '../types/challenge';
 
-export const challenges = new Map<string, IChallenge>([
+export const vueChallenges = new Map<string, IChallenge>([
   [
     'counter',
     {

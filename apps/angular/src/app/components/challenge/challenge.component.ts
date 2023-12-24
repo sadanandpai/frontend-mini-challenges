@@ -1,8 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { NgIf } from '@angular/common';
 import { RouterLink } from '@angular/router';
-
-import { Challenge } from 'src/app/models/challenge.model';
+import type { IChallenge } from '@fmc/data/types';
 import { contributors } from '@fmc/data/content';
 
 @Component({
@@ -13,6 +12,6 @@ import { contributors } from '@fmc/data/content';
   imports: [NgIf, RouterLink],
 })
 export class ChallengeComponent {
-  @Input() challenge!: Challenge;
+  @Input() challenge!: IChallenge;
   public contributors = contributors;
 }

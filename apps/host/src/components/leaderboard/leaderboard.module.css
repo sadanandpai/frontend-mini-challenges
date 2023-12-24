@@ -1,0 +1,24 @@
+.leaderBoardTableData {
+  border-top-style: hidden;
+  border-bottom-style: hidden;
+  text-align: center;
+}
+.leaderBoardBorderBottomStyle {
+  text-align: center;
+  border-bottom-style: hidden;
+}
+.leaderBoardContributorImg {
+  width: 80px;
+  height: 80px;
+  border: 2px solid orange;
+  border-radius: 50%;
+}
+.leaderBoardContributorNameTd {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.leaderBoardHeading {
+  margin-bottom: 3rem;
+  text-align: center;
+}
