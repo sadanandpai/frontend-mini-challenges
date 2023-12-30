@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script type="module" src="./app.js"></script>
+  <link type="text/css" href="./styles.css" rel="stylesheet" />
+</head>
+
+
+<body>
+
+  <header class="header">
+    <p>CSV Reader</p>
+    <button>Light/Dark Theme</button>
+  </header>
+
+  <main>
+    <section class="main__table">
+      <article class="table__border">
+        <div class="table__caption">
+          <button>
+            <label for="load-csv">Load CSV File</label>
+          </button>
+          <input id="load-csv" type="file" />
+          <input type="textarea" id="table-search" placeholder="Search" class="input__search" />
+        </div>
+        <article class="table__container">
+          <table id="table-info"></table>
+        </article>
+
+      </article>
+    </section>
+  </main>
+</body>
+
+</html>

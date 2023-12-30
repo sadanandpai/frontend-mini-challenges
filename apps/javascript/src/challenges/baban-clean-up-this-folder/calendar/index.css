@@ -1,0 +1,53 @@
+.cell {
+  padding: 8px 12px;
+  margin: 8px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.calendar {
+  margin: auto;
+  width: 500px;
+  height: 520px;
+  border: 1px solid black;
+}
+
+.grid {
+  display: grid;  
+  gap: 1rem;
+  grid-template-columns: repeat(7, 1fr);  
+}
+
+.sunday {
+  color: red;
+}
+
+.cell--selected {
+  /* border: 1px solid cyan; */
+  border-radius: 50%;
+  color: white;
+  background-color: darkblue;
+}
+
+.calendar__header {
+  display: flex;
+  /* justify-content: space-evenly; */
+  gap: 8px;
+  align-items: center;
+  padding: 8px;
+  margin: 8px;
+}
+
+.today--primary {
+  width: 100%;
+  padding: 8px;
+  background-color: cyan;
+  outline: none;
+  border: none;
+  margin: 0;
+}
+
+.day-names{
+  cursor: default;
+  pointer-events: none;
+}

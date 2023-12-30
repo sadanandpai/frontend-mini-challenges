@@ -1,0 +1,12 @@
+.list__item {
+  padding: 1rem;
+}
+
+.hide__item {
+  display: none;
+}
+
+.input__text {
+  display: block;
+  margin: 2rem;
+}

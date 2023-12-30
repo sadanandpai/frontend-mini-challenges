@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  padding: 1rem;
+  margin: 2rem 0;
+}
+
+.main__table {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+}
+
+.table__border {
+  border: 1px solid black;
+  max-width: 700px;
+  width: 100%;
+}
+
+.table__caption {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.input__search {
+  padding: 1rem;
+}
+
+input[type="file"] {
+  opacity: 0;
+  z-index: -1;
+  position: absolute;
+}
+
+table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid black;
+  margin: 1rem 0;
+}
+
+th,
+td,
+tr {
+  text-align: left;
+  padding: 6px;
+}
+
+th,
+td {
+  border: 1px solid black;
+  word-wrap: break-word;
+}
+
+.table__container {
+  overflow: auto;
+  max-height: 400px;
+}
+
+thead {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: white;
+}
