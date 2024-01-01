@@ -38,6 +38,18 @@
   border: none;
 }
 
+/* Media query for basic mobile view */
+@media screen and (max-width: 480px) {
+  .controls {
+    flex-direction: column; /* Stack buttons vertically */
+    align-items: center; /* Center buttons horizontally */
+  }
+
+  .controls button {
+    margin-bottom: 1rem; /* Add space between vertically stacked buttons */
+  }
+}
+
 .controls button:hover {
   color: rgb(0 0 255 / 50%);
   background-color: rgb(0 0 255 / 30%);
