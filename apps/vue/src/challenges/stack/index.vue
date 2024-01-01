@@ -8,6 +8,7 @@
                 <button @click="peekItem">Peek</button>
                 <button @click="isStackEmpty">IsEmpty</button>
                 <button @click="isStackFull">IsFull</button>
+                <button @click="clearAll">Clear All</button>
             </div>
         </div>
         <hr />
@@ -72,13 +73,18 @@ function isStackFull() {
     }
 }
 
+function clearAll(){
+    stack.value = [];
+    output.value = 'Your stack is clear'
+}
+
 </script>
 
 <style scoped css="scss">
 .app {
     margin: 10px auto;
     padding: 20px;
-    max-width: 480px;
+    max-width: 550px;
     border: 1px solid;
 }
 
