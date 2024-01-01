@@ -39,7 +39,7 @@
 }
 
 /* Media query for basic mobile view */
-@media screen and (max-width: 480px) {
+@media screen and (min-width: 0px) {
   .controls {
     flex-direction: column; /* Stack buttons vertically */
     align-items: center; /* Center buttons horizontally */
@@ -47,6 +47,18 @@
 
   .controls button {
     margin-bottom: 1rem; /* Add space between vertically stacked buttons */
+  }
+}
+
+/* Media query for basic mobile view */
+@media screen and (min-width: 601px) {
+  .controls {
+    flex-direction: row; /* Stack buttons vertically */
+    align-items: center; 
+  }
+  
+  .controls button {
+    margin-bottom: 1rem;
   }
 }
 
