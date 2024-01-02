@@ -10,9 +10,9 @@ document.querySelector('form').addEventListener('submit', function (event) {
 
     // Perform validation
     if (!email || !fullName || !dob || !password) {
-        alert('Please fill in all fields');
+        console.log('Please fill in all fields');
     } else {
         // If validation passes
-        alert('Signup successful!\nEmail: ' + email + '\nFull Name: ' + fullName + '\nDOB: ' + dob);
+        console.log('Signup successful!\nEmail: ' + email + '\nFull Name: ' + fullName + '\nDOB: ' + dob);
     }
 });
