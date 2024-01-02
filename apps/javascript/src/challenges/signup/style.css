@@ -1,0 +1,37 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+form {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px ;
+    border-radius: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(224, 224, 224, 0.81);
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+input[type="date"] {
+    padding: 8px;
+}
+
+input[type="submit"]{
+    margin-top: 10%;
+    background-color: #25D366;
+}
