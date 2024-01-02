@@ -101,4 +101,14 @@ export const vueChallenges = new Map<string, IChallenge>([
       tags: [],
     },
   ],
+  [
+    'password-generator',
+    {
+      title: 'Password Generator',
+      link: '/password-generator',
+      difficulty: 'medium',
+      developer: 'bhumikkalola',
+      tags: [],
+    },
+  ],
 ]);
