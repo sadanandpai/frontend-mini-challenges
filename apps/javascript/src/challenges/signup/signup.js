@@ -10,7 +10,7 @@ document.querySelector('form').addEventListener('submit', function (event) {
 
     // Perform validation
     if (!email || !fullName || !dob || !password) {
-        console.log('Please fill in all fields');
+        /*console.log('Please fill in all fields');*/
     } else {
         // If validation passes
         console.log('Signup successful!\nEmail: ' + email + '\nFull Name: ' + fullName + '\nDOB: ' + dob);
