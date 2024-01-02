@@ -13,6 +13,6 @@ document.querySelector('form').addEventListener('submit', function (event) {
         /*console.log('Please fill in all fields');*/
     } else {
         // If validation passes
-        console.log('Signup successful!\nEmail: ' + email + '\nFull Name: ' + fullName + '\nDOB: ' + dob);
+        /*console.log('Signup successful!\nEmail: ' + email + '\nFull Name: ' + fullName + '\nDOB: ' + dob);*/
     }
 });
