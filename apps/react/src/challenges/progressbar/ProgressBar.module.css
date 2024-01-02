@@ -1,15 +1,15 @@
 .App {
+  padding: 1rem 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 90vh;
 }
 
 .bg-progress {
   position: relative;
   width: 15rem;
-  height: 3rem;
+  height: 2rem;
   overflow: hidden;
   background-color: rgb(0 0 255 / 30%);
   border-radius: 50px;
@@ -25,9 +25,12 @@
 
 .controls {
   display: flex;
-  justify-content: space-around;
-  width: 70%;
+  flex-direction: column; /* Stack buttons vertically */
+  align-items: center; /* Center buttons horizontally */
+  gap: 1rem;
+  margin: auto;
   margin-top: 2.5rem;
+  margin-bottom: 0;
 }
 
 .controls button {
@@ -38,27 +41,9 @@
   border: none;
 }
 
-/* Media query for basic mobile view */
-@media screen and (min-width: 0px) {
+@media screen and (min-width: 480px) {
   .controls {
-    flex-direction: column; /* Stack buttons vertically */
-    align-items: center; /* Center buttons horizontally */
-  }
-
-  .controls button {
-    margin-bottom: 1rem; /* Add space between vertically stacked buttons */
-  }
-}
-
-/* Media query for basic mobile view */
-@media screen and (min-width: 601px) {
-  .controls {
-    flex-direction: row; /* Stack buttons vertically */
-    align-items: center; 
-  }
-  
-  .controls button {
-    margin-bottom: 1rem;
+    flex-direction: row; /* Stack buttons horizontally */
   }
 }
 
