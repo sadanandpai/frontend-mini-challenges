@@ -526,4 +526,11 @@ export const jsChallenges: IChallenge[] = [
     developer: 'sadanandpai',
     tags: [],
   },
+  {
+    title: 'Roll dice',
+    link: 'roll-dice',
+    difficulty: 'easy',
+    developer: 'babandakale',
+    tags: [],
+  },
 ];
