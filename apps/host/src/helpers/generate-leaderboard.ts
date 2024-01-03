@@ -1,51 +1,74 @@
-import { contributors } from '@fmc/data/content';
-import type { IChallenge, IContributor } from '@fmc/data/types';
+import { contributors, angularChallenges, jsChallenges, reactChallenges, vueChallenges } from '@fmc/data/content';
+import type { IChallenge } from '@fmc/data/types';
 
 interface LeaderboardEntry {
   name: string;
   pic: string;
-  challengesCompleted: number;
+  contributions: IChallenge[];
+  numberOfContributions: number;
 }
 
 export const generateLeaderboardData = (): Map<string, LeaderboardEntry> => {
-  const leaderboardData: Map<string, LeaderboardEntry> = new Map();
-  leaderboardData.set('Raj', {
-    name: 'Raja Sekhar Thammineni',
-    pic: 'https://rajasekharthammineni.vercel.app/_next/image?url=%2Fstatic%2Fprofile-bg-blue.jpg&w=3840&q=75',
-    challengesCompleted: 1,
-  });
-  leaderboardData.set('Rajj', {
-    name: 'Raja Sekhar',
-    pic: 'https://rajasekharthammineni.vercel.app/_next/image?url=%2Fstatic%2Fprofile-bg-blue.jpg&w=3840&q=75',
-    challengesCompleted: 5,
-  });
+  const developerContributions: Map<string, IChallenge[]> = new Map();
 
-  [].forEach((challenge: IChallenge) => {
-    if (challenge.developer && contributors.has(challenge.developer)) {
-      const developer = challenge.developer;
-      const contributorInfo = contributors.get(developer) as IContributor;
-
-      if (leaderboardData.has(developer)) {
-        const currentDeveloper = leaderboardData.get(developer);
-        if (currentDeveloper) {
-          currentDeveloper.challengesCompleted += 1;
-          leaderboardData.set(developer, currentDeveloper);
-        }
-      } else {
-        leaderboardData.set(developer, {
-          name: contributorInfo.name,
-          pic: contributorInfo.pic,
-          challengesCompleted: 1,
-        });
-      }
+  // get contributions groupBy deeloper
+  angularChallenges.forEach((val) => {
+    if (val.developer) {
+      if (developerContributions.has(val.developer)) {
+        const developer = developerContributions.get(val.developer);
+        developer?.push(val);
+      } else 
+        developerContributions.set(val.developer, [val]);
+    }
+  });
+  reactChallenges.forEach((val) => {
+    if (val.developer) {
+      if (developerContributions.has(val.developer)) {
+        const developer = developerContributions.get(val.developer);
+        developer?.push(val);
+      } else 
+        developerContributions.set(val.developer, [val]);
+    }
+  });
+  vueChallenges.forEach((val) => {
+    if (val.developer) {
+      if (developerContributions.has(val.developer)) {
+        const developer = developerContributions.get(val.developer);
+        developer?.push(val);
+      } else 
+        developerContributions.set(val.developer, [val]);
+    }
+  });
+  jsChallenges.forEach(val => {
+    if (val.developer) {
+      if (developerContributions.has(val.developer)) {
+        const developer = developerContributions.get(val.developer);
+        developer?.push(val);
+      } else 
+        developerContributions.set(val.developer, [val]);
     }
   });
 
+  // get developerInfo from contributions
+  const leaderboardData: Map<string, LeaderboardEntry> = new Map();
+  developerContributions.forEach((data, key) => {
+    const developerInfo = contributors.get(key);
+    if (developerInfo) {
+      leaderboardData.set(key, {
+        name: developerInfo?.name,
+        pic: developerInfo?.pic,
+        contributions: data,
+        numberOfContributions: data.length,
+      });
+    }
+  });
+
+  // sort according to numberContributions
   const sortedLeaderboard = new Map(
     Array.from(leaderboardData.entries()).sort(
-      (a, b) => b[1].challengesCompleted - a[1].challengesCompleted
+      (a, b) => b[1].numberOfContributions - a[1].numberOfContributions || a[1].name.localeCompare(b[1].name)
     )
   );
 
-  return new Map([...sortedLeaderboard.entries()].slice(0, 10));
+  return new Map([...sortedLeaderboard.entries()]);
 };
