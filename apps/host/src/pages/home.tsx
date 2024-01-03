@@ -9,7 +9,6 @@ import styles from '@/styles.module.scss';
 import { HashLink } from 'react-router-hash-link';
 
 function HomePage() {
-  console.log('home page....');
   return (
     <>
       <Navbar>
