@@ -26,6 +26,13 @@ export const jsChallenges: IChallenge[] = [
     isNew: true,
   },
   {
+    title: 'Roll dice',
+    link: 'roll-dice',
+    difficulty: 'easy',
+    developer: 'babandakale',
+    tags: [],
+  },
+  {
     title: 'Guess the number',
     link: 'guess-the-number',
     difficulty: 'easy',
@@ -524,13 +531,6 @@ export const jsChallenges: IChallenge[] = [
     link: 'type-ahead-online',
     difficulty: 'hard',
     developer: 'sadanandpai',
-    tags: [],
-  },
-  {
-    title: 'Roll dice',
-    link: 'roll-dice',
-    difficulty: 'easy',
-    developer: 'babandakale',
     tags: [],
   },
 ];
