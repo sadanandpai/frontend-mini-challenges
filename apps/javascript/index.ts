@@ -42,4 +42,6 @@ const createChallengeCard = (challenge: IChallenge) => {
 };
 
 const challengeGridEl = document.getElementById('challengeGrid')!;
-jsChallenges.map(createChallengeCard).forEach((el) => challengeGridEl.appendChild(el));
+[...jsChallenges.values()]
+  .map(createChallengeCard)
+  .forEach((el) => challengeGridEl.appendChild(el));
