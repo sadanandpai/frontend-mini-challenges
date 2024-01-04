@@ -23,6 +23,16 @@ export const reactChallenges = new Map<string, IChallenge>([
     },
   ],
   [
+    'anagram-checker',
+    {
+      title: 'Anagram Checker',
+      link: 'anagram-checker',
+      difficulty: 'easy',
+      developer: 'Manmit Tiwade',
+      tags: [],
+    },
+  ],
+  [
     'quote-generator',
     {
       title: 'Quote Generator',

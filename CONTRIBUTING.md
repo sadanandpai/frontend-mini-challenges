@@ -23,7 +23,7 @@
 - Challenge should have a minimum of index.html
 - Import navbar js file in the head `<script src="../../helpers/header.js" type="module"></script>`
 - JavaScript and CSS code if exists should have separate file[s]
-- Challenge should be added to the array of challenges `/apps/javascript/src/helpers/challenges.js`
+- Challenge should be added to the array of challenges `/shared/data/content/js-challenges.ts`
 - Do not introduce new font or modify the body styles
 - Box sizing is taken care and no need to add it
 
@@ -33,7 +33,7 @@
 - Challenge should have a minimum of App.jsx / App.tsx
 - The App should be broken down into components, each having its own files.
 - CSS should strictly use **module CSS** to prevent pollution in the global space.
-- Challenge should be added to the array of challenges `/apps/react/src/helpers/challenges.ts`
+- Challenge should be added to the array of challenges `/shared/data/content/react-challenges.ts`
 - The component should be imported and added to their respective position in the array of challenges in `/apps/react/src/pages/Challenge.tsx`
 
 ##### Steps to Contribute VueJs Challenge
@@ -42,5 +42,5 @@
 - Challenge folder should have at least one `.vue` file
 - The solution should be broken down into components as per requirement
 - CSS should be strictly **scoped CSS** to prevent pollution in global space
-- The challenge should be added to its respective position in the array of challenges in `/apps/vue/src/helpers/challenges.ts`
+- The challenge should be added to its respective position in the array of challenges in `/shared/data/content/vue-challenges.ts`
 - The component should be (statically) imported and added as a separate route in the `/apps/vue/src/routes.ts` file.
