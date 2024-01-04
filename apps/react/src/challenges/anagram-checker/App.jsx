@@ -1,5 +1,5 @@
 import React from 'react'
-import AnagramChecker from './anagramchecker'
+import AnagramChecker from './Anagramchecker'
 
 const App = () => {
   return (
