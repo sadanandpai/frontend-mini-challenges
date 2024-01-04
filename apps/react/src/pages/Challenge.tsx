@@ -1,6 +1,7 @@
 import Accordion from '@/challenges/accordion/App';
 import AutocompleteOffline from '@/challenges/autocomplete/autocompleteOffline';
 import AutocompleteOnline from '@/challenges/autocomplete/autocompleteOnline';
+import AnagramChecker from '@/challenges/anagram-checker/App'
 import BMICalculator from '@/challenges/bmi-calculator/App';
 import ChallengeNavbar from '@/components/challenge-navbar/ChallengeNavbar';
 import Background from '@/challenges/background-changer/Background';
@@ -93,6 +94,8 @@ const reactChallengesMap = {
   'quiz-app': <QuizApp />,
   'chess-board': <ChessBoard />,
   'nested-dropdown': <NestedDropdown />,
+  'anagram-checker': <AnagramChecker/> ,
+   
 };
 
 function Challenge() {

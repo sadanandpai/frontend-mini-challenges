@@ -480,4 +480,14 @@ export const reactChallenges = new Map<string, IChallenge>([
       tags: [],
     },
   ],
+  [
+    'anagram-checker',
+    {
+      title: 'Anagram Checker',
+      link: 'anagram-checker',
+      difficulty: 'easy',
+      developer: 'Manmit Tiwade',
+      tags: [],
+    },
+  ],
 ]);
