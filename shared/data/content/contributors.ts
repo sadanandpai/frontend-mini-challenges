@@ -170,6 +170,13 @@ export const contributors = new Map<string, IContributor>([
     { name: 'Bhumik Kalola', pic: 'https://avatars.githubusercontent.com/u/147032346' },
   ],
   [
+    'babandakale',
+    {
+      name: 'Baban Dakale',
+      pic: 'https://avatars.githubusercontent.com/u/142794846',
+    }
+  ]
+  [
     'Manmit Tiwade',
     { name: 'Manmit Tiwade', pic: 'https://avatars.githubusercontent.com/u/112580293' },
   ],

@@ -1,0 +1,40 @@
+.dice-container {
+  display: flex;
+}
+
+.dice {
+  width: 80px;
+  height: 80px;
+  position: relative;
+  margin: 5px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+}
+
+.dice-dot {
+  --top: 0%;
+  --left: 0%;
+
+  width: 15px;
+  height: 15px;
+  background-color: #000000;
+  border-radius: 50px;
+
+  position: absolute;
+  top: var(--top);
+  left: var(--left);
+  transform: translateX(calc(var(--left) * -1)) translateY(calc(var(--top) * -1));
+}
+
+.btn-roll-dice {
+  margin-top: 10px;
+  border: 1px solid red;
+  width: 100px;
+  height: 50px;
+}
+
+.page-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
