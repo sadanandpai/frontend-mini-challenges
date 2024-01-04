@@ -3,22 +3,47 @@
   border-bottom-style: hidden;
   text-align: center;
 }
+
 .leaderBoardBorderBottomStyle {
   text-align: center;
   border-bottom-style: hidden;
 }
-.leaderBoardContributorImg {
+
+.leaderBoardContributorImg,
+.userProfileImg {
   width: 80px;
   height: 80px;
   border: 2px solid orange;
   border-radius: 50%;
+  margin-right: 20px;
 }
+
+.userProfileImg {
+  width: 160px;
+  height: 160px;
+}
+
 .leaderBoardContributorNameTd {
   display: flex;
   align-items: center;
   gap: 10px;
 }
-.leaderBoardHeading {
+
+.leaderBoardHeading,
+.userProfileHeading {
   margin-bottom: 3rem;
   text-align: center;
+}
+
+.profileDetailsContainer {
+  display: flex;
+}
+
+.profileLink {
+  display: flex;
+  align-items: center;
+}
+
+.fontWeightNormal {
+  font-weight: 300;
 }

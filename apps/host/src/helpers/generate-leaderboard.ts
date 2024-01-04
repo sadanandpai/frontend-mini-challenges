@@ -1,11 +1,12 @@
 import { contributors, angularChallenges, jsChallenges, reactChallenges, vueChallenges } from '@fmc/data/content';
 import type { IChallenge } from '@fmc/data/types';
 
-interface LeaderboardEntry {
+export interface LeaderboardEntry {
   name: string;
   pic: string;
   contributions: IChallenge[];
   numberOfContributions: number;
+  developer:string;
 }
 
 export const generateLeaderboardData = (): Map<string, LeaderboardEntry> => {
@@ -59,6 +60,7 @@ export const generateLeaderboardData = (): Map<string, LeaderboardEntry> => {
         pic: developerInfo?.pic,
         contributions: data,
         numberOfContributions: data.length,
+        developer:key,
       });
     }
   });
