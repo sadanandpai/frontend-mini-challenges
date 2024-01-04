@@ -4,6 +4,7 @@ import { RouterProvider, createHashRouter } from 'react-router-dom';
 import HomePage from './pages/home';
 import LeaderboardPage from './pages/leaderboard';
 import './index.css';
+import { UserProfile } from './components/leaderboard/userprofile';
 
 const router = createHashRouter([
   {
@@ -13,6 +14,10 @@ const router = createHashRouter([
   {
     path: '/',
     element: <HomePage />,
+  },
+  {
+    path: '/profile/:githubid',
+    element: <UserProfile />,
   },
 ]);
 

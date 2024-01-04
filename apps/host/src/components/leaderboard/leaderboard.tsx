@@ -1,9 +1,9 @@
 import { generateLeaderboardData } from '@/helpers/generate-leaderboard';
 import classes from './leaderboard.module.css';
+import { Link } from 'react-router-dom';
 
 export default function Leaderboard() {
   const data = generateLeaderboardData();
-
   const GetLeaderBoardTableBody = () => {
     return Array.from(data.values()).map((contributor, index) => (
       <tr key={contributor.name}>
@@ -21,10 +21,12 @@ export default function Leaderboard() {
               : `${classes.leaderBoardBorderBottomStyle} ${classes.leaderBoardContributorNameTd}`
           }
         >
+          <Link to={`/profile/${contributor.developer}`} className={classes.profileLink}>
           <span>
             <img className={classes.leaderBoardContributorImg} src={contributor.pic} alt={''} />
           </span>
           <span>{contributor.name}</span>
+          </Link>
         </td>
         <td
           className={
