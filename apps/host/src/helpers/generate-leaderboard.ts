@@ -6,7 +6,7 @@ export interface LeaderboardEntry {
   pic: string;
   contributions: IChallenge[];
   numberOfContributions: number;
-  developer:string;
+  developer: string;
 }
 
 export const generateLeaderboardData = (): Map<string, LeaderboardEntry> => {
@@ -17,36 +17,49 @@ export const generateLeaderboardData = (): Map<string, LeaderboardEntry> => {
     if (val.developer) {
       if (developerContributions.has(val.developer)) {
         const developer = developerContributions.get(val.developer);
+        val.longLink = `/angular/#/challenges/${val.link}`;
         developer?.push(val);
-      } else 
+      } else {
+        val.longLink = `/angular/#/challenges/${val.link}`;
         developerContributions.set(val.developer, [val]);
+      }
     }
   });
   reactChallenges.forEach((val) => {
     if (val.developer) {
       if (developerContributions.has(val.developer)) {
         const developer = developerContributions.get(val.developer);
+        val.longLink = `/frontend-mini-challenges/react/#/${val.link}`;
         developer?.push(val);
-      } else 
+      } else {
+        val.longLink = `/frontend-mini-challenges/react/#/${val.link}`;
         developerContributions.set(val.developer, [val]);
+      }
     }
   });
   vueChallenges.forEach((val) => {
     if (val.developer) {
       if (developerContributions.has(val.developer)) {
         const developer = developerContributions.get(val.developer);
+        val.longLink = `/vue/#${val.link}`;
         developer?.push(val);
-      } else 
+      } else {
+        val.longLink = `/vue/#${val.link}`;
         developerContributions.set(val.developer, [val]);
+      }
     }
   });
   jsChallenges.forEach(val => {
+
     if (val.developer) {
       if (developerContributions.has(val.developer)) {
         const developer = developerContributions.get(val.developer);
+        val.longLink = `/frontend-mini-challenges/javascript/src/challenges/${val.link}/`;
         developer?.push(val);
-      } else 
+      } else {
+        val.longLink = `/frontend-mini-challenges/javascript/src/challenges/${val.link}/`;
         developerContributions.set(val.developer, [val]);
+      }
     }
   });
 
@@ -60,7 +73,7 @@ export const generateLeaderboardData = (): Map<string, LeaderboardEntry> => {
         pic: developerInfo?.pic,
         contributions: data,
         numberOfContributions: data.length,
-        developer:key,
+        developer: key,
       });
     }
   });

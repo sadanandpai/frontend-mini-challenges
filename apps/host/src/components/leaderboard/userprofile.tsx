@@ -9,7 +9,7 @@ const ChallengesContainer = ({ challenges }: { challenges: IChallenge[] }) => <d
         List of Contributions
     </h2>
     <ul>
-        {challenges?.map((challenge, index) => <a href={`/frontend-mini-challenges/react/#/${challenge.link}`} key={`${challenge.link }-${index}`}> <li>{challenge.title}</li></a>)}
+        {challenges?.map((challenge) => <a href={challenge.longLink} key={challenge.longLink}> <li>{challenge.title}</li></a>)}
     </ul>
 </div>
 const ProfileContainer = ({ userProfileDetails }: { userProfileDetails: LeaderboardEntry }) => <div className={classes.profileDetailsContainer}>
