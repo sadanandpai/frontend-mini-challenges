@@ -4,7 +4,7 @@ import { jsChallenges } from '@fmc/data/content';
 defineNavigationBar();
 
 const challengeLink = window.location.pathname.split('/challenges/')[1].slice(0, -1);
-const challenge = jsChallenges.get(challengeLink);
+const challenge = jsChallenges.get(challengeLink)!;
 
 const backButton = `
   <a slot="left" href="/frontend-mini-challenges/javascript/" class="back">
