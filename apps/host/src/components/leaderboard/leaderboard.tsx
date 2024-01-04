@@ -31,7 +31,7 @@ export default function Leaderboard() {
             index >= 1 ? classes.leaderBoardTableData : classes.leaderBoardBorderBottomStyle
           }
         >
-          {contributor.challengesCompleted}
+          {contributor.numberOfContributions}
         </td>
       </tr>
     ));
