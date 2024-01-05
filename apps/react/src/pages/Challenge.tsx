@@ -47,7 +47,7 @@ import QuizApp from '@/challenges/quiz-app/App';
 import ChessBoard from '@/challenges/chess-board/App';
 import { reactChallenges } from '@fmc/data/content';
 import { useParams } from 'react-router-dom';
-
+import Calculator from '@/challenges/calculator/App'
 const reactChallengesMap = {
   counter: <Counter />,
   accordion: <Accordion />,
@@ -95,7 +95,7 @@ const reactChallengesMap = {
   'chess-board': <ChessBoard />,
   'nested-dropdown': <NestedDropdown />,
   'anagram-checker': <AnagramChecker/> ,
-   
+   'calculator':<Calculator/>
 };
 
 function Challenge() {
