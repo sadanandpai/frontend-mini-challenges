@@ -6,7 +6,7 @@
     box-sizing: border-box;
 }
 
-body {
+.container {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -14,7 +14,6 @@ body {
     font-family: 'Roboto', sans-serif;
     background-color: rgb(196, 171, 171);
 }
-
 .calculator__body {
     background-color: #D6E4E5;
     border-radius: 1rem;
