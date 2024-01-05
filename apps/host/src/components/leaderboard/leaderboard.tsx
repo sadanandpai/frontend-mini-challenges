@@ -41,9 +41,6 @@ export default function Leaderboard() {
 
   return (
     <div className="container">
-      <h2 id="leader-board" className={classes.leaderBoardHeading}>
-        Leaderboard
-      </h2>
       <table
         width="100%"
         border={1}
