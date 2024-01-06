@@ -245,6 +245,16 @@ export const reactChallenges = new Map<string, IChallenge>([
     },
   ],
   [
+    'calculator',
+    {
+      title: 'Calculator',
+      link: 'calculator',
+      difficulty: 'medium',
+      developer: 'liza',
+      tags: [],
+    },
+  ],
+  [
     'color-mixer',
     {
       title: 'Color Mixer',
@@ -490,14 +500,4 @@ export const reactChallenges = new Map<string, IChallenge>([
       tags: [],
     },
   ],
-  [
-    'calculator',
-    {
-      title:'calculator',
-      link:'calculator',
-      difficulty:'medium',
-      developer:'liza',
-      tags:[],
-    }
-  ]
 ]);

@@ -180,8 +180,5 @@ export const contributors = new Map<string, IContributor>([
     'Manmit Tiwade',
     { name: 'Manmit Tiwade', pic: 'https://avatars.githubusercontent.com/u/112580293' },
   ],
-  [
-    'LIZA',
-    {name:'LIZA',pic: 'https://avatars.githubusercontent.com/u/78140921'},
-  ]
+  ['liza', { name: 'Liza', pic: 'https://avatars.githubusercontent.com/u/78140921' }],
 ]);
