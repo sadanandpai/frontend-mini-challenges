@@ -8,14 +8,14 @@
             <span>{{ time.sec.toString().padStart(2, "0") }}</span>
         </div>
         <div class="flex-center">
-            <button @click="startTimer" :disabled="intervalID">Start</button>
+            <button @click="startTimer" :disabled="Boolean(intervalID)">Start</button>
             <button @click="stop" :disabled="!intervalID">Stop</button>
             <button @click="resetTimer" :disabled="isResetDisabled()">Reset</button>
         </div>
     </div>
 </template>
   
-<script setup lang="js">
+<script setup lang="ts">
 import { ref } from 'vue';
 
 const time = ref({
