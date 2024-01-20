@@ -15,6 +15,7 @@ import ToastPopup from "./challenges/toast-popup/index.vue";
 import PasswordStrength from "./challenges/password-strength/index.vue";
 import Stack from "./challenges/stack/index.vue";
 import PasswordGenerator from "./challenges/password-generator/index.vue";
+import Stopwatch from "./challenges/stopwatch/index.vue";
 
 const routes: RouteRecordRaw[] = [
   { path: "/", component: Challenges },
@@ -69,6 +70,10 @@ const routes: RouteRecordRaw[] = [
       {
         path: "/password-generator",
         component: PasswordGenerator
+      },
+      {
+        path: "/stopwatch",
+        component: Stopwatch
       }
     ],
   },

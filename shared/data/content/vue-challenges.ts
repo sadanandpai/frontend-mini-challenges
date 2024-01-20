@@ -111,4 +111,14 @@ export const vueChallenges = new Map<string, IChallenge>([
       tags: [],
     },
   ],
+  [
+    'stopwatch',
+    {
+      title: 'Stopwatch',
+      link: '/stopwatch',
+      difficulty: 'easy',
+      developer: 'Shardik04',
+      tags: [],
+    },
+  ],
 ]);
