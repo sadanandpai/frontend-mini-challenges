@@ -25,7 +25,7 @@ const time = ref({
 });
 
 
-const intervalID = ref(null);
+const intervalID = ref(0);
 
 // Local state value update
 const updateTimer = () => {
@@ -63,13 +63,13 @@ const stop = () => {
         return;
     }
     clearInterval(intervalID.value);
-    intervalID.value = null;
+    intervalID.value = 0;
 };
 
 // Reset button click
 const resetTimer = () => {
     clearInterval(intervalID.value);
-    intervalID.value = null;
+    intervalID.value = 0;
 
     time.value = {
         hour: 0,
