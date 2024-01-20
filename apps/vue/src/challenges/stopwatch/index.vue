@@ -1,6 +1,5 @@
 <template>
     <div class="stopwatch">
-        <h5 class="flex-center">Stopwatch</h5>
         <div class="timer">
             <span>{{ time.hour.toString().padStart(2, "0") }}</span>&nbsp;:&nbsp;
             <span>{{ time.min.toString().padStart(2, "0") }}</span>
