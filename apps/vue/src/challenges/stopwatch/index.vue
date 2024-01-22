@@ -9,13 +9,13 @@
         <div class="flex-center">
             <button @click="startTimer" :disabled="Boolean(intervalID)">Start</button>
             <button @click="stop" :disabled="!intervalID">Stop</button>
-            <button @click="resetTimer" :disabled="isResetDisabled()">Reset</button>
+            <button @click="resetTimer" :disabled="isResetDisabled">Reset</button>
         </div>
     </div>
 </template>
   
 <script setup lang="ts">
-import { ref } from 'vue';
+import { computed, ref } from 'vue';
 
 const time = ref({
     hour: 0,
@@ -78,7 +78,7 @@ const resetTimer = () => {
 };
 
 // determine disabled state of reset button
-const isResetDisabled = () => {
+const isResetDisabled = computed(() => {
     if (!intervalID) {
         return true
     }
@@ -87,11 +87,11 @@ const isResetDisabled = () => {
     const { hour = 0, min = 0, sec = 0 } = time.value;
     return !(hour > 0 || min > 0 || sec > 0);
 
-}
+})
 
 </script>
   
-<style scoped css="scss">
+<style scoped>
 .flex-center {
     display: flex;
     align-items: center;
