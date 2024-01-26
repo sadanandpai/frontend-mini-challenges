@@ -33,7 +33,9 @@ const App = () => {
         ))}
       </div>
       <div className={styles.countdownContainer}>
-        <span className={`${styles.countdownTime} ${styles.active}`}>{Math.floor(currentDuration / 1000)} Seconds</span>
+        <span className={`${styles.countdownTime} ${styles.active}`}>
+          {Math.floor(currentDuration / 1000)} Seconds
+        </span>
       </div>
     </div>
   );
