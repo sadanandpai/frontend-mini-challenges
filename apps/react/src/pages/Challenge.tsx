@@ -47,8 +47,10 @@ import QuizApp from '@/challenges/quiz-app/App';
 import ChessBoard from '@/challenges/chess-board/App';
 import { reactChallenges } from '@fmc/data/content';
 import { useParams } from 'react-router-dom';
-import Calculator from '@/challenges/calculator/App'
+import Calculator from '@/challenges/calculator/App';
+import TransferListApp from '@/challenges/transfer-list/TransferListApp';
 const reactChallengesMap = {
+  'transfer-list': <TransferListApp />,
   counter: <Counter />,
   accordion: <Accordion />,
   'background-changer': <Background />,
