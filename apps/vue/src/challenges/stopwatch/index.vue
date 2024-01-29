@@ -28,7 +28,6 @@ const intervalID = ref(0);
 
 // Local state value update
 const updateTimer = () => {
-    time.value = { ...time.value };
     let { hour = 0, min = 0, sec = 0 } = { ...time.value };
 
 
