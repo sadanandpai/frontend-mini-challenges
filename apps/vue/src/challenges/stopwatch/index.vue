@@ -13,7 +13,7 @@
         </div>
     </div>
 </template>
-  
+
 <script setup lang="ts">
 import { computed, ref } from 'vue';
 
@@ -23,13 +23,11 @@ const time = ref({
     sec: 0,
 });
 
-
 const intervalID = ref(0);
 
 // Local state value update
 const updateTimer = () => {
     let { hour = 0, min = 0, sec = 0 } = { ...time.value };
-
 
     if (sec < 59) {
         sec = sec + 1;
@@ -82,14 +80,12 @@ const isResetDisabled = computed(() => {
         return true
     }
 
-
     const { hour = 0, min = 0, sec = 0 } = time.value;
     return !(hour > 0 || min > 0 || sec > 0);
 
 })
-
 </script>
-  
+
 <style scoped>
 .flex-center {
     display: flex;
@@ -107,7 +103,6 @@ const isResetDisabled = computed(() => {
     font-size: 50px;
     margin: 10px 0;
 }
-
 
 button {
     margin: 0 30px;

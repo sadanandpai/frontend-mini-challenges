@@ -116,7 +116,7 @@ export const vueChallenges = new Map<string, IChallenge>([
     {
       title: 'Stopwatch',
       link: '/stopwatch',
-      difficulty: 'easy',
+      difficulty: 'medium',
       developer: 'Shardik04',
       tags: [],
     },
