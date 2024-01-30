@@ -121,4 +121,14 @@ export const vueChallenges = new Map<string, IChallenge>([
       tags: [],
     },
   ],
+  [
+    'temprature-converter',
+    {
+      title: 'Temprature Converter',
+      link: '/temprature-converter',
+      difficulty: 'easy',
+      developer: 'bhumikkalola',
+      tags: [],
+    },
+  ],
 ]);
