@@ -2,7 +2,7 @@ import styles from '../styles.module.css';
 
 function Controller({ tanksCount, setTanksCount }) {
   return (
-    <section>
+    <section className={styles.range}>
       <div className={styles['form-item']}>
         <label htmlFor="waterTanks">Water Tanks: </label>
         <input

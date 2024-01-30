@@ -26,6 +26,7 @@ button {
   border: none;
   border-radius: 0.5rem;
   text-transform: uppercase;
+  user-select: none;
 }
 
 .empty-btn {
@@ -34,6 +35,7 @@ button {
   border: 2px solid red;
   border-radius: 0.5rem;
   text-transform: uppercase;
+  user-select: none;
 }
 
 .tank {
@@ -56,4 +58,28 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+  .range {
+    display: none;
+  }
+
+  .tanks {
+    padding: 0;
+  }
+
+  .tank {
+    width: 70px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .tanks {
+    padding: 0;
+  }
+
+  .tank {
+    width: 70px;
+  }
 }
