@@ -39,6 +39,8 @@ export default function App() {
 
   return (
     <div className={styles['text-center']}>
+      <p>Press and Hold "Add" to start filling the tank</p>
+
       <main className={styles.tanks}>
         {tanks.map((tank, index) => (
           <TankContainer key={index} tank={tank} setTanks={setTanks} index={index} />
