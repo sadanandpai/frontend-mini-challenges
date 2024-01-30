@@ -1,4 +1,5 @@
 import React from "react";
+import styles from '../../TransferListApp.module.css';
 
 const Buttons = ({
   leftClickHandler,
@@ -12,32 +13,32 @@ const Buttons = ({
 }) => {
   
   return (
-    <div className="buttons-container">
+    <div className={styles["buttons-container"]}>
       <button
         onClick={() => leftClickHandlerAll()}
         disabled={disableLeftBtnAll}
-        style={{ pointerEvents: disableLeftBtnAll ? "none" : "" }}
+        className={disableLeftBtnAll ? styles["disabled-button"] : ""}
       >
         {">>"}
       </button>
       <button
         onClick={() => leftClickHandler()}
         disabled={disableLeftBtn}
-        style={{ pointerEvents: disableLeftBtn ? "none" : "" }}
+        className={disableLeftBtn ? styles["disabled-button"] : ""}
       >
         {">"}
       </button>
       <button
         onClick={() => rightClickHandler()}
         disabled={disableRightBtn}
-        style={{ pointerEvents: disableRightBtn ? "none" : "" }}
+        className={disableRightBtn ? styles["disabled-button"] : ""}
       >
         {"<"}
       </button>
       <button
         onClick={() => rightClickHandlerAll()}
         disabled={disableRightBtnAll}
-        style={{ pointerEvents: disableRightBtnAll ? "none" : "" }}
+        className={disableRightBtnAll ? styles["disabled-button"] : ""}
       >
         {"<<"}
       </button>

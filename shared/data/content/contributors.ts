@@ -2,6 +2,10 @@ import type { IContributor } from '../types/index';
 
 export const contributors = new Map<string, IContributor>([
   [
+    'DeePaK-HeeRaKaRi',
+    { name: 'Deepak Heerakari', pic: 'https://avatars.githubusercontent.com/u/63955160' },
+  ],
+  [
     'sadanandpai',
     { name: 'Sadanand Pai', pic: 'https://avatars.githubusercontent.com/u/12962887' },
   ],

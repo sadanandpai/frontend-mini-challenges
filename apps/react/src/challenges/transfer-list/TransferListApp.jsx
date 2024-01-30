@@ -1,9 +1,8 @@
 import React, { useState } from "react";
-import LeftList from "./Components/LeftList/LeftList";
 import Buttons from "./Components/Buttons/Buttons";
-import RightList from "./Components/RightList/RightList";
-import "./TransferListApp.css";
+import styles from "./TransferListApp.module.css";
 import { countriesData } from "./MockData/transferListData";
+import ListContainer from "./Components/ListContainer/ListContainer";
 
 const TransferListApp = () => {
   const [currLeftListData, setcurrLeftListData] = useState([]);
@@ -46,35 +45,41 @@ const TransferListApp = () => {
     const leftListFilterData = leftListData.filter((country) => !currLeftListData.some((item) => item.id === country.id));
     setLeftListData(leftListFilterData);
     setRighListtData([...currLeftListData, ...rightListData]);
-    setcurrLeftListData([]);
-    setdisableLeftBtn(true);
+    resetLeftClickHandler();
   };
 
   const rightClickHandler = () => {
     const rightListFilterData = rightListData.filter((country) => !currRightListData.some((item) => item.id === country.id));
     setRighListtData(rightListFilterData);
     setLeftListData([...currRightListData, ...leftListData]);
-    setcurrRightListData([]);
-    setdisableRightBtn(true);
+    resetRightClickHandler();
   };
 
   const leftClickHandlerAll = () =>{
     setRighListtData([...leftListData,...rightListData])
     setLeftListData([])
-    setcurrLeftListData([]);
-    setdisableLeftBtn(true);
+    resetLeftClickHandler();
   }
 
   const rightClickHandlerAll = () => {
     setLeftListData([...rightListData,...leftListData])
     setRighListtData([])
+    resetRightClickHandler();
+  }
+
+  const resetLeftClickHandler = () => {
+    setcurrLeftListData([]);
+    setdisableLeftBtn(true);
+  }
+
+  const resetRightClickHandler = () => {
     setcurrRightListData([]);
     setdisableRightBtn(true);
   }
 
   return (
-    <div className="TransferListContainer">
-      <LeftList data={leftListData} handleData={handleData} />
+    <div className={styles["TransferListContainer"]}>
+      <ListContainer data={leftListData} handleData={handleData} direction={"left"}/>
       <Buttons 
       leftClickHandler = {leftClickHandler} 
       rightClickHandler = {rightClickHandler} 
@@ -85,7 +90,7 @@ const TransferListApp = () => {
       disableLeftBtnAll = {leftListData && leftListData.length > 0 ? false : true}
       disableRightBtnAll = {rightListData && rightListData.length > 0 ? false : true}
       />
-      <RightList data={rightListData} handleData={handleData} />
+      <ListContainer data={rightListData} handleData={handleData} direction={"right"}/>
     </div>
   );
 };
