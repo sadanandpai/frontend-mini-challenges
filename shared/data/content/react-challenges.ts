@@ -500,4 +500,14 @@ export const reactChallenges = new Map<string, IChallenge>([
       tags: [],
     },
   ],
+  [
+    'water-balancer',
+    {
+      title: 'Water Balancer',
+      link: 'water-balancer',
+      difficulty: 'hard',
+      developer: 'sadanandpai',
+      tags: [],
+    },
+  ],
 ]);

@@ -1,0 +1,27 @@
+.otpFields {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  margin: 0;
+  appearance: none;
+}
+
+.otpinput {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.otpinput input {
+  width: 3rem;
+  height: 3rem;
+  text-align: center;
+  border: 1px solid rgba(0, 0, 0, 30%);
+}
