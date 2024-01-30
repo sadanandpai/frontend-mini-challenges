@@ -4,7 +4,13 @@ function WaterTank({ onDown, onUp, onEmpty, tankLevel, capacity }) {
   return (
     <div>
       <div className={styles.controls}>
-        <button onMouseDown={onDown} onMouseUp={onUp} className={styles['add-btn']}>
+        <button
+          onMouseDown={onDown}
+          onMouseUp={onUp}
+          onTouchStart={onDown}
+          onTouchEnd={onUp}
+          className={styles['add-btn']}
+        >
           Add
         </button>
         <button onClick={onEmpty} className={styles['empty-btn']}>

@@ -8,7 +8,9 @@ function TankContainer({ tank, setTanks, index }) {
   const waterLevelRef = useRef(0);
   waterLevelRef.current = tank.level;
 
-  function onDown() {
+  function onDown(e) {
+    e.preventDefault();
+
     setTanks((prev) => {
       const next = [...prev];
       next[index].isReady = false;
