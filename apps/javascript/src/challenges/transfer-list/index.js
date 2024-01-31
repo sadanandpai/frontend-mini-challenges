@@ -33,18 +33,20 @@ class TransferList {
   }
 
   populate() {
-    this.leftItems.forEach(item => this.leftSectionEl.appendChild(this.createElement(item)));
-    this.rightItems.forEach(item => this.rightSectionEl.appendChild(this.createElement(item)));
+    this.leftItems.forEach((item) => this.leftSectionEl.appendChild(this.createElement(item)));
+    this.rightItems.forEach((item) => this.rightSectionEl.appendChild(this.createElement(item)));
   }
 
   createElement(item) {
     const divEl = document.createElement('div');
     const checkBoxEl = document.createElement('input');
     checkBoxEl.type = 'checkbox';
-    const spanEl = document.createElement('span');
-    spanEl.textContent = item;
+    checkBoxEl.id = item;
+    const labelEl = document.createElement('label');
+    labelEl.htmlFor = item;
+    labelEl.textContent = item;
     divEl.appendChild(checkBoxEl);
-    divEl.appendChild(spanEl);
+    divEl.appendChild(labelEl);
     return divEl;
   }
 
@@ -82,7 +84,7 @@ class TransferList {
 
   moveAllLeft() {
     const items = this.rightSectionEl.querySelectorAll('div');
-    items.forEach(item => {
+    items.forEach((item) => {
       const divEl = item;
       this.leftSectionEl.appendChild(divEl);
     });
@@ -90,7 +92,7 @@ class TransferList {
 
   moveLeft() {
     const checkedItems = this.rightSectionEl.querySelectorAll('input:checked');
-    checkedItems.forEach(item => {
+    checkedItems.forEach((item) => {
       const divEl = item.parentElement;
       item.checked = false;
       this.leftSectionEl.appendChild(divEl);
@@ -99,7 +101,7 @@ class TransferList {
 
   moveRight() {
     const checkedItems = this.leftSectionEl.querySelectorAll('input:checked');
-    checkedItems.forEach(item => {
+    checkedItems.forEach((item) => {
       const divEl = item.parentElement;
       item.checked = false;
       this.rightSectionEl.appendChild(divEl);
@@ -108,7 +110,7 @@ class TransferList {
 
   moveAllRight() {
     const items = this.leftSectionEl.querySelectorAll('div');
-    items.forEach(item => {
+    items.forEach((item) => {
       const divEl = item;
       this.rightSectionEl.appendChild(divEl);
     });

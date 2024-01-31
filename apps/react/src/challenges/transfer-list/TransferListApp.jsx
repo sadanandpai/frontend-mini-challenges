@@ -1,96 +1,75 @@
-import React, { useState } from "react";
-import Buttons from "./Components/Buttons/Buttons";
-import styles from "./TransferListApp.module.css";
-import { countriesData } from "./MockData/transferListData";
-import ListContainer from "./Components/ListContainer/ListContainer";
+import React, { useState } from 'react';
+import Buttons from './Components/Buttons';
+import styles from './TransferListApp.module.css';
+import { countriesData } from './MockData/transferListData';
+import ListContainer from './Components/ListContainer';
+
+function getListState() {
+  return countriesData.map((item) => ({
+    ...item,
+    selected: false,
+    direction: 'left',
+  }));
+}
 
 const TransferListApp = () => {
-  const [currLeftListData, setcurrLeftListData] = useState([]);
-  const [currRightListData, setcurrRightListData] = useState([]);
-  const [leftListData, setLeftListData] = useState(countriesData);
-  const [rightListData, setRighListtData] = useState([]);
-  const [disableLeftBtn,setdisableLeftBtn] = useState(true)
-  const [disableRightBtn,setdisableRightBtn] = useState(true)
+  const [items, setItems] = useState(getListState);
+  const leftItems = items.filter((item) => item.direction === 'left');
+  const rightItems = items.filter((item) => item.direction === 'right');
+  const selectedLeftItems = leftItems.filter((item) => item.selected);
+  const selectedRightItems = rightItems.filter((item) => item.selected);
 
-  const handleData = (e, direction) => {
-    const itemId = e.target.id;
-    const itemValue = e.target.value;
-    
-    if (direction == "left") {
-      setdisableLeftBtn(false)
-      if (e.target.checked) {
-        setcurrLeftListData([...currLeftListData, { value: itemValue, id: itemId }]);
-      } else {
-        const filterData =(currLeftListData && currLeftListData.length > 0 && currLeftListData.filter((item) => item.id !== itemId)) || [];
-        if(filterData && filterData.length == 0) {
-          setdisableLeftBtn(true)
-        }
-        setcurrLeftListData(filterData);
+  const onToggle = (id) => {
+    const updatedItems = items.map((item) => {
+      if (item.id === id) {
+        return {
+          ...item,
+          selected: !item.selected,
+        };
       }
-    } else {
-      setdisableRightBtn(false)
-      if (e.target.checked) {
-        setcurrRightListData([...currRightListData, { value: itemValue, id: itemId }]);
-      } else {
-        const filterData =(currRightListData && currRightListData.length > 0 && currRightListData.filter((item) => item.id !== itemId)) || [];
-        if(filterData && filterData.length == 0) {
-          setdisableRightBtn(true)
-        }
-        setcurrRightListData(filterData);
+      return item;
+    });
+    setItems(updatedItems);
+  };
+
+  const moveItems = (from, to) => {
+    const movedItems = items.map((item) => {
+      if (item.selected && item.direction === from) {
+        return {
+          ...item,
+          selected: false,
+          direction: to,
+        };
       }
-    }
+      return item;
+    });
+    setItems(movedItems);
   };
 
-  const leftClickHandler = () => {
-    const leftListFilterData = leftListData.filter((country) => !currLeftListData.some((item) => item.id === country.id));
-    setLeftListData(leftListFilterData);
-    setRighListtData([...currLeftListData, ...rightListData]);
-    resetLeftClickHandler();
+  const moveItemsTo = (to) => {
+    const movedItems = items.map((item) => {
+      return {
+        ...item,
+        direction: to,
+      };
+    });
+    setItems(movedItems);
   };
-
-  const rightClickHandler = () => {
-    const rightListFilterData = rightListData.filter((country) => !currRightListData.some((item) => item.id === country.id));
-    setRighListtData(rightListFilterData);
-    setLeftListData([...currRightListData, ...leftListData]);
-    resetRightClickHandler();
-  };
-
-  const leftClickHandlerAll = () =>{
-    setRighListtData([...leftListData,...rightListData])
-    setLeftListData([])
-    resetLeftClickHandler();
-  }
-
-  const rightClickHandlerAll = () => {
-    setLeftListData([...rightListData,...leftListData])
-    setRighListtData([])
-    resetRightClickHandler();
-  }
-
-  const resetLeftClickHandler = () => {
-    setcurrLeftListData([]);
-    setdisableLeftBtn(true);
-  }
-
-  const resetRightClickHandler = () => {
-    setcurrRightListData([]);
-    setdisableRightBtn(true);
-  }
 
   return (
-    <div className={styles["TransferListContainer"]}>
-      <ListContainer data={leftListData} handleData={handleData} direction={"left"}/>
-      <Buttons 
-      leftClickHandler = {leftClickHandler} 
-      rightClickHandler = {rightClickHandler} 
-      leftClickHandlerAll = {leftClickHandlerAll}
-      rightClickHandlerAll = {rightClickHandlerAll} 
-      disableLeftBtn = {disableLeftBtn} 
-      disableRightBtn = {disableRightBtn}
-      disableLeftBtnAll = {leftListData && leftListData.length > 0 ? false : true}
-      disableRightBtnAll = {rightListData && rightListData.length > 0 ? false : true}
+    <div className={styles['TransferListContainer']}>
+      <ListContainer items={leftItems} onToggle={onToggle} />
+      <Buttons
+        leftClickHandler={() => moveItems('left', 'right')}
+        rightClickHandler={() => moveItems('right', 'left')}
+        leftClickHandlerAll={() => moveItemsTo('right')}
+        rightClickHandlerAll={() => moveItemsTo('left')}
+        disableLeftBtn={selectedLeftItems.length === 0}
+        disableRightBtn={selectedRightItems.length === 0}
+        disableLeftBtnAll={leftItems.length === 0}
+        disableRightBtnAll={rightItems.length === 0}
       />
-      <ListContainer data={rightListData} handleData={handleData} direction={"right"}/>
+      <ListContainer items={rightItems} onToggle={onToggle} />
     </div>
   );
 };
