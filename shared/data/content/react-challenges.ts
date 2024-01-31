@@ -2,6 +2,16 @@ import type { IChallenge } from '../types/challenge';
 
 export const reactChallenges = new Map<string, IChallenge>([
   [
+    'transfer-list',
+    {
+      title: 'Transfer List',
+      link: 'transfer-list',
+      difficulty: 'medium',
+      developer: 'DeePaK-HeeRaKaRi',
+      tags: [],
+    },
+  ],
+  [
     'counter',
     {
       title: 'Counter',
