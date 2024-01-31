@@ -49,8 +49,10 @@ import { reactChallenges } from '@fmc/data/content';
 import { useParams } from 'react-router-dom';
 import Calculator from '@/challenges/calculator/App';
 import WaterBalancer from '@/challenges/water-balancer/App';
+import TransferListApp from '@/challenges/transfer-list/TransferListApp';
 
 const reactChallengesMap = {
+  'transfer-list': <TransferListApp />,
   counter: <Counter />,
   accordion: <Accordion />,
   'background-changer': <Background />,
