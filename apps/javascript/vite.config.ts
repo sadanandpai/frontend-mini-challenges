@@ -1,9 +1,9 @@
 import { defineConfig } from 'vite';
 import { jsChallenges } from '../../shared/data/content/index';
 
-const challengesPath = jsChallenges
-  .filter((challenge) => challenge.link !== null)
-  .map((challenge) => `./src/challenges/${challenge.link}/index.html`);
+const challengesPath = [...jsChallenges.values()].map(
+  (challenge) => `./src/challenges/${challenge.link}/index.html`
+);
 
 // https://vitejs.dev/config/
 export default defineConfig({

@@ -27,5 +27,5 @@ headTags.forEach((tag) => document.head.prepend(tag));
 
 // Add title
 const challengeLink = window.location.pathname.split('/challenges/')[1].slice(0, -1);
-const challenge = jsChallenges.find((challenge) => challenge.link === challengeLink);
+const challenge = jsChallenges.get(challengeLink);
 document.title = challenge.title;

@@ -1,4 +1,4 @@
-import type { IChallenge } from '../types/challenge';
+import { EDifficulty, type IChallenge } from '../types/challenge';
 
 export const reactChallenges = new Map<string, IChallenge>([
   [
@@ -6,7 +6,7 @@ export const reactChallenges = new Map<string, IChallenge>([
     {
       title: 'Counter',
       link: 'counter',
-      difficulty: 'easy',
+      difficulty: EDifficulty.Easy,
       developer: 'sadanandpai',
       tags: [],
     },
@@ -16,7 +16,7 @@ export const reactChallenges = new Map<string, IChallenge>([
     {
       title: 'Programming Multiverse',
       link: 'programming-languages-multiverse',
-      difficulty: 'easy',
+      difficulty: EDifficulty.Easy,
       developer: 'Sumitwarrior7',
       tags: [],
       isNew: true,
@@ -27,7 +27,7 @@ export const reactChallenges = new Map<string, IChallenge>([
     {
       title: 'Anagram Checker',
       link: 'anagram-checker',
-      difficulty: 'easy',
+      difficulty: EDifficulty.Easy,
       developer: 'Manmit Tiwade',
       tags: [],
     },
@@ -37,7 +37,7 @@ export const reactChallenges = new Map<string, IChallenge>([
     {
       title: 'Quote Generator',
       link: 'quote-generator',
-      difficulty: 'easy',
+      difficulty: EDifficulty.Easy,
       developer: 'viditagrawal56',
       isNew: true,
       tags: [],
@@ -48,7 +48,7 @@ export const reactChallenges = new Map<string, IChallenge>([
     {
       title: 'Image Gallery',
       link: 'image-gallery',
-      difficulty: 'easy',
+      difficulty: EDifficulty.Easy,
       developer: 'Bhushan1019',
       isNew: true,
       tags: [],
@@ -60,7 +60,7 @@ export const reactChallenges = new Map<string, IChallenge>([
       title: 'Accordion',
       link: 'accordion',
       developer: 'NikhilJHA01',
-      difficulty: 'easy',
+      difficulty: EDifficulty.Easy,
       tags: [],
     },
   ],
@@ -70,7 +70,7 @@ export const reactChallenges = new Map<string, IChallenge>([
       title: 'Background Changer',
       link: 'background-changer',
       developer: 'AdityaSuryawanshi',
-      difficulty: 'easy',
+      difficulty: EDifficulty.Easy,
       isNew: true,
       tags: [],
     },
@@ -80,7 +80,7 @@ export const reactChallenges = new Map<string, IChallenge>([
     {
       title: 'Light Dark Mode',
       link: 'light-dark-mode',
-      difficulty: 'easy',
+      difficulty: EDifficulty.Easy,
       developer: 'NikhilJHA01',
       tags: [],
     },
@@ -90,7 +90,7 @@ export const reactChallenges = new Map<string, IChallenge>([
     {
       title: 'QR generator',
       link: 'qr-code-generator',
-      difficulty: 'easy',
+      difficulty: EDifficulty.Easy,
       developer: 'Krishnakalani111',
       tags: [],
     },
@@ -100,7 +100,7 @@ export const reactChallenges = new Map<string, IChallenge>([
     {
       title: 'Your Sport',
       link: 'your-sport',
-      difficulty: 'easy',
+      difficulty: EDifficulty.Easy,
       developer: 'Sumitwarrior7',
       tags: [],
       isNew: true,
@@ -111,7 +111,7 @@ export const reactChallenges = new Map<string, IChallenge>([
     {
       title: 'Table Colorizer',
       link: 'table-colorizer',
-      difficulty: 'easy',
+      difficulty: EDifficulty.Easy,
       developer: 'ravi02205',
       tags: [],
       isNew: true,
@@ -122,7 +122,7 @@ export const reactChallenges = new Map<string, IChallenge>([
     {
       title: 'Guess the number',
       link: 'Guess-the-number',
-      difficulty: 'easy',
+      difficulty: EDifficulty.Easy,
       developer: 'deepakrajkranti',
       tags: [],
     },
@@ -132,7 +132,7 @@ export const reactChallenges = new Map<string, IChallenge>([
     {
       title: 'Pagination',
       link: 'pagination',
-      difficulty: 'easy',
+      difficulty: EDifficulty.Easy,
       developer: 'Pancratzia',
       tags: [],
       isNew: true,
@@ -143,7 +143,7 @@ export const reactChallenges = new Map<string, IChallenge>([
     {
       title: 'Stack',
       link: 'stack',
-      difficulty: 'easy',
+      difficulty: EDifficulty.Easy,
       developer: 'kumaratul60',
       tags: [],
       isNew: true,
@@ -154,7 +154,7 @@ export const reactChallenges = new Map<string, IChallenge>([
     {
       title: 'Word Count',
       link: 'word-count',
-      difficulty: 'easy',
+      difficulty: EDifficulty.Easy,
       developer: 'Sumitwarrior7',
       tags: [],
       isNew: true,
@@ -165,7 +165,7 @@ export const reactChallenges = new Map<string, IChallenge>([
     {
       title: 'Temperature Converter',
       link: 'temperature-converter',
-      difficulty: 'easy',
+      difficulty: EDifficulty.Easy,
       developer: 'Sumitwarrior7',
       tags: [],
       isNew: true,
@@ -176,7 +176,7 @@ export const reactChallenges = new Map<string, IChallenge>([
     {
       title: 'Star Rating',
       link: 'star-Rating',
-      difficulty: 'easy',
+      difficulty: EDifficulty.Easy,
       developer: 'NikhilJHA01',
       tags: [],
     },
@@ -186,7 +186,7 @@ export const reactChallenges = new Map<string, IChallenge>([
     {
       title: 'Telephone formatter',
       link: 'telephone-formatter',
-      difficulty: 'easy',
+      difficulty: EDifficulty.Easy,
       developer: 'arpansaha13',
       tags: [],
     },
@@ -196,7 +196,7 @@ export const reactChallenges = new Map<string, IChallenge>([
     {
       title: 'String transformers',
       link: 'string-transformers',
-      difficulty: 'easy',
+      difficulty: EDifficulty.Easy,
       developer: 'arpansaha13',
       tags: [],
       isNew: true,
@@ -207,7 +207,7 @@ export const reactChallenges = new Map<string, IChallenge>([
     {
       title: 'Tic Tac Toe',
       link: 'tic-tac-toe',
-      difficulty: 'easy',
+      difficulty: EDifficulty.Easy,
       developer: 'rashidtvmr',
       tags: [],
       isNew: true,
@@ -218,7 +218,7 @@ export const reactChallenges = new Map<string, IChallenge>([
     {
       title: 'Expense Tracker',
       link: 'expense-tracker',
-      difficulty: 'easy',
+      difficulty: EDifficulty.Easy,
       developer: 'harsh472000',
       tags: [],
       isNew: true,
@@ -229,7 +229,7 @@ export const reactChallenges = new Map<string, IChallenge>([
     {
       title: '25-5 Clock',
       link: '25-5-clock',
-      difficulty: 'easy',
+      difficulty: EDifficulty.Easy,
       developer: 'caesar003',
       tags: [],
     },
@@ -239,7 +239,7 @@ export const reactChallenges = new Map<string, IChallenge>([
     {
       title: 'BMI Calculator',
       link: 'bmi-calculator',
-      difficulty: 'easy',
+      difficulty: EDifficulty.Easy,
       developer: 'ashikjhonson',
       tags: [],
     },
@@ -249,7 +249,7 @@ export const reactChallenges = new Map<string, IChallenge>([
     {
       title: 'Calculator',
       link: 'calculator',
-      difficulty: 'medium',
+      difficulty: EDifficulty.Medium,
       developer: 'liza',
       tags: [],
     },
@@ -259,7 +259,7 @@ export const reactChallenges = new Map<string, IChallenge>([
     {
       title: 'Color Mixer',
       link: 'color-mixer',
-      difficulty: 'medium',
+      difficulty: EDifficulty.Medium,
       developer: 'Sumitwarrior7',
       tags: [],
       isNew: true,
@@ -270,7 +270,7 @@ export const reactChallenges = new Map<string, IChallenge>([
     {
       title: 'Traffic Lights',
       link: 'traffic-lights',
-      difficulty: 'medium',
+      difficulty: EDifficulty.Medium,
       developer: 'rishabhm05',
       tags: [],
       isNew: true,
@@ -281,7 +281,7 @@ export const reactChallenges = new Map<string, IChallenge>([
     {
       title: 'Email Templates',
       link: 'email-templates',
-      difficulty: 'medium',
+      difficulty: EDifficulty.Medium,
       developer: 'sadanandpai',
       tags: [],
     },
@@ -291,7 +291,7 @@ export const reactChallenges = new Map<string, IChallenge>([
     {
       title: 'Toast Popup',
       link: 'toast-popup',
-      difficulty: 'medium',
+      difficulty: EDifficulty.Medium,
       developer: 'deepu0',
       tags: [],
     },
@@ -301,7 +301,7 @@ export const reactChallenges = new Map<string, IChallenge>([
     {
       title: 'Modal Popup',
       link: 'modal-popup',
-      difficulty: 'medium',
+      difficulty: EDifficulty.Medium,
       developer: 'rishabhm05',
       tags: [],
       isNew: true,
@@ -312,7 +312,7 @@ export const reactChallenges = new Map<string, IChallenge>([
     {
       title: 'Password Strength',
       link: 'password-strength',
-      difficulty: 'medium',
+      difficulty: EDifficulty.Medium,
       developer: 'deepu0',
       tags: [],
     },
@@ -322,7 +322,7 @@ export const reactChallenges = new Map<string, IChallenge>([
     {
       title: 'Column Table',
       link: 'column-table',
-      difficulty: 'medium',
+      difficulty: EDifficulty.Medium,
       developer: 'sadanandpai',
       tags: [],
       isNew: true,
@@ -333,7 +333,7 @@ export const reactChallenges = new Map<string, IChallenge>([
     {
       title: 'Todo List',
       link: 'todo-list',
-      difficulty: 'medium',
+      difficulty: EDifficulty.Medium,
       developer: 'deepakrajkranti',
       tags: [],
     },
@@ -343,7 +343,7 @@ export const reactChallenges = new Map<string, IChallenge>([
     {
       title: 'Emoji Picker',
       link: 'emoji-picker',
-      difficulty: 'medium',
+      difficulty: EDifficulty.Medium,
       developer: 'jeevaramanathan',
       tags: [],
       isNew: true,
@@ -354,7 +354,7 @@ export const reactChallenges = new Map<string, IChallenge>([
     {
       title: 'Investment Calculator',
       link: 'investment-calculator',
-      difficulty: 'medium',
+      difficulty: EDifficulty.Medium,
       developer: 'insharahAyyubi',
       tags: [],
       isNew: true,
@@ -365,7 +365,7 @@ export const reactChallenges = new Map<string, IChallenge>([
     {
       title: 'Stopwatch',
       link: 'stopwatch',
-      difficulty: 'medium',
+      difficulty: EDifficulty.Medium,
       developer: 'rashidtvmr',
       tags: [],
       isNew: true,
@@ -376,7 +376,7 @@ export const reactChallenges = new Map<string, IChallenge>([
     {
       title: 'Progressbar',
       link: 'progressbar',
-      difficulty: 'medium',
+      difficulty: EDifficulty.Medium,
       developer: 'dhanu084',
       tags: [],
       isNew: true,
@@ -387,7 +387,7 @@ export const reactChallenges = new Map<string, IChallenge>([
     {
       title: 'Quiz App',
       link: 'quiz-app',
-      difficulty: 'medium',
+      difficulty: EDifficulty.Medium,
       developer: 'AbhilashMadi',
       tags: [],
       isNew: true,
@@ -398,7 +398,7 @@ export const reactChallenges = new Map<string, IChallenge>([
     {
       title: 'Chess Board',
       link: 'chess-board',
-      difficulty: 'medium',
+      difficulty: EDifficulty.Medium,
       developer: 'AbhilashMadi',
       tags: [],
       isNew: true,
@@ -409,7 +409,7 @@ export const reactChallenges = new Map<string, IChallenge>([
     {
       title: 'Nested Dropdown',
       link: 'nested-dropdown',
-      difficulty: 'medium',
+      difficulty: EDifficulty.Medium,
       developer: 'AnkitKTrivedi',
       tags: [],
       isNew: true,
@@ -420,7 +420,7 @@ export const reactChallenges = new Map<string, IChallenge>([
     {
       title: 'Food Recipe',
       link: 'food-recipe',
-      difficulty: 'medium',
+      difficulty: EDifficulty.Medium,
       developer: 'Kei-K23',
       tags: [],
     },
@@ -430,7 +430,7 @@ export const reactChallenges = new Map<string, IChallenge>([
     {
       title: 'Password Generator',
       link: 'password-generator',
-      difficulty: 'medium',
+      difficulty: EDifficulty.Medium,
       developer: 'Kei-K23',
       tags: [],
       isNew: true,
@@ -441,7 +441,7 @@ export const reactChallenges = new Map<string, IChallenge>([
     {
       title: 'Transfer List',
       link: 'transfer-list',
-      difficulty: 'medium',
+      difficulty: EDifficulty.Medium,
       developer: 'DeePaK-HeeRaKaRi',
       tags: [],
     },
@@ -451,7 +451,7 @@ export const reactChallenges = new Map<string, IChallenge>([
     {
       title: 'OTP',
       link: 'otp',
-      difficulty: 'medium',
+      difficulty: EDifficulty.Medium,
       developer: 'rishabhm05',
       tags: [],
       isNew: true,
@@ -462,7 +462,7 @@ export const reactChallenges = new Map<string, IChallenge>([
     {
       title: 'Match Pair',
       link: 'match-pair',
-      difficulty: 'medium',
+      difficulty: EDifficulty.Medium,
       developer: 'sadanandpai',
       tags: [],
       isNew: true,
@@ -473,7 +473,7 @@ export const reactChallenges = new Map<string, IChallenge>([
     {
       title: 'Infinite Scrolling (online)',
       link: 'infinite-scrolling',
-      difficulty: 'medium',
+      difficulty: EDifficulty.Medium,
       developer: 'ayush-dutt-sharma',
       tags: [],
       isNew: true,
@@ -484,7 +484,7 @@ export const reactChallenges = new Map<string, IChallenge>([
     {
       title: 'File Explorer',
       link: 'file-explorer',
-      difficulty: 'hard',
+      difficulty: EDifficulty.Hard,
       developer: 'sadanandpai',
       tags: [],
       isNew: true,
@@ -495,7 +495,7 @@ export const reactChallenges = new Map<string, IChallenge>([
     {
       title: 'Typeahead / Autocomplete (offline)',
       link: 'autocomplete-offline',
-      difficulty: 'hard',
+      difficulty: EDifficulty.Hard,
       developer: 'deepu0',
       tags: [],
     },
@@ -505,7 +505,7 @@ export const reactChallenges = new Map<string, IChallenge>([
     {
       title: 'Typeahead / Autocomplete (online)',
       link: 'autocomplete-online',
-      difficulty: 'hard',
+      difficulty: EDifficulty.Hard,
       developer: 'deepu0',
       tags: [],
     },
@@ -515,7 +515,7 @@ export const reactChallenges = new Map<string, IChallenge>([
     {
       title: 'Water Balancer',
       link: 'water-balancer',
-      difficulty: 'hard',
+      difficulty: EDifficulty.Hard,
       developer: 'sadanandpai',
       tags: [],
     },

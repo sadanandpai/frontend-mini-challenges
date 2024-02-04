@@ -8,7 +8,7 @@
     <div class="challenge-grid">
 
     <ChallengeCard
-      v-for="challenge in vueChallenges.values()"
+      v-for="challenge in sortedChallengesByDifficulty"
       :key="challenge.title"
       :challenge="challenge"
     />
@@ -20,6 +20,9 @@
 import Navbar from '@/components/Navbar.vue';
 import ChallengeCard from '@/components/challenge/Card.vue';
 import { vueChallenges } from '@fmc/data/content';
+import { getSortedChallengesByDifficulty } from '@fmc/data/utils';
+
+const sortedChallengesByDifficulty = getSortedChallengesByDifficulty(vueChallenges);
 </script>
 
 <style scoped lang="scss">

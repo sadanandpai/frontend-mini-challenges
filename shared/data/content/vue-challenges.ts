@@ -1,4 +1,4 @@
-import type { IChallenge } from '../types/challenge';
+import { EDifficulty, type IChallenge } from '../types/challenge';
 
 export const vueChallenges = new Map<string, IChallenge>([
   [
@@ -6,7 +6,7 @@ export const vueChallenges = new Map<string, IChallenge>([
     {
       title: 'Counter',
       link: '/counter',
-      difficulty: 'easy',
+      difficulty: EDifficulty.Easy,
       developer: 'arpansaha13',
       tags: [],
     },
@@ -16,7 +16,7 @@ export const vueChallenges = new Map<string, IChallenge>([
     {
       title: 'Accordion',
       link: '/accordion',
-      difficulty: 'easy',
+      difficulty: EDifficulty.Easy,
       developer: 'arpansaha13',
       tags: [],
     },
@@ -26,7 +26,7 @@ export const vueChallenges = new Map<string, IChallenge>([
     {
       title: 'Light Dark Mode',
       link: '/light-dark-mode',
-      difficulty: 'easy',
+      difficulty: EDifficulty.Easy,
       developer: 'arpansaha13',
       tags: [],
     },
@@ -36,7 +36,7 @@ export const vueChallenges = new Map<string, IChallenge>([
     {
       title: 'Table Colorizer',
       link: '/table-colorizer',
-      difficulty: 'easy',
+      difficulty: EDifficulty.Easy,
       developer: 'arpansaha13',
       tags: [],
     },
@@ -46,7 +46,7 @@ export const vueChallenges = new Map<string, IChallenge>([
     {
       title: 'Guess the number',
       link: '/guess-the-number',
-      difficulty: 'easy',
+      difficulty: EDifficulty.Easy,
       developer: 'arpansaha13',
       tags: [],
     },
@@ -56,7 +56,7 @@ export const vueChallenges = new Map<string, IChallenge>([
     {
       title: 'Pagination',
       link: '/pagination',
-      difficulty: 'easy',
+      difficulty: EDifficulty.Easy,
       developer: 'arpansaha13',
       tags: [],
     },
@@ -66,7 +66,7 @@ export const vueChallenges = new Map<string, IChallenge>([
     {
       title: 'Stack',
       link: '/stack',
-      difficulty: 'easy',
+      difficulty: EDifficulty.Easy,
       developer: 'jaydadhaniya',
       tags: [],
     },
@@ -76,7 +76,7 @@ export const vueChallenges = new Map<string, IChallenge>([
     {
       title: 'Telephone formatter',
       link: '/telephone-formatter',
-      difficulty: 'easy',
+      difficulty: EDifficulty.Easy,
       developer: 'arpansaha13',
       tags: [],
     },
@@ -86,7 +86,7 @@ export const vueChallenges = new Map<string, IChallenge>([
     {
       title: 'Toast Popup',
       link: '/toast-popup',
-      difficulty: 'medium',
+      difficulty: EDifficulty.Medium,
       developer: 'arpansaha13',
       tags: [],
     },
@@ -96,7 +96,7 @@ export const vueChallenges = new Map<string, IChallenge>([
     {
       title: 'Password Strength',
       link: '/password-strength',
-      difficulty: 'medium',
+      difficulty: EDifficulty.Medium,
       developer: 'jaydadhaniya',
       tags: [],
     },
@@ -106,7 +106,7 @@ export const vueChallenges = new Map<string, IChallenge>([
     {
       title: 'Password Generator',
       link: '/password-generator',
-      difficulty: 'medium',
+      difficulty: EDifficulty.Medium,
       developer: 'bhumikkalola',
       tags: [],
     },
@@ -116,7 +116,7 @@ export const vueChallenges = new Map<string, IChallenge>([
     {
       title: 'Stopwatch',
       link: '/stopwatch',
-      difficulty: 'medium',
+      difficulty: EDifficulty.Medium,
       developer: 'Shardik04',
       tags: [],
     },

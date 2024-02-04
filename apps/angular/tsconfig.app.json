@@ -7,9 +7,8 @@
   },
   "files": [
     "src/main.ts",
-    "../../shared/data/content/index.ts"
+    "../../shared/data/content/index.ts",
+    "../../shared/data/utils/index.ts"
   ],
-  "include": [
-    "src/**/*.d.ts"
-  ]
+  "include": ["src/**/*.d.ts"]
 }
