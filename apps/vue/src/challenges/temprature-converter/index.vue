@@ -10,7 +10,7 @@
         <button @click.prevent="changeTemp">Convert</button>
       </div>
     </div>
-    <h4 class="text-center" v-if="output">
+    <h4 class="text-center" v-if="output !== null">
       Converted Temperature:{{ output }}{{ selectedValue == 'celsius' ? '°C' : '°F' }}
     </h4>
   </div>
@@ -20,24 +20,24 @@
 import { ref, Ref } from 'vue';
 
 const selectedValue: Ref<string> = ref('celsius');
-const userInput: Ref<string> = ref('');
-const output: Ref<string> = ref('');
+const userInput: Ref<number> = ref(0); // Initialize as 0 instead of null
+const output: Ref<string | null> = ref(null); // Initialize as string or null
 
 function changeTemp() {
-  if (selectedValue.value == 'celsius') {
+  if (selectedValue.value === 'celsius') {
     output.value = ((userInput.value * 9) / 5 + 32).toFixed(3);
   } else {
     output.value = (((userInput.value - 32) * 5) / 9).toFixed(3);
   }
 }
 function changeSelectedValue() {
-  if (output.value) {
+  if (output.value !== null) {
     output.value = null;
   }
 }
 </script>
 
-<style scoped css="scss">
+<style scoped>
 .input-tags {
   display: flex;
   justify-content: space-evenly;
