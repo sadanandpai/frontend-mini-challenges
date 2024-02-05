@@ -86,7 +86,7 @@ export const vueChallenges = new Map<string, IChallenge>([
     {
       title: 'Temprature Converter',
       link: '/temprature-converter',
-      difficulty: 'easy',
+      difficulty: EDifficulty.Easy,
       developer: 'bhumikkalola',
       tags: [],
     },
