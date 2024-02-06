@@ -528,6 +528,7 @@ export const reactChallenges = new Map<string, IChallenge>([
       difficulty: EDifficulty.Medium,
       developer: 'Vivek7038',
       tags: [],
+      isNew: true,
     },
   ],
 ]);
