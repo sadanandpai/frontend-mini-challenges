@@ -1,8 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 .AppContainer {
   display: flex;
   flex-direction: column;
@@ -114,8 +109,6 @@
 .timeline ul li:hover::before {
   background-color: aqua;
 }
-
-
 
 @media only screen and (max-width: 420px) {
   .timeline_content h1 {

@@ -1,4 +1,4 @@
-const TimelineData = [
+const timelineData = [
   {
     date: 'August 30, 2017',
     title: 'Published First React Tutorial',
@@ -37,4 +37,4 @@ const TimelineData = [
   },
 ];
 
-export default TimelineData;
+export default timelineData;
