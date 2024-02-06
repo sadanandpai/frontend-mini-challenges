@@ -50,6 +50,7 @@ import { useParams } from 'react-router-dom';
 import Calculator from '@/challenges/calculator/App';
 import WaterBalancer from '@/challenges/water-balancer/App';
 import TransferListApp from '@/challenges/transfer-list/TransferListApp';
+import Timeline from "@/challenges/timeline/App";
 
 const reactChallengesMap = {
   'transfer-list': <TransferListApp />,
@@ -101,6 +102,7 @@ const reactChallengesMap = {
   'anagram-checker': <AnagramChecker />,
   calculator: <Calculator />,
   'water-balancer': <WaterBalancer />,
+  'timeline':<Timeline />,
 };
 
 function Challenge() {
