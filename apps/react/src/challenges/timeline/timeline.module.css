@@ -76,7 +76,7 @@
 .timeline ul li:nth-child(odd) {
   float: left;
   clear: right;
-  transform: translateX(-30px);
+  transform: translateX(-60px);
   border-radius: 20px 0px 20px 20px;
 }
 .timeline ul li:nth-child(even) {
@@ -92,15 +92,15 @@
   width: 20px;
   border-radius: 50%;
   background-color: gray;
-  top: 0px;
+  top: -10px;
 }
 .timeline ul li:nth-child(odd)::before {
   transform: translate(50%, -50%);
-  right: -30px;
+  right: -40px;
 }
 .timeline ul li:nth-child(even)::before {
   transform: translate(-50%, -50%);
-  left: -30px;
+  left: -48px;
 }
 .timeline_content .date {
   position: absolute;
