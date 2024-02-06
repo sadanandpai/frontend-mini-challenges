@@ -520,4 +520,15 @@ export const reactChallenges = new Map<string, IChallenge>([
       tags: [],
     },
   ],
+  [
+    'timeline',
+    {
+      title: 'Timeline',
+      link: 'timeline',
+      difficulty: EDifficulty.Medium,
+      developer: 'Vivek7038',
+      tags: [],
+      isNew: true,
+    },
+  ],
 ]);
