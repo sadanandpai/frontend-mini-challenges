@@ -19,6 +19,8 @@ function Game({ itemsGroup, allItems, columns = 2, groupSize }: Props) {
   useEffect(() => {
     setItems(allItems);
     setAttempts(0);
+    setStatus(null);
+    gridUIRef.current?.clearSelection();
   }, [allItems, itemsGroup]);
 
   function isFromSingleGroup(selectedItems: string[]) {
