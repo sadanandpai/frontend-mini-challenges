@@ -33,19 +33,28 @@ export const shuffleArrayRandomly = <T>(items: Array<T>) => {
   return items;
 };
 
-export function getConnectedGroups(count = 4, groupSize = 2): [ItemGroup, string[]] {
+export function getConnectedGroups(count = 4, groupSize = 2): [ItemGroup[], string[]] {
   const connectedWordsGroup = connectedWords.get(groupSize);
   if (!connectedWordsGroup) {
     throw new Error(`Invalid group size: ${groupSize}`);
   }
 
-  const itemsGroups = getRandomItems(count, connectedWordsGroup);
-  const allItems = shuffleArrayRandomly(itemsGroups.flat());
-
-  const itemsGroup: Array<Set<string>> = [];
-  itemsGroups.forEach((group) => {
-    itemsGroup.push(new Set(group));
+  const randomItemsGroup = getRandomItems(count, connectedWordsGroup);
+  const itemGroups: Array<Set<string>> = [];
+  randomItemsGroup.forEach((group) => {
+    itemGroups.push(new Set(group));
   });
+  const allItems = shuffleArrayRandomly(randomItemsGroup.flat());
 
-  return [itemsGroup, allItems];
+  return [itemGroups, allItems];
+}
+
+export function areItemsFromSingleGroup(itemGroups: ItemGroup[], selectedItems: string[]) {
+  const group = itemGroups.find((group) => group.has(selectedItems[0]));
+
+  if (!group) {
+    return false;
+  }
+
+  return selectedItems.every((item) => group.has(item));
 }

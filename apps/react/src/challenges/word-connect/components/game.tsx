@@ -1,50 +1,47 @@
 import { useEffect, useRef, useState } from 'react';
 import GridUI from './grid-ui';
-import { ItemGroup, Status } from '../utils/types';
+import { ItemGroup, Status, StatusOptions } from '../utils/types';
 import styles from '../styles.module.scss';
+import { areItemsFromSingleGroup } from '../utils/helpers';
 
 interface Props {
-  itemsGroup: ItemGroup;
+  itemGroups: ItemGroup[];
   groupSize: number;
   columns: number;
   allItems: string[];
 }
 
-function Game({ itemsGroup, allItems, columns = 2, groupSize }: Props) {
+function Game({ itemGroups, allItems, columns = 2, groupSize }: Props) {
   const [items, setItems] = useState<string[]>([]);
   const [attempts, setAttempts] = useState(0);
-  const [status, setStatus] = useState<Status | null>(null);
+  const [status, setStatus] = useState<Status>(null);
   const gridUIRef = useRef<{ clearSelection: () => void }>(null);
 
+  // when items change, reset the game
   useEffect(() => {
     setItems(allItems);
     setAttempts(0);
     setStatus(null);
     gridUIRef.current?.clearSelection();
-  }, [allItems, itemsGroup]);
+  }, [allItems]);
 
-  function isFromSingleGroup(selectedItems: string[]) {
-    const group = itemsGroup.find((set) => set.has(selectedItems[0]));
-
-    if (!group) {
-      return false;
-    }
-
-    return selectedItems.every((item) => group.has(item));
-  }
-
+  // tak action if items are from the same group on selection completion
   function onSelection(selected: string[]) {
     if (selected.length === groupSize) {
+      // if the selection is complete
       setAttempts(attempts + 1);
-      const newStatus = isFromSingleGroup(selected) ? Status.Success : Status.Failure;
+      const newStatus = areItemsFromSingleGroup(itemGroups, selected)
+        ? StatusOptions.Success
+        : StatusOptions.Failure;
       setStatus(newStatus);
       const timeoutId = setTimeout(() => unHighlight(selected, newStatus), 1000);
       return () => clearTimeout(timeoutId);
     }
   }
 
-  function unHighlight(itemsForRemoval: string[], status: 'success' | 'failure' | null) {
-    if (status === 'success') {
+  function unHighlight(itemsForRemoval: string[], status: Status) {
+    // remove the items if the selection was successful
+    if (status === StatusOptions.Success) {
       setItems(items.filter((item) => !itemsForRemoval.includes(item)));
     }
     setStatus(null);

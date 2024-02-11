@@ -54,10 +54,12 @@ export const connectedThreeWords = [
   ['Shirt', 'Pants', 'Shoes'],
   ['Lion', 'Elephant', 'Giraffe'],
   ['Sunflower', 'Rose', 'Daisy'],
-  ['Dog', 'Cat', 'Rabbit'],
   ['Cucumber', 'Tomato', 'Carrot'],
   ['Tea', 'Coffee', 'Juice'],
   ['Milk', 'Yogurt', 'Cheese'],
+  ['Pikachu', 'Charmander', 'Squirtle'],
+  ['Batman', 'Superman', 'Spiderman'],
+  ['Elsa', 'Anna', 'Olaf'],
 ];
 
 export const connectedFourWords = [

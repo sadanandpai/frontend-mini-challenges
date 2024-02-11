@@ -5,13 +5,14 @@ import { Status } from '../utils/types';
 interface Props {
   items: string[];
   cols: number;
-  status: Status | null;
+  status: Status;
   onSelection: (selected: string[]) => void;
 }
 
 const GridUI = forwardRef(function GridUI({ items, cols, onSelection, status }: Props, ref) {
   const [selected, setSelected] = useState<string[]>([]);
 
+  // mark the selection and inform the parent
   const markSelection = (item: string) => {
     if (status) {
       return;
@@ -32,24 +33,22 @@ const GridUI = forwardRef(function GridUI({ items, cols, onSelection, status }: 
     setSelected([]);
   }
 
+  // expose clearSelection method to the parent
   useImperativeHandle(ref, () => ({ clearSelection }));
 
   return (
     <section
+      data-status={status}
       className={styles.grid}
       style={{ gridTemplateColumns: `repeat(${cols}, 1fr)` }}
-      data-status={status}
     >
       {items.map((item) => {
         const isSelected = selected.includes(item);
+        const className = `${isSelected ? styles.highlight : ''} ${
+          isSelected && status ? styles[status] : ''
+        }`;
         return (
-          <button
-            key={item}
-            onClick={() => markSelection(item)}
-            className={`
-            ${isSelected ? styles.highlight : ''} ${isSelected && status ? styles[status] : ''} 
-          `}
-          >
+          <button key={item} className={className} onClick={() => markSelection(item)}>
             {item}
           </button>
         );

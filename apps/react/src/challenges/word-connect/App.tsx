@@ -14,12 +14,12 @@ const App = () => {
     columns: { value: 4, min: 2, max: 4, step: 1, disabled: isSmallScreen },
   });
 
-  const [itemsGroup, setItemsGroup] = useState<ItemGroup>([]);
+  const [itemGroups, setItemsGroup] = useState<ItemGroup[]>([]);
   const [allItems, setAllItems] = useState<string[]>([]);
 
   const reset = useCallback(() => {
-    const [newItemsGroup, newAllItems] = getConnectedGroups(itemCount, groupSize);
-    setItemsGroup(newItemsGroup);
+    const [newItemGroups, newAllItems] = getConnectedGroups(itemCount, groupSize);
+    setItemsGroup(newItemGroups);
     setAllItems(newAllItems);
   }, [setAllItems, itemCount, groupSize]);
 
@@ -42,7 +42,7 @@ const App = () => {
       <h3 className={styles.center}>
         Connect group of {groupSize} words by clicking on related words
       </h3>
-      <Game itemsGroup={itemsGroup} allItems={allItems} columns={columns} groupSize={groupSize} />
+      <Game itemGroups={itemGroups} allItems={allItems} columns={columns} groupSize={groupSize} />
       <div className={styles.center}>
         <button className={styles.reset} onClick={() => reset()}>
           Reset
