@@ -10,7 +10,7 @@ interface Props {
   allItems: string[];
 }
 
-function Game({ itemsGroup, allItems, columns, groupSize }: Props) {
+function Game({ itemsGroup, allItems, columns = 2, groupSize }: Props) {
   const [items, setItems] = useState<string[]>([]);
   const [attempts, setAttempts] = useState(0);
   const [status, setStatus] = useState<Status | null>(null);

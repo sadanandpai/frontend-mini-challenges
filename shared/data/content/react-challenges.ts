@@ -318,6 +318,17 @@ export const reactChallenges = new Map<string, IChallenge>([
     },
   ],
   [
+    'timeline',
+    {
+      title: 'Timeline',
+      link: 'timeline',
+      difficulty: EDifficulty.Medium,
+      developer: 'Vivek7038',
+      tags: [],
+      isNew: true,
+    },
+  ],
+  [
     'column-table',
     {
       title: 'Column Table',
@@ -405,17 +416,6 @@ export const reactChallenges = new Map<string, IChallenge>([
     },
   ],
   [
-    'word-connect',
-    {
-      title: 'Word Connect',
-      link: 'word-connect',
-      difficulty: EDifficulty.Medium,
-      developer: 'sadanandpai',
-      tags: [],
-      isNew: true,
-    },
-  ],
-  [
     'nested-dropdown',
     {
       title: 'Nested Dropdown',
@@ -458,12 +458,12 @@ export const reactChallenges = new Map<string, IChallenge>([
     },
   ],
   [
-    'otp',
+    'infinite-scrolling',
     {
-      title: 'OTP',
-      link: 'otp',
+      title: 'Infinite Scrolling (online)',
+      link: 'infinite-scrolling',
       difficulty: EDifficulty.Medium,
-      developer: 'rishabhm05',
+      developer: 'ayush-dutt-sharma',
       tags: [],
       isNew: true,
     },
@@ -480,12 +480,23 @@ export const reactChallenges = new Map<string, IChallenge>([
     },
   ],
   [
-    'infinite-scrolling',
+    'word-connect',
     {
-      title: 'Infinite Scrolling (online)',
-      link: 'infinite-scrolling',
+      title: 'Word Connect',
+      link: 'word-connect',
       difficulty: EDifficulty.Medium,
-      developer: 'ayush-dutt-sharma',
+      developer: 'sadanandpai',
+      tags: [],
+      isNew: true,
+    },
+  ],
+  [
+    'otp',
+    {
+      title: 'OTP',
+      link: 'otp',
+      difficulty: EDifficulty.Medium,
+      developer: 'rishabhm05',
       tags: [],
       isNew: true,
     },
@@ -529,17 +540,6 @@ export const reactChallenges = new Map<string, IChallenge>([
       difficulty: EDifficulty.Hard,
       developer: 'sadanandpai',
       tags: [],
-    },
-  ],
-  [
-    'timeline',
-    {
-      title: 'Timeline',
-      link: 'timeline',
-      difficulty: EDifficulty.Medium,
-      developer: 'Vivek7038',
-      tags: [],
-      isNew: true,
     },
   ],
 ]);

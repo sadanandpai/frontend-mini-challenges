@@ -10,8 +10,12 @@ const isSmallScreen = window.innerWidth <= 768;
 
 const App = () => {
   const { groupSize } = useControls({ groupSize: { value: 2, min: 2, max: 4, step: 1 } });
-  const { itemCount } = useControls({ itemCount: { value: 6, min: 4, max: 12, step: 1 } });
-  const { columns } = useControls({ columns: { value: 4, ...cols, step: 1 } });
+  const { itemCount } = useControls({ itemCount: { value: 8, min: 4, max: 12, step: 1 } });
+  const { columns } = useControls({
+    columns: { value: 4, ...cols, step: 1, disabled: isSmallScreen },
+  });
+
+  console.log(columns, groupSize, itemCount);
 
   const [itemsGroup, setItemsGroup] = useState<ItemGroup>([]);
   const [allItems, setAllItems] = useState<string[]>([]);
@@ -26,7 +30,7 @@ const App = () => {
 
   return (
     <>
-      <Leva collapsed hidden={isSmallScreen} />
+      <Leva collapsed />
 
       <h3 className={styles.center}>
         Connect group of {groupSize} words by clicking on related words
