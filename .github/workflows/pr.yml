@@ -2,7 +2,7 @@ name: Node.js CI
 
 on:
   pull_request:
-    branches: ["main"]
+    branches: ['main']
 
 jobs:
   build:
@@ -20,4 +20,5 @@ jobs:
       - name: setup deployment
         run: |
           npm install
+          npm run unit:test
           npm run build
