@@ -405,6 +405,17 @@ export const reactChallenges = new Map<string, IChallenge>([
     },
   ],
   [
+    'word-connect',
+    {
+      title: 'Word Connect',
+      link: 'word-connect',
+      difficulty: EDifficulty.Medium,
+      developer: 'sadanandpai',
+      tags: [],
+      isNew: true,
+    },
+  ],
+  [
     'nested-dropdown',
     {
       title: 'Nested Dropdown',

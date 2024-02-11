@@ -15,6 +15,7 @@
     "@mui/icons-material": "^5.14.19",
     "axios": "^1.6.2",
     "framer-motion": "^10.16.16",
+    "leva": "^0.9.35",
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.1",
     "qrcode.react": "^3.1.0",
@@ -23,7 +24,8 @@
     "react-icons": "^4.12.0",
     "react-router-dom": "^6.21.0",
     "react-router-hash-link": "^2.4.3",
-    "sort-by": "^1.2.0"
+    "sort-by": "^1.2.0",
+    "tweakpane": "^4.0.3"
   },
   "devDependencies": {
     "@types/react": "^18.2.43",
