@@ -1,4 +1,5 @@
-import styles from "./hero.module.scss";
+import styles from './hero.module.scss';
+import { HashLink } from 'react-router-hash-link';
 
 function Hero() {
   return (
@@ -8,20 +9,18 @@ function Hero() {
           Prepare for <span>UI coding interviews</span>
         </h1>
 
-        <p>
-          by solving the collection of challenges from Frontend Mini Challenges
-        </p>
+        <p>by solving the collection of challenges from Frontend Mini Challenges</p>
 
         <h3 className={styles.link}>
-          <a href="javascript">JS Mini Challenges</a>
+          <HashLink to="javascript">JS Mini Challenges</HashLink>
         </h3>
 
         <h3 className={styles.link}>
-          <a href="react">React Mini challenges</a>
+          <HashLink to="react">React Mini Challenges</HashLink>
         </h3>
 
         <h3 className={styles.link}>
-          <a href="vue">VueJs Mini challenges</a>
+          <HashLink to="vue">Vue Mini Challenges</HashLink>
         </h3>
       </div>
 
@@ -31,9 +30,7 @@ function Hero() {
           src="https://github.com/sadanandpai/frontend-mini-challenges/raw/main/shared/assets/cover-transparent.png"
           alt="brand"
         />
-        <figcaption>
-          Collection of frontend challenges for learning and interviews
-        </figcaption>
+        <figcaption>Collection of frontend challenges for learning and interviews</figcaption>
       </figure>
     </main>
   );

@@ -4,8 +4,13 @@ import { RouterProvider, createHashRouter } from 'react-router-dom';
 import HomePage from './pages/home';
 import LeaderboardPage from './pages/leaderboard';
 import './index.css';
+import Challenges from './pages/challenges';
 
 const router = createHashRouter([
+  {
+    path: '/:tech',
+    element: <Challenges />,
+  },
   {
     path: '/leaderboard',
     element: <LeaderboardPage />,

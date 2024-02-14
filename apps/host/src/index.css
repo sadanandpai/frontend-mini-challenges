@@ -6,3 +6,7 @@
 html {
   scroll-behavior: smooth;
 }
+
+.nav-switch-link {
+  text-transform: capitalize;
+}

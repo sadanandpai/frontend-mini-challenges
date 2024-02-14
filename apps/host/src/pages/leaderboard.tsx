@@ -1,5 +1,5 @@
-import Leaderboard from '@/components/leaderboard/leaderboard';
-import Navbar from '@/components/navbar/Navbar';
+import Navbar from '@/common/navbar/Navbar';
+import Leaderboard from '@/modules/leaderboard/leaderboard';
 
 function LeaderboardPage() {
   return (
