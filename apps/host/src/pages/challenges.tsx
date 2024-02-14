@@ -2,14 +2,14 @@ import Navbar from '@/common/navbar/Navbar';
 import ScrollBtn from '@/common/scroll-to-top/ScrollBtn';
 import ChallengeGrid from '@/modules/challenges/challenge-grid/challenge-grid';
 import { Link, useNavigate, useParams } from 'react-router-dom';
-import { jsChallenges, vueChallenges, reactChallenges, angularChallenges } from '@fmc/data/content';
+import { jsChallenges, vueChallenges, reactChallenges } from '@fmc/data/content';
 import { useEffect } from 'react';
 
 const techMap = new Map([
-  ['javascript', { challenges: jsChallenges, link: '/javascript/src/challenges/' }],
-  ['react', { challenges: reactChallenges, link: '/react/#/' }],
-  ['vue', { challenges: vueChallenges, link: '/vue/#/' }],
-  ['angular', { challenges: angularChallenges, link: '/angular/#/' }],
+  ['javascript', { title: 'JS', challenges: jsChallenges, link: '/javascript/src/challenges/' }],
+  ['react', { title: 'React', challenges: reactChallenges, link: '/react/#/' }],
+  ['vue', { title: 'Vue', challenges: vueChallenges, link: '/vue/#' }],
+  // ['angular', { title: 'Angular', challenges: angularChallenges, link: '/angular/#/challenges/' }],
 ]);
 
 const techs = Array.from(techMap.keys());
@@ -32,7 +32,7 @@ function Challenges() {
     .filter((tech) => tech !== techParam)
     .map((tech) => (
       <Link to={`/${tech}`} key={tech} className="nav-switch-link">
-        {tech} Mini Challenges
+        {techMap.get(tech)!.title} Mini Challenges
       </Link>
     ));
 
