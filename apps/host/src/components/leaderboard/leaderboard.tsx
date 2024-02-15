@@ -7,7 +7,7 @@ import assets from '@fmc/assets/images';
 export default function Leaderboard() {
   const data = generateLeaderboardData();
   const ContributionDiv = ({title, number}: { title: string | ReactNode; number: number}) => (
-    <div className="">
+    <div className={classes.techStackDiv}>
       {title}
       <div>{number}</div>
     </div>
@@ -43,10 +43,10 @@ export default function Leaderboard() {
           }
         >
           <div className={classes.contributionTableCell}>
-            {contributor.contributions.js ? <ContributionDiv title={<img src={assets.jsImg} width={30} height={30} />} number={contributor.contributions.js.length} /> : null}
-            {contributor.contributions.react ? <ContributionDiv title={<img src={assets.reactImg} width={30} height={30} />} number={contributor.contributions.react.length} /> : null}
-            {contributor.contributions.vue ? <ContributionDiv title={<img src={assets.vueImg} width={30} height={30} />} number={contributor.contributions.vue.length} /> : null}
-            {contributor.contributions.angular ? <ContributionDiv title={<img src={assets.angularImg} width={30} height={30} />} number={contributor.contributions.angular.length} /> : null}
+            {contributor.contributions.js ? <ContributionDiv title={<img src={assets.jsImg}  className={classes.techStackImg} />} number={contributor.contributions.js.length} /> : null}
+            {contributor.contributions.react ? <ContributionDiv title={<img src={assets.reactImg} className={classes.techStackImg}  />} number={contributor.contributions.react.length} /> : null}
+            {contributor.contributions.vue ? <ContributionDiv title={<img src={assets.vueImg} className={classes.techStackImg}  />} number={contributor.contributions.vue.length} /> : null}
+            {contributor.contributions.angular ? <ContributionDiv title={<img src={assets.angularImg} className={classes.techStackImg}  />} number={contributor.contributions.angular.length} /> : null}
             <div><div>Total</div><div>{contributor.numberOfContributions}</div></div>
           </div>
         </td>
@@ -56,22 +56,24 @@ export default function Leaderboard() {
 
   return (
     <div className="container">
-      <table
-        width="100%"
-        border={1}
-        cellSpacing={0}
-        cellPadding={10}
-        style={{ textAlign: 'center' }}
-      >
-        <thead>
-          <tr>
-            <td>#</td>
-            <td>Name</td>
-            <td>Contributions</td>
-          </tr>
-        </thead>
-        <tbody>{GetLeaderBoardTableBody()}</tbody>
-      </table>
+      <div className={classes.leaderboardTableWrapper}>
+        <table
+          border={1}
+          cellSpacing={0}
+          cellPadding={10}
+          style={{ textAlign: 'center' }}
+          className={classes.leaderboardTable}
+        >
+          <thead>
+            <tr>
+              <td>#</td>
+              <td>Name</td>
+              <td>Contributions</td>
+            </tr>
+          </thead>
+          <tbody>{GetLeaderBoardTableBody()}</tbody>
+        </table>
+      </div>
     </div>
   );
 }

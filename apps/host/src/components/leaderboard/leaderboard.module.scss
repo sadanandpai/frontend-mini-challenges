@@ -1,3 +1,45 @@
+.leaderboardTableWrapper {
+  margin: 0 auto;
+  box-shadow: 0 0 30px rgba(0,0,0, 0.07);
+  border-radius: 10px;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 5rem;
+
+  @media screen and (min-width: 769px) {
+    max-width: 90%;
+    padding: 10px 20px;
+  }
+  @media only screen and (min-width: 960px) {
+    max-width: 70%;
+    padding: 10px 30px;
+  }
+  @media only screen and (min-width: 1440px) {
+    max-width: 820px;
+  }
+}
+
+table.leaderboardTable {
+ border: none;
+ border-collapse: collapse;
+ width: 100%;
+ thead , td {
+  border: none
+ }
+ thead > tr > td:nth-child(2) {
+  text-align: left;
+  padding-left: 25px;
+ }
+
+ thead, tr {
+  border-bottom: 1px solid rgba(#ccc, 0.5);
+ }
+
+ tr:last-of-type {
+  border-bottom: none;
+ }
+}
+
 .leaderBoardTableData {
   border-top-style: hidden;
   border-bottom-style: hidden;
@@ -11,22 +53,15 @@
 
 .leaderBoardContributorImg,
 .userProfileImg {
-  width: 80px;
-  height: 80px;
+  width: 40px;
+  height: 40px;
   border: 2px solid orange;
   border-radius: 50%;
   margin-right: 20px;
-}
-
-.userProfileImg {
-  width: 160px;
-  height: 160px;
-}
-
-.leaderBoardContributorNameTd {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+  @media only screen and (min-width: 960px) {
+    width: 60px;
+    height: 60px;
+  }
 }
 
 .leaderBoardHeading,
@@ -42,6 +77,9 @@
 .profileLink {
   display: flex;
   align-items: center;
+  & span {
+    font-size: 14px;
+  }
 }
 
 .fontWeightNormal {
@@ -52,6 +90,20 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   /* max-width: 200px; */
+
+  .techStackDiv {
+    font-size: 14px;
+    .techStackImg {
+      width: 20px;
+      height: 20px;
+
+      @media only screen and (min-width: 960px) {
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+
 }
 
 .contributionTableCell div:last-of-type {
@@ -60,11 +112,8 @@
   flex-direction: column;
   justify-content: space-between;
 
-  div:first-of-type {
-    font-weight: 600;
+  div {
+    font-size: 14px;
+    font-weight: 500;
   }
-}
-
-.contributionDivTitle {
-  
 }
