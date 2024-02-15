@@ -1,9 +1,18 @@
 import { generateLeaderboardData } from '@/helpers/generate-leaderboard';
-import classes from './leaderboard.module.css';
+import classes from './leaderboard.module.scss';
 import { Link } from 'react-router-dom';
+import { ReactNode } from 'react';
+import assets from '@fmc/assets/images';
 
 export default function Leaderboard() {
   const data = generateLeaderboardData();
+  const ContributionDiv = ({title, number}: { title: string | ReactNode; number: number}) => (
+    <div className="">
+      {title}
+      <div>{number}</div>
+    </div>
+  )
+
   const GetLeaderBoardTableBody = () => {
     return Array.from(data.values()).map((contributor, index) => (
       <tr key={contributor.name}>
@@ -33,7 +42,13 @@ export default function Leaderboard() {
             index >= 1 ? classes.leaderBoardTableData : classes.leaderBoardBorderBottomStyle
           }
         >
-          {contributor.numberOfContributions}
+          <div className={classes.contributionTableCell}>
+            {contributor.contributions.js ? <ContributionDiv title={<img src={assets.jsImg} width={30} height={30} />} number={contributor.contributions.js.length} /> : null}
+            {contributor.contributions.react ? <ContributionDiv title={<img src={assets.reactImg} width={30} height={30} />} number={contributor.contributions.react.length} /> : null}
+            {contributor.contributions.vue ? <ContributionDiv title={<img src={assets.vueImg} width={30} height={30} />} number={contributor.contributions.vue.length} /> : null}
+            {contributor.contributions.angular ? <ContributionDiv title={<img src={assets.angularImg} width={30} height={30} />} number={contributor.contributions.angular.length} /> : null}
+            <div><div>Total</div><div>{contributor.numberOfContributions}</div></div>
+          </div>
         </td>
       </tr>
     ));

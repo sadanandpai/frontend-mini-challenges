@@ -47,3 +47,24 @@
 .fontWeightNormal {
   font-weight: 300;
 }
+
+.contributionTableCell {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  /* max-width: 200px; */
+}
+
+.contributionTableCell div:last-of-type {
+  grid-column-end: -1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  div:first-of-type {
+    font-weight: 600;
+  }
+}
+
+.contributionDivTitle {
+  
+}
