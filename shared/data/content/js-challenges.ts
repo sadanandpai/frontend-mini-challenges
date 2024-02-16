@@ -1,4 +1,4 @@
-import type { IChallenge } from '../types/challenge';
+import { EDifficulty, type IChallenge } from '../types/challenge';
 
 export const jsChallenges: Map<string, IChallenge> = new Map([
   [
@@ -6,7 +6,7 @@ export const jsChallenges: Map<string, IChallenge> = new Map([
     {
       title: 'Counter',
       link: 'counter',
-      difficulty: 'easy',
+      difficulty: EDifficulty.Easy,
       developer: 'sadanandpai',
       youtube: 'https://youtu.be/9OIeUtXX3SA',
       tags: [],
@@ -17,7 +17,7 @@ export const jsChallenges: Map<string, IChallenge> = new Map([
     {
       title: 'BMI Calculator',
       link: 'bmi-calculator',
-      difficulty: 'easy',
+      difficulty: EDifficulty.Easy,
       developer: 'itsayopapi',
       tags: [],
       isNew: true,
@@ -28,10 +28,20 @@ export const jsChallenges: Map<string, IChallenge> = new Map([
     {
       title: 'Dice Game',
       link: 'dice-game',
-      difficulty: 'easy',
+      difficulty: EDifficulty.Easy,
       developer: 'shivam200446',
       tags: [],
       isNew: true,
+    },
+  ],
+  [
+    'roll-dice',
+    {
+      title: 'Roll dice',
+      link: 'roll-dice',
+      difficulty: EDifficulty.Easy,
+      developer: 'babandakale',
+      tags: [],
     },
   ],
   [
@@ -39,7 +49,7 @@ export const jsChallenges: Map<string, IChallenge> = new Map([
     {
       title: 'Guess the number',
       link: 'guess-the-number',
-      difficulty: 'easy',
+      difficulty: EDifficulty.Easy,
       developer: 'sadanandpai',
       youtube: 'https://youtu.be/L1Da3GWEGpY',
       tags: [],
@@ -50,7 +60,7 @@ export const jsChallenges: Map<string, IChallenge> = new Map([
     {
       title: 'String transformers',
       link: 'string-transformers',
-      difficulty: 'easy',
+      difficulty: EDifficulty.Easy,
       developer: 'sadanandpai',
       youtube: 'https://youtu.be/crCZEJ6Lmgc',
       tags: [],
@@ -61,7 +71,7 @@ export const jsChallenges: Map<string, IChallenge> = new Map([
     {
       title: 'File Uploader',
       link: 'file-uploader',
-      difficulty: 'easy',
+      difficulty: EDifficulty.Easy,
       developer: 'avtech',
       tags: [],
       isNew: true,
@@ -72,7 +82,7 @@ export const jsChallenges: Map<string, IChallenge> = new Map([
     {
       title: 'Telephone formatter',
       link: 'telephone-formatter',
-      difficulty: 'easy',
+      difficulty: EDifficulty.Easy,
       developer: 'sadanandpai',
       youtube: 'https://youtu.be/E85ldVqAGjw',
       tags: [],
@@ -83,7 +93,7 @@ export const jsChallenges: Map<string, IChallenge> = new Map([
     {
       title: 'Dialog Popup',
       link: 'dialog-popup',
-      difficulty: 'easy',
+      difficulty: EDifficulty.Easy,
       developer: 'sahankatta',
       youtube: 'https://youtu.be/aIzyEDi6zgU',
       tags: [],
@@ -94,7 +104,7 @@ export const jsChallenges: Map<string, IChallenge> = new Map([
     {
       title: 'Light & Dark mode',
       link: 'light-dark-mode',
-      difficulty: 'easy',
+      difficulty: EDifficulty.Easy,
       developer: 'sadanandpai',
       youtube: 'https://youtu.be/hxcGGhjYNFE',
       tags: [],
@@ -105,7 +115,7 @@ export const jsChallenges: Map<string, IChallenge> = new Map([
     {
       title: 'Skeleton Loader',
       link: 'skeleton-loader',
-      difficulty: 'easy',
+      difficulty: EDifficulty.Easy,
       developer: 'sahankatta',
       youtube: 'https://youtu.be/FEtTRjq1P6I',
       tags: [],
@@ -116,7 +126,7 @@ export const jsChallenges: Map<string, IChallenge> = new Map([
     {
       title: 'Spinning Loader',
       link: 'spinning-loader',
-      difficulty: 'easy',
+      difficulty: EDifficulty.Easy,
       developer: 'DhanushNehru',
       tags: [],
     },
@@ -126,7 +136,7 @@ export const jsChallenges: Map<string, IChallenge> = new Map([
     {
       title: 'Music Kit',
       link: 'music-kit',
-      difficulty: 'easy',
+      difficulty: EDifficulty.Easy,
       developer: 'shivam200446',
       tags: [],
       isNew: true,
@@ -137,7 +147,7 @@ export const jsChallenges: Map<string, IChallenge> = new Map([
     {
       title: 'Currency Converter',
       link: 'currency-converter',
-      difficulty: 'easy',
+      difficulty: EDifficulty.Easy,
       developer: 'pranav514',
       tags: [],
       isNew: true,
@@ -148,7 +158,7 @@ export const jsChallenges: Map<string, IChallenge> = new Map([
     {
       title: 'Accordion',
       link: 'accordion',
-      difficulty: 'easy',
+      difficulty: EDifficulty.Easy,
       developer: 'rashidtvmr',
       youtube: 'https://youtu.be/03KFXudVaoo',
       tags: [],
@@ -159,7 +169,7 @@ export const jsChallenges: Map<string, IChallenge> = new Map([
     {
       title: 'Navigation Bar',
       link: 'navigation-bar',
-      difficulty: 'easy',
+      difficulty: EDifficulty.Easy,
       developer: 'christian-lee1398',
       youtube: 'https://youtu.be/urA5ogzG0L0',
       tags: [],
@@ -170,7 +180,7 @@ export const jsChallenges: Map<string, IChallenge> = new Map([
     {
       title: 'Footer',
       link: 'Footer',
-      difficulty: 'easy',
+      difficulty: EDifficulty.Easy,
       developer: 'AbhineshJha',
       youtube: 'https://youtu.be/FRRlFLfdvBE?si=HWn88BwJGTJvEBUD',
       tags: [],
@@ -182,7 +192,7 @@ export const jsChallenges: Map<string, IChallenge> = new Map([
     {
       title: 'Rock Paper Scissor',
       link: 'rock-paper-scissor',
-      difficulty: 'easy',
+      difficulty: EDifficulty.Easy,
       developer: 'AckermanLevi1',
       tags: [],
       isNew: true,
@@ -193,7 +203,7 @@ export const jsChallenges: Map<string, IChallenge> = new Map([
     {
       title: 'MadStory Generator',
       link: 'MadStory_generator',
-      difficulty: 'easy',
+      difficulty: EDifficulty.Easy,
       developer: 'hritik',
       tags: [],
     },
@@ -203,7 +213,7 @@ export const jsChallenges: Map<string, IChallenge> = new Map([
     {
       title: 'Multi Typing',
       link: 'multi-typing',
-      difficulty: 'easy',
+      difficulty: EDifficulty.Easy,
       developer: 'noorulaink00',
       youtube: 'https://youtu.be/YCDeOT7DRnI',
       tags: [],
@@ -214,7 +224,7 @@ export const jsChallenges: Map<string, IChallenge> = new Map([
     {
       title: 'Bill Split',
       link: 'bill-spilt',
-      difficulty: 'easy',
+      difficulty: EDifficulty.Easy,
       developer: 'Sukomal07',
       youtube: 'https://youtu.be/4H2DyrSJeYc',
       tags: [],
@@ -226,7 +236,7 @@ export const jsChallenges: Map<string, IChallenge> = new Map([
     {
       title: 'Simon game',
       link: 'simon-game',
-      difficulty: 'easy',
+      difficulty: EDifficulty.Easy,
       developer: 'VishakhaSainani',
       tags: [],
       isNew: true,
@@ -237,7 +247,7 @@ export const jsChallenges: Map<string, IChallenge> = new Map([
     {
       title: 'Blob Maker',
       link: 'blobmaker',
-      difficulty: 'easy',
+      difficulty: EDifficulty.Easy,
       developer: 'AbhineshJha',
       tags: [],
       isNew: true,
@@ -248,7 +258,7 @@ export const jsChallenges: Map<string, IChallenge> = new Map([
     {
       title: 'Fitness Tracker',
       link: 'fitness-tracker',
-      difficulty: 'easy',
+      difficulty: EDifficulty.Easy,
       developer: 'CrypticRevenger',
       tags: [],
       isNew: true,
@@ -259,7 +269,7 @@ export const jsChallenges: Map<string, IChallenge> = new Map([
     {
       title: 'ATM Simulator',
       link: 'atm-simulator',
-      difficulty: 'easy',
+      difficulty: EDifficulty.Easy,
       developer: 'Bratajit-03',
       tags: [],
       isNew: true,
@@ -270,7 +280,7 @@ export const jsChallenges: Map<string, IChallenge> = new Map([
     {
       title: 'Finance Tracker',
       link: 'finance-tracker',
-      difficulty: 'medium',
+      difficulty: EDifficulty.Medium,
       developer: 'sujitmahapatra',
       tags: ['finance', 'web-app', 'javascript', 'css'],
       isNew: true,
@@ -281,7 +291,7 @@ export const jsChallenges: Map<string, IChallenge> = new Map([
     {
       title: 'Meme Generator',
       link: 'meme-generator',
-      difficulty: 'medium',
+      difficulty: EDifficulty.Medium,
       developer: 'noorulaink00',
       youtube: 'https://youtu.be/LHo9Hi47MTo',
       tags: [],
@@ -292,7 +302,7 @@ export const jsChallenges: Map<string, IChallenge> = new Map([
     {
       title: 'Weather App',
       link: 'weather-app',
-      difficulty: 'medium',
+      difficulty: EDifficulty.Medium,
       developer: 'shruti-sen2004',
       tags: [],
       isNew: true,
@@ -303,7 +313,7 @@ export const jsChallenges: Map<string, IChallenge> = new Map([
     {
       title: 'Toast Popup',
       link: 'toast-popup',
-      difficulty: 'medium',
+      difficulty: EDifficulty.Medium,
       developer: 'sadanandpai',
       youtube: 'https://youtu.be/-p3N5bJXEK8',
       tags: [],
@@ -314,7 +324,7 @@ export const jsChallenges: Map<string, IChallenge> = new Map([
     {
       title: 'CSS Shapes',
       link: 'css-shapes',
-      difficulty: 'medium',
+      difficulty: EDifficulty.Medium,
       developer: 'sadanandpai',
       tags: [],
     },
@@ -324,7 +334,7 @@ export const jsChallenges: Map<string, IChallenge> = new Map([
     {
       title: 'Column Table',
       link: 'column-table',
-      difficulty: 'medium',
+      difficulty: EDifficulty.Medium,
       developer: 'sadanandpai',
       tags: [],
     },
@@ -334,7 +344,7 @@ export const jsChallenges: Map<string, IChallenge> = new Map([
     {
       title: 'Password Strength',
       link: 'password-strength',
-      difficulty: 'medium',
+      difficulty: EDifficulty.Medium,
       developer: 'sadanandpai',
       tags: [],
     },
@@ -344,7 +354,7 @@ export const jsChallenges: Map<string, IChallenge> = new Map([
     {
       title: 'Star Rating',
       link: 'star-rating',
-      difficulty: 'medium',
+      difficulty: EDifficulty.Medium,
       developer: 'sadanandpai',
       tags: [],
     },
@@ -354,7 +364,7 @@ export const jsChallenges: Map<string, IChallenge> = new Map([
     {
       title: 'Star Rating Display',
       link: 'star-rating-display',
-      difficulty: 'medium',
+      difficulty: EDifficulty.Medium,
       developer: 'sadanandpai',
       tags: [],
     },
@@ -364,7 +374,7 @@ export const jsChallenges: Map<string, IChallenge> = new Map([
     {
       title: 'Pixel Art',
       link: 'pixel-art',
-      difficulty: 'medium',
+      difficulty: EDifficulty.Medium,
       developer: 'sadanandpai',
       tags: [],
     },
@@ -374,7 +384,7 @@ export const jsChallenges: Map<string, IChallenge> = new Map([
     {
       title: 'Word Counter (online)',
       link: 'word-counter',
-      difficulty: 'medium',
+      difficulty: EDifficulty.Medium,
       developer: 'AckermanLevi1',
       tags: [],
     },
@@ -384,7 +394,7 @@ export const jsChallenges: Map<string, IChallenge> = new Map([
     {
       title: 'Color Spotter',
       link: 'color-spotter',
-      difficulty: 'medium',
+      difficulty: EDifficulty.Medium,
       developer: 'sadanandpai',
       tags: [],
     },
@@ -394,7 +404,7 @@ export const jsChallenges: Map<string, IChallenge> = new Map([
     {
       title: 'Todo List',
       link: 'todo-list',
-      difficulty: 'medium',
+      difficulty: EDifficulty.Medium,
       developer: 'sadanandpai',
       tags: [],
     },
@@ -404,7 +414,7 @@ export const jsChallenges: Map<string, IChallenge> = new Map([
     {
       title: 'Gradient Generator',
       link: 'gradient-generator',
-      difficulty: 'medium',
+      difficulty: EDifficulty.Medium,
       developer: 'Sukomal07',
       tags: [],
       isNew: true,
@@ -415,7 +425,7 @@ export const jsChallenges: Map<string, IChallenge> = new Map([
     {
       title: 'Transfer List',
       link: 'transfer-list',
-      difficulty: 'medium',
+      difficulty: EDifficulty.Medium,
       developer: 'sadanandpai',
       tags: [],
     },
@@ -425,7 +435,7 @@ export const jsChallenges: Map<string, IChallenge> = new Map([
     {
       title: 'Lift Simulation',
       link: 'lift-simulation',
-      difficulty: 'medium',
+      difficulty: EDifficulty.Medium,
       developer: 'gauravsinhaweb',
       tags: [],
       isNew: true,
@@ -436,7 +446,7 @@ export const jsChallenges: Map<string, IChallenge> = new Map([
     {
       title: 'Tic-Tac-Toe',
       link: 'tic-tac-toe',
-      difficulty: 'medium',
+      difficulty: EDifficulty.Medium,
       developer: 'sadanandpai',
       tags: [],
     },
@@ -446,7 +456,7 @@ export const jsChallenges: Map<string, IChallenge> = new Map([
     {
       title: 'Chess board',
       link: 'chess-board',
-      difficulty: 'medium',
+      difficulty: EDifficulty.Medium,
       developer: 'sadanandpai',
       tags: [],
     },
@@ -456,7 +466,7 @@ export const jsChallenges: Map<string, IChallenge> = new Map([
     {
       title: 'Chips Input',
       link: 'chips-input',
-      difficulty: 'medium',
+      difficulty: EDifficulty.Medium,
       developer: 'sadanandpai',
       tags: [],
     },
@@ -466,7 +476,7 @@ export const jsChallenges: Map<string, IChallenge> = new Map([
     {
       title: 'Infinite Scroll',
       link: 'infinite-scroll',
-      difficulty: 'medium',
+      difficulty: EDifficulty.Medium,
       developer: 'srijanB7',
       tags: [],
     },
@@ -476,7 +486,7 @@ export const jsChallenges: Map<string, IChallenge> = new Map([
     {
       title: 'Password Generator',
       link: 'password-generator',
-      difficulty: 'medium',
+      difficulty: EDifficulty.Medium,
       developer: 'sadanandpai',
       tags: [],
     },
@@ -486,7 +496,7 @@ export const jsChallenges: Map<string, IChallenge> = new Map([
     {
       title: 'Analog Clock',
       link: 'analog-clock',
-      difficulty: 'medium',
+      difficulty: EDifficulty.Medium,
       developer: 'sadanandpai',
       tags: [],
     },
@@ -496,7 +506,7 @@ export const jsChallenges: Map<string, IChallenge> = new Map([
     {
       title: 'Drag and Drop Puzzle',
       link: 'drag-and-drop-puzzle',
-      difficulty: 'medium',
+      difficulty: EDifficulty.Medium,
       developer: 'noorulaink00',
       tags: [],
       isNew: true,
@@ -507,7 +517,7 @@ export const jsChallenges: Map<string, IChallenge> = new Map([
     {
       title: 'Basic calculator',
       link: 'basic-calculator',
-      difficulty: 'medium',
+      difficulty: EDifficulty.Medium,
       developer: 'sadanandpai',
       tags: [],
     },
@@ -517,7 +527,7 @@ export const jsChallenges: Map<string, IChallenge> = new Map([
     {
       title: 'Match Pair',
       link: 'match-pair',
-      difficulty: 'medium',
+      difficulty: EDifficulty.Medium,
       developer: 'sadanandpai',
       tags: [],
     },
@@ -527,7 +537,7 @@ export const jsChallenges: Map<string, IChallenge> = new Map([
     {
       title: 'Typing Speed Test',
       link: 'typing-speed-test',
-      difficulty: 'medium',
+      difficulty: EDifficulty.Medium,
       developer: 'sadanandpai',
       tags: [],
     },
@@ -537,7 +547,7 @@ export const jsChallenges: Map<string, IChallenge> = new Map([
     {
       title: 'Countdown Timer',
       link: 'count-down-timer',
-      difficulty: 'medium',
+      difficulty: EDifficulty.Medium,
       developer: 'sadanandpai',
       tags: [],
     },
@@ -547,7 +557,7 @@ export const jsChallenges: Map<string, IChallenge> = new Map([
     {
       title: 'OTP Input',
       link: 'otp-input',
-      difficulty: 'medium',
+      difficulty: EDifficulty.Medium,
       developer: 'sadanandpai',
       tags: [],
     },
@@ -557,7 +567,7 @@ export const jsChallenges: Map<string, IChallenge> = new Map([
     {
       title: 'Quiz App',
       link: 'quiz-app',
-      difficulty: 'medium',
+      difficulty: EDifficulty.Medium,
       developer: 'Kei-K23',
       tags: [],
       isNew: true,
@@ -568,7 +578,7 @@ export const jsChallenges: Map<string, IChallenge> = new Map([
     {
       title: 'Sorting Visualizer',
       link: 'sorting-visualizer',
-      difficulty: 'medium',
+      difficulty: EDifficulty.Medium,
       developer: 'viditagrawal56',
       tags: [],
       isNew: true,
@@ -579,7 +589,7 @@ export const jsChallenges: Map<string, IChallenge> = new Map([
     {
       title: 'Snake Game',
       link: 'snake-game',
-      difficulty: 'medium',
+      difficulty: EDifficulty.Medium,
       developer: 'Kei-K23',
       tags: [],
       isNew: true,
@@ -590,7 +600,7 @@ export const jsChallenges: Map<string, IChallenge> = new Map([
     {
       title: 'Hangman Game',
       link: 'hangman-game',
-      difficulty: 'medium',
+      difficulty: EDifficulty.Medium,
       developer: 'Kei-K23',
       tags: [],
       isNew: true,
@@ -601,7 +611,7 @@ export const jsChallenges: Map<string, IChallenge> = new Map([
     {
       title: 'Area Selector',
       link: 'area-selector',
-      difficulty: 'medium',
+      difficulty: EDifficulty.Medium,
       developer: 'sadanandpai',
       tags: [],
     },
@@ -611,7 +621,7 @@ export const jsChallenges: Map<string, IChallenge> = new Map([
     {
       title: '25-5 Clock',
       link: '25-5-clock',
-      difficulty: 'medium',
+      difficulty: EDifficulty.Medium,
       developer: 'caesar003',
       tags: [],
     },
@@ -621,7 +631,7 @@ export const jsChallenges: Map<string, IChallenge> = new Map([
     {
       title: 'Carousel',
       link: 'carousel',
-      difficulty: 'medium',
+      difficulty: EDifficulty.Medium,
       developer: 'sadanandpai',
       tags: [],
     },
@@ -631,7 +641,7 @@ export const jsChallenges: Map<string, IChallenge> = new Map([
     {
       title: 'Calendar',
       link: 'calendar',
-      difficulty: 'medium',
+      difficulty: EDifficulty.Medium,
       developer: 'sadanandpai',
       tags: [],
     },
@@ -641,7 +651,7 @@ export const jsChallenges: Map<string, IChallenge> = new Map([
     {
       title: 'Progress Bar',
       link: 'progress-bar',
-      difficulty: 'medium',
+      difficulty: EDifficulty.Medium,
       developer: 'sadanandpai',
       tags: [],
     },
@@ -651,7 +661,7 @@ export const jsChallenges: Map<string, IChallenge> = new Map([
     {
       title: 'Movie-info app (online)',
       link: 'movie-info',
-      difficulty: 'medium',
+      difficulty: EDifficulty.Medium,
       developer: 'AckermanLevi1',
       tags: [],
     },
@@ -661,7 +671,7 @@ export const jsChallenges: Map<string, IChallenge> = new Map([
     {
       title: 'Quiz App with Timer',
       link: 'quiz-app-with-timer',
-      difficulty: 'medium',
+      difficulty: EDifficulty.Medium,
       developer: 'Vivek-GuptaXCode',
       tags: [],
     },
@@ -671,7 +681,7 @@ export const jsChallenges: Map<string, IChallenge> = new Map([
     {
       title: 'Paginator',
       link: 'paginator',
-      difficulty: 'hard',
+      difficulty: EDifficulty.Hard,
       developer: 'sadanandpai',
       tags: [],
     },
@@ -681,7 +691,7 @@ export const jsChallenges: Map<string, IChallenge> = new Map([
     {
       title: 'Connect Four',
       link: 'connect-four',
-      difficulty: 'hard',
+      difficulty: EDifficulty.Hard,
       developer: 'sadanandpai',
       tags: [],
     },
@@ -691,7 +701,7 @@ export const jsChallenges: Map<string, IChallenge> = new Map([
     {
       title: 'Comment box',
       link: 'comment-box',
-      difficulty: 'hard',
+      difficulty: EDifficulty.Hard,
       developer: 'sadanandpai',
       tags: [],
     },
@@ -701,7 +711,7 @@ export const jsChallenges: Map<string, IChallenge> = new Map([
     {
       title: 'JSON Creator',
       link: 'json-creator',
-      difficulty: 'hard',
+      difficulty: EDifficulty.Hard,
       developer: 'sadanandpai',
       tags: [],
     },
@@ -711,7 +721,7 @@ export const jsChallenges: Map<string, IChallenge> = new Map([
     {
       title: 'Array methods',
       link: 'array-methods',
-      difficulty: 'hard',
+      difficulty: EDifficulty.Hard,
       developer: 'sadanandpai',
       tags: [],
     },
@@ -721,7 +731,7 @@ export const jsChallenges: Map<string, IChallenge> = new Map([
     {
       title: 'Typeahead / Autocomplete (offline)',
       link: 'type-ahead',
-      difficulty: 'hard',
+      difficulty: EDifficulty.Hard,
       developer: 'sadanandpai',
       tags: [],
     },
@@ -731,7 +741,7 @@ export const jsChallenges: Map<string, IChallenge> = new Map([
     {
       title: 'Typeahead / Autocomplete (online)',
       link: 'type-ahead-online',
-      difficulty: 'hard',
+      difficulty: EDifficulty.Hard,
       developer: 'sadanandpai',
       tags: [],
     },

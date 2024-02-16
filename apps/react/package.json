@@ -8,13 +8,15 @@
     "build": "tsc && vite build",
     "build-baseless": "tsc && vite build --base=/react/",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "unit:test": "vitest"
   },
   "dependencies": {
     "@formkit/auto-animate": "^0.7.0",
     "@mui/icons-material": "^5.14.19",
     "axios": "^1.6.2",
     "framer-motion": "^10.16.16",
+    "leva": "^0.9.35",
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.1",
     "qrcode.react": "^3.1.0",
@@ -23,25 +25,27 @@
     "react-icons": "^4.12.0",
     "react-router-dom": "^6.21.0",
     "react-router-hash-link": "^2.4.3",
-    "sort-by": "^1.2.0"
+    "sort-by": "^1.2.0",
+    "tweakpane": "^4.0.3"
   },
   "devDependencies": {
-    "@types/react": "^18.2.43",
+    "@testing-library/jest-dom": "^6.4.2",
+    "@testing-library/react": "^14.2.1",
+    "@types/react": "^18.2.55",
     "@types/react-dom": "^18.2.17",
     "@typescript-eslint/eslint-plugin": "^6.13.2",
     "@typescript-eslint/parser": "^6.13.2",
-    "@vitejs/plugin-react": "^4.2.1",
-    "@vitejs/plugin-react-swc": "^3.5.0",
-    "eslint": "^8.55.0",
+    "@vitejs/plugin-react-swc": "^3.6.0",
+    "eslint": "^8.56.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.5",
     "jsdom": "^22.1.0",
-    "sass": "^1.69.5",
+    "sass": "^1.70.0",
     "stylelint": "^15.11.0",
-    "stylelint-config-recess-order": "^4.4.0",
+    "stylelint-config-recess-order": "^4.6.0",
     "stylelint-config-standard-scss": "^10.0.0",
     "typescript": "^5.3.3",
-    "vite": "^5.0.0",
-    "vitest": "^0.33.0"
+    "vite": "^5.1.1",
+    "vitest": "^1.2.2"
   }
 }

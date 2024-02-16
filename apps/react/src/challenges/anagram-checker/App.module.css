@@ -1,0 +1,40 @@
+/* App.module.css */
+
+.container {
+    text-align: center;
+    margin: 50px;
+  }
+  
+  h1 {
+    color: #333;
+  }
+  
+  .inputContainer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .input {
+    padding: 10px;
+    margin: 0 10px;
+  }
+  
+  .button {
+    padding: 10px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .button:hover {
+    background-color: #45a049;
+  }
+  
+  .result {
+    color: #333;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+  

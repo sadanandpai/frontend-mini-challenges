@@ -6,6 +6,7 @@ import { contributors } from '@fmc/data/content';
 import type { IChallenge } from '@fmc/data/types';
 import { jsChallenges } from '@fmc/data/content';
 import './src/styles/index.css';
+import { getSortedChallengesByDifficulty } from '@fmc/data/utils';
 
 defineChallengeCard();
 defineChallengeGrid();
@@ -42,6 +43,7 @@ const createChallengeCard = (challenge: IChallenge) => {
 };
 
 const challengeGridEl = document.getElementById('challengeGrid')!;
-[...jsChallenges.values()]
+const sortedChallengesByDifficulty = getSortedChallengesByDifficulty(jsChallenges);
+sortedChallengesByDifficulty
   .map(createChallengeCard)
   .forEach((el) => challengeGridEl.appendChild(el));

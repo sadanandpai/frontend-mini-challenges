@@ -1,0 +1,85 @@
+button {
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 2rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.tanks {
+  display: inline-flex;
+  padding: 0 20px;
+  gap: 20px;
+}
+
+.add-btn {
+  background-color: green;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  text-transform: uppercase;
+  user-select: none;
+}
+
+.empty-btn {
+  background-color: white;
+  color: red;
+  border: 2px solid red;
+  border-radius: 0.5rem;
+  text-transform: uppercase;
+  user-select: none;
+}
+
+.tank {
+  height: 250px;
+  width: 100px;
+  border: 2px solid black;
+  border-radius: 0 0 0.5rem 0.5rem;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.tank-level {
+  width: 100%;
+  background-color: aqua;
+  transition: height 1s linear;
+}
+
+.form-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+  .range {
+    display: none;
+  }
+
+  .tanks {
+    padding: 0;
+  }
+
+  .tank {
+    width: 70px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .tanks {
+    padding: 0;
+  }
+
+  .tank {
+    width: 70px;
+  }
+}

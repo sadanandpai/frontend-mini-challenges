@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
+import { NgFor } from '@angular/common';
 import { angularChallenges } from '@fmc/data/content';
 import { ChallengeComponent } from '../challenge/challenge.component';
-import { NgFor } from '@angular/common';
+import { getSortedChallengesByDifficulty } from '@fmc/data/utils';
 
 @Component({
   standalone: true,
@@ -11,12 +12,5 @@ import { NgFor } from '@angular/common';
   imports: [ChallengeComponent, NgFor],
 })
 export class ChallengesComponent {
-  public challenges = angularChallenges.values();
-
-  ngOnInit() {
-    // TODO: check why below only works with timeout
-    setTimeout(() => {
-      this.challenges = angularChallenges.values();
-    });
-  }
+  public challenges = getSortedChallengesByDifficulty(angularChallenges);
 }

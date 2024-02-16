@@ -1,13 +1,14 @@
 import { h } from '@stencil/core';
 import { newSpecPage } from '@stencil/core/testing';
 import { ChallengeCard } from '../challenge-card';
+import { EDifficulty } from '@fmc/data/types';
 
 describe('challenge-card', () => {
   it('renders with props', async () => {
     const challengeProp = {
       title: 'Challenge title',
       link: '/challenge-link',
-      difficulty: 'easy' as const,
+      difficulty: EDifficulty.Easy,
       developer: { name: 'Developer name', pic: 'https://avatars.githubusercontent.com/u/12962887' },
     };
 

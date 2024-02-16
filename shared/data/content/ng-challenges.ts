@@ -1,4 +1,4 @@
-import type { IChallenge } from '../types/challenge';
+import { EDifficulty, type IChallenge } from '../types/challenge';
 
 export const angularChallenges: Map<string, IChallenge> = new Map([
   [
@@ -6,7 +6,7 @@ export const angularChallenges: Map<string, IChallenge> = new Map([
     {
       title: 'Counter',
       link: 'counter',
-      difficulty: 'easy',
+      difficulty: EDifficulty.Easy,
       developer: 'sadanandpai',
       tags: [],
       isNew: true,
@@ -17,7 +17,7 @@ export const angularChallenges: Map<string, IChallenge> = new Map([
     {
       title: 'Guess Number',
       link: 'guess-number',
-      difficulty: 'easy',
+      difficulty: EDifficulty.Easy,
       developer: 'pankajparkar',
       tags: [],
       isNew: true,
@@ -28,7 +28,7 @@ export const angularChallenges: Map<string, IChallenge> = new Map([
     {
       title: 'Todo list',
       link: 'todo-list',
-      difficulty: 'easy',
+      difficulty: EDifficulty.Easy,
       developer: 'pankajparkar',
       tags: [],
       isNew: true,
@@ -39,7 +39,7 @@ export const angularChallenges: Map<string, IChallenge> = new Map([
     {
       title: 'Stack',
       link: 'stack',
-      difficulty: 'easy',
+      difficulty: EDifficulty.Easy,
       developer: 'pankajparkar',
       tags: [],
       isNew: true,
@@ -50,7 +50,7 @@ export const angularChallenges: Map<string, IChallenge> = new Map([
     {
       title: 'Tic tac toe',
       link: 'tic-tac-toe',
-      difficulty: 'easy',
+      difficulty: EDifficulty.Easy,
       developer: 'pankajparkar',
       tags: [],
       isNew: true,
@@ -61,7 +61,7 @@ export const angularChallenges: Map<string, IChallenge> = new Map([
     {
       title: 'Word Count',
       link: 'word-count',
-      difficulty: 'easy',
+      difficulty: EDifficulty.Easy,
       developer: 'pankajparkar',
       tags: [],
       isNew: true,

@@ -1,6 +1,7 @@
 import Accordion from '@/challenges/accordion/App';
 import AutocompleteOffline from '@/challenges/autocomplete/autocompleteOffline';
 import AutocompleteOnline from '@/challenges/autocomplete/autocompleteOnline';
+import AnagramChecker from '@/challenges/anagram-checker/App';
 import BMICalculator from '@/challenges/bmi-calculator/App';
 import ChallengeNavbar from '@/components/challenge-navbar/ChallengeNavbar';
 import Background from '@/challenges/background-changer/Background';
@@ -46,8 +47,14 @@ import QuizApp from '@/challenges/quiz-app/App';
 import ChessBoard from '@/challenges/chess-board/App';
 import { reactChallenges } from '@fmc/data/content';
 import { useParams } from 'react-router-dom';
+import Calculator from '@/challenges/calculator/App';
+import WaterBalancer from '@/challenges/water-balancer/App';
+import TransferListApp from '@/challenges/transfer-list/TransferListApp';
+import Timeline from '@/challenges/timeline/App';
+import WordConnect from '@/challenges/word-connect/App';
 
 const reactChallengesMap = {
+  'transfer-list': <TransferListApp />,
   counter: <Counter />,
   accordion: <Accordion />,
   'background-changer': <Background />,
@@ -93,6 +100,11 @@ const reactChallengesMap = {
   'quiz-app': <QuizApp />,
   'chess-board': <ChessBoard />,
   'nested-dropdown': <NestedDropdown />,
+  'anagram-checker': <AnagramChecker />,
+  calculator: <Calculator />,
+  'water-balancer': <WaterBalancer />,
+  timeline: <Timeline />,
+  'word-connect': <WordConnect />,
 };
 
 function Challenge() {

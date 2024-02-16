@@ -1,12 +1,14 @@
-import { reactChallenges } from '@fmc/data/content';
-import { contributors } from '@fmc/data/content';
+import { reactChallenges, contributors } from '@fmc/data/content';
+import { getSortedChallengesByDifficulty } from '@fmc/data/utils';
 import { AvatarGroup } from './Avatar';
 import styles from './challenge-grid.module.scss';
+
+const sortedChallengesByDifficulty = getSortedChallengesByDifficulty(reactChallenges);
 
 function ChallengeGrid() {
   return (
     <div className={styles.challengeGrid}>
-      {Array.from(reactChallenges.values()).map((challenge) => (
+      {sortedChallengesByDifficulty.map((challenge) => (
         <a
           key={challenge.title}
           className={`${styles.challengeCard} ${styles[challenge.difficulty]}`}

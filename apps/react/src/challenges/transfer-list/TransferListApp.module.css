@@ -1,0 +1,35 @@
+.TransferListContainer {
+  display: flex;
+  width: 500px;
+  height: 250px;
+  margin: 2rem auto;
+}
+
+.list-container {
+  width: 300px;
+  border: 1px solid rgb(13, 13, 20);
+  display: flex;
+  flex-direction: column;
+}
+
+.buttons-container {
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5px;
+}
+
+.buttons-container button {
+  padding: 5px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.inputWrapper {
+  padding: 5px;
+}
+
+.disabled-button {
+  pointer-events: none;
+}

@@ -4,14 +4,15 @@
   "targetDefaults": {
     "build": {
       "cache": true,
-      "dependsOn": [
-        "^build"
-      ]
+      "dependsOn": ["^build"]
     },
     "lint": {
       "cache": true
     },
     "e2e": {
+      "cache": true
+    },
+    "unit:test": {
       "cache": true
     }
   }

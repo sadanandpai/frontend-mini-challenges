@@ -2,6 +2,10 @@ import type { IContributor } from '../types/index';
 
 export const contributors = new Map<string, IContributor>([
   [
+    'DeePaK-HeeRaKaRi',
+    { name: 'Deepak Heerakari', pic: 'https://avatars.githubusercontent.com/u/63955160' },
+  ],
+  [
     'sadanandpai',
     { name: 'Sadanand Pai', pic: 'https://avatars.githubusercontent.com/u/12962887' },
   ],
@@ -165,4 +169,22 @@ export const contributors = new Map<string, IContributor>([
       pic: 'https://avatars.githubusercontent.com/u/5320044',
     },
   ],
+  [
+    'bhumikkalola',
+    { name: 'Bhumik Kalola', pic: 'https://avatars.githubusercontent.com/u/147032346' },
+  ],
+  [
+    'babandakale',
+    {
+      name: 'Baban Dakale',
+      pic: 'https://avatars.githubusercontent.com/u/142794846',
+    },
+  ],
+  [
+    'Manmit Tiwade',
+    { name: 'Manmit Tiwade', pic: 'https://avatars.githubusercontent.com/u/112580293' },
+  ],
+  ['liza', { name: 'Liza', pic: 'https://avatars.githubusercontent.com/u/78140921' }],
+  ['Shardik04', { name: 'Hardik Shah', pic: 'https://avatars.githubusercontent.com/u/11913104' }],
+  ['Vivek7038', { name: 'Vivek Chavan', pic: 'https://avatars.githubusercontent.com/u/95691809?v=4' }],
 ]);

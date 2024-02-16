@@ -2,14 +2,14 @@ name: Node.js CI
 
 on:
   push:
-    branches: ["main"]
+    branches: ['main']
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       # Runs a single command using the runners shell
       - name: setup git config
@@ -20,6 +20,7 @@ jobs:
       - name: setup deployment
         run: |
           npm install
+          npm run unit:test
           npm run build
           npm run copy-to-docs
           git add docs -f
