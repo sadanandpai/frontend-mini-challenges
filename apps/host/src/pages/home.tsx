@@ -1,10 +1,10 @@
-import Contribution from '@/components/contribution/Contribution';
-import Features from '@/components/features/features';
-import Footer from '@/components/footer/Footer';
-import Hero from '@/components/hero/Hero';
-import Navbar from '@/components/navbar/Navbar';
-import Testimonials from '@/components/testimonials/testimonials';
-import ScrollBtn from '@/components/scroll-to-top/ScrollBtn';
+import Contribution from '@/components/modules/home/contribution/contribution';
+import Features from '@/components/modules/home/features/features';
+import Footer from '@/components/modules/home/footer/footer';
+import Hero from '@/components/modules/home/hero/hero';
+import Navbar from '@/components/common/navbar/navbar';
+import Testimonials from '@/components/modules/home/testimonials/testimonials';
+import ScrollBtn from '@/components/common/scroll-to-top/scroll-btn';
 import styles from '@/styles.module.scss';
 import { HashLink } from 'react-router-hash-link';
 

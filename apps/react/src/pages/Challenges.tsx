@@ -1,4 +1,4 @@
-import ChallengeGrid from '@/components/challenges/ChallengeGrid';
+import ChallengeGrid from '@/components/challenges/challenge-grid';
 import Navbar from '@/components/navbar/Navbar';
 import ScrollBtn from '@/components/scroll-to-top/ScrollBtn';
 

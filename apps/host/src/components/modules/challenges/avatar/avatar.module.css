@@ -1,0 +1,19 @@
+.avatar {
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 1000px;
+
+  /* Use shadow instead of border so that it does not occupy space */
+  box-shadow: 0 0 0 2px black;
+}
+
+.avatarGroup {
+  display: flex;
+  margin: auto;
+  width: max-content;
+}
+
+.avatarGroup > *:not(:first-child) {
+  margin-left: -0.3rem;
+}
