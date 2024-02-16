@@ -7,7 +7,7 @@ const challengeLink = window.location.pathname.split('/challenges/')[1].slice(0,
 const challenge = jsChallenges.get(challengeLink)!;
 
 const backButton = `
-  <a slot="left" href="/frontend-mini-challenges/javascript/" class="back">
+  <a slot="left" href="/frontend-mini-challenges/#/javascript/" class="back">
     <svg
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
