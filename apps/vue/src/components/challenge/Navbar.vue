@@ -1,10 +1,10 @@
 <template>
   <nav class="navbar">
     <div class="left">
-      <a href="/#/vue/" class="back">
+      <a :href="backURL" class="back">
         &lt;
       </a>
-      <a class="logo" href="/frontend-mini-challenges/">
+      <a class="logo" :href="homeURL">
         <img src="https://github.com/sadanandpai/frontend-mini-challenges/raw/main/shared/assets/logo.png" alt="logo" />
       </a>
     </div>
@@ -20,6 +20,10 @@
 </template>
 
 <script setup lang="ts">
+const { VITE_PATH, VITE_HOST_URL, DEV } = import.meta.env;
+const backURL = DEV ? `${VITE_HOST_URL}${VITE_PATH}/#/vue` : '/#/vue/';
+const homeURL = DEV ? `${VITE_HOST_URL}${VITE_PATH}/` : `/${VITE_PATH}/`;
+
 defineProps({
   title: {
     type: String,

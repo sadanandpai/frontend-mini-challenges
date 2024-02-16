@@ -1,5 +1,9 @@
 import styles from './challenge-navbar.module.scss';
 
+const { VITE_PATH, VITE_HOST_URL, DEV } = import.meta.env;
+const backURL = DEV ? `${VITE_HOST_URL}${VITE_PATH}/#/react` : '/#/react/';
+const homeURL = DEV ? `${VITE_HOST_URL}${VITE_PATH}/` : `/${VITE_PATH}/`;
+
 interface Props {
   title?: string;
 }
@@ -8,10 +12,10 @@ function ChallengeNavbar({ title }: Props) {
   return (
     <nav className={styles.navbar}>
       <div className={styles.left}>
-        <a href="/#/react/" className={styles.back}>
+        <a href={backURL} className={styles.back}>
           &lt;
         </a>
-        <a className={styles.logo} href="/frontend-mini-challenges/">
+        <a className={styles.logo} href={homeURL}>
           <img
             src="https://github.com/sadanandpai/frontend-mini-challenges/raw/main/shared/assets/logo.png"
             alt="logo"
