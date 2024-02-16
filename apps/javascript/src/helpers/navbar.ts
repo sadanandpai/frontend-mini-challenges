@@ -3,11 +3,14 @@ import { jsChallenges } from '@fmc/data/content';
 
 defineNavigationBar();
 
+const { VITE_PATH, VITE_HOST_URL, DEV } = import.meta.env;
+const backURL = DEV ? `${VITE_HOST_URL}${VITE_PATH}/#/javascript/` : `/${VITE_PATH}/#/javascript/`;
+
 const challengeLink = window.location.pathname.split('/challenges/')[1].slice(0, -1);
 const challenge = jsChallenges.get(challengeLink)!;
 
 const backButton = `
-  <a slot="left" href="/frontend-mini-challenges/#/javascript/" class="back">
+  <a slot="left" href=${backURL} class="back">
     <svg
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
