@@ -4,7 +4,7 @@ import Navbar from '@/components/navbar/Navbar';
 function LeaderboardPage() {
   return (
     <>
-      <Navbar />
+      <Navbar title="Leaderboard" />
       <Leaderboard />
     </>
   );

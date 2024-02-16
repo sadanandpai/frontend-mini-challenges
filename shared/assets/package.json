@@ -1,0 +1,9 @@
+{
+  "name": "@fmc/assets",
+  "version": "1.0.0",
+  "description": "",
+  "exports": {
+    "./images": "./index.ts"
+  }
+}
+ 

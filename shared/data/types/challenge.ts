@@ -13,4 +13,5 @@ export interface IChallenge {
   youtube?: string;
   tags?: string[];
   isNew?: boolean;
+  longLink?:string;
 }
