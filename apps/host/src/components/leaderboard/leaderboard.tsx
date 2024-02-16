@@ -1,9 +1,18 @@
 import { generateLeaderboardData } from '@/helpers/generate-leaderboard';
-import classes from './leaderboard.module.css';
+import classes from './leaderboard.module.scss';
 import { Link } from 'react-router-dom';
+import { ReactNode } from 'react';
+import assets from '@fmc/assets/images';
 
 export default function Leaderboard() {
   const data = generateLeaderboardData();
+  const ContributionDiv = ({title, number}: { title: string | ReactNode; number: number}) => (
+    <div className={classes.techStackDiv}>
+      {title}
+      <div>{number}</div>
+    </div>
+  )
+
   const GetLeaderBoardTableBody = () => {
     return Array.from(data.values()).map((contributor, index) => (
       <tr key={contributor.name}>
@@ -33,7 +42,13 @@ export default function Leaderboard() {
             index >= 1 ? classes.leaderBoardTableData : classes.leaderBoardBorderBottomStyle
           }
         >
-          {contributor.numberOfContributions}
+          <div className={classes.contributionTableCell}>
+            {contributor.contributions.js ? <ContributionDiv title={<img src={assets.jsImg}  className={classes.techStackImg} />} number={contributor.contributions.js.length} /> : null}
+            {contributor.contributions.react ? <ContributionDiv title={<img src={assets.reactImg} className={classes.techStackImg}  />} number={contributor.contributions.react.length} /> : null}
+            {contributor.contributions.vue ? <ContributionDiv title={<img src={assets.vueImg} className={classes.techStackImg}  />} number={contributor.contributions.vue.length} /> : null}
+            {contributor.contributions.angular ? <ContributionDiv title={<img src={assets.angularImg} className={classes.techStackImg}  />} number={contributor.contributions.angular.length} /> : null}
+            <div><div>Total</div><div>{contributor.numberOfContributions}</div></div>
+          </div>
         </td>
       </tr>
     ));
@@ -41,25 +56,24 @@ export default function Leaderboard() {
 
   return (
     <div className="container">
-      <h2 id="leader-board" className={classes.leaderBoardHeading}>
-        Leaderboard
-      </h2>
-      <table
-        width="100%"
-        border={1}
-        cellSpacing={0}
-        cellPadding={10}
-        style={{ textAlign: 'center' }}
-      >
-        <thead>
-          <tr>
-            <td>#</td>
-            <td>Name</td>
-            <td>Contributions</td>
-          </tr>
-        </thead>
-        <tbody>{GetLeaderBoardTableBody()}</tbody>
-      </table>
+      <div className={classes.leaderboardTableWrapper}>
+        <table
+          border={1}
+          cellSpacing={0}
+          cellPadding={10}
+          style={{ textAlign: 'center' }}
+          className={classes.leaderboardTable}
+        >
+          <thead>
+            <tr>
+              <td>#</td>
+              <td>Name</td>
+              <td>Contributions</td>
+            </tr>
+          </thead>
+          <tbody>{GetLeaderBoardTableBody()}</tbody>
+        </table>
+      </div>
     </div>
   );
 }

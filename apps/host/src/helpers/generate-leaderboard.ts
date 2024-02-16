@@ -1,27 +1,41 @@
 import { contributors, angularChallenges, jsChallenges, reactChallenges, vueChallenges } from '@fmc/data/content';
 import type { IChallenge } from '@fmc/data/types';
 
+export interface DeveloperContributions {
+  react?: IChallenge[];
+  vue?: IChallenge[];
+  js?: IChallenge[];
+  angular?: IChallenge[];
+  totalContributions: number;
+}
+
 export interface LeaderboardEntry {
   name: string;
   pic: string;
-  contributions: IChallenge[];
+  contributions: DeveloperContributions;
   numberOfContributions: number;
   developer: string;
 }
 
 export const generateLeaderboardData = (): Map<string, LeaderboardEntry> => {
-  const developerContributions: Map<string, IChallenge[]> = new Map();
+  const developerContributions: Map<string, DeveloperContributions> = new Map();
 
-  // get contributions groupBy deeloper
+  // get contributions groupBy developer
   angularChallenges.forEach((val) => {
     if (val.developer) {
       if (developerContributions.has(val.developer)) {
         const developer = developerContributions.get(val.developer);
-        val.longLink = `/angular/#/challenges/${val.link}`;
-        developer?.push(val);
+        if (developer) {
+          val.longLink = `/angular/#/challenges/${val.link}`;
+          developer.angular ? developer.angular.push(val) : developer.angular = [val];
+          developer.totalContributions += 1;
+        }
       } else {
         val.longLink = `/angular/#/challenges/${val.link}`;
-        developerContributions.set(val.developer, [val]);
+        developerContributions.set(val.developer, {
+          angular: [val],
+          totalContributions: 1,
+        });
       }
     }
   });
@@ -29,11 +43,17 @@ export const generateLeaderboardData = (): Map<string, LeaderboardEntry> => {
     if (val.developer) {
       if (developerContributions.has(val.developer)) {
         const developer = developerContributions.get(val.developer);
-        val.longLink = `/frontend-mini-challenges/react/#/${val.link}`;
-        developer?.push(val);
+        if (developer) {
+          val.longLink = `/react/#/challenges/${val.link}`;
+          developer.react ? developer.react.push(val) : developer.react = [val];
+          developer.totalContributions += 1;
+        }
       } else {
-        val.longLink = `/frontend-mini-challenges/react/#/${val.link}`;
-        developerContributions.set(val.developer, [val]);
+        val.longLink = `/react/#/challenges/${val.link}`;
+        developerContributions.set(val.developer, {
+          react: [val],
+          totalContributions: 1,
+        });
       }
     }
   });
@@ -41,24 +61,35 @@ export const generateLeaderboardData = (): Map<string, LeaderboardEntry> => {
     if (val.developer) {
       if (developerContributions.has(val.developer)) {
         const developer = developerContributions.get(val.developer);
-        val.longLink = `/vue/#${val.link}`;
-        developer?.push(val);
+        if (developer) {
+          val.longLink = `/vue/#/challenges/${val.link}`;
+          developer.vue ? developer.vue.push(val) : developer.vue = [val];
+          developer.totalContributions += 1;
+        }
       } else {
-        val.longLink = `/vue/#${val.link}`;
-        developerContributions.set(val.developer, [val]);
+        val.longLink = `/vue/#/challenges/${val.link}`;
+        developerContributions.set(val.developer, {
+          vue: [val],
+          totalContributions: 1,
+        });
       }
     }
   });
   jsChallenges.forEach(val => {
-
     if (val.developer) {
       if (developerContributions.has(val.developer)) {
         const developer = developerContributions.get(val.developer);
-        val.longLink = `/frontend-mini-challenges/javascript/src/challenges/${val.link}/`;
-        developer?.push(val);
+        if (developer) {
+          val.longLink = `/js/#/challenges/${val.link}`;
+          developer.js ? developer.js.push(val) : developer.js = [val];
+          developer.totalContributions += 1;
+        }
       } else {
-        val.longLink = `/frontend-mini-challenges/javascript/src/challenges/${val.link}/`;
-        developerContributions.set(val.developer, [val]);
+        val.longLink = `/js/#/challenges/${val.link}`;
+        developerContributions.set(val.developer, {
+          js: [val],
+          totalContributions: 1,
+        });
       }
     }
   });
@@ -72,7 +103,7 @@ export const generateLeaderboardData = (): Map<string, LeaderboardEntry> => {
         name: developerInfo?.name,
         pic: developerInfo?.pic,
         contributions: data,
-        numberOfContributions: data.length,
+        numberOfContributions: data.totalContributions,
         developer: key,
       });
     }

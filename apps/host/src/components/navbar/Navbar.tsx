@@ -1,6 +1,6 @@
 import styles from "./navbar.module.scss";
 
-function Navbar({ children }: { children?: React.ReactNode }) {
+function Navbar({ children, title }: { children?: React.ReactNode, title?: string }) {
   return (
     <nav className={styles.navbar}>
       <a className={styles.logo} href="/frontend-mini-challenges/">
@@ -8,7 +8,7 @@ function Navbar({ children }: { children?: React.ReactNode }) {
           src="https://github.com/sadanandpai/frontend-mini-challenges/raw/main/shared/assets/logo.png"
           alt="logo"
         />
-        <span>Frontend Mini Challenges</span>
+        <span>{title ?? 'Frontend Mini Challenges'}</span>
       </a>
 
       <div className={styles.right}>
