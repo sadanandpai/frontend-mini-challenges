@@ -502,6 +502,17 @@ export const reactChallenges = new Map<string, IChallenge>([
     },
   ],
   [
+    'stepper',
+    {
+      title: 'STEPPER',
+      link: 'stepper',
+      difficulty: EDifficulty.Medium,
+      developer: 'codechitra',
+      tags: [],
+      isNew: true
+    }
+  ],
+  [
     'file-explorer',
     {
       title: 'File Explorer',
