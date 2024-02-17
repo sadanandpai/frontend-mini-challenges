@@ -44,7 +44,7 @@ const GridUI = forwardRef(function GridUI({ items, cols, onSelection, status }: 
     >
       {items.map((item) => {
         const isSelected = selected.includes(item);
-        const className = `${isSelected ? styles.highlight : ''} ${
+        const className = `${styles.itemBtn} ${isSelected ? styles.highlight : ''} ${
           isSelected && status ? styles[status] : ''
         }`;
         return (
