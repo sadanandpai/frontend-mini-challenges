@@ -14,11 +14,12 @@
 .inline-options {
   display: inline-flex;
   border-radius: 8px;
+  gap: 4px;
   padding: 3px;
   background: #fff;
-  color: #5B5E64;
+  color: #5b5e64;
   user-select: none;
-  border: 1px solid #DCD5C8;
+  border: 1px solid #dcd5c8;
   font-size: 14px;
 }
 
@@ -31,29 +32,21 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  /* normalize */
+  background: #fff;
+  box-shadow: none;
+  border: 0;
 }
 
-.option::after {
-  content: "";
-  position: absolute;
-  top: 5px;
-  bottom: 5px;
-  right: -1px;
-  width: .5px;
-  background: #CAC0AD;
-}
-
-.option:last-child::after {
-  visibility: hidden;
+.option:focus {
+  outline: 1px solid #6a604f;
 }
 
 .option-selected {
+  outline: none;
   color: #fff;
-  background: #6A604F;
-}
-
-.option-selected::after {
-  visibility: hidden;
+  background: #6a604f;
 }
 
 .option-disabled {

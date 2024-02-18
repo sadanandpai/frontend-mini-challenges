@@ -71,26 +71,27 @@ type OptionProps = OptionType & {
 };
 
 function Option({ id, text, setOption, isDisabled, isSelected }: OptionProps) {
-  const selectOption = (e: React.MouseEvent<HTMLDivElement>) => {
+  const selectOption = (id: string) => {
     if (isDisabled) return;
-
-    const target = e.target as HTMLDivElement;
-    const id = target.getAttribute('data-option-id');
-    if (!id) return;
-
     setOption(id);
   };
 
+  const onClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+    const target = e.target as HTMLButtonElement;
+    const id = target.getAttribute('data-option-id');
+    if (!id) return;
+    selectOption(id);
+  };
+
   return (
-    <div
-      role="button"
+    <button
       data-option-id={id}
-      onClick={selectOption}
+      onClick={onClick}
       className={`${styles['option']} ${isSelected ? styles['option-selected'] : ''} ${
         isDisabled ? styles['option-disabled'] : ''
       }`}
     >
       {text}
-    </div>
+    </button>
   );
 }
