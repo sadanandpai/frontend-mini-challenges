@@ -32,8 +32,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
-  /* normalize */
   background: #fff;
   box-shadow: none;
   border: 0;
@@ -51,5 +49,5 @@
 
 .option-disabled {
   color: #bfbdbd;
-  cursor: default;
+  cursor: not-allowed;
 }
