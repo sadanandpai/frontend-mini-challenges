@@ -1,0 +1,128 @@
+.heading {
+    text-align: center;
+  }
+  
+  .stepper {
+    display: flex;
+  
+    justify-content: space-between;
+  
+    align-items: center;
+  
+    position: relative;
+  
+    margin-top: 20px;
+  }
+  
+  .step {
+    display: flex;
+  
+    flex-direction: column;
+  
+    align-items: center;
+  
+    /* border: 2px solid grey; */
+  
+    position: relative;
+  
+    z-index: 2;
+  
+    flex: 1;
+  }
+  
+  .step.active .step-number {
+    background-color: rgb(71, 71, 247);
+  
+    color: white;
+  }
+  
+  .step.complete .step-number {
+    background-color: rgb(30, 196, 30);
+  
+    color: white;
+  }
+  
+  .step-number {
+    width: 30px;
+  
+    height: 30px;
+  
+    border-radius: 50%;
+  
+    background-color: #ccc;
+  
+    display: flex;
+  
+    align-items: center;
+  
+    justify-content: center;
+  
+    margin-bottom: 5px;
+  
+    border: 2px solid black;
+  }
+  
+  .btn {
+    margin-top: 10px;
+  
+    cursor: pointer;
+  }
+  
+  .progress-container {
+    height: 4px;
+  
+    background-color: grey;
+  
+    position: absolute;
+  
+    width: 100%;
+  
+    top: 15px;
+  }
+  
+  .progress-bar {
+    height: 100%;
+  
+    background-color: green;
+  
+    transition: all 0.2s ease;
+  }
+  
+  .action-container {
+    margin-top: 15px;
+  
+    display: flex;
+  
+    align-items: center;
+  
+    justify-content: center;
+  
+    flex-direction: column;
+  }
+  
+  .action-container div {
+    font-size: 20px;
+  
+    font-weight: 600;
+  }
+  
+  .action-container .btn {
+    border: none;
+  
+    background: none;
+  
+    cursor: pointer;
+  
+    width: 70px;
+  
+    height: 40px;
+  
+    padding: 10px;
+  
+    border-radius: 5px;
+  
+    background-color: #ccc;
+  
+    font-size: 20px;
+  }
+  
