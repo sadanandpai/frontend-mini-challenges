@@ -542,4 +542,14 @@ export const reactChallenges = new Map<string, IChallenge>([
       tags: [],
     },
   ],
+  [
+    'inline-options',
+    {
+      title: 'Inline Options',
+      link: 'inline-options',
+      difficulty: EDifficulty.Easy,
+      developer: 'takshch',
+      tags: [],
+    },
+  ],
 ]);
