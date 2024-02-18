@@ -1,3 +1,4 @@
+import { useCallback } from 'react';
 import styles from './InlineOptions.module.css';
 import { OptionType } from './OptionType';
 
@@ -7,17 +8,13 @@ type OptionProps = OptionType & {
 };
 
 export default function Option({ id, text, setOption, isDisabled, isSelected }: OptionProps) {
-  const selectOption = (id: string) => {
+  const onClick = useCallback((e: React.MouseEvent<HTMLButtonElement>) => {
     if (isDisabled) return;
-    setOption(id);
-  };
-
-  const onClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     const target = e.target as HTMLButtonElement;
     const id = target.getAttribute('data-option-id');
     if (!id) return;
-    selectOption(id);
-  };
+    setOption(id);
+  }, []);
 
   return (
     <button

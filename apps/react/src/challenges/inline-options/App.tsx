@@ -5,15 +5,15 @@ import { OptionType } from './OptionType';
 const OPTIONS: OptionType[] = [
   {
     id: '1',
-    text: '100gm',
+    text: '100ml',
   },
   {
     id: '2',
-    text: '200gm',
+    text: '200ml',
   },
   {
     id: '3',
-    text: '400gm',
+    text: '400ml',
   },
   {
     id: '4',

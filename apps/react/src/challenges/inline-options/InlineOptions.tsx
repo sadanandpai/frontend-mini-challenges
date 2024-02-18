@@ -10,8 +10,6 @@ type InlineOptionsProps = {
 export default function InlineOptions({ options }: InlineOptionsProps) {
   const [selectedOptionId, setSelectedOptionId] = useState<string>(options[0].id);
 
-  const setOption = (id: string) => setSelectedOptionId(id);
-
   return (
     <div className={styles['inline-options']}>
       {options.map((option) => (
@@ -19,7 +17,7 @@ export default function InlineOptions({ options }: InlineOptionsProps) {
           key={option.id}
           {...option}
           isSelected={option.id === selectedOptionId}
-          setOption={setOption}
+          setOption={(id) => setSelectedOptionId(id)}
         />
       ))}
     </div>
