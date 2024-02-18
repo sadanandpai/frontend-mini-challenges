@@ -1,11 +1,6 @@
-import { useState } from 'react';
+import InlineOptions from './InlineOptions';
 import styles from './InlineOptions.module.css';
-
-type OptionType = {
-  id: string;
-  text: string;
-  isDisabled?: boolean;
-};
+import { OptionType } from './OptionType';
 
 const OPTIONS: OptionType[] = [
   {
@@ -39,59 +34,5 @@ export default function App() {
         <InlineOptions options={OPTIONS} />
       </div>
     </div>
-  );
-}
-
-type InlineOptionsProps = {
-  options: OptionType[];
-};
-
-function InlineOptions({ options }: InlineOptionsProps) {
-  const [selectedOptionId, setSelectedOptionId] = useState<string>(OPTIONS[0].id);
-
-  const setOption = (id: string) => setSelectedOptionId(id);
-
-  return (
-    <div className={styles['inline-options']}>
-      {options.map((option, index) => (
-        <Option
-          key={index}
-          {...option}
-          isSelected={option.id === selectedOptionId}
-          setOption={setOption}
-        />
-      ))}
-    </div>
-  );
-}
-
-type OptionProps = OptionType & {
-  isSelected?: boolean;
-  setOption: (id: string) => void;
-};
-
-function Option({ id, text, setOption, isDisabled, isSelected }: OptionProps) {
-  const selectOption = (id: string) => {
-    if (isDisabled) return;
-    setOption(id);
-  };
-
-  const onClick = (e: React.MouseEvent<HTMLButtonElement>) => {
-    const target = e.target as HTMLButtonElement;
-    const id = target.getAttribute('data-option-id');
-    if (!id) return;
-    selectOption(id);
-  };
-
-  return (
-    <button
-      data-option-id={id}
-      onClick={onClick}
-      className={`${styles['option']} ${isSelected ? styles['option-selected'] : ''} ${
-        isDisabled ? styles['option-disabled'] : ''
-      }`}
-    >
-      {text}
-    </button>
   );
 }
