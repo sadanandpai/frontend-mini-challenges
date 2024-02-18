@@ -245,6 +245,17 @@ export const reactChallenges = new Map<string, IChallenge>([
     },
   ],
   [
+    'stepper',
+    {
+      title: 'STEPPER',
+      link: 'stepper',
+      difficulty: EDifficulty.Easy,
+      developer: 'codechitra',
+      tags: [],
+      isNew: true
+    }
+  ],
+  [
     'calculator',
     {
       title: 'Calculator',
