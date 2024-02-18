@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useCallback, useState } from 'react';
 import { OptionType } from './OptionType';
 import styles from './InlineOptions.module.css';
 import Option from './Option';
@@ -10,6 +10,8 @@ type InlineOptionsProps = {
 export default function InlineOptions({ options }: InlineOptionsProps) {
   const [selectedOptionId, setSelectedOptionId] = useState<string>(options[0].id);
 
+  const setOption = useCallback((id) => setSelectedOptionId(id), []);
+
   return (
     <div className={styles['inline-options']}>
       {options.map((option) => (
@@ -17,7 +19,7 @@ export default function InlineOptions({ options }: InlineOptionsProps) {
           key={option.id}
           {...option}
           isSelected={option.id === selectedOptionId}
-          setOption={(id) => setSelectedOptionId(id)}
+          setOption={setOption}
         />
       ))}
     </div>
