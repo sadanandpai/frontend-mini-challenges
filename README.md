@@ -30,10 +30,8 @@ This repo is created to list down all the popular frontend challenges that are r
 - Clone the repo
 - Run `npm install`
 - Run `npm run dev`
-  - JavaScript: http://localhost:6011
-  - React: http://localhost:6012
-  - VueJs: http://localhost:6013
-  - Host: http://localhost:6010
+- Visit http://localhost:6010/
+
 
 <br/>
 
