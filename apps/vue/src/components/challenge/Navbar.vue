@@ -21,7 +21,7 @@
 
 <script setup lang="ts">
 const { VITE_PATH, VITE_HOST_URL, DEV } = import.meta.env;
-const backURL = DEV ? `${VITE_HOST_URL}${VITE_PATH}/#/vue` : '/#/vue/';
+const backURL = DEV ? `${VITE_HOST_URL}${VITE_PATH}/#/vue` : `/${VITE_PATH}/#/vue/`;
 const homeURL = DEV ? `${VITE_HOST_URL}${VITE_PATH}/` : `/${VITE_PATH}/`;
 
 defineProps({

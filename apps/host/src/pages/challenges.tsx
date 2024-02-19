@@ -6,9 +6,9 @@ import ScrollBtn from '@/components/common/scroll-to-top/scroll-btn';
 import Navbar from '@/components/common/navbar/navbar';
 
 const { VITE_PATH, VITE_JS_APP_URL, VITE_REACT_APP_URL, VITE_VUE_APP_URL, DEV } = import.meta.env;
-const jsLinkPrefix = DEV ? `${VITE_JS_APP_URL}${VITE_PATH}` : '';
-const reactLinkPrefix = DEV ? `${VITE_REACT_APP_URL}${VITE_PATH}` : '';
-const vueLinkPrefix = DEV ? `${VITE_VUE_APP_URL}${VITE_PATH}` : '';
+const jsLinkPrefix = DEV ? `${VITE_JS_APP_URL}${VITE_PATH}` : `/${VITE_PATH}`;
+const reactLinkPrefix = DEV ? `${VITE_REACT_APP_URL}${VITE_PATH}` : `/${VITE_PATH}`;
+const vueLinkPrefix = DEV ? `${VITE_VUE_APP_URL}${VITE_PATH}` : `/${VITE_PATH}`;
 
 const techMap = new Map([
   [

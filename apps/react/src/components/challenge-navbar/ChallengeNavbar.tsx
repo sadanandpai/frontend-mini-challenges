@@ -1,7 +1,7 @@
 import styles from './challenge-navbar.module.scss';
 
 const { VITE_PATH, VITE_HOST_URL, DEV } = import.meta.env;
-const backURL = DEV ? `${VITE_HOST_URL}${VITE_PATH}/#/react` : '/#/react/';
+const backURL = DEV ? `${VITE_HOST_URL}${VITE_PATH}/#/react` : `/${VITE_PATH}/#/react/`;
 const homeURL = DEV ? `${VITE_HOST_URL}${VITE_PATH}/` : `/${VITE_PATH}/`;
 
 interface Props {
