@@ -186,12 +186,16 @@ export const contributors = new Map<string, IContributor>([
   ],
   ['liza', { name: 'Liza', pic: 'https://avatars.githubusercontent.com/u/78140921' }],
   ['Shardik04', { name: 'Hardik Shah', pic: 'https://avatars.githubusercontent.com/u/11913104' }],
-  ['Vivek7038', { name: 'Vivek Chavan', pic: 'https://avatars.githubusercontent.com/u/95691809?v=4' }],
+  [
+    'Vivek7038',
+    { name: 'Vivek Chavan', pic: 'https://avatars.githubusercontent.com/u/95691809?v=4' },
+  ],
   [
     'codechitra',
     {
       name: 'Akash Deep Chitransh',
-      pic: 'https://avatars.githubusercontent.com/u/85569078?v=4'
-    }
-  ]
+      pic: 'https://avatars.githubusercontent.com/u/85569078?v=4',
+    },
+  ],
+  ['takshch', { name: 'Taksh Chanana', pic: 'https://avatars.githubusercontent.com/u/26649558' }],
 ]);

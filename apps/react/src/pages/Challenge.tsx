@@ -53,6 +53,8 @@ import TransferListApp from '@/challenges/transfer-list/TransferListApp';
 import Timeline from '@/challenges/timeline/App';
 import WordConnect from '@/challenges/word-connect/App';
 import Stepper from '@/challenges/stepper/App';
+import InlineOptions from '@/challenges/inline-options/App';
+
 const reactChallengesMap = {
   'transfer-list': <TransferListApp />,
   counter: <Counter />,
@@ -105,7 +107,8 @@ const reactChallengesMap = {
   'water-balancer': <WaterBalancer />,
   timeline: <Timeline />,
   'word-connect': <WordConnect />,
-  "stepper": <Stepper/>
+  stepper: <Stepper />,
+  'inline-options': <InlineOptions />,
 };
 
 function Challenge() {

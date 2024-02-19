@@ -1,0 +1,53 @@
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.select-dahi {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 6px 8px;
+}
+
+.inline-options {
+  display: inline-flex;
+  border-radius: 8px;
+  gap: 4px;
+  padding: 3px;
+  background: #fff;
+  color: #5b5e64;
+  user-select: none;
+  border: 1px solid #dcd5c8;
+  font-size: 14px;
+}
+
+.option {
+  position: relative;
+  cursor: pointer;
+  padding: 4px 6px;
+  border-radius: 4px;
+  width: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  box-shadow: none;
+  border: 0;
+}
+
+.option:focus {
+  outline: 1px solid #6a604f;
+}
+
+.option-selected {
+  outline: none;
+  color: #fff;
+  background: #6a604f;
+}
+
+.option-disabled {
+  color: #bfbdbd;
+  cursor: not-allowed;
+}
