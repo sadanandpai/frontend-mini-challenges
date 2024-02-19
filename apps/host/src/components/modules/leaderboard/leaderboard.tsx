@@ -31,10 +31,8 @@ export default function Leaderboard() {
           }
         >
           <Link to={`/profile/${contributor.developer}`} className={classes.profileLink}>
-          <span>
-            <img className={classes.leaderBoardContributorImg} src={contributor.pic} alt={''} />
-          </span>
-          <span>{contributor.name}</span>
+          <img className={classes.leaderBoardContributorImg} src={contributor.pic} alt={''} />
+          <span className={classes.leaderBoardContributorName}>{contributor.name}</span>
           </Link>
         </td>
         <td
