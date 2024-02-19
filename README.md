@@ -1,7 +1,7 @@
 <div align="center">
   <h1>Frontend Mini Challenges</h1>
   <h3>Collection of frontend challenges for learning and interviews</h3>
-  <a href="https://frontend-mini-challenges.netlify.app/"><img src="https://github.com/sadanandpai/frontend-mini-challenges/raw/main/shared/assets/cover.png" alt="web programming" width="500px" /></a>
+  <a href="https://sadanandpai.github.io/frontend-mini-challenges/"><img src="https://github.com/sadanandpai/frontend-mini-challenges/raw/main/shared/assets/cover.png" alt="web programming" width="500px" /></a>
 
 [![](https://img.shields.io/github/stars/sadanandpai/frontend-mini-challenges?style=for-the-badge)](#stars)
 [![](https://img.shields.io/github/forks/sadanandpai/frontend-mini-challenges?style=for-the-badge)](#forks)
@@ -9,7 +9,7 @@
   <p>Show your support by giving a ⭐ to this repo</p>
 
   <h3>
-    <a href="https://frontend-mini-challenges.netlify.app/">View all challenges of JavaScript, React and Vue</a>
+    <a href="https://sadanandpai.github.io/frontend-mini-challenges/">View all challenges of JavaScript, React and Vue</a>
   </h3>
 </div>
 
