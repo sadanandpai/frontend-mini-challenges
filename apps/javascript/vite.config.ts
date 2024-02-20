@@ -17,4 +17,5 @@ export default defineConfig({
     strictPort: true,
   },
   base: '/frontend-mini-challenges/javascript/',
+  logLevel: 'silent',
 });

@@ -15,4 +15,5 @@ export default defineConfig({
     strictPort: true,
   },
   base: '/frontend-mini-challenges/react/',
+  logLevel: 'silent',
 });
