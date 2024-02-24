@@ -3,33 +3,39 @@ import { getSortedChallengesByDifficulty, getSortedChallengesByTitle } from '@fm
 import styles from './challenge-grid.module.scss';
 import { AvatarGroup } from '../avatar/avatar';
 import { IChallenge } from '@fmc/data/types';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import assets from '@fmc/assets/images';
+import { Link } from 'react-router-dom';
 
 interface Props {
   challenges: Map<string, IChallenge>;
   linkPrefix: string;
+  links: {tech: string, imgSrc: string, active: boolean }[];
 }
 
-function ChallengeGrid({ challenges, linkPrefix }: Props) {
+function ChallengeGrid({ challenges, linkPrefix, links }: Props) {
   const [searchInput, setSearchInput] = useState<string>('');
   const [sortedChallenges, setSortedChallenges] = useState(() => getSortedChallengesByDifficulty(challenges));
-  
-  const filterByTitle = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const searchText = e.target.value.trim();
+
+  useEffect(() => {
     if (searchInput) {
-      setSortedChallenges(() => getSortedChallengesByTitle(challenges, searchText))
-    } else 
-      setSortedChallenges(() => getSortedChallengesByDifficulty(challenges))
-    setSearchInput(searchText);
-  }
+      setSortedChallenges(() => getSortedChallengesByTitle(challenges, searchInput))
+    } else {
+      setSortedChallenges(() => getSortedChallengesByDifficulty(challenges));
+    }
+  }, [challenges, searchInput]);
 
   return (
     <div className={styles.container}>
       <div className={styles.filterOptionWrapper}>
         <div className={styles.searchInputWrapper}>
-          <input type="text" name="searchTextInput" placeholder='Search challenge...' className={styles.searchInput} value={searchInput} onChange={filterByTitle} />
+          <input type="text" name="searchTextInput" placeholder='Search challenge...' className={styles.searchInput} value={searchInput} onChange={(e) => setSearchInput(e.target.value.trim())} />
           <img src={assets.searchIconSVG} alt="search challenges by title" width={15} height={15} className={styles.searchIcon} />
+        </div>
+        <div className={styles.filterByTechWrapper}>
+          {links.map((link) => <Link to={`/${link.tech}`} key={link.tech}>
+            <img src={link.imgSrc} width={35} height={35} className={link.active ? styles.activeTech : ''} alt={`filter by ${link.tech}`} />
+          </Link>)}
         </div>
       </div>
       <div className={styles.challengeGrid}>
