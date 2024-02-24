@@ -1,3 +1,37 @@
+.filterOptionWrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 2rem 0;
+}
+
+.searchInputWrapper {
+  position: relative;
+  .searchInput {
+    outline: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+    padding-left: 1.8rem;
+  }
+  .searchIcon {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    opacity: 0.7;
+    transition: all 0.2s ease;
+  }
+  .searchInput:focus, .searchInput:hover {
+    border-color: var(--text-link);
+    & + .searchIcon {
+      opacity: 1;
+    }
+  }
+}
+
+
+
 .challengeGrid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
