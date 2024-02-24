@@ -6,13 +6,15 @@
 
 .searchInputWrapper {
   position: relative;
+  height: 35px;
   .searchInput {
     outline: none;
     padding: 0.5rem 1rem;
     border-radius: 5px;
-    border: 1px solid #ccc;
+    border: 2px solid #ccc;
     width: 100%;
     padding-left: 1.8rem;
+    height: 100%;
   }
   .searchIcon {
     position: absolute;
@@ -30,7 +32,32 @@
   }
 }
 
+.filterByTechWrapper {
+  grid-column-end: -1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+  & > a {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    transition: 0.4s ease-in-out;
+    overflow: hidden;
+    border-radius: 4px;
 
+    &:hover {
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.34);
+    }
+  }
+  & > a > img {
+    padding: 2px;
+    border-radius: 4px;
+    &.activeTech {
+      border: 2px solid var(--text-link);
+    }
+  }
+}
 
 .challengeGrid {
   display: grid;
