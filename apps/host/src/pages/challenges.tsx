@@ -21,8 +21,6 @@ const techMap = new Map([
 ]);
 
 const techs = Array.from(techMap.keys());
-console.log(techMap);
-console.log(techs);
 
 function Challenges() {
   const { tech: techParam } = useParams();
