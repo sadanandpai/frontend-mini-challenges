@@ -4,7 +4,7 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "dev": "nx run-many -t dev --maxParallel=8 --host",
+    "dev": "nx run-many -t dev --maxParallel=8",
     "build": "nx run-many -t build",
     "build-baseless": "nx run @fmc/components:build && nx run-many -t build-baseless",
     "stencil:start": "nx run @fmc/components:start",
