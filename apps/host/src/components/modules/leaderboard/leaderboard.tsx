@@ -3,31 +3,39 @@ import classes from './leaderboard.module.scss';
 import { ReactNode } from 'react';
 import assets from '@fmc/assets/images';
 
+function cn(...classnames: string[]) {
+  return classnames.join(' ');
+}
+
 export default function Leaderboard() {
   const data = generateLeaderboardData();
   const ContributionDiv = ({ title, number }: { title: string | ReactNode; number: number }) => (
     <div className={classes.techStackDiv}>
-      {title}
-      <div>{number}</div>
+      <div className={classes.techStackDivWrapper}>
+        {title}
+        <div>{number}</div>
+      </div>
     </div>
   );
 
   const GetLeaderBoardTableBody = () => {
     return Array.from(data.values()).map((contributor, index) => (
-      <tr key={contributor.name}>
+      <tr key={contributor.name} className={classes.leaderboardRowContainer}>
         <td
-          className={
-            index >= 1 ? classes.leaderBoardTableData : classes.leaderBoardBorderBottomStyle
-          }
+          className={cn(
+            index >= 1 ? classes.leaderBoardTableData : classes.leaderBoardBorderBottomStyle,
+            classes.index
+          )}
         >
           {index}
         </td>
         <td
-          className={
+          className={cn(
             index >= 1
               ? `${classes.leaderBoardTableData} ${classes.leaderBoardContributorNameTd}`
-              : `${classes.leaderBoardBorderBottomStyle} ${classes.leaderBoardContributorNameTd}`
-          }
+              : `${classes.leaderBoardBorderBottomStyle} ${classes.leaderBoardContributorNameTd}`,
+            classes.name
+          )}
         >
           {/* <Link to={`/profile/${contributor.developer}`} className={classes.profileLink}> */}
           <div className={classes.profileLink}>
@@ -36,9 +44,10 @@ export default function Leaderboard() {
           </div>
         </td>
         <td
-          className={
-            index >= 1 ? classes.leaderBoardTableData : classes.leaderBoardBorderBottomStyle
-          }
+          className={cn(
+            index >= 1 ? classes.leaderBoardTableData : classes.leaderBoardBorderBottomStyle,
+            classes.contributions
+          )}
         >
           <div className={classes.contributionTableCell}>
             {contributor.contributions.js ? (
@@ -65,7 +74,7 @@ export default function Leaderboard() {
                 number={contributor.contributions.angular.length}
               />
             ) : null}
-            <div>
+            <div className={classes.totalContributions}>
               <div>Total</div>
               <div>{contributor.numberOfContributions}</div>
             </div>
