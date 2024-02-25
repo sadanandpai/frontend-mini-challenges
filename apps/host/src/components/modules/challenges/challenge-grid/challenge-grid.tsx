@@ -1,5 +1,5 @@
 import { contributors } from '@fmc/data/content';
-import { getSortedChallengesByDifficulty, filterChallengesByTitle } from '@fmc/data/utils';
+import { getSortedChallengesByDifficulty, filterChallengeByKey } from '@fmc/data/utils';
 import styles from './challenge-grid.module.scss';
 import { AvatarGroup } from '../avatar/avatar';
 import { IChallenge } from '@fmc/data/types';
@@ -19,7 +19,7 @@ function ChallengeGrid({ challenges, linkPrefix, links }: Props) {
 
   useEffect(() => {
     if (searchInput) {
-      setSortedChallenges(() => filterChallengesByTitle(challenges, searchInput))
+      setSortedChallenges(() => filterChallengeByKey([...challenges.values()], "title", searchInput))
     } else {
       setSortedChallenges(() => getSortedChallengesByDifficulty(challenges));
     }

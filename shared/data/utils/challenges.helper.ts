@@ -12,8 +12,35 @@ export function getSortedChallengesByDifficulty(challenges: Map<string, IChallen
   return sortedChallengesByDifficulty;
 }
 
-//TODO: make filter function that takes key to search in & value to search for, and boolean for case-insensitive
-export function filterChallengesByTitle(challenges: Map<string, IChallenge>, value: string) {
-  const sortedChallengesByTitle = [...challenges.values()];
-  return sortedChallengesByTitle.filter(challenge => challenge.title.toLowerCase().includes(value.toLowerCase()));
+
+export function filterChallengeByKey<T extends keyof IChallenge, K extends IChallenge[T]>(
+  challenges: IChallenge[],
+  key: T,
+  value: K,
+  caseInsensitive: boolean = true
+): IChallenge[] {
+  return challenges.filter(item => {
+    const itemValue = item[key];
+    // Special handling for tags & contributors
+    if ((key === "tags" || key === "contributors") && Array.isArray(itemValue)) {
+      const tags: string[] = itemValue;
+      if (Array.isArray(value)) {
+        return (value as string[]).some(val => {
+          const searchValue = caseInsensitive ? val.toLowerCase() : val;
+          return tags.some(tag => caseInsensitive ? tag.toLowerCase().includes(searchValue) : tag.includes(val));
+        });
+      }
+    }
+
+    // Handling for strings with case insensitivity
+    else if (typeof itemValue === 'string' && typeof value === 'string') {
+      if (caseInsensitive) {
+        return itemValue.toLowerCase().includes((value as unknown as string).toLowerCase());
+      }
+      return itemValue.includes(value as unknown as string);
+    }
+
+    // Default equality check for other types
+    return itemValue === value;
+  });
 }
