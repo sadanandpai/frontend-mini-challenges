@@ -1,1 +1,0 @@
-import"./modulepreload-polyfill-9p4a8sJU.js";import"./header-HBTtqZHW.js";import"./ng-challenges-t-CmjP73.js";import"./navbar-QucIAXD2.js";const e=document.querySelector(".burger-menu"),t=document.querySelector(".nav-links");e.addEventListener("click",()=>{t.classList.toggle("active")});
