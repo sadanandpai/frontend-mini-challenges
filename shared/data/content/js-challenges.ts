@@ -20,7 +20,6 @@ export const jsChallenges: Map<string, IChallenge> = new Map([
       difficulty: EDifficulty.Easy,
       developer: 'itsayopapi',
       tags: [],
-      isNew: true,
     },
   ],
   [
@@ -139,7 +138,6 @@ export const jsChallenges: Map<string, IChallenge> = new Map([
       difficulty: EDifficulty.Easy,
       developer: 'shivam200446',
       tags: [],
-      isNew: true,
     },
   ],
   [
@@ -228,7 +226,6 @@ export const jsChallenges: Map<string, IChallenge> = new Map([
       developer: 'Sukomal07',
       youtube: 'https://youtu.be/4H2DyrSJeYc',
       tags: [],
-      isNew: true,
     },
   ],
   [
@@ -250,7 +247,6 @@ export const jsChallenges: Map<string, IChallenge> = new Map([
       difficulty: EDifficulty.Easy,
       developer: 'AbhineshJha',
       tags: [],
-      isNew: true,
     },
   ],
   [
@@ -261,7 +257,6 @@ export const jsChallenges: Map<string, IChallenge> = new Map([
       difficulty: EDifficulty.Easy,
       developer: 'CrypticRevenger',
       tags: [],
-      isNew: true,
     },
   ],
   [
@@ -283,7 +278,6 @@ export const jsChallenges: Map<string, IChallenge> = new Map([
       difficulty: EDifficulty.Medium,
       developer: 'sujitmahapatra',
       tags: ['finance', 'web-app', 'javascript', 'css'],
-      isNew: true,
     },
   ],
   [
@@ -592,7 +586,6 @@ export const jsChallenges: Map<string, IChallenge> = new Map([
       difficulty: EDifficulty.Medium,
       developer: 'Kei-K23',
       tags: [],
-      isNew: true,
     },
   ],
   [

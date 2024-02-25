@@ -1,15 +1,18 @@
-<h2>
-  {{ counter }}
-</h2>
+<div class="text-center">
+  <h2>
+    {{ counter }}
+  </h2>
 
-<section>
-  <button (click)="decrement()">-</button>
-  <button (click)="increment()">+</button>
+  <section>
+    <div class="actions">
+      <button (click)="decrement()">-</button>
+      <button (click)="increment()">+</button>
+    </div>
+    <p>
+      Increment / Decrement by
+      <input type="number" type="number" [formControl]="inputControl" />
+    </p>
 
-  <p>
-    Increment / Decrement by
-    <input type="number" type="number" [formControl]="inputControl" />
-  </p>
-
-  <button (click)="reset()">Reset</button>
-</section>
+    <button (click)="reset()">Reset</button>
+  </section>
+</div>

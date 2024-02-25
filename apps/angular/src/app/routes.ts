@@ -1,23 +1,16 @@
 import { Routes } from '@angular/router';
 
 import { ChallengeContainerComponent } from './components/challenge-container/challenge-container.component';
-import { HomeComponent } from './components/home/home.component';
 
 export const routes: Routes = [
   {
     path: '',
-    component: HomeComponent,
-  },
-  {
-    path: 'challenges',
     component: ChallengeContainerComponent,
     children: [
       {
         path: 'counter',
         loadComponent: () =>
-          import('./challenges/counter/counter.component').then(
-            (m) => m.CounterComponent
-          ),
+          import('./challenges/counter/counter.component').then((m) => m.CounterComponent),
         data: { title: 'counter' },
       },
       {
@@ -31,17 +24,15 @@ export const routes: Routes = [
       {
         path: 'stack',
         loadComponent: () =>
-          import('./challenges/stack/stack.component').then(
-            (m) => m.StackComponent
-          ),
+          import('./challenges/stack/stack.component').then((m) => m.StackComponent),
         data: { title: 'Stack' },
       },
       {
         path: 'tic-tac-toe',
         loadComponent: () =>
-          import(
-            './challenges/tic-tac-toe/tic-tac-toe/tic-tac-toe.component'
-          ).then((m) => m.TicTacToeComponent),
+          import('./challenges/tic-tac-toe/tic-tac-toe/tic-tac-toe.component').then(
+            (m) => m.TicTacToeComponent
+          ),
         data: { title: 'Tic tac toe' },
       },
       {
@@ -56,9 +47,7 @@ export const routes: Routes = [
       {
         path: 'word-count',
         loadComponent: () =>
-          import('./challenges/word-count/word-count.component').then(
-            (m) => m.WordCountComponent
-          ),
+          import('./challenges/word-count/word-count.component').then((m) => m.WordCountComponent),
         data: { title: 'Word count' },
       },
     ],

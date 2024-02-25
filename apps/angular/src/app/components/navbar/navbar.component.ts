@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, isDevMode } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 @Component({
@@ -10,4 +10,12 @@ import { RouterLink } from '@angular/router';
 })
 export class NavbarComponent {
   @Input() title = 'Challenge';
+
+  public homeURL = isDevMode()
+    ? 'http://localhost:6010/frontend-mini-challenges/'
+    : '/frontend-mini-challenges/';
+
+  public backURL = isDevMode()
+    ? 'http://localhost:6010/frontend-mini-challenges/#/angular/'
+    : '/frontend-mini-challenges/#/angular/';
 }

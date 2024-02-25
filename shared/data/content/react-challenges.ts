@@ -19,7 +19,6 @@ export const reactChallenges = new Map<string, IChallenge>([
       difficulty: EDifficulty.Easy,
       developer: 'Sumitwarrior7',
       tags: [],
-      isNew: true,
     },
   ],
   [
@@ -103,7 +102,6 @@ export const reactChallenges = new Map<string, IChallenge>([
       difficulty: EDifficulty.Easy,
       developer: 'Sumitwarrior7',
       tags: [],
-      isNew: true,
     },
   ],
   [
@@ -146,7 +144,6 @@ export const reactChallenges = new Map<string, IChallenge>([
       difficulty: EDifficulty.Easy,
       developer: 'kumaratul60',
       tags: [],
-      isNew: true,
     },
   ],
   [
@@ -199,7 +196,6 @@ export const reactChallenges = new Map<string, IChallenge>([
       difficulty: EDifficulty.Easy,
       developer: 'arpansaha13',
       tags: [],
-      isNew: true,
     },
   ],
   [
@@ -210,7 +206,6 @@ export const reactChallenges = new Map<string, IChallenge>([
       difficulty: EDifficulty.Easy,
       developer: 'rashidtvmr',
       tags: [],
-      isNew: true,
     },
   ],
   [
@@ -252,8 +247,8 @@ export const reactChallenges = new Map<string, IChallenge>([
       difficulty: EDifficulty.Easy,
       developer: 'codechitra',
       tags: [],
-      isNew: true
-    }
+      isNew: true,
+    },
   ],
   [
     'calculator',
@@ -379,7 +374,6 @@ export const reactChallenges = new Map<string, IChallenge>([
       difficulty: EDifficulty.Medium,
       developer: 'insharahAyyubi',
       tags: [],
-      isNew: true,
     },
   ],
   [
@@ -551,6 +545,7 @@ export const reactChallenges = new Map<string, IChallenge>([
       difficulty: EDifficulty.Hard,
       developer: 'sadanandpai',
       tags: [],
+      isNew: true,
     },
   ],
   [

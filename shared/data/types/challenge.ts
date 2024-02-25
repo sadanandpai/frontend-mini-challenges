@@ -8,10 +8,10 @@ export interface IChallenge {
   title: string;
   link: string;
   difficulty: EDifficulty;
-  developer?: string;
+  developer: string;
   contributors?: string[];
   youtube?: string;
   tags?: string[];
   isNew?: boolean;
-  longLink?:string;
+  longLink?: string;
 }

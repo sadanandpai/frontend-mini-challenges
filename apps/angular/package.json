@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "dev": "ng serve --port 6014",
+    "dev": "ng serve --port 6014 --serve-path=/frontend-mini-challenges/angular/",
     "build": "ng build --c=production --base-href=/frontend-mini-challenges/angular/",
     "build-baseless": "ng build --c=production --base-href=/angular/",
     "watch": "ng build --watch --configuration development",

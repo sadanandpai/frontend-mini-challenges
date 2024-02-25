@@ -8,7 +8,6 @@ import { NavbarComponent } from '../navbar/navbar.component';
   standalone: true,
   selector: 'app-challenge-container',
   templateUrl: './challenge-container.component.html',
-  styleUrls: ['./challenge-container.component.scss'],
   imports: [NavbarComponent, RouterOutlet],
 })
 export class ChallengeContainerComponent {

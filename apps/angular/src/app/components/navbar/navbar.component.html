@@ -1,13 +1,23 @@
-<nav class="nav">
-  <a href="/frontend-mini-challenges/#/angular/">Home</a>
+<nav class="navbar">
+  <div class="left">
+    <a [href]="backURL" class="back"> &lt; </a>
+    <a class="logo" [href]="homeURL">
+      <img
+        src="https://github.com/sadanandpai/frontend-mini-challenges/raw/main/shared/assets/logo.png"
+        alt="logo"
+      />
+    </a>
+  </div>
 
   <h1>{{ title }}</h1>
 
-  <a href="https://github.com/sadanandpai/frontend-mini-challenges/">
-    <img
-      class="logo"
-      src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
-      alt="github repo"
-    />
-  </a>
+  <div class="right">
+    <a href="https://github.com/sadanandpai/frontend-mini-challenges/" target="blank">
+      <img
+        src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
+        alt="github repo"
+        class="github"
+      />
+    </a>
+  </div>
 </nav>
