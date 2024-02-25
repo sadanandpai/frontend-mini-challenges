@@ -8,7 +8,7 @@
 <script setup lang="ts">
 import { ref, watch } from 'vue';
 import { RouterView, useRoute } from 'vue-router';
-import ChallengeNavbar from '@/components/challenge/Navbar.vue'
+import ChallengeNavbar from '@/components/Navbar.vue'
 import { vueChallenges } from '@fmc/data/content';
 
 const route = useRoute()

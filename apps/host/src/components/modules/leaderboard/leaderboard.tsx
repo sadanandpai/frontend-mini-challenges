@@ -1,88 +1,77 @@
 import { generateLeaderboardData } from '@/helpers/generate-leaderboard';
 import classes from './leaderboard.module.scss';
-import { ReactNode } from 'react';
 import assets from '@fmc/assets/images';
+
+const techStackImgs = {
+  js: assets.jsImg,
+  react: assets.reactImg,
+  vue: assets.vueImg,
+  angular: assets.angularImg,
+};
 
 function cn(...classnames: string[]) {
   return classnames.join(' ');
 }
+const leaderboardData = generateLeaderboardData();
 
 export default function Leaderboard() {
-  const data = generateLeaderboardData();
-  const ContributionDiv = ({ title, number }: { title: string | ReactNode; number: number }) => (
-    <div className={classes.techStackDiv}>
-      <div className={classes.techStackDivWrapper}>
-        {title}
-        <div>{number}</div>
-      </div>
-    </div>
-  );
+  const leaderBoardTableBody = Array.from(leaderboardData.values()).map((contributor, index) => (
+    <tr key={contributor.name} className={classes.leaderboardRowContainer}>
+      <td
+        className={cn(
+          index >= 1 ? classes.leaderBoardTableData : classes.leaderBoardBorderBottomStyle,
+          classes.index
+        )}
+      >
+        {index}
+      </td>
+      <td
+        className={cn(
+          index >= 1
+            ? `${classes.leaderBoardTableData} ${classes.leaderBoardContributorNameTd}`
+            : `${classes.leaderBoardBorderBottomStyle} ${classes.leaderBoardContributorNameTd}`,
+          classes.name
+        )}
+      >
+        {/* <Link to={`/profile/${contributor.developer}`} className={classes.profileLink}> */}
+        <div className={classes.profileLink}>
+          <img className={classes.leaderBoardContributorImg} src={contributor.pic} alt={''} />
+          <span className={classes.leaderBoardContributorName}>{contributor.name}</span>
+        </div>
+      </td>
+      <td
+        className={cn(
+          index >= 1 ? classes.leaderBoardTableData : classes.leaderBoardBorderBottomStyle,
+          classes.contributions
+        )}
+      >
+        <div className={classes.contributionTableCell}>
+          {['js', 'react', 'vue', 'angular'].map((techStack) => {
+            const contributions = contributor.contributions[techStack];
+            const img = techStackImgs[techStack];
 
-  const GetLeaderBoardTableBody = () => {
-    return Array.from(data.values()).map((contributor, index) => (
-      <tr key={contributor.name} className={classes.leaderboardRowContainer}>
-        <td
-          className={cn(
-            index >= 1 ? classes.leaderBoardTableData : classes.leaderBoardBorderBottomStyle,
-            classes.index
-          )}
-        >
-          {index}
-        </td>
-        <td
-          className={cn(
-            index >= 1
-              ? `${classes.leaderBoardTableData} ${classes.leaderBoardContributorNameTd}`
-              : `${classes.leaderBoardBorderBottomStyle} ${classes.leaderBoardContributorNameTd}`,
-            classes.name
-          )}
-        >
-          {/* <Link to={`/profile/${contributor.developer}`} className={classes.profileLink}> */}
-          <div className={classes.profileLink}>
-            <img className={classes.leaderBoardContributorImg} src={contributor.pic} alt={''} />
-            <span className={classes.leaderBoardContributorName}>{contributor.name}</span>
+            if (!contributions) {
+              return null;
+            }
+
+            return (
+              <div className={classes.techStackDiv} key={techStack}>
+                <div className={classes.techStackDivWrapper}>
+                  <img src={img} className={classes.techStackImg} />
+                  <div>{contributions.length}</div>
+                </div>
+              </div>
+            );
+          })}
+
+          <div className={classes.totalContributions}>
+            <div>Total</div>
+            <div>{contributor.numberOfContributions}</div>
           </div>
-        </td>
-        <td
-          className={cn(
-            index >= 1 ? classes.leaderBoardTableData : classes.leaderBoardBorderBottomStyle,
-            classes.contributions
-          )}
-        >
-          <div className={classes.contributionTableCell}>
-            {contributor.contributions.js ? (
-              <ContributionDiv
-                title={<img src={assets.jsImg} className={classes.techStackImg} />}
-                number={contributor.contributions.js.length}
-              />
-            ) : null}
-            {contributor.contributions.react ? (
-              <ContributionDiv
-                title={<img src={assets.reactImg} className={classes.techStackImg} />}
-                number={contributor.contributions.react.length}
-              />
-            ) : null}
-            {contributor.contributions.vue ? (
-              <ContributionDiv
-                title={<img src={assets.vueImg} className={classes.techStackImg} />}
-                number={contributor.contributions.vue.length}
-              />
-            ) : null}
-            {contributor.contributions.angular ? (
-              <ContributionDiv
-                title={<img src={assets.angularImg} className={classes.techStackImg} />}
-                number={contributor.contributions.angular.length}
-              />
-            ) : null}
-            <div className={classes.totalContributions}>
-              <div>Total</div>
-              <div>{contributor.numberOfContributions}</div>
-            </div>
-          </div>
-        </td>
-      </tr>
-    ));
-  };
+        </div>
+      </td>
+    </tr>
+  ));
 
   return (
     <div className="container">
@@ -101,7 +90,7 @@ export default function Leaderboard() {
               <td>Contributions</td>
             </tr>
           </thead>
-          <tbody>{GetLeaderBoardTableBody()}</tbody>
+          <tbody>{leaderBoardTableBody}</tbody>
         </table>
       </div>
     </div>
