@@ -13,7 +13,7 @@ export function getSortedChallengesByDifficulty(challenges: Map<string, IChallen
 }
 
 //TODO: make filter function that takes key to search in & value to search for, and boolean for case-insensitive
-export function getSortedChallengesByTitle(challenges: Map<string, IChallenge>, value: string) {
+export function filterChallengesByTitle(challenges: Map<string, IChallenge>, value: string) {
   const sortedChallengesByTitle = [...challenges.values()];
   return sortedChallengesByTitle.filter(challenge => challenge.title.toLowerCase().includes(value.toLowerCase()));
 }
