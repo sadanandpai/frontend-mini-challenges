@@ -1,1 +1,1 @@
-export { getSortedChallengesByDifficulty, getSortedChallengesByTitle } from './challenges.helper';
+export { getSortedChallengesByDifficulty, filterChallengesByTitle } from './challenges.helper';
