@@ -78,7 +78,7 @@ table.leaderboardTable {
 
 .contributionTableCell {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
 
   .techStackDiv {
     font-size: 14px;
@@ -271,7 +271,7 @@ td.contributions {
     height: 30px;
   }
   .contributionTableCell {
-    max-width: 200px;
+    max-width: 250px;
     margin-left: auto;
   }
 }
