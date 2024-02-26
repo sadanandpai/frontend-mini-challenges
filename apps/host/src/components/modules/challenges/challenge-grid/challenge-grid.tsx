@@ -65,16 +65,20 @@ function ChallengeGrid({ challenges, linkPrefix, links }: Props) {
           ))}
         </div>
       </div>
-      <div className={styles.challengeGrid} ref={parent}>
-        {sortedChallenges.map((challenge) => (
-          <Challenge
-            key={challenge.title}
-            link={linkPrefix + challenge.link}
-            contributor={contributors.get(challenge.developer)}
-            challenge={challenge}
-          />
-        ))}
-      </div>
+      {sortedChallenges.length ? (
+        <div className={styles.challengeGrid} ref={parent}>
+          {sortedChallenges.map((challenge) => (
+            <Challenge
+              key={challenge.title}
+              link={linkPrefix + challenge.link}
+              contributor={contributors.get(challenge.developer)}
+              challenge={challenge}
+            />
+          ))}
+        </div>
+      ) : (
+        <div className={styles.emptyMessage}>No challenges found...  <div>maybe try adding one <a href="https://github.com/sadanandpai/frontend-mini-challenges/blob/main/CONTRIBUTING.md#challenge-contribution" target="_blank" rel="noopener noreferrer">here </a>🤓</div></div>
+      )}
     </div>
   );
 }

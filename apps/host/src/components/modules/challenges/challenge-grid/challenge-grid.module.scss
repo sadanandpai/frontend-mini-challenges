@@ -60,6 +60,18 @@
   }
 }
 
+.emptyMessage {
+  margin: 5rem auto;
+  font-size: 18px;
+  font-weight: 500;
+
+  > div {
+    margin-top: 0.5rem;
+    font-size: 14px;
+    font-weight: 400;
+  }
+}
+
 .challengeGrid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
