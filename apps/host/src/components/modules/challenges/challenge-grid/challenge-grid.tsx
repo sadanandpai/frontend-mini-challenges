@@ -4,7 +4,7 @@ import { IChallenge } from '@fmc/data/types';
 import { filterChallengeByKey, getSortedChallengesByDifficulty } from '@fmc/data/utils';
 import { useAutoAnimate } from '@formkit/auto-animate/react';
 import { useEffect, useState } from 'react';
-import Challenge from './challeng';
+import Challenge from './challenge';
 import ChallengeFilters from './challenge-filter'; 
 import styles from './challenge-grid.module.scss';
 
