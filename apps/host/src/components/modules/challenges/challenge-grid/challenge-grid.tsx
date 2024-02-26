@@ -17,19 +17,24 @@ interface Props {
 function ChallengeGrid({ challenges, linkPrefix, links }: Props) {
   const [parent] = useAutoAnimate();
   const [searchInput, setSearchInput] = useState<string>('');
+  const [newChallenges, setNewChallenges] = useState<boolean>(false);
   const [sortedChallenges, setSortedChallenges] = useState(() =>
     getSortedChallengesByDifficulty(challenges)
   );
 
   useEffect(() => {
+    let filteredChallenges: IChallenge[] = [];
     if (searchInput) {
-      setSortedChallenges(() =>
-        filterChallengeByKey([...challenges.values()], 'title', searchInput)
-      );
+      const filteredByTitle = filterChallengeByKey([...challenges.values()], 'title', searchInput);
+      filteredChallenges = newChallenges ? filterChallengeByKey([...filteredByTitle.values()], "isNew", true) : filteredByTitle;
+    } else if (newChallenges) {
+      filteredChallenges = filterChallengeByKey([...challenges.values()], "isNew", true);
     } else {
-      setSortedChallenges(() => getSortedChallengesByDifficulty(challenges));
+      filteredChallenges = getSortedChallengesByDifficulty(challenges);
     }
-  }, [challenges, searchInput]);
+
+    setSortedChallenges(filteredChallenges);
+  }, [challenges, searchInput, newChallenges]);
 
   return (
     <div className={styles.container}>
@@ -52,6 +57,10 @@ function ChallengeGrid({ challenges, linkPrefix, links }: Props) {
           />
         </div>
         <div className={styles.filterByTechWrapper}>
+          <label htmlFor="newChallenges" className={styles.newCheckboxLabel}>
+            <input type="checkbox" name="newChallenges" id="newChallenges" className={styles.newCheckboxInput} checked={newChallenges} onChange={e => setNewChallenges(e.target.checked)} />
+            New Challenges
+          </label>
           {links.map((link) => (
             <Link to={`/${link.tech}`} key={link.tech}>
               <img

@@ -33,6 +33,22 @@
   }
 }
 
+.newCheckboxLabel {
+  font-size: 14px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin-right: 1rem;
+}
+
+.newCheckboxInput {
+  border: 2px solid #ccc;
+  accent-color: var(--text-link);
+  width: 15px;
+  height: 15px;
+}
+
 .filterByTechWrapper {
   grid-column-end: -1;
   display: flex;
