@@ -1,3 +1,5 @@
+import { OptionType } from '.';
+
 export const enum EDifficulty {
   Easy = 'easy',
   Medium = 'medium',
@@ -14,4 +16,10 @@ export interface IChallenge {
   tags?: string[];
   isNew?: boolean;
   longLink?: string;
+}
+
+export interface IGetChallengesByid {
+  challenges: IChallenge[];
+  title: string;
+  contributors: OptionType[];
 }
