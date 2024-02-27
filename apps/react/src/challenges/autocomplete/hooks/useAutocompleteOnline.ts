@@ -1,12 +1,6 @@
-import {
-  ChangeEvent,
-  KeyboardEvent,
-  useCallback,
-  useEffect,
-  useState,
-} from "react";
+import { ChangeEvent, KeyboardEvent, useCallback, useEffect, useState } from 'react';
 
-import { debounce } from "../debounce";
+import { debounce } from '../debounce';
 
 interface AutocompleteResult {
   login: string;
@@ -14,13 +8,13 @@ interface AutocompleteResult {
 const suggestionLength = 5;
 
 interface MakeApiRequestReturnType {
-  items: string[],
-  errorMsgFromApi: string
-  timeDelta: number
+  items: string[];
+  errorMsgFromApi: string;
+  timeDelta: number;
 }
 
 async function makeAPIRequest(text: string): Promise<MakeApiRequestReturnType> {
-  const result = {items: [], errorMsgFromApi: "", timeDelta: 0}
+  const result = { items: [], errorMsgFromApi: '', timeDelta: 0 };
 
   try {
     const response = await fetch(
@@ -39,73 +33,76 @@ async function makeAPIRequest(text: string): Promise<MakeApiRequestReturnType> {
 
         // Following line of code will calculate the number of seconds between the time at which the rate-limit was
         // breached and the time at which we can start making requests again.
-        result.timeDelta = Math.ceil(timeValue - (Date.now() / 1000));
+        result.timeDelta = Math.ceil(timeValue - Date.now() / 1000);
       } else {
         // Set timeDelta to 60 seconds if the "x-ratelimit-reset" header is not present or changes in the future
-        result.timeDelta = 60
+        result.timeDelta = 60;
       }
     } else {
       const data = await response.json();
       result.items = data.items.map((item: AutocompleteResult) => item.login);
     }
 
-    return result
+    return result;
   } catch (e) {
-    result.errorMsgFromApi = "Error occurred while fetching suggestions"
+    result.errorMsgFromApi = 'Error occurred while fetching suggestions';
     return result;
   }
 }
 
 export function useAutocompleteOnline() {
-  const [userText, setUserText] = useState("");
+  const [userText, setUserText] = useState('');
   const [suggestions, setSuggestions] = useState<string[]>([]);
   const [suggestionFocus, setSuggestionFocus] = useState<number | null>(null);
 
   const [isLoading, setIsLoading] = useState(false);
-  const [retryAfter, setRetryAfter] = useState(0)
+  const [retryAfter, setRetryAfter] = useState(0);
 
-  const [errorMessage, setErrorMessage] = useState("");
+  const [errorMessage, setErrorMessage] = useState('');
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const debouncedMakeAPIRequest = useCallback(
-    debounce(async (text: string) => {
+    debounce(async (text) => {
       setIsLoading(true);
       try {
-        const result = await makeAPIRequest(text);
+        const result = await makeAPIRequest(text as string);
 
-        setRetryAfter(result.timeDelta)
+        setRetryAfter(result.timeDelta);
         if (!result.errorMsgFromApi) {
           if (result.items.length > 0) {
-            setSuggestions(result.items)
-            setErrorMessage("")
+            setSuggestions(result.items);
+            setErrorMessage('');
           } else {
-            setSuggestions([])
-            setErrorMessage("No results found")
+            setSuggestions([]);
+            setErrorMessage('No results found');
           }
         } else {
-          setSuggestions([])
-          setErrorMessage(result.errorMsgFromApi)
+          setSuggestions([]);
+          setErrorMessage(result.errorMsgFromApi);
         }
       } catch (error) {
         setSuggestions([]);
-        setErrorMessage("Error occurred while fetching suggestions");
+        setErrorMessage('Error occurred while fetching suggestions');
       }
       setIsLoading(false);
     }, 300),
     [makeAPIRequest]
   );
+
   const resetSuggestions = () => {
     setSuggestions([]);
     setSuggestionFocus(null);
-    setErrorMessage("");
+    setErrorMessage('');
   };
+
   const handleKeyDown = (e: KeyboardEvent<HTMLInputElement>) => {
-    if (e.key === "Enter" && suggestionFocus !== null) {
+    if (e.key === 'Enter' && suggestionFocus !== null) {
       const selectedSuggestion = suggestions[suggestionFocus];
       setUserText(selectedSuggestion);
       resetSuggestions();
     }
 
-    if (e.key === "ArrowDown") {
+    if (e.key === 'ArrowDown') {
       e.preventDefault();
       setSuggestionFocus((prevFocus) => {
         if (prevFocus === null || prevFocus === suggestions.length - 1) {
@@ -116,7 +113,7 @@ export function useAutocompleteOnline() {
       });
     }
 
-    if (e.key === "ArrowUp") {
+    if (e.key === 'ArrowUp') {
       e.preventDefault();
       setSuggestionFocus((prevFocus) => {
         if (prevFocus === null || prevFocus === 0) {
@@ -127,6 +124,7 @@ export function useAutocompleteOnline() {
       });
     }
   };
+
   const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
     const text = event.target.value;
     setUserText(text);
@@ -154,12 +152,12 @@ export function useAutocompleteOnline() {
   useEffect(() => {
     const timer = setTimeout(() => {
       if (retryAfter > 0) {
-        setRetryAfter((prevVal) => prevVal - 1)
+        setRetryAfter((prevVal) => prevVal - 1);
       }
-    }, 1000)
+    }, 1000);
 
-    return () => clearTimeout(timer)
-  }, [retryAfter])
+    return () => clearTimeout(timer);
+  }, [retryAfter]);
 
   const handleSuggestionFocus = (index: number | null) => {
     setSuggestionFocus(index);

@@ -1,7 +1,7 @@
 import styles from '../styles.module.scss';
 
-function TemplateSelector({ template, setTemplate }: any) {
-  const onchange = (e: any) => {
+function TemplateSelector({ template, setTemplate }) {
+  const onchange = (e) => {
     setTemplate(e.target.value);
   };
 

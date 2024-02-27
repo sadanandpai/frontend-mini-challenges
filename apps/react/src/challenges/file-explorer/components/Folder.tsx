@@ -1,8 +1,8 @@
-import { MouseEvent, useState } from "react";
-import { NodeIntf, NodeOrNull } from "../utils/node.interface";
+import { MouseEvent, useState } from 'react';
+import { NodeIntf, NodeOrNull } from '../utils/node.interface';
 
-import Input from "./Input";
-import styles from "../styles.module.css";
+import Input from './Input';
+import styles from '../styles.module.css';
 
 interface Props {
   expanded: boolean;
@@ -26,9 +26,7 @@ function Folder({
   validateNode,
 }: Props) {
   const [isEditable, setIsEditable] = useState(false);
-
   const validateNodeOnUpdate = (name: string) => validateNode(parent, node, name);
-
   const onComplete = (value: string) => {
     if (parent) {
       if (validateNodeOnUpdate(value)) onNodeUpdate(parent, node, value);
@@ -39,8 +37,12 @@ function Folder({
   if (isEditable) {
     return (
       <li className={`${styles.list} ${styles.editList}`}>
-        {expanded ? "📂" : "📁"}&nbsp;
-        <Input defaultValue={node?.name} onComplete={onComplete} validateNode={validateNodeOnUpdate} />
+        {expanded ? '📂' : '📁'}&nbsp;
+        <Input
+          defaultValue={node?.name}
+          onComplete={onComplete}
+          validateNode={validateNodeOnUpdate}
+        />
       </li>
     );
   }
@@ -48,7 +50,7 @@ function Folder({
   return (
     <li className={styles.list} data-root={parent === null}>
       <button onClick={toggleExpand}>
-        {expanded ? "📂" : "📁"} {node?.name}
+        {expanded ? '📂' : '📁'} {node?.name}
       </button>
 
       <div className={styles.controls}>
@@ -61,11 +63,7 @@ function Folder({
         <button className="new-folder" onClick={() => onNew(true)}>
           🗂
         </button>
-        <button
-          className="delete"
-          // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-          onClick={() => onNodeDeletion(parent!, node)}
-        >
+        <button className="delete" onClick={() => onNodeDeletion(parent!, node)}>
           🗑️
         </button>
       </div>

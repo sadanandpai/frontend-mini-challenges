@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable no-prototype-builtins */
 class Trie {
   trie: { [key: string]: any };
@@ -39,7 +40,7 @@ class Trie {
   getWordsByDFS(
     trie: { [key: string]: any },
     count = Infinity,
-    text = "",
+    text = '',
     result: string[] = []
   ): string[] {
     if (trie.end) {

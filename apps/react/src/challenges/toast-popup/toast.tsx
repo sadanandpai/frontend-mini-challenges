@@ -1,7 +1,6 @@
-
-import { useToast } from './hooks/useToast'
+import { useToast } from './hooks/useToast';
 import styles from './toast.module.scss';
-import {ToastType, VerticalAlignment, HorizontalAlignment } from './types';
+import { ToastType, VerticalAlignment, HorizontalAlignment } from './types';
 import { ToastItem } from './toastItem';
 
 const Toast = () => {
@@ -18,25 +17,39 @@ const Toast = () => {
     setMessage,
     setDuration,
     showToast,
-    removeToast
+    removeToast,
   } = useToast();
-  const toastClassName = `tc${horizontalPosition}${verticalPosition}`
-  
+  const toastClassName = `tc${horizontalPosition}${verticalPosition}`;
 
   return (
     <div className={styles.main}>
       <form>
-        <select name="position" id="horizontal-position" value={horizontalPosition} onChange={(e) => setHorizontalPosition(e.target.value as HorizontalAlignment)}>
+        <select
+          name="position"
+          id="horizontal-position"
+          value={horizontalPosition}
+          onChange={(e) => setHorizontalPosition(e.target.value as HorizontalAlignment)}
+        >
           <option value={HorizontalAlignment.LEFT}>Left</option>
           <option value={HorizontalAlignment.RIGHT}>Right</option>
         </select>
 
-        <select name="position" id="vertical-position" value={verticalPosition} onChange={(e) => setVerticalPosition(e.target.value as VerticalAlignment)}>
+        <select
+          name="position"
+          id="vertical-position"
+          value={verticalPosition}
+          onChange={(e) => setVerticalPosition(e.target.value as VerticalAlignment)}
+        >
           <option value={VerticalAlignment.TOP}>Top</option>
           <option value={VerticalAlignment.BOTTOM}>Bottom</option>
         </select>
 
-        <select name="type" id="type" value={type} onChange={(e) => setType(e.target.value as ToastType)}>
+        <select
+          name="type"
+          id="type"
+          value={type}
+          onChange={(e) => setType(e.target.value as ToastType)}
+        >
           <option value={ToastType.SUCCESS}>Success</option>
           <option value={ToastType.ERROR}>Error</option>
           <option value={ToastType.WARNING}>Warning</option>
@@ -72,7 +85,7 @@ const Toast = () => {
       {toastMessages.length > 0 && (
         <div className={`${styles.toastContainer} ${styles[toastClassName]}`}>
           {toastMessages.map((msg) => (
-            <ToastItem key={msg.id} {...msg} removeToast={removeToast}/>
+            <ToastItem key={msg.id} {...msg} removeToast={removeToast} />
           ))}
         </div>
       )}

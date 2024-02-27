@@ -14,6 +14,7 @@ export default function Option({ id, text, setOption, isDisabled, isSelected }: 
     const id = target.getAttribute('data-option-id');
     if (!id) return;
     setOption(id);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

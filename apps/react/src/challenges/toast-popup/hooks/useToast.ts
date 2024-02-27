@@ -2,20 +2,23 @@ import { useState, useEffect } from 'react';
 import { ToastMessage, ToastType, VerticalAlignment, HorizontalAlignment } from '../types';
 
 export const useToast = () => {
-  const [horizontalPosition, setHorizontalPosition] = useState<HorizontalAlignment>(HorizontalAlignment.LEFT);
-  const [verticalPosition, setVerticalPosition] = useState<VerticalAlignment>(VerticalAlignment.TOP);
+  const [horizontalPosition, setHorizontalPosition] = useState<HorizontalAlignment>(
+    HorizontalAlignment.LEFT
+  );
+  const [verticalPosition, setVerticalPosition] = useState<VerticalAlignment>(
+    VerticalAlignment.TOP
+  );
   const [type, setType] = useState<ToastType>(ToastType.SUCCESS);
   const [message, setMessage] = useState<string>('This is a toast message!');
   const [duration, setDuration] = useState<number>(5);
   const [toastMessages, setToastMessages] = useState<ToastMessage[]>([]);
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const timerIds: any = [];
-  useEffect(() => {
-    
 
+  const timerIds: NodeJS.Timeout[] = [];
+  useEffect(() => {
     return () => {
       timerIds.forEach((timerId) => clearTimeout(timerId));
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const showToast = () => {

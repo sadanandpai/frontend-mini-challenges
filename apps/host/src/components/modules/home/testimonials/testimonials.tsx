@@ -1,9 +1,9 @@
-import { Navigation, Pagination } from "swiper/modules";
+import { Navigation, Pagination } from 'swiper/modules';
 
-import Testimonial from "./testimonial";
-import { register } from "swiper/element/bundle";
-import styles from "./testimonials.module.scss";
-import { testimonials } from "./testimonialData";
+import Testimonial from './testimonial';
+import { register } from 'swiper/element/bundle';
+import styles from './testimonials.module.scss';
+import { testimonials } from './testimonialData';
 
 register();
 
@@ -27,10 +27,9 @@ function Testimonials() {
         <swiper-slide>
           <article className={styles.testimonial}>
             <h3 className="text-center">
-              If you are benefited from these challenges for interviews or
-              learning, please consider adding your testimonial by submitting
-              the details{" "}
-              <a href="https://forms.gle/2hJGa3foKuPctiWE7" target="_blank">
+              If you are benefited from these challenges for interviews or learning, please consider
+              adding your testimonial by submitting the details{' '}
+              <a href="https://forms.gle/2hJGa3foKuPctiWE7" target="_blank" rel="noreferrer">
                 here
               </a>
             </h3>
