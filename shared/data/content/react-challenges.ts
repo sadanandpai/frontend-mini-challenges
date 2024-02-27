@@ -559,10 +559,10 @@ export const reactChallenges = new Map<string, IChallenge>([
     },
   ],
   [
-    '7-segment-digital-clock',
+    'digital-clock',
     {
-      title: '7 Segment Digital Clock',
-      link: '7-segment-digital-clock',
+      title: 'Digital Clock',
+      link: 'digital-clock',
       difficulty: EDifficulty.Medium,
       developer: 'Syamsai-Polavarapu',
       tags: [],
