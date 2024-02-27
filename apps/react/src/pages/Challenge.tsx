@@ -54,7 +54,7 @@ import Timeline from '@/challenges/timeline/App';
 import WordConnect from '@/challenges/word-connect/App';
 import Stepper from '@/challenges/stepper/App';
 import InlineOptions from '@/challenges/inline-options/App';
-import DigitalClock from '@/challenges/7-segment-digital-clock/App';
+import DigitalClock from '@/challenges/7-segment-digital-clock/DigitalClock';
 
 const reactChallengesMap = {
   'transfer-list': <TransferListApp />,
@@ -110,7 +110,7 @@ const reactChallengesMap = {
   'word-connect': <WordConnect />,
   stepper: <Stepper />,
   'inline-options': <InlineOptions />,
-  '7-segment-digital-clock': <DigitalClock />,
+  'digital-clock': <DigitalClock />,
 };
 
 function Challenge() {
