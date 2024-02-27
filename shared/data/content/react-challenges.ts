@@ -558,4 +558,15 @@ export const reactChallenges = new Map<string, IChallenge>([
       tags: [],
     },
   ],
+  [
+    '7-segment-digital-clock',
+    {
+      title: '7 Segment Digital Clock',
+      link: '7-segment-digital-clock',
+      difficulty: EDifficulty.Medium,
+      developer: 'Syamsai-Polavarapu',
+      tags: [],
+      isNew: true,
+    }
+  ],
 ]);
