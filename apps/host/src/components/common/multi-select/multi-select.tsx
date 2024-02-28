@@ -62,6 +62,8 @@ const CustomSelect: React.FC<Props> = ({
             outline: 'none',
             borderRadius: '5px',
             border: '2px solid #ccc',
+            maxHeight: '200px',
+            overflowY: 'scroll',
           }),
           menuList: (base) => ({
             ...base,
