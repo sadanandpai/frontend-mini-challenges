@@ -17,6 +17,14 @@
   }
 
   .logo {
+    display: flex;
+    align-items: center;
+
+    img {
+      width: var(--icon-container-size);
+      height: var(--icon-container-size);
+    }
+
     span {
       color: var(--text-body);
       text-align: center;
@@ -28,6 +36,7 @@
   .right {
     display: flex;
     gap: 2rem;
+    align-items: center;
   }
 
   .links {
@@ -49,16 +58,14 @@
   }
 
   @media screen and (min-width: 768px) {
-    .navbar {
-      .links {
-        display: flex;
-        gap: 2rem;
-        align-items: center;
-      }
+    .logo > span {
+      font-size: 1.2rem;
+    }
 
-      .logo > span {
-        font-size: 1.2rem;
-      }
+    .links {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
     }
   }
 }
