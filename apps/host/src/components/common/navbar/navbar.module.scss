@@ -1,3 +1,4 @@
+
 .navbar {
   display: flex;
   align-items: center;
@@ -8,19 +9,14 @@
   box-shadow: 0 1px 3px 0 var(--shadow-navbar), 0 1px 2px -1px var(--shadow-navbar);
   transition: all 150ms ease-in-out;
 
-  --icon-container-size: 26px;
-  --github-svg-size: 26px;
-
-  .logo {
+  a {
     display: flex;
     gap: 0.5rem;
     align-items: center;
+    text-decoration: none;
+  }
 
-    img {
-      width: var(--icon-container-size);
-      height: var(--icon-container-size);
-    }
-
+  .logo {
     span {
       color: var(--text-body);
       text-align: center;
@@ -46,27 +42,23 @@
     height: var(--icon-container-size);
     color: var(--text-body);
 
-
     & > svg {
       width: var(--github-svg-size);
       height: var(--github-svg-size);
     }
   }
-}
 
-@media screen and (width >= 768px) {
-  .navbar {
-    --icon-container-size: 40px;
-    --github-svg-size: 30px;
+  @media screen and (min-width: 768px) {
+    .navbar {
+      .links {
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+      }
 
-    .links {
-      display: flex;
-      gap: 2rem;
-      align-items: center;
-    }
-
-    .logo > span {
-      font-size: 1.2rem;
+      .logo > span {
+        font-size: 1.2rem;
+      }
     }
   }
 }
