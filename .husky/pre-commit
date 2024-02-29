@@ -1,0 +1,3 @@
+npm run prettify
+npm run lint
+npm run unit:test
