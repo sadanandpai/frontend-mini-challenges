@@ -24,4 +24,4 @@ jobs:
           npm run build
           npm run copy-to-docs
           git add docs -f
-          git diff --staged --quiet || (git commit -m "build files - github action" && git push)
+          git diff --staged --quiet || (git commit -m "build files - github action" --no-verify && git push)
