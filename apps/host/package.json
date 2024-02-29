@@ -11,6 +11,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fmc/data": "*",
     "@fmc/assets": "*",
     "@fmc/shared-styles": "*",
     "@formkit/auto-animate": "^0.8.1",
