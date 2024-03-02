@@ -30,7 +30,7 @@ export class NavigationBar {
           )}
 
           <a class="logo" href="/frontend-mini-challenges/">
-            <img src="https://github.com/sadanandpai/frontend-mini-challenges/raw/main/shared/assets/logo.png" alt="logo" />
+            <img src="https://github.com/sadanandpai/frontend-mini-challenges/raw/main/shared/assets/core/logo.png" alt="logo" />
             <slot name="logo" />
           </a>
 

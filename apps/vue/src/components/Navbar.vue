@@ -1,11 +1,12 @@
 <template>
   <nav class="navbar">
     <div class="left">
-      <a :href="backURL" class="back">
-        &lt;
-      </a>
+      <a :href="backURL" class="back"> &lt; </a>
       <a class="logo" :href="homeURL">
-        <img src="https://github.com/sadanandpai/frontend-mini-challenges/raw/main/shared/assets/logo.png" alt="logo" />
+        <img
+          src="https://github.com/sadanandpai/frontend-mini-challenges/raw/main/shared/assets/core/logo.png"
+          alt="logo"
+        />
       </a>
     </div>
 
@@ -13,7 +14,11 @@
 
     <div class="right">
       <a href="https://github.com/sadanandpai/frontend-mini-challenges/" target="_blank">
-        <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="github repo" class="github" />
+        <img
+          src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
+          alt="github repo"
+          class="github"
+        />
       </a>
     </div>
   </nav>
@@ -28,8 +33,8 @@ defineProps({
   title: {
     type: String,
     required: true,
-  }
-})
+  },
+});
 </script>
 
 <style scoped lang="scss">
@@ -92,5 +97,4 @@ defineProps({
     }
   }
 }
-
 </style>

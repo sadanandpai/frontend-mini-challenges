@@ -17,7 +17,7 @@ function ChallengeNavbar({ title }: Props) {
         </a>
         <a className={styles.logo} href={homeURL}>
           <img
-            src="https://github.com/sadanandpai/frontend-mini-challenges/raw/main/shared/assets/logo.png"
+            src="https://github.com/sadanandpai/frontend-mini-challenges/raw/main/shared/assets/core/logo.png"
             alt="logo"
           />
         </a>

@@ -1,3 +1,4 @@
+import { coverTransparent } from '@fmc/assets/images';
 import styles from './hero.module.scss';
 import { HashLink } from 'react-router-hash-link';
 
@@ -25,11 +26,7 @@ function Hero() {
       </div>
 
       <figure className={styles.figure}>
-        <img
-          className={styles.heroImage}
-          src="https://github.com/sadanandpai/frontend-mini-challenges/raw/main/shared/assets/cover-transparent.png"
-          alt="brand"
-        />
+        <img className={styles.heroImage} src={coverTransparent} alt="brand" />
         <figcaption>Collection of frontend challenges for learning and interviews</figcaption>
       </figure>
     </main>
