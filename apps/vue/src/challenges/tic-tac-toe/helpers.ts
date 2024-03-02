@@ -5,7 +5,17 @@ export function hasSameItems(items: (string | null)[], value: string | null) {
 function getWinningPositions(
   grid: (string | null)[][],
   isWinner: boolean,
-  { row, col, diagonal, reverseDiagonal }: any
+  {
+    row,
+    col,
+    diagonal,
+    reverseDiagonal,
+  }: {
+    row: number | false;
+    col: number | false;
+    diagonal: boolean;
+    reverseDiagonal: boolean;
+  }
 ) {
   if (!isWinner) {
     return new Set<number>();
