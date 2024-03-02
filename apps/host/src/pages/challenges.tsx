@@ -79,7 +79,7 @@ function Challenges() {
 
       <div className="container text-center">
         <ChallengeGrid
-          challenges={techMap.get(techParam)!.challenges}
+          challenges={[...techMap.get(techParam)!.challenges.values()]}
           linkPrefix={techMap.get(techParam)!.link}
           links={links}
         />

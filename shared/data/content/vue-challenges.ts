@@ -1,6 +1,7 @@
 import { EDifficulty, type IChallenge } from '../types/challenge';
+import { sortChallengesByDifficulty } from '../utils/challenges.helper';
 
-export const vueChallenges = new Map<string, IChallenge>([
+const challenges = new Map<string, IChallenge>([
   [
     'counter',
     {
@@ -132,3 +133,5 @@ export const vueChallenges = new Map<string, IChallenge>([
     },
   ],
 ]);
+
+export const vueChallenges = sortChallengesByDifficulty(challenges);

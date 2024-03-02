@@ -26,7 +26,6 @@ export const leaderBoardTableBody = Array.from(leaderboardData.values()).map(
           classes.name
         )}
       >
-        {/* <Link to={`/profile/${contributor.developer}`} className={classes.profileLink}> */}
         <div className={classes.profileLink}>
           <img className={classes.leaderBoardContributorImg} src={contributor.pic} alt={''} />
           <span className={classes.leaderBoardContributorName}>{contributor.name}</span>
