@@ -23,7 +23,7 @@ export interface LeaderboardEntry {
   developer: string;
 }
 
-function updateContributions(
+export function updateContributions(
   developerContributions: Map<string, DeveloperContributions>,
   challenges: Map<string, IChallenge>,
   tech: string
@@ -52,6 +52,7 @@ export const generateLeaderboardData = (): Map<string, LeaderboardEntry> => {
   ]);
 
   techChallengesMap.forEach((challenges, tech) => {
+    console.log({ challenges, tech });
     updateContributions(developerContributions, challenges, tech);
   });
 
