@@ -93,6 +93,16 @@ const challenges = new Map<string, IChallenge>([
     },
   ],
   [
+    'tic-tac-toe',
+    {
+      title: 'Tic Tac Toe',
+      link: '/tic-tac-toe',
+      difficulty: EDifficulty.Medium,
+      developer: 'sadanandpai',
+      tags: [],
+    },
+  ],
+  [
     'toast-popup',
     {
       title: 'Toast Popup',
