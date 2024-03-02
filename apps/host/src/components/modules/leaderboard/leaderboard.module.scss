@@ -12,10 +12,12 @@ table.leaderboardTable {
   border-collapse: collapse;
   width: 100%;
   font-size: 14px;
+
   thead,
   td {
     border: none;
   }
+
   thead > tr > td:nth-child(2) {
     text-align: left;
     padding-left: 25px;
@@ -34,11 +36,6 @@ table.leaderboardTable {
   border-top-style: hidden;
   border-bottom-style: hidden;
   text-align: center;
-}
-
-.leaderBoardBorderBottomStyle {
-  text-align: center;
-  border-bottom-style: hidden;
 }
 
 .leaderBoardContributorImg,

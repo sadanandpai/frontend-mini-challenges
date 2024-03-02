@@ -1,7 +1,7 @@
 import { useParams } from 'react-router-dom';
 
 import classes from './leaderboard.module.scss';
-import { LeaderboardEntry, generateLeaderboardData } from '@/helpers/generate-leaderboard';
+import { LeaderboardEntry, generateLeaderboardData } from '@/helpers/leaderboard';
 import { IChallenge } from '../../../../../../shared/data/types/challenge';
 
 const ChallengesContainer = ({ challenges }: { challenges: IChallenge[] }) => (
