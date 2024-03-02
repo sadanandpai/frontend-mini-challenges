@@ -1,16 +1,16 @@
 import { generateLeaderboardData } from '@/helpers/leaderboard';
 import classes from './leaderboard.module.scss';
-import assets from '@fmc/assets/images';
+import { jsImg, reactImg, vueImg, angularImg } from '@fmc/assets/images';
 
 function cn(...classnames: string[]) {
   return classnames.join(' ');
 }
 
 const techStackImgs = new Map([
-  ['js', assets.jsImg],
-  ['react', assets.reactImg],
-  ['vue', assets.vueImg],
-  ['angular', assets.angularImg],
+  ['js', jsImg],
+  ['react', reactImg],
+  ['vue', vueImg],
+  ['angular', angularImg],
 ]);
 
 const leaderboardData = generateLeaderboardData();

@@ -1,4 +1,4 @@
-import assets from '@fmc/assets/images';
+import { searchIcon } from '@fmc/assets/images';
 import { contributors } from '@fmc/data/content';
 import { IChallenge, OptionType } from '@fmc/data/types';
 import { useAutoAnimate } from '@formkit/auto-animate/react';
@@ -63,7 +63,7 @@ function ChallengeGrid({ challenges, linkPrefix, links }: Props) {
           />
 
           <img
-            src={assets.searchIconSVG}
+            src={searchIcon}
             alt="search challenges by title"
             width={15}
             height={15}
