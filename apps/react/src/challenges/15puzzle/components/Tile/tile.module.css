@@ -1,0 +1,79 @@
+.tile {
+  aspect-ratio: 1/1;
+}
+
+.tile:not(.empty) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgb(182, 182, 182);
+  margin: 1px;
+  box-shadow: 1px 1px 4px 1px #9fd69f;
+  cursor: pointer;
+  background-color: rgb(243, 247, 250);
+  user-select: none;
+}
+
+.correctTilePoz:not(.moveLeft, .moveRight, .moveUp, .moveDown) {
+  box-shadow: 1px 1px 4px 1px rgb(10, 114, 233) !important;
+}
+
+.moveLeft,
+.moveRight,
+.moveUp,
+.moveDown {
+  animation-duration: 0.3s;
+  animation-timing-function: linear;
+}
+
+.moveLeft {
+  animation-name: move-left;
+}
+
+.moveRight {
+  animation-name: move-right;
+}
+
+.moveUp {
+  animation-name: move-up;
+}
+
+.moveDown {
+  animation-name: move-down;
+}
+
+@keyframes move-left {
+  from {
+    transform: translateX(100%) rotate(0);
+  }
+  to {
+    transform: translateX(0) rotate(-90deg);
+  }
+}
+
+@keyframes move-right {
+  from {
+    transform: translateX(-100%) rotate(0);
+  }
+  to {
+    transform: translateX(0) rotate(90deg);
+  }
+}
+
+@keyframes move-up {
+  from {
+    transform: translateY(100%) rotateX(0);
+  }
+  to {
+    transform: translateY(0) rotateX(-180deg);
+  }
+}
+
+@keyframes move-down {
+  from {
+    transform: translateY(-100%) rotateX(0);
+  }
+  to {
+    transform: translateY(0) rotateX(180deg);
+  }
+}
