@@ -52,7 +52,6 @@ export const generateLeaderboardData = (): Map<string, LeaderboardEntry> => {
   ]);
 
   techChallengesMap.forEach((challenges, tech) => {
-    console.log({ challenges, tech });
     updateContributions(developerContributions, challenges, tech);
   });
 
