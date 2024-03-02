@@ -3,10 +3,7 @@
     <div class="left">
       <a :href="backURL" class="back"> &lt; </a>
       <a class="logo" :href="homeURL">
-        <img
-          src="https://github.com/sadanandpai/frontend-mini-challenges/raw/main/shared/assets/core/logo.png"
-          alt="logo"
-        />
+        <img :src="logo" alt="logo" />
       </a>
     </div>
 
@@ -25,6 +22,7 @@
 </template>
 
 <script setup lang="ts">
+import { logo } from '@fmc/assets/images';
 const { VITE_PATH, VITE_HOST_URL, DEV } = import.meta.env;
 const backURL = DEV ? `${VITE_HOST_URL}${VITE_PATH}/#/vue` : `/${VITE_PATH}/#/vue/`;
 const homeURL = DEV ? `${VITE_HOST_URL}${VITE_PATH}/` : `/${VITE_PATH}/`;
