@@ -6,6 +6,7 @@ import LeaderboardPage from './pages/leaderboard';
 import './index.css';
 import { UserProfile } from './components/modules/leaderboard/userprofile';
 import Challenges from './pages/challenges';
+import { ThemeWrapper } from './components/ThemeWrapper';
 
 const router = createHashRouter([
   {
@@ -28,6 +29,8 @@ const router = createHashRouter([
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <ThemeWrapper>
+      <RouterProvider router={router} />
+    </ThemeWrapper>
   </React.StrictMode>
 );
