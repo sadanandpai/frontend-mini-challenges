@@ -1,4 +1,4 @@
-import { AnimationDirection } from '@/challenges/15puzzle/AnimationDirection.ts';
+import { AnimationDirection } from '@/challenges/15puzzle/utils/models';
 import styles from './tile.module.css';
 
 export default function Tile({

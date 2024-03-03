@@ -1,22 +1,14 @@
-import { AnimationDirection } from '@/challenges/15puzzle/AnimationDirection.ts';
+import { useEffect, useState } from 'react';
+import {
+  Animation,
+  AnimationDirection,
+  Poz,
+  PrevMoves,
+  possibleMoves,
+} from '@/challenges/15puzzle/utils/models';
 import Tile from '@/challenges/15puzzle/components/Tile';
-import { useCallback, useEffect, useState } from 'react';
 import styles from './board.module.css';
-
-interface Poz {
-  row: number;
-  col: number;
-}
-
-interface PrevMoves {
-  moves: Poz[];
-  capacity: number;
-}
-
-interface Animation {
-  element: Poz | null;
-  type: AnimationDirection | '';
-}
+import { generateNewGrid } from '../../utils/helpers';
 
 export default function Board() {
   const [grid, setGrid] = useState<number[][]>([]);
@@ -28,20 +20,7 @@ export default function Board() {
   const addPrevMove = (move: Poz) => {
     const { moves, capacity } = prevMoves;
     if (moves.length === capacity) moves.shift();
-
     moves.push(move);
-  };
-
-  const isSolvable = (grid: number[]) => {
-    let invCount = 0;
-
-    for (let i = 0; i < 15; i++) {
-      for (let j = i + 1; j < 16; j++) {
-        if (grid[j] && grid[i] && grid[i] > grid[j]) invCount++;
-      }
-    }
-
-    return invCount % 2 === 0;
   };
 
   const swap = (from: Poz, to: Poz) => {
@@ -66,28 +45,6 @@ export default function Board() {
   const handleTileMove = (order: Poz, saveMove: boolean = true) => {
     if (animation.element) return;
 
-    const possibleMoves: {
-      direction: AnimationDirection;
-      delta: number[];
-    }[] = [
-      {
-        direction: 'Up',
-        delta: [-1, 0],
-      },
-      {
-        direction: 'Down',
-        delta: [1, 0],
-      },
-      {
-        direction: 'Left',
-        delta: [0, -1],
-      },
-      {
-        direction: 'Right',
-        delta: [0, 1],
-      },
-    ];
-
     possibleMoves.forEach((possibleMove) => {
       const { direction, delta } = possibleMove;
       const newRow = order.row + delta[0];
@@ -108,40 +65,24 @@ export default function Board() {
 
   const handleUndo = () => {
     const { moves } = prevMoves;
-    if (animation.element || moves.length === 0) return;
+    if (animation.element || moves.length === 0) {
+      return;
+    }
+
     const prevMove = moves[moves.length - 1];
-
     handleTileMove(prevMove, false);
-
     setPrevMoves({ ...prevMoves, moves: moves.slice(0, moves.length - 1) });
   };
 
   const handleReset = () => {
-    newGrid();
+    setGrid(generateNewGrid(4, 4));
     setTotalMoves(0);
+    setPrevMoves({ ...prevMoves, moves: [] });
   };
 
-  const newGrid = useCallback(() => {
-    let newGrid: number[][] = [];
-
-    do {
-      const arr = Array.from({ length: 15 }, (_, i) => i + 1);
-      newGrid = Array.from({ length: 4 }, () =>
-        Array.from({ length: 4 }, () => {
-          const i = Math.floor(Math.random() * arr.length);
-          const el = arr[i];
-          arr.splice(i, 1);
-          return el ?? 0;
-        })
-      );
-    } while (isSolvable(newGrid.flat()));
-
-    setGrid(newGrid);
-  }, []);
-
   useEffect(() => {
-    newGrid();
-  }, [newGrid]);
+    setGrid(generateNewGrid(4, 4));
+  }, []);
 
   useEffect(() => {
     const isGridSorted = grid.flat().every((digit, i, arr) => {
