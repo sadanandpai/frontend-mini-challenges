@@ -1,7 +1,7 @@
-import { coverTransparent } from '@fmc/assets/images';
+import { coverTransparent, jsImg, reactImg, vueImg, angularImg } from '@fmc/assets/images';
 import styles from './hero.module.scss';
 import { HashLink } from 'react-router-hash-link';
-import { jsImg, reactImg, vueImg, angularImg } from '@fmc/assets/images';
+// import { jsImg, reactImg, vueImg, angularImg } from '@fmc/assets/images';
 function Hero() {
   const allImg = [
     {
