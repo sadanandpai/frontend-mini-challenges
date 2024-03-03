@@ -1,0 +1,24 @@
+.comment {
+  display: flex;
+  align-items: center;
+  background-color: #f3f4f6;
+  margin-bottom: 0.5rem;
+  border-radius: 1rem;
+  padding: 0 0.5rem;
+}
+
+.comment img {
+  width: 3.125rem;
+  height: 3.125rem;
+  margin-right: 0.8rem;
+}
+
+.comment_details h4 {
+  margin-bottom: -0.7rem;
+}
+
+.comment_replie {
+  margin-left: 1rem;
+  border-left: 1px solid #000;
+  padding-left: 1rem;
+}
