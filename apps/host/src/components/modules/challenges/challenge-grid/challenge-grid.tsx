@@ -1,7 +1,6 @@
-import assets from '@fmc/assets/images';
+import { searchIcon } from '@fmc/assets/images';
 import { contributors } from '@fmc/data/content';
 import { IChallenge, OptionType } from '@fmc/data/types';
-import { getSortedChallengesByDifficulty } from '@fmc/data/utils';
 import { useAutoAnimate } from '@formkit/auto-animate/react';
 import { useEffect, useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
@@ -11,7 +10,7 @@ import CustomSelect from '@/components/common/multi-select/multi-select';
 import { getChallengesByid } from '../../../../../../../shared/data/utils/challenges.helper';
 
 interface Props {
-  challenges: Map<string, IChallenge>;
+  challenges: IChallenge[];
   linkPrefix: string;
   links: { tech: string; imgSrc: string; active: boolean }[];
 }
@@ -19,12 +18,11 @@ interface Props {
 function ChallengeGrid({ challenges, linkPrefix, links }: Props) {
   const [parent] = useAutoAnimate();
   const [searchInput, setSearchInput] = useState<string>('');
-  const [sortedChallenges, setSortedChallenges] = useState(() =>
-    getSortedChallengesByDifficulty(challenges)
-  );
+  const [filteredChallenges, setFilteredChallenges] = useState(challenges);
   const [optionSelected, setOptionSelected] = useState<OptionType[] | []>([]);
+
   useEffect(() => {
-    setSortedChallenges(() =>
+    setFilteredChallenges(() =>
       getChallengesByid({
         challenges: [...challenges.values()],
         title: searchInput,
@@ -33,9 +31,10 @@ function ChallengeGrid({ challenges, linkPrefix, links }: Props) {
     );
 
     if (!searchInput && !optionSelected) {
-      setSortedChallenges(() => getSortedChallengesByDifficulty(challenges));
+      setFilteredChallenges(challenges);
     }
   }, [challenges, searchInput, optionSelected]);
+
   const DeveloperList = useMemo(() => {
     const developerList = new Map();
     for (const [key, value] of contributors) {
@@ -49,6 +48,7 @@ function ChallengeGrid({ challenges, linkPrefix, links }: Props) {
     });
     return data;
   }, []);
+
   return (
     <div className={styles.container}>
       <div className={styles.filterOptionWrapper}>
@@ -63,7 +63,7 @@ function ChallengeGrid({ challenges, linkPrefix, links }: Props) {
           />
 
           <img
-            src={assets.searchIconSVG}
+            src={searchIcon}
             alt="search challenges by title"
             width={15}
             height={15}
@@ -89,9 +89,9 @@ function ChallengeGrid({ challenges, linkPrefix, links }: Props) {
           ))}
         </div>
       </div>
-      {sortedChallenges.length ? (
+      {filteredChallenges.length ? (
         <div className={styles.challengeGrid} ref={parent}>
-          {sortedChallenges.map((challenge) => (
+          {filteredChallenges.map((challenge) => (
             <Challenge
               key={challenge.title}
               link={linkPrefix + challenge.link}
@@ -101,7 +101,20 @@ function ChallengeGrid({ challenges, linkPrefix, links }: Props) {
           ))}
         </div>
       ) : (
-        <div className={styles.emptyMessage}>No challenges found...  <div>maybe try adding one <a href="https://github.com/sadanandpai/frontend-mini-challenges/blob/main/CONTRIBUTING.md#challenge-contribution" target="_blank" rel="noopener noreferrer">here </a>🤓</div></div>
+        <div className={styles.emptyMessage}>
+          No challenges found...{' '}
+          <div>
+            maybe try adding one{' '}
+            <a
+              href="https://github.com/sadanandpai/frontend-mini-challenges/blob/main/CONTRIBUTING.md#challenge-contribution"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              here{' '}
+            </a>
+            🤓
+          </div>
+        </div>
       )}
     </div>
   );

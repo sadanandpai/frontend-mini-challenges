@@ -18,7 +18,7 @@ favIcon.setAttribute('rel', 'icon');
 favIcon.setAttribute('type', 'image/svg+xml');
 favIcon.setAttribute(
   'href',
-  'https://github.com/sadanandpai/frontend-mini-challenges/raw/main/shared/assets/logo.png'
+  'https://github.com/sadanandpai/frontend-mini-challenges/raw/main/shared/assets/core/logo.png'
 );
 
 // Add all tags to the head

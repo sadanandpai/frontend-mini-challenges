@@ -1,1 +1,0 @@
-import"./modulepreload-polyfill-9p4a8sJU.js";import"./header-CBKe2I2s.js";import"./ng-challenges-l9-Lfqdt.js";import"./navbar-fQ6gBwvr.js";const t=document.getElementById("showDialog"),o=document.getElementById("dialogPopup"),e=document.getElementById("closeDialog");t.addEventListener("click",()=>{o.showModal()});e.addEventListener("click",()=>{o.close("")});

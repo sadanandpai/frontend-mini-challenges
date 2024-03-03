@@ -1,3 +1,4 @@
+
 import { useContext } from 'react';
 import styles from './navbar.module.scss';
 import { ThemeContext } from './../../ThemeWrapper';
@@ -6,13 +7,11 @@ import { Moon } from 'lucide-react';
 
 function Navbar({ children, title }: { children?: React.ReactNode; title?: string }) {
   const { theme, toggleTheme } = useContext(ThemeContext);
+
   return (
     <nav className={styles.navbar}>
       <a className={styles.logo} href="/frontend-mini-challenges/">
-        <img
-          src="https://github.com/sadanandpai/frontend-mini-challenges/raw/main/shared/assets/logo.png"
-          alt="logo"
-        />
+        <img src={logo} alt="logo" />
         <span>{title ?? 'Frontend Mini Challenges'}</span>
       </a>
 

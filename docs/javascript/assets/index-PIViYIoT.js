@@ -1,1 +1,0 @@
-import"./modulepreload-polyfill-9p4a8sJU.js";import"./header-CBKe2I2s.js";import"./ng-challenges-l9-Lfqdt.js";import"./navbar-fQ6gBwvr.js";const e=document.getElementById("phone"),r=n=>[...n].filter(t=>Number.isInteger(+t)&&t!==" ").join(""),i=n=>{const t=r(n);return t.length>3?"+("+t.substring(0,3)+") - "+t.substring(3):t};e.addEventListener("input",()=>e.value=i(e.value));

@@ -1,10 +1,10 @@
-import { useNavigate, useParams } from 'react-router-dom';
-import { jsChallenges, vueChallenges, reactChallenges, angularChallenges } from '@fmc/data/content';
 import { useEffect } from 'react';
-import ChallengeGrid from '@/components/modules/challenges/challenge-grid/challenge-grid';
-import ScrollBtn from '@/components/common/scroll-to-top/scroll-btn';
+import { useNavigate, useParams } from 'react-router-dom';
 import Navbar from '@/components/common/navbar/navbar';
-import assets from '@fmc/assets/images';
+import ScrollBtn from '@/components/common/scroll-to-top/scroll-btn';
+import ChallengeGrid from '@/components/modules/challenges/challenge-grid/challenge-grid';
+import { angularImg, jsImg, reactImg, vueImg } from '@fmc/assets/images';
+import { angularChallenges, jsChallenges, reactChallenges, vueChallenges } from '@fmc/data/content';
 
 const { VITE_PATH, VITE_JS_APP_URL, VITE_REACT_APP_URL, VITE_VUE_APP_URL, VITE_NG_APP_URL, DEV } =
   import.meta.env;
@@ -20,7 +20,7 @@ const techMap = new Map([
       title: 'JS',
       challenges: jsChallenges,
       link: jsLinkPrefix + '/javascript/src/challenges/',
-      imgSrc: assets.jsImg,
+      imgSrc: jsImg,
     },
   ],
   [
@@ -29,7 +29,7 @@ const techMap = new Map([
       title: 'React',
       challenges: reactChallenges,
       link: reactLinkPrefix + '/react/#/',
-      imgSrc: assets.reactImg,
+      imgSrc: reactImg,
     },
   ],
   [
@@ -38,7 +38,7 @@ const techMap = new Map([
       title: 'Vue',
       challenges: vueChallenges,
       link: vueLinkPrefix + '/vue/#',
-      imgSrc: assets.vueImg,
+      imgSrc: vueImg,
     },
   ],
   [
@@ -47,7 +47,7 @@ const techMap = new Map([
       title: 'Angular',
       challenges: angularChallenges,
       link: angularPrefix + '/angular/#',
-      imgSrc: assets.angularImg,
+      imgSrc: angularImg,
     },
   ],
 ]);
@@ -79,7 +79,7 @@ function Challenges() {
 
       <div className="container text-center">
         <ChallengeGrid
-          challenges={techMap.get(techParam)!.challenges}
+          challenges={[...techMap.get(techParam)!.challenges.values()]}
           linkPrefix={techMap.get(techParam)!.link}
           links={links}
         />

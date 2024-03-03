@@ -1,7 +1,7 @@
 <div align="center">
   <h1>Frontend Mini Challenges</h1>
   <h3>Collection of frontend challenges for learning and interviews</h3>
-  <a href="https://sadanandpai.github.io/frontend-mini-challenges/"><img src="https://github.com/sadanandpai/frontend-mini-challenges/raw/main/shared/assets/cover.png" alt="web programming" width="500px" /></a>
+  <a href="https://sadanandpai.github.io/frontend-mini-challenges/"><img src="https://github.com/sadanandpai/frontend-mini-challenges/raw/main/shared/assets/core/cover.png" alt="web programming" width="500px" /></a>
 
 [![](https://img.shields.io/github/stars/sadanandpai/frontend-mini-challenges?style=for-the-badge)](#stars)
 [![](https://img.shields.io/github/forks/sadanandpai/frontend-mini-challenges?style=for-the-badge)](#forks)
@@ -9,7 +9,7 @@
   <p>Show your support by giving a ⭐ to this repo</p>
 
   <h3>
-    <a href="https://sadanandpai.github.io/frontend-mini-challenges/">View all challenges of JavaScript, React and Vue</a>
+    <a href="https://sadanandpai.github.io/frontend-mini-challenges/">Explore all challenges</a>
   </h3>
 </div>
 
@@ -22,6 +22,7 @@ This repo is created to list down all the popular frontend challenges that are r
 - Solutions to JavaScript challenges: [Click here](https://github.com/sadanandpai/frontend-mini-challenges/tree/main/apps/javascript/src/challenges)
 - Solutions to React challenges: [Click here](https://github.com/sadanandpai/frontend-mini-challenges/tree/main/apps/react/src/challenges)
 - Solutions to VueJs challenges: [Click here](https://github.com/sadanandpai/frontend-mini-challenges/tree/main/apps/vue/src/challenges)
+- Solutions to Angular challenges: [Click here](https://github.com/sadanandpai/frontend-mini-challenges/tree/main/apps/angular/src/app/challenges)
 
 <br/>
 

@@ -4,10 +4,6 @@ export const config: Config = {
   namespace: 'fmc-ce',
   outputTargets: [
     {
-      type: 'dist',
-      esmLoaderPath: '../loader',
-    },
-    {
       type: 'dist-custom-elements',
     },
     {
@@ -20,6 +16,6 @@ export const config: Config = {
   ],
   testing: {
     // verbose: true,
-    browserHeadless: "new",
+    browserHeadless: 'new',
   },
 };

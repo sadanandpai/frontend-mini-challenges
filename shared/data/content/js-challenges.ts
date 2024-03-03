@@ -1,6 +1,7 @@
 import { EDifficulty, type IChallenge } from '../types/challenge';
+import { sortChallengesByDifficulty } from '../utils/challenges.helper';
 
-export const jsChallenges: Map<string, IChallenge> = new Map([
+const challenges: Map<string, IChallenge> = new Map([
   [
     'counter',
     {
@@ -740,3 +741,5 @@ export const jsChallenges: Map<string, IChallenge> = new Map([
     },
   ],
 ]);
+
+export const jsChallenges = sortChallengesByDifficulty(challenges);

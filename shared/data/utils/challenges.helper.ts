@@ -3,14 +3,14 @@ import { IGetChallengesByid } from '../types/challenge';
 
 const difficultyOrder = [EDifficulty.Easy, EDifficulty.Medium, EDifficulty.Hard];
 
-export function getSortedChallengesByDifficulty(challenges: Map<string, IChallenge>) {
-  const sortedChallengesByDifficulty = [...challenges.values()];
-  sortedChallengesByDifficulty.sort((a, b) => {
-    const difficultyOrderA = difficultyOrder.indexOf(a.difficulty);
-    const difficultyOrderB = difficultyOrder.indexOf(b.difficulty);
-    return difficultyOrderA - difficultyOrderB;
-  });
-  return sortedChallengesByDifficulty;
+export function sortChallengesByDifficulty(challenges: Map<string, IChallenge>) {
+  return new Map(
+    [...challenges.entries()].sort((a, b) => {
+      const difficultyOrderA = difficultyOrder.indexOf(a[1].difficulty);
+      const difficultyOrderB = difficultyOrder.indexOf(b[1].difficulty);
+      return difficultyOrderA - difficultyOrderB;
+    })
+  );
 }
 
 export function filterChallengeByKey<T extends keyof IChallenge, K extends IChallenge[T]>(
@@ -55,6 +55,7 @@ export function getChallengesByContributors(challenges: IChallenge[], contributo
   let data = challenges.filter((challenge) => contributorIds.includes(challenge.developer));
   return data;
 }
+
 export function getChallengesByTitle(challenges: IChallenge[], title: string) {
   if (!title || title.length === 0) {
     return challenges;

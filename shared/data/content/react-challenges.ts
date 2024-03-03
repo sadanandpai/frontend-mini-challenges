@@ -1,6 +1,7 @@
 import { EDifficulty, type IChallenge } from '../types/challenge';
+import { sortChallengesByDifficulty } from '../utils/challenges.helper';
 
-export const reactChallenges = new Map<string, IChallenge>([
+const challenges = new Map<string, IChallenge>([
   [
     'counter',
     {
@@ -567,6 +568,19 @@ export const reactChallenges = new Map<string, IChallenge>([
       developer: 'Syamsai-Polavarapu',
       tags: [],
       isNew: true,
-    }
+    },
+  ],
+  [
+    '15puzzle',
+    {
+      title: '15 Puzzle',
+      link: '15puzzle',
+      difficulty: EDifficulty.Medium,
+      developer: 'Bateusz',
+      tags: [],
+      isNew: true,
+    },
   ],
 ]);
+
+export const reactChallenges = sortChallengesByDifficulty(challenges);

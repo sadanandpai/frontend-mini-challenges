@@ -1,6 +1,7 @@
 import { EDifficulty, type IChallenge } from '../types/challenge';
+import { sortChallengesByDifficulty } from '../utils/challenges.helper';
 
-export const vueChallenges = new Map<string, IChallenge>([
+const challenges = new Map<string, IChallenge>([
   [
     'counter',
     {
@@ -92,6 +93,16 @@ export const vueChallenges = new Map<string, IChallenge>([
     },
   ],
   [
+    'tic-tac-toe',
+    {
+      title: 'Tic Tac Toe',
+      link: '/tic-tac-toe',
+      difficulty: EDifficulty.Medium,
+      developer: 'sadanandpai',
+      tags: [],
+    },
+  ],
+  [
     'toast-popup',
     {
       title: 'Toast Popup',
@@ -132,3 +143,5 @@ export const vueChallenges = new Map<string, IChallenge>([
     },
   ],
 ]);
+
+export const vueChallenges = sortChallengesByDifficulty(challenges);

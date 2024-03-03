@@ -1,3 +1,4 @@
+import { logo } from '@fmc/assets/images';
 import styles from './challenge-navbar.module.scss';
 
 const { VITE_PATH, VITE_HOST_URL, DEV } = import.meta.env;
@@ -16,10 +17,7 @@ function ChallengeNavbar({ title }: Props) {
           &lt;
         </a>
         <a className={styles.logo} href={homeURL}>
-          <img
-            src="https://github.com/sadanandpai/frontend-mini-challenges/raw/main/shared/assets/logo.png"
-            alt="logo"
-          />
+          <img src={logo} alt="logo" />
         </a>
       </div>
 

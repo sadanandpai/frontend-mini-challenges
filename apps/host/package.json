@@ -8,10 +8,12 @@
     "build": "tsc && vite build",
     "build-baseless": "tsc && vite build --base=/",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "unit:test": "vitest"
   },
   "dependencies": {
     "@fmc/assets": "*",
+    "@fmc/data": "*",
     "@fmc/shared-styles": "*",
     "@formkit/auto-animate": "^0.8.1",
     "react": "^18.2.0",
@@ -33,6 +35,7 @@
     "eslint-plugin-react-refresh": "^0.4.5",
     "sass": "^1.69.5",
     "typescript": "^5.3.3",
-    "vite": "^5.0.0"
+    "vite": "^5.0.0",
+    "vitest": "^1.3.1"
   }
 }

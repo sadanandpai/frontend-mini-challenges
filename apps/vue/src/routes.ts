@@ -14,6 +14,7 @@ import Stack from './challenges/stack/index.vue';
 import PasswordGenerator from './challenges/password-generator/index.vue';
 import Stopwatch from './challenges/stopwatch/index.vue';
 import TempratureConverter from './challenges/temprature-converter/index.vue';
+import TicTacToe from './challenges/tic-tac-toe/index.vue';
 
 const routes: RouteRecordRaw[] = [
   {
@@ -74,6 +75,10 @@ const routes: RouteRecordRaw[] = [
       {
         path: '/temprature-converter',
         component: TempratureConverter,
+      },
+      {
+        path: '/tic-tac-toe',
+        component: TicTacToe,
       },
     ],
   },
