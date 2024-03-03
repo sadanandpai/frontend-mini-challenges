@@ -1,8 +1,26 @@
 import { coverTransparent } from '@fmc/assets/images';
 import styles from './hero.module.scss';
 import { HashLink } from 'react-router-hash-link';
-
+import { jsImg, reactImg, vueImg, angularImg } from '@fmc/assets/images';
 function Hero() {
+  const allImg = [
+    {
+      title: 'JS',
+      imgSrc: jsImg,
+    },
+    {
+      title: 'react',
+      imgSrc: reactImg,
+    },
+    {
+      title: 'vue',
+      imgSrc: vueImg,
+    },
+    {
+      title: 'angular',
+      imgSrc: angularImg,
+    },
+  ];
   return (
     <main className={styles.hero}>
       <div>
@@ -13,16 +31,19 @@ function Hero() {
         <p>by solving the collection of challenges from Frontend Mini Challenges</p>
 
         <h3 className={styles.link}>
-          <HashLink to="javascript">JS Mini Challenges</HashLink>
+          <HashLink to="javascript">Get Started</HashLink>
         </h3>
-
-        <h3 className={styles.link}>
-          <HashLink to="react">React Mini Challenges</HashLink>
-        </h3>
-
-        <h3 className={styles.link}>
-          <HashLink to="vue">Vue Mini Challenges</HashLink>
-        </h3>
+        <div className={styles.heroTechImg}>
+          {allImg.map((item) => (
+            <img
+              key={item.title}
+              src={item.imgSrc}
+              width={35}
+              height={35}
+              alt={`${item.title}-img`}
+            />
+          ))}
+        </div>
       </div>
 
       <figure className={styles.figure}>
