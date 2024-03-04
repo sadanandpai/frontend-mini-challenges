@@ -28,5 +28,9 @@
   "workspaces": [
     "apps/*",
     "shared/*"
-  ]
+  ],
+  "dependencies": {
+    "lucide": "^0.344.0",
+    "lucide-react": "^0.344.0"
+  }
 }

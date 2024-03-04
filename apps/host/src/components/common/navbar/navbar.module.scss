@@ -5,7 +5,9 @@
   padding: 1rem;
   margin-bottom: 1rem;
   background-color: var(--bg-navbar);
-  box-shadow: 0 1px 3px 0 var(--shadow-navbar), 0 1px 2px -1px var(--shadow-navbar);
+  box-shadow:
+    0 1px 3px 0 var(--shadow-navbar),
+    0 1px 2px -1px var(--shadow-navbar);
   transition: all 150ms ease-in-out;
 
   --icon-container-size: 26px;
@@ -46,7 +48,6 @@
     height: var(--icon-container-size);
     color: var(--text-body);
 
-
     & > svg {
       width: var(--github-svg-size);
       height: var(--github-svg-size);
@@ -69,4 +70,10 @@
       font-size: 1.2rem;
     }
   }
+}
+
+.themeButton {
+  border: none;
+  color: var(--text-link);
+  background-color: inherit;
 }
