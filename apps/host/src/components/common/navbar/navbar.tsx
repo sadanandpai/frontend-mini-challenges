@@ -1,7 +1,11 @@
+import { useContext } from 'react';
 import styles from './navbar.module.scss';
 import { logo } from '@fmc/assets/images';
+import { ThemeContext } from '../../ThemeWrapper';
+import { Sun, Moon } from 'lucide-react';
 
 function Navbar({ children, title }: { children?: React.ReactNode; title?: string }) {
+  const { theme, toggleTheme } = useContext(ThemeContext);
   return (
     <nav className={styles.navbar}>
       <a className={styles.logo} href="/frontend-mini-challenges/">
@@ -24,6 +28,9 @@ function Navbar({ children, title }: { children?: React.ReactNode; title?: strin
             />
           </svg>
         </a>
+        <button className={styles.themeButton} onClick={toggleTheme}>
+          {theme === 'light' ? <Sun /> : <Moon />}
+        </button>
       </div>
     </nav>
   );
