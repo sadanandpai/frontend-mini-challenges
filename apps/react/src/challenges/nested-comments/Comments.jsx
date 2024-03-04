@@ -4,7 +4,6 @@ import styles from './style.module.css';
 const Comments = ({ comments, addComments, deleteComment }) => {
   const [showInput, setShowInput] = useState(false);
   const [commentText, setCommentText] = useState('');
-  const [hideInput, setHideInput] = useState(comments.id);
 
   const handleAdd = () => {
     if (commentText !== '') {
@@ -16,6 +15,7 @@ const Comments = ({ comments, addComments, deleteComment }) => {
       addComments(comments.id, newComments);
       setShowInput(false);
     }
+    setCommentText('');
   };
 
   return (
@@ -43,6 +43,7 @@ const Comments = ({ comments, addComments, deleteComment }) => {
               <button
                 onClick={() => {
                   setShowInput(false);
+                  setCommentText('');
                 }}
               >
                 Cancel
