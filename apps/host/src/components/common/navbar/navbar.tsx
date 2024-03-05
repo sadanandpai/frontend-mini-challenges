@@ -37,6 +37,9 @@ function Navbar({ children, title }: { children?: React.ReactNode; title?: strin
             />
           </svg>
         </a>
+        <button className={styles.themeButton} onClick={toggleTheme}>
+          {theme === 'light' ? <Sun /> : <Moon />}
+        </button>
       </div>
       <div className={styles.hamburger}>
         <Button type="text" icon={<MenuOutlined />} onClick={toggleDrawer} />
@@ -76,10 +79,6 @@ function Navbar({ children, title }: { children?: React.ReactNode; title?: strin
           </a>
         </div>
       </Drawer>
-
-      <button className={styles.themeButton} onClick={toggleTheme}>
-        {theme === 'light' ? <Sun /> : <Moon />}
-      </button>
     </nav>
   );
 }
