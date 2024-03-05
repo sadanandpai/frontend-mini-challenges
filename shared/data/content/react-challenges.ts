@@ -581,6 +581,17 @@ const challenges = new Map<string, IChallenge>([
       isNew: true,
     },
   ],
+  [
+    'navbar',
+    {
+      title: 'Navbar',
+      link: 'navbar',
+      difficulty: EDifficulty.Easy,
+      developer: 'Akshay-Omkar',
+      tags: [],
+      isNew: true,
+    },
+  ],
 ]);
 
 export const reactChallenges = sortChallengesByDifficulty(challenges);
