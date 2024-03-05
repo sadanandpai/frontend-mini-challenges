@@ -42,7 +42,14 @@ function Navbar({ children, title }: { children?: React.ReactNode; title?: strin
         </button>
       </div>
       <div className={styles.hamburger}>
-        <Button type="text" icon={<MenuOutlined />} onClick={toggleDrawer} />
+        <Button
+          type="text"
+          icon={<MenuOutlined />}
+          onClick={toggleDrawer}
+          style={{
+            color: theme === 'light' ? 'currentColor' : '#ffffff',
+          }}
+        />
       </div>
 
       <Drawer
@@ -52,6 +59,8 @@ function Navbar({ children, title }: { children?: React.ReactNode; title?: strin
         onClose={toggleDrawer}
         visible={isDrawerOpen}
         width="50%"
+        className={theme === 'dark' ? styles.darkDrawer : ''}
+        style={{ background: theme === 'dark' ? '#192841' : '#fff' }}
       >
         <div className={styles.drawerContent}>
           <ul className={styles.drawerList}>
