@@ -33,11 +33,14 @@
 
   .right {
     display: flex;
+    justify-content: end;
     gap: 2rem;
   }
 
   .links {
     display: none;
+    justify-items: end;
+    margin-left: 600px;
   }
 
   .github {
@@ -47,8 +50,35 @@
     width: var(--icon-container-size);
     height: var(--icon-container-size);
     color: var(--text-body);
+  }
 
-    & > svg {
+  .github > svg {
+    width: var(--github-svg-size);
+    height: var(--github-svg-size);
+  }
+  .hamburger {
+    display: none;
+  }
+
+  @media screen and (max-width: 768px) {
+    .github {
+      display: none;
+    }
+
+    .themeButton {
+      display: none;
+    }
+
+    .hamburger {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: var(--icon-container-size);
+      height: var(--icon-container-size);
+      color: var(--text-body);
+    }
+
+    .hamburger > svg {
       width: var(--github-svg-size);
       height: var(--github-svg-size);
     }
@@ -69,6 +99,41 @@
     .logo > span {
       font-size: 1.2rem;
     }
+  }
+}
+.right:first-child {
+  display: flex;
+}
+
+.drawerContent {
+  padding: 1rem;
+}
+
+.drawerList {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.drawerListItem {
+  margin-bottom: 1rem;
+}
+.ant-drawer-close {
+  justify-content: flex-end;
+  padding-left: 50px;
+  margin-left: 500px;
+}
+.ant-drawer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .ant-drawer-title {
+    justify-content: flex-start;
+  }
+
+  .ant-drawer-close {
+    justify-content: flex-end;
   }
 }
 
