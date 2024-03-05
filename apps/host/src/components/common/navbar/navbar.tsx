@@ -42,6 +42,7 @@ function Navbar({ children, title }: { children?: React.ReactNode; title?: strin
         </button>
       </div>
       <div className={styles.hamburger}>
+
         <Button
           type="text"
           icon={<MenuOutlined />}

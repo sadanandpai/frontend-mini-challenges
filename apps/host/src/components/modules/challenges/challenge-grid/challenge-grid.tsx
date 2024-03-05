@@ -1,13 +1,11 @@
-import { searchIcon } from '@fmc/assets/images';
-import { contributors } from '@fmc/data/content';
+import { useEffect, useState } from 'react';
 import { IChallenge, OptionType } from '@fmc/data/types';
 import { useAutoAnimate } from '@formkit/auto-animate/react';
-import { useEffect, useMemo, useState } from 'react';
-import { Link } from 'react-router-dom';
 import Challenge from './challenge';
 import styles from './challenge-grid.module.scss';
-import CustomSelect from '@/components/common/multi-select/multi-select';
 import { getChallengesByid } from '../../../../../../../shared/data/utils/challenges.helper';
+import ChallengeFilters from './challenge-filter';
+import { contributors } from '@fmc/data/content';
 
 interface Props {
   challenges: IChallenge[];
@@ -17,9 +15,9 @@ interface Props {
 
 function ChallengeGrid({ challenges, linkPrefix, links }: Props) {
   const [parent] = useAutoAnimate();
-  const [searchInput, setSearchInput] = useState<string>('');
+  const [searchInput, setSearchInput] = useState('');
   const [filteredChallenges, setFilteredChallenges] = useState(challenges);
-  const [optionSelected, setOptionSelected] = useState<OptionType[] | []>([]);
+  const [optionSelected, setOptionSelected] = useState<OptionType[]>([]);
 
   useEffect(() => {
     setFilteredChallenges(() =>
@@ -35,60 +33,16 @@ function ChallengeGrid({ challenges, linkPrefix, links }: Props) {
     }
   }, [challenges, searchInput, optionSelected]);
 
-  const DeveloperList = useMemo(() => {
-    const developerList = new Map();
-    for (const [key, value] of contributors) {
-      developerList.set(key, value);
-    }
-    const data: { value: string; label: string }[] = [];
-    developerList.forEach((value, key) => {
-      if (key !== '' && value?.name !== '') {
-        data.push({ value: key, label: value?.name });
-      }
-    });
-    return data;
-  }, []);
-
   return (
     <div className={styles.container}>
-      <div className={styles.filterOptionWrapper}>
-        <div className={styles.searchInputWrapper}>
-          <input
-            type="text"
-            name="searchTextInput"
-            placeholder="Search challenge..."
-            className={styles.searchInput}
-            value={searchInput}
-            onChange={(e) => setSearchInput(e.target.value.trim())}
-          />
+      <ChallengeFilters
+        links={links}
+        searchInput={searchInput}
+        setSearchInput={setSearchInput}
+        optionSelected={optionSelected}
+        setOptionSelected={setOptionSelected}
+      />
 
-          <img
-            src={searchIcon}
-            alt="search challenges by title"
-            width={15}
-            height={15}
-            className={styles.searchIcon}
-          />
-        </div>
-        <CustomSelect
-          data={DeveloperList}
-          optionSelected={optionSelected}
-          setOptionSelected={(val: OptionType[]) => setOptionSelected(val)}
-        />
-        <div className={styles.filterByTechWrapper}>
-          {links.map((link) => (
-            <Link to={`/${link.tech}`} key={link.tech}>
-              <img
-                src={link.imgSrc}
-                width={35}
-                height={35}
-                className={link.active ? styles.activeTech : ''}
-                alt={`filter by ${link.tech}`}
-              />
-            </Link>
-          ))}
-        </div>
-      </div>
       {filteredChallenges.length ? (
         <div className={styles.challengeGrid} ref={parent}>
           {filteredChallenges.map((challenge) => (
