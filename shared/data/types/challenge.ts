@@ -22,4 +22,5 @@ export interface IGetChallengesByid {
   challenges: IChallenge[];
   title: string;
   contributors: OptionType[];
+  difficulties: OptionType[];
 }

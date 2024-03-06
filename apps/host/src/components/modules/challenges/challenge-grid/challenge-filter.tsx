@@ -4,6 +4,7 @@ import styles from './challenge-grid.module.scss';
 import { useMemo } from 'react';
 import { contributors } from '@fmc/data/content';
 import { OptionType } from '@fmc/data/types';
+import { Difficulties } from '@fmc/data/constants';
 import { Search } from 'lucide-react';
 
 interface Props {
@@ -12,6 +13,8 @@ interface Props {
   links: { tech: string; imgSrc: string; active: boolean }[];
   optionSelected: OptionType[] | [];
   setOptionSelected: React.Dispatch<React.SetStateAction<OptionType[] | []>>;
+  selectedDifficulties: OptionType[] | [];
+  setSelectedDifficulties: React.Dispatch<React.SetStateAction<OptionType[] | []>>;
 }
 
 const ChallengeFilters = ({
@@ -19,6 +22,8 @@ const ChallengeFilters = ({
   setSearchInput,
   optionSelected,
   setOptionSelected,
+  selectedDifficulties,
+  setSelectedDifficulties,
   links,
 }: Props) => {
   const DeveloperList = useMemo(() => {
@@ -55,6 +60,12 @@ const ChallengeFilters = ({
         data={DeveloperList}
         optionSelected={optionSelected}
         setOptionSelected={(val: OptionType[]) => setOptionSelected(val)}
+      />
+
+      <CustomSelect
+        data={Difficulties}
+        optionSelected={selectedDifficulties}
+        setOptionSelected={(val: OptionType[]) => setSelectedDifficulties(val)}
       />
 
       <div className={styles.filterByTechWrapper}>
