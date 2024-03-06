@@ -1,1 +1,0 @@
-import"./header-7xo9HN1f.js";import"./navbar-wj5aMSKe.js";const e=document.querySelector(".burger-menu"),t=document.querySelector(".nav-links");e.addEventListener("click",()=>{t.classList.toggle("active")});

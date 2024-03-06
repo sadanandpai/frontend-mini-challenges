@@ -1,3 +1,11 @@
+.containerWrapper {
+  width: 100%;
+  height: 100%;
+  background-color: var(--bg-body);
+  color: var(--text-body);
+  padding-block-end: 1rem;
+}
+
 .container {
   max-width: min(90%, 1200px);
   margin: 0 auto;

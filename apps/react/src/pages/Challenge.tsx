@@ -1,3 +1,4 @@
+import FifteenPuzzle from '@/challenges/15puzzle/App.tsx';
 import Accordion from '@/challenges/accordion/App';
 import AutocompleteOffline from '@/challenges/autocomplete/autocompleteOffline';
 import AutocompleteOnline from '@/challenges/autocomplete/autocompleteOnline';
@@ -115,6 +116,7 @@ const reactChallengesMap = {
   'digital-clock': <DigitalClock />,
   'nested-comments': <NestedComments />,
   navbar: <Navbar />,
+  '15puzzle': <FifteenPuzzle />,
 };
 
 function Challenge() {

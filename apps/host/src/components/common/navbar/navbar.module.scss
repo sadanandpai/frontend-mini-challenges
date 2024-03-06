@@ -5,7 +5,9 @@
   padding: 1rem;
   margin-bottom: 1rem;
   background-color: var(--bg-navbar);
-  box-shadow: 0 1px 3px 0 var(--shadow-navbar), 0 1px 2px -1px var(--shadow-navbar);
+  box-shadow:
+    0 1px 3px 0 var(--shadow-navbar),
+    0 1px 2px -1px var(--shadow-navbar);
   transition: all 150ms ease-in-out;
 
   --icon-container-size: 26px;
@@ -45,9 +47,35 @@
     width: var(--icon-container-size);
     height: var(--icon-container-size);
     color: var(--text-body);
+  }
 
+  .github > svg {
+    width: var(--github-svg-size);
+    height: var(--github-svg-size);
+  }
+  .hamburger {
+    display: none;
+  }
 
-    & > svg {
+  @media screen and (max-width: 768px) {
+    .github {
+      display: none;
+    }
+
+    .themeButton {
+      display: none;
+    }
+
+    .hamburger {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: var(--icon-container-size);
+      height: var(--icon-container-size);
+      color: var(--text-body);
+    }
+
+    .hamburger > svg {
       width: var(--github-svg-size);
       height: var(--github-svg-size);
     }
@@ -69,4 +97,45 @@
       font-size: 1.2rem;
     }
   }
+}
+.right:first-child {
+  display: flex;
+}
+
+.drawerContent {
+  padding: 1rem;
+}
+
+.drawerList {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.drawerListItem {
+  margin-bottom: 1rem;
+}
+.ant-drawer-close {
+  justify-content: flex-end;
+  padding-left: 50px;
+  margin-left: 500px;
+}
+.ant-drawer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .ant-drawer-title {
+    justify-content: flex-start;
+  }
+
+  .ant-drawer-close {
+    justify-content: flex-end;
+  }
+}
+
+.themeButton {
+  border: none;
+  color: var(--text-link);
+  background-color: inherit;
 }

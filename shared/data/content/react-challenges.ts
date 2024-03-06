@@ -570,7 +570,7 @@ const challenges = new Map<string, IChallenge>([
       isNew: true,
     },
   ],
-  [
+ [
     'nested-comments',
     {
       title: 'Nested Comments',
@@ -581,13 +581,13 @@ const challenges = new Map<string, IChallenge>([
       isNew: true,
     },
   ],
-  [
-    'navbar',
+   [
+    '15puzzle',
     {
-      title: 'Navbar',
-      link: 'navbar',
-      difficulty: EDifficulty.Easy,
-      developer: 'Akshay-Omkar',
+      title: '15 Puzzle',
+      link: '15puzzle',
+      difficulty: EDifficulty.Medium,
+      developer: 'Bateusz',
       tags: [],
       isNew: true,
     },

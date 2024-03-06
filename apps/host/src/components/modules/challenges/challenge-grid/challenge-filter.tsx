@@ -1,14 +1,46 @@
-import styles from './challenge-grid.module.scss';
-import { searchIcon } from '@fmc/assets/images';
+import CustomSelect from '@/components/common/multi-select/multi-select';
 import { Link } from 'react-router-dom';
+import styles from './challenge-grid.module.scss';
+import { useMemo } from 'react';
+import { contributors } from '@fmc/data/content';
+import { OptionType } from '@fmc/data/types';
+import { Difficulties } from '@fmc/data/constants';
+import { Search } from 'lucide-react';
 
 interface Props {
   searchInput: string;
   setSearchInput: React.Dispatch<React.SetStateAction<string>>;
   links: { tech: string; imgSrc: string; active: boolean }[];
+  optionSelected: OptionType[] | [];
+  setOptionSelected: React.Dispatch<React.SetStateAction<OptionType[] | []>>;
+  selectedDifficulties: OptionType[] | [];
+  setSelectedDifficulties: React.Dispatch<React.SetStateAction<OptionType[] | []>>;
 }
 
-const ChallengeFilters = ({ searchInput, setSearchInput, links }: Props) => {
+const ChallengeFilters = ({
+  searchInput,
+  setSearchInput,
+  optionSelected,
+  setOptionSelected,
+  selectedDifficulties,
+  setSelectedDifficulties,
+  links,
+}: Props) => {
+  const DeveloperList = useMemo(() => {
+    const developerList = new Map();
+    for (const [key, value] of contributors) {
+      developerList.set(key, value);
+    }
+
+    const data: { value: string; label: string }[] = [];
+    developerList.forEach((value, key) => {
+      if (key !== '' && value?.name !== '') {
+        data.push({ value: key, label: value?.name });
+      }
+    });
+    return data;
+  }, []);
+
   return (
     <div className={styles.filterOptionWrapper}>
       <div className={styles.searchInputWrapper}>
@@ -20,14 +52,22 @@ const ChallengeFilters = ({ searchInput, setSearchInput, links }: Props) => {
           value={searchInput}
           onChange={(e) => setSearchInput(e.target.value.trim())}
         />
-        <img
-          src={searchIcon}
-          alt="search challenges by title"
-          width={15}
-          height={15}
-          className={styles.searchIcon}
-        />
+
+        <Search size={15} className={styles.searchIcon} />
       </div>
+
+      <CustomSelect
+        data={DeveloperList}
+        optionSelected={optionSelected}
+        setOptionSelected={(val: OptionType[]) => setOptionSelected(val)}
+      />
+
+      <CustomSelect
+        data={Difficulties}
+        optionSelected={selectedDifficulties}
+        setOptionSelected={(val: OptionType[]) => setSelectedDifficulties(val)}
+      />
+
       <div className={styles.filterByTechWrapper}>
         {links.map((link) => (
           <Link to={`/${link.tech}`} key={link.tech}>

@@ -28,5 +28,10 @@
   "workspaces": [
     "apps/*",
     "shared/*"
-  ]
+  ],
+  "dependencies": {
+    "antd": "^5.15.0",
+    "lucide": "^0.344.0",
+    "lucide-react": "^0.344.0"
+  }
 }

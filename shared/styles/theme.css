@@ -13,14 +13,20 @@
 
   /* Links */
   --text-link: blue;
+
+  /* Challenge Card */
+  --card-shadow: rgb(0 0 0 / 15%);
 }
 
 /* Dark override for above variables */
 
-:root.dark {
+[data-theme='dark'] {
   /* Default body colors */
   --bg-body: #030712;
   --text-body: #e5e7eb;
+
+  --bg-navbar: #030712;
+  --shadow-navbar: rgba(150 150 150 / 0.2);
 
   /* Footer-specific colors (same as navbar) */
   --bg-footer: var(--bg-body);
@@ -28,6 +34,9 @@
 
   /* Links */
   --text-link: #6366f1;
+
+  /* Challenge Card */
+  --card-shadow: rgb(150 150 150/ 20%);
 
   color-scheme: dark;
 }
