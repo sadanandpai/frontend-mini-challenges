@@ -5,6 +5,7 @@
   "exports": {
     "./content": "./content/index.ts",
     "./types": "./types/index.ts",
-    "./utils": "./utils/index.ts"
+    "./utils": "./utils/index.ts",
+    "./constants": "./constants/index.ts"
   }
 }

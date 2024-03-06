@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react';
-import { IChallenge, OptionType } from '@fmc/data/types';
 import { useAutoAnimate } from '@formkit/auto-animate/react';
+import { IChallenge, OptionType } from '@fmc/data/types';
+import { contributors } from '@fmc/data/content';
 import Challenge from './challenge';
 import styles from './challenge-grid.module.scss';
 import { getChallengesByid } from '../../../../../../../shared/data/utils/challenges.helper';
 import ChallengeFilters from './challenge-filter';
-import { contributors } from '@fmc/data/content';
 
 interface Props {
   challenges: IChallenge[];
@@ -18,6 +18,7 @@ function ChallengeGrid({ challenges, linkPrefix, links }: Props) {
   const [searchInput, setSearchInput] = useState('');
   const [filteredChallenges, setFilteredChallenges] = useState(challenges);
   const [optionSelected, setOptionSelected] = useState<OptionType[]>([]);
+  const [selectedDifficulties, setSelectedDifficulties] = useState<OptionType[]>([]);
 
   useEffect(() => {
     setFilteredChallenges(() =>
@@ -25,13 +26,14 @@ function ChallengeGrid({ challenges, linkPrefix, links }: Props) {
         challenges: [...challenges.values()],
         title: searchInput,
         contributors: optionSelected,
+        difficulties: selectedDifficulties,
       })
     );
 
-    if (!searchInput && !optionSelected) {
+    if (!searchInput && !optionSelected && !selectedDifficulties) {
       setFilteredChallenges(challenges);
     }
-  }, [challenges, searchInput, optionSelected]);
+  }, [challenges, searchInput, optionSelected, selectedDifficulties]);
 
   return (
     <div className={styles.container}>
@@ -41,6 +43,8 @@ function ChallengeGrid({ challenges, linkPrefix, links }: Props) {
         setSearchInput={setSearchInput}
         optionSelected={optionSelected}
         setOptionSelected={setOptionSelected}
+        selectedDifficulties={selectedDifficulties}
+        setSelectedDifficulties={setSelectedDifficulties}
       />
 
       {filteredChallenges.length ? (

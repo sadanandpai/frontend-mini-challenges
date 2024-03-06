@@ -66,20 +66,31 @@ export function getChallengesByTitle(challenges: IChallenge[], title: string) {
   return data;
 }
 
-export function getChallengesByid({ challenges, title, contributors }: IGetChallengesByid) {
-  let data = [...challenges];
-  if ((!title || title.length === 0) && (!contributors || contributors.length === 0)) {
-    data = challenges;
+export function getChallengesByDifficulties(challenges: IChallenge[], difficulties: OptionType[]) {
+  if (!difficulties || difficulties.length === 0) return challenges;
+  const difficultyValues = difficulties.map((difficulty) => difficulty.value);
+  return challenges.filter((challenge) => difficultyValues.includes(challenge.difficulty));
+}
+
+export function getChallengesByid({
+  challenges,
+  title,
+  contributors,
+  difficulties,
+}: IGetChallengesByid) {
+  if (
+    (!title || title.length === 0) &&
+    (!contributors || contributors.length === 0) &&
+    (!difficulties || difficulties.length === 0)
+  ) {
+    return challenges;
   }
-  if (title && contributors.length > 0) {
-    data = getChallengesByTitle(challenges, title);
-    data = getChallengesByContributors(data, contributors);
-  }
-  if (title && contributors.length === 0) {
-    data = getChallengesByTitle(challenges, title);
-  }
-  if (contributors.length > 0 && !title) {
-    data = getChallengesByContributors(challenges, contributors);
-  }
-  return data;
+
+  let filteredChallenges = getChallengesByTitle(challenges, title);
+
+  filteredChallenges = getChallengesByContributors(filteredChallenges, contributors);
+
+  filteredChallenges = getChallengesByDifficulties(filteredChallenges, difficulties);
+
+  return filteredChallenges;
 }
