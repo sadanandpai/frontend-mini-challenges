@@ -87,3 +87,11 @@ window.addEventListener('scroll', () => {
     getPosts(startIndex, endIndex);
   }
 });
+
+// resize eventListener
+window.addEventListener('resize', () => {
+  const scrolledHeight = Math.ceil(window.innerHeight + window.scrollY);
+  if (scrolledHeight >= window.document.body.offsetHeight) {
+    getPosts(startIndex, endIndex);
+  }
+});
