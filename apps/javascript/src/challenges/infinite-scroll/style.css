@@ -31,3 +31,9 @@
   display: none;
   text-align: center;
 }
+
+.fetch-error {
+  display: none;
+  text-align: center;
+  color: red;
+}
