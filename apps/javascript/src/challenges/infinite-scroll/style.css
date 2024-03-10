@@ -1,14 +1,39 @@
 .container {
-    display: flex;
-    flex-direction: column;
-    padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
 }
+
 .post {
-    padding: 1rem;
-    border: 1px solid;
-    border-radius: 8px;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  margin-block: 1rem;
+  border: 1px solid;
+  border-radius: 8px;
+}
+
+.post-body {
+  padding-inline: 1rem;
+}
+
+.post-number {
+  padding: 1rem;
+  background-color: oldlace;
+  border-radius: 8px;
 }
 
 .loader {
-    text-align: center;
+  text-align: center;
+}
+
+.end-of-content {
+  display: none;
+  text-align: center;
+}
+
+.fetch-error {
+  display: none;
+  text-align: center;
+  color: red;
 }
