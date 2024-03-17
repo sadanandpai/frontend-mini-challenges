@@ -581,6 +581,17 @@ const challenges = new Map<string, IChallenge>([
       isNew: true,
     },
   ],
+  [
+    'memory-game',
+    {
+      title: 'Memory Game',
+      link: 'memory-game',
+      difficulty: EDifficulty.Hard,
+      developer: 'Akshat',
+      tags: [],
+      isNew: true,
+    },
+  ],
 ]);
 
 export const reactChallenges = sortChallengesByDifficulty(challenges);

@@ -30,8 +30,13 @@
     "shared/*"
   ],
   "dependencies": {
+    "@reduxjs/toolkit": "^2.2.1",
     "antd": "^5.15.0",
     "lucide": "^0.344.0",
-    "lucide-react": "^0.344.0"
+    "lucide-react": "^0.344.0",
+    "react-redux": "^9.1.0",
+    "react-spring": "^8.0.27",
+    "react-use": "^17.5.0",
+    "styled-components": "^6.1.8"
   }
 }

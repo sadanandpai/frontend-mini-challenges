@@ -56,6 +56,7 @@ import WordConnect from '@/challenges/word-connect/App';
 import Stepper from '@/challenges/stepper/App';
 import InlineOptions from '@/challenges/inline-options/App';
 import DigitalClock from '@/challenges/7-segment-digital-clock/DigitalClock';
+import MemoryGame from '@/challenges/memory-game';
 
 const reactChallengesMap = {
   'transfer-list': <TransferListApp />,
@@ -113,6 +114,7 @@ const reactChallengesMap = {
   'inline-options': <InlineOptions />,
   'digital-clock': <DigitalClock />,
   '15puzzle': <FifteenPuzzle />,
+  'memory-game': <MemoryGame />,
 };
 
 function Challenge() {
