@@ -53,11 +53,11 @@ function Navbar({ children, title }: { children?: React.ReactNode; title?: strin
       </div>
 
       <Drawer
-        title="Menu"
+        title={<span style={{ color: theme === 'dark' ? '#fff' : '#000' }}>Menu</span>}
         placement="right"
         closable={true}
         onClose={toggleDrawer}
-        visible={isDrawerOpen}
+        open={isDrawerOpen}
         width="50%"
         className={theme === 'dark' ? styles.darkDrawer : ''}
         style={{ background: theme === 'dark' ? '#192841' : '#fff' }}
