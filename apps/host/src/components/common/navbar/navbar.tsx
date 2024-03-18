@@ -57,7 +57,7 @@ function Navbar({ children, title }: { children?: React.ReactNode; title?: strin
         placement="right"
         closable={true}
         onClose={toggleDrawer}
-        visible={isDrawerOpen}
+        open={isDrawerOpen}
         width="50%"
         className={theme === 'dark' ? styles.darkDrawer : ''}
         style={{ background: theme === 'dark' ? '#192841' : '#fff' }}
