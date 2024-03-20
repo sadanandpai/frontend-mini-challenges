@@ -1,0 +1,40 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #6654ff;
+  padding: 1rem;
+  color: #fff;
+  position: relative;
+}
+.nav a {
+  padding: 0.6rem;
+  color: #fff;
+}
+
+.hamburger {
+  display: none;
+  font-size: 1.2rem;
+}
+
+/* for mobile screen  */
+@media only screen and (max-width: 600px) {
+  .nav {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 4rem;
+    right: 0rem;
+    left: 0rem;
+    background-color: #6654ff;
+  }
+
+  .active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
