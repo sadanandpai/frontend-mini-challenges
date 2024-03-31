@@ -1,9 +1,8 @@
 import { useEffect, useState } from 'react';
-
+import { Reorder } from 'framer-motion';
 import Contributor from './contributor';
 import { Contributor as IContributor, maintainersList } from './contributors-list';
 import styles from './contribution.module.scss';
-import { useAutoAnimate } from '@formkit/auto-animate/react';
 import axios from 'axios';
 
 async function getContributors() {
@@ -19,7 +18,6 @@ async function getContributors() {
 function Contribution() {
   const [contributors, setContributors] = useState<IContributor[]>([]);
   const [maintainers] = useState(maintainersList);
-  const [parent] = useAutoAnimate();
 
   useEffect(() => {
     getContributors().then((list) => setContributors(list.slice(2)));
@@ -33,7 +31,6 @@ function Contribution() {
         ),
       5000
     );
-
     return () => {
       clearInterval(timer);
     };
@@ -50,11 +47,22 @@ function Contribution() {
         <Contributor key={maintainers[1].username} {...maintainers[1]} />
       </section>
 
-      <section className={styles.contributionContainer} ref={parent}>
+      <Reorder.Group
+        axis="y"
+        onReorder={setContributors}
+        values={contributors}
+        className={styles.contributionContainer}
+      >
         {contributors.map((contributor) => (
-          <Contributor key={contributor.username} {...contributor} />
+          <Reorder.Item
+            value={contributor.username}
+            key={contributor.username}
+            className={styles.listContributor}
+          >
+            <Contributor key={contributor.username} {...contributor} />
+          </Reorder.Item>
         ))}
-      </section>
+      </Reorder.Group>
     </>
   );
 }
