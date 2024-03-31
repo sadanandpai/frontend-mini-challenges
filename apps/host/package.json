@@ -15,7 +15,7 @@
     "@fmc/assets": "*",
     "@fmc/data": "*",
     "@fmc/shared-styles": "*",
-    "@formkit/auto-animate": "^0.8.1",
+    "framer-motion": "^11.0.24",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.21.0",

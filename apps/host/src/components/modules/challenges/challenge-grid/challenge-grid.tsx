@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import { useAutoAnimate } from '@formkit/auto-animate/react';
 import { IChallenge, OptionType } from '@fmc/data/types';
 import { contributors } from '@fmc/data/content';
 import Challenge from './challenge';
@@ -14,7 +13,6 @@ interface Props {
 }
 
 function ChallengeGrid({ challenges, linkPrefix, links }: Props) {
-  const [parent] = useAutoAnimate();
   const [searchInput, setSearchInput] = useState('');
   const [filteredChallenges, setFilteredChallenges] = useState(challenges);
   const [optionSelected, setOptionSelected] = useState<OptionType[]>([]);
@@ -48,7 +46,7 @@ function ChallengeGrid({ challenges, linkPrefix, links }: Props) {
       />
 
       {filteredChallenges.length ? (
-        <div className={styles.challengeGrid} ref={parent}>
+        <div className={styles.challengeGrid}>
           {filteredChallenges.map((challenge) => (
             <Challenge
               key={challenge.title}
