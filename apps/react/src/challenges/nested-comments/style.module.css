@@ -14,11 +14,7 @@
   margin-right: 0.8rem;
 }
 
-.comment_details h4 {
-  margin-bottom: 0.1rem;
-}
-
-.comment_replie {
+.comment_replies {
   margin-left: 1rem;
   padding-left: 1rem;
 }
