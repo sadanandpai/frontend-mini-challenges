@@ -56,6 +56,7 @@ import WordConnect from '@/challenges/word-connect/App';
 import Stepper from '@/challenges/stepper/App';
 import InlineOptions from '@/challenges/inline-options/App';
 import DigitalClock from '@/challenges/7-segment-digital-clock/DigitalClock';
+import NestedComments from '@/challenges/nested-comments/App';
 
 const reactChallengesMap = {
   'transfer-list': <TransferListApp />,
@@ -112,6 +113,7 @@ const reactChallengesMap = {
   stepper: <Stepper />,
   'inline-options': <InlineOptions />,
   'digital-clock': <DigitalClock />,
+  'nested-comments': <NestedComments />,
   '15puzzle': <FifteenPuzzle />,
 };
 

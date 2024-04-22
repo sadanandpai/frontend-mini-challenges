@@ -1,0 +1,25 @@
+.comment {
+  display: flex;
+  align-items: center;
+  background-color: #f3f4f6;
+  margin-bottom: 0.5rem;
+  border-radius: 1rem;
+  padding: 0 0.5rem;
+  border-left: 0.5rem solid blue;
+}
+
+.comment img {
+  width: 3.125rem;
+  height: 3.125rem;
+  margin-right: 0.8rem;
+}
+
+.comment_replies {
+  margin-left: 1rem;
+  padding-left: 1rem;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+}
