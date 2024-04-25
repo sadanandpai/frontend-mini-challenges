@@ -1,5 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
 @import "@fmc/shared-styles/theme";
-@import "@fmc/shared-styles/base";
 @import "@fmc/shared-styles/components";
 
 /* @tailwind base; */
@@ -8,4 +9,31 @@
 
 html {
   scroll-behavior: smooth;
+  font-family: Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
+}
+
+body {
+  margin: 0; /* remove after including tailwind/base */
+  @apply text-gray-900 dark:text-gray-200;
+  transition: all 150ms ease-in-out;
+}
+
+a {
+  @apply text-indigo-600 dark:text-indigo-500;
+  text-decoration: none; /* remove after including tailwind/base */
+}
+
+button {
+  cursor: pointer;
+}
+
+input:disabled,
+button:disabled {
+  cursor: not-allowed;
+}
+
+h1 {
+  align-items: center;
+  justify-content: center;
 }

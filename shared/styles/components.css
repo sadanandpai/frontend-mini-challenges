@@ -3,11 +3,6 @@
   margin: auto;
 }
 
-.hidden {
-  /* Ignore all specificity for this class */
-  display: none !important;
-}
-
 button.btn.btn-primary {
   padding: 10px 16px;
   background-color: cyan;
