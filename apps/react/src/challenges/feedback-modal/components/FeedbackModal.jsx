@@ -27,7 +27,7 @@ const FeedbackModal = ({ onClose }) => {
         </button>
         <h1>User Feedback</h1>
         {!isSubmitTrue ? (
-          <div className={styles.feedbackContent}>
+          <form className={styles.feedbackContent} onSubmit={handleSubmit}>
             <RatingContent handleClick={handleClick} activeRating={activeRating.rating} />
             <textarea
               placeholder="Please share additional feedback (optional)"
@@ -38,13 +38,13 @@ const FeedbackModal = ({ onClose }) => {
               onChange={handleFeedbackContent}
             ></textarea>
             <button
+              type="submit"
               className={styles.feedbackBtn}
-              onClick={handleSubmit}
               disabled={!Object.keys(activeRating).length}
             >
               Submit
             </button>
-          </div>
+          </form>
         ) : (
           <div className={styles.feedbackResponse}>
             <p>Feedback: {activeRating.mood}</p>
