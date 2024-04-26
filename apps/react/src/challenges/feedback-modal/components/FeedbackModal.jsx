@@ -37,7 +37,11 @@ const FeedbackModal = ({ onClose }) => {
               value={feedbackContent}
               onChange={handleFeedbackContent}
             ></textarea>
-            <button className={styles.feedbackBtn} onClick={handleSubmit}>
+            <button
+              className={styles.feedbackBtn}
+              onClick={handleSubmit}
+              disabled={!Object.keys(activeRating).length}
+            >
               Submit
             </button>
           </div>

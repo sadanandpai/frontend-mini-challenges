@@ -1,4 +1,6 @@
 .feedbackContainer {
+  margin: 0;
+  padding: 0;
   display: flex;
   background-color: white;
   min-height: 100vh;
@@ -16,7 +18,7 @@
 }
 
 .modalContainer {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -33,13 +35,13 @@
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
-  position: absolute;
+  position: relative;
   width: 500px;
   min-height: 300px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   gap: 5px;
 }
 
@@ -55,11 +57,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 5px 0;
+  /* gap: 5px 0; */
   cursor: pointer;
-  padding: 5px;
-  width: 60px;
-  height: 60px;
+  /* padding: 5px; */
+  width: 70px;
+  height: 70px;
   margin: 10px 1px;
 }
 
@@ -83,6 +85,7 @@
 
 .iconItem p {
   font-size: small;
+  margin: 5px;
   color: rgba(0, 0, 0, 0.7);
 }
 
@@ -95,11 +98,11 @@
   border: none;
 }
 
-.modal-content h1 {
+.modalContent h1 {
   color: rgba(0, 0, 0, 0.8);
   font-weight: 400;
   font-size: 25px;
-  position: absolute;
+  /* position: absolute; */
   top: 35px;
 }
 
@@ -117,6 +120,7 @@
   align-items: center;
   gap: 25px;
   border: 1px solid grey;
+  margin-bottom: 30px;
   height: 120px;
   width: 250px;
   background-color: rgb(188, 162, 213, 0.3);
