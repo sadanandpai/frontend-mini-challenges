@@ -15,6 +15,9 @@
   background-color: rgb(171, 95, 196);
   border: 0;
   border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .modalContainer {
@@ -57,9 +60,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* gap: 5px 0; */
   cursor: pointer;
-  /* padding: 5px; */
   width: 70px;
   height: 70px;
   margin: 10px 1px;
@@ -102,7 +103,6 @@
   color: rgba(0, 0, 0, 0.8);
   font-weight: 400;
   font-size: 25px;
-  /* position: absolute; */
   top: 35px;
 }
 
@@ -127,4 +127,57 @@
   border: none;
   border-radius: 5px;
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 510px) {
+  .feedbackContainer {
+    padding: 10px;
+    flex-direction: column;
+  }
+
+  .feedbackResponse {
+    height: 150px;
+    width: auto;
+  }
+
+  .feedbackResponse p {
+    text-align: center;
+    text-wrap: wrap;
+  }
+
+  .modalContent {
+    width: 90%;
+    padding: 10px;
+    max-width: 200px;
+  }
+
+  textarea {
+    width: 100%;
+    font-size: 10px;
+  }
+
+  .feedbackBtn {
+    width: 80px;
+    height: 25px;
+  }
+
+  .iconItem {
+    width: 60px;
+    height: 60px;
+  }
+
+  .iconImage {
+    width: 30px;
+    height: 30px;
+  }
+
+  .iconContainer {
+    flex-wrap: wrap;
+  }
+
+  .modalClose {
+    font-size: 16px;
+    top: 5px;
+    right: 5px;
+  }
 }
