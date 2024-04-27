@@ -11,6 +11,7 @@ import ColumnTable from '@/challenges/column-table/ColumnTable';
 import Counter from '@/challenges/counter/counter';
 import EmailTemplates from '@/challenges/email-templates/EmailTemplates';
 import ExpenseTracker from '@/challenges/expense-tracker/App';
+import FeedbackModal from '@/challenges/feedback-modal/App';
 import FileExplorer from '@/challenges/file-explorer/App';
 import FoodRecipe from '@/challenges/food-recipe/App';
 import GuessNumber from '@/challenges/guess-number/App';
@@ -74,6 +75,7 @@ const reactChallengesMap = {
   stopwatch: <Stopwatch />,
   progressbar: <ProgressBar />,
   'infinite-scrolling': <InfiniteScrolling />,
+  'feedback-modal': <FeedbackModal />,
   'file-explorer': <FileExplorer />,
   'autocomplete-offline': <AutocompleteOffline />,
   'autocomplete-online': <AutocompleteOnline />,

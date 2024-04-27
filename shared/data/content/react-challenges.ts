@@ -593,6 +593,17 @@ const challenges = new Map<string, IChallenge>([
       isNew: true,
     },
   ],
+  [
+    'feedback-modal',
+    {
+      title: 'Feedback Modal',
+      link: 'feedback-modal',
+      difficulty: EDifficulty.Medium,
+      developer: 'ssudipta',
+      tags: [],
+      isNew: true,
+    },
+  ],
 ]);
 
 export const reactChallenges = sortChallengesByDifficulty(challenges);

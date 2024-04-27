@@ -1,0 +1,183 @@
+.feedbackContainer {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  background-color: white;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+}
+
+.feedbackBtn {
+  height: 30px;
+  width: 100px;
+  background-color: rgb(171, 95, 196);
+  border: 0;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modalContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99;
+}
+
+.modalContent {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+  position: relative;
+  width: 500px;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+}
+
+.iconContainer {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  padding: 15px 5px;
+}
+
+.iconItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  width: 70px;
+  height: 70px;
+  margin: 10px 1px;
+}
+
+.iconItem:hover {
+  background-color: darkgray;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transition: all 200ms ease;
+}
+
+.active {
+  background-color: rgb(188, 162, 213);
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.iconImage {
+  width: 40px;
+  height: 40px;
+}
+
+.iconItem p {
+  font-size: small;
+  margin: 5px;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.modalClose {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  background: none;
+  border: none;
+}
+
+.modalContent h1 {
+  color: rgba(0, 0, 0, 0.8);
+  font-weight: 400;
+  font-size: 25px;
+  top: 35px;
+}
+
+.feedbackContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.feedbackResponse {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  border: 1px solid grey;
+  margin-bottom: 30px;
+  height: 120px;
+  width: 250px;
+  background-color: rgb(188, 162, 213, 0.3);
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 510px) {
+  .feedbackContainer {
+    padding: 10px;
+    flex-direction: column;
+  }
+
+  .feedbackResponse {
+    height: 150px;
+    width: auto;
+  }
+
+  .feedbackResponse p {
+    text-align: center;
+    text-wrap: wrap;
+  }
+
+  .modalContent {
+    width: 90%;
+    padding: 10px;
+    max-width: 200px;
+  }
+
+  textarea {
+    width: 100%;
+    font-size: 10px;
+  }
+
+  .feedbackBtn {
+    width: 80px;
+    height: 25px;
+  }
+
+  .iconItem {
+    width: 60px;
+    height: 60px;
+  }
+
+  .iconImage {
+    width: 30px;
+    height: 30px;
+  }
+
+  .iconContainer {
+    flex-wrap: wrap;
+  }
+
+  .modalClose {
+    font-size: 16px;
+    top: 5px;
+    right: 5px;
+  }
+}
