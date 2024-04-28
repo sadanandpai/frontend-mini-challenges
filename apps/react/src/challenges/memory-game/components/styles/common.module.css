@@ -1,0 +1,28 @@
+.flex-row-center {
+  display: flex;
+  align-items: center;
+}
+
+.flexColumnCenter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.button {
+  padding: 5px 25px;
+  background-color: black;
+  color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+
+.container {
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
