@@ -58,6 +58,7 @@ import Stepper from '@/challenges/stepper/App';
 import InlineOptions from '@/challenges/inline-options/App';
 import DigitalClock from '@/challenges/7-segment-digital-clock/DigitalClock';
 import NestedComments from '@/challenges/nested-comments/App';
+import MemoryGame from '@/challenges/memory-game';
 
 const reactChallengesMap = {
   'transfer-list': <TransferListApp />,
@@ -117,6 +118,7 @@ const reactChallengesMap = {
   'digital-clock': <DigitalClock />,
   'nested-comments': <NestedComments />,
   '15puzzle': <FifteenPuzzle />,
+  'memory-game': <MemoryGame />,
 };
 
 function Challenge() {
