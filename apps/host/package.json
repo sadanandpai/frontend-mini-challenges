@@ -15,13 +15,15 @@
     "@fmc/assets": "*",
     "@fmc/data": "*",
     "@fmc/shared-styles": "*",
+    "clsx": "^2.1.1",
     "framer-motion": "^11.0.24",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.21.0",
     "react-router-hash-link": "^2.4.3",
     "react-select": "^5.8.0",
-    "swiper": "^11.0.5"
+    "swiper": "^11.0.5",
+    "tailwind-merge": "^2.3.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.43",
