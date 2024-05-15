@@ -593,6 +593,18 @@ const challenges = new Map<string, IChallenge>([
       isNew: true,
     },
   ],
+  [
+    'chips-input',
+    {
+      title: 'Chips Input',
+      link: 'chips-input',
+      difficulty: EDifficulty.Medium,
+      developer: 'Akshay-Omkar',
+      // contributors: ['arpansaha13'],
+      tags: [],
+      isNew: true,
+    },
+  ],
 ]);
 
 export const reactChallenges = sortChallengesByDifficulty(challenges);
