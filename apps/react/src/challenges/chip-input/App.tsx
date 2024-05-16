@@ -19,7 +19,7 @@ const App = () => {
 
   return (
     <>
-      <form onSubmit={submitFunction}>
+      <form onSubmit={submitFunction} className={style.formContainer}>
         <input
           type="text"
           placeholder="Type & hit Enter"
