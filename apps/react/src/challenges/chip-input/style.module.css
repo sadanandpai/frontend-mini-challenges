@@ -1,0 +1,24 @@
+.formContainer {
+  display: flex;
+  justify-content: center;
+}
+.input_text {
+  width: 80%;
+  padding: 1rem;
+  font-size: 1rem;
+  margin-bottom: 3rem;
+}
+
+.chips {
+  margin: 0.5em;
+  padding: 0.5em 0.75em;
+  background-color: #eee;
+  border: 1px solid lightgrey;
+  border-radius: 1em;
+}
+
+.remove {
+  border: none;
+  color: red;
+  cursor: pointer;
+}

@@ -59,6 +59,7 @@ import InlineOptions from '@/challenges/inline-options/App';
 import DigitalClock from '@/challenges/7-segment-digital-clock/DigitalClock';
 import NestedComments from '@/challenges/nested-comments/App';
 import MemoryGame from '@/challenges/memory-game';
+import ChipsInput from '@/challenges/chip-input/App';
 
 const reactChallengesMap = {
   'transfer-list': <TransferListApp />,
@@ -119,6 +120,7 @@ const reactChallengesMap = {
   'nested-comments': <NestedComments />,
   '15puzzle': <FifteenPuzzle />,
   'memory-game': <MemoryGame />,
+  'chip-input': <ChipsInput />,
 };
 
 function Challenge() {
