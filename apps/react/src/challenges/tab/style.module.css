@@ -1,0 +1,26 @@
+.container {
+  margin: 3rem;
+  padding: 1rem 0;
+  border: 1px solid lightgray;
+  border-radius: 1rem;
+  width: 50%;
+}
+.btn {
+  padding: 1rem 2rem;
+  background-color: lightblue;
+  color: white;
+  cursor: pointer;
+}
+
+.btn:first-child {
+  border-top-left-radius: 1rem;
+}
+
+.active {
+  background-color: rgb(71, 71, 232);
+}
+
+.content {
+  margin: 2rem 1rem;
+  line-height: 1.5;
+}
