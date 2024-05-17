@@ -1,1 +1,0 @@
-import"./header--O7D4Ug0.js";import"./navbar-TJfvz6_5.js";const t=document.getElementById("showDialog"),o=document.getElementById("dialogPopup"),e=document.getElementById("closeDialog");t.addEventListener("click",()=>{o.showModal()});e.addEventListener("click",()=>{o.close("")});
