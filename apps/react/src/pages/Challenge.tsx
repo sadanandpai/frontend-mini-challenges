@@ -61,6 +61,7 @@ import NestedComments from '@/challenges/nested-comments/App';
 import MemoryGame from '@/challenges/memory-game';
 import ChipsInput from '@/challenges/chip-input/App';
 import Tab from '@/challenges/tab/App';
+import DraggableList from '@/challenges/drag-drop/DraggableList';
 
 const reactChallengesMap = {
   'transfer-list': <TransferListApp />,
@@ -123,6 +124,7 @@ const reactChallengesMap = {
   'memory-game': <MemoryGame />,
   'chip-input': <ChipsInput />,
   tabs: <Tab />,
+  'drag-drop': <DraggableList />,
 };
 
 function Challenge() {

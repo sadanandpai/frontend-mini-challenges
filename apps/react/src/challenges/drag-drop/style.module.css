@@ -1,0 +1,38 @@
+.container {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.listContainer {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid lightgray;
+  padding: 1rem;
+  margin: 1rem;
+  cursor: grab;
+  border-radius: 1.5rem;
+  box-shadow:
+    rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.userDetail {
+  flex: 1; /* Each span takes equal space */
+  text-align: justify; /* Center text within each span */
+}
+
+.saveBtn {
+  margin: 2rem 0 0 1rem;
+  padding: 0.8rem;
+  letter-spacing: 1.2px;
+  border-radius: 1.2rem;
+  border: 0;
+  transition: all 0.2s ease;
+}
+
+.saveBtn:hover {
+  box-shadow:
+    rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
+    rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
+    rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+}
