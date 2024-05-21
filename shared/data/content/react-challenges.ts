@@ -635,6 +635,17 @@ const challenges = new Map<string, IChallenge>([
       isNew: true,
     },
   ],
+  [
+    'drag-drop',
+    {
+      title: 'Drag-Drop',
+      link: 'drag-drop',
+      difficulty: EDifficulty.Medium,
+      developer: 'Akshay-Omkar',
+      tags: [],
+      isNew: true,
+    },
+  ],
 ]);
 
 export const reactChallenges = sortChallengesByDifficulty(challenges);
