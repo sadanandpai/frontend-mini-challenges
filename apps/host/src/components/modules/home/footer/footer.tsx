@@ -1,7 +1,8 @@
 import styles from './footer.module.scss';
 
 function Footer() {
-  return <footer className={styles.footer}>Copyright © 2023</footer>;
+  const currentYear = new Date().getFullYear();
+  return <footer className={styles.footer}>Copyright © {currentYear}</footer>;
 }
 
 export default Footer;
