@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic');
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body{
+width: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+margin-top: 100px;
+background-color: rgb(31, 30, 30);
+color: white;
+font-family: roboto;
+}
+
+.container{
+    border: none;
+    border-radius: 15px;
+    background-color: rgb(41, 157, 251);
+    width: 25vw;
+    height: auto;
+    box-shadow:  5px 5px 10px rgb(11, 4, 4);
+    /* margin:200px auto; */
+    
+}
+
+.container .header{
+    text-align: center;
+    font-size: 25px;
+    font-family:Cursive;
+    font-weight: 900;
+    padding: 10px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.429);
+    margin-bottom: 20px;
+}
+
+.add-task{
+display: flex;
+justify-content: space-evenly;
+margin-bottom: 20px;
+}
+
+.add-task input{
+    width:15vw;
+    font-size: 14px;
+    padding: 8px;
+    outline-color: rgb(101, 101, 101);
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+.add-task input::placeholder{
+    font-weight: 400;
+}
+
+.add-task .add-btn{
+    border: none;
+    font-size: 12px;
+    padding: 7px 10px;
+    background-color: rgb(0, 255, 38);
+    border-radius: 5px;
+    font-weight: 700;
+}
+
+.add-task .add-btn:hover{
+    box-shadow:2px 2px 5px black;
+}
+
+.Task-List{
+    list-style: none;
+    display:flex;
+    flex-wrap: wrap;
+    margin: 10px;
+    gap: 10px;
+
+}
+.Task-List li{
+    border: 1px solid white;
+    padding: 10px;
+    border-radius: 5px;
+    width: 18vw;
+    font-size: 14px;
+    color: black;
+    background-color: white;
+    font-weight: 900;
+}
+
+.Task-List button{
+    border: none;
+    font-size: 12px;
+    padding: 5px 17px;
+    background-color:rgb(251, 0, 0);
+    border-radius: 5px;
+    font-weight: 700;
+}
+
+.Task-List button:hover{
+    box-shadow:2px 2px 5px black;
+}
+
