@@ -1,14 +1,4 @@
 
-*::after, *::before, *{
-    margin:0;
-    padding: 0;
-}
-body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
 .avatar{
     background-image: url(img.jpg);
     width: 500px;
