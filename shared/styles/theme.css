@@ -23,7 +23,7 @@
 [data-theme='dark'] {
   /* Default body colors */
   --bg-body: #030712;
-  --text-body: #e5e7eb;
+  --text-body: #030712;
 
   --bg-navbar: #030712;
   --shadow-navbar: rgba(150 150 150 / 0.2);
