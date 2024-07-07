@@ -62,6 +62,7 @@ import MemoryGame from '@/challenges/memory-game';
 import ChipsInput from '@/challenges/chip-input/App';
 import Tab from '@/challenges/tab/App';
 import DraggableList from '@/challenges/drag-drop/DraggableList';
+import Circles from '@/challenges/circles/circles';
 
 const reactChallengesMap = {
   'transfer-list': <TransferListApp />,
@@ -125,6 +126,7 @@ const reactChallengesMap = {
   'chip-input': <ChipsInput />,
   tabs: <Tab />,
   'drag-drop': <DraggableList />,
+  circles: <Circles />,
 };
 
 function Challenge() {

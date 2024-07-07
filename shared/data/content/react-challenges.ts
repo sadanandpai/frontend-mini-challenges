@@ -39,7 +39,6 @@ const challenges = new Map<string, IChallenge>([
       link: 'quote-generator',
       difficulty: EDifficulty.Easy,
       developer: 'viditagrawal56',
-      isNew: true,
       tags: [],
     },
   ],
@@ -50,7 +49,6 @@ const challenges = new Map<string, IChallenge>([
       link: 'image-gallery',
       difficulty: EDifficulty.Easy,
       developer: 'Bhushan1019',
-      isNew: true,
       tags: [],
     },
   ],
@@ -71,7 +69,6 @@ const challenges = new Map<string, IChallenge>([
       link: 'background-changer',
       developer: 'AdityaSuryawanshi',
       difficulty: EDifficulty.Easy,
-      isNew: true,
       tags: [],
     },
   ],
@@ -113,7 +110,6 @@ const challenges = new Map<string, IChallenge>([
       difficulty: EDifficulty.Easy,
       developer: 'ravi02205',
       tags: [],
-      isNew: true,
     },
   ],
   [
@@ -134,7 +130,6 @@ const challenges = new Map<string, IChallenge>([
       difficulty: EDifficulty.Easy,
       developer: 'Pancratzia',
       tags: [],
-      isNew: true,
     },
   ],
   [
@@ -155,7 +150,6 @@ const challenges = new Map<string, IChallenge>([
       difficulty: EDifficulty.Easy,
       developer: 'Sumitwarrior7',
       tags: [],
-      isNew: true,
     },
   ],
   [
@@ -166,7 +160,6 @@ const challenges = new Map<string, IChallenge>([
       difficulty: EDifficulty.Easy,
       developer: 'Sumitwarrior7',
       tags: [],
-      isNew: true,
     },
   ],
   [
@@ -217,7 +210,6 @@ const challenges = new Map<string, IChallenge>([
       difficulty: EDifficulty.Easy,
       developer: 'harsh472000',
       tags: [],
-      isNew: true,
     },
   ],
   [
@@ -269,7 +261,6 @@ const challenges = new Map<string, IChallenge>([
       difficulty: EDifficulty.Medium,
       developer: 'Sumitwarrior7',
       tags: [],
-      isNew: true,
     },
   ],
   [
@@ -280,7 +271,6 @@ const challenges = new Map<string, IChallenge>([
       difficulty: EDifficulty.Medium,
       developer: 'rishabhm05',
       tags: [],
-      isNew: true,
     },
   ],
   [
@@ -311,7 +301,6 @@ const challenges = new Map<string, IChallenge>([
       difficulty: EDifficulty.Medium,
       developer: 'rishabhm05',
       tags: [],
-      isNew: true,
     },
   ],
   [
@@ -343,7 +332,6 @@ const challenges = new Map<string, IChallenge>([
       difficulty: EDifficulty.Medium,
       developer: 'sadanandpai',
       tags: [],
-      isNew: true,
     },
   ],
   [
@@ -364,7 +352,6 @@ const challenges = new Map<string, IChallenge>([
       difficulty: EDifficulty.Medium,
       developer: 'jeevaramanathan',
       tags: [],
-      isNew: true,
     },
   ],
   [
@@ -385,7 +372,6 @@ const challenges = new Map<string, IChallenge>([
       difficulty: EDifficulty.Medium,
       developer: 'rashidtvmr',
       tags: [],
-      isNew: true,
     },
   ],
   [
@@ -396,7 +382,6 @@ const challenges = new Map<string, IChallenge>([
       difficulty: EDifficulty.Medium,
       developer: 'dhanu084',
       tags: [],
-      isNew: true,
     },
   ],
   [
@@ -407,7 +392,6 @@ const challenges = new Map<string, IChallenge>([
       difficulty: EDifficulty.Medium,
       developer: 'AbhilashMadi',
       tags: [],
-      isNew: true,
     },
   ],
   [
@@ -418,7 +402,6 @@ const challenges = new Map<string, IChallenge>([
       difficulty: EDifficulty.Medium,
       developer: 'AbhilashMadi',
       tags: [],
-      isNew: true,
     },
   ],
   [
@@ -429,7 +412,6 @@ const challenges = new Map<string, IChallenge>([
       difficulty: EDifficulty.Medium,
       developer: 'AnkitKTrivedi',
       tags: [],
-      isNew: true,
     },
   ],
   [
@@ -450,7 +432,6 @@ const challenges = new Map<string, IChallenge>([
       difficulty: EDifficulty.Medium,
       developer: 'Kei-K23',
       tags: [],
-      isNew: true,
     },
   ],
   [
@@ -471,7 +452,6 @@ const challenges = new Map<string, IChallenge>([
       difficulty: EDifficulty.Medium,
       developer: 'ayush-dutt-sharma',
       tags: [],
-      isNew: true,
     },
   ],
   [
@@ -482,7 +462,6 @@ const challenges = new Map<string, IChallenge>([
       difficulty: EDifficulty.Medium,
       developer: 'sadanandpai',
       tags: [],
-      isNew: true,
     },
   ],
   [
@@ -504,7 +483,6 @@ const challenges = new Map<string, IChallenge>([
       difficulty: EDifficulty.Medium,
       developer: 'rishabhm05',
       tags: [],
-      isNew: true,
     },
   ],
   [
@@ -515,7 +493,6 @@ const challenges = new Map<string, IChallenge>([
       difficulty: EDifficulty.Hard,
       developer: 'sadanandpai',
       tags: [],
-      isNew: true,
     },
   ],
   [
@@ -642,6 +619,17 @@ const challenges = new Map<string, IChallenge>([
       link: 'drag-drop',
       difficulty: EDifficulty.Medium,
       developer: 'Akshay-Omkar',
+      tags: [],
+      isNew: true,
+    },
+  ],
+  [
+    'circles',
+    {
+      title: 'Circles',
+      link: 'circles',
+      difficulty: EDifficulty.Medium,
+      developer: 'sadanandpai',
       tags: [],
       isNew: true,
     },

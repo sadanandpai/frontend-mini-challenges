@@ -1,0 +1,33 @@
+.container {
+  text-align: center;
+  font-size: 1.4rem;
+
+  .inputWrapper {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  input {
+    font-size: 1.4rem;
+    width: 100px;
+  }
+}
+
+.box {
+  border: 10px solid black;
+  position: relative;
+  margin: 20px auto;
+  box-sizing: content-box;
+}
+
+.circle {
+  border-radius: 50%;
+  border: 1px solid blue;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
