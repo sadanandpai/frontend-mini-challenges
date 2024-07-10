@@ -14,7 +14,7 @@ for (let i = 0; i < ticksCount; i++) {
   tick.classList.add('tick');
   tick.style.left = 50 + Math.sin(((Math.PI * 2) / ticksCount) * i) * 50 + '%';
   tick.style.top = 50 - Math.cos(((Math.PI * 2) / ticksCount) * i) * 50 + '%';
-  tick.style.transform = `rotate ${i * 6}deg`; // rotate the tick by 6deg for every second
+  tick.style.rotate = `${i * 6}deg`; // rotate the tick by 6deg for every second (360 / 60 = 6deg)
   ticks.appendChild(tick);
 }
 
