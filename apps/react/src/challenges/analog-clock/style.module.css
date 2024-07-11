@@ -8,29 +8,30 @@
 }
 
 .clock {
+  position: relative;
   display: flex;
-  justify-content: center;
   align-items: center;
-  margin: 2rem auto 0;
-  height: var(--clock-size);
+  justify-content: center;
   width: var(--clock-size);
+  height: var(--clock-size);
+  margin: 2rem auto 0;
   border: min(2vh, 2vw) solid var(--clock-color);
   border-radius: 50%;
 }
 
 .ticks {
   position: absolute;
-  width: 99%;
-  height: 99%;
+  width: 100%;
+  height: 100%;
 }
 
 .tick {
   position: absolute;
   height: 1%;
+  background-color: var(--tick-color);
   border: 1px solid var(--tick-color);
   transform: translate(-50%, -50%);
   transform-origin: top left;
-  background-color: var(--tick-color);
 }
 
 .tick:nth-child(5n + 1) {
@@ -42,60 +43,69 @@
   position: absolute;
   width: 90%;
   height: 90%;
-  color: var(--digit-color);
-  font-weight: 600;
   font-size: min(4vh, 4vw);
+  font-weight: 600;
+  color: var(--digit-color);
 }
 
 .digit {
   position: absolute;
+  text-shadow: 0 2px rgb(0, 0, 0, 15%);
   transform: translate(-50%, -50%);
-  text-shadow: 0px 2px rgb(0 0 0 / 15%);
 }
 
-.center-connector {
-  border-radius: 50%;
-  background-color: var(--clock-color);
-  height: 5%;
+.bgImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.75;
+}
+
+.centerConnector {
+  position: absolute;
+  z-index: 100;
   width: 5%;
+  height: 5%;
+  background-color: var(--clock-color);
+  border-radius: 50%;
 }
 
-.seconds-hand,
-.minutes-hand,
-.hours-hand {
+.secondsHand,
+.minutesHand,
+.hoursHand {
   position: absolute;
   background-color: var(--hand-color);
   transform-origin: 50% 100%;
 }
 
-.hours-hand {
-  width: 0.5%;
-  height: 30%;
+.hoursHand {
   top: 20%;
   left: calc(50% - 2.5px);
+  width: 0.5%;
+  height: 30%;
 }
 
-.minutes-hand {
-  width: 0.3%;
-  height: 45%;
+.minutesHand {
   top: 5%;
   left: calc(50% - 1.5px);
+  width: 0.3%;
+  height: 45%;
 }
 
-.seconds-hand {
-  width: 0.1%;
-  height: 55%;
+.secondsHand {
   top: 15%;
   left: calc(50% - 0.5px);
+  width: 0.1%;
+  height: 55%;
   transform-origin: 50% 63.5%;
 }
 
-.seconds-hand::before {
-  content: '';
+.secondsHand::before {
   position: absolute;
   bottom: 0;
   left: -250%;
-  height: 25%;
   width: 600%;
+  height: 25%;
+  content: '';
   background-color: var(--hand-color);
 }

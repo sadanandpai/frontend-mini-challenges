@@ -634,6 +634,17 @@ const challenges = new Map<string, IChallenge>([
       isNew: true,
     },
   ],
+  [
+    'analog-clock',
+    {
+      title: 'Analog Clock',
+      link: 'analog-clock',
+      difficulty: EDifficulty.Medium,
+      developer: 'sadanandpai',
+      tags: [],
+      isNew: true,
+    },
+  ],
 ]);
 
 export const reactChallenges = sortChallengesByDifficulty(challenges);

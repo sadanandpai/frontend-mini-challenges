@@ -1,3 +1,5 @@
+import { useParams } from 'react-router-dom';
+import { reactChallenges } from '@fmc/data/content';
 import FifteenPuzzle from '@/challenges/15puzzle/App.tsx';
 import Accordion from '@/challenges/accordion/App';
 import AutocompleteOffline from '@/challenges/autocomplete/autocompleteOffline';
@@ -47,8 +49,6 @@ import Otp from '@/challenges/otp/App';
 import TrafficLights from '@/challenges/traffic-light/App';
 import QuizApp from '@/challenges/quiz-app/App';
 import ChessBoard from '@/challenges/chess-board/App';
-import { reactChallenges } from '@fmc/data/content';
-import { useParams } from 'react-router-dom';
 import Calculator from '@/challenges/calculator/App';
 import WaterBalancer from '@/challenges/water-balancer/App';
 import TransferListApp from '@/challenges/transfer-list/TransferListApp';
@@ -63,6 +63,7 @@ import ChipsInput from '@/challenges/chip-input/App';
 import Tab from '@/challenges/tab/App';
 import DraggableList from '@/challenges/drag-drop/DraggableList';
 import Circles from '@/challenges/circles/circles';
+import AnalogClock from '@/challenges/analog-clock/analog-clock';
 
 const reactChallengesMap = {
   'transfer-list': <TransferListApp />,
@@ -127,6 +128,7 @@ const reactChallengesMap = {
   tabs: <Tab />,
   'drag-drop': <DraggableList />,
   circles: <Circles />,
+  'analog-clock': <AnalogClock />,
 };
 
 function Challenge() {
