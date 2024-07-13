@@ -1,6 +1,9 @@
-import { jsChallenges } from '@fmc/data/content';
+import '@fmc/shared-styles/theme';
+import '@fmc/shared-styles/base';
+import '@fmc/shared-styles/components';
+import '@fmc/shared-styles/utilities';
 import './navbar.ts';
-import '../styles/challenge-navbar.css';
+import { jsChallenges } from '@fmc/data/content';
 
 const metaUTF = document.createElement('meta');
 metaUTF.setAttribute('charset', 'UTF-8');

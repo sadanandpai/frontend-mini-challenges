@@ -14,7 +14,6 @@
     "vite": "^5.0.0"
   },
   "dependencies": {
-    "@fmc/components": "*",
     "@fmc/data": "*"
   }
 }

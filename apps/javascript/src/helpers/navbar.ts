@@ -1,36 +1,46 @@
-import { defineCustomElement as defineNavigationBar } from '@fmc/components/dist/components/navigation-bar.js';
 import { jsChallenges } from '@fmc/data/content';
-
-defineNavigationBar();
+import { logo } from '@fmc/assets/images';
+import '@fmc/shared-styles/navbar';
 
 const { VITE_PATH, VITE_HOST_URL, DEV } = import.meta.env;
 const backURL = DEV ? `${VITE_HOST_URL}${VITE_PATH}/#/javascript/` : `/${VITE_PATH}/#/javascript/`;
+const homeURL = DEV ? `${VITE_HOST_URL}${VITE_PATH}/` : `/${VITE_PATH}/`;
 
 const challengeLink = window.location.pathname.split('/challenges/')[1].slice(0, -1);
 const challenge = jsChallenges.get(challengeLink)!;
 
-const backButton = `
-  <a slot="left" href=${backURL} class="back">
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 24 24"
-      stroke-width="1.5"
-      stroke="currentColor"
-    >
-      <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
-    </svg>
-  </a>
+const navbar = document.createElement('nav');
+navbar.classList.add('challenge-navbar');
+navbar.innerHTML = `
+  <div class="left">
+    <a href=${backURL} class="back">
+      &lt;
+    </a>
+    <a class="logo" href=${homeURL}>
+      <img src=${logo} alt="logo" />
+    </a>
+  </div>
+
+  <h1>${challenge.title}</h1>
+
+  <div class="right">
+    ${
+      challenge?.youtube
+        ? `
+        <a slot="icon" href=${challenge.youtube} target="blank" class="youtube">
+          <img src="https://cdn-icons-png.flaticon.com/256/1384/1384060.png" alt="youtube solution" />
+        </a>
+      `
+        : ''
+    }
+    <a href="https://github.com/sadanandpai/frontend-mini-challenges/" target="blank">
+      <img
+        src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
+        alt="github repo"
+        class="github"
+      />
+    </a>
+  </div>
 `;
 
-const youtubeLink = challenge?.youtube
-  ? `<a slot="icon" href=${challenge.youtube} target="blank" class="youtube">
-    <img src="https://cdn-icons-png.flaticon.com/256/1384/1384060.png" alt="youtube solution" />
-  </a>`
-  : '';
-
-const navbar = document.createElement('navigation-bar');
-navbar.challengeTitle = challenge.title;
-navbar.innerHTML += backButton;
-navbar.innerHTML += youtubeLink;
 document.body.prepend(navbar);
