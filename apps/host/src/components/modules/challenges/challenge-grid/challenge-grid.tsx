@@ -35,7 +35,14 @@ function ChallengeGrid({ challenges, linkPrefix, links }: Props) {
     if (!searchInput && !optionSelected && !selectedDifficulties) {
       setFilteredChallenges(challenges);
     }
-  }, [challenges, searchInput, optionSelected, selectedDifficulties, isSegmentBtn1]);
+  }, [
+    challenges,
+    searchInput,
+    optionSelected,
+    selectedDifficulties,
+    isSegmentBtn1,
+    selectedChallengesByTags,
+  ]);
   return (
     <div className={styles.container}>
       <ChallengeFilters
