@@ -577,6 +577,7 @@ const challenges = new Map<string, IChallenge>([
       link: 'feedback-modal',
       difficulty: EDifficulty.Medium,
       developer: 'ssudipta',
+      tags: [],
     },
   ],
   [
@@ -584,8 +585,8 @@ const challenges = new Map<string, IChallenge>([
     {
       title: 'Memory Game',
       link: 'memory-game',
-      difficulty: EDifficulty.Hard,
-      developer: 'Akshat',
+      difficulty: EDifficulty.Medium,
+      developer: 'Akshat-Gupta',
       tags: [],
       isNew: true,
     },

@@ -105,13 +105,13 @@ table.leaderboardTable {
 }
 
 .totalContributions {
-  div:first-child {
-    display: none;
-  }
-
   display: flex;
   align-items: center;
   justify-content: center;
+
+  div:first-child {
+    display: none;
+  }
 
   div:last-child {
     font-weight: 500;

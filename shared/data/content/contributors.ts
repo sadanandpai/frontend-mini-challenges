@@ -186,15 +186,12 @@ export const contributors = new Map<string, IContributor>([
   ],
   ['liza', { name: 'Liza', pic: 'https://avatars.githubusercontent.com/u/78140921' }],
   ['Shardik04', { name: 'Hardik Shah', pic: 'https://avatars.githubusercontent.com/u/11913104' }],
-  [
-    'Vivek7038',
-    { name: 'Vivek Chavan', pic: 'https://avatars.githubusercontent.com/u/95691809?v=4' },
-  ],
+  ['Vivek7038', { name: 'Vivek Chavan', pic: 'https://avatars.githubusercontent.com/u/95691809' }],
   [
     'codechitra',
     {
       name: 'Akash Deep Chitransh',
-      pic: 'https://avatars.githubusercontent.com/u/85569078?v=4',
+      pic: 'https://avatars.githubusercontent.com/u/85569078',
     },
   ],
   ['takshch', { name: 'Taksh Chanana', pic: 'https://avatars.githubusercontent.com/u/26649558' }],
@@ -204,15 +201,12 @@ export const contributors = new Map<string, IContributor>([
   ],
   [
     'Akshay-Omkar',
-    { name: 'Akshay Omkar', pic: 'https://avatars.githubusercontent.com/u/62467248?v=4' },
+    { name: 'Akshay Omkar', pic: 'https://avatars.githubusercontent.com/u/62467248' },
   ],
-  ['Bateusz', { name: 'Mateusz', pic: 'https://avatars.githubusercontent.com/u/55596139?v=4' }],
-  [
-    'ssudipta',
-    { name: 'Sudipta Saha', pic: 'https://avatars.githubusercontent.com/u/10368983?v=4' },
-  ],
+  ['Bateusz', { name: 'Mateusz', pic: 'https://avatars.githubusercontent.com/u/55596139' }],
+  ['ssudipta', { name: 'Sudipta Saha', pic: 'https://avatars.githubusercontent.com/u/10368983' }],
   [
     'Akshat-Gupta',
-    { name: 'Akshat Gupta', pic: 'https://avatars.githubusercontent.com/u/53713926?v=4' },
+    { name: 'Akshat Gupta', pic: 'https://avatars.githubusercontent.com/u/53713926' },
   ],
 ]);

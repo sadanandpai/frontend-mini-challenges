@@ -278,7 +278,7 @@ const challenges: Map<string, IChallenge> = new Map([
       link: 'finance-tracker/',
       difficulty: EDifficulty.Medium,
       developer: 'sujitmahapatra',
-      tags: ['finance', 'web-app', 'javascript', 'css'],
+      tags: [],
     },
   ],
   [

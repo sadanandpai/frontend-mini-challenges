@@ -1,7 +1,7 @@
-import { Contributor } from './contributors-list';
+import { IContributor } from './contributors-list';
 import styles from './contribution.module.scss';
 
-function Contributor({ username, avatar }: Contributor) {
+function Contributor({ username, avatar }: IContributor) {
   return (
     <a
       href={`https://github.com/${username}`}

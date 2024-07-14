@@ -1,11 +1,10 @@
-import { useContext } from 'react';
 import React, { useState } from 'react';
-import { Drawer, Button } from 'antd';
-import { MenuOutlined } from '@ant-design/icons';
-import styles from './navbar.module.scss';
+import { useContext } from 'react';
+import { Drawer } from 'antd';
 import { logo } from '@fmc/assets/images';
 import { ThemeContext } from '../../ThemeWrapper';
-import { Sun, Moon } from 'lucide-react';
+import { Sun, Moon, Menu } from 'lucide-react';
+import styles from './navbar.module.scss';
 
 function Navbar({ children, title }: { children?: React.ReactNode; title?: string }) {
   const { theme, toggleTheme } = useContext(ThemeContext);
@@ -42,14 +41,14 @@ function Navbar({ children, title }: { children?: React.ReactNode; title?: strin
         </button>
       </div>
       <div className={styles.hamburger}>
-        <Button
-          type="text"
-          icon={<MenuOutlined />}
+        <button
           onClick={toggleDrawer}
           style={{
             color: theme === 'light' ? 'currentColor' : '#ffffff',
           }}
-        />
+        >
+          <Menu />
+        </button>
       </div>
 
       <Drawer

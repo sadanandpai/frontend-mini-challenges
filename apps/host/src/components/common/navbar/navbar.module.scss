@@ -55,6 +55,11 @@
   }
   .hamburger {
     display: none;
+
+    button {
+      border: none;
+      background: transparent;
+    }
   }
 
   @media screen and (max-width: 768px) {

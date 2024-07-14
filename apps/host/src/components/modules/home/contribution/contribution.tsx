@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Reorder } from 'framer-motion';
 import Contributor from './contributor';
-import { Contributor as IContributor, maintainersList } from './contributors-list';
+import { IContributor, maintainersList } from './contributors-list';
 import styles from './contribution.module.scss';
 import axios from 'axios';
 

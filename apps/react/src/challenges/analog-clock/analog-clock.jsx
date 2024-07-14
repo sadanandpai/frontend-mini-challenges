@@ -28,7 +28,7 @@ const AnalogClock = () => {
   return (
     <div className={styles.clock} style={{ overflow: 'hidden' }}>
       <img
-        src="https://images.pexels.com/photos/7895278/pexels-photo-7895278.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        src="https://images.unsplash.com/photo-1512428813834-c702c7702b78"
         alt=""
         className={styles.bgImg}
       />
