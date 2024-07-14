@@ -1,6 +1,7 @@
 import {
   contributors,
   angularChallenges,
+  cssChallenges,
   jsChallenges,
   reactChallenges,
   vueChallenges,
@@ -45,6 +46,7 @@ export function updateContributions(
 export const generateLeaderboardData = (): Map<string, LeaderboardEntry> => {
   const developerContributions: Map<string, DeveloperContributions> = new Map();
   const techChallengesMap = new Map([
+    ['css', cssChallenges],
     ['js', jsChallenges],
     ['react', reactChallenges],
     ['vue', vueChallenges],

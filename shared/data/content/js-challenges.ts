@@ -315,16 +315,6 @@ const challenges: Map<string, IChallenge> = new Map([
     },
   ],
   [
-    'css-shapes',
-    {
-      title: 'CSS Shapes',
-      link: 'css-shapes/',
-      difficulty: EDifficulty.Medium,
-      developer: 'sadanandpai',
-      tags: [],
-    },
-  ],
-  [
     'column-table',
     {
       title: 'Column Table',

@@ -1,0 +1,34 @@
+import '@fmc/shared-styles/theme';
+import '@fmc/shared-styles/base';
+import '@fmc/shared-styles/components';
+import '@fmc/shared-styles/utilities';
+import './navbar.ts';
+import { cssChallenges } from '@fmc/data/content';
+
+const metaUTF = document.createElement('meta');
+metaUTF.setAttribute('charset', 'UTF-8');
+
+const metaName = document.createElement('meta');
+metaName.setAttribute('name', 'viewport');
+metaName.setAttribute('content', 'width=device-width, initial-scale=1.0');
+
+const metaHTTP = document.createElement('meta');
+metaHTTP.setAttribute('http-equiv', 'X-UA-Compatible');
+metaHTTP.setAttribute('content', 'IE=edge');
+
+const favIcon = document.createElement('link');
+favIcon.setAttribute('rel', 'icon');
+favIcon.setAttribute('type', 'image/svg+xml');
+favIcon.setAttribute(
+  'href',
+  'https://github.com/sadanandpai/frontend-mini-challenges/raw/main/shared/assets/core/logo.png'
+);
+
+// Add all tags to the head
+const headTags = [metaUTF, metaName, metaHTTP, favIcon];
+headTags.forEach((tag) => document.head.prepend(tag));
+
+// Add title
+const challengeLink = window.location.pathname.split('/challenges/')[1].slice(0, -1);
+const challenge = cssChallenges.get(challengeLink);
+document.title = challenge.title;

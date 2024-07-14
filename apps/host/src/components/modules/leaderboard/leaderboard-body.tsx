@@ -1,12 +1,13 @@
 import { generateLeaderboardData } from '@/helpers/leaderboard';
+import { jsImg, reactImg, vueImg, angularImg, cssImg } from '@fmc/assets/images';
 import classes from './leaderboard.module.scss';
-import { jsImg, reactImg, vueImg, angularImg } from '@fmc/assets/images';
 
 function cn(...classnames: string[]) {
   return classnames.join(' ');
 }
 
 const techStackImgs = new Map([
+  ['css', cssImg],
   ['js', jsImg],
   ['react', reactImg],
   ['vue', vueImg],

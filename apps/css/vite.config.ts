@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite';
-import { jsChallenges } from '../../shared/data/content/index';
+import { cssChallenges } from '../../shared/data/content/index';
 
-const challengesPath = [...jsChallenges.values()].map(
+const challengesPath = [...cssChallenges.values()].map(
   (challenge) => `./src/challenges/${challenge.link}/index.html`
 );
 
@@ -13,9 +13,9 @@ export default defineConfig({
     },
   },
   server: {
-    port: 6012,
+    port: 6011,
     strictPort: true,
   },
-  base: '/frontend-mini-challenges/javascript/',
+  base: '/frontend-mini-challenges/css/',
   logLevel: 'silent',
 });

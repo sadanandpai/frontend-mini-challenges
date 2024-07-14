@@ -11,7 +11,7 @@ export default defineConfig({
     },
   },
   server: {
-    port: 6012,
+    port: 6013,
     strictPort: true,
   },
   base: '/frontend-mini-challenges/react/',

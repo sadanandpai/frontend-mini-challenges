@@ -1,25 +1,31 @@
-import { coverTransparent, jsImg, reactImg, vueImg, angularImg } from '@fmc/assets/images';
+import { coverTransparent, cssImg, jsImg, reactImg, vueImg, angularImg } from '@fmc/assets/images';
 import styles from './hero.module.scss';
 import { HashLink } from 'react-router-hash-link';
+
+const allImg = [
+  {
+    title: 'css',
+    imgSrc: cssImg,
+  },
+  {
+    title: 'JS',
+    imgSrc: jsImg,
+  },
+  {
+    title: 'react',
+    imgSrc: reactImg,
+  },
+  {
+    title: 'vue',
+    imgSrc: vueImg,
+  },
+  {
+    title: 'angular',
+    imgSrc: angularImg,
+  },
+];
+
 function Hero() {
-  const allImg = [
-    {
-      title: 'JS',
-      imgSrc: jsImg,
-    },
-    {
-      title: 'react',
-      imgSrc: reactImg,
-    },
-    {
-      title: 'vue',
-      imgSrc: vueImg,
-    },
-    {
-      title: 'angular',
-      imgSrc: angularImg,
-    },
-  ];
   return (
     <main className={styles.hero}>
       <div>

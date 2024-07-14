@@ -425,6 +425,18 @@ const challenges = new Map<string, IChallenge>([
     },
   ],
   [
+    'nested-comments',
+    {
+      title: 'Nested Comments',
+      link: 'nested-comments',
+      difficulty: EDifficulty.Hard,
+      developer: 'Akshay-Omkar',
+      // contributors: ['arpansaha13'],
+      tags: [],
+      isNew: true,
+    },
+  ],
+  [
     'password-generator',
     {
       title: 'Password Generator',
@@ -469,7 +481,7 @@ const challenges = new Map<string, IChallenge>([
     {
       title: 'Word Connect',
       link: 'word-connect',
-      difficulty: EDifficulty.Medium,
+      difficulty: EDifficulty.Hard,
       developer: 'sadanandpai',
       tags: [],
       isNew: true,
@@ -480,7 +492,7 @@ const challenges = new Map<string, IChallenge>([
     {
       title: 'OTP',
       link: 'otp',
-      difficulty: EDifficulty.Medium,
+      difficulty: EDifficulty.Hard,
       developer: 'rishabhm05',
       tags: [],
     },
@@ -543,18 +555,6 @@ const challenges = new Map<string, IChallenge>([
       link: 'digital-clock',
       difficulty: EDifficulty.Medium,
       developer: 'Syamsai-Polavarapu',
-      tags: [],
-      isNew: true,
-    },
-  ],
-  [
-    'nested-comments',
-    {
-      title: 'Nested Comments',
-      link: 'nested-comments',
-      difficulty: EDifficulty.Medium,
-      developer: 'Akshay-Omkar',
-      // contributors: ['arpansaha13'],
       tags: [],
       isNew: true,
     },
