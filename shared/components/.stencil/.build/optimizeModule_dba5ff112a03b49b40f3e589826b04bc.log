@@ -1,0 +1,1 @@
+import{p as e,b as a}from"./p-80b26b42.js";export{s as setNonce}from"./p-80b26b42.js";const n=()=>{const a=import.meta.url;const n={};if(a!==""){n.resourcesUrl=new URL(".",a).href}return e(n)};n().then((e=>a([["p-4fc00649",[[1,"challenge-grid"],[1,"navigation-bar",{challengeTitle:[1,"challenge-title"]}]]],["p-b75f85cb",[[1,"challenge-card",{challenge:[16]}]]]],e)));
