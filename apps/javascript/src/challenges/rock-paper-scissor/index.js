@@ -6,6 +6,10 @@ const choices = ['rock', 'paper', 'scissors'];
 const choicesImgs = [rock, paper, scissors];
 const computerChoiceImg = document.getElementById('computer-choice');
 const player = document.querySelector('#player');
+const resetBtn = document.querySelector('#btnReset');
+
+var playerScore = 0;
+var computerScore = 0;
 
 function getResult(player, computer) {
   if (player === computer) return "It's a draw!";
@@ -14,14 +18,22 @@ function getResult(player, computer) {
     (player === 'scissors' && computer === 'paper') ||
     (player === 'paper' && computer === 'rock')
   ) {
+    playerScore++;
     return 'You win!';
   }
+  computerScore++;
   return 'Computer wins!';
 }
 
 function displayResult(result) {
   const resultElement = document.getElementById('result');
   resultElement.textContent = result; // Set the result text
+  // Set score
+  document.getElementById('scoreboard').style.display = 'grid';
+  const playerScoreElement = document.getElementById('playerScore');
+  playerScoreElement.textContent = playerScore;
+  const computerScoreElement = document.getElementById('computerScore');
+  computerScoreElement.textContent = computerScore;
 }
 
 player.addEventListener('click', (event) => {
@@ -36,4 +48,12 @@ player.addEventListener('click', (event) => {
     const result = getResult(playerChoice, choices[randomChoice]);
     displayResult(result);
   }
+});
+
+resetBtn.addEventListener('click', (event) => {
+  playerScore = 0;
+  computerScore = 0;
+  displayResult('Choose your weapon!');
+  document.getElementById('computer').style.display = 'none';
+  document.getElementById('scoreboard').style.display = 'none';
 });
