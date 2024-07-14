@@ -20,14 +20,14 @@ body.dark .navbar-app a img {
 }
 
 body.dark,
-#innnerThemeSwitch:checked+.inner-container,
-body.dark #innnerThemeSwitch:checked+.inner-container {
+#innnerThemeSwitch:checked + .inner-container,
+body.dark #innnerThemeSwitch:checked + .inner-container {
   color: canvas;
   background-color: canvasText;
 }
 
-#innnerThemeSwitch+.inner-container,
-body.dark #innnerThemeSwitch+.inner-container {
+#innnerThemeSwitch + .inner-container,
+body.dark #innnerThemeSwitch + .inner-container {
   color: canvasText;
   background-color: canvas;
 }

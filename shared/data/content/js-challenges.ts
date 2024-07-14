@@ -89,49 +89,6 @@ const challenges: Map<string, IChallenge> = new Map([
     },
   ],
   [
-    'dialog-popup',
-    {
-      title: 'Dialog Popup',
-      link: 'dialog-popup/',
-      difficulty: EDifficulty.Easy,
-      developer: 'sahankatta',
-      youtube: 'https://youtu.be/aIzyEDi6zgU',
-      tags: [],
-    },
-  ],
-  [
-    'light-dark-mode',
-    {
-      title: 'Light & Dark mode',
-      link: 'light-dark-mode/',
-      difficulty: EDifficulty.Easy,
-      developer: 'sadanandpai',
-      youtube: 'https://youtu.be/hxcGGhjYNFE',
-      tags: [],
-    },
-  ],
-  [
-    'skeleton-loader',
-    {
-      title: 'Skeleton Loader',
-      link: 'skeleton-loader/',
-      difficulty: EDifficulty.Easy,
-      developer: 'sahankatta',
-      youtube: 'https://youtu.be/FEtTRjq1P6I',
-      tags: [],
-    },
-  ],
-  [
-    'spinning-loader',
-    {
-      title: 'Spinning Loader',
-      link: 'spinning-loader/',
-      difficulty: EDifficulty.Easy,
-      developer: 'DhanushNehru',
-      tags: [],
-    },
-  ],
-  [
     'music-kit',
     {
       title: 'Music Kit',
@@ -153,40 +110,6 @@ const challenges: Map<string, IChallenge> = new Map([
     },
   ],
   [
-    'accordion',
-    {
-      title: 'Accordion',
-      link: 'accordion/',
-      difficulty: EDifficulty.Easy,
-      developer: 'rashidtvmr',
-      youtube: 'https://youtu.be/03KFXudVaoo',
-      tags: [],
-    },
-  ],
-  [
-    'navigation-bar',
-    {
-      title: 'Navigation Bar',
-      link: 'navigation-bar/',
-      difficulty: EDifficulty.Easy,
-      developer: 'christian-lee1398',
-      youtube: 'https://youtu.be/urA5ogzG0L0',
-      tags: [],
-    },
-  ],
-  [
-    'Footer',
-    {
-      title: 'Footer',
-      link: 'Footer/',
-      difficulty: EDifficulty.Easy,
-      developer: 'AbhineshJha',
-      youtube: 'https://youtu.be/FRRlFLfdvBE?si=HWn88BwJGTJvEBUD',
-      tags: [],
-      isNew: true,
-    },
-  ],
-  [
     'rock-paper-scissor',
     {
       title: 'Rock Paper Scissor',
@@ -198,10 +121,10 @@ const challenges: Map<string, IChallenge> = new Map([
     },
   ],
   [
-    'MadStory_generator',
+    'story-generator',
     {
-      title: 'MadStory Generator',
-      link: 'MadStory_generator/',
+      title: 'Story Generator',
+      link: 'story-generator/',
       difficulty: EDifficulty.Easy,
       developer: 'hritik',
       tags: [],
@@ -238,16 +161,6 @@ const challenges: Map<string, IChallenge> = new Map([
       developer: 'VishakhaSainani',
       tags: [],
       isNew: true,
-    },
-  ],
-  [
-    'blobmaker',
-    {
-      title: 'Blob Maker',
-      link: 'blobmaker/',
-      difficulty: EDifficulty.Easy,
-      developer: 'AbhineshJha',
-      tags: [],
     },
   ],
   [
@@ -345,16 +258,6 @@ const challenges: Map<string, IChallenge> = new Map([
     },
   ],
   [
-    'star-rating-display',
-    {
-      title: 'Star Rating Display',
-      link: 'star-rating-display/',
-      difficulty: EDifficulty.Medium,
-      developer: 'sadanandpai',
-      tags: [],
-    },
-  ],
-  [
     'pixel-art',
     {
       title: 'Pixel Art',
@@ -392,17 +295,6 @@ const challenges: Map<string, IChallenge> = new Map([
       difficulty: EDifficulty.Medium,
       developer: 'sadanandpai',
       tags: [],
-    },
-  ],
-  [
-    'gradient-generator',
-    {
-      title: 'Gradient Generator',
-      link: 'gradient-generator/',
-      difficulty: EDifficulty.Medium,
-      developer: 'Sukomal07',
-      tags: [],
-      isNew: true,
     },
   ],
   [

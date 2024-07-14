@@ -33,9 +33,14 @@
   height: 30px;
   background-color: white;
   border-radius: 50%;
-  box-shadow: rgba(0, 0, 0, 0.15) 0 0 0 1px, rgba(0, 0, 0, 0.05) 0 10px 10px -5px, inset #fff 0 0 0 6px;
+  box-shadow:
+    rgba(0, 0, 0, 0.15) 0 0 0 1px,
+    rgba(0, 0, 0, 0.05) 0 10px 10px -5px,
+    inset #fff 0 0 0 6px;
   cursor: -webkit-grab;
-  transition: border 0.15s ease, box-shadow 0.15s ease;
+  transition:
+    border 0.15s ease,
+    box-shadow 0.15s ease;
   z-index: 2;
   display: flex;
   align-items: center;
@@ -63,9 +68,14 @@
   height: 30px;
   background-color: white;
   border-radius: 50%;
-  box-shadow: rgba(0, 0, 0, 0.15) 0 0 0 1px, rgba(0, 0, 0, 0.05) 0 10px 10px -5px, inset #fff 0 0 0 6px;
+  box-shadow:
+    rgba(0, 0, 0, 0.15) 0 0 0 1px,
+    rgba(0, 0, 0, 0.05) 0 10px 10px -5px,
+    inset #fff 0 0 0 6px;
   cursor: -webkit-grab;
-  transition: border 0.15s ease, box-shadow 0.15s ease;
+  transition:
+    border 0.15s ease,
+    box-shadow 0.15s ease;
   z-index: 2;
   display: flex;
   align-items: center;
@@ -80,7 +90,10 @@
 }
 
 .active {
-  box-shadow: #0066ff 0 0 0 1px, rgba(0, 0, 0, 0.05) 0 10px 10px -5px, inset #fff 0 0 0 6px;
+  box-shadow:
+    #0066ff 0 0 0 1px,
+    rgba(0, 0, 0, 0.05) 0 10px 10px -5px,
+    inset #fff 0 0 0 6px;
   z-index: 3;
 }
 
@@ -105,7 +118,9 @@
   width: 100%;
   padding: 0px 14px;
   height: 45px;
-  box-shadow: inset #d8d8da 0 0 0 1px, inset white 0 0 0 100px !important;
+  box-shadow:
+    inset #d8d8da 0 0 0 1px,
+    inset white 0 0 0 100px !important;
   border: none;
   font-size: 15px;
   border-radius: 10px;
