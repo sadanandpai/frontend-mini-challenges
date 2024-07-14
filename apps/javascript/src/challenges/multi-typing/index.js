@@ -4,8 +4,8 @@ const button = document.querySelector('.button');
 const speed = document.querySelector('.speedRange');
 const values = ['Student', 'Developer', 'Writer'];
 
-speed.default = 200;
-let duration = 200;
+speed.default = 200; // Set the default value of slider
+let duration = 200; // Initial value of typing speed
 
 function delay(duration) {
   return new Promise((resolve) => setTimeout(resolve, duration));
@@ -37,11 +37,11 @@ textLoad();
 
 button.addEventListener('click', () => {
   if (input.value) {
-    values.push(input.value);
+    values.push(input.value); //On clicking submit, the value of input will be added to the values array
     input.value = '';
   }
 });
 
 speed.addEventListener('change', () => {
-  duration = speed.value;
+  duration = speed.value; // This is listening for a change in the slider, once it's changed it will update global variable duration
 });
