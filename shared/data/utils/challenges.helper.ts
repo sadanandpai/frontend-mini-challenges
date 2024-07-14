@@ -73,7 +73,6 @@ export function getChallengesByDifficulties(challenges: IChallenge[], difficulti
 }
 export function getChallengesByTags(challenges: IChallenge[], tags: ETag[]) {
   if (!tags || tags.length === 0) return challenges;
-  console.log('tttt', challenges, tags);
   return challenges.filter((challenge) => {
     if (!challenge.tags) return false;
     return tags.some((tag: ETag) => (challenge.tags as ETag[])?.includes(tag));
