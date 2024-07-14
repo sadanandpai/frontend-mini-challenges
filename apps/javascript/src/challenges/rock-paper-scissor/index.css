@@ -31,3 +31,18 @@ h1 {
 #computer {
   display: none; /* Initially hidden */
 }
+
+#scoreboard {
+  margin-top: 20px;
+  display: none; /* Initially hidden */
+  justify-content: center;
+}
+
+#scoreboard table th {
+  padding: 10px;
+}
+
+#btnReset {
+  margin-top: 10px;
+  padding: 10px;
+}
