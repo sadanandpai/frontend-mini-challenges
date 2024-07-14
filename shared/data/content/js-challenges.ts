@@ -1,4 +1,4 @@
-import { EDifficulty, type IChallenge } from '../types/challenge';
+import { EDifficulty, ETag, type IChallenge } from '../types/challenge';
 import { sortChallengesByDifficulty } from '../utils/challenges.helper';
 
 const challenges: Map<string, IChallenge> = new Map([
@@ -204,7 +204,7 @@ const challenges: Map<string, IChallenge> = new Map([
       link: 'MadStory_generator/',
       difficulty: EDifficulty.Easy,
       developer: 'hritik',
-      tags: [],
+      tags: [ETag.interview],
     },
   ],
   [

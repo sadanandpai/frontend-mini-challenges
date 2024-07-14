@@ -6,6 +6,7 @@ import { contributors } from '@fmc/data/content';
 import { OptionType } from '@fmc/data/types';
 import { Difficulties } from '@fmc/data/constants';
 import { Search } from 'lucide-react';
+import { ETag } from '../../../../../../../shared/data/types/challenge';
 
 interface Props {
   searchInput: string;
@@ -15,6 +16,9 @@ interface Props {
   setOptionSelected: React.Dispatch<React.SetStateAction<OptionType[] | []>>;
   selectedDifficulties: OptionType[] | [];
   setSelectedDifficulties: React.Dispatch<React.SetStateAction<OptionType[] | []>>;
+  setSelectedChallengesByTags: Function;
+  isSegmentBtn1: boolean;
+  setIsSegmentBtn1: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 const ChallengeFilters = ({
@@ -25,6 +29,9 @@ const ChallengeFilters = ({
   selectedDifficulties,
   setSelectedDifficulties,
   links,
+  setSelectedChallengesByTags,
+  isSegmentBtn1,
+  setIsSegmentBtn1,
 }: Props) => {
   const DeveloperList = useMemo(() => {
     const developerList = new Map();
@@ -40,7 +47,6 @@ const ChallengeFilters = ({
     });
     return data;
   }, []);
-
   return (
     <div className={styles.filterOptionWrapper}>
       <div className={styles.searchInputWrapper}>
@@ -67,7 +73,28 @@ const ChallengeFilters = ({
         optionSelected={selectedDifficulties}
         setOptionSelected={(val: OptionType[]) => setSelectedDifficulties(val)}
       />
-
+      <div className={styles.customSegment}>
+        <button
+          data-active={isSegmentBtn1 ? true : false}
+          className={styles.segmentBtn1}
+          onClick={() => {
+            setIsSegmentBtn1(!isSegmentBtn1);
+            setSelectedChallengesByTags([ETag?.interview]);
+          }}
+        >
+          Interview
+        </button>
+        <button
+          data-active={!isSegmentBtn1 ? true : false}
+          className={styles.segmentBtn2}
+          onClick={() => {
+            setIsSegmentBtn1(!isSegmentBtn1);
+            setSelectedChallengesByTags([ETag?.all]);
+          }}
+        >
+          All
+        </button>
+      </div>
       <div className={styles.filterByTechWrapper}>
         {links.map((link) => (
           <Link to={`/${link.tech}`} key={link.tech}>

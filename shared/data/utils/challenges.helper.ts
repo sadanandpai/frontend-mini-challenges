@@ -1,5 +1,5 @@
 import { EDifficulty, IChallenge, OptionType } from '../types';
-import { IGetChallengesByid } from '../types/challenge';
+import { ETag, IGetChallengesByid } from '../types/challenge';
 
 const difficultyOrder = [EDifficulty.Easy, EDifficulty.Medium, EDifficulty.Hard];
 
@@ -71,17 +71,27 @@ export function getChallengesByDifficulties(challenges: IChallenge[], difficulti
   const difficultyValues = difficulties.map((difficulty) => difficulty.value);
   return challenges.filter((challenge) => difficultyValues.includes(challenge.difficulty));
 }
+export function getChallengesByTags(challenges: IChallenge[], tags: ETag[]) {
+  if (!tags || tags.length === 0) return challenges;
+  console.log('tttt', challenges, tags);
+  return challenges.filter((challenge) => {
+    if (!challenge.tags) return false;
+    return tags.some((tag: ETag) => (challenge.tags as ETag[])?.includes(tag));
+  });
+}
 
 export function getChallengesByid({
   challenges,
   title,
   contributors,
   difficulties,
+  tags,
 }: IGetChallengesByid) {
   if (
     (!title || title.length === 0) &&
     (!contributors || contributors.length === 0) &&
-    (!difficulties || difficulties.length === 0)
+    (!difficulties || difficulties.length === 0) &&
+    (!tags || tags.length === 0 || (tags?.length == 1 && tags[0] == ETag.all))
   ) {
     return challenges;
   }
@@ -91,6 +101,7 @@ export function getChallengesByid({
   filteredChallenges = getChallengesByContributors(filteredChallenges, contributors);
 
   filteredChallenges = getChallengesByDifficulties(filteredChallenges, difficulties);
+  filteredChallenges = getChallengesByTags(filteredChallenges, tags);
 
   return filteredChallenges;
 }
