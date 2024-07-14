@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import ReactSelect, { MultiValueProps, OptionProps } from 'react-select';
 import { components } from 'react-select';
 import { OptionType } from '../../../../../../shared/data/types/common';
 import PropTypes from 'prop-types';
+import { ThemeContext } from '@/components/ThemeWrapper';
 
 const Option = (props) => {
   return (
@@ -37,6 +38,7 @@ const CustomSelect: React.FC<Props> = ({
   optionSelected,
   setOptionSelected,
 }) => {
+  const { theme } = useContext(ThemeContext);
   const handleChange = (selected: OptionType[]) => {
     setOptionSelected(selected);
   };
@@ -64,10 +66,37 @@ const CustomSelect: React.FC<Props> = ({
             border: '2px solid #ccc',
             maxHeight: '200px',
             overflowY: 'auto',
+            background: theme === 'dark' ? '#000000' : '#ffffff',
           }),
           menuList: (base) => ({
             ...base,
             textAlign: 'left',
+            background: theme === 'dark' ? '#000000' : '#ffffff',
+          }),
+          option: (base, state) => {
+            const isDarkTheme = theme === 'dark';
+            const isLightTheme = theme === 'light';
+            const isSelected = state.isSelected;
+            const isFocused = state.isFocused;
+            return {
+              ...base,
+              color: isSelected ? '#ffffff' : isDarkTheme && isFocused ? '#000000' : 'inherit',
+              background: (() => {
+                if (isDarkTheme) {
+                  if (isSelected) return 'blue';
+                  if (isFocused) return '#ffffff';
+                }
+                if (isLightTheme) {
+                  if (isSelected) return '#2684FF';
+                  if (isFocused) return '#B2D4FF';
+                }
+                return 'initial';
+              })(),
+            };
+          },
+          placeholder: (base) => ({
+            ...base,
+            color: theme === 'dark' ? '#b0b3b8' : 'grey',
           }),
         }}
       />
