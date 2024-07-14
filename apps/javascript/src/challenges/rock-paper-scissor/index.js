@@ -50,6 +50,7 @@ player.addEventListener('click', (event) => {
   }
 });
 
+// reset button
 resetBtn.addEventListener('click', (event) => {
   playerScore = 0;
   computerScore = 0;
