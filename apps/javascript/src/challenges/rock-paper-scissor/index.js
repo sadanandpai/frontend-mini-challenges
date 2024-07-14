@@ -8,8 +8,8 @@ const computerChoiceImg = document.getElementById('computer-choice');
 const player = document.querySelector('#player');
 const resetBtn = document.querySelector('#btnReset');
 
-var playerScore = 0;
-var computerScore = 0;
+let playerScore = 0;
+let computerScore = 0;
 
 function getResult(player, computer) {
   if (player === computer) return "It's a draw!";
@@ -50,7 +50,7 @@ player.addEventListener('click', (event) => {
   }
 });
 
-// reset button
+// reset score
 resetBtn.addEventListener('click', (event) => {
   playerScore = 0;
   computerScore = 0;
