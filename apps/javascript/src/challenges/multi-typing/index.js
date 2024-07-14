@@ -5,23 +5,23 @@ const speed = document.querySelector('.speedRange');
 const values = ['Student', 'Developer', 'Writer'];
 
 speed.default = 200; // Set the default value of slider
-let duration = 200; // Initial value of typing speed
+let typingSpeed = 200; // Initial value of typing speed
 
 function delay(duration) {
   return new Promise((resolve) => setTimeout(resolve, duration));
 }
 
 async function displayTextWithTypingEffect(element, value) {
-  await delay(duration);
+  await delay(typingSpeed);
   for (let i = 0; i < value.length; i++) {
     element.textContent += value.charAt(i);
-    await delay(duration);
+    await delay(typingSpeed);
   }
 
-  await delay(duration);
+  await delay(typingSpeed);
   for (let i = 0; i < value.length; i++) {
     element.textContent = value.substring(0, value.length - 1 - i);
-    await delay(duration);
+    await delay(typingSpeed);
   }
 }
 
@@ -43,5 +43,5 @@ button.addEventListener('click', () => {
 });
 
 speed.addEventListener('change', () => {
-  duration = speed.value; // This is listening for a change in the slider, once it's changed it will update global variable duration
+  typingSpeed = speed.value; // This is listening for a change in the slider, once it's changed it will update global variable duration
 });
