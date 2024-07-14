@@ -5,6 +5,7 @@ import Challenge from './challenge';
 import styles from './challenge-grid.module.scss';
 import { getChallengesByid } from '../../../../../../../shared/data/utils/challenges.helper';
 import ChallengeFilters from './challenge-filter';
+import { ETag } from '../../../../../../../shared/data/types/challenge';
 
 interface Props {
   challenges: IChallenge[];
@@ -17,6 +18,8 @@ function ChallengeGrid({ challenges, linkPrefix, links }: Props) {
   const [filteredChallenges, setFilteredChallenges] = useState(challenges);
   const [optionSelected, setOptionSelected] = useState<OptionType[]>([]);
   const [selectedDifficulties, setSelectedDifficulties] = useState<OptionType[]>([]);
+  const [selectedChallengesByTags, setSelectedChallengesByTags] = useState<ETag[]>([]);
+  const [isSegmentBtn1, setIsSegmentBtn1] = useState(false);
 
   useEffect(() => {
     setFilteredChallenges(() =>
@@ -25,14 +28,14 @@ function ChallengeGrid({ challenges, linkPrefix, links }: Props) {
         title: searchInput,
         contributors: optionSelected,
         difficulties: selectedDifficulties,
+        tags: selectedChallengesByTags, // Convert OptionType[] to ETag[]
       })
     );
 
     if (!searchInput && !optionSelected && !selectedDifficulties) {
       setFilteredChallenges(challenges);
     }
-  }, [challenges, searchInput, optionSelected, selectedDifficulties]);
-
+  }, [challenges, searchInput, optionSelected, selectedDifficulties, isSegmentBtn1]);
   return (
     <div className={styles.container}>
       <ChallengeFilters
@@ -43,6 +46,9 @@ function ChallengeGrid({ challenges, linkPrefix, links }: Props) {
         setOptionSelected={setOptionSelected}
         selectedDifficulties={selectedDifficulties}
         setSelectedDifficulties={setSelectedDifficulties}
+        setSelectedChallengesByTags={setSelectedChallengesByTags}
+        isSegmentBtn1={isSegmentBtn1}
+        setIsSegmentBtn1={setIsSegmentBtn1}
       />
 
       {filteredChallenges.length ? (
