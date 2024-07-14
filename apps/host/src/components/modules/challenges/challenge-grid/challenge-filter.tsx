@@ -16,7 +16,7 @@ interface Props {
   setOptionSelected: React.Dispatch<React.SetStateAction<OptionType[] | []>>;
   selectedDifficulties: OptionType[] | [];
   setSelectedDifficulties: React.Dispatch<React.SetStateAction<OptionType[] | []>>;
-  setSelectedChallengesByTags: Function;
+  setSelectedChallengesByTags: React.Dispatch<React.SetStateAction<ETag[] | []>>;
   isSegmentBtn1: boolean;
   setIsSegmentBtn1: React.Dispatch<React.SetStateAction<boolean>>;
 }
@@ -78,7 +78,7 @@ const ChallengeFilters = ({
           data-active={isSegmentBtn1 ? true : false}
           className={styles.segmentBtn1}
           onClick={() => {
-            setIsSegmentBtn1(!isSegmentBtn1);
+            setIsSegmentBtn1(true);
             setSelectedChallengesByTags([ETag?.interview]);
           }}
         >
@@ -88,7 +88,7 @@ const ChallengeFilters = ({
           data-active={!isSegmentBtn1 ? true : false}
           className={styles.segmentBtn2}
           onClick={() => {
-            setIsSegmentBtn1(!isSegmentBtn1);
+            setIsSegmentBtn1(false);
             setSelectedChallengesByTags([ETag?.all]);
           }}
         >
