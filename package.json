@@ -8,7 +8,7 @@
     "build": "nx run-many -t build",
     "lint": "nx run-many -t lint",
     "build-baseless": "nx run-many -t build-baseless",
-    "copy-to-docs": "rm -rf docs && cp -r apps/host/dist docs && cp -r apps/javascript/dist docs/javascript && cp -r apps/react/dist docs/react && cp -r apps/vue/dist docs/vue && cp -r apps/angular/dist/angular/browser docs/angular",
+    "copy-to-docs": "rm -rf docs && cp -r apps/host/dist docs && cp -r apps/css/dist docs/css && cp -r apps/javascript/dist docs/javascript && cp -r apps/react/dist docs/react && cp -r apps/vue/dist docs/vue && cp -r apps/angular/dist/angular/browser docs/angular",
     "unit:test": "nx run-many -t unit:test",
     "prettify": "pretty-quick --staged",
     "prepare": "husky"
