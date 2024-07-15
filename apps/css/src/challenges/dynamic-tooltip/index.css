@@ -1,0 +1,68 @@
+.avatar {
+  background-image: url(img.jpg);
+  width: min(40vh, 40vw);
+  height: min(40vh, 40vw);
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  margin: 0 auto;
+}
+
+.avatar::before {
+  --scale: 0;
+  content: attr(data-tooltip);
+  color: white;
+  background-color: black;
+  position: absolute;
+  padding: 5px;
+  text-align: center;
+  transform: translate(-50%, -100%) scale(var(--scale));
+  transition: 80ms transform;
+  transform-origin: bottom center;
+  top: -0.6rem;
+  left: 50%;
+}
+
+.avatar::after {
+  --scale: 0;
+  content: '';
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-top-color: black;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -100%) scale(var(--scale));
+  transition: 80ms transform;
+  transform-origin: top center;
+  top: 0.59rem;
+}
+
+.avatar.left::before {
+  --scale: 0;
+  top: 50%;
+  left: -0.6rem;
+  transform: translate(-100%, 0%) scale(var(--scale));
+  transform-origin: left center;
+}
+
+.avatar.left::after {
+  --scale: 0;
+  top: 50%;
+  left: -0.8rem;
+  border: 10px solid transparent;
+  border-left-color: black;
+  transform: translate(0%, 30%) scale(var(--scale));
+  transition: 80ms transform;
+  transform-origin: right center;
+}
+
+.avatar:hover::before,
+.avatar.left.hover::before {
+  --scale: 1;
+}
+.avatar:hover::after,
+.avatar.left.hover::after {
+  --scale: 1;
+}

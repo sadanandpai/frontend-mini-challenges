@@ -34,6 +34,17 @@ const challenges: Map<string, IChallenge> = new Map([
     },
   ],
   [
+    'dynamic-tooltip',
+    {
+      title: 'Dynamic Tooltip',
+      link: 'dynamic-tooltip/',
+      difficulty: EDifficulty.Easy,
+      developer: 'officialbidisha',
+      tags: [],
+      isNew: true,
+    },
+  ],
+  [
     'light-dark-mode',
     {
       title: 'Light & Dark mode',
