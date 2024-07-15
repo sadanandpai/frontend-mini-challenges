@@ -1,4 +1,4 @@
-import { EDifficulty, type IChallenge } from '../types/challenge';
+import { EDifficulty, ETag, type IChallenge } from '../types/challenge';
 import { sortChallengesByDifficulty } from '../utils/challenges.helper';
 
 const challenges: Map<string, IChallenge> = new Map([
@@ -30,7 +30,7 @@ const challenges: Map<string, IChallenge> = new Map([
       difficulty: EDifficulty.Easy,
       developer: 'sahankatta',
       youtube: 'https://youtu.be/aIzyEDi6zgU',
-      tags: [],
+      tags: [ETag.interview],
     },
   ],
   [
@@ -40,7 +40,7 @@ const challenges: Map<string, IChallenge> = new Map([
       link: 'dynamic-tooltip/',
       difficulty: EDifficulty.Easy,
       developer: 'officialbidisha',
-      tags: [],
+      tags: [ETag.interview],
       isNew: true,
     },
   ],
@@ -74,7 +74,7 @@ const challenges: Map<string, IChallenge> = new Map([
       difficulty: EDifficulty.Easy,
       developer: 'rashidtvmr',
       youtube: 'https://youtu.be/03KFXudVaoo',
-      tags: [],
+      tags: [ETag.interview],
     },
   ],
   [
@@ -117,7 +117,7 @@ const challenges: Map<string, IChallenge> = new Map([
       link: 'star-rating-display/',
       difficulty: EDifficulty.Medium,
       developer: 'sadanandpai',
-      tags: [],
+      tags: [ETag.interview],
     },
   ],
   [
