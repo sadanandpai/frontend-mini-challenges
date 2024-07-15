@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useContext } from 'react';
 import { Drawer } from 'antd';
-import { logo } from '@fmc/assets/images';
+import { logo, logo_dark } from '@fmc/assets/images';
 import { ThemeContext } from '../../ThemeWrapper';
 import { Sun, Moon, Menu } from 'lucide-react';
 import styles from './navbar.module.scss';
@@ -17,7 +17,7 @@ function Navbar({ children, title }: { children?: React.ReactNode; title?: strin
   return (
     <nav className={styles.navbar}>
       <a className={styles.logo} href="/frontend-mini-challenges/">
-        <img src={logo} alt="logo" />
+        <img src={theme === 'light' ? logo : logo_dark} alt="logo" />
         <span>{title ?? 'Frontend Mini Challenges'}</span>
       </a>
 
