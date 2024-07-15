@@ -71,6 +71,7 @@ export function getChallengesByDifficulties(challenges: IChallenge[], difficulti
   const difficultyValues = difficulties.map((difficulty) => difficulty.value);
   return challenges.filter((challenge) => difficultyValues.includes(challenge.difficulty));
 }
+
 export function getChallengesByTags(challenges: IChallenge[], tags: ETag[]) {
   if (!tags || tags.length === 0) return challenges;
   return challenges.filter((challenge) => {

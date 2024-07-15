@@ -1,1 +1,1 @@
-export { filterChallengeByKey } from './challenges.helper';
+export { filterChallengeByKey, getChallengesByid } from './challenges.helper';
