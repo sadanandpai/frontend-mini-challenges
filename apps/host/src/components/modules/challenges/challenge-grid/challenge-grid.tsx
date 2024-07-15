@@ -17,7 +17,7 @@ function ChallengeGrid({ challenges, linkPrefix, links }: Props) {
   const [filteredChallenges, setFilteredChallenges] = useState(challenges);
   const [optionSelected, setOptionSelected] = useState<OptionType[]>([]);
   const [selectedDifficulties, setSelectedDifficulties] = useState<OptionType[]>([]);
-
+  const [newChallenge, setNewChallenge] = useState<boolean>(false);
   useEffect(() => {
     setFilteredChallenges(() =>
       getChallengesByid({
@@ -25,13 +25,14 @@ function ChallengeGrid({ challenges, linkPrefix, links }: Props) {
         title: searchInput,
         contributors: optionSelected,
         difficulties: selectedDifficulties,
+        newChallenge: newChallenge,
       })
     );
 
-    if (!searchInput && !optionSelected && !selectedDifficulties) {
+    if (!searchInput && !optionSelected && !selectedDifficulties && !newChallenge) {
       setFilteredChallenges(challenges);
     }
-  }, [challenges, searchInput, optionSelected, selectedDifficulties]);
+  }, [challenges, searchInput, optionSelected, selectedDifficulties, newChallenge]);
 
   return (
     <div className={styles.container}>
@@ -43,6 +44,8 @@ function ChallengeGrid({ challenges, linkPrefix, links }: Props) {
         setOptionSelected={setOptionSelected}
         selectedDifficulties={selectedDifficulties}
         setSelectedDifficulties={setSelectedDifficulties}
+        newChallenge={newChallenge}
+        setNewChallenge={setNewChallenge}
       />
 
       {filteredChallenges.length ? (

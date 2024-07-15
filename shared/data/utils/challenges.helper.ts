@@ -71,17 +71,23 @@ export function getChallengesByDifficulties(challenges: IChallenge[], difficulti
   const difficultyValues = difficulties.map((difficulty) => difficulty.value);
   return challenges.filter((challenge) => difficultyValues.includes(challenge.difficulty));
 }
+export function getChallengesByNewChallenge(challenges: IChallenge[], newChallenge: boolean) {
+  if (!newChallenge) return challenges;
+  return challenges.filter(({ isNew }) => isNew);
+}
 
 export function getChallengesByid({
   challenges,
   title,
   contributors,
   difficulties,
+  newChallenge,
 }: IGetChallengesByid) {
   if (
     (!title || title.length === 0) &&
     (!contributors || contributors.length === 0) &&
-    (!difficulties || difficulties.length === 0)
+    (!difficulties || difficulties.length === 0) &&
+    !newChallenge
   ) {
     return challenges;
   }
@@ -92,5 +98,6 @@ export function getChallengesByid({
 
   filteredChallenges = getChallengesByDifficulties(filteredChallenges, difficulties);
 
+  filteredChallenges = getChallengesByNewChallenge(filteredChallenges, newChallenge);
   return filteredChallenges;
 }

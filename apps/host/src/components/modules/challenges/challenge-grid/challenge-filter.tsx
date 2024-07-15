@@ -6,6 +6,7 @@ import { contributors } from '@fmc/data/content';
 import { OptionType } from '@fmc/data/types';
 import { Difficulties } from '@fmc/data/constants';
 import { Search } from 'lucide-react';
+import CustomCheckbox from '@/components/common/checkbox/checkbox';
 
 interface Props {
   searchInput: string;
@@ -15,6 +16,8 @@ interface Props {
   setOptionSelected: React.Dispatch<React.SetStateAction<OptionType[] | []>>;
   selectedDifficulties: OptionType[] | [];
   setSelectedDifficulties: React.Dispatch<React.SetStateAction<OptionType[] | []>>;
+  setNewChallenge: React.Dispatch<React.SetStateAction<boolean>>;
+  newChallenge: boolean;
 }
 
 const ChallengeFilters = ({
@@ -25,6 +28,8 @@ const ChallengeFilters = ({
   selectedDifficulties,
   setSelectedDifficulties,
   links,
+  setNewChallenge,
+  newChallenge,
 }: Props) => {
   const DeveloperList = useMemo(() => {
     const developerList = new Map();
@@ -67,7 +72,13 @@ const ChallengeFilters = ({
         optionSelected={selectedDifficulties}
         setOptionSelected={(val: OptionType[]) => setSelectedDifficulties(val)}
       />
-
+      <CustomCheckbox
+        className={styles.checkbox}
+        checked={newChallenge}
+        setNewChallenge={setNewChallenge}
+        label="New Challenges"
+        containerClass={styles.checkboxContainer}
+      />
       <div className={styles.filterByTechWrapper}>
         {links.map((link) => (
           <Link to={`/${link.tech}`} key={link.tech}>

@@ -23,4 +23,5 @@ export interface IGetChallengesByid {
   title: string;
   contributors: OptionType[];
   difficulties: OptionType[];
+  newChallenge: boolean;
 }
