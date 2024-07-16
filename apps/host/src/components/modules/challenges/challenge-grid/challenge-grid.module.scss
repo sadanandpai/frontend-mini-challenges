@@ -1,14 +1,14 @@
 .filterOptionWrapper {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 1rem;
+  position: relative;
   margin: 2rem 0;
 }
 
 .searchInputWrapper {
   position: relative;
   height: 35px;
-
   .searchInput {
     outline: none;
     padding: 0.5rem 1rem;
@@ -182,4 +182,34 @@
     cursor: pointer;
   }
   cursor: pointer;
+}
+.customSegment {
+  display: flex;
+  justify-self: flex-start;
+  width: 70%;
+  border: 2px solid #ccc;
+}
+.segmentBtn1 {
+  background-color: #cecdcd;
+  width: 50%;
+  border: none;
+  &[data-active='true'] {
+    background-color: white;
+    border: none;
+    padding: 0px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+}
+
+.segmentBtn2 {
+  background-color: #cecdcd;
+  border: none;
+  width: 50%;
+  &[data-active='true'] {
+    background-color: white;
+    padding: 0px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
 }

@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
-import { IChallenge, OptionType } from '@fmc/data/types';
+import { ETag, IChallenge, OptionType } from '@fmc/data/types';
 import { contributors } from '@fmc/data/content';
 import Challenge from './challenge';
 import styles from './challenge-grid.module.scss';
-import { getChallengesByid } from '../../../../../../../shared/data/utils/challenges.helper';
 import ChallengeFilters from './challenge-filter';
+import { getChallengesByid } from '@fmc/data/utils';
 
 interface Props {
   challenges: IChallenge[];
@@ -18,6 +18,9 @@ function ChallengeGrid({ challenges, linkPrefix, links }: Props) {
   const [optionSelected, setOptionSelected] = useState<OptionType[]>([]);
   const [selectedDifficulties, setSelectedDifficulties] = useState<OptionType[]>([]);
   const [newChallenge, setNewChallenge] = useState<boolean>(false);
+  const [selectedChallengesByTags, setSelectedChallengesByTags] = useState<ETag[]>([]);
+  const [isSegmentBtn1, setIsSegmentBtn1] = useState(false);
+
   useEffect(() => {
     setFilteredChallenges(() =>
       getChallengesByid({
@@ -26,14 +29,22 @@ function ChallengeGrid({ challenges, linkPrefix, links }: Props) {
         contributors: optionSelected,
         difficulties: selectedDifficulties,
         newChallenge: newChallenge,
+        tags: selectedChallengesByTags, // Convert OptionType[] to ETag[]
       })
     );
 
     if (!searchInput && !optionSelected && !selectedDifficulties && !newChallenge) {
       setFilteredChallenges(challenges);
     }
-  }, [challenges, searchInput, optionSelected, selectedDifficulties, newChallenge]);
-
+  }, [
+    challenges,
+    searchInput,
+    optionSelected,
+    selectedDifficulties,
+    isSegmentBtn1,
+    selectedChallengesByTags,
+    newChallenge,
+  ]);
   return (
     <div className={styles.container}>
       <ChallengeFilters
@@ -46,6 +57,9 @@ function ChallengeGrid({ challenges, linkPrefix, links }: Props) {
         setSelectedDifficulties={setSelectedDifficulties}
         newChallenge={newChallenge}
         setNewChallenge={setNewChallenge}
+        setSelectedChallengesByTags={setSelectedChallengesByTags}
+        isSegmentBtn1={isSegmentBtn1}
+        setIsSegmentBtn1={setIsSegmentBtn1}
       />
 
       {filteredChallenges.length ? (

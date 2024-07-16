@@ -5,6 +5,10 @@ export const enum EDifficulty {
   Medium = 'medium',
   Hard = 'hard',
 }
+export const enum ETag {
+  interview = 'interview',
+  all = 'all',
+}
 
 export interface IChallenge {
   title: string;
@@ -13,7 +17,7 @@ export interface IChallenge {
   developer: string;
   contributors?: string[];
   youtube?: string;
-  tags?: string[];
+  tags?: ETag[] | [];
   isNew?: boolean;
   longLink?: string;
 }
@@ -24,4 +28,5 @@ export interface IGetChallengesByid {
   contributors: OptionType[];
   difficulties: OptionType[];
   newChallenge: boolean;
+  tags: ETag[] | [];
 }

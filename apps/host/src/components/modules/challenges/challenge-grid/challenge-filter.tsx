@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import styles from './challenge-grid.module.scss';
 import { useMemo } from 'react';
 import { contributors } from '@fmc/data/content';
-import { OptionType } from '@fmc/data/types';
+import { ETag, OptionType } from '@fmc/data/types';
 import { Difficulties } from '@fmc/data/constants';
 import { Search } from 'lucide-react';
 import CustomCheckbox from '@/components/common/checkbox/checkbox';
@@ -18,6 +18,9 @@ interface Props {
   setSelectedDifficulties: React.Dispatch<React.SetStateAction<OptionType[] | []>>;
   setNewChallenge: React.Dispatch<React.SetStateAction<boolean>>;
   newChallenge: boolean;
+  setSelectedChallengesByTags: React.Dispatch<React.SetStateAction<ETag[] | []>>;
+  isSegmentBtn1: boolean;
+  setIsSegmentBtn1: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 const ChallengeFilters = ({
@@ -30,6 +33,9 @@ const ChallengeFilters = ({
   links,
   setNewChallenge,
   newChallenge,
+  setSelectedChallengesByTags,
+  isSegmentBtn1,
+  setIsSegmentBtn1,
 }: Props) => {
   const DeveloperList = useMemo(() => {
     const developerList = new Map();
@@ -45,7 +51,6 @@ const ChallengeFilters = ({
     });
     return data;
   }, []);
-
   return (
     <div className={styles.filterOptionWrapper}>
       <div className={styles.searchInputWrapper}>
@@ -79,6 +84,28 @@ const ChallengeFilters = ({
         label="New Challenges"
         containerClass={styles.checkboxContainer}
       />
+      <div className={styles.customSegment}>
+        <button
+          data-active={isSegmentBtn1 ? true : false}
+          className={styles.segmentBtn1}
+          onClick={() => {
+            setIsSegmentBtn1(true);
+            setSelectedChallengesByTags([ETag.interview]);
+          }}
+        >
+          Interview
+        </button>
+        <button
+          data-active={!isSegmentBtn1 ? true : false}
+          className={styles.segmentBtn2}
+          onClick={() => {
+            setIsSegmentBtn1(false);
+            setSelectedChallengesByTags([ETag.all]);
+          }}
+        >
+          All
+        </button>
+      </div>
       <div className={styles.filterByTechWrapper}>
         {links.map((link) => (
           <Link to={`/${link.tech}`} key={link.tech}>

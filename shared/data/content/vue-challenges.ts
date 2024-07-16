@@ -1,4 +1,4 @@
-import { EDifficulty, type IChallenge } from '../types/challenge';
+import { EDifficulty, ETag, type IChallenge } from '../types/challenge';
 import { sortChallengesByDifficulty } from '../utils/challenges.helper';
 
 const challenges = new Map<string, IChallenge>([
@@ -9,7 +9,7 @@ const challenges = new Map<string, IChallenge>([
       link: '/counter',
       difficulty: EDifficulty.Easy,
       developer: 'arpansaha13',
-      tags: [],
+      tags: [ETag.interview],
     },
   ],
   [
@@ -19,7 +19,7 @@ const challenges = new Map<string, IChallenge>([
       link: '/accordion',
       difficulty: EDifficulty.Easy,
       developer: 'arpansaha13',
-      tags: [],
+      tags: [ETag.interview],
     },
   ],
   [
@@ -49,7 +49,7 @@ const challenges = new Map<string, IChallenge>([
       link: '/guess-the-number',
       difficulty: EDifficulty.Easy,
       developer: 'arpansaha13',
-      tags: [],
+      tags: [ETag.interview],
     },
   ],
   [
@@ -79,7 +79,7 @@ const challenges = new Map<string, IChallenge>([
       link: '/telephone-formatter',
       difficulty: EDifficulty.Easy,
       developer: 'arpansaha13',
-      tags: [],
+      tags: [ETag.interview],
     },
   ],
   [
@@ -99,7 +99,7 @@ const challenges = new Map<string, IChallenge>([
       link: '/tic-tac-toe',
       difficulty: EDifficulty.Medium,
       developer: 'sadanandpai',
-      tags: [],
+      tags: [ETag.interview],
     },
   ],
   [
@@ -109,7 +109,7 @@ const challenges = new Map<string, IChallenge>([
       link: '/toast-popup',
       difficulty: EDifficulty.Medium,
       developer: 'arpansaha13',
-      tags: [],
+      tags: [ETag.interview],
     },
   ],
   [
@@ -119,7 +119,7 @@ const challenges = new Map<string, IChallenge>([
       link: '/password-strength',
       difficulty: EDifficulty.Medium,
       developer: 'jaydadhaniya',
-      tags: [],
+      tags: [ETag.interview],
     },
   ],
   [
@@ -139,7 +139,7 @@ const challenges = new Map<string, IChallenge>([
       link: '/stopwatch',
       difficulty: EDifficulty.Medium,
       developer: 'Shardik04',
-      tags: [],
+      tags: [ETag.interview],
     },
   ],
 ]);
