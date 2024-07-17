@@ -72,8 +72,8 @@ export function getChallengesByDifficulties(challenges: IChallenge[], difficulti
   return challenges.filter((challenge) => difficultyValues.includes(challenge.difficulty));
 }
 
-export function getChallengesByTags(challenges: IChallenge[], tags: ETag[]) {
-  if (!tags || tags.length === 0) return challenges;
+export function getChallengesByTags(challenges: IChallenge[], tags: ETag[], isResetTags: boolean) {
+  if (isResetTags) return challenges;
   return challenges.filter((challenge) => {
     if (!challenge.tags) return false;
     return tags.some((tag: ETag) => (challenge.tags as ETag[])?.includes(tag));
@@ -87,11 +87,12 @@ export function getChallengesByid({
   difficulties,
   tags,
 }: IGetChallengesByid) {
+  const isResetTags = !tags || tags.length === 0 || (tags?.length == 1 && tags[0] == ETag.all);
   if (
     (!title || title.length === 0) &&
     (!contributors || contributors.length === 0) &&
     (!difficulties || difficulties.length === 0) &&
-    (!tags || tags.length === 0 || (tags?.length == 1 && tags[0] == ETag.all))
+    isResetTags
   ) {
     return challenges;
   }
@@ -101,7 +102,7 @@ export function getChallengesByid({
   filteredChallenges = getChallengesByContributors(filteredChallenges, contributors);
 
   filteredChallenges = getChallengesByDifficulties(filteredChallenges, difficulties);
-  filteredChallenges = getChallengesByTags(filteredChallenges, tags);
+  filteredChallenges = getChallengesByTags(filteredChallenges, tags, isResetTags);
 
   return filteredChallenges;
 }
