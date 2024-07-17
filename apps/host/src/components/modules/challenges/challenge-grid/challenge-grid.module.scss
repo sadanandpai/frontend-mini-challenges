@@ -198,3 +198,18 @@
     cursor: pointer;
   }
 }
+.checkboxContainer {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  column-gap: 0.3rem;
+  .checkbox {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+  }
+  label {
+    cursor: pointer;
+  }
+  cursor: pointer;
+}
