@@ -79,20 +79,25 @@ export function getChallengesByTags(challenges: IChallenge[], tags: ETag[], isRe
     return tags.some((tag: ETag) => (challenge.tags as ETag[])?.includes(tag));
   });
 }
-
+export function getChallengesByNewChallenge(challenges: IChallenge[], newChallenge: boolean) {
+  if (!newChallenge) return challenges;
+  return challenges.filter(({ isNew }) => isNew);
+}
 export function getChallengesByid({
   challenges,
   title,
   contributors,
   difficulties,
   tags,
+  newChallenge,
 }: IGetChallengesByid) {
   const isResetTags = !tags || tags.length === 0 || (tags?.length == 1 && tags[0] == ETag.all);
   if (
     (!title || title.length === 0) &&
     (!contributors || contributors.length === 0) &&
     (!difficulties || difficulties.length === 0) &&
-    isResetTags
+    isResetTags &&
+    !newChallenge
   ) {
     return challenges;
   }
@@ -102,7 +107,9 @@ export function getChallengesByid({
   filteredChallenges = getChallengesByContributors(filteredChallenges, contributors);
 
   filteredChallenges = getChallengesByDifficulties(filteredChallenges, difficulties);
+
   filteredChallenges = getChallengesByTags(filteredChallenges, tags, isResetTags);
 
+  filteredChallenges = getChallengesByNewChallenge(filteredChallenges, newChallenge);
   return filteredChallenges;
 }

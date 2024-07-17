@@ -28,4 +28,5 @@ export interface IGetChallengesByid {
   contributors: OptionType[];
   difficulties: OptionType[];
   tags: ETag[] | [];
+  newChallenge: boolean;
 }
