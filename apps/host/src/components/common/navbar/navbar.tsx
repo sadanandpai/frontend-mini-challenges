@@ -29,8 +29,8 @@ function Navbar({
         <span>{title ?? 'Frontend Mini Challenges'}</span>
       </a>
 
-      <div className={styles.logo}>
-        <span>{subheading ?? 'Frontend Mini Challenges'}</span>
+      <div className={styles.heading}>
+        <span>{subheading ?? ''}</span>
       </div>
 
       <div className={styles.right}>
