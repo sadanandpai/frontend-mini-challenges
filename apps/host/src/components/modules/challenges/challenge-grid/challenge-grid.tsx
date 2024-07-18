@@ -4,8 +4,7 @@ import { contributors } from '@fmc/data/content';
 import Challenge from './challenge';
 import styles from './challenge-grid.module.scss';
 import ChallengeFilters from './challenge-filter';
-import { getChallengesByid } from '@fmc/data/utils';
-import { filtersHelper } from '@fmc/data/utils';
+import { getChallengesByid, filtersHelper } from '@fmc/data/utils';
 
 interface Props {
   challenges: IChallenge[];
