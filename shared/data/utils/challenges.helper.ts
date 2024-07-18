@@ -130,8 +130,8 @@ export function filtersHelper() {
     searchInput: '',
     optionSelected: [],
     selectedDifficulties: [],
-    isSegmentBtn1: false,
-    selectedChallengesByTags: [],
+    isSegmentBtn1: true,
+    selectedChallengesByTags: ['interview'],
     newChallenge: false,
   };
 }
