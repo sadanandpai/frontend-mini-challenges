@@ -5,6 +5,7 @@ import Challenge from './challenge';
 import styles from './challenge-grid.module.scss';
 import ChallengeFilters from './challenge-filter';
 import { getChallengesByid } from '@fmc/data/utils';
+import { filtersHelper } from '@fmc/data/utils';
 
 interface Props {
   challenges: IChallenge[];
@@ -13,30 +14,7 @@ interface Props {
 }
 
 function ChallengeGrid({ challenges, linkPrefix, links }: Props) {
-  const initialSearchFilters = () => {
-    const filters = sessionStorage.getItem('searchFilters');
-    if (filters) {
-      const parsedFilters = JSON.parse(filters);
-      return {
-        searchInput: parsedFilters.searchInput || '',
-        optionSelected: parsedFilters.optionSelected || [],
-        selectedDifficulties: parsedFilters.selectedDifficulties || [],
-        isSegmentBtn1: parsedFilters.isSegmentBtn1 || false,
-        selectedChallengesByTags: parsedFilters.selectedChallengesByTags || [],
-        newChallenge: parsedFilters.newChallenge || false,
-      };
-    }
-    return {
-      searchInput: '',
-      optionSelected: [],
-      selectedDifficulties: [],
-      isSegmentBtn1: false,
-      selectedChallengesByTags: [],
-      newChallenge: false,
-    };
-  };
-
-  const initialFilters = initialSearchFilters();
+  const initialFilters = filtersHelper();
 
   const [searchInput, setSearchInput] = useState(initialFilters.searchInput);
   const [filteredChallenges, setFilteredChallenges] = useState(challenges);
