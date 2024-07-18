@@ -4,7 +4,7 @@ import Navbar from '@/components/common/navbar/navbar';
 function LeaderboardPage() {
   return (
     <>
-      <Navbar title="Frontend Mini Challenges" subheading="Leaderboard" />
+      <Navbar subheading="Leaderboard" />
       <Leaderboard />
     </>
   );
