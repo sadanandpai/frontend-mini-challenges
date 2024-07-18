@@ -12,7 +12,7 @@ import { Link } from 'react-router-dom';
 function HomePage() {
   return (
     <>
-      <Navbar>
+      <Navbar subheading="">
         <HashLink to="#whyUs">Why us?</HashLink>
         <HashLink to="#testimonials">Testimonials</HashLink>
         <HashLink to="#contributors">Contributors</HashLink>

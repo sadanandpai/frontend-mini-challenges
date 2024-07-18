@@ -6,7 +6,15 @@ import { ThemeContext } from '../../ThemeWrapper';
 import { Sun, Moon, Menu } from 'lucide-react';
 import styles from './navbar.module.scss';
 
-function Navbar({ children, title }: { children?: React.ReactNode; title?: string }) {
+function Navbar({
+  children,
+  title,
+  subheading,
+}: {
+  children?: React.ReactNode;
+  title?: string;
+  subheading?: string;
+}) {
   const { theme, toggleTheme } = useContext(ThemeContext);
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
@@ -20,6 +28,10 @@ function Navbar({ children, title }: { children?: React.ReactNode; title?: strin
         <img src={theme === 'light' ? logo : logo_dark} alt="logo" />
         <span>{title ?? 'Frontend Mini Challenges'}</span>
       </a>
+
+      <div className={styles.logo}>
+        <span>{subheading ?? 'Frontend Mini Challenges'}</span>
+      </div>
 
       <div className={styles.right}>
         <div className={styles.links}>{children}</div>
