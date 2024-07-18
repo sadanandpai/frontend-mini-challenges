@@ -63,12 +63,12 @@ function ChallengeGrid({ challenges, linkPrefix, links }: Props) {
     );
 
     const searchFilters = {
-      searchInput: searchInput,
-      optionSelected: optionSelected,
-      selectedDifficulties: selectedDifficulties,
-      isSegmentBtn1: isSegmentBtn1,
-      selectedChallengesByTags: selectedChallengesByTags,
-      newChallenge: newChallenge,
+      searchInput,
+      optionSelected,
+      selectedDifficulties,
+      isSegmentBtn1,
+      selectedChallengesByTags,
+      newChallenge,
     };
 
     sessionStorage.setItem('searchFilters', JSON.stringify(searchFilters));
