@@ -13,13 +13,42 @@ interface Props {
 }
 
 function ChallengeGrid({ challenges, linkPrefix, links }: Props) {
-  const [searchInput, setSearchInput] = useState('');
+  const initialSearchFilters = () => {
+    const filters = sessionStorage.getItem('searchFilters');
+    if (filters) {
+      const parsedFilters = JSON.parse(filters);
+      return {
+        searchInput: parsedFilters.searchInput || '',
+        optionSelected: parsedFilters.optionSelected || [],
+        selectedDifficulties: parsedFilters.selectedDifficulties || [],
+        isSegmentBtn1: parsedFilters.isSegmentBtn1 || false,
+        selectedChallengesByTags: parsedFilters.selectedChallengesByTags || [],
+        newChallenge: parsedFilters.newChallenge || false,
+      };
+    }
+    return {
+      searchInput: '',
+      optionSelected: [],
+      selectedDifficulties: [],
+      isSegmentBtn1: false,
+      selectedChallengesByTags: [],
+      newChallenge: false,
+    };
+  };
+
+  const initialFilters = initialSearchFilters();
+
+  const [searchInput, setSearchInput] = useState(initialFilters.searchInput);
   const [filteredChallenges, setFilteredChallenges] = useState(challenges);
-  const [optionSelected, setOptionSelected] = useState<OptionType[]>([]);
-  const [selectedDifficulties, setSelectedDifficulties] = useState<OptionType[]>([]);
-  const [selectedChallengesByTags, setSelectedChallengesByTags] = useState<ETag[]>([]);
-  const [isSegmentBtn1, setIsSegmentBtn1] = useState(false);
-  const [newChallenge, setNewChallenge] = useState<boolean>(false);
+  const [optionSelected, setOptionSelected] = useState<OptionType[]>(initialFilters.optionSelected);
+  const [selectedDifficulties, setSelectedDifficulties] = useState<OptionType[]>(
+    initialFilters.selectedDifficulties
+  );
+  const [selectedChallengesByTags, setSelectedChallengesByTags] = useState<ETag[]>(
+    initialFilters.selectedChallengesByTags
+  );
+  const [isSegmentBtn1, setIsSegmentBtn1] = useState(initialFilters.isSegmentBtn1);
+  const [newChallenge, setNewChallenge] = useState<boolean>(initialFilters.newChallenge);
 
   useEffect(() => {
     setFilteredChallenges(() =>
@@ -33,6 +62,17 @@ function ChallengeGrid({ challenges, linkPrefix, links }: Props) {
       })
     );
 
+    const searchFilters = {
+      searchInput: searchInput,
+      optionSelected: optionSelected,
+      selectedDifficulties: selectedDifficulties,
+      isSegmentBtn1: isSegmentBtn1,
+      selectedChallengesByTags: selectedChallengesByTags,
+      newChallenge: newChallenge,
+    };
+
+    sessionStorage.setItem('searchFilters', JSON.stringify(searchFilters));
+
     if (!searchInput && !optionSelected && !selectedDifficulties && !newChallenge) {
       setFilteredChallenges(challenges);
     }
@@ -45,6 +85,7 @@ function ChallengeGrid({ challenges, linkPrefix, links }: Props) {
     selectedChallengesByTags,
     newChallenge,
   ]);
+
   return (
     <div className={styles.container}>
       <ChallengeFilters
