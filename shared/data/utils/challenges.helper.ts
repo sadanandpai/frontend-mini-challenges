@@ -113,3 +113,25 @@ export function getChallengesByid({
   filteredChallenges = getChallengesByNewChallenge(filteredChallenges, newChallenge);
   return filteredChallenges;
 }
+export function filtersHelper() {
+  const filters = sessionStorage.getItem('searchFilters');
+  if (filters) {
+    const parsedFilters = JSON.parse(filters);
+    return {
+      searchInput: parsedFilters.searchInput || '',
+      optionSelected: parsedFilters.optionSelected || [],
+      selectedDifficulties: parsedFilters.selectedDifficulties || [],
+      isSegmentBtn1: parsedFilters.isSegmentBtn1 || false,
+      selectedChallengesByTags: parsedFilters.selectedChallengesByTags || [],
+      newChallenge: parsedFilters.newChallenge || false,
+    };
+  }
+  return {
+    searchInput: '',
+    optionSelected: [],
+    selectedDifficulties: [],
+    isSegmentBtn1: false,
+    selectedChallengesByTags: [],
+    newChallenge: false,
+  };
+}
