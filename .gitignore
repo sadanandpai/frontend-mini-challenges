@@ -41,3 +41,11 @@ Thumbs.db
 .nx/cache
 .nx/workspace-data
 docs
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
