@@ -173,28 +173,32 @@
   justify-self: flex-start;
   width: 70%;
   border: 2px solid #ccc;
+  color: black;
+  border-radius: 4px;
 }
 .segmentBtn1 {
-  background-color: #cecdcd;
+  // background-color: #cecdcd;
   width: 50%;
   border: none;
+  color: black;
   &[data-active='true'] {
     background-color: white;
     border: none;
     padding: 0px 20px;
-    border-radius: 5px;
+    border-radius: 3px;
     cursor: pointer;
   }
 }
 
 .segmentBtn2 {
-  background-color: #cecdcd;
+  // background-color: #cecdcd;
   border: none;
   width: 50%;
+  color: black;
   &[data-active='true'] {
     background-color: white;
     padding: 0px 20px;
-    border-radius: 5px;
+    border-radius: 3px;
     cursor: pointer;
   }
 }
