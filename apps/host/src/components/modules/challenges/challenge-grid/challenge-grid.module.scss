@@ -175,25 +175,25 @@
   border: 2px solid #ccc;
 }
 .segmentBtn1 {
-  background-color: #cecdcd;
+  background-color: var(--shadow-footer);
   width: 50%;
   border: none;
   &[data-active='true'] {
-    background-color: white;
+    background-color: var(--bg-body);
     border: none;
-    padding: 0px 20px;
+    padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
   }
 }
 
 .segmentBtn2 {
-  background-color: #cecdcd;
+  background-color: var(--shadow-footer);
   border: none;
   width: 50%;
   &[data-active='true'] {
-    background-color: white;
-    padding: 0px 20px;
+    background-color: var(--bg-body);
+    padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
   }
