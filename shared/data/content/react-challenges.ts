@@ -646,6 +646,16 @@ const challenges = new Map<string, IChallenge>([
       isNew: true,
     },
   ],
+  [
+    'advanced-counter',
+    {
+      title: 'Advanced Counter',
+      link: 'advanced-counter',
+      difficulty: EDifficulty.Medium,
+      developer: 'sadanandpai',
+      tags: [ETag.interview],
+    },
+  ],
 ]);
 
 export const reactChallenges = sortChallengesByDifficulty(challenges);
