@@ -179,7 +179,7 @@
   width: 50%;
   border: none;
   &[data-active='true'] {
-    background-color: var(--bg-body);
+    background-color: rgb(75, 75, 255);
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
@@ -192,9 +192,9 @@
   border: none;
   width: 50%;
   &[data-active='true'] {
-    background-color: var(--bg-body);
+    background-color: rgb(75, 75, 255);
     padding: 10px 20px;
-    border-radius: 5px;
+    border-radius: 2px;
     cursor: pointer;
   }
 }
