@@ -168,38 +168,7 @@
     color: orangered;
   }
 }
-.customSegment {
-  display: flex;
-  justify-self: flex-start;
-  width: 70%;
-  border: 2px solid #ccc;
-}
-.segmentBtn1 {
-  background-color: var(--shadow-footer);
-  width: 50%;
-  border: none;
-  &[data-active='true'] {
-    background-color: rgb(75, 75, 255);
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    color: var(--bg-body);
-  }
-}
 
-.segmentBtn2 {
-  background-color: var(--shadow-footer);
-  border: none;
-  width: 50%;
-  &[data-active='true'] {
-    background-color: rgb(75, 75, 255);
-    padding: 10px 20px;
-    border-radius: 2px;
-    cursor: pointer;
-    color: var(--bg-body);
-  }
-}
 .checkboxContainer {
   width: fit-content;
   display: flex;

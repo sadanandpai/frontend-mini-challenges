@@ -7,6 +7,7 @@ import { ETag, OptionType } from '@fmc/data/types';
 import { Difficulties } from '@fmc/data/constants';
 import { Search } from 'lucide-react';
 import CustomCheckbox from '@/components/common/checkbox/checkbox';
+import Tags from '@/components/common/tags/tags';
 
 interface Props {
   searchInput: string;
@@ -16,9 +17,9 @@ interface Props {
   setOptionSelected: React.Dispatch<React.SetStateAction<OptionType[] | []>>;
   selectedDifficulties: OptionType[] | [];
   setSelectedDifficulties: React.Dispatch<React.SetStateAction<OptionType[] | []>>;
+  tag: ETag;
+  setTag: React.Dispatch<React.SetStateAction<ETag>>;
   setSelectedChallengesByTags: React.Dispatch<React.SetStateAction<ETag[] | []>>;
-  isSegmentBtn1: boolean;
-  setIsSegmentBtn1: React.Dispatch<React.SetStateAction<boolean>>;
   setNewChallenge: React.Dispatch<React.SetStateAction<boolean>>;
   newChallenge: boolean;
 }
@@ -31,9 +32,9 @@ const ChallengeFilters = ({
   selectedDifficulties,
   setSelectedDifficulties,
   links,
+  tag,
+  setTag,
   setSelectedChallengesByTags,
-  isSegmentBtn1,
-  setIsSegmentBtn1,
   setNewChallenge,
   newChallenge,
 }: Props) => {
@@ -51,6 +52,7 @@ const ChallengeFilters = ({
     });
     return data;
   }, []);
+
   return (
     <div className={styles.filterOptionWrapper}>
       <div className={styles.searchInputWrapper}>
@@ -84,28 +86,9 @@ const ChallengeFilters = ({
         label="New Challenges"
         containerClass={styles.checkboxContainer}
       />
-      <div className={styles.customSegment}>
-        <button
-          data-active={isSegmentBtn1 ? true : false}
-          className={styles.segmentBtn1}
-          onClick={() => {
-            setIsSegmentBtn1(true);
-            setSelectedChallengesByTags([ETag.interview]);
-          }}
-        >
-          Interview
-        </button>
-        <button
-          data-active={!isSegmentBtn1 ? true : false}
-          className={styles.segmentBtn2}
-          onClick={() => {
-            setIsSegmentBtn1(false);
-            setSelectedChallengesByTags([ETag.all]);
-          }}
-        >
-          All
-        </button>
-      </div>
+
+      <Tags tag={tag} setTag={setTag} setSelectedChallengesByTags={setSelectedChallengesByTags} />
+
       <div className={styles.filterByTechWrapper}>
         {links.map((link) => (
           <Link to={`/${link.tech}`} key={link.tech}>

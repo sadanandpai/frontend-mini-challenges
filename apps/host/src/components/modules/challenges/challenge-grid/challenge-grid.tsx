@@ -24,7 +24,7 @@ function ChallengeGrid({ challenges, linkPrefix, links }: Props) {
   const [selectedChallengesByTags, setSelectedChallengesByTags] = useState<ETag[]>(
     initialFilters.selectedChallengesByTags
   );
-  const [isSegmentBtn1, setIsSegmentBtn1] = useState(initialFilters.isSegmentBtn1);
+  const [tag, setTag] = useState(initialFilters.tag);
   const [newChallenge, setNewChallenge] = useState<boolean>(initialFilters.newChallenge);
 
   useEffect(() => {
@@ -43,7 +43,7 @@ function ChallengeGrid({ challenges, linkPrefix, links }: Props) {
       searchInput,
       optionSelected,
       selectedDifficulties,
-      isSegmentBtn1,
+      tag,
       selectedChallengesByTags,
       newChallenge,
     };
@@ -58,7 +58,7 @@ function ChallengeGrid({ challenges, linkPrefix, links }: Props) {
     searchInput,
     optionSelected,
     selectedDifficulties,
-    isSegmentBtn1,
+    tag,
     selectedChallengesByTags,
     newChallenge,
   ]);
@@ -74,8 +74,8 @@ function ChallengeGrid({ challenges, linkPrefix, links }: Props) {
         selectedDifficulties={selectedDifficulties}
         setSelectedDifficulties={setSelectedDifficulties}
         setSelectedChallengesByTags={setSelectedChallengesByTags}
-        isSegmentBtn1={isSegmentBtn1}
-        setIsSegmentBtn1={setIsSegmentBtn1}
+        tag={tag}
+        setTag={setTag}
         newChallenge={newChallenge}
         setNewChallenge={setNewChallenge}
       />

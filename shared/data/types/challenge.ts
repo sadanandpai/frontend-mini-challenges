@@ -5,7 +5,8 @@ export const enum EDifficulty {
   Medium = 'medium',
   Hard = 'hard',
 }
-export const enum ETag {
+
+export enum ETag {
   interview = 'interview',
   all = 'all',
 }

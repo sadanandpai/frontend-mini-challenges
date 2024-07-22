@@ -103,13 +103,9 @@ export function getChallengesByid({
   }
 
   let filteredChallenges = getChallengesByTitle(challenges, title);
-
   filteredChallenges = getChallengesByContributors(filteredChallenges, contributors);
-
   filteredChallenges = getChallengesByDifficulties(filteredChallenges, difficulties);
-
   filteredChallenges = getChallengesByTags(filteredChallenges, tags, isResetTags);
-
   filteredChallenges = getChallengesByNewChallenge(filteredChallenges, newChallenge);
   return filteredChallenges;
 }
@@ -121,17 +117,18 @@ export function filtersHelper() {
       searchInput: parsedFilters.searchInput || '',
       optionSelected: parsedFilters.optionSelected || [],
       selectedDifficulties: parsedFilters.selectedDifficulties || [],
-      isSegmentBtn1: parsedFilters.isSegmentBtn1 || false,
+      tag: parsedFilters.tag || ETag.interview,
       selectedChallengesByTags: parsedFilters.selectedChallengesByTags || [],
       newChallenge: parsedFilters.newChallenge || false,
     };
   }
+
   return {
     searchInput: '',
     optionSelected: [],
     selectedDifficulties: [],
-    isSegmentBtn1: true,
-    selectedChallengesByTags: ['interview'],
+    tag: ETag.interview,
+    selectedChallengesByTags: [ETag.interview],
     newChallenge: false,
   };
 }
