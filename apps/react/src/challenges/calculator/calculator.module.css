@@ -2,58 +2,71 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Roboto', sans-serif;
 }
 
 .calculator__body {
+  padding: 3rem 1rem;
   background-color: #d6e4e5;
   border-radius: 1rem;
-  padding: 3rem 1rem;
 }
 
 .calculator__screen {
-  background-color: black;
-  border-radius: 0.5rem;
-  color: white;
-  font-weight: bold;
-  margin-bottom: 1rem;
   min-height: 65px;
   padding: 10px;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  color: white;
   text-align: right;
   word-break: break-all;
   word-wrap: break-word;
+  background-color: black;
+  border-radius: 0.5rem;
 }
 
 .calculator__screen__previous {
-  color: lightgray;
-  font-size: 0.8rem;
   margin-bottom: 10px;
+  font-size: 0.8rem;
+  color: lightgray;
 }
 
 .calculator__buttons {
   display: grid;
-  grid-template-columns: repeat(4, 4rem);
   grid-template-rows: repeat(6, 4rem);
+  grid-template-columns: repeat(4, 4rem);
+  gap: 5px;
   border: none;
   outline: none;
-  gap: 5px;
 }
 
 .calculator__buttons button {
-  border: none;
-  border-radius: 1rem;
-  color: white;
   font-size: 1.25rem;
   font-weight: bold;
+  color: white;
+  border: none;
+  border-radius: 1rem;
   outline: none;
+}
+
+#ac {
+  grid-column: 1 / 3;
+  background-color: #497174;
+}
+
+#del {
+  background-color: #497174;
+}
+
+#total {
+  grid-column: 3 / 5;
+  background-color: #eb6440;
 }
 
 .calculator__buttons button:hover,
 #total:hover,
 #ac:hover,
 #del:hover {
-  background-color: gray;
   color: black;
+  background-color: gray;
 }
 
 .calculator__button {
@@ -69,23 +82,7 @@
 #total:active,
 #ac:active,
 #del:active {
-  box-shadow: 0px 0px 5px black;
-}
-
-#ac {
-  grid-column-start: 1;
-  grid-column-end: 3;
-  background-color: #497174;
-}
-
-#del {
-  background-color: #497174;
-}
-
-#total {
-  grid-column-start: 3;
-  grid-column-end: 5;
-  background-color: #eb6440;
+  box-shadow: 0 0 5px black;
 }
 
 #exponent,
