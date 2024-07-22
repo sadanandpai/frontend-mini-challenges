@@ -6,7 +6,7 @@ const backURL = DEV ? `${VITE_HOST_URL}${VITE_PATH}/#/react` : `/${VITE_PATH}/#/
 const homeURL = DEV ? `${VITE_HOST_URL}${VITE_PATH}/` : `/${VITE_PATH}/`;
 
 interface Props {
-  link: string;
+  link?: string;
   title?: string;
 }
 
