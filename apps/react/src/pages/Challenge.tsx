@@ -64,10 +64,12 @@ import Tab from '@/challenges/tab/App';
 import DraggableList from '@/challenges/drag-drop/DraggableList';
 import Circles from '@/challenges/circles/circles';
 import AnalogClock from '@/challenges/analog-clock/analog-clock';
+import AdvancedCounter from '@/challenges/advanced-counter/advanced-counter';
 
 const reactChallengesMap = {
   'transfer-list': <TransferListApp />,
   counter: <Counter />,
+  'advanced-counter': <AdvancedCounter />,
   accordion: <Accordion />,
   'background-changer': <Background />,
   'star-Rating': <StarRating />,

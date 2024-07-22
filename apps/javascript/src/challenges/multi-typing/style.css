@@ -1,8 +1,35 @@
+.input-container {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+.button {
+  background-color: cornflowerblue;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+.button:hover {
+  background-color: rgb(42, 107, 226);
+}
+.input {
+  padding: 10px;
+}
+.range-container {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
 .container {
   min-height: calc(100vh - 6rem);
   display: flex;
+  gap: 20px;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
 
 .text {

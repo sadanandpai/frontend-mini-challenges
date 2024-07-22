@@ -31,6 +31,13 @@
     }
   }
 
+  .heading {
+    color: var(--text-body);
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.2rem;
+  }
+
   .right {
     display: flex;
     gap: 2rem;

@@ -6,6 +6,11 @@ export const enum EDifficulty {
   Hard = 'hard',
 }
 
+export enum ETag {
+  interview = 'interview',
+  all = 'all',
+}
+
 export interface IChallenge {
   title: string;
   link: string;
@@ -13,7 +18,7 @@ export interface IChallenge {
   developer: string;
   contributors?: string[];
   youtube?: string;
-  tags?: string[];
+  tags?: ETag[] | [];
   isNew?: boolean;
   longLink?: string;
 }
@@ -23,4 +28,6 @@ export interface IGetChallengesByid {
   title: string;
   contributors: OptionType[];
   difficulties: OptionType[];
+  tags: ETag[] | [];
+  newChallenge: boolean;
 }

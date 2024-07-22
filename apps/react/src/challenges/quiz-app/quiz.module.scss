@@ -1,11 +1,10 @@
 // Variables
 $quiz-container: 30rem;
-$dark-blue: #2C3658;
-$blue: #699CF4;
+$dark-blue: #2c3658;
+$blue: #699cf4;
 $light-green: #00fff2;
-$white: #FFFFFF;
+$white: #ffffff;
 $radius: 1rem;
-$font-primary: 'Inter', sans-serif;
 $base-font-size: 1rem;
 $border-color: rgba($light-green, 0.5);
 $button-active-bg: rgba($dark-blue, 0.6);
@@ -47,7 +46,6 @@ $button-active-bg: rgba($dark-blue, 0.6);
   width: 100%;
   min-height: 85vh;
   background-color: $dark-blue;
-  font-family: $font-primary;
   @include flexCenter;
   font-size: $base-font-size;
 }
@@ -96,7 +94,7 @@ $button-active-bg: rgba($dark-blue, 0.6);
     list-style-position: inside;
     padding-left: 0;
 
-    &>* {
+    & > * {
       margin-block: 0.4rem;
     }
 
@@ -134,7 +132,7 @@ $button-active-bg: rgba($dark-blue, 0.6);
     background-color: rgba($dark-blue, 0.5);
     border-collapse: collapse;
 
-    tr>td {
+    tr > td {
       padding: 1rem 2rem;
       border: 2px solid $border-color;
     }

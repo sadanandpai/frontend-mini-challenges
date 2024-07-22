@@ -1,0 +1,25 @@
+.main {
+  text-align: center;
+  font-size: 1.5rem;
+
+  section {
+    margin: 1rem 0;
+
+    div {
+      margin: 1rem 0;
+    }
+
+    button {
+      padding: 0.25rem 1rem;
+      margin: 0 0.5rem;
+      font-size: 1.5rem;
+    }
+  }
+
+  input {
+    width: 5rem;
+    padding: 0.15rem;
+    margin-left: 1rem;
+    font-size: 1.5rem;
+  }
+}

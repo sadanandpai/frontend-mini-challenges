@@ -1,5 +1,5 @@
 import { EDifficulty, IChallenge, OptionType } from '../types';
-import { IGetChallengesByid } from '../types/challenge';
+import { ETag, IGetChallengesByid } from '../types/challenge';
 
 const difficultyOrder = [EDifficulty.Easy, EDifficulty.Medium, EDifficulty.Hard];
 
@@ -72,25 +72,63 @@ export function getChallengesByDifficulties(challenges: IChallenge[], difficulti
   return challenges.filter((challenge) => difficultyValues.includes(challenge.difficulty));
 }
 
+export function getChallengesByTags(challenges: IChallenge[], tags: ETag[], isResetTags: boolean) {
+  if (isResetTags) return challenges;
+  return challenges.filter((challenge) => {
+    if (!challenge.tags) return false;
+    return tags.some((tag: ETag) => (challenge.tags as ETag[])?.includes(tag));
+  });
+}
+export function getChallengesByNewChallenge(challenges: IChallenge[], newChallenge: boolean) {
+  if (!newChallenge) return challenges;
+  return challenges.filter(({ isNew }) => isNew);
+}
 export function getChallengesByid({
   challenges,
   title,
   contributors,
   difficulties,
+  tags,
+  newChallenge,
 }: IGetChallengesByid) {
+  const isResetTags = !tags || tags.length === 0 || (tags?.length == 1 && tags[0] == ETag.all);
   if (
     (!title || title.length === 0) &&
     (!contributors || contributors.length === 0) &&
-    (!difficulties || difficulties.length === 0)
+    (!difficulties || difficulties.length === 0) &&
+    isResetTags &&
+    !newChallenge
   ) {
     return challenges;
   }
 
   let filteredChallenges = getChallengesByTitle(challenges, title);
-
   filteredChallenges = getChallengesByContributors(filteredChallenges, contributors);
-
   filteredChallenges = getChallengesByDifficulties(filteredChallenges, difficulties);
-
+  filteredChallenges = getChallengesByTags(filteredChallenges, tags, isResetTags);
+  filteredChallenges = getChallengesByNewChallenge(filteredChallenges, newChallenge);
   return filteredChallenges;
+}
+export function filtersHelper() {
+  const filters = sessionStorage.getItem('searchFilters');
+  if (filters) {
+    const parsedFilters = JSON.parse(filters);
+    return {
+      searchInput: parsedFilters.searchInput || '',
+      optionSelected: parsedFilters.optionSelected || [],
+      selectedDifficulties: parsedFilters.selectedDifficulties || [],
+      tag: parsedFilters.tag || ETag.interview,
+      selectedChallengesByTags: parsedFilters.selectedChallengesByTags || [],
+      newChallenge: parsedFilters.newChallenge || false,
+    };
+  }
+
+  return {
+    searchInput: '',
+    optionSelected: [],
+    selectedDifficulties: [],
+    tag: ETag.interview,
+    selectedChallengesByTags: [ETag.interview],
+    newChallenge: false,
+  };
 }

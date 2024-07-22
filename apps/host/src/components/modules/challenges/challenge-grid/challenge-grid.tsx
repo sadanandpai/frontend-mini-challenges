@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
-import { IChallenge, OptionType } from '@fmc/data/types';
+import { ETag, IChallenge, OptionType } from '@fmc/data/types';
 import { contributors } from '@fmc/data/content';
 import Challenge from './challenge';
 import styles from './challenge-grid.module.scss';
-import { getChallengesByid } from '../../../../../../../shared/data/utils/challenges.helper';
 import ChallengeFilters from './challenge-filter';
+import { getChallengesByid, filtersHelper } from '@fmc/data/utils';
 
 interface Props {
   challenges: IChallenge[];
@@ -13,10 +13,19 @@ interface Props {
 }
 
 function ChallengeGrid({ challenges, linkPrefix, links }: Props) {
-  const [searchInput, setSearchInput] = useState('');
+  const initialFilters = filtersHelper();
+
+  const [searchInput, setSearchInput] = useState(initialFilters.searchInput);
   const [filteredChallenges, setFilteredChallenges] = useState(challenges);
-  const [optionSelected, setOptionSelected] = useState<OptionType[]>([]);
-  const [selectedDifficulties, setSelectedDifficulties] = useState<OptionType[]>([]);
+  const [optionSelected, setOptionSelected] = useState<OptionType[]>(initialFilters.optionSelected);
+  const [selectedDifficulties, setSelectedDifficulties] = useState<OptionType[]>(
+    initialFilters.selectedDifficulties
+  );
+  const [selectedChallengesByTags, setSelectedChallengesByTags] = useState<ETag[]>(
+    initialFilters.selectedChallengesByTags
+  );
+  const [tag, setTag] = useState(initialFilters.tag);
+  const [newChallenge, setNewChallenge] = useState<boolean>(initialFilters.newChallenge);
 
   useEffect(() => {
     setFilteredChallenges(() =>
@@ -25,13 +34,34 @@ function ChallengeGrid({ challenges, linkPrefix, links }: Props) {
         title: searchInput,
         contributors: optionSelected,
         difficulties: selectedDifficulties,
+        tags: selectedChallengesByTags, // Convert OptionType[] to ETag[]
+        newChallenge,
       })
     );
 
-    if (!searchInput && !optionSelected && !selectedDifficulties) {
+    const searchFilters = {
+      searchInput,
+      optionSelected,
+      selectedDifficulties,
+      tag,
+      selectedChallengesByTags,
+      newChallenge,
+    };
+
+    sessionStorage.setItem('searchFilters', JSON.stringify(searchFilters));
+
+    if (!searchInput && !optionSelected && !selectedDifficulties && !newChallenge) {
       setFilteredChallenges(challenges);
     }
-  }, [challenges, searchInput, optionSelected, selectedDifficulties]);
+  }, [
+    challenges,
+    searchInput,
+    optionSelected,
+    selectedDifficulties,
+    tag,
+    selectedChallengesByTags,
+    newChallenge,
+  ]);
 
   return (
     <div className={styles.container}>
@@ -43,6 +73,11 @@ function ChallengeGrid({ challenges, linkPrefix, links }: Props) {
         setOptionSelected={setOptionSelected}
         selectedDifficulties={selectedDifficulties}
         setSelectedDifficulties={setSelectedDifficulties}
+        setSelectedChallengesByTags={setSelectedChallengesByTags}
+        tag={tag}
+        setTag={setTag}
+        newChallenge={newChallenge}
+        setNewChallenge={setNewChallenge}
       />
 
       {filteredChallenges.length ? (

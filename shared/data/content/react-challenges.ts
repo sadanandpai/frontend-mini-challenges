@@ -1,4 +1,4 @@
-import { EDifficulty, type IChallenge } from '../types/challenge';
+import { EDifficulty, ETag, type IChallenge } from '../types/challenge';
 import { sortChallengesByDifficulty } from '../utils/challenges.helper';
 
 const challenges = new Map<string, IChallenge>([
@@ -9,7 +9,7 @@ const challenges = new Map<string, IChallenge>([
       link: 'counter',
       difficulty: EDifficulty.Easy,
       developer: 'sadanandpai',
-      tags: [],
+      tags: [ETag.interview],
     },
   ],
   [
@@ -49,7 +49,7 @@ const challenges = new Map<string, IChallenge>([
       link: 'image-gallery',
       difficulty: EDifficulty.Easy,
       developer: 'Bhushan1019',
-      tags: [],
+      tags: [ETag.interview],
     },
   ],
   [
@@ -59,7 +59,7 @@ const challenges = new Map<string, IChallenge>([
       link: 'accordion',
       developer: 'NikhilJHA01',
       difficulty: EDifficulty.Easy,
-      tags: [],
+      tags: [ETag.interview],
     },
   ],
   [
@@ -119,7 +119,7 @@ const challenges = new Map<string, IChallenge>([
       link: 'Guess-the-number',
       difficulty: EDifficulty.Easy,
       developer: 'deepakrajkranti',
-      tags: [],
+      tags: [ETag.interview],
     },
   ],
   [
@@ -169,7 +169,7 @@ const challenges = new Map<string, IChallenge>([
       link: 'star-Rating',
       difficulty: EDifficulty.Easy,
       developer: 'NikhilJHA01',
-      tags: [],
+      tags: [ETag.interview],
     },
   ],
   [
@@ -179,7 +179,7 @@ const challenges = new Map<string, IChallenge>([
       link: 'telephone-formatter',
       difficulty: EDifficulty.Easy,
       developer: 'arpansaha13',
-      tags: [],
+      tags: [ETag.interview],
     },
   ],
   [
@@ -189,7 +189,7 @@ const challenges = new Map<string, IChallenge>([
       link: 'string-transformers',
       difficulty: EDifficulty.Easy,
       developer: 'arpansaha13',
-      tags: [],
+      tags: [ETag.interview],
     },
   ],
   [
@@ -199,7 +199,7 @@ const challenges = new Map<string, IChallenge>([
       link: 'tic-tac-toe',
       difficulty: EDifficulty.Easy,
       developer: 'rashidtvmr',
-      tags: [],
+      tags: [ETag.interview],
     },
   ],
   [
@@ -239,7 +239,7 @@ const challenges = new Map<string, IChallenge>([
       link: 'stepper',
       difficulty: EDifficulty.Easy,
       developer: 'codechitra',
-      tags: [],
+      tags: [ETag.interview],
       isNew: true,
     },
   ],
@@ -250,7 +250,7 @@ const challenges = new Map<string, IChallenge>([
       link: 'calculator',
       difficulty: EDifficulty.Medium,
       developer: 'liza',
-      tags: [],
+      tags: [ETag.interview],
     },
   ],
   [
@@ -270,7 +270,7 @@ const challenges = new Map<string, IChallenge>([
       link: 'traffic-lights',
       difficulty: EDifficulty.Medium,
       developer: 'rishabhm05',
-      tags: [],
+      tags: [ETag.interview],
     },
   ],
   [
@@ -290,7 +290,7 @@ const challenges = new Map<string, IChallenge>([
       link: 'toast-popup',
       difficulty: EDifficulty.Medium,
       developer: 'deepu0',
-      tags: [],
+      tags: [ETag.interview],
     },
   ],
   [
@@ -300,7 +300,7 @@ const challenges = new Map<string, IChallenge>([
       link: 'modal-popup',
       difficulty: EDifficulty.Medium,
       developer: 'rishabhm05',
-      tags: [],
+      tags: [ETag.interview],
     },
   ],
   [
@@ -310,7 +310,7 @@ const challenges = new Map<string, IChallenge>([
       link: 'password-strength',
       difficulty: EDifficulty.Medium,
       developer: 'deepu0',
-      tags: [],
+      tags: [ETag.interview],
     },
   ],
   [
@@ -331,7 +331,7 @@ const challenges = new Map<string, IChallenge>([
       link: 'column-table',
       difficulty: EDifficulty.Medium,
       developer: 'sadanandpai',
-      tags: [],
+      tags: [ETag.interview],
     },
   ],
   [
@@ -341,7 +341,7 @@ const challenges = new Map<string, IChallenge>([
       link: 'todo-list',
       difficulty: EDifficulty.Medium,
       developer: 'deepakrajkranti',
-      tags: [],
+      tags: [ETag.interview],
     },
   ],
   [
@@ -371,7 +371,7 @@ const challenges = new Map<string, IChallenge>([
       link: 'stopwatch',
       difficulty: EDifficulty.Medium,
       developer: 'rashidtvmr',
-      tags: [],
+      tags: [ETag.interview],
     },
   ],
   [
@@ -391,7 +391,7 @@ const challenges = new Map<string, IChallenge>([
       link: 'quiz-app',
       difficulty: EDifficulty.Medium,
       developer: 'AbhilashMadi',
-      tags: [],
+      tags: [ETag.interview],
     },
   ],
   [
@@ -401,7 +401,7 @@ const challenges = new Map<string, IChallenge>([
       link: 'chess-board',
       difficulty: EDifficulty.Medium,
       developer: 'AbhilashMadi',
-      tags: [],
+      tags: [ETag.interview],
     },
   ],
   [
@@ -425,6 +425,18 @@ const challenges = new Map<string, IChallenge>([
     },
   ],
   [
+    'nested-comments',
+    {
+      title: 'Nested Comments',
+      link: 'nested-comments',
+      difficulty: EDifficulty.Hard,
+      developer: 'Akshay-Omkar',
+      // contributors: ['arpansaha13'],
+      tags: [ETag.interview],
+      isNew: true,
+    },
+  ],
+  [
     'password-generator',
     {
       title: 'Password Generator',
@@ -441,7 +453,7 @@ const challenges = new Map<string, IChallenge>([
       link: 'transfer-list',
       difficulty: EDifficulty.Medium,
       developer: 'DeePaK-HeeRaKaRi',
-      tags: [],
+      tags: [ETag.interview],
     },
   ],
   [
@@ -451,7 +463,7 @@ const challenges = new Map<string, IChallenge>([
       link: 'infinite-scrolling',
       difficulty: EDifficulty.Medium,
       developer: 'ayush-dutt-sharma',
-      tags: [],
+      tags: [ETag.interview],
     },
   ],
   [
@@ -461,7 +473,7 @@ const challenges = new Map<string, IChallenge>([
       link: 'match-pair',
       difficulty: EDifficulty.Medium,
       developer: 'sadanandpai',
-      tags: [],
+      tags: [ETag.interview],
     },
   ],
   [
@@ -469,9 +481,9 @@ const challenges = new Map<string, IChallenge>([
     {
       title: 'Word Connect',
       link: 'word-connect',
-      difficulty: EDifficulty.Medium,
+      difficulty: EDifficulty.Hard,
       developer: 'sadanandpai',
-      tags: [],
+      tags: [ETag.interview],
       isNew: true,
     },
   ],
@@ -480,9 +492,9 @@ const challenges = new Map<string, IChallenge>([
     {
       title: 'OTP',
       link: 'otp',
-      difficulty: EDifficulty.Medium,
+      difficulty: EDifficulty.Hard,
       developer: 'rishabhm05',
-      tags: [],
+      tags: [ETag.interview],
     },
   ],
   [
@@ -492,7 +504,7 @@ const challenges = new Map<string, IChallenge>([
       link: 'file-explorer',
       difficulty: EDifficulty.Hard,
       developer: 'sadanandpai',
-      tags: [],
+      tags: [ETag.interview],
     },
   ],
   [
@@ -502,7 +514,7 @@ const challenges = new Map<string, IChallenge>([
       link: 'autocomplete-offline',
       difficulty: EDifficulty.Hard,
       developer: 'deepu0',
-      tags: [],
+      tags: [ETag.interview],
     },
   ],
   [
@@ -512,7 +524,7 @@ const challenges = new Map<string, IChallenge>([
       link: 'autocomplete-online',
       difficulty: EDifficulty.Hard,
       developer: 'deepu0',
-      tags: [],
+      tags: [ETag.interview],
     },
   ],
   [
@@ -543,18 +555,6 @@ const challenges = new Map<string, IChallenge>([
       link: 'digital-clock',
       difficulty: EDifficulty.Medium,
       developer: 'Syamsai-Polavarapu',
-      tags: [],
-      isNew: true,
-    },
-  ],
-  [
-    'nested-comments',
-    {
-      title: 'Nested Comments',
-      link: 'nested-comments',
-      difficulty: EDifficulty.Medium,
-      developer: 'Akshay-Omkar',
-      // contributors: ['arpansaha13'],
       tags: [],
       isNew: true,
     },
@@ -598,7 +598,7 @@ const challenges = new Map<string, IChallenge>([
       link: 'chip-input',
       difficulty: EDifficulty.Medium,
       developer: 'Akshay-Omkar',
-      tags: [],
+      tags: [ETag.interview],
       isNew: true,
     },
   ],
@@ -644,6 +644,16 @@ const challenges = new Map<string, IChallenge>([
       developer: 'sadanandpai',
       tags: [],
       isNew: true,
+    },
+  ],
+  [
+    'advanced-counter',
+    {
+      title: 'Advanced Counter',
+      link: 'advanced-counter',
+      difficulty: EDifficulty.Medium,
+      developer: 'sadanandpai',
+      tags: [ETag.interview],
     },
   ],
 ]);

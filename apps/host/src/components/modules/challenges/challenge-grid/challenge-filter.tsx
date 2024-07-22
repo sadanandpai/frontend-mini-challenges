@@ -3,9 +3,11 @@ import { Link } from 'react-router-dom';
 import styles from './challenge-grid.module.scss';
 import { useMemo } from 'react';
 import { contributors } from '@fmc/data/content';
-import { OptionType } from '@fmc/data/types';
+import { ETag, OptionType } from '@fmc/data/types';
 import { Difficulties } from '@fmc/data/constants';
 import { Search } from 'lucide-react';
+import CustomCheckbox from '@/components/common/checkbox/checkbox';
+import Tags from '@/components/common/tags/tags';
 
 interface Props {
   searchInput: string;
@@ -15,6 +17,11 @@ interface Props {
   setOptionSelected: React.Dispatch<React.SetStateAction<OptionType[] | []>>;
   selectedDifficulties: OptionType[] | [];
   setSelectedDifficulties: React.Dispatch<React.SetStateAction<OptionType[] | []>>;
+  tag: ETag;
+  setTag: React.Dispatch<React.SetStateAction<ETag>>;
+  setSelectedChallengesByTags: React.Dispatch<React.SetStateAction<ETag[] | []>>;
+  setNewChallenge: React.Dispatch<React.SetStateAction<boolean>>;
+  newChallenge: boolean;
 }
 
 const ChallengeFilters = ({
@@ -25,6 +32,11 @@ const ChallengeFilters = ({
   selectedDifficulties,
   setSelectedDifficulties,
   links,
+  tag,
+  setTag,
+  setSelectedChallengesByTags,
+  setNewChallenge,
+  newChallenge,
 }: Props) => {
   const DeveloperList = useMemo(() => {
     const developerList = new Map();
@@ -67,6 +79,15 @@ const ChallengeFilters = ({
         optionSelected={selectedDifficulties}
         setOptionSelected={(val: OptionType[]) => setSelectedDifficulties(val)}
       />
+      <CustomCheckbox
+        className={styles.checkbox}
+        checked={newChallenge}
+        setNewChallenge={setNewChallenge}
+        label="New Challenges"
+        containerClass={styles.checkboxContainer}
+      />
+
+      <Tags tag={tag} setTag={setTag} setSelectedChallengesByTags={setSelectedChallengesByTags} />
 
       <div className={styles.filterByTechWrapper}>
         {links.map((link) => (
