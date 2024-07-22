@@ -137,7 +137,10 @@ function Challenge() {
 
   return (
     <>
-      <ChallengeNavbar title={reactChallenges.get(id)?.title} />
+      <ChallengeNavbar
+        title={reactChallenges.get(id)?.title}
+        link={reactChallenges.get(id)?.link}
+      />
       <div className="container">{reactChallengesMap[id]}</div>
     </>
   );
