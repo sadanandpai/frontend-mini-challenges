@@ -1,8 +1,18 @@
-
 body {
   background-color: #0a69ed;
 }
-.start-screen,
+
+.start-screen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .score-container {
   position: absolute;
   top: 0;
@@ -18,7 +28,12 @@ button {
   outline: none;
   cursor: pointer;
 }
-#start-button,
+#start-button {
+  transform: translateY(-2vh);
+  font-size: 1.3em;
+  padding: 0.5em 1.8em;
+  border-radius: 0.2em;
+}
 #restart {
   font-size: 1.3em;
   padding: 0.5em 1.8em;
