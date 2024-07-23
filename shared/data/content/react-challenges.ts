@@ -33,16 +33,6 @@ const challenges = new Map<string, IChallenge>([
     },
   ],
   [
-    'quote-generator',
-    {
-      title: 'Quote Generator',
-      link: 'quote-generator',
-      difficulty: EDifficulty.Easy,
-      developer: 'viditagrawal56',
-      tags: [],
-    },
-  ],
-  [
     'image-gallery',
     {
       title: 'Image Gallery',
@@ -235,7 +225,7 @@ const challenges = new Map<string, IChallenge>([
   [
     'stepper',
     {
-      title: 'STEPPER',
+      title: 'Stepper',
       link: 'stepper',
       difficulty: EDifficulty.Easy,
       developer: 'codechitra',

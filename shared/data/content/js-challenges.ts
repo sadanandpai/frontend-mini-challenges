@@ -535,7 +535,7 @@ const challenges: Map<string, IChallenge> = new Map([
   [
     'movie-info',
     {
-      title: 'Movie-info app (online)',
+      title: 'Movie Info',
       link: 'movie-info/',
       difficulty: EDifficulty.Medium,
       developer: 'AckermanLevi1',
@@ -545,7 +545,7 @@ const challenges: Map<string, IChallenge> = new Map([
   [
     'quiz-app-with-timer',
     {
-      title: 'Quiz App with Timer',
+      title: 'Timer Quiz',
       link: 'quiz-app-with-timer/',
       difficulty: EDifficulty.Medium,
       developer: 'Vivek-GuptaXCode',

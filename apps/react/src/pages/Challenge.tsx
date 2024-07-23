@@ -28,7 +28,6 @@ import PasswordGenerator from '@/challenges/password-generator/App';
 import PasswordStrength from '@/challenges/password-strength/passwordStrength';
 import ProgressBar from '@/challenges/progressbar/App';
 import QRCodeGenerator from '@/challenges/qr-code-generator/App.jsx';
-import QouteGenerator from '@/challenges/quote-generator/App';
 import Stack from '@/challenges/stack-implementation/Stack';
 import StarRating from '@/challenges/star-rating/App';
 import Stopwatch from '@/challenges/stopwatch/App';
@@ -100,7 +99,6 @@ const reactChallengesMap = {
   'expense-tracker': <ExpenseTracker />,
   pagination: <Pagination />,
   'qr-code-generator': <QRCodeGenerator />,
-  'quote-generator': <QouteGenerator />,
   'image-gallery': <ImageGallery />,
   'word-count': <WordCounter />,
   'temperature-converter': <TemperatureConverter />,
