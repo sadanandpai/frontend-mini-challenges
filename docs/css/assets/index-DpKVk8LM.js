@@ -1,1 +1,0 @@
-import"./header-CV582lBi.js";import"./navbar-Brg6vz2p.js";const t=document.getElementById("showDialog"),o=document.getElementById("dialogPopup"),e=document.getElementById("closeDialog");t.addEventListener("click",()=>{o.showModal()});e.addEventListener("click",()=>{o.close("")});
