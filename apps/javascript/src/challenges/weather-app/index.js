@@ -62,10 +62,11 @@ searchBtn.addEventListener('click', () => {
   checkWeather(searchBox.value);
 });
 
+//select the search area and the enter press event listener to it.
 const searchDiv = document.querySelector('.search');
 
 searchDiv.addEventListener('keypress', function (event) {
-  console.log(event);
+  //check MDN Reference for more on this but the event sends a key named "key" with the value as 'Enter'
   if (event.key === 'Enter') {
     event.preventDefault();
     checkWeather(searchBox.value);
