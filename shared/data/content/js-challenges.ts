@@ -543,10 +543,10 @@ const challenges: Map<string, IChallenge> = new Map([
     },
   ],
   [
-    'quiz-app-with-timer',
+    'timer-quiz',
     {
       title: 'Timer Quiz',
-      link: 'quiz-app-with-timer/',
+      link: 'timer-quiz/',
       difficulty: EDifficulty.Medium,
       developer: 'Vivek-GuptaXCode',
       tags: [],
