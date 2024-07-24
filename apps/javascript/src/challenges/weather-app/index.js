@@ -1,23 +1,32 @@
-import clear from './images/clear.png';
-import clouds from './images/clouds.png';
-import drizzle from './images/drizzle.png';
-import haze from './images/haze.png';
-import humidity from './images/humidity.png';
-import mist from './images/mist.png';
-import rain from './images/rain.png';
-import snow from './images/snow.png';
-import wind from './images/wind.png';
+const clear = new Image();
+clear.src = './images/clear.png';
+const clouds = new Image();
+clouds.src = './images/clouds.png';
+const drizzle = new Image();
+drizzle.src = './images/drizzle.png';
+const haze = new Image();
+haze.src = './images/haze.png';
+const humidity = new Image();
+humidity.src = './images/humidity.png';
+const mist = new Image();
+mist.src = './images/mist.png';
+const rain = new Image();
+rain.src = './images/rain.png';
+const snow = new Image();
+snow.src = './images/snow.png';
+const wind = new Image();
+wind.src = './images/wind.png';
 
 const weatherIconsMap = new Map([
-  ['clear', clear],
-  ['clouds', clouds],
-  ['drizzle', drizzle],
-  ['haze', haze],
-  ['humidity', humidity],
-  ['mist', mist],
-  ['rain', rain],
-  ['snow', snow],
-  ['wind', wind],
+  ['clear', clear.src],
+  ['clouds', clouds.src],
+  ['drizzle', drizzle.src],
+  ['haze', haze.src],
+  ['humidity', humidity.src],
+  ['mist', mist.src],
+  ['rain', rain.src],
+  ['snow', snow.src],
+  ['wind', wind.src],
 ]);
 
 // API TO BE USED FOR THE WEATHER DETAILS
@@ -50,5 +59,10 @@ async function checkWeather(city) {
 
 searchBtn.addEventListener('click', () => {
   // when search button is clicked it initiates the check weather program with the city name entered
+  checkWeather(searchBox.value);
+});
+
+document.querySelector('form').addEventListener('submit', (e) => {
+  e.preventDefault();
   checkWeather(searchBox.value);
 });
