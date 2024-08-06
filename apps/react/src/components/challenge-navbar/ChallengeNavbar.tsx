@@ -11,7 +11,7 @@ interface Props {
 }
 
 const reactSourceCodeBaseURL =
-  'https://github.com/Akhil017/frontend-mini-challenges/tree/main/apps/react/src/challenges/';
+  'https://github.com/sadanandpai/frontend-mini-challenges/tree/main/apps/react/src/challenges/';
 
 function ChallengeNavbar({ title, link }: Props) {
   return (
