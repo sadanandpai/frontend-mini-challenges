@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   const gridContainer = document.getElementById('grid');
+  const inputBox = document.getElementById('inputBox');
   for (let i = 1; i <= 9; i++) {
     const button = document.createElement('div');
     button.className = 'grid-item';
@@ -9,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   document.getElementById('colorButton').addEventListener('click', () => {
-    const inputValue = parseInt(document.getElementById('inputBox').value, 10);
+    const inputValue = parseInt(inputBox.value, 10);
     if (inputValue >= 1 && inputValue <= 9) {
       document.querySelectorAll('.grid-item').forEach((button) => {
         if (parseInt(button.dataset.value, 10) === inputValue) {
@@ -21,5 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
       alert('Please enter a number between 1 and 9.');
     }
+
+    inputBox.value = '';
   });
 });
