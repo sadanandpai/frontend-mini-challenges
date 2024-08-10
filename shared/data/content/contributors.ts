@@ -6,6 +6,10 @@ export const contributors = new Map<string, IContributor>([
     { name: 'Deepak Heerakari', pic: 'https://avatars.githubusercontent.com/u/63955160' },
   ],
   [
+    'X0rD3v1L',
+    { name: 'Benarjee Sambangi', pic: 'https://avatars.githubusercontent.com/u/46685302' },
+  ],
+  [
     'sadanandpai',
     { name: 'Sadanand Pai', pic: 'https://avatars.githubusercontent.com/u/12962887' },
   ],
