@@ -20,7 +20,7 @@ const challenges: Map<string, IChallenge> = new Map([
       link: 'color-me/',
       difficulty: EDifficulty.Easy,
       developer: 'X0rD3v1L',
-      tags: [ETag.interview],
+      tags: [],
     },
   ],
   [

@@ -1,24 +1,36 @@
 const gridContainer = document.getElementById('grid');
 const inputBox = document.getElementById('inputBox');
-for (let i = 1; i <= 9; i++) {
-  const button = document.createElement('div');
-  button.className = 'grid-item';
-  button.textContent = i;
-  button.dataset.value = i;
-  gridContainer.appendChild(button);
+
+let activeElementIdx = null;
+
+function createGridItem(value) {
+  const gridItem = document.createElement('div');
+  gridItem.className = 'grid-item';
+  gridItem.textContent = value;
+  gridItem.dataset.value = value;
+  return gridItem;
 }
 
-document.getElementById('colorForm').addEventListener('submit', (event) => {
+function createGrid(size = 3) {
+  const fragment = document.createDocumentFragment();
+  for (let i = 1; i <= size * size; i++) {
+    fragment.appendChild(createGridItem(i));
+  }
+
+  return fragment;
+}
+
+function changeColor(event) {
   event.preventDefault();
+  if (activeElementIdx) {
+    gridItems[activeElementIdx - 1].classList.remove('active');
+  }
 
-  const inputValue = parseInt(inputBox.value, 10);
-  document.querySelectorAll('.grid-item').forEach((button) => {
-    if (parseInt(button.dataset.value, 10) === inputValue) {
-      button.classList.add('active');
-    } else {
-      button.classList.remove('active');
-    }
-  });
-
+  activeElementIdx = parseInt(inputBox.value, 10);
+  gridItems[activeElementIdx - 1].classList.add('active');
   inputBox.value = '';
-});
+}
+
+gridContainer.appendChild(createGrid());
+const gridItems = gridContainer.querySelectorAll('.grid-item');
+document.getElementById('colorForm').addEventListener('submit', changeColor);

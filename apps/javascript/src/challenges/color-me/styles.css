@@ -1,10 +1,5 @@
 .container {
-  text-align: center;
-  background: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  width: 360px;
+  padding: 0 20px;
 }
 
 h1 {
@@ -17,7 +12,7 @@ h1 {
   grid-template-columns: repeat(3, 100px);
   grid-gap: 10px;
   justify-content: center;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 .grid-item {
@@ -29,7 +24,6 @@ h1 {
   border: 2px solid #ddd;
   border-radius: 50%;
   font-size: 24px;
-  cursor: pointer;
   background-color: #f0f0f0;
   transition:
     background-color 0.3s ease,
@@ -62,7 +56,6 @@ h1 {
   border-radius: 4px;
   background-color: #007bff;
   color: white;
-  cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
