@@ -646,6 +646,16 @@ const challenges = new Map<string, IChallenge>([
       tags: [ETag.interview],
     },
   ],
+  [
+    'nested-checkbox',
+    {
+      title: 'Nested Checkbox',
+      link: 'nested-checkbox',
+      difficulty: EDifficulty.Hard,
+      developer: 'SujithGunasekaran',
+      tags: [ETag.interview],
+    },
+  ],
 ]);
 
 export const reactChallenges = sortChallengesByDifficulty(challenges);
