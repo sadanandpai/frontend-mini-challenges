@@ -64,6 +64,7 @@ import DraggableList from '@/challenges/drag-drop/DraggableList';
 import Circles from '@/challenges/circles/circles';
 import AnalogClock from '@/challenges/analog-clock/analog-clock';
 import AdvancedCounter from '@/challenges/advanced-counter/advanced-counter';
+import NestedCheckbox from '@/challenges/nested-checkbox/App';
 
 const reactChallengesMap = {
   'transfer-list': <TransferListApp />,
@@ -129,6 +130,7 @@ const reactChallengesMap = {
   'drag-drop': <DraggableList />,
   circles: <Circles />,
   'analog-clock': <AnalogClock />,
+  'nested-checkbox': <NestedCheckbox />,
 };
 
 function Challenge() {
