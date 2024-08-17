@@ -1,0 +1,84 @@
+services:
+  shared-assets:
+    build: ./shared/assets
+    container_name: shared-assets
+
+  shared-data:
+    build: ./shared/data
+    container_name: shared-data
+
+  shared-styles:
+    build: ./shared/styles
+    container_name: shared-styles
+
+  root:
+    build: ./
+    container_name: root
+    depends_on:
+      - shared-assets
+      - shared-data
+      - shared-styles
+
+  host:
+    build: ./apps/host
+    container_name: host
+    ports:
+      - 6010:6010
+    env_file:
+      - ./docker-env/.env
+    stdin_open: true
+    tty: true
+    depends_on:
+      - root
+
+  css:
+    build: ./apps/css
+    container_name: css
+    ports:
+      - 6011:6011
+    env_file:
+      - ./docker-env/.env
+    depends_on:
+      - root
+
+  javascript:
+    build: ./apps/javascript
+    container_name: javascript
+    ports:
+      - 6012:6012
+    env_file:
+      - ./docker-env/.env
+    depends_on:
+      - root
+
+  react:
+    build: ./apps/react
+    container_name: react
+    ports:
+      - 6013:6013
+    stdin_open: true
+    tty: true
+    env_file:
+      - ./docker-env/.env
+    depends_on:
+      - root
+
+  vue:
+    build: ./apps/vue
+    container_name: vue
+    ports:
+      - 6014:6014
+    env_file:
+      - ./docker-env/.env
+    depends_on:
+      - root
+
+  angular:
+    build: ./apps/angular
+    container_name: angular
+    ports:
+      - 6015:6015
+    env_file:
+      - ./docker-env/.env
+    depends_on:
+      - root

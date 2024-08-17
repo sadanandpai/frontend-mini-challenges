@@ -12,8 +12,9 @@ export default defineConfig({
   },
   server: {
     port: 6010,
+    // open: true,
+    host: true,
     strictPort: true,
-    open: true,
   },
   base: '/frontend-mini-challenges/',
 });
