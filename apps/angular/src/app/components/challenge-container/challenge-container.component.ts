@@ -12,6 +12,8 @@ import { NavbarComponent } from '../navbar/navbar.component';
 })
 export class ChallengeContainerComponent {
   public title = 'Challenge';
+  public link = '';
+
   private router = inject(Router);
 
   ngOnInit() {
@@ -28,5 +30,6 @@ export class ChallengeContainerComponent {
     }
 
     this.title = challenge.title;
+    this.link = challenge.link;
   }
 }

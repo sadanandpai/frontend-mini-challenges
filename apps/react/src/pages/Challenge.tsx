@@ -28,7 +28,6 @@ import PasswordGenerator from '@/challenges/password-generator/App';
 import PasswordStrength from '@/challenges/password-strength/passwordStrength';
 import ProgressBar from '@/challenges/progressbar/App';
 import QRCodeGenerator from '@/challenges/qr-code-generator/App.jsx';
-import QouteGenerator from '@/challenges/quote-generator/App';
 import Stack from '@/challenges/stack-implementation/Stack';
 import StarRating from '@/challenges/star-rating/App';
 import Stopwatch from '@/challenges/stopwatch/App';
@@ -64,10 +63,13 @@ import Tab from '@/challenges/tab/App';
 import DraggableList from '@/challenges/drag-drop/DraggableList';
 import Circles from '@/challenges/circles/circles';
 import AnalogClock from '@/challenges/analog-clock/analog-clock';
+import AdvancedCounter from '@/challenges/advanced-counter/advanced-counter';
+import NestedCheckbox from '@/challenges/nested-checkbox/App';
 
 const reactChallengesMap = {
   'transfer-list': <TransferListApp />,
   counter: <Counter />,
+  'advanced-counter': <AdvancedCounter />,
   accordion: <Accordion />,
   'background-changer': <Background />,
   'star-Rating': <StarRating />,
@@ -98,7 +100,6 @@ const reactChallengesMap = {
   'expense-tracker': <ExpenseTracker />,
   pagination: <Pagination />,
   'qr-code-generator': <QRCodeGenerator />,
-  'quote-generator': <QouteGenerator />,
   'image-gallery': <ImageGallery />,
   'word-count': <WordCounter />,
   'temperature-converter': <TemperatureConverter />,
@@ -129,6 +130,7 @@ const reactChallengesMap = {
   'drag-drop': <DraggableList />,
   circles: <Circles />,
   'analog-clock': <AnalogClock />,
+  'nested-checkbox': <NestedCheckbox />,
 };
 
 function Challenge() {
@@ -137,7 +139,10 @@ function Challenge() {
 
   return (
     <>
-      <ChallengeNavbar title={reactChallenges.get(id)?.title} />
+      <ChallengeNavbar
+        title={reactChallenges.get(id)?.title}
+        link={reactChallenges.get(id)?.link}
+      />
       <div className="container">{reactChallengesMap[id]}</div>
     </>
   );

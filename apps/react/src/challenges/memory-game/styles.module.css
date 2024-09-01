@@ -1,0 +1,21 @@
+.container {
+  text-align: center;
+}
+
+.button {
+  padding: 5px 25px;
+  font-size: 1rem;
+  color: white;
+  background-color: black;
+  border-radius: 0.5rem;
+}
+
+.grid {
+  display: inline-grid;
+  grid-gap: 4px;
+  transition: all 0.25s;
+}
+
+.grid button {
+  border: 2px solid grey;
+}

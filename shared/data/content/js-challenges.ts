@@ -1,4 +1,4 @@
-import { EDifficulty, type IChallenge } from '../types/challenge';
+import { EDifficulty, ETag, type IChallenge } from '../types/challenge';
 import { sortChallengesByDifficulty } from '../utils/challenges.helper';
 
 const challenges: Map<string, IChallenge> = new Map([
@@ -10,6 +10,16 @@ const challenges: Map<string, IChallenge> = new Map([
       difficulty: EDifficulty.Easy,
       developer: 'sadanandpai',
       youtube: 'https://youtu.be/9OIeUtXX3SA',
+      tags: [ETag.interview],
+    },
+  ],
+  [
+    'color-me',
+    {
+      title: 'Color Me',
+      link: 'color-me/',
+      difficulty: EDifficulty.Easy,
+      developer: 'X0rD3v1L',
       tags: [],
     },
   ],
@@ -52,7 +62,7 @@ const challenges: Map<string, IChallenge> = new Map([
       difficulty: EDifficulty.Easy,
       developer: 'sadanandpai',
       youtube: 'https://youtu.be/L1Da3GWEGpY',
-      tags: [],
+      tags: [ETag.interview],
     },
   ],
   [
@@ -63,7 +73,7 @@ const challenges: Map<string, IChallenge> = new Map([
       difficulty: EDifficulty.Easy,
       developer: 'sadanandpai',
       youtube: 'https://youtu.be/crCZEJ6Lmgc',
-      tags: [],
+      tags: [ETag.interview],
     },
   ],
   [
@@ -85,7 +95,7 @@ const challenges: Map<string, IChallenge> = new Map([
       difficulty: EDifficulty.Easy,
       developer: 'sadanandpai',
       youtube: 'https://youtu.be/E85ldVqAGjw',
-      tags: [],
+      tags: [ETag.interview],
     },
   ],
   [
@@ -212,7 +222,7 @@ const challenges: Map<string, IChallenge> = new Map([
       link: 'weather-app/',
       difficulty: EDifficulty.Medium,
       developer: 'shruti-sen2004',
-      tags: [],
+      tags: [ETag.interview],
       isNew: true,
     },
   ],
@@ -224,7 +234,7 @@ const challenges: Map<string, IChallenge> = new Map([
       difficulty: EDifficulty.Medium,
       developer: 'sadanandpai',
       youtube: 'https://youtu.be/-p3N5bJXEK8',
-      tags: [],
+      tags: [ETag.interview],
     },
   ],
   [
@@ -234,7 +244,7 @@ const challenges: Map<string, IChallenge> = new Map([
       link: 'column-table/',
       difficulty: EDifficulty.Medium,
       developer: 'sadanandpai',
-      tags: [],
+      tags: [ETag.interview],
     },
   ],
   [
@@ -244,7 +254,7 @@ const challenges: Map<string, IChallenge> = new Map([
       link: 'password-strength/',
       difficulty: EDifficulty.Medium,
       developer: 'sadanandpai',
-      tags: [],
+      tags: [ETag.interview],
     },
   ],
   [
@@ -254,7 +264,7 @@ const challenges: Map<string, IChallenge> = new Map([
       link: 'star-rating/',
       difficulty: EDifficulty.Medium,
       developer: 'sadanandpai',
-      tags: [],
+      tags: [ETag.interview],
     },
   ],
   [
@@ -264,7 +274,7 @@ const challenges: Map<string, IChallenge> = new Map([
       link: 'pixel-art/',
       difficulty: EDifficulty.Medium,
       developer: 'sadanandpai',
-      tags: [],
+      tags: [ETag.interview],
     },
   ],
   [
@@ -284,7 +294,7 @@ const challenges: Map<string, IChallenge> = new Map([
       link: 'color-spotter/',
       difficulty: EDifficulty.Medium,
       developer: 'sadanandpai',
-      tags: [],
+      tags: [ETag.interview],
     },
   ],
   [
@@ -294,7 +304,7 @@ const challenges: Map<string, IChallenge> = new Map([
       link: 'todo-list/',
       difficulty: EDifficulty.Medium,
       developer: 'sadanandpai',
-      tags: [],
+      tags: [ETag.interview],
     },
   ],
   [
@@ -304,7 +314,7 @@ const challenges: Map<string, IChallenge> = new Map([
       link: 'transfer-list/',
       difficulty: EDifficulty.Medium,
       developer: 'sadanandpai',
-      tags: [],
+      tags: [ETag.interview],
     },
   ],
   [
@@ -325,7 +335,7 @@ const challenges: Map<string, IChallenge> = new Map([
       link: 'tic-tac-toe/',
       difficulty: EDifficulty.Medium,
       developer: 'sadanandpai',
-      tags: [],
+      tags: [ETag.interview],
     },
   ],
   [
@@ -335,7 +345,7 @@ const challenges: Map<string, IChallenge> = new Map([
       link: 'chess-board/',
       difficulty: EDifficulty.Medium,
       developer: 'sadanandpai',
-      tags: [],
+      tags: [ETag.interview],
     },
   ],
   [
@@ -345,7 +355,7 @@ const challenges: Map<string, IChallenge> = new Map([
       link: 'chips-input/',
       difficulty: EDifficulty.Medium,
       developer: 'sadanandpai',
-      tags: [],
+      tags: [ETag.interview],
     },
   ],
   [
@@ -355,7 +365,7 @@ const challenges: Map<string, IChallenge> = new Map([
       link: 'infinite-scroll/',
       difficulty: EDifficulty.Medium,
       developer: 'srijanB7',
-      tags: [],
+      tags: [ETag.interview],
     },
   ],
   [
@@ -396,7 +406,7 @@ const challenges: Map<string, IChallenge> = new Map([
       link: 'basic-calculator/',
       difficulty: EDifficulty.Medium,
       developer: 'sadanandpai',
-      tags: [],
+      tags: [ETag.interview],
     },
   ],
   [
@@ -406,7 +416,7 @@ const challenges: Map<string, IChallenge> = new Map([
       link: 'match-pair/',
       difficulty: EDifficulty.Medium,
       developer: 'sadanandpai',
-      tags: [],
+      tags: [ETag.interview],
     },
   ],
   [
@@ -426,7 +436,7 @@ const challenges: Map<string, IChallenge> = new Map([
       link: 'count-down-timer/',
       difficulty: EDifficulty.Medium,
       developer: 'sadanandpai',
-      tags: [],
+      tags: [ETag.interview],
     },
   ],
   [
@@ -436,7 +446,7 @@ const challenges: Map<string, IChallenge> = new Map([
       link: 'otp-input/',
       difficulty: EDifficulty.Medium,
       developer: 'sadanandpai',
-      tags: [],
+      tags: [ETag.interview],
     },
   ],
   [
@@ -446,7 +456,7 @@ const challenges: Map<string, IChallenge> = new Map([
       link: 'quiz-app/',
       difficulty: EDifficulty.Medium,
       developer: 'Kei-K23',
-      tags: [],
+      tags: [ETag.interview],
       isNew: true,
     },
   ],
@@ -489,7 +499,7 @@ const challenges: Map<string, IChallenge> = new Map([
       link: 'area-selector/',
       difficulty: EDifficulty.Medium,
       developer: 'sadanandpai',
-      tags: [],
+      tags: [ETag.interview],
     },
   ],
   [
@@ -509,7 +519,7 @@ const challenges: Map<string, IChallenge> = new Map([
       link: 'carousel/',
       difficulty: EDifficulty.Medium,
       developer: 'sadanandpai',
-      tags: [],
+      tags: [ETag.interview],
     },
   ],
   [
@@ -529,13 +539,13 @@ const challenges: Map<string, IChallenge> = new Map([
       link: 'progress-bar/',
       difficulty: EDifficulty.Medium,
       developer: 'sadanandpai',
-      tags: [],
+      tags: [ETag.interview],
     },
   ],
   [
     'movie-info',
     {
-      title: 'Movie-info app (online)',
+      title: 'Movie Info',
       link: 'movie-info/',
       difficulty: EDifficulty.Medium,
       developer: 'AckermanLevi1',
@@ -543,10 +553,10 @@ const challenges: Map<string, IChallenge> = new Map([
     },
   ],
   [
-    'quiz-app-with-timer',
+    'timer-quiz',
     {
-      title: 'Quiz App with Timer',
-      link: 'quiz-app-with-timer/',
+      title: 'Timer Quiz',
+      link: 'timer-quiz/',
       difficulty: EDifficulty.Medium,
       developer: 'Vivek-GuptaXCode',
       tags: [],
@@ -579,7 +589,7 @@ const challenges: Map<string, IChallenge> = new Map([
       link: 'comment-box/',
       difficulty: EDifficulty.Hard,
       developer: 'sadanandpai',
-      tags: [],
+      tags: [ETag.interview],
     },
   ],
   [
@@ -609,7 +619,7 @@ const challenges: Map<string, IChallenge> = new Map([
       link: 'type-ahead/',
       difficulty: EDifficulty.Hard,
       developer: 'sadanandpai',
-      tags: [],
+      tags: [ETag.interview],
     },
   ],
   [
@@ -619,7 +629,7 @@ const challenges: Map<string, IChallenge> = new Map([
       link: 'type-ahead-online/',
       difficulty: EDifficulty.Hard,
       developer: 'sadanandpai',
-      tags: [],
+      tags: [ETag.interview],
     },
   ],
 ]);

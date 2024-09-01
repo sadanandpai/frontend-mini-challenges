@@ -10,6 +10,7 @@ import { RouterLink } from '@angular/router';
 })
 export class NavbarComponent {
   @Input() title = 'Challenge';
+  @Input() link!: string;
 
   public homeURL = isDevMode()
     ? 'http://localhost:6010/frontend-mini-challenges/'
@@ -18,4 +19,18 @@ export class NavbarComponent {
   public backURL = isDevMode()
     ? 'http://localhost:6010/frontend-mini-challenges/#/angular/'
     : '/frontend-mini-challenges/#/angular/';
+
+  public angularSourceCodeBaseURL =
+    'https://github.com/sadanandpai/frontend-mini-challenges/tree/main/apps/angular/src/app/challenges/';
+
+  // public angularSourceCode = this.angularSourceCodeBaseURL + this.link;
+  public angularSourceCodeURL!: string;
+
+  ngOnInit() {
+    this.angularSourceCodeURL = this.angularSourceCodeBaseURL + this.link;
+  }
+
+  // get fullLink(): string {
+  //   return `${this.angularSourceCodeBaseURL}${this.link}`;
+  // }
 }

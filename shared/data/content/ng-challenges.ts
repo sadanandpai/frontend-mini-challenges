@@ -1,4 +1,4 @@
-import { EDifficulty, type IChallenge } from '../types/challenge';
+import { EDifficulty, ETag, type IChallenge } from '../types/challenge';
 import { sortChallengesByDifficulty } from '../utils/challenges.helper';
 
 const challenges: Map<string, IChallenge> = new Map([
@@ -9,7 +9,7 @@ const challenges: Map<string, IChallenge> = new Map([
       link: 'counter',
       difficulty: EDifficulty.Easy,
       developer: 'sadanandpai',
-      tags: [],
+      tags: [ETag.interview],
       isNew: true,
     },
   ],
@@ -20,7 +20,7 @@ const challenges: Map<string, IChallenge> = new Map([
       link: 'guess-number',
       difficulty: EDifficulty.Easy,
       developer: 'pankajparkar',
-      tags: [],
+      tags: [ETag.interview],
       isNew: true,
     },
   ],
@@ -31,7 +31,7 @@ const challenges: Map<string, IChallenge> = new Map([
       link: 'todo-list',
       difficulty: EDifficulty.Easy,
       developer: 'pankajparkar',
-      tags: [],
+      tags: [ETag.interview],
       isNew: true,
     },
   ],
@@ -53,7 +53,7 @@ const challenges: Map<string, IChallenge> = new Map([
       link: 'tic-tac-toe',
       difficulty: EDifficulty.Easy,
       developer: 'pankajparkar',
-      tags: [],
+      tags: [ETag.interview],
       isNew: true,
     },
   ],

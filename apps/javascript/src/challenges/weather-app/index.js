@@ -52,3 +52,8 @@ searchBtn.addEventListener('click', () => {
   // when search button is clicked it initiates the check weather program with the city name entered
   checkWeather(searchBox.value);
 });
+
+document.querySelector('form').addEventListener('submit', (e) => {
+  e.preventDefault();
+  checkWeather(searchBox.value);
+});

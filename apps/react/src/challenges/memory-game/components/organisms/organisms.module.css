@@ -1,7 +1,0 @@
-.grid {
-  display: grid;
-  grid-gap: 4px;
-  background-color: #329cef;
-  border: 2px solid #329cef;
-  transition: all 0.25s;
-}

@@ -6,6 +6,10 @@ export const contributors = new Map<string, IContributor>([
     { name: 'Deepak Heerakari', pic: 'https://avatars.githubusercontent.com/u/63955160' },
   ],
   [
+    'X0rD3v1L',
+    { name: 'Benarjee Sambangi', pic: 'https://avatars.githubusercontent.com/u/46685302' },
+  ],
+  [
     'sadanandpai',
     { name: 'Sadanand Pai', pic: 'https://avatars.githubusercontent.com/u/12962887' },
   ],
@@ -214,4 +218,11 @@ export const contributors = new Map<string, IContributor>([
     { name: 'Bidisha Das', pic: 'https://avatars.githubusercontent.com/u/49115207' },
   ],
   ['amanraina1', { name: 'Aman Raina', pic: 'https://avatars.githubusercontent.com/u/140370468' }],
+  [
+    'SujithGunasekaran',
+    {
+      name: 'Sujith Gunasekaran',
+      pic: 'https://avatars.githubusercontent.com/u/68234378?s=96&v=4',
+    },
+  ],
 ]);
