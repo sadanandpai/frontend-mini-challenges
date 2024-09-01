@@ -1,16 +1,13 @@
-import { useRef, useState, useEffect } from 'react';
+import { useState } from 'react';
 import styles from './App.module.css';
 
 const Stepper = ({ stepConfig = [] }) => {
   const [currentStep, setCurrentStep] = useState(1);
-
   const [isCompleted, setIsCompleted] = useState(false);
 
-  // Calculating the margin for the progress-container so that it doesn't overflow the steps
-  const [margin, setMargin] = useState(0);
-
-  // Here, we are storing any one of the step (all are of same width i.e. flex:1) so that we can persist it throughout the renders
-  const stepRef = useRef(null);
+  if (stepConfig.length === 0) {
+    return null;
+  }
 
   const ActiveComponent = stepConfig[currentStep - 1]?.Component;
 
@@ -25,28 +22,12 @@ const Stepper = ({ stepConfig = [] }) => {
     });
   };
 
-  // Setting an event handler for window resizing for the responsiveness of out app
-  useEffect(() => {
-    setMargin(stepRef.current.offsetWidth / 2);
-
-    window.addEventListener('resize', () => {
-      setMargin(stepRef.current.offsetWidth / 2);
-    });
-
-    return window.removeEventListener('resize', () => {
-      setMargin(stepRef.current.offsetWidth / 2);
-    });
-  }, []);
-
-  if (stepConfig.length === 0) return <></>;
-
   return (
     <>
       <div className={styles.stepper}>
         {stepConfig.map((step, index) => {
           return (
             <div
-              ref={stepRef}
               key={step.name}
               className={`${styles.step} ${currentStep === index + 1 ? styles.active : ''} ${
                 currentStep > index + 1 || isCompleted ? styles.complete : ''
@@ -64,8 +45,9 @@ const Stepper = ({ stepConfig = [] }) => {
         <div
           className={styles['progress-container']}
           style={{
-            width: `calc(100% - ${margin * 2}px)`,
-            marginLeft: margin,
+            width: `calc(100% - (100% / ${stepConfig.length}))`,
+            marginLeft: `calc(100% /(${stepConfig.length} * 2))`,
+            zIndex: -1,
           }}
         >
           <div
