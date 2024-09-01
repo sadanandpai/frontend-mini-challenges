@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" dir="ltr">
   <head>
     <script src="../../helpers/header.js" type="module"></script>
@@ -9,17 +9,101 @@
     <div class="container">
       <h1 id="result">Refresh Me</h1>
 
-      <div class="dice-holder">
-        <div class="dice">
-          <p>Player 1</p>
-          <img class="img1" src="images/dice1.png" />
+      <div class="player-name">
+        <p>Player 1</p>
+        <p>Player 2</p>
+      </div>
+
+      <div class="dice-container">
+        <!-- For 1 dot -->
+        <div id="dice1" style="display: none">
+          <div class="dice">
+            <div class="col-1"></div>
+            <div class="col-2">
+              <span></span>
+            </div>
+            <div class="col-3"></div>
+          </div>
         </div>
 
-        <div class="dice">
-          <p>Player 2</p>
-          <img class="img2" src="images/dice1.png" />
+        <!-- For 2 dots -->
+        <div id="dice2" style="display: none">
+          <div class="dice">
+            <div class="col-1">
+              <span></span>
+            </div>
+            <div class="col-2"></div>
+            <div class="col-3">
+              <span></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- For 3 dots -->
+        <div id="dice3" style="display: none">
+          <div class="dice">
+            <div class="col-1">
+              <span></span>
+            </div>
+            <div class="col-2">
+              <span></span>
+            </div>
+            <div class="col-3">
+              <span></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- For 4 dots -->
+        <div id="dice4" style="display: none">
+          <div class="dice">
+            <div class="col-1">
+              <span></span>
+              <span></span>
+            </div>
+            <div class="col-2"></div>
+            <div class="col-3">
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- For 5 dots -->
+        <div id="dice5" style="display: none">
+          <div class="dice">
+            <div class="col-1">
+              <span></span>
+              <span></span>
+            </div>
+            <div class="col-2">
+              <span></span>
+            </div>
+            <div class="col-3">
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- For 6 dots -->
+        <div id="dice6" style="display: none">
+          <div class="dice">
+            <div class="col-1">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <div class="col-2"></div>
+            <div class="col-3">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
         </div>
       </div>
+
       <button class="play">Play</button>
     </div>
   </body>
