@@ -20,10 +20,12 @@ export function getMemoryGrid(rows, cols) {
     position = (position + Math.ceil(Math.random() * totalCells)) % totalCells;
     const rowIndex = Math.floor(position / cols);
     const colIndex = Math.floor(position % cols);
-    if (grid[rowIndex][colIndex] === 0) {
-      grid[rowIndex][colIndex] = 1;
+
+    if (!grid[rowIndex][colIndex]) {
+      grid[rowIndex][colIndex] = true;
       activeCount = activeCount + 1;
     }
   }
+
   return { grid, activeCount };
 }
