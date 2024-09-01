@@ -1,11 +1,14 @@
 .container {
-  text-align: center;
-  max-width: 500px;
+  margin: auto;
+  max-width: 600px;
   padding: 20px;
   border-radius: 20px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
   background-color: #1f1f1f;
   color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* Style the heading */
@@ -16,83 +19,90 @@
   margin: 10px;
 }
 
-/* Style the dice sections */
-.dice-holder {
+/* Style the container containing dice container */
+.dice-container {
   display: flex;
-  flex-direction: column;
   justify-content: space-around;
-  align-items: center;
-}
-
-.dice {
-  margin-top: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 /* Style the player names */
-.dice p {
+.player-name {
+  display: flex;
+  width: 520px;
+  justify-content: space-around;
   font-size: 32px;
   color: #ff6b6b;
   margin: 0;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
 
-/* Style the dice images */
-.img1,
-.img2 {
-  width: 150px;
-  height: 150px;
-  margin-top: 20px;
+.player-name p {
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.dice {
+  height: 200px;
+  width: 200px;
+  margin: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: flex;
+  overflow: hidden;
+  border-radius: 10px;
+  background-color: #ce252597;
   filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.4));
   transition: transform 0.3s ease-in-out;
 }
-.img1:hover,
-.img2:hover {
+
+/* Style the dots in dice */
+.dice span {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: #e2e7d9;
+}
+
+.dice .col-1 {
+  height: 100%;
+  width: 33.33%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dice .col-2 {
+  height: 100%;
+  width: 33.33%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dice .col-3 {
+  height: 100%;
+  width: 33.33%;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dice:hover {
   transform: rotate(180deg) scale(1.1);
 }
 
-.dice-background {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 200px;
-  height: 200px;
-  background-size: cover;
-  opacity: 0.2;
-  z-index: -1;
-}
-
-@media screen and (width >=600px) {
-  .container {
-    padding: 50px;
-    margin: 50px auto;
-  }
-
-  .container h1 {
-    font-size: 2rem;
-  }
-
-  .dice-holder {
-    flex-direction: row;
-    gap: 50px;
-  }
-
-  .dice p {
-    margin-top: 20px;
-  }
-}
-button{
-  padding:5px 20px;
-  margin:20px;
-  font-size:medium;
+button {
+  padding: 5px 20px;
+  margin: 20px;
+  font-size: medium;
   background-color: #ff6b6b;
-  border:none;
+  border: none;
   border-radius: 5px;
 }
-button:hover{
+
+button:hover {
   cursor: pointer;
   background-color: #ff5151;
 }

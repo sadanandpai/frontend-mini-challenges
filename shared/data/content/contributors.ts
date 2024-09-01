@@ -217,6 +217,7 @@ export const contributors = new Map<string, IContributor>([
     'officialbidisha',
     { name: 'Bidisha Das', pic: 'https://avatars.githubusercontent.com/u/49115207' },
   ],
+  ['amanraina1', { name: 'Aman Raina', pic: 'https://avatars.githubusercontent.com/u/140370468' }],
   [
     'SujithGunasekaran',
     {
