@@ -15,3 +15,7 @@
   grid-gap: 4px;
   transition: all 0.25s;
 }
+
+.grid button {
+  border: 2px solid grey;
+}
