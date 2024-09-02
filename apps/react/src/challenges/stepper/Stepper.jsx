@@ -11,7 +11,22 @@ const Stepper = ({ stepConfig = [] }) => {
 
   const ActiveComponent = stepConfig[currentStep - 1]?.Component;
 
-  const handleClick = () => {
+  const handleClick = (index) => {
+    setCurrentStep(index);
+  };
+
+  const handlePrevClick = () => {
+    setCurrentStep((prevStep) => {
+      if (prevStep < stepConfig.length + 1 && isCompleted) {
+        setIsCompleted(false);
+        return prevStep;
+      } else {
+        return prevStep - 1;
+      }
+    });
+  };
+
+  const handleNextClick = () => {
     setCurrentStep((prevStep) => {
       if (prevStep === stepConfig.length) {
         setIsCompleted(true);
@@ -33,7 +48,7 @@ const Stepper = ({ stepConfig = [] }) => {
                 currentStep > index + 1 || isCompleted ? styles.complete : ''
               }`}
             >
-              <div className={styles['step-number']}>
+              <div className={styles['step-number']} onClick={() => handleClick(index + 1)}>
                 {currentStep > index + 1 || isCompleted ? <span>&#10003;</span> : index + 1}
               </div>
 
@@ -62,11 +77,15 @@ const Stepper = ({ stepConfig = [] }) => {
       <div className={styles['action-container']}>
         {!isCompleted && <ActiveComponent />}
         {isCompleted && <div>Order Delivered successfully!🎉</div>}
-        {!isCompleted && (
-          <button className={styles.btn} onClick={handleClick}>
+        <span>
+          <button disabled={currentStep === 1} className={styles.btn} onClick={handlePrevClick}>
+            Previous
+          </button>
+
+          <button disabled={isCompleted} className={styles.btn} onClick={handleNextClick}>
             {currentStep === stepConfig.length ? 'Finish' : 'Next'}
           </button>
-        )}
+        </span>
       </div>
     </>
   );
