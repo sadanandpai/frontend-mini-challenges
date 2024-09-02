@@ -27,6 +27,7 @@
   background-color: #ccc;
   border: 2px solid black;
   border-radius: 50%;
+  cursor: pointer;
 }
 
 .step.active .step-number {
@@ -72,13 +73,16 @@
 }
 
 .action-container .btn {
-  width: 70px;
   height: 40px;
   padding: 10px;
+  margin: 10px 50px;
   font-size: 20px;
   cursor: pointer;
   background: none;
   background-color: #ccc;
   border: none;
   border-radius: 5px;
+}
+button:disabled {
+  cursor: not-allowed !important;
 }
