@@ -12,6 +12,7 @@ const Stepper = ({ stepConfig = [] }) => {
   const ActiveComponent = stepConfig[currentStep - 1]?.Component;
 
   const handleClick = (index) => {
+    setIsCompleted(false);
     setCurrentStep(index);
   };
 
