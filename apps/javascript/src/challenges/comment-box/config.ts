@@ -26,7 +26,4 @@ export const initialCommentState = {
 const storage = localStorage.getItem('state');
 export const initialState = storage
   ? JSON.parse(storage)
-  : {
-      initialCommentState,
-      comments: { ...initialCommentState.comments },
-    };
+  : JSON.parse(JSON.stringify(initialCommentState));
