@@ -1,109 +1,118 @@
+import { initialCommentState, initialState } from './config';
+import {
+  cloneAddCommentTemplate,
+  cloneNewCommentTemplate,
+  setDefaultControls,
+  setEditControls,
+} from './helpers';
+
 const commentContainer = document.querySelector('#commentContainer');
+const commentTemplate = document.querySelector('#comment-template');
+const resetButton = document.querySelector('#reset');
+let rootState;
 
-const createElement = (elementType = 'div', properties, ...children) => {
-  const element = document.createElement(elementType);
-  for (let key in properties) {
-    element[key] = properties[key];
-  }
+function addComment(parentEl, commentState, parentState) {
+  parentEl.querySelector(':scope > .sub-comments').appendChild(
+    cloneAddCommentTemplate({
+      username: commentState.username,
+      text: commentState.text,
+    })
+  );
+  const commentEl = parentEl.querySelector(':scope > .sub-comments > .comment-wrapper:last-child');
 
-  children.forEach(child => element.appendChild(child));
-  return element;
-};
+  commentEl.querySelector('.profile-pic').src =
+    `https://i.pravatar.cc/32?u=${commentState.username}`;
 
-const createComment = (name, text, settings) => {
-  text = text.replaceAll('\n', '<br>');
-  const p1 = createElement('p', { textContent: name, className: 'text-bold name' });
-  const p2 = createElement('p', { innerHTML: text, className: 'comment-text' });
-
-  const buttons = [];
-  buttons.push(createElement('button', { textContent: 'Reply', className: 'btn btn-primary small reply' }));
-  if (!settings?.hasNoEdit)
-    buttons.push(createElement('button', { textContent: 'Edit', className: 'btn btn-primary small edit' }));
-  if (!settings?.hasNoDelete)
-    buttons.push(createElement('button', { textContent: 'Delete', className: 'btn btn-primary small delete' }));
-
-  const btnHolder = createElement('div', { className: 'btn-holder' }, ...buttons);
-  const mainComment = createElement('div', { className: 'main-comment' }, p1, p2, btnHolder);
-  const subComments = createElement('div', { className: 'sub-comments' });
-
-  return createElement('div', { className: 'comment' }, mainComment, subComments);
-};
-
-const createCommentInput = () => {
-  const nameInput = createElement('input', { placeholder: 'Your name', className: 'text-bold name ' });
-  const commentInput = createElement('textarea', {
-    placeholder: 'comment',
-    className: 'comment-text',
-    rows: 2,
-    cols: 30,
+  commentEl.querySelector('.reply').addEventListener('click', () => {
+    if (!commentEl.querySelector(':scope > .sub-comments > .new-comment')) {
+      newComment(commentEl, commentState);
+    }
   });
-  const postBtn = createElement('button', { textContent: 'Post', className: 'btn btn-primary small post' });
-  const cancelBtn = createElement('button', { textContent: 'Cancel', className: 'btn btn-primary small cancel' });
-  const btnHolder = createElement('div', { className: 'btn-holder' }, postBtn, cancelBtn);
 
-  return createElement('div', { className: 'comment' }, nameInput, commentInput, btnHolder);
-};
+  if (!parentState) {
+    return commentEl;
+  }
 
-const toggleNeighbours = target => {
-  target.nextElementSibling.disabled = !target.nextElementSibling.disabled;
-  target.previousElementSibling.disabled = !target.previousElementSibling.disabled;
-};
+  commentEl.querySelector('.delete').addEventListener('click', () => {
+    commentEl.remove();
+    delete parentState.comments[commentState.parentCounter];
+  });
 
-const comment = createComment('Sadanand', 'Hello, world', { hasNoDelete: true, hasNoEdit: true });
-commentContainer.appendChild(comment);
+  commentEl.querySelector('.edit').addEventListener('click', () => {
+    setEditControls(commentEl);
+  });
 
-let isCommentOn = false;
-commentContainer.addEventListener('click', e => {
-  const target = e.target;
-  if (target.tagName.toLowerCase() === 'button') {
-    if (target.classList.contains('reply') && !isCommentOn) {
-      target.closest('.main-comment').nextElementSibling.appendChild(createCommentInput());
-      isCommentOn = true;
+  commentEl.querySelector('.cancel').addEventListener('click', () => {
+    commentEl.querySelector('.comment-text').innerText = commentState.text;
+    setDefaultControls(commentEl);
+  });
+
+  commentEl.querySelector('.submit').addEventListener('click', () => {
+    const innerText = commentEl.querySelector('.comment-text').innerText;
+    if (!innerText) {
       return;
     }
 
-    if (target.classList.contains('edit')) {
-      target.textContent = 'Save';
-      target.className = 'btn btn-primary small save';
-      toggleNeighbours(target);
-      target.closest('.main-comment').children[1].contentEditable = true;
+    commentState.text = innerText;
+    commentEl.querySelector('.comment-text').innerText = innerText;
+    setDefaultControls(commentEl);
+  });
+
+  return commentEl;
+}
+
+function newComment(parentEl, parentState) {
+  parentEl.querySelector(':scope > .sub-comments').appendChild(cloneNewCommentTemplate());
+  const commentEl = parentEl.querySelector(':scope > .sub-comments > .comment-wrapper:last-child');
+  commentEl.classList.add('new-comment');
+
+  commentEl.querySelector('.cancel').addEventListener('click', () => {
+    commentEl.remove();
+  });
+
+  commentEl.querySelector('.submit').addEventListener('click', () => {
+    const username = commentEl.querySelector('.username-input').value;
+    const text = commentEl.querySelector('.comment-text').innerText;
+
+    if (!username || !text) {
       return;
     }
 
-    if (target.classList.contains('save')) {
-      const commentText = target.closest('.main-comment').children[1];
+    const commentState = {
+      username: username,
+      text: text,
+      counter: 0,
+      parentCounter: parentState.counter,
+      comments: {},
+    };
 
-      if (!commentText.textContent) return;
-      target.textContent = 'Edit';
-      target.className = 'btn btn-primary small edit';
+    addComment(parentEl, commentState, parentState);
+    parentState.comments[parentState.counter++] = commentState;
+    commentEl.remove();
+  });
+}
 
-      commentText.contentEditable = false;
-      toggleNeighbours(target);
-      return;
-    }
+function init(parentEl, parentState) {
+  for (const commentState of Object.values(parentState.comments)) {
+    const commentEl = addComment(parentEl, commentState, parentState);
 
-    if (target.classList.contains('delete')) {
-      target.closest('.comment').remove();
-      return;
-    }
-
-    if (target.classList.contains('cancel')) {
-      target.closest('.comment').remove();
-      isCommentOn = false;
-      return;
-    }
-
-    if (target.classList.contains('post')) {
-      const comment = target.closest('.comment');
-      const name = comment.children[0].value;
-      const text = comment.children[1].value;
-
-      if (!name || !text) return;
-
-      target.closest('.sub-comments').appendChild(createComment(name, text));
-      comment.remove();
-      isCommentOn = false;
-      return;
+    if (commentState.comments) {
+      init(commentEl, commentState);
     }
   }
+}
+
+function loadState(state = initialCommentState) {
+  commentContainer.querySelector('.sub-comments').innerHTML = '';
+  rootState = state;
+  const rootEl = addComment(commentContainer, rootState);
+  init(rootEl, rootState);
+}
+
+resetButton.addEventListener('click', () => loadState());
+
+window.addEventListener('beforeunload', () => {
+  localStorage.setItem('state', JSON.stringify(rootState));
 });
+
+loadState(initialState);

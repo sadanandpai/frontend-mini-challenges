@@ -590,6 +590,7 @@ const challenges: Map<string, IChallenge> = new Map([
       difficulty: EDifficulty.Hard,
       developer: 'sadanandpai',
       tags: [ETag.interview],
+      isNew: true,
     },
   ],
   [

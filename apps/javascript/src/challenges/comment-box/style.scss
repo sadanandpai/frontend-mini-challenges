@@ -1,0 +1,88 @@
+body .container {
+  width: min(90%, 1200px);
+}
+
+.reset-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+#commentContainer > .sub-comments {
+  margin-left: 0;
+
+  & > .comment-wrapper > .main-comment {
+    .edit,
+    .delete {
+      display: none;
+    }
+  }
+}
+
+.profile-pic {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid blue;
+
+  &:hover {
+    scale: 1.1;
+  }
+}
+
+.main-comment {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+  background: #ececec;
+  padding: 1rem;
+  border-radius: 0 8px 8px;
+}
+
+.sub-comments {
+  margin-left: 48px;
+}
+
+.content {
+  flex-grow: 1;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  h3 {
+    margin: 0;
+  }
+}
+
+.comment-text {
+  margin-top: 0;
+  padding: 8px 0;
+  margin-top: 4px;
+
+  &.editable {
+    padding: 8px;
+    outline: 1px solid blue;
+    background: #fff;
+  }
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.hide {
+  display: none;
+}
+
+.comment-text:empty {
+  outline: 1px solid red;
+}
+
+.new-comment .comment-text:empty {
+  outline: 1px solid blue;
+}

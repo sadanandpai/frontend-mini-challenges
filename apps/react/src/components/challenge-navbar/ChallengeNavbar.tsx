@@ -1,4 +1,5 @@
 import { logo } from '@fmc/assets/images';
+import { ExternalLink } from 'lucide-react';
 import styles from './challenge-navbar.module.scss';
 
 const { VITE_PATH, VITE_HOST_URL, DEV } = import.meta.env;
@@ -31,22 +32,7 @@ function ChallengeNavbar({ title, link }: Props) {
         <div className={styles.source_code}>
           {link ? (
             <a href={reactSourceCodeBaseURL + link} target="_blank" rel="noreferrer">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="18"
-                height="18"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="lucide lucide-external-link"
-              >
-                <path d="M15 3h6v6" />
-                <path d="M10 14 21 3" />
-                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-              </svg>{' '}
+              <ExternalLink />
               Source code
             </a>
           ) : null}
@@ -69,22 +55,7 @@ function ChallengeNavbar({ title, link }: Props) {
                 {link ? (
                   <a href={reactSourceCodeBaseURL + link} target="blank">
                     <li>
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="18"
-                        height="18"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        className="lucide lucide-external-link"
-                      >
-                        <path d="M15 3h6v6" />
-                        <path d="M10 14 21 3" />
-                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                      </svg>{' '}
+                      <ExternalLink />
                       Source code
                     </li>
                   </a>
