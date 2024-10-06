@@ -1,5 +1,4 @@
 import { Routes } from '@angular/router';
-
 import { ChallengeContainerComponent } from './components/challenge-container/challenge-container.component';
 
 export const routes: Routes = [

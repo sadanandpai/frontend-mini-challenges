@@ -23,14 +23,9 @@ export class NavbarComponent {
   public angularSourceCodeBaseURL =
     'https://github.com/sadanandpai/frontend-mini-challenges/tree/main/apps/angular/src/app/challenges/';
 
-  // public angularSourceCode = this.angularSourceCodeBaseURL + this.link;
   public angularSourceCodeURL!: string;
 
   ngOnInit() {
     this.angularSourceCodeURL = this.angularSourceCodeBaseURL + this.link;
   }
-
-  // get fullLink(): string {
-  //   return `${this.angularSourceCodeBaseURL}${this.link}`;
-  // }
 }

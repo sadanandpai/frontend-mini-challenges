@@ -391,7 +391,7 @@ const challenges = new Map<string, IChallenge>([
       link: 'chess-board',
       difficulty: EDifficulty.Medium,
       developer: 'AbhilashMadi',
-      tags: [ETag.interview],
+      tags: [],
     },
   ],
   [
