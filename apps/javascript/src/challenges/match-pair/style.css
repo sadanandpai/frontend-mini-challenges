@@ -1,12 +1,12 @@
-:root{
-    --size: min(14vh, 14vw);
-    --transition-time: 1s;
+:root {
+  --size: min(16vh, 16vw);
+  --transition-time: 1s;
 }
 
-.container{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .game {
@@ -17,7 +17,7 @@
 }
 
 .game-front {
-    position: absolute;
+  position: absolute;
 }
 
 .tile {
@@ -38,36 +38,36 @@
 }
 
 .reset .tile {
-    animation: bubbleEffect 1.5s;
+  animation: bubbleEffect 1.5s;
 }
 
 @keyframes bubbleEffect {
-    25% {
-        scale: 0.4;
-    }
-    100% {
-        scale: 1;
-    }
+  25% {
+    scale: 0.4;
+  }
+  100% {
+    scale: 1;
+  }
 }
 
 .tile.back-tile {
-    transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
 
 .tile.active {
-  background-color:yellowgreen;
+  background-color: yellowgreen;
   transform: rotateY(180deg);
 }
 
 .tile.back-tile.active {
-    background-color:yellowgreen;
-    transform: rotateY(360deg);
+  background-color: yellowgreen;
+  transform: rotateY(360deg);
 }
 
 .tile.match {
-    transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
 
 .tile.back-tile.match {
-    transform: rotateY(360deg);
+  transform: rotateY(360deg);
 }

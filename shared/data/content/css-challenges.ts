@@ -13,13 +13,14 @@ const challenges: Map<string, IChallenge> = new Map([
     },
   ],
   [
-    'spinner',
+    'loaders',
     {
-      title: 'Spinner',
-      link: 'spinner/',
+      title: 'Loaders',
+      link: 'loaders/',
       difficulty: EDifficulty.Easy,
-      developer: 'DhanushNehru',
+      developer: 'sadanandpai',
       tags: [],
+      isNew: true,
     },
   ],
   [
@@ -97,7 +98,6 @@ const challenges: Map<string, IChallenge> = new Map([
       developer: 'AbhineshJha',
       youtube: 'https://youtu.be/FRRlFLfdvBE?si=HWn88BwJGTJvEBUD',
       tags: [],
-      isNew: true,
     },
   ],
   [

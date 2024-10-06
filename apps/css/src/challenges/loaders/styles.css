@@ -1,0 +1,112 @@
+.main {
+  display: flex;
+  gap: 1em;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.main > div {
+  width: 160px;
+  position: relative;
+  aspect-ratio: 1;
+  border: 1px solid #ccc;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader1 {
+  margin: auto;
+  width: 80%;
+  height: 80%;
+  border: 15px solid #f3f3f3;
+  border-top: 15px solid #004e82;
+  border-bottom: 15px solid #004e82;
+  border-radius: 50%;
+  animation: anim1 1s linear infinite;
+}
+
+@keyframes anim1 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loader2_1,
+.loader2_2,
+.loader2_3 {
+  margin: 20px;
+  width: 10px;
+  height: 60%;
+  background-color: #000;
+  position: relative;
+  animation: anim2 1s linear infinite;
+}
+
+.loader2_2 {
+  animation-delay: 0.25s;
+}
+
+.loader2_3 {
+  animation-delay: 0.5s;
+}
+
+@keyframes anim2 {
+  0% {
+    height: 20%;
+  }
+  50% {
+    height: 60%;
+  }
+  100% {
+    height: 20%;
+  }
+}
+
+.loader3 {
+  width: 30%;
+  height: 60%;
+  --_g: no-repeat radial-gradient(circle closest-side, #000 90%, #0000);
+  background:
+    var(--_g) 0% 50%,
+    var(--_g) 50% 50%,
+    var(--_g) 100% 50%;
+  background-size: calc(100% / 4) 50%;
+  animation: l3 1s infinite linear;
+}
+@keyframes l3 {
+  20% {
+    background-position:
+      0% 0%,
+      50% 50%,
+      100% 50%;
+  }
+  40% {
+    background-position:
+      0% 100%,
+      50% 0%,
+      100% 50%;
+  }
+  60% {
+    background-position:
+      0% 50%,
+      50% 100%,
+      100% 0%;
+  }
+  80% {
+    background-position:
+      0% 50%,
+      50% 50%,
+      100% 100%;
+  }
+}
+
+@media screen and (width > 500px) {
+  .main > div {
+    width: 300px;
+  }
+}

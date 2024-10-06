@@ -2,7 +2,7 @@
   display: none;
 }
 
-.navbar {
+.challenge-navbar {
   display: flex;
   gap: 1rem;
   align-items: center;
@@ -80,7 +80,7 @@
     display: block;
   }
 
-  .navbar {
+  .challenge-navbar {
     padding: 1rem 1rem 1rem 0.5rem;
 
     .logo {
