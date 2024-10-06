@@ -15,7 +15,6 @@ html {
 body {
   margin: 0;
   color: var(--text-body);
-  transition: all 150ms ease-in-out;
   overflow-x: hidden;
 }
 
