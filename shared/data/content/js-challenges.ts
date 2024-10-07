@@ -440,16 +440,6 @@ const challenges: Map<string, IChallenge> = new Map([
     },
   ],
   [
-    'otp-input',
-    {
-      title: 'OTP Input',
-      link: 'otp-input/',
-      difficulty: EDifficulty.Medium,
-      developer: 'sadanandpai',
-      tags: [ETag.interview],
-    },
-  ],
-  [
     'quiz-app',
     {
       title: 'Quiz App',
@@ -563,6 +553,16 @@ const challenges: Map<string, IChallenge> = new Map([
     },
   ],
   [
+    'otp-input',
+    {
+      title: 'OTP Input',
+      link: 'otp-input/',
+      difficulty: EDifficulty.Hard,
+      developer: 'sadanandpai',
+      tags: [ETag.interview],
+    },
+  ],
+  [
     'paginator',
     {
       title: 'Paginator',
@@ -583,10 +583,10 @@ const challenges: Map<string, IChallenge> = new Map([
     },
   ],
   [
-    'comment-box',
+    'nested-comments',
     {
-      title: 'Comment box',
-      link: 'comment-box/',
+      title: 'Nested Comments',
+      link: 'nested-comments/',
       difficulty: EDifficulty.Hard,
       developer: 'sadanandpai',
       tags: [ETag.interview],
