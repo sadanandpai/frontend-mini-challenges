@@ -1,220 +1,220 @@
 :root {
-    --font-m: 16px;
-
-    /* Set the base font size, adjust this as needed */
+  --font-m: 16px;
 }
 
 .App {
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
-    margin: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
 }
 
 .meal_container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    width: 50%;
-    padding: 1rem 1.3rem;
-    margin-top: 3rem;
-    background-color: #9fa732;
-    border: 0.2rem solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 50%;
+  padding: 1rem 1.3rem;
+  margin-top: 3rem;
+  background-color: #9fa732;
+  border: 0.2rem solid black;
 }
 
 .meal_name {
-    font-size: 1.6rem;
-    text-align: center;
+  font-size: 1.6rem;
+  text-align: center;
 }
 
 .meal_img {
-    width: 100%;
-    height: 300px;
+  width: 100%;
+  height: 300px;
 }
 
 .tags_container,
 .modal_tags_container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    align-items: center;
-    padding-inline-start: 0;
-    font-size: 1.2rem;
-    list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  padding-inline-start: 0;
+  font-size: 1.2rem;
+  list-style: none;
 }
 
 .tag,
 .modal_tag {
-    padding: 0.4rem 0.7rem;
-    cursor: pointer;
-    background-color: rgb(226 176 68);
-    transition: all 0.3s ease-in;
+  padding: 0.4rem 0.7rem;
+  cursor: pointer;
+  background-color: rgb(226, 176, 68);
+  transition: all 0.3s ease-in;
 }
 
 .tag:hover,
 .modal_tag:hover {
-    color: #ececec;
-    background-color: rgb(0 153 153);
+  color: #ececec;
+  background-color: rgb(0, 153, 153);
 }
 
-dialog {
-    top: 3%;
-    width: 70%;
+.dialog {
+  top: 3%;
+  width: 70%;
 }
 
 .modal_meal_img {
-    width: 100%;
-    height: 350px;
+  width: 100%;
+  height: 350px;
 }
 
 .modal_instruction {
-    font-size: 1.2rem;
-    line-height: 1.6rem;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
 }
 
 .foodBtn,
 .openBtn {
-    padding: 0.4rem 0.9rem;
-    font-size: 1.3rem;
-    font-weight: 700;
-    cursor: pointer;
-    background-color: #fff;
-    border: 0.2rem solid black;
-    transition: background-color 0.2s ease-in;
+  padding: 0.4rem 0.9rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: #fff;
+  border: 0.2rem solid black;
+  transition: background-color 0.2s ease-in;
 }
 
 .openBtn {
-    margin-top: 2rem;
-    font-size: 1.1rem;
+  margin-top: 2rem;
+  font-size: 1.1rem;
 }
 
 .foodBtn:hover,
 .openBtn:hover {
-    background-color: #eee;
+  background-color: #eee;
 }
 
 .foodBtn:active,
 .openBtn:active {
-    background-color: #ddd;
+  background-color: #ddd;
 }
 
 .closeBtn {
-    position: absolute;
-    top: -1.3rem;
-    right: -1.3rem;
-    padding: 0 0.6rem;
-    font-size: 2rem;
-    font-weight: 700;
-    color: #fff;
-    cursor: pointer;
-    background-color: rgb(223 72 72);
-    border-radius: 50%;
-    transition: background-color 0.2s ease-in;
+  position: absolute;
+  top: -1.3rem;
+  right: -1.3rem;
+  padding: 0 0.6rem;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+  cursor: pointer;
+  background-color: rgb(223, 72, 72);
+  border-radius: 50%;
+  transition: background-color 0.2s ease-in;
 }
 
 .closeBtn:hover {
-    background-color: rgb(199 64 64);
+  background-color: rgb(199, 64, 64);
 }
 
 .closeBtn:active {
-    background-color: rgb(175 55 55);
+  background-color: rgb(175, 55, 55);
 }
 
 /* modal dialog table */
 .recipe_table {
-    width: 100%;
-    margin: 1.8rem auto;
-    font-size: 1rem;
-    border-collapse: collapse;
+  width: 100%;
+  margin: 1.8rem auto;
+  font-size: 1rem;
+  border-collapse: collapse;
 }
 
 .recipe_table th,
 .recipe_table td {
-    height: 3.12rem;
-    padding-left: 1.25rem;
-    text-align: left;
+  height: 3.12rem;
+  padding-left: 1.25rem;
+  text-align: left;
 }
 
 .recipe_table th {
-    color: #fff;
-    background-color: #9fa732;
+  color: #fff;
+  background-color: #9fa732;
 }
 
 .recipe_table tr:nth-child(even) {
-    background-color: #f9ffa3;
+  background-color: #f9ffa3;
 }
 
 /* Responsive for mobile and tablet */
 @media screen and (width <= 768px) {
-    .meal_container {
-        width: 88%;
-        padding: 0.5rem;
-    }
+  .meal_container {
+    width: 88%;
+    padding: 0.5rem;
+  }
 
-    dialog {
-        width: 88%;
-    }
+  .dialog {
+    width: 88%;
+  }
 
-    .meal_name {
-        font-size: 1.4rem;
-    }
+  .meal_name {
+    font-size: 1.4rem;
+  }
 
-    .meal_img {
-        height: 200px;
-    }
+  .meal_img {
+    height: 200px;
+  }
 
-    .tags_container,
-    .modal_tags_container {
-        font-size: 1rem;
-    }
+  .tags_container,
+  .modal_tags_container {
+    font-size: 1rem;
+  }
 
-    .modal_meal_img {
-        height: 250px;
-    }
+  .modal_meal_img {
+    height: 250px;
+  }
 
-    .modal_instruction {
-        font-size: 1rem;
-        line-height: 1.4rem;
-    }
+  .modal_instruction {
+    font-size: 1rem;
+    line-height: 1.4rem;
+  }
 
-    .foodBtn,
-    .openBtn {
-        font-size: 1.1rem;
-    }
+  .foodBtn,
+  .openBtn {
+    font-size: 1.1rem;
+  }
 
-    .closeBtn {
-        top: -0.5rem;
-        right: -0.5rem;
-        font-size: 1.5rem;
-    }
+  .closeBtn {
+    top: -0.5rem;
+    right: -0.5rem;
+    font-size: 1.5rem;
+  }
 
+  .recipe_table {
     th,
     td {
-        height: 40px;
-        padding-left: 10px;
+      height: 40px;
+      padding-left: 10px;
     }
+  }
 }
 
 @media screen and (width >= 1300px) {
-    .meal_container {
-        width: 40%;
-    }
+  .meal_container {
+    width: 40%;
+  }
 
-    dialog {
-        width: 60%;
-    }
+  .dialog {
+    width: 60%;
+  }
 }
 
 @media screen and (width >= 1700px) {
-    .meal_container {
-        width: 35%;
-    }
+  .meal_container {
+    width: 35%;
+  }
 
-    dialog {
-        width: 55%;
-    }
+  .dialog {
+    width: 55%;
+  }
 }

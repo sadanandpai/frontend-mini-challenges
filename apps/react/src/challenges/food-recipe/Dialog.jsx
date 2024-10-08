@@ -6,7 +6,7 @@ export default function Dialog({ data, handleCloseDialog }) {
   const { strMeal, strMealThumb, strInstructions, strYoutube } = data;
 
   return (
-    <dialog open onClose={handleCloseDialog}>
+    <dialog className={styles.dialog} open onClose={handleCloseDialog}>
       <div className={styles['modal_meal_container']}>
         <button className={styles['closeBtn']} onClick={handleCloseDialog}>
           &times;
