@@ -4,6 +4,7 @@ const toastTypeEl = document.getElementById('type');
 const toastMessageEl = document.getElementById('message');
 const showToastButtonEl = document.getElementById('show-toast');
 const durationEl = document.getElementById('duration');
+const durationOpEl = document.getElementById('duration-output');
 
 const leftTopContainer = document.querySelector('.tc-left-top');
 const leftBottomContainer = document.querySelector('.tc-left-bottom');
@@ -54,9 +55,13 @@ function createToast(message, type, duration, horizontalPosition) {
 
   async function removeToast() {
     toastEl.classList.add(horizontalPosition === 'left' ? 'fade-out-left' : 'fade-out-right');
-    await new Promise(resolve => setTimeout(resolve, 100));
+    await new Promise((resolve) => setTimeout(resolve, 100));
     toastEl.remove();
   }
 
   return toast;
 }
+
+durationEl.addEventListener('input', () => {
+  durationOpEl.textContent = durationEl.value;
+});

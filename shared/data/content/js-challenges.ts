@@ -227,10 +227,10 @@ const challenges: Map<string, IChallenge> = new Map([
     },
   ],
   [
-    'toast-popup',
+    'toast-snackbar',
     {
-      title: 'Toast Popup',
-      link: 'toast-popup/',
+      title: 'Toast/Snackbar',
+      link: 'toast-snackbar/',
       difficulty: EDifficulty.Medium,
       developer: 'sadanandpai',
       youtube: 'https://youtu.be/-p3N5bJXEK8',

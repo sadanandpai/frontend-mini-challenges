@@ -50,6 +50,7 @@ const Toast = () => {
           value={type}
           onChange={(e) => setType(e.target.value as ToastType)}
         >
+          <option value={ToastType.NORMAL}>Normal</option>
           <option value={ToastType.SUCCESS}>Success</option>
           <option value={ToastType.ERROR}>Error</option>
           <option value={ToastType.WARNING}>Warning</option>
