@@ -40,7 +40,7 @@ closeOnOutsideClick.addEventListener('click', () => {
 
 // closeOnEscape
 checkCloseOnEscape();
-function checkCloseOnEscape(event) {
+function checkCloseOnEscape() {
   dialogPopup.removeEventListener('keydown', closeOnEscapeListener);
 }
 function closeOnEscapeListener(event) {
