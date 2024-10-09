@@ -1,30 +1,65 @@
-button {
-  background-color: white;
-  border: 1px solid black;
-  border-radius: 2px;
-  padding: 3px 7px;
-  text-align: center;
+:root {
+  --backdrop-opacity: 0.5;
 }
 
-button:hover {
+button {
+  border: 1px solid black;
+  border-radius: 2px;
+  padding: 0.5rem;
+  text-align: center;
   cursor: pointer;
-  background-color: aqua;
+  margin-top: 1rem;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+header > button {
+  background-color: transparent;
+  border: 1px solid lightgray;
+  margin-top: 0;
+}
+
+footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 2rem;
 }
 
 dialog {
-  border: 1px solid black;
-  border-radius: 3px;
-  padding: 10px;
-  max-width: 325px;
-  width: 80%;
+  border: none;
+  order: 1px solid gray;
+  box-shadow: 0 0 10px #00000080;
+  max-width: 80%;
+  padding: 0;
 }
 
-h4 {
+dialog::backdrop {
+  background-color: #000;
+  opacity: var(--backdrop-opacity);
+}
+
+#dialogContainer {
+  padding: 1rem;
+}
+
+h2 {
   padding: 0px;
   margin: 0px;
-  border-bottom: 1px solid black;
 }
 
 .dialogContent {
-  padding: 10px;
+  padding: 1rem 0;
+}
+
+.option {
+  display: flex;
+  gap: 1rem;
+  font-size: larger;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0px;
 }
