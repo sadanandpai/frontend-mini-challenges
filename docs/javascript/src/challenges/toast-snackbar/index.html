@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <script type="module" crossorigin src="/frontend-mini-challenges/javascript/assets/index-_11xpRqk.js"></script>
+    <link rel="modulepreload" crossorigin href="/frontend-mini-challenges/javascript/assets/navbar-IzivO4uo.js">
+    <link rel="modulepreload" crossorigin href="/frontend-mini-challenges/javascript/assets/header-5ylfyFAP.js">
+    <link rel="stylesheet" crossorigin href="/frontend-mini-challenges/javascript/assets/header-Enz8DmX9.css">
+    <link rel="stylesheet" crossorigin href="/frontend-mini-challenges/javascript/assets/navbar-e_e98INf.css">
+    <link rel="stylesheet" crossorigin href="/frontend-mini-challenges/javascript/assets/index-cRq7dYhw.css">
+  </head>
+  <body>
+    <div class="container text-center">
+      <form class="flex">
+        <select name="position" id="horizontal-position">
+          <option value="left">Left</option>
+          <option value="right">Right</option>
+        </select>
+
+        <select name="position" id="vertical-position">
+          <option value="top">Top</option>
+          <option value="bottom">Bottom</option>
+        </select>
+
+        <select name="type" id="type">
+          <option value="normal">Normal</option>
+          <option value="success">Success</option>
+          <option value="error">Error</option>
+          <option value="warning">Warning</option>
+          <option value="info">Info</option>
+        </select>
+
+        <input
+          type="text"
+          name="message"
+          id="message"
+          placeholder="Message"
+          value="This is a toast message!"
+        />
+
+        <div class="duration-wrapper">
+          <label for="duration" class="flex"> Duration</label>
+          <input type="range" name="duration" id="duration" min="3" max="10" value="5" />
+          <span><output for="duration" id="duration-output">5</output>s</span>
+        </div>
+
+        <button type="button" class="btn btn-primary" id="show-toast">Show Toast</button>
+      </form>
+    </div>
+
+    <div class="toast-container tc-left-top flex"></div>
+    <div class="toast-container tc-left-bottom flex"></div>
+    <div class="toast-container tc-right-top flex"></div>
+    <div class="toast-container tc-right-bottom flex"></div>
+
+    <template id="toast-template">
+      <div class="toast flex">
+        <span class="toast-message"></span>
+        <button class="remove flex-center">&#x2715;</button>
+      </div>
+    </template>
+  </body>
+</html>
