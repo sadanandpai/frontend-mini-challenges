@@ -195,6 +195,16 @@ const challenges: Map<string, IChallenge> = new Map([
     },
   ],
   [
+    'mouse-follower',
+    {
+      title: 'Mouse Follower',
+      link: 'mouse-follower/',
+      difficulty: EDifficulty.Medium,
+      developer: 'sadanandpai',
+      tags: [],
+    },
+  ],
+  [
     'finance-tracker',
     {
       title: 'Finance Tracker',
