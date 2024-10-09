@@ -8,21 +8,42 @@
   <body>
     <div class="container text-center">
       <dialog id="dialogPopup">
-        <!-- Dialog Head -->
-        <div><h4>Header</h4></div>
-        <!-- Dialog Body -->
-        <div>
+        <section id="dialogContainer">
+          <!-- Dialog Header -->
+          <header>
+            <h2>Modal Heading</h2>
+            <button class="closeDialog" id="closeIcon">&#x2715;</button>
+          </header>
+          <!-- Dialog Body -->
           <div class="dialogContent">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus reprehenderit tempora
-            exercitationem, hic vel iure deserunt? Tempore corporis eveniet architecto qui aliquid
-            quam quis, voluptate
+            This is modal content. You can put any content here. This has a groovy backdrop!
+            <br />
+            You can also close this modal by clicking outside of it or pressing the escape key
           </div>
-          <button id="closeDialog">Close Dialog</button>
-        </div>
+          <footer>
+            <button class="closeDialog">Close</button>
+          </footer>
+        </section>
       </dialog>
-      <p>
-        <button id="showDialog">Show Dialog</button>
-      </p>
+      <div>
+        <div class="option">
+          <label for="closeOnOutsideClick">Close dialog on outside click</label>
+          <input type="checkbox" class="optionCheckbox" checked id="closeOnOutsideClick" />
+        </div>
+        <div class="option">
+          <label for="closeOnEscape">Close dialog on escape</label>
+          <input type="checkbox" class="optionCheckbox" checked id="closeOnEscape" />
+        </div>
+        <div class="option">
+          <label for="hasCloseButton">Show close icon</label>
+          <input type="checkbox" class="optionCheckbox" checked id="hasCloseButton" />
+        </div>
+        <div class="option">
+          <label for="hasBackdrop">Show backdrop</label>
+          <input type="checkbox" class="optionCheckbox" checked id="hasBackdrop" />
+        </div>
+      </div>
+      <button id="showDialog">Show Dialog</button>
     </div>
   </body>
 </html>
