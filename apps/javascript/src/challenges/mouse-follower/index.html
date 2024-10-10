@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <script src="../../helpers/header.js" type="module"></script>
+    <script src="index.ts" type="module"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container text-center">
+      <div id="follower"></div>
+      <p>
+        This pointer moves towards the mouse pointer. Try moving your mouse around the screen.<br />
+        This is an interactive challenge works with pointer devices.
+      </p>
+
+      <div class="form">
+        <div>
+          <label for="speed">Speed</label>
+          <input
+            type="range"
+            name="speed"
+            id="speed"
+            min="0.02"
+            max="0.3"
+            step="0.02"
+            value="0.1"
+          />
+        </div>
+
+        <div>
+          <label for="cursor">Show cursor</label>
+          <input type="checkbox" name="cursor" id="cursor" checked />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+body {
+  height: 100vh;
+}
+
+body.no-cursor,
+body.no-cursor * {
+  cursor: none !important;
+}
+
+#follower {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  box-shadow: 0 0 8px 8px rgba(255, 0, 0, 0.5);
+  border-radius: 50%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+p {
+  font-size: 1.5em;
+  color: #333;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+
+  div {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+
+    label {
+      font-size: 1.5em;
+    }
+  }
+}
