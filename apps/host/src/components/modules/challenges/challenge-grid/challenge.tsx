@@ -10,8 +10,6 @@ interface Props {
 }
 
 const Challenge = ({ link, contributor, challenge, techImg }: Props) => {
-  console.log(challenge.tags);
-
   return (
     <a
       key={challenge.title}
@@ -27,7 +25,7 @@ const Challenge = ({ link, contributor, challenge, techImg }: Props) => {
           <h3>{challenge.title}</h3>
         </div>
         <div className={styles.difficultyBadge}>
-          <div className={styles.ellips}></div>
+          <div className={styles.ellips} />
           {challenge.difficulty}
         </div>
       </div>
