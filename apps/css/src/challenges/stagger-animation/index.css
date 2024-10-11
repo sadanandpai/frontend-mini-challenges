@@ -1,0 +1,35 @@
+.config {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem auto;
+}
+
+.stagger-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 2rem auto;
+
+  --duration: 0.5s;
+  --stagger: 0.2;
+  --count: 0;
+}
+
+.stagger-item {
+  width: 50%;
+  height: 40px;
+  background: radial-gradient(circle at bottom right, #fb2324, #fe932a);
+  --delay: calc(var(--stagger) * var(--duration) * var(--count));
+  animation: slide var(--duration) var(--delay) both alternate;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(50%);
+  }
+}

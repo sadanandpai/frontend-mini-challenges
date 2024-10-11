@@ -9,7 +9,7 @@ interface Props {
   techImg: string;
 }
 
-const Challenge = ({ link, contributor, challenge, techImg }: Props) => {
+const Challenge = ({ link, contributor, challenge }: Props) => {
   return (
     <a
       key={challenge.title}
@@ -19,9 +19,9 @@ const Challenge = ({ link, contributor, challenge, techImg }: Props) => {
       {challenge.isNew && <div className={styles.newTag}>NEW</div>}
       <div className="flex-space-between">
         <div className="flex-space-between">
-          <div>
+          {/* <div>
             <img src={techImg} alt={'alt'} width="30px" />
-          </div>
+          </div> */}
           <h3>{challenge.title}</h3>
         </div>
         <div className={styles.difficultyBadge}>

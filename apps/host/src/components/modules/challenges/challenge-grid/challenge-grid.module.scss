@@ -9,6 +9,7 @@
 .searchInputWrapper {
   position: relative;
   height: 35px;
+
   .searchInput {
     outline: none;
     padding: 0.5rem 1rem;
@@ -81,8 +82,8 @@
 
 .challengeGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  grid-gap: 1.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-gap: 2.5rem;
   margin: 2rem 0;
 }
 
@@ -90,7 +91,7 @@
   position: relative;
   padding: 1rem;
   border: 1px solid var(--card-border);
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   box-shadow: 0 0 1rem 0 var(--card-shadow);
   transition: all 0.2s ease-in-out;
   background: var(--card-body);
@@ -108,14 +109,7 @@
   &.new {
     background:
       linear-gradient(var(--card-body), var(--card-body)) padding-box,
-      rgb(88, 7, 250)
-        linear-gradient(
-          60deg,
-          rgba(88, 7, 250, 1) 25%,
-          rgba(180, 111, 255, 1) 67%,
-          rgba(113, 0, 252, 1) 94%
-        )
-        border-box;
+      rgba(88, 7, 250, 0.25) border-box;
     box-shadow: 0 0 1rem 0 #e2c7ff;
     border: 0.2rem solid transparent;
     border-image-slice: 1;
@@ -131,7 +125,7 @@
 
   h3 {
     font-size: 1.25rem;
-    font-weight: 600;
+    font-weight: 500;
     color: var(--text-body);
     margin: 0px;
   }
@@ -197,7 +191,7 @@
   }
 
   &.Medium {
-    --difficulty-color: #ffc01e;
+    --difficulty-color: darkorange;
   }
 
   &.Hard {
@@ -240,6 +234,5 @@
   padding: 0.2rem 0.75rem;
   color: #ffffff;
   border-radius: 5rem;
-  background: rgb(255, 173, 79)
-    linear-gradient(60deg, rgba(255, 173, 79, 1) 0%, rgba(222, 120, 3, 1) 83%);
+  background: linear-gradient(60deg, rgb(75, 114, 255) 0%, rgb(5, 38, 255) 83%);
 }

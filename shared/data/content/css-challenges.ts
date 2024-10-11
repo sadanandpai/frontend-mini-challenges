@@ -32,6 +32,7 @@ const challenges: Map<string, IChallenge> = new Map([
       developer: 'sahankatta',
       youtube: 'https://youtu.be/aIzyEDi6zgU',
       tags: [ETag.interview],
+      isNew: true,
     },
   ],
   [
@@ -98,6 +99,17 @@ const challenges: Map<string, IChallenge> = new Map([
       developer: 'AbhineshJha',
       youtube: 'https://youtu.be/FRRlFLfdvBE?si=HWn88BwJGTJvEBUD',
       tags: [],
+    },
+  ],
+  [
+    'stagger-animation',
+    {
+      title: 'Stagger Animation',
+      link: 'stagger-animation/',
+      difficulty: EDifficulty.Medium,
+      developer: 'sadanandpai',
+      tags: [],
+      isNew: true,
     },
   ],
   [
