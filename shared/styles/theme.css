@@ -3,7 +3,7 @@
   --bg-body: #f3f4f6;
   --text-body: #111827;
 
-  --bg-navbar: #f9fafb;
+  --bg-navbar: #ffffff;
   --shadow-navbar: rgba(0 0 0 / 0.1);
   --bg-navbar-logo-img: transparent;
 
@@ -15,7 +15,11 @@
   --text-link: blue;
 
   /* Challenge Card */
-  --card-shadow: rgb(0 0 0 / 15%);
+  --card-body: #ffffff;
+  --card-shadow: rgb(226, 226, 226);
+  --card-shadow-hover: rgba(0, 0, 0, 0.3);
+  --card-border: rgb(250, 250, 250);
+  --difficulty-color: '';
 }
 
 /* Dark override for above variables */
@@ -36,7 +40,10 @@
   --text-link: #6366f1;
 
   /* Challenge Card */
-  --card-shadow: rgb(150 150 150/ 20%);
+  --card-body: #000000;
+  --card-shadow: rgb(51, 51, 51);
+  --card-shadow-hover: rgba(255, 255, 255, 0.2);
+  --card-border: rgb(70, 70, 70);
 
   color-scheme: dark;
 }

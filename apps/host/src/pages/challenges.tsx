@@ -106,6 +106,7 @@ function Challenges() {
           challenges={[...techMap.get(techParam)!.challenges.values()]}
           linkPrefix={techMap.get(techParam)!.link}
           links={links}
+          techImg={techMap.get(techParam)!.imgSrc}
         />
         <ScrollBtn />
       </div>

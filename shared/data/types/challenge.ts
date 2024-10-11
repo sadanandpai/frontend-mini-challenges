@@ -1,9 +1,9 @@
 import { OptionType } from '.';
 
 export const enum EDifficulty {
-  Easy = 'easy',
-  Medium = 'medium',
-  Hard = 'hard',
+  Easy = 'Easy',
+  Medium = 'Medium',
+  Hard = 'Hard',
 }
 
 export enum ETag {
