@@ -626,7 +626,7 @@ const challenges: Map<string, IChallenge> = new Map([
   [
     'type-ahead',
     {
-      title: 'Typeahead / Autocomplete (offline)',
+      title: 'Typeahead (offline)',
       link: 'type-ahead/',
       difficulty: EDifficulty.Hard,
       developer: 'sadanandpai',
@@ -636,7 +636,7 @@ const challenges: Map<string, IChallenge> = new Map([
   [
     'type-ahead-online',
     {
-      title: 'Typeahead / Autocomplete (online)',
+      title: 'Typeahead (online)',
       link: 'type-ahead-online/',
       difficulty: EDifficulty.Hard,
       developer: 'sadanandpai',

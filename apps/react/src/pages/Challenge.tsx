@@ -19,7 +19,7 @@ import FileExplorer from '@/challenges/file-explorer/App';
 import FoodRecipe from '@/challenges/food-recipe/App';
 import GuessNumber from '@/challenges/guess-number/App';
 import ImageGallery from '@/challenges/image-gallery/App';
-import InfiniteScrolling from '@/challenges/infinite-scrolling';
+import InfiniteScrolling from '@/challenges/infinite-scroll';
 import InvestmentCalc from '@/challenges/investment-calculator/App';
 import LightDarkMode from '@/challenges/light-dark-mode/App';
 import MatchPair from '@/challenges/match-pair/MatchPair';

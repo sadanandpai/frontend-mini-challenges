@@ -447,9 +447,9 @@ const challenges = new Map<string, IChallenge>([
     },
   ],
   [
-    'infinite-scrolling',
+    'infinite-scroll',
     {
-      title: 'Infinite Scrolling (online)',
+      title: 'Infinite Scroll (online)',
       link: 'infinite-scrolling',
       difficulty: EDifficulty.Medium,
       developer: 'ayush-dutt-sharma',
@@ -500,7 +500,7 @@ const challenges = new Map<string, IChallenge>([
   [
     'autocomplete-offline',
     {
-      title: 'Typeahead / Autocomplete (offline)',
+      title: 'Typeahead (offline)',
       link: 'autocomplete-offline',
       difficulty: EDifficulty.Hard,
       developer: 'deepu0',
@@ -510,7 +510,7 @@ const challenges = new Map<string, IChallenge>([
   [
     'autocomplete-online',
     {
-      title: 'Typeahead / Autocomplete (online)',
+      title: 'Typeahead (online)',
       link: 'autocomplete-online',
       difficulty: EDifficulty.Hard,
       developer: 'deepu0',
