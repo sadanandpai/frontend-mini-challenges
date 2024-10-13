@@ -66,6 +66,7 @@ import Circles from '@/challenges/circles/circles';
 import AnalogClock from '@/challenges/analog-clock/analog-clock';
 import AdvancedCounter from '@/challenges/advanced-counter/advanced-counter';
 import NestedCheckbox from '@/challenges/nested-checkbox/App';
+import MeetingCalendar from '@/challenges/meeting-calendar/App';
 
 const reactChallengesMap = {
   'transfer-list': <TransferListApp />,
@@ -132,6 +133,7 @@ const reactChallengesMap = {
   circles: <Circles />,
   'analog-clock': <AnalogClock />,
   'nested-checkbox': <NestedCheckbox />,
+  'meeting-calendar': <MeetingCalendar />,
 };
 
 function Challenge() {

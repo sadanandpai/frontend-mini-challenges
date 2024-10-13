@@ -415,6 +415,16 @@ const challenges = new Map<string, IChallenge>([
     },
   ],
   [
+    'nested-checkbox',
+    {
+      title: 'Nested Checkbox',
+      link: 'nested-checkbox',
+      difficulty: EDifficulty.Hard,
+      developer: 'SujithGunasekaran',
+      tags: [ETag.interview],
+    },
+  ],
+  [
     'nested-comments',
     {
       title: 'Nested Comments',
@@ -647,13 +657,14 @@ const challenges = new Map<string, IChallenge>([
     },
   ],
   [
-    'nested-checkbox',
+    'meeting-calendar',
     {
-      title: 'Nested Checkbox',
-      link: 'nested-checkbox',
+      title: 'Meeting Calendar',
+      link: 'meeting-calendar',
       difficulty: EDifficulty.Hard,
-      developer: 'SujithGunasekaran',
+      developer: 'sadanandpai',
       tags: [ETag.interview],
+      isNew: true,
     },
   ],
 ]);

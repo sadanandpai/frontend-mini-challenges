@@ -1,0 +1,50 @@
+.holder {
+  display: flex;
+  height: calc(100vh - 6rem);
+  font-size: small;
+
+  .hourLabels {
+    display: flex;
+    flex-direction: column;
+    margin-right: 1rem;
+    justify-content: space-between;
+    width: 8ch;
+  }
+
+  .day {
+    position: relative;
+    margin-top: 0.5rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: calc(100% - 1rem);
+    border-bottom: 1px solid #ccc;
+
+    .hourSlot {
+      border-top: 1px solid #ccc;
+    }
+
+    .meeting {
+      position: absolute;
+      background-color: lightblue;
+      opacity: 0.8;
+      border-radius: 4px;
+      display: flex;
+      justify-content: center;
+      outline: 1px solid white;
+      border: 1px solid gray;
+      transition: background-color 0.5s;
+
+      &:hover {
+        background-color: rgb(170, 223, 240);
+      }
+    }
+  }
+}
+
+@media (width > 768px) {
+  .holder {
+    font-size: large;
+  }
+}
