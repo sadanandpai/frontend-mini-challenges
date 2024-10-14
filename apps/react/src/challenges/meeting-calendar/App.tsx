@@ -1,32 +1,66 @@
+import { useState } from 'react';
+import { Layout } from './types';
+import { hours } from './config';
+import { getMeetings } from './utils/helper';
 import { DayView } from './components/day-view';
 import { HourView } from './components/hour-view';
-import { getMeetings, sortMeetings, getColumnSortedMeetings } from './utils/helper';
+import { getSlottedMeetings } from './utils/slotted-meetings-algo';
+import { getOVerlappingMeetings } from './utils/overlapping-meetings-algo';
 import classes from './styles.module.scss';
 
-const hours = [
-  '8 am',
-  '9 am',
-  '10 am',
-  '11 am',
-  '12 pm',
-  '1 pm',
-  '2 pm',
-  '3 pm',
-  '4 pm',
-  '5 pm',
-  '6 pm',
-  '7 pm',
-  '8 pm',
-];
-const randomMeetings = getMeetings();
-const sortedMeetings = sortMeetings(randomMeetings);
-const meetings = getColumnSortedMeetings(sortedMeetings);
-
 export default function Calendar() {
+  const [layout, setLayout] = useState(Layout.Slotted);
+  const [meetings, setMeetings] = useState(getSlottedMeetings(getMeetings()));
+
+  function onLayoutChange(layout: Layout) {
+    setLayout(layout);
+    setMeetings(
+      layout === Layout.Overlapping
+        ? getOVerlappingMeetings(meetings)
+        : getSlottedMeetings(meetings)
+    );
+  }
+
+  function resetMeetings() {
+    const randomMeetings = getMeetings();
+    setMeetings(
+      layout === Layout.Overlapping
+        ? getOVerlappingMeetings(randomMeetings)
+        : getSlottedMeetings(randomMeetings)
+    );
+  }
+
   return (
-    <div className={classes.holder}>
-      <HourView hours={hours} />
-      <DayView hours={hours} meetings={meetings} />
-    </div>
+    <>
+      <div className={classes.layout}>
+        <label>
+          <input
+            type="radio"
+            name="layout"
+            value="overlapping"
+            checked={layout === Layout.Overlapping}
+            onChange={() => onLayoutChange(Layout.Overlapping)}
+          />
+          Overlapping
+        </label>
+        <label>
+          <input
+            type="radio"
+            name="layout"
+            value="slotted"
+            checked={layout === Layout.Slotted}
+            onChange={() => onLayoutChange(Layout.Slotted)}
+          />
+          Slotted
+        </label>
+
+        <button onClick={resetMeetings}>Randomize</button>
+      </div>
+
+      <div className={classes.holder}>
+        <HourView hours={hours} />
+        <DayView hours={hours} meetings={meetings} layout={layout} />
+      </div>
+    </>
   );
 }

@@ -57,9 +57,9 @@ export function sortMeetings(meetings: Meeting[]) {
     }
 
     // earliest start minute first
-    if (m1StartMin > m2StartMin) {
+    if (m1StartMin < m2StartMin) {
       return -1;
-    } else if (m1StartMin < m2StartMin) {
+    } else if (m1StartMin > m2StartMin) {
       return 1;
     }
 
@@ -76,28 +76,26 @@ export function sortMeetings(meetings: Meeting[]) {
   return meetings;
 }
 
-export function getColumnSortedMeetings(meetings: Meeting[]) {
-  let columnIdx = 1;
-  while (meetings.some((m) => !m.column)) {
-    placeMeetingsByColumn(meetings, columnIdx++);
-  }
+export function sortMeetingsByColumn(meetings: Meeting[]) {
+  meetings.sort((m1, m2) => {
+    if (m1.column && m2.column) {
+      return m1.column - m2.column;
+    }
+
+    return 0;
+  });
 
   return meetings;
 }
 
-function placeMeetingsByColumn(meetings: Meeting[], column: number) {
-  let meeting: Meeting | null = getNextNonOverlappingMeeting(meetings, null);
+export function getDuration(start: string, end: string) {
+  const [startHr, startMin] = start.split(':').map(Number);
+  const [endHr, endMin] = end.split(':').map(Number);
 
-  // allow only one modification to in one pass
-  meetings.forEach((m) => (m.modified = false));
-  while (meeting) {
-    meeting.column = column;
-    setConflicts(meetings, meeting);
-    meeting = getNextNonOverlappingMeeting(meetings, meeting);
-  }
+  return (endHr - startHr) * 60 + (endMin - startMin);
 }
 
-function getNextNonOverlappingMeeting(meetings: Meeting[], currentMeeting: Meeting | null) {
+export function getNextNonOverlappingMeeting(meetings: Meeting[], currentMeeting: Meeting | null) {
   if (!currentMeeting) {
     return meetings.find((m) => !m.column) ?? null;
   }
@@ -114,49 +112,7 @@ function getNextNonOverlappingMeeting(meetings: Meeting[], currentMeeting: Meeti
   return null;
 }
 
-function setConflicts(meetings: Meeting[], meeting: Meeting) {
-  const meetingConflicts: boolean[] = [];
-  const directlyImpactedMeetings = getImpactedMeetings(meetings, meeting);
-  const allImpactedMeetings = getAllImpactedMeetings(meetings, meeting).concat(
-    directlyImpactedMeetings
-  );
-
-  directlyImpactedMeetings.forEach((m) => {
-    meetingConflicts[m.column] = true;
-  });
-
-  allImpactedMeetings.forEach((m) => {
-    if (!m.modified) {
-      m.totalConflicts = (m.totalConflicts ?? 0) + 1;
-      m.modified = true;
-    }
-  });
-
-  meeting.totalConflicts = meetingConflicts.filter(Boolean).length;
-}
-
-function getImpactedMeetings(meetings: Meeting[], meeting: Meeting) {
-  return meetings.filter(
-    (m) => m.column && m.column !== meeting.column && checkOverlap(meeting, m)
-  );
-}
-
-function getPreviousColumnImpactedMeetings(meetings: Meeting[], meeting: Meeting) {
-  return meetings.filter((m) => m.column === meeting.column - 1 && checkOverlap(meeting, m));
-}
-
-function getAllImpactedMeetings(meetings: Meeting[], meeting: Meeting) {
-  let set = new Set<Meeting>();
-  const impactedMeetings = getPreviousColumnImpactedMeetings(meetings, meeting);
-  impactedMeetings.forEach((m) => {
-    set.add(m);
-    set = new Set([...set, ...getAllImpactedMeetings(meetings, m)]);
-  });
-
-  return Array.from(set);
-}
-
-function checkOverlap(m1: Meeting, m2: Meeting): boolean {
+export function checkOverlap(m1: Meeting, m2: Meeting): boolean {
   const toMinutes = (time: string): number => {
     const [hours, minutes] = time.split(':').map(Number);
     return hours * 60 + minutes;
@@ -168,11 +124,4 @@ function checkOverlap(m1: Meeting, m2: Meeting): boolean {
   const m2End = toMinutes(m2.end);
 
   return m1Start < m2End && m1End > m2Start;
-}
-
-export function getDuration(start: string, end: string) {
-  const [startHr, startMin] = start.split(':').map(Number);
-  const [endHr, endMin] = end.split(':').map(Number);
-
-  return (endHr - startHr) * 60 + (endMin - startMin);
 }

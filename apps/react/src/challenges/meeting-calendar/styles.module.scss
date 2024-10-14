@@ -1,6 +1,19 @@
+.layout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0;
+  gap: 2rem;
+
+  button {
+    padding: 0.25rem;
+    border-radius: 4px;
+  }
+}
+
 .holder {
   display: flex;
-  height: calc(100dvh - 6rem);
+  height: calc(100dvh - 9rem);
   font-size: small;
 
   .hourLabels {
@@ -25,16 +38,24 @@
       border-top: 1px solid #ccc;
     }
 
+    .meetings {
+      display: flex;
+      justify-content: flex-end;
+    }
+
     .meeting {
       position: absolute;
-      background-color: lightblue;
       opacity: 0.8;
+      overflow: hidden;
       border-radius: 4px;
-      display: flex;
-      justify-content: center;
+      background-color: lightblue;
       outline: 1px solid white;
       border: 1px solid gray;
       transition: background-color 0.5s;
+
+      span:first-child {
+        font-weight: bold;
+      }
 
       &:hover {
         background-color: rgb(170, 223, 240);
@@ -44,6 +65,12 @@
 }
 
 @media (width > 768px) {
+  .holder {
+    font-size: medium;
+  }
+}
+
+@media (width > 1024px) {
   .holder {
     font-size: large;
   }

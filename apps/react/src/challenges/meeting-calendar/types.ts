@@ -7,3 +7,8 @@ export interface Meeting {
   totalConflicts: number;
   modified?: boolean;
 }
+
+export const enum Layout {
+  Slotted = 'Slotted',
+  Overlapping = 'Overlapping',
+}

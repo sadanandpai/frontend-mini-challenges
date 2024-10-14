@@ -1,32 +1,44 @@
-import { Meeting } from '../types';
-import classes from '../styles.module.scss';
+import { Layout, Meeting } from '../types';
 import { getDuration } from '../utils/helper';
-
-const oneUnit = 100 / (12 * 60);
+import classes from '../styles.module.scss';
+import { columnWidths, hrOffset, oneUnit } from '../config';
 
 interface Props {
   meetings: Meeting[];
+  layout: Layout;
 }
 
-export function MeetingView({ meetings }: Props) {
+export function MeetingView({ meetings, layout }: Props) {
   return (
-    <div>
+    <div className={classes.meetings}>
       {meetings.map((meeting) => {
         const duration = getDuration(meeting.start, meeting.end);
         const [startHr, startMin] = meeting.start.split(':').map((x) => parseInt(x));
+        const width =
+          layout === Layout.Overlapping
+            ? columnWidths.get(meeting.column)
+            : 100 / (meeting.totalConflicts + 1);
+        const height = duration * oneUnit;
+        const top = ((startHr - hrOffset) * 60 + startMin) * oneUnit;
+        const left = (100 / (meeting.totalConflicts + 1)) * (meeting.column - 1);
 
         return (
           <div
             key={meeting.id}
             className={classes.meeting}
             style={{
-              width: `${100 / (meeting.totalConflicts + 1)}%`,
-              height: `${duration * oneUnit}%`,
-              top: `${((startHr - 8) * 60 + startMin) * oneUnit}%`,
-              left: `${(100 / (meeting.totalConflicts + 1)) * (meeting.column - 1)}%`,
+              width: `${width}%`,
+              height: `${height}%`,
+              top: `${top}%`,
+              left: layout === Layout.Overlapping ? 'unset' : `${left}%`,
             }}
+            title={`${meeting.title} : ${meeting.start} - ${meeting.end}`}
           >
-            {meeting.title}
+            <span>{meeting.title}</span>
+            <br />
+            <span>
+              {meeting.start} - {meeting.end}
+            </span>
           </div>
         );
       })}
