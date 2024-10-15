@@ -14,7 +14,6 @@
 .holder {
   display: flex;
   height: calc(100dvh - 9rem);
-  font-size: small;
 
   .hourLabels {
     display: flex;
@@ -52,6 +51,11 @@
       outline: 1px solid white;
       border: 1px solid gray;
       transition: background-color 0.5s;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      padding: 4px;
+      font-size: small;
 
       span:first-child {
         font-weight: bold;
@@ -65,13 +69,13 @@
 }
 
 @media (width > 768px) {
-  .holder {
+  .holder .day .meeting {
     font-size: medium;
   }
 }
 
-@media (width > 1024px) {
-  .holder {
+@media (width > 1200px) {
+  .holder .day .meeting {
     font-size: large;
   }
 }

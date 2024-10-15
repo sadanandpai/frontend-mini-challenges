@@ -23,7 +23,7 @@ export function MeetingView({ meetings, layout }: Props) {
         const left = (100 / (meeting.totalConflicts + 1)) * (meeting.column - 1);
 
         return (
-          <div
+          <button
             key={meeting.id}
             className={classes.meeting}
             style={{
@@ -35,11 +35,10 @@ export function MeetingView({ meetings, layout }: Props) {
             title={`${meeting.title} : ${meeting.start} - ${meeting.end}`}
           >
             <span>{meeting.title}</span>
-            <br />
             <span>
               {meeting.start} - {meeting.end}
             </span>
-          </div>
+          </button>
         );
       })}
     </div>
