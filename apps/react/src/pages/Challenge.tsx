@@ -51,7 +51,6 @@ import ChessBoard from '@/challenges/chess-board/App';
 import Calculator from '@/challenges/calculator/App';
 import WaterBalancer from '@/challenges/water-balancer/App';
 import TransferListApp from '@/challenges/transfer-list/TransferListApp';
-import Timeline from '@/challenges/timeline/App';
 import WordConnect from '@/challenges/word-connect/App';
 import Stepper from '@/challenges/stepper/App';
 import InlineOptions from '@/challenges/inline-options/App';
@@ -118,7 +117,6 @@ const reactChallengesMap = {
   'anagram-checker': <AnagramChecker />,
   calculator: <Calculator />,
   'water-balancer': <WaterBalancer />,
-  timeline: <Timeline />,
   'word-connect': <WordConnect />,
   stepper: <Stepper />,
   'inline-options': <InlineOptions />,
