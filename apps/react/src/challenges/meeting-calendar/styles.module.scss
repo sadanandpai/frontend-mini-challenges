@@ -47,7 +47,7 @@
       opacity: 0.8;
       overflow: hidden;
       border-radius: 4px;
-      background-color: lightblue;
+      background-color: rgb(134, 198, 219);
       outline: 1px solid white;
       border: 1px solid gray;
       transition: background-color 0.5s;
@@ -61,8 +61,9 @@
         font-weight: bold;
       }
 
-      &:hover {
-        background-color: rgb(170, 223, 240);
+      &:focus {
+        background-color: rgb(57, 196, 243);
+        z-index: 1;
       }
     }
   }

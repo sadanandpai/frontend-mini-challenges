@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useState } from 'react';
 import styles from './Style.module.css';
 import { HiChevronUp, HiChevronDown, HiPlay, HiPause, HiRefresh } from 'react-icons/hi';
 
@@ -9,7 +9,7 @@ export default function TwentyfiveFiveClock() {
   const [sessTime, setSessTime] = useState({ time: 25, range: [5, 60] });
   const [timeLeft, setTimeLeft] = useState([25, 0]);
   const [timerInterval, setTimerInterval] = useState(null);
-  const [lastMinute, setLastMinute] = useState(false);
+  const [lastMinute] = useState(false);
 
   function start() {
     setIsRunning(true);

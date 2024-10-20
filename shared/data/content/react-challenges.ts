@@ -73,16 +73,6 @@ const challenges = new Map<string, IChallenge>([
     },
   ],
   [
-    'qr-code-generator',
-    {
-      title: 'QR generator',
-      link: 'qr-code-generator',
-      difficulty: EDifficulty.Easy,
-      developer: 'Krishnakalani111',
-      tags: [],
-    },
-  ],
-  [
     'your-sport',
     {
       title: 'Your Sport',
@@ -390,8 +380,8 @@ const challenges = new Map<string, IChallenge>([
       title: 'Chess Board',
       link: 'chess-board',
       difficulty: EDifficulty.Medium,
-      developer: 'AbhilashMadi',
-      tags: [],
+      developer: 'sadanandpai',
+      tags: [ETag.interview],
     },
   ],
   [

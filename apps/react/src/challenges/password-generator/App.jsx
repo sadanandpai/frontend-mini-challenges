@@ -10,7 +10,9 @@ import styles from './Password.module.css';
 
 export default function App() {
   const [generatedPassword, setGeneratedPassword] = useState('');
-  const [rememberPassword, setRememberPassword] = useState('There is no password to remember! Please generate one');
+  const [rememberPassword, setRememberPassword] = useState(
+    'There is no password to remember! Please generate one'
+  );
   const [isChecked, setIsChecked] = useState({
     isCheckedLowerCha: true,
     isCheckedUpperCha: true,
@@ -45,7 +47,14 @@ export default function App() {
   };
 
   const handleSavePasswordAndName =
-    (name, pass, checkName, callableSetLocalStorage, callableCheckPasswordNameExit, callableShowTextNotification) =>
+    (
+      name,
+      pass,
+      checkName,
+      callableSetLocalStorage,
+      callableCheckPasswordNameExit,
+      callableShowTextNotification
+    ) =>
     () => {
       const isNameExit = callableCheckPasswordNameExit(checkName, name);
 
@@ -58,7 +67,6 @@ export default function App() {
         // Update the state and access it immediately
         setSaveNameAndPass((prevState) => {
           const updatedState = [...prevState, { name, pass }];
-          console.log(updatedState); // Access the updated state
           callableSetLocalStorage('PASS', updatedState);
           return updatedState;
         });
@@ -94,7 +102,24 @@ export default function App() {
 
     // generate random symbols
     symbolCha: () => {
-      const symbolCha = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '_', '+', '-', '=', '/', '|'];
+      const symbolCha = [
+        '!',
+        '@',
+        '#',
+        '$',
+        '%',
+        '^',
+        '&',
+        '*',
+        '(',
+        ')',
+        '_',
+        '+',
+        '-',
+        '=',
+        '/',
+        '|',
+      ];
       const randomIndex = Math.floor(Math.random() * symbolCha.length);
       return symbolCha[randomIndex];
     },
@@ -124,34 +149,35 @@ export default function App() {
     setRememberPassword(formatPass.trim());
   };
 
-  const passwordGenerate = (isCheckedType, length, random, callablePasswordToRemember, alphabet) => () => {
-    let passwordGenerate = '';
-    const {
-      isCheckedLowerCha: lower,
-      isCheckedUpperCha: upper,
-      isCheckedNumber: number,
-      isCheckedSymbols: symbolCha,
-    } = isCheckedType;
-    const charTypeCount = lower + upper + number + symbolCha;
-    const charTypeArray = [{ lower }, { upper }, { number }, { symbolCha }].filter(
-      (type) => Object.values(type)[0] === true
-    );
+  const passwordGenerate =
+    (isCheckedType, length, random, callablePasswordToRemember, alphabet) => () => {
+      let passwordGenerate = '';
+      const {
+        isCheckedLowerCha: lower,
+        isCheckedUpperCha: upper,
+        isCheckedNumber: number,
+        isCheckedSymbols: symbolCha,
+      } = isCheckedType;
+      const charTypeCount = lower + upper + number + symbolCha;
+      const charTypeArray = [{ lower }, { upper }, { number }, { symbolCha }].filter(
+        (type) => Object.values(type)[0] === true
+      );
 
-    if (charTypeCount === 0) {
-      return '';
-    }
+      if (charTypeCount === 0) {
+        return '';
+      }
 
-    // loop through the array of type
-    for (let i = 0; i < length; i += charTypeCount) {
-      charTypeArray.forEach((type) => {
-        const typeName = Object.keys(type)[0];
-        passwordGenerate += random[typeName]();
-      });
-    }
-    passwordGenerate = shuffleString(passwordGenerate).slice(0, length);
-    setGeneratedPassword(passwordGenerate);
-    callablePasswordToRemember(passwordGenerate, alphabet);
-  };
+      // loop through the array of type
+      for (let i = 0; i < length; i += charTypeCount) {
+        charTypeArray.forEach((type) => {
+          const typeName = Object.keys(type)[0];
+          passwordGenerate += random[typeName]();
+        });
+      }
+      passwordGenerate = shuffleString(passwordGenerate).slice(0, length);
+      setGeneratedPassword(passwordGenerate);
+      callablePasswordToRemember(passwordGenerate, alphabet);
+    };
 
   // copy result value when click to copy btn using navigator clipboard api
   const handleCopyText = (e) => {
