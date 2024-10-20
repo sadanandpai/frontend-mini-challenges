@@ -294,13 +294,13 @@ const challenges = new Map<string, IChallenge>([
     },
   ],
   [
-    'timeline',
+    'grid-lights',
     {
-      title: 'Timeline',
-      link: 'timeline',
+      title: 'Grid Lights',
+      link: 'grid-lights',
       difficulty: EDifficulty.Medium,
-      developer: 'Vivek7038',
-      tags: [],
+      developer: 'sadanandpai',
+      tags: [ETag.interview],
       isNew: true,
     },
   ],

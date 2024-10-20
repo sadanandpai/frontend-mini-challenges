@@ -143,6 +143,17 @@ const challenges: Map<string, IChallenge> = new Map([
       isNew: true,
     },
   ],
+  [
+    'timeline',
+    {
+      title: 'Timeline',
+      link: 'timeline/',
+      difficulty: EDifficulty.Medium,
+      developer: 'Vivek7038',
+      tags: [],
+      isNew: true,
+    },
+  ],
 ]);
 
 export const cssChallenges = sortChallengesByDifficulty(challenges);
