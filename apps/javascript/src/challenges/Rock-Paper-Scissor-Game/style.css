@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.container {
+  color: black;
+  background-color: white;
+  width: 100%;
+  height: auto;
+  margin: 3rem 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: none;
+  border-radius: 5px;
+}
+
+.happen {
+  width: 100%;
+  height: 9rem;
+}
+#user {
+  float: right;
+  transform: rotateY(180deg);
+  width: 10rem;
+}
+.animate-right {
+  animation: rightShake 1s infinite;
+}
+
+@keyframes rightShake {
+  0% {
+    rotate: 12deg;
+  }
+  50% {
+    rotate: 0deg;
+  }
+  100% {
+    rotate: 12deg;
+  }
+}
+#computer {
+  width: 10rem;
+}
+.animate-left {
+  animation: leftShake 1s infinite;
+}
+
+@keyframes leftShake {
+  0% {
+    rotate: 0deg;
+  }
+  50% {
+    rotate: 12deg;
+  }
+  100% {
+    rotate: 0deg;
+  }
+}
+
+#Answer {
+  font-size: 2.2rem;
+  font-family: cursive;
+  margin: 1rem 0px 0px 0px;
+  letter-spacing: 2px;
+  border: none;
+  outline: none;
+  align-self: flex-start;
+  width: 100%;
+  text-align: center;
+}
+.options {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin: 3.2rem 0px 0px 0px;
+}
+.options img {
+  transform: rotate(270deg);
+  width: 6rem;
+  filter: drop-shadow(1px 1px 5px);
+  cursor: pointer;
+}
+
+#score-section {
+  width: 20rem;
+  padding: 0px 1rem;
+}
+.score-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 4rem 0px 2rem 0px;
+  font-family: cursive;
+  border: 1px solid black;
+  border-radius: 1rem;
+}
+
+#both-score {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.scores {
+  width: 9rem;
+  display: flex;
+  flex-direction: column;
+  /* background-color: green; */
+  align-items: center;
+  padding: 0.5rem 2rem;
+  gap: 2px;
+}
+
+#reset-btn {
+  font-size: 1.2rem;
+  border: none;
+  padding: 0.4rem 2rem;
+  background-color: rgb(146, 218, 246);
+  border-radius: 0.5rem;
+  font-family: cursive;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 450px) {
+  #computer,
+  #user {
+    width: 8rem;
+  }
+  .options img {
+    width: 5rem;
+  }
+  #Answer {
+    font-size: 2rem;
+  }
+  body {
+    overflow: scroll;
+  }
+}
