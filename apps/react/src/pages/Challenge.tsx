@@ -75,7 +75,7 @@ const reactChallengesMap = {
   'background-changer': <Background />,
   'star-Rating': <StarRating />,
   'light-dark-mode': <LightDarkMode />,
-  'Guess-the-number': <GuessNumber />,
+  'guess-number': <GuessNumber />,
   'telephone-formatter': <TelephoneFormatter />,
   'toast-popup': <Toast />,
   'password-strength': <PasswordStrength />,
