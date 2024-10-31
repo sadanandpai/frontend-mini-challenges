@@ -93,10 +93,10 @@ const challenges = new Map<string, IChallenge>([
     },
   ],
   [
-    'Guess-the-number',
+    'guess-number',
     {
       title: 'Guess the number',
-      link: 'Guess-the-number',
+      link: 'guess-number',
       difficulty: EDifficulty.Easy,
       developer: 'deepakrajkranti',
       tags: [ETag.interview],
