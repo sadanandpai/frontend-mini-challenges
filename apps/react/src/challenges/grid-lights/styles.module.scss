@@ -1,0 +1,24 @@
+:root {
+  --size: min(90vw, 100vh - 10rem);
+  --grid-size: 3;
+}
+
+.wrapper {
+  text-align: center;
+}
+
+.grid {
+  display: inline-grid;
+  grid-template-columns: repeat(var(--grid-size), 1fr);
+  width: var(--size);
+  gap: calc(var(--size) / 20);
+
+  button {
+    border: 1px solid #000;
+    aspect-ratio: 1;
+  }
+}
+
+.selected {
+  background-color: green;
+}

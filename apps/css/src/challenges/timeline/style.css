@@ -1,0 +1,129 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+  padding: 2rem 0;
+}
+
+.timeline {
+  position: relative;
+  width: 90%;
+  max-width: 800px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.timeline ul {
+  list-style: none;
+}
+
+.timeline ul li {
+  position: relative;
+  width: 50%;
+  padding: 20px;
+  margin-bottom: 50px;
+  color: white;
+  background-color: #1e1f22;
+  border-radius: 10px;
+}
+
+.timeline ul li:last-child {
+  margin-bottom: 0;
+}
+
+.date {
+  font-size: 12px;
+  color: black;
+}
+
+.timeline_content h1 {
+  margin-bottom: 10px;
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 30px;
+  color: white;
+}
+
+.timeline_content p {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 30px;
+}
+
+.timeline_content .date {
+  position: absolute;
+  top: -30px;
+  margin-bottom: 10px;
+  font-size: 12px;
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+
+.timeline::before {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 2px;
+  height: 100%;
+  content: '';
+  background-color: gray;
+  transform: translateX(-50%);
+}
+
+.timeline ul li:nth-child(odd) {
+  float: left;
+  clear: right;
+  border-radius: 20px 0 20px 20px;
+  transform: translateX(-60px);
+}
+
+.timeline ul li:nth-child(even) {
+  float: right;
+  clear: left;
+  border-radius: 0 20px 20px;
+  transform: translateX(30px);
+}
+
+.timeline ul li::before {
+  position: absolute;
+  top: -10px;
+  width: 20px;
+  height: 20px;
+  content: '';
+  background-color: gray;
+  border-radius: 50%;
+}
+
+.timeline ul li:nth-child(odd)::before {
+  right: -40px;
+  transform: translate(50%, -50%);
+}
+
+.timeline ul li:nth-child(even)::before {
+  left: -48px;
+  transform: translate(-50%, -50%);
+}
+
+.timeline ul li:hover::before {
+  background-color: aqua;
+}
+
+@media only screen and (width <= 420px) {
+  .timeline_content h1 {
+    padding-right: 10px;
+    font-size: 20px;
+    line-height: 25px;
+  }
+
+  .timeline_content p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .timeline_content .date {
+    margin-bottom: 5px;
+    font-size: 10px;
+  }
+}

@@ -68,6 +68,10 @@ const CustomSelect: React.FC<Props> = ({
             overflowY: 'auto',
             background: theme === 'dark' ? '#000000' : '#ffffff',
           }),
+          menu: (base) => ({
+            ...base,
+            zIndex: '2',
+          }),
           menuList: (base) => ({
             ...base,
             textAlign: 'left',

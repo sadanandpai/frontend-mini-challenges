@@ -100,6 +100,7 @@ const challenges = new Map<string, IChallenge>([
       difficulty: EDifficulty.Medium,
       developer: 'sadanandpai',
       tags: [ETag.interview],
+      isNew: true,
     },
   ],
   [

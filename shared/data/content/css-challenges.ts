@@ -32,6 +32,7 @@ const challenges: Map<string, IChallenge> = new Map([
       developer: 'sahankatta',
       youtube: 'https://youtu.be/aIzyEDi6zgU',
       tags: [ETag.interview],
+      isNew: true,
     },
   ],
   [
@@ -101,6 +102,17 @@ const challenges: Map<string, IChallenge> = new Map([
     },
   ],
   [
+    'stagger-animation',
+    {
+      title: 'Stagger Animation',
+      link: 'stagger-animation/',
+      difficulty: EDifficulty.Medium,
+      developer: 'sadanandpai',
+      tags: [],
+      isNew: true,
+    },
+  ],
+  [
     'blobmaker',
     {
       title: 'Blob Maker',
@@ -127,6 +139,17 @@ const challenges: Map<string, IChallenge> = new Map([
       link: 'gradient-generator/',
       difficulty: EDifficulty.Medium,
       developer: 'Sukomal07',
+      tags: [],
+      isNew: true,
+    },
+  ],
+  [
+    'timeline',
+    {
+      title: 'Timeline',
+      link: 'timeline/',
+      difficulty: EDifficulty.Medium,
+      developer: 'Vivek7038',
       tags: [],
       isNew: true,
     },

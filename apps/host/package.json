@@ -21,8 +21,7 @@
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.21.0",
     "react-router-hash-link": "^2.4.3",
-    "react-select": "^5.8.0",
-    "swiper": "^11.0.5"
+    "react-select": "^5.8.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.43",

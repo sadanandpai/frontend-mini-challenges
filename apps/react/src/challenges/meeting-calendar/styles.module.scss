@@ -1,0 +1,82 @@
+.layout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0;
+  gap: 2rem;
+
+  button {
+    padding: 0.25rem;
+    border-radius: 4px;
+  }
+}
+
+.holder {
+  display: flex;
+  height: calc(100dvh - 9rem);
+
+  .hourLabels {
+    display: flex;
+    flex-direction: column;
+    margin-right: 1rem;
+    justify-content: space-between;
+    width: 8ch;
+  }
+
+  .day {
+    position: relative;
+    margin-top: 0.5rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: calc(100% - 1rem);
+    border-bottom: 1px solid #ccc;
+
+    .hourSlot {
+      border-top: 1px solid #ccc;
+    }
+
+    .meetings {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .meeting {
+      position: absolute;
+      opacity: 0.8;
+      overflow: hidden;
+      border-radius: 4px;
+      background-color: rgb(134, 198, 219);
+      outline: 1px solid white;
+      border: 1px solid gray;
+      transition: background-color 0.5s;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      padding: 4px;
+      font-size: small;
+
+      span:first-child {
+        font-weight: bold;
+      }
+
+      &:focus {
+        background-color: rgb(57, 196, 243);
+        z-index: 1;
+      }
+    }
+  }
+}
+
+@media (width > 768px) {
+  .holder .day .meeting {
+    font-size: medium;
+  }
+}
+
+@media (width > 1200px) {
+  .holder .day .meeting {
+    font-size: large;
+  }
+}

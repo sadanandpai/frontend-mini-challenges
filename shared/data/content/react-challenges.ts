@@ -73,16 +73,6 @@ const challenges = new Map<string, IChallenge>([
     },
   ],
   [
-    'qr-code-generator',
-    {
-      title: 'QR generator',
-      link: 'qr-code-generator',
-      difficulty: EDifficulty.Easy,
-      developer: 'Krishnakalani111',
-      tags: [],
-    },
-  ],
-  [
     'your-sport',
     {
       title: 'Your Sport',
@@ -103,10 +93,10 @@ const challenges = new Map<string, IChallenge>([
     },
   ],
   [
-    'Guess-the-number',
+    'guess-number',
     {
       title: 'Guess the number',
-      link: 'Guess-the-number',
+      link: 'guess-number',
       difficulty: EDifficulty.Easy,
       developer: 'deepakrajkranti',
       tags: [ETag.interview],
@@ -304,13 +294,13 @@ const challenges = new Map<string, IChallenge>([
     },
   ],
   [
-    'timeline',
+    'grid-lights',
     {
-      title: 'Timeline',
-      link: 'timeline',
+      title: 'Grid Lights',
+      link: 'grid-lights',
       difficulty: EDifficulty.Medium,
-      developer: 'Vivek7038',
-      tags: [],
+      developer: 'sadanandpai',
+      tags: [ETag.interview],
       isNew: true,
     },
   ],
@@ -390,8 +380,8 @@ const challenges = new Map<string, IChallenge>([
       title: 'Chess Board',
       link: 'chess-board',
       difficulty: EDifficulty.Medium,
-      developer: 'AbhilashMadi',
-      tags: [],
+      developer: 'sadanandpai',
+      tags: [ETag.interview],
     },
   ],
   [
@@ -412,6 +402,16 @@ const challenges = new Map<string, IChallenge>([
       difficulty: EDifficulty.Medium,
       developer: 'Kei-K23',
       tags: [],
+    },
+  ],
+  [
+    'nested-checkbox',
+    {
+      title: 'Nested Checkbox',
+      link: 'nested-checkbox',
+      difficulty: EDifficulty.Hard,
+      developer: 'SujithGunasekaran',
+      tags: [ETag.interview],
     },
   ],
   [
@@ -447,9 +447,9 @@ const challenges = new Map<string, IChallenge>([
     },
   ],
   [
-    'infinite-scrolling',
+    'infinite-scroll',
     {
-      title: 'Infinite Scrolling (online)',
+      title: 'Infinite Scroll (online)',
       link: 'infinite-scrolling',
       difficulty: EDifficulty.Medium,
       developer: 'ayush-dutt-sharma',
@@ -500,7 +500,7 @@ const challenges = new Map<string, IChallenge>([
   [
     'autocomplete-offline',
     {
-      title: 'Typeahead / Autocomplete (offline)',
+      title: 'Typeahead (offline)',
       link: 'autocomplete-offline',
       difficulty: EDifficulty.Hard,
       developer: 'deepu0',
@@ -510,7 +510,7 @@ const challenges = new Map<string, IChallenge>([
   [
     'autocomplete-online',
     {
-      title: 'Typeahead / Autocomplete (online)',
+      title: 'Typeahead (online)',
       link: 'autocomplete-online',
       difficulty: EDifficulty.Hard,
       developer: 'deepu0',
@@ -647,13 +647,14 @@ const challenges = new Map<string, IChallenge>([
     },
   ],
   [
-    'nested-checkbox',
+    'meeting-calendar',
     {
-      title: 'Nested Checkbox',
-      link: 'nested-checkbox',
+      title: 'Meeting Calendar',
+      link: 'meeting-calendar',
       difficulty: EDifficulty.Hard,
-      developer: 'SujithGunasekaran',
+      developer: 'sadanandpai',
       tags: [ETag.interview],
+      isNew: true,
     },
   ],
 ]);

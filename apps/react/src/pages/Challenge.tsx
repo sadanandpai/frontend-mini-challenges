@@ -19,7 +19,7 @@ import FileExplorer from '@/challenges/file-explorer/App';
 import FoodRecipe from '@/challenges/food-recipe/App';
 import GuessNumber from '@/challenges/guess-number/App';
 import ImageGallery from '@/challenges/image-gallery/App';
-import InfiniteScrolling from '@/challenges/infinite-scrolling';
+import InfiniteScrolling from '@/challenges/infinite-scroll';
 import InvestmentCalc from '@/challenges/investment-calculator/App';
 import LightDarkMode from '@/challenges/light-dark-mode/App';
 import MatchPair from '@/challenges/match-pair/MatchPair';
@@ -28,7 +28,6 @@ import Pagination from '@/challenges/pagination/App';
 import PasswordGenerator from '@/challenges/password-generator/App';
 import PasswordStrength from '@/challenges/password-strength/passwordStrength';
 import ProgressBar from '@/challenges/progressbar/App';
-import QRCodeGenerator from '@/challenges/qr-code-generator/App.jsx';
 import Stack from '@/challenges/stack-implementation/Stack';
 import StarRating from '@/challenges/star-rating/App';
 import Stopwatch from '@/challenges/stopwatch/App';
@@ -52,7 +51,6 @@ import ChessBoard from '@/challenges/chess-board/App';
 import Calculator from '@/challenges/calculator/App';
 import WaterBalancer from '@/challenges/water-balancer/App';
 import TransferListApp from '@/challenges/transfer-list/TransferListApp';
-import Timeline from '@/challenges/timeline/App';
 import WordConnect from '@/challenges/word-connect/App';
 import Stepper from '@/challenges/stepper/App';
 import InlineOptions from '@/challenges/inline-options/App';
@@ -66,6 +64,8 @@ import Circles from '@/challenges/circles/circles';
 import AnalogClock from '@/challenges/analog-clock/analog-clock';
 import AdvancedCounter from '@/challenges/advanced-counter/advanced-counter';
 import NestedCheckbox from '@/challenges/nested-checkbox/App';
+import MeetingCalendar from '@/challenges/meeting-calendar/App';
+import GridLights from '@/challenges/grid-lights/App';
 
 const reactChallengesMap = {
   'transfer-list': <TransferListApp />,
@@ -75,7 +75,7 @@ const reactChallengesMap = {
   'background-changer': <Background />,
   'star-Rating': <StarRating />,
   'light-dark-mode': <LightDarkMode />,
-  'Guess-the-number': <GuessNumber />,
+  'guess-number': <GuessNumber />,
   'telephone-formatter': <TelephoneFormatter />,
   'toast-popup': <Toast />,
   'password-strength': <PasswordStrength />,
@@ -100,7 +100,6 @@ const reactChallengesMap = {
   'email-templates': <EmailTemplates />,
   'expense-tracker': <ExpenseTracker />,
   pagination: <Pagination />,
-  'qr-code-generator': <QRCodeGenerator />,
   'image-gallery': <ImageGallery />,
   'word-count': <WordCounter />,
   'temperature-converter': <TemperatureConverter />,
@@ -118,7 +117,6 @@ const reactChallengesMap = {
   'anagram-checker': <AnagramChecker />,
   calculator: <Calculator />,
   'water-balancer': <WaterBalancer />,
-  timeline: <Timeline />,
   'word-connect': <WordConnect />,
   stepper: <Stepper />,
   'inline-options': <InlineOptions />,
@@ -132,6 +130,8 @@ const reactChallengesMap = {
   circles: <Circles />,
   'analog-clock': <AnalogClock />,
   'nested-checkbox': <NestedCheckbox />,
+  'meeting-calendar': <MeetingCalendar />,
+  'grid-lights': <GridLights />,
 };
 
 function Challenge() {

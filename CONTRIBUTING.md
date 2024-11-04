@@ -17,6 +17,16 @@
 - Build it responsively if your app is mobile-compatible
 - Try to maintain the challenges in the order of their difficulty
 
+##### Steps to Contribute CSS Challenge
+
+- The challenge should be added as a separate folder that should be named with the name of the challenge inside `/apps/css/src/challenges/`
+- Challenge should have a minimum of index.html
+- Import navbar js file in the head `<script src="../../helpers/header.js" type="module"></script>`
+- JavaScript and CSS code if exists should have separate file[s]
+- Challenge should be added to the array of challenges `/shared/data/content/css-challenges.ts`
+- Do not introduce new font or modify the body styles
+- Box sizing is taken care and no need to add it
+
 ##### Steps to Contribute JavaScript Challenge
 
 - The challenge should be added as a separate folder that should be named with the name of the challenge inside `/apps/javascript/src/challenges/`

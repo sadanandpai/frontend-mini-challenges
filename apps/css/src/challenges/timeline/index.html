@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <script src="../../helpers/header.js" type="module"></script>
+    <script src="./script.ts" type="module"></script>
+  </head>
+  <body>
+    <div class="container text-center">
+      <div class="wrapper">
+        <div class="timeline">
+          <ul class="timeline_list"></ul>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <template id="timeline-template">
+    <li>
+      <div class="timeline_content">
+        <h3 class="date"></h3>
+        <h1 class="title"></h1>
+        <p class="content"></p>
+      </div>
+    </li>
+  </template>
+</html>

@@ -1,61 +1,48 @@
-//variables
-$white: #ffffff;
-$black: #151417;
-$gray: #333642;
-$shadow: rgba(0, 0, 0, 0.2) 0px 0px 25px;
-$base-font-size: 16px;
-
-.app {
-  width: 100%;
-  height: 85dvh;
-  background-color: red;
+.instruction {
+  text-align: center;
 }
 
-//mixins
-@mixin flex($direction: row, $justify: center, $align: center, $wrap: nowrap, $gap: 0) {
+.board {
   display: flex;
-  align-items: $align;
-  justify-content: $justify;
-  flex-wrap: $wrap;
-  gap: $gap;
-}
+  flex-direction: column;
+  flex-grow: 1;
+  margin: auto;
+  border: 2px solid black;
+  width: min(90vw, 100vh - 160px);
+  height: min(90vw, 100vh - 160px);
 
-@mixin grid($columsn, $rows, $gap: 0) {
-  display: grid;
-  grid-template-columns: $columsn;
-  grid-template-rows: $rows;
-  gap: $gap;
-}
+  div {
+    display: flex;
+    width: 100%;
+    height: 100%;
 
-//styles
-.app {
-  height: 85dvh;
-  width: 100%;
-  background-color: $gray;
-  @include flex();
-}
+    button.box {
+      display: flex;
+      flex-grow: 1;
+      cursor: pointer;
+      border: none;
+    }
 
-.chess {
-  height: 100%;
-  min-height: 2.5rem;
-  aspect-ratio: 1;
-  background-color: $black;
-  @include grid(repeat(8, 1fr), repeat(8, 1fr));
-  box-shadow: $shadow;
-  overflow: hidden;
-  background-color: $black;
-  color: $white;
-}
+    button:focus-visible {
+      outline: 4px solid yellowgreen;
+      z-index: 1;
+    }
+  }
 
-.tile {
-  @include flex;
-  width: 100%;
-  height: 100%;
-  font-size: 3.5em;
-}
+  div:nth-child(even) button:nth-child(odd) {
+    background-color: black;
+  }
 
-.tile_color {
-  background-color: $white;
-  overflow: hidden;
-  color: $black;
+  div:nth-child(odd) button:nth-child(even) {
+    background-color: black;
+  }
+
+  div button.box.selected {
+    transition: background-color 0.33s;
+    background-color: red;
+  }
+
+  div button.box.clicked {
+    background-color: darkred;
+  }
 }
