@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dictionary App</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="./script.js" defer></script>
+    <script src="https://kit.fontawesome.com/48486e09d0.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <form class="search-container">
+                <input type="text" placeholder="Type the word here.." class="search-input">
+                <button type="submit" class="search-btn" >Search</button>
+            </form>
+
+            <div class="content-body error">
+                <h2 class="word"></h2>
+                <div class="text-details"><p class="part-of-speech"></p><span class="phonetic"></span></div>
+                <p class="meaning"></p>
+                <p class="sentence"></p>
+                <i class="fa-solid fa-volume-high sound-btn"></i>
+                <audio src="" ></audio>
+            </div>
+
+            <div class="not-found">
+                <h2>Word not found!!</h2>
+            </div>
+        </div>
+        
+    </main>
+</body>
+</html>

@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    font-family: poppins;
+    background-color: rgb(115, 136, 254);
+}
+main{
+    max-width: 1600px;
+    padding: 0px 20px;
+    margin-top: 100px;
+}
+.container{
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width:100%;
+    max-width: 500px;
+    padding:50px 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgb(56, 56, 56);
+}
+.search-container{
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+.search-input{
+    font-family: poppins;
+    font-weight: 600;
+    padding: 10px 0px;
+    width: 75%;
+    border: none;
+    border-bottom: 3px solid rgb(115, 136, 254);
+    outline: none;
+}
+.search-btn{
+    padding:11px 30px;
+    font-size: 10px;
+    border: none;
+    color: white;
+    background-color: rgb(115, 136, 254) ;
+    border-radius: 3px;
+    margin-top: 4px;
+    font-family: poppins;
+    cursor: pointer;
+}
+.content-body{
+    margin:60px 0px 30px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: space-between;
+    position: relative;
+    display: none;
+}
+.word-text{
+    font-weight:600;
+}
+.text-details{
+    display: flex;
+    gap: 10px;
+}
+.part-of-speech,.phonetic{
+    font-size: 12px;
+    color: rgb(135, 135, 135);
+}
+
+.meaning{
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 12px;
+}
+
+.sentence{
+    font-size: 13px;
+    font-weight: 500;
+    margin-top: 30px;
+    font-style: italic;
+    border-left:4px solid rgb(115, 136, 254) ;
+    padding-left: 20px;
+}
+.content-body i{
+    position: absolute;
+    top: 10px;
+    right: 0;
+    cursor: pointer;
+    color: rgb(115, 136, 254) ;
+}
+
+.not-found{
+    margin:60px 0px 30px 10px;
+    display: flex;
+    justify-content: center;
+    display: none;
+}
+
+@media (max-width:550px){ 
+    .search-input{
+        padding: 10px 0px;
+        width: 70%;
+        font-size: 13px;
+    }
+    .search-btn{
+        padding:10px 20px;
+    }
+}
+
+
+
+
+
