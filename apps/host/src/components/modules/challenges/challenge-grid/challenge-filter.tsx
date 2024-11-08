@@ -72,12 +72,14 @@ const ChallengeFilters = ({
         data={DeveloperList}
         optionSelected={optionSelected}
         setOptionSelected={(val: OptionType[]) => setOptionSelected(val)}
+        selectPlaceholder="Select Developers"
       />
 
       <CustomSelect
         data={Difficulties}
         optionSelected={selectedDifficulties}
         setOptionSelected={(val: OptionType[]) => setSelectedDifficulties(val)}
+        selectPlaceholder="Select Difficulties"
       />
       <CustomCheckbox
         className={styles.checkbox}
