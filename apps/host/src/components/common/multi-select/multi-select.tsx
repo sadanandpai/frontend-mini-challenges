@@ -31,12 +31,14 @@ interface Props {
   width?: string;
   optionSelected: OptionType[] | null;
   setOptionSelected: (selected: OptionType[]) => void;
+  selectPlaceholder?: string;
 }
 const CustomSelect: React.FC<Props> = ({
   data,
   width = '100%',
   optionSelected,
   setOptionSelected,
+  selectPlaceholder,
 }) => {
   const { theme } = useContext(ThemeContext);
   const handleChange = (selected: OptionType[]) => {
@@ -55,6 +57,7 @@ const CustomSelect: React.FC<Props> = ({
         }}
         onChange={(newValue: unknown) => handleChange(newValue as OptionType[])}
         value={optionSelected}
+        placeholder={selectPlaceholder}
         styles={{
           control: (base) => ({
             ...base,
