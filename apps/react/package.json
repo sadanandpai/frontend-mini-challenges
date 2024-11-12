@@ -12,13 +12,12 @@
     "unit:test": "vitest"
   },
   "dependencies": {
-    "axios": "^1.6.2",
+    "axios": "^1.7.8",
     "leva": "^0.9.35",
-    "qrcode.react": "^3.1.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "react-icons": "^4.12.0",
-    "react-router-dom": "^6.21.0"
+    "react-router-dom": "^6.28.0"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^6.4.2",
@@ -38,7 +37,7 @@
     "stylelint-config-recess-order": "^4.6.0",
     "stylelint-config-standard-scss": "^10.0.0",
     "typescript": "^5.3.3",
-    "vite": "^5.1.1",
+    "vite": "^6.0.1",
     "vitest": "^1.2.2"
   }
 }
