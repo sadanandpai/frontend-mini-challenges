@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -13,10 +13,20 @@
     <div class="container text-center">
       <section class="size">
         <label for="rows">Rows</label>
-        <input type="range" name="rows" id="rows" min="2" max="8" value="2" />
+        <input type="range" name="rows" id="rows" min="2" max="8" value="2" list="markers" />
 
         <label for="columns">Columns</label>
-        <input type="range" name="columns" id="columns" min="2" max="8" value="2" />
+        <input type="range" name="columns" id="columns" min="2" max="8" value="2" list="markers" />
+
+        <datalist id="markers">
+          <option value="2"></option>
+          <option value="3"></option>
+          <option value="4"></option>
+          <option value="5"></option>
+          <option value="6"></option>
+          <option value="7"></option>
+          <option value="8"></option>
+        </datalist>
       </section>
 
       <table class="table">

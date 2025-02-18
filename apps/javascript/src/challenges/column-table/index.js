@@ -49,12 +49,12 @@ function updateTable() {
   tableBodyEl.replaceChildren(generateTable(rows, columns));
 }
 
-rowsEl.addEventListener('change', () => {
+rowsEl.addEventListener('input', () => {
   rows = +rowsEl.value;
   updateTable();
 });
 
-columnsEl.addEventListener('change', () => {
+columnsEl.addEventListener('input', () => {
   columns = +columnsEl.value;
   updateTable();
 });
