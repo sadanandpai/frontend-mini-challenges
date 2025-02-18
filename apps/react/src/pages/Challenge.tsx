@@ -73,7 +73,7 @@ const reactChallengesMap = {
   'advanced-counter': <AdvancedCounter />,
   accordion: <Accordion />,
   'background-changer': <Background />,
-  'star-Rating': <StarRating />,
+  'star-rating': <StarRating />,
   'light-dark-mode': <LightDarkMode />,
   'guess-number': <GuessNumber />,
   'telephone-formatter': <TelephoneFormatter />,

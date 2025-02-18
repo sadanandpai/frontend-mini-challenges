@@ -143,10 +143,10 @@ const challenges = new Map<string, IChallenge>([
     },
   ],
   [
-    'star-Rating',
+    'star-rating',
     {
       title: 'Star Rating',
-      link: 'star-Rating',
+      link: 'star-rating',
       difficulty: EDifficulty.Easy,
       developer: 'NikhilJHA01',
       tags: [ETag.interview],
@@ -654,6 +654,17 @@ const challenges = new Map<string, IChallenge>([
       difficulty: EDifficulty.Hard,
       developer: 'sadanandpai',
       tags: [ETag.interview],
+      isNew: true,
+    },
+  ],
+  [
+    'tango',
+    {
+      title: 'Tango',
+      link: 'tango',
+      difficulty: EDifficulty.Hard,
+      developer: 'sadanandpai',
+      tags: [],
       isNew: true,
     },
   ],
