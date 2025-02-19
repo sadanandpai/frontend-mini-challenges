@@ -18,7 +18,6 @@
 <div align="center">
   <a href="https://www.greatfrontend.com?fpr=sadanand83">
     <img src="https://github.com/user-attachments/assets/34b52581-95e4-4fbf-b849-6bda0346b1fc" alt="great frontend" />
-    Black Friday – GFE's BIGGEST sale of the year!
   </a>
 </div>
 
