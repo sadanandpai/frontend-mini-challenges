@@ -1,11 +1,11 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="../../logo.svg" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script type="module" crossorigin src="/frontend-mini-challenges/javascript/assets/index-B8HFrm_6.js"></script>
+    <script type="module" crossorigin src="/frontend-mini-challenges/javascript/assets/index-DoAkBMzm.js"></script>
     <link rel="modulepreload" crossorigin href="/frontend-mini-challenges/javascript/assets/navbar-Cu_476aO.js">
     <link rel="modulepreload" crossorigin href="/frontend-mini-challenges/javascript/assets/header-WIyCWLaG.js">
     <link rel="stylesheet" crossorigin href="/frontend-mini-challenges/javascript/assets/header-BfemnTcV.css">
@@ -16,10 +16,20 @@
     <div class="container text-center">
       <section class="size">
         <label for="rows">Rows</label>
-        <input type="range" name="rows" id="rows" min="2" max="8" value="2" />
+        <input type="range" name="rows" id="rows" min="2" max="8" value="2" list="markers" />
 
         <label for="columns">Columns</label>
-        <input type="range" name="columns" id="columns" min="2" max="8" value="2" />
+        <input type="range" name="columns" id="columns" min="2" max="8" value="2" list="markers" />
+
+        <datalist id="markers">
+          <option value="2"></option>
+          <option value="3"></option>
+          <option value="4"></option>
+          <option value="5"></option>
+          <option value="6"></option>
+          <option value="7"></option>
+          <option value="8"></option>
+        </datalist>
       </section>
 
       <table class="table">
