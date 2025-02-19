@@ -20,6 +20,7 @@ export interface IChallenge {
   youtube?: string;
   tags?: ETag[] | [];
   isNew?: boolean;
+  sourceCodeLink?: string;
   longLink?: string;
 }
 

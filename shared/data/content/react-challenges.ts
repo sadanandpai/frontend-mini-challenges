@@ -13,10 +13,10 @@ const challenges = new Map<string, IChallenge>([
     },
   ],
   [
-    'programming-languages-multiverse',
+    'programming-multiverse',
     {
       title: 'Programming Multiverse',
-      link: 'programming-languages-multiverse',
+      link: 'programming-multiverse',
       difficulty: EDifficulty.Easy,
       developer: 'Sumitwarrior7',
       tags: [],
@@ -450,7 +450,7 @@ const challenges = new Map<string, IChallenge>([
     'infinite-scroll',
     {
       title: 'Infinite Scroll (online)',
-      link: 'infinite-scrolling',
+      link: 'infinite-scroll',
       difficulty: EDifficulty.Medium,
       developer: 'ayush-dutt-sharma',
       tags: [ETag.interview],
@@ -502,6 +502,7 @@ const challenges = new Map<string, IChallenge>([
     {
       title: 'Typeahead (offline)',
       link: 'autocomplete-offline',
+      sourceCodeLink: 'autocomplete',
       difficulty: EDifficulty.Hard,
       developer: 'deepu0',
       tags: [ETag.interview],
@@ -512,6 +513,7 @@ const challenges = new Map<string, IChallenge>([
     {
       title: 'Typeahead (online)',
       link: 'autocomplete-online',
+      sourceCodeLink: 'autocomplete',
       difficulty: EDifficulty.Hard,
       developer: 'deepu0',
       tags: [ETag.interview],

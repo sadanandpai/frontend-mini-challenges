@@ -22,11 +22,11 @@ const props = defineProps({
     type: String,
     required: true,
   },
-  link: {
+  sourceCodeLink: {
     type: String,
     required: true,
   },
 });
 
-const vueSourceCodeLink = `${sourceCodeBaseURL}${props.link}`;
+const vueSourceCodeLink = `${sourceCodeBaseURL}${props.sourceCodeLink}`;
 </script>

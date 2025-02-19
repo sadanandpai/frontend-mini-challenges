@@ -1,5 +1,5 @@
 <template>
-  <ChallengeNavbar :title="title" :link="link" />
+  <ChallengeNavbar :title="title" :sourceCodeLink="sourceCodeLink" />
   <div class="challenge-container">
     <RouterView />
   </div>
@@ -14,7 +14,7 @@ import { vueChallenges } from '@fmc/data/content';
 const route = useRoute();
 
 const title = ref('');
-const link = ref('');
+const sourceCodeLink = ref('');
 
 watch(
   route,
@@ -22,7 +22,8 @@ watch(
     // Extract challenge-id from url (last segment)
     const challengeId = route.path.split('/').filter(Boolean).pop()!;
     title.value = vueChallenges.get(challengeId)!.title;
-    link.value = vueChallenges.get(challengeId)!.link;
+    sourceCodeLink.value =
+      vueChallenges.get(challengeId)?.sourceCodeLink ?? vueChallenges.get(challengeId)!.link;
   },
   { immediate: true }
 );

@@ -19,7 +19,7 @@ import FileExplorer from '@/challenges/file-explorer/App';
 import FoodRecipe from '@/challenges/food-recipe/App';
 import GuessNumber from '@/challenges/guess-number/App';
 import ImageGallery from '@/challenges/image-gallery/App';
-import InfiniteScrolling from '@/challenges/infinite-scroll';
+import InfiniteScroll from '@/challenges/infinite-scroll';
 import InvestmentCalc from '@/challenges/investment-calculator/App';
 import LightDarkMode from '@/challenges/light-dark-mode/App';
 import MatchPair from '@/challenges/match-pair/MatchPair';
@@ -43,9 +43,9 @@ import WordCounter from '@/challenges/word-count';
 import YourSport from '@/challenges/your-sport';
 import ModalPopup from '@/challenges/modal-popup/App';
 import EmojiPicker from '@/challenges/emoji-picker/App';
-import ProgrammingLanguageMultiverse from '@/challenges/programming-languages-multiverse';
+import ProgrammingMultiverse from '@/challenges/programming-multiverse';
 import Otp from '@/challenges/otp/App';
-import TrafficLights from '@/challenges/traffic-light/App';
+import TrafficLights from '@/challenges/traffic-lights/App';
 import QuizApp from '@/challenges/quiz-app/App';
 import ChessBoard from '@/challenges/chess-board/App';
 import Calculator from '@/challenges/calculator/App';
@@ -83,7 +83,7 @@ const reactChallengesMap = {
   'investment-calculator': <InvestmentCalc />,
   stopwatch: <Stopwatch />,
   progressbar: <ProgressBar />,
-  'infinite-scrolling': <InfiniteScrolling />,
+  'infinite-scroll': <InfiniteScroll />,
   'feedback-modal': <FeedbackModal />,
   'file-explorer': <FileExplorer />,
   'autocomplete-offline': <AutocompleteOffline />,
@@ -108,7 +108,7 @@ const reactChallengesMap = {
   'your-sport': <YourSport />,
   'modal-popup': <ModalPopup />,
   'emoji-picker': <EmojiPicker />,
-  'programming-languages-multiverse': <ProgrammingLanguageMultiverse />,
+  'programming-multiverse': <ProgrammingMultiverse />,
   otp: <Otp />,
   'traffic-lights': <TrafficLights />,
   'quiz-app': <QuizApp />,
@@ -142,7 +142,7 @@ function Challenge() {
     <>
       <ChallengeNavbar
         title={reactChallenges.get(id)?.title}
-        link={reactChallenges.get(id)?.link}
+        sourceCodeLink={reactChallenges.get(id)?.sourceCodeLink ?? reactChallenges.get(id)?.link}
       />
       <div className="container">{reactChallengesMap[id]}</div>
     </>
