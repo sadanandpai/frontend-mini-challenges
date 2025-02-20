@@ -38,7 +38,7 @@ body .main_container #container {
   border: 3.5px solid rgb(23, 23, 24);
 }
 
-.btn:hover {
+.btn:hover:not(:disabled) {
   color: whitesmoke;
   background-color: rgb(224, 81, 172);
 }

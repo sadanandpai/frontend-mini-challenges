@@ -13,14 +13,18 @@ function init() {
   showBars();
 }
 
-function play() {
+async function play() {
   const copy = [...array];
   const moves = bubbleSort(copy);
-  animate(moves);
+  generateBtn.disabled = true;
+  playBtn.disabled = true;
+  await animate(moves);
+  generateBtn.disabled = false;
+  playBtn.disabled = false;
 }
 
 //function for animating the bars
-function animate(moves) {
+async function animate(moves) {
   if (moves.length == 0) {
     showBars();
     return;
@@ -31,9 +35,8 @@ function animate(moves) {
     [array[i], array[j]] = [array[j], array[i]];
   }
   showBars(move);
-  setTimeout(function () {
-    animate(moves);
-  }, 200);
+  await new Promise((r) => setTimeout(r, 200));
+  await animate(moves);
 }
 
 //implement the bubble sort function
