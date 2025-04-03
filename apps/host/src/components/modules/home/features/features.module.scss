@@ -18,12 +18,17 @@
     text-align: center;
     border-radius: 8px;
     box-shadow: 0 0 4px 0 rgba(0, 0, 0, 50%);
+    transition: all 0.5s;
 
     h3 {
       font-size: 1.4rem;
       font-weight: 500;
     }
   }
+}
+
+article:hover {
+  transform: scale(1.1);
 }
 
 @media screen and (width >= 768px) {
