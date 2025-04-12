@@ -13,6 +13,7 @@ export enum ETag {
 
 export interface IChallenge {
   title: string;
+  description: string;
   link: string;
   difficulty: EDifficulty;
   developer: string;
@@ -27,6 +28,7 @@ export interface IChallenge {
 export interface IGetChallengesByid {
   challenges: IChallenge[];
   title: string;
+  description: string;
   contributors: OptionType[];
   difficulties: OptionType[];
   tags: ETag[] | [];

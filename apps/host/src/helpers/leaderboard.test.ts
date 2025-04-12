@@ -11,6 +11,7 @@ const jsChallenges: Map<string, IChallenge> = new Map([
     'counter',
     {
       title: 'Counter',
+      description: 'A simple counter app',
       link: 'counter/',
       difficulty: EDifficulty.Easy,
       developer: devs.DEV_1,
@@ -21,6 +22,7 @@ const jsChallenges: Map<string, IChallenge> = new Map([
     'bmi-calculator',
     {
       title: 'BMI Calculator',
+      description: 'A simple bmi-calculator app',
       link: 'bmi-calculator/',
       difficulty: EDifficulty.Easy,
       developer: devs.DEV_2,
@@ -31,6 +33,7 @@ const jsChallenges: Map<string, IChallenge> = new Map([
     'star-rating',
     {
       title: 'Star Rating',
+      description: 'A simple star-rating app',
       link: 'star-rating/',
       difficulty: EDifficulty.Medium,
       developer: devs.DEV_1,

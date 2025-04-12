@@ -33,6 +33,7 @@ function ChallengeGrid({ challenges, linkPrefix, links, techImg }: Props) {
       getChallengesByid({
         challenges: [...challenges.values()],
         title: searchInput,
+        description: searchInput,
         contributors: optionSelected,
         difficulties: selectedDifficulties,
         tags: selectedChallengesByTags, // Convert OptionType[] to ETag[]

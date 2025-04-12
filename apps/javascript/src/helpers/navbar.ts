@@ -1,4 +1,5 @@
 import '@fmc/components';
+import { Modal } from '@fmc/components';
 import { jsChallenges } from '@fmc/data/content';
 
 const { VITE_PATH, VITE_HOST_URL, DEV } = import.meta.env;
@@ -14,9 +15,17 @@ const navbar = document.createElement('nav-bar');
 navbar.setAttribute('backURL', backURL);
 navbar.setAttribute('homeURL', homeURL);
 navbar.setAttribute('titleText', challenge.title);
+const modal = document.createElement('challenge-modal') as Modal;
 navbar.setAttribute('sourceCodeLink', jsSourceCodeBaseURL + challenge.link);
 if (challenge.youtube) {
   navbar.setAttribute('youtubeLink', challenge.youtube);
 }
 
 document.body.prepend(navbar);
+document.body.appendChild(modal);
+const openBtn = document.querySelector('.open-modal-btn');
+if (openBtn) {
+  openBtn.addEventListener('click', () => {
+    modal.showModal(challenge);
+  });
+}

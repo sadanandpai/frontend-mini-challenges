@@ -6,6 +6,7 @@ const challenges: Map<string, IChallenge> = new Map([
     'shapes',
     {
       title: 'Shapes',
+      description: 'Create and manipulate basic geometric shapes with interactive controls',
       link: 'shapes/',
       difficulty: EDifficulty.Easy,
       developer: 'sadanandpai',
@@ -16,6 +17,7 @@ const challenges: Map<string, IChallenge> = new Map([
     'loaders',
     {
       title: 'Loaders',
+      description: 'Implement various animated loading indicators and spinners',
       link: 'loaders/',
       difficulty: EDifficulty.Easy,
       developer: 'sadanandpai',
@@ -27,6 +29,7 @@ const challenges: Map<string, IChallenge> = new Map([
     'dialog',
     {
       title: 'Dialog',
+      description: 'Create a modal dialog/popup with overlay and close functionality',
       link: 'dialog/',
       difficulty: EDifficulty.Easy,
       developer: 'sahankatta',
@@ -39,6 +42,7 @@ const challenges: Map<string, IChallenge> = new Map([
     'dynamic-tooltip',
     {
       title: 'Dynamic Tooltip',
+      description: 'Build interactive tooltips that appear on hover with dynamic positioning',
       link: 'dynamic-tooltip/',
       difficulty: EDifficulty.Easy,
       developer: 'officialbidisha',
@@ -50,6 +54,7 @@ const challenges: Map<string, IChallenge> = new Map([
     'light-dark-mode',
     {
       title: 'Light & Dark mode',
+      description: 'Implement theme switching between light and dark color schemes',
       link: 'light-dark-mode/',
       difficulty: EDifficulty.Easy,
       developer: 'sadanandpai',
@@ -61,6 +66,7 @@ const challenges: Map<string, IChallenge> = new Map([
     'skeleton-loader',
     {
       title: 'Skeleton Loader',
+      description: 'Create placeholder loading animations that mimic content structure',
       link: 'skeleton-loader/',
       difficulty: EDifficulty.Easy,
       developer: 'sahankatta',
@@ -72,6 +78,7 @@ const challenges: Map<string, IChallenge> = new Map([
     'accordion',
     {
       title: 'Accordion',
+      description: 'Build collapsible content sections with smooth expand/collapse animations',
       link: 'accordion/',
       difficulty: EDifficulty.Easy,
       developer: 'rashidtvmr',
@@ -83,6 +90,7 @@ const challenges: Map<string, IChallenge> = new Map([
     'navigation-bar',
     {
       title: 'Navigation Bar',
+      description: 'Create a responsive navigation menu with active state indicators',
       link: 'navigation-bar/',
       difficulty: EDifficulty.Easy,
       developer: 'christian-lee1398',
@@ -94,6 +102,7 @@ const challenges: Map<string, IChallenge> = new Map([
     'footer',
     {
       title: 'Footer',
+      description: 'Implement a responsive page footer with multiple content sections',
       link: 'footer/',
       difficulty: EDifficulty.Easy,
       developer: 'AbhineshJha',
@@ -105,6 +114,7 @@ const challenges: Map<string, IChallenge> = new Map([
     'stagger-animation',
     {
       title: 'Stagger Animation',
+      description: 'Create sequenced animations with staggered timing effects',
       link: 'stagger-animation/',
       difficulty: EDifficulty.Medium,
       developer: 'sadanandpai',
@@ -116,6 +126,7 @@ const challenges: Map<string, IChallenge> = new Map([
     'blobmaker',
     {
       title: 'Blob Maker',
+      description: 'Generate organic blob shapes with customizable parameters',
       link: 'blobmaker/',
       difficulty: EDifficulty.Easy,
       developer: 'AbhineshJha',
@@ -126,6 +137,7 @@ const challenges: Map<string, IChallenge> = new Map([
     'star-rating-display',
     {
       title: 'Star Rating Display',
+      description: 'Implement an interactive star rating component with visual feedback',
       link: 'star-rating-display/',
       difficulty: EDifficulty.Medium,
       developer: 'sadanandpai',
@@ -136,6 +148,7 @@ const challenges: Map<string, IChallenge> = new Map([
     'gradient-generator',
     {
       title: 'Gradient Generator',
+      description: 'Build a tool to create and customize CSS gradients with live preview',
       link: 'gradient-generator/',
       difficulty: EDifficulty.Medium,
       developer: 'Sukomal07',
@@ -147,6 +160,7 @@ const challenges: Map<string, IChallenge> = new Map([
     'timeline',
     {
       title: 'Timeline',
+      description: 'Create a vertical timeline displaying events in chronological order',
       link: 'timeline/',
       difficulty: EDifficulty.Medium,
       developer: 'Vivek7038',
