@@ -6,6 +6,7 @@ const challenges = new Map<string, IChallenge>([
     'counter',
     {
       title: 'Counter',
+      description: 'Implement a simple counter with increment and decrement functionality',
       link: '/counter',
       difficulty: EDifficulty.Easy,
       developer: 'arpansaha13',
@@ -16,6 +17,7 @@ const challenges = new Map<string, IChallenge>([
     'accordion',
     {
       title: 'Accordion',
+      description: 'Create a collapsible content section with smooth animations',
       link: '/accordion',
       difficulty: EDifficulty.Easy,
       developer: 'arpansaha13',
@@ -26,6 +28,7 @@ const challenges = new Map<string, IChallenge>([
     'light-dark-mode',
     {
       title: 'Light Dark Mode',
+      description: 'Implement theme switching between light and dark modes',
       link: '/light-dark-mode',
       difficulty: EDifficulty.Easy,
       developer: 'arpansaha13',
@@ -36,6 +39,7 @@ const challenges = new Map<string, IChallenge>([
     'table-colorizer',
     {
       title: 'Table Colorizer',
+      description: 'Create a table with alternating row colors and hover effects',
       link: '/table-colorizer',
       difficulty: EDifficulty.Easy,
       developer: 'arpansaha13',
@@ -46,6 +50,7 @@ const challenges = new Map<string, IChallenge>([
     'guess-the-number',
     {
       title: 'Guess the number',
+      description: 'Build a number guessing game with hints for higher/lower',
       link: '/guess-the-number',
       difficulty: EDifficulty.Easy,
       developer: 'arpansaha13',
@@ -56,6 +61,7 @@ const challenges = new Map<string, IChallenge>([
     'pagination',
     {
       title: 'Pagination',
+      description: 'Implement numbered page navigation for content',
       link: '/pagination',
       difficulty: EDifficulty.Easy,
       developer: 'arpansaha13',
@@ -66,6 +72,7 @@ const challenges = new Map<string, IChallenge>([
     'stack',
     {
       title: 'Stack',
+      description: 'Visualize stack data structure operations (push/pop)',
       link: '/stack',
       difficulty: EDifficulty.Easy,
       developer: 'jaydadhaniya',
@@ -76,6 +83,7 @@ const challenges = new Map<string, IChallenge>([
     'telephone-formatter',
     {
       title: 'Telephone formatter',
+      description: 'Format phone numbers automatically as user types',
       link: '/telephone-formatter',
       difficulty: EDifficulty.Easy,
       developer: 'arpansaha13',
@@ -86,6 +94,7 @@ const challenges = new Map<string, IChallenge>([
     'temprature-converter',
     {
       title: 'Temprature Converter',
+      description: 'Convert between Celsius and Fahrenheit temperature units',
       link: '/temprature-converter',
       difficulty: EDifficulty.Easy,
       developer: 'bhumikkalola',
@@ -96,6 +105,7 @@ const challenges = new Map<string, IChallenge>([
     'tic-tac-toe',
     {
       title: 'Tic Tac Toe',
+      description: 'Build the classic 3x3 grid game with win detection',
       link: '/tic-tac-toe',
       difficulty: EDifficulty.Medium,
       developer: 'sadanandpai',
@@ -107,6 +117,7 @@ const challenges = new Map<string, IChallenge>([
     'toast-popup',
     {
       title: 'Toast Popup',
+      description: 'Create timed notification messages that disappear automatically',
       link: '/toast-popup',
       difficulty: EDifficulty.Medium,
       developer: 'arpansaha13',
@@ -117,6 +128,7 @@ const challenges = new Map<string, IChallenge>([
     'password-strength',
     {
       title: 'Password Strength',
+      description: 'Visual indicator showing password complexity in real-time',
       link: '/password-strength',
       difficulty: EDifficulty.Medium,
       developer: 'jaydadhaniya',
@@ -127,6 +139,7 @@ const challenges = new Map<string, IChallenge>([
     'password-generator',
     {
       title: 'Password Generator',
+      description: 'Create a tool that generates random secure passwords',
       link: '/password-generator',
       difficulty: EDifficulty.Medium,
       developer: 'bhumikkalola',
@@ -137,6 +150,7 @@ const challenges = new Map<string, IChallenge>([
     'stopwatch',
     {
       title: 'Stopwatch',
+      description: 'Implement a timer with start, pause and reset functionality',
       link: '/stopwatch',
       difficulty: EDifficulty.Medium,
       developer: 'Shardik04',

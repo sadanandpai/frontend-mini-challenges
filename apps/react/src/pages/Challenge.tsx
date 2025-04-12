@@ -142,6 +142,7 @@ function Challenge() {
     <>
       <ChallengeNavbar
         title={reactChallenges.get(id)?.title}
+        description={reactChallenges.get(id)?.description}
         sourceCodeLink={reactChallenges.get(id)?.sourceCodeLink ?? reactChallenges.get(id)?.link}
       />
       <div className="container">{reactChallengesMap[id]}</div>

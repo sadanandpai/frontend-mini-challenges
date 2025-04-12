@@ -6,6 +6,7 @@ const challenges = new Map<string, IChallenge>([
     'counter',
     {
       title: 'Counter',
+      description: 'Create a simple counter with increment and decrement buttons',
       link: 'counter',
       difficulty: EDifficulty.Easy,
       developer: 'sadanandpai',
@@ -16,6 +17,7 @@ const challenges = new Map<string, IChallenge>([
     'programming-multiverse',
     {
       title: 'Programming Multiverse',
+      description: 'Display programming languages in an interactive grid layout',
       link: 'programming-multiverse',
       difficulty: EDifficulty.Easy,
       developer: 'Sumitwarrior7',
@@ -26,6 +28,7 @@ const challenges = new Map<string, IChallenge>([
     'anagram-checker',
     {
       title: 'Anagram Checker',
+      description: 'Build a tool to check if two words are anagrams',
       link: 'anagram-checker',
       difficulty: EDifficulty.Easy,
       developer: 'Manmit Tiwade',
@@ -36,6 +39,7 @@ const challenges = new Map<string, IChallenge>([
     'image-gallery',
     {
       title: 'Image Gallery',
+      description: 'Create a responsive grid of images with lightbox preview',
       link: 'image-gallery',
       difficulty: EDifficulty.Easy,
       developer: 'Bhushan1019',
@@ -46,6 +50,7 @@ const challenges = new Map<string, IChallenge>([
     'accordion',
     {
       title: 'Accordion',
+      description: 'Implement collapsible content sections with smooth animations',
       link: 'accordion',
       developer: 'NikhilJHA01',
       difficulty: EDifficulty.Easy,
@@ -56,6 +61,7 @@ const challenges = new Map<string, IChallenge>([
     'background-changer',
     {
       title: 'Background Changer',
+      description: 'Build a tool to change page background color dynamically',
       link: 'background-changer',
       developer: 'AdityaSuryawanshi',
       difficulty: EDifficulty.Easy,
@@ -66,6 +72,7 @@ const challenges = new Map<string, IChallenge>([
     'light-dark-mode',
     {
       title: 'Light Dark Mode',
+      description: 'Implement theme switching between light and dark modes',
       link: 'light-dark-mode',
       difficulty: EDifficulty.Easy,
       developer: 'NikhilJHA01',
@@ -76,6 +83,7 @@ const challenges = new Map<string, IChallenge>([
     'your-sport',
     {
       title: 'Your Sport',
+      description: 'Create a sports selection interface with visual feedback',
       link: 'your-sport',
       difficulty: EDifficulty.Easy,
       developer: 'Sumitwarrior7',
@@ -86,6 +94,7 @@ const challenges = new Map<string, IChallenge>([
     'table-colorizer',
     {
       title: 'Table Colorizer',
+      description: 'Build a table with customizable row and column colors',
       link: 'table-colorizer',
       difficulty: EDifficulty.Easy,
       developer: 'ravi02205',
@@ -96,6 +105,7 @@ const challenges = new Map<string, IChallenge>([
     'guess-number',
     {
       title: 'Guess the number',
+      description: 'Create a number guessing game with hints',
       link: 'guess-number',
       difficulty: EDifficulty.Easy,
       developer: 'deepakrajkranti',
@@ -106,6 +116,7 @@ const challenges = new Map<string, IChallenge>([
     'pagination',
     {
       title: 'Pagination',
+      description: 'Implement numbered page navigation for content',
       link: 'pagination',
       difficulty: EDifficulty.Easy,
       developer: 'Pancratzia',
@@ -116,6 +127,7 @@ const challenges = new Map<string, IChallenge>([
     'stack',
     {
       title: 'Stack',
+      description: 'Visualize stack data structure operations (push/pop)',
       link: 'stack',
       difficulty: EDifficulty.Easy,
       developer: 'kumaratul60',
@@ -126,6 +138,7 @@ const challenges = new Map<string, IChallenge>([
     'word-count',
     {
       title: 'Word Count',
+      description: 'Build a tool to count words and characters in text',
       link: 'word-count',
       difficulty: EDifficulty.Easy,
       developer: 'Sumitwarrior7',
@@ -136,6 +149,7 @@ const challenges = new Map<string, IChallenge>([
     'temperature-converter',
     {
       title: 'Temperature Converter',
+      description: 'Convert between Celsius and Fahrenheit units',
       link: 'temperature-converter',
       difficulty: EDifficulty.Easy,
       developer: 'Sumitwarrior7',
@@ -146,6 +160,7 @@ const challenges = new Map<string, IChallenge>([
     'star-rating',
     {
       title: 'Star Rating',
+      description: 'Create an interactive star rating component',
       link: 'star-rating',
       difficulty: EDifficulty.Easy,
       developer: 'NikhilJHA01',
@@ -156,6 +171,7 @@ const challenges = new Map<string, IChallenge>([
     'telephone-formatter',
     {
       title: 'Telephone formatter',
+      description: 'Format phone numbers automatically as user types',
       link: 'telephone-formatter',
       difficulty: EDifficulty.Easy,
       developer: 'arpansaha13',
@@ -166,6 +182,7 @@ const challenges = new Map<string, IChallenge>([
     'string-transformers',
     {
       title: 'String transformers',
+      description: 'Build a tool to transform text case (upper/lower/title)',
       link: 'string-transformers',
       difficulty: EDifficulty.Easy,
       developer: 'arpansaha13',
@@ -176,6 +193,7 @@ const challenges = new Map<string, IChallenge>([
     'tic-tac-toe',
     {
       title: 'Tic Tac Toe',
+      description: 'Implement the classic 3x3 grid game with win detection',
       link: 'tic-tac-toe',
       difficulty: EDifficulty.Easy,
       developer: 'rashidtvmr',
@@ -186,6 +204,7 @@ const challenges = new Map<string, IChallenge>([
     'expense-tracker',
     {
       title: 'Expense Tracker',
+      description: 'Create a simple expense logging application',
       link: 'expense-tracker',
       difficulty: EDifficulty.Easy,
       developer: 'harsh472000',
@@ -196,6 +215,7 @@ const challenges = new Map<string, IChallenge>([
     '25-5-clock',
     {
       title: '25-5 Clock',
+      description: 'Build a Pomodoro timer with work/break intervals',
       link: '25-5-clock',
       difficulty: EDifficulty.Easy,
       developer: 'caesar003',
@@ -206,6 +226,7 @@ const challenges = new Map<string, IChallenge>([
     'bmi-calculator',
     {
       title: 'BMI Calculator',
+      description: 'Calculate Body Mass Index from height and weight inputs',
       link: 'bmi-calculator',
       difficulty: EDifficulty.Easy,
       developer: 'ashikjhonson',
@@ -216,6 +237,7 @@ const challenges = new Map<string, IChallenge>([
     'stepper',
     {
       title: 'Stepper',
+      description: 'Create a multi-step form progress indicator',
       link: 'stepper',
       difficulty: EDifficulty.Easy,
       developer: 'codechitra',
@@ -227,6 +249,7 @@ const challenges = new Map<string, IChallenge>([
     'calculator',
     {
       title: 'Calculator',
+      description: 'Build a calculator with basic arithmetic operations',
       link: 'calculator',
       difficulty: EDifficulty.Medium,
       developer: 'liza',
@@ -237,6 +260,7 @@ const challenges = new Map<string, IChallenge>([
     'color-mixer',
     {
       title: 'Color Mixer',
+      description: 'Create a tool to mix RGB colors with visual output',
       link: 'color-mixer',
       difficulty: EDifficulty.Medium,
       developer: 'Sumitwarrior7',
@@ -247,6 +271,7 @@ const challenges = new Map<string, IChallenge>([
     'traffic-lights',
     {
       title: 'Traffic Lights',
+      description: 'Simulate traffic light sequence with timed transitions',
       link: 'traffic-lights',
       difficulty: EDifficulty.Medium,
       developer: 'rishabhm05',
@@ -257,6 +282,7 @@ const challenges = new Map<string, IChallenge>([
     'email-templates',
     {
       title: 'Email Templates',
+      description: 'Build a customizable email template editor',
       link: 'email-templates',
       difficulty: EDifficulty.Medium,
       developer: 'sadanandpai',
@@ -267,6 +293,7 @@ const challenges = new Map<string, IChallenge>([
     'toast-popup',
     {
       title: 'Toast Popup',
+      description: 'Create timed notification messages that auto-dismiss',
       link: 'toast-popup',
       difficulty: EDifficulty.Medium,
       developer: 'deepu0',
@@ -277,6 +304,7 @@ const challenges = new Map<string, IChallenge>([
     'modal-popup',
     {
       title: 'Modal Popup',
+      description: 'Implement a popup dialog with overlay and close functionality',
       link: 'modal-popup',
       difficulty: EDifficulty.Medium,
       developer: 'rishabhm05',
@@ -287,6 +315,7 @@ const challenges = new Map<string, IChallenge>([
     'password-strength',
     {
       title: 'Password Strength',
+      description: 'Show visual feedback on password complexity',
       link: 'password-strength',
       difficulty: EDifficulty.Medium,
       developer: 'deepu0',
@@ -297,6 +326,7 @@ const challenges = new Map<string, IChallenge>([
     'grid-lights',
     {
       title: 'Grid Lights',
+      description: 'Create an interactive light grid with toggle functionality',
       link: 'grid-lights',
       difficulty: EDifficulty.Medium,
       developer: 'sadanandpai',
@@ -308,6 +338,7 @@ const challenges = new Map<string, IChallenge>([
     'column-table',
     {
       title: 'Column Table',
+      description: 'Build a sortable and filterable data table',
       link: 'column-table',
       difficulty: EDifficulty.Medium,
       developer: 'sadanandpai',
@@ -318,6 +349,7 @@ const challenges = new Map<string, IChallenge>([
     'todo-list',
     {
       title: 'Todo List',
+      description: 'Create a task manager with add/delete/complete functionality',
       link: 'todo-list',
       difficulty: EDifficulty.Medium,
       developer: 'deepakrajkranti',
@@ -328,6 +360,7 @@ const challenges = new Map<string, IChallenge>([
     'emoji-picker',
     {
       title: 'Emoji Picker',
+      description: 'Build a component to select and insert emojis',
       link: 'emoji-picker',
       difficulty: EDifficulty.Medium,
       developer: 'jeevaramanathan',
@@ -338,6 +371,7 @@ const challenges = new Map<string, IChallenge>([
     'investment-calculator',
     {
       title: 'Investment Calculator',
+      description: 'Calculate investment growth with compound interest',
       link: 'investment-calculator',
       difficulty: EDifficulty.Medium,
       developer: 'insharahAyyubi',
@@ -348,6 +382,7 @@ const challenges = new Map<string, IChallenge>([
     'stopwatch',
     {
       title: 'Stopwatch',
+      description: 'Implement a stopwatch with lap time functionality',
       link: 'stopwatch',
       difficulty: EDifficulty.Medium,
       developer: 'rashidtvmr',
@@ -358,6 +393,7 @@ const challenges = new Map<string, IChallenge>([
     'progressbar',
     {
       title: 'Progressbar',
+      description: 'Create an animated progress indicator',
       link: 'progressbar',
       difficulty: EDifficulty.Medium,
       developer: 'dhanu084',
@@ -368,6 +404,7 @@ const challenges = new Map<string, IChallenge>([
     'quiz-app',
     {
       title: 'Quiz App',
+      description: 'Build an interactive quiz with scoring system',
       link: 'quiz-app',
       difficulty: EDifficulty.Medium,
       developer: 'AbhilashMadi',
@@ -378,6 +415,7 @@ const challenges = new Map<string, IChallenge>([
     'chess-board',
     {
       title: 'Chess Board',
+      description: 'Create an interactive chess board with piece movement',
       link: 'chess-board',
       difficulty: EDifficulty.Medium,
       developer: 'sadanandpai',
@@ -388,6 +426,7 @@ const challenges = new Map<string, IChallenge>([
     'nested-dropdown',
     {
       title: 'Nested Dropdown',
+      description: 'Implement a dropdown menu with multiple levels',
       link: 'nested-dropdown',
       difficulty: EDifficulty.Medium,
       developer: 'AnkitKTrivedi',
@@ -398,6 +437,7 @@ const challenges = new Map<string, IChallenge>([
     'food-recipe',
     {
       title: 'Food Recipe',
+      description: 'Build a recipe display with ingredients and instructions',
       link: 'food-recipe',
       difficulty: EDifficulty.Medium,
       developer: 'Kei-K23',
@@ -408,6 +448,7 @@ const challenges = new Map<string, IChallenge>([
     'nested-checkbox',
     {
       title: 'Nested Checkbox',
+      description: 'Create hierarchical checkboxes with parent-child relationships',
       link: 'nested-checkbox',
       difficulty: EDifficulty.Hard,
       developer: 'SujithGunasekaran',
@@ -418,6 +459,7 @@ const challenges = new Map<string, IChallenge>([
     'nested-comments',
     {
       title: 'Nested Comments',
+      description: 'Implement a threaded comment system with replies',
       link: 'nested-comments',
       difficulty: EDifficulty.Hard,
       developer: 'Akshay-Omkar',
@@ -430,6 +472,7 @@ const challenges = new Map<string, IChallenge>([
     'password-generator',
     {
       title: 'Password Generator',
+      description: 'Create a tool to generate secure random passwords',
       link: 'password-generator',
       difficulty: EDifficulty.Medium,
       developer: 'Kei-K23',
@@ -440,6 +483,7 @@ const challenges = new Map<string, IChallenge>([
     'transfer-list',
     {
       title: 'Transfer List',
+      description: 'Build a UI for moving items between two lists',
       link: 'transfer-list',
       difficulty: EDifficulty.Medium,
       developer: 'DeePaK-HeeRaKaRi',
@@ -450,6 +494,7 @@ const challenges = new Map<string, IChallenge>([
     'infinite-scroll',
     {
       title: 'Infinite Scroll (online)',
+      description: 'Implement endless scrolling with API data loading',
       link: 'infinite-scroll',
       difficulty: EDifficulty.Medium,
       developer: 'ayush-dutt-sharma',
@@ -460,6 +505,7 @@ const challenges = new Map<string, IChallenge>([
     'match-pair',
     {
       title: 'Match Pair',
+      description: 'Create a memory matching card game',
       link: 'match-pair',
       difficulty: EDifficulty.Medium,
       developer: 'sadanandpai',
@@ -470,6 +516,7 @@ const challenges = new Map<string, IChallenge>([
     'word-connect',
     {
       title: 'Word Connect',
+      description: 'Build a word association game with complex logic',
       link: 'word-connect',
       difficulty: EDifficulty.Hard,
       developer: 'sadanandpai',
@@ -481,6 +528,7 @@ const challenges = new Map<string, IChallenge>([
     'otp',
     {
       title: 'OTP',
+      description: 'Implement a one-time password input component',
       link: 'otp',
       difficulty: EDifficulty.Hard,
       developer: 'rishabhm05',
@@ -491,6 +539,7 @@ const challenges = new Map<string, IChallenge>([
     'file-explorer',
     {
       title: 'File Explorer',
+      description: 'Create a hierarchical file system browser',
       link: 'file-explorer',
       difficulty: EDifficulty.Hard,
       developer: 'sadanandpai',
@@ -501,6 +550,7 @@ const challenges = new Map<string, IChallenge>([
     'autocomplete-offline',
     {
       title: 'Typeahead (offline)',
+      description: 'Build search suggestions from local dataset',
       link: 'autocomplete-offline',
       sourceCodeLink: 'autocomplete',
       difficulty: EDifficulty.Hard,
@@ -512,6 +562,7 @@ const challenges = new Map<string, IChallenge>([
     'autocomplete-online',
     {
       title: 'Typeahead (online)',
+      description: 'Implement live search suggestions from API',
       link: 'autocomplete-online',
       sourceCodeLink: 'autocomplete',
       difficulty: EDifficulty.Hard,
@@ -523,6 +574,7 @@ const challenges = new Map<string, IChallenge>([
     'water-balancer',
     {
       title: 'Water Balancer',
+      description: 'Create a water container balancing visualization',
       link: 'water-balancer',
       difficulty: EDifficulty.Hard,
       developer: 'sadanandpai',
@@ -534,6 +586,7 @@ const challenges = new Map<string, IChallenge>([
     'inline-options',
     {
       title: 'Inline Options',
+      description: 'Build an inline editable settings component',
       link: 'inline-options',
       difficulty: EDifficulty.Easy,
       developer: 'takshch',
@@ -544,6 +597,7 @@ const challenges = new Map<string, IChallenge>([
     'digital-clock',
     {
       title: 'Digital Clock',
+      description: 'Create a digital clock with time display',
       link: 'digital-clock',
       difficulty: EDifficulty.Medium,
       developer: 'Syamsai-Polavarapu',
@@ -555,6 +609,7 @@ const challenges = new Map<string, IChallenge>([
     '15puzzle',
     {
       title: '15 Puzzle',
+      description: 'Implement the classic sliding number puzzle game',
       link: '15puzzle',
       difficulty: EDifficulty.Medium,
       developer: 'Bateusz',
@@ -566,6 +621,7 @@ const challenges = new Map<string, IChallenge>([
     'feedback-modal',
     {
       title: 'Feedback Modal',
+      description: 'Create a popup form for user feedback submission',
       link: 'feedback-modal',
       difficulty: EDifficulty.Medium,
       developer: 'ssudipta',
@@ -576,6 +632,7 @@ const challenges = new Map<string, IChallenge>([
     'memory-game',
     {
       title: 'Memory Game',
+      description: 'Build a card matching memory game',
       link: 'memory-game',
       difficulty: EDifficulty.Medium,
       developer: 'Akshat-Gupta',
@@ -587,6 +644,7 @@ const challenges = new Map<string, IChallenge>([
     'chip-input',
     {
       title: 'Chips Input',
+      description: 'Create an input field that generates tags/chips',
       link: 'chip-input',
       difficulty: EDifficulty.Medium,
       developer: 'Akshay-Omkar',
@@ -598,6 +656,7 @@ const challenges = new Map<string, IChallenge>([
     'tabs',
     {
       title: 'Tab',
+      description: 'Implement a tabbed interface component',
       link: 'tabs',
       difficulty: EDifficulty.Easy,
       developer: 'Akshay-Omkar',
@@ -609,6 +668,7 @@ const challenges = new Map<string, IChallenge>([
     'drag-drop',
     {
       title: 'Drag-Drop',
+      description: 'Create draggable elements with drop targets',
       link: 'drag-drop',
       difficulty: EDifficulty.Medium,
       developer: 'Akshay-Omkar',
@@ -620,6 +680,7 @@ const challenges = new Map<string, IChallenge>([
     'circles',
     {
       title: 'Circles',
+      description: 'Build an interactive circle drawing application',
       link: 'circles',
       difficulty: EDifficulty.Medium,
       developer: 'sadanandpai',
@@ -631,6 +692,7 @@ const challenges = new Map<string, IChallenge>([
     'analog-clock',
     {
       title: 'Analog Clock',
+      description: 'Create a working analog clock with moving hands',
       link: 'analog-clock',
       difficulty: EDifficulty.Medium,
       developer: 'sadanandpai',
@@ -642,6 +704,7 @@ const challenges = new Map<string, IChallenge>([
     'advanced-counter',
     {
       title: 'Advanced Counter',
+      description: 'Build a counter with history tracking and presets',
       link: 'advanced-counter',
       difficulty: EDifficulty.Medium,
       developer: 'sadanandpai',
@@ -652,6 +715,7 @@ const challenges = new Map<string, IChallenge>([
     'meeting-calendar',
     {
       title: 'Meeting Calendar',
+      description: 'Create a calendar with meeting scheduling functionality',
       link: 'meeting-calendar',
       difficulty: EDifficulty.Hard,
       developer: 'sadanandpai',
@@ -663,6 +727,7 @@ const challenges = new Map<string, IChallenge>([
     'tango',
     {
       title: 'Tango',
+      description: 'Implement a complex dance step visualization',
       link: 'tango',
       difficulty: EDifficulty.Hard,
       developer: 'sadanandpai',
