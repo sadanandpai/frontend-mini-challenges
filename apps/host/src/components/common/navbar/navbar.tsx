@@ -5,6 +5,7 @@ import { logo, logo_dark } from '@fmc/assets/images';
 import { ThemeContext } from '../../ThemeWrapper';
 import { Sun, Moon, Menu } from 'lucide-react';
 import styles from './navbar.module.scss';
+import { Link } from 'react-router-dom';
 
 function Navbar({
   children,
@@ -24,10 +25,10 @@ function Navbar({
 
   return (
     <nav className={styles.navbar}>
-      <a className={styles.logo} href="/frontend-mini-challenges/">
+      <Link className={styles.logo} to="/frontend-mini-challenges/">
         <img src={theme === 'light' ? logo : logo_dark} alt="logo" />
         <span>{title ?? 'Frontend Mini Challenges'}</span>
-      </a>
+      </Link>
 
       <div className={styles.heading}>
         <span>{subheading ?? ''}</span>
