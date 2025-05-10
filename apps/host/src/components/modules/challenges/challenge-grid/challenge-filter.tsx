@@ -100,6 +100,7 @@ const ChallengeFilters = ({
               height={35}
               className={link.active ? styles.activeTech : ''}
               alt={`filter by ${link.tech}`}
+              title={link.tech}
             />
           </Link>
         ))}

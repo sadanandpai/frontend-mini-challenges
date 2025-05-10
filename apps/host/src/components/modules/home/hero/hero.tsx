@@ -30,7 +30,7 @@ function Hero() {
     <main className={styles.hero}>
       <div>
         <h1>
-          Prepare for <span>UI coding interviews</span>
+          Prepare for <span>UI coding Interviews</span>
         </h1>
 
         <p>by solving the collection of challenges from Frontend Mini Challenges</p>
@@ -46,6 +46,7 @@ function Hero() {
               width={35}
               height={35}
               alt={`${item.title}-img`}
+              title={item.title}
             />
           ))}
         </div>
@@ -53,7 +54,9 @@ function Hero() {
 
       <figure className={styles.figure}>
         <img className={styles.heroImage} src={coverTransparent} alt="brand" />
-        <figcaption>Collection of frontend challenges for learning and interviews</figcaption>
+        <figcaption>
+          A collection of frontend challenges for learning and interview preparation
+        </figcaption>
       </figure>
     </main>
   );
