@@ -117,6 +117,21 @@
 .drawerContent {
   padding: 1rem;
 }
+.darkDrawer {
+  .drawerListItem a {
+    color: #ffffff;
+  }
+
+  .themeButton {
+    background-color: transparent;
+    color: #ffffff;
+    transition: all 150ms ease-in-out;
+  }
+
+  .github {
+    color: white;
+  }
+}
 
 .drawerList {
   list-style-type: none;
