@@ -7,6 +7,7 @@ export type Language =
   | 'af' // Afrikaans
   | 'ak' // Akan
   | 'am' // Amharic
+  | 'an' // Aragonese
   | 'ar' // Arabic
   | 'as' // Assamese
   | 'av' // Avaric
@@ -23,7 +24,9 @@ export type Language =
   | 'bs' // Bosnian
   | 'ca' // Catalan
   | 'ce' // Chechen
+  | 'ceb' // Cebuano
   | 'ch' // Chamorro
+  | 'ckb' // Central Kurdish
   | 'co' // Corsican
   | 'cr' // Cree
   | 'cs' // Czech
@@ -44,6 +47,7 @@ export type Language =
   | 'fa' // Persian
   | 'ff' // Fulah
   | 'fi' // Finnish
+  | 'fil' // Filipino
   | 'fj' // Fijian
   | 'fo' // Faroese
   | 'fr' // French
@@ -55,8 +59,10 @@ export type Language =
   | 'gu' // Gujarati
   | 'gv' // Manx
   | 'ha' // Hausa
+  | 'haw' // Hawaiian
   | 'he' // Hebrew
   | 'hi' // Hindi
+  | 'hmn' // Hmong
   | 'ho' // Hiri Motu
   | 'hr' // Croatian
   | 'ht' // Haitian Creole
@@ -75,6 +81,7 @@ export type Language =
   | 'iu' // Inuktitut
   | 'ja' // Japanese
   | 'jv' // Javanese
+  | 'jw' // Javanese (alternative code)
   | 'ka' // Georgian
   | 'kg' // Kongo
   | 'ki' // Kikuyu
@@ -105,6 +112,7 @@ export type Language =
   | 'mk' // Macedonian
   | 'ml' // Malayalam
   | 'mn' // Mongolian
+  | 'mo' // Moldavian
   | 'mr' // Marathi
   | 'ms' // Malay
   | 'mt' // Maltese
@@ -137,6 +145,7 @@ export type Language =
   | 'ru' // Russian
   | 'rw' // Kinyarwanda
   | 'sa' // Sanskrit
+  | 'sah' // Sakha
   | 'sc' // Sardinian
   | 'sd' // Sindhi
   | 'se' // Northern Sami
