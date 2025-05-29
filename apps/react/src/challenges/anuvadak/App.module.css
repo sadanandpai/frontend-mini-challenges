@@ -1,0 +1,61 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  font-size: 3rem;
+  color: #2563eb;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #64748b;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.translationContainer {
+  width: 100%;
+  max-width: 800px;
+  background: white;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow:
+    0 4px 6px -1px rgb(0 0 0 / 0.1),
+    0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+.languageSelectors {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  gap: 1rem;
+}
+
+.translationBoxes {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.error {
+  color: #ef4444;
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.875rem;
+}
+
+@media (min-width: 768px) {
+  .translationBoxes {
+    grid-template-columns: 1fr 1fr;
+  }
+}

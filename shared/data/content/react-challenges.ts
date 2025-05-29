@@ -735,6 +735,19 @@ const challenges = new Map<string, IChallenge>([
       isNew: true,
     },
   ],
+  [
+    'anuvadak',
+    {
+      title: 'Anuvadak',
+      description:
+        'A language translation app with support for 50+ languages using OpenL-Translate API',
+      link: 'anuvadak',
+      difficulty: EDifficulty.Medium,
+      developer: 'Devdeep8',
+      tags: [ETag.interview],
+      isNew: true,
+    },
+  ],
 ]);
 
 export const reactChallenges = sortChallengesByDifficulty(challenges);

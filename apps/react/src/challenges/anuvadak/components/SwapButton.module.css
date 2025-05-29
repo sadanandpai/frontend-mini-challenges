@@ -1,0 +1,43 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.375rem;
+  background-color: white;
+  color: #4b5563;
+  cursor: pointer;
+  transition: all 0.15s ease-in-out;
+  padding: 0.5rem;
+}
+
+.button:hover {
+  background-color: #f3f4f6;
+  border-color: #2563eb;
+  color: #2563eb;
+}
+
+.button:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.1);
+}
+
+.icon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+@media (max-width: 640px) {
+  .button {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .icon {
+    width: 1rem;
+    height: 1rem;
+  }
+}
