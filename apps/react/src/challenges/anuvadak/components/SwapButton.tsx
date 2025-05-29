@@ -1,25 +1,32 @@
-import { SwapButtonProps } from '../types';
+import { useCallback } from 'react';
 import styles from './SwapButton.module.css';
+import { SwapButtonProps } from '../types';
 
-const SwapButton = ({ onClick }: SwapButtonProps) => {
+/**
+ * A button component for swapping languages
+ * @param {SwapButtonProps} props - Component props
+ * @returns {JSX.Element} SwapButton component
+ */
+export const SwapButton = ({ onClick }: SwapButtonProps) => {
+  const handleClick = useCallback(() => {
+    onClick();
+  }, [onClick]);
+
   return (
-    <button onClick={onClick} className={styles.button} title="Swap languages">
+    <button onClick={handleClick} className={styles.swapButton} aria-label="Swap languages">
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        fill="none"
+        width="24"
+        height="24"
         viewBox="0 0 24 24"
-        strokeWidth={1.5}
+        fill="none"
         stroke="currentColor"
-        className={styles.icon}
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M7.5 21L3 16.5m0 0L7.5 12M3 16.5h13.5m0-13.5L21 7.5m0 0L16.5 12M21 7.5H7.5"
-        />
+        <path d="M7 16V4M7 4L3 8M7 4L11 8M17 8v12M17 20l4-4M17 20l-4-4" />
       </svg>
     </button>
   );
 };
-
-export default SwapButton;

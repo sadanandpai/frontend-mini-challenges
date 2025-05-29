@@ -1,3 +1,4 @@
+import { useCallback } from 'react';
 import { Language, LanguageSelectorProps } from '../types';
 import styles from './LanguageSelector.module.css';
 
@@ -179,15 +180,23 @@ const languages: { code: Language; name: string }[] = [
   { code: 'za', name: 'Zhuang' },
 ];
 
-const LanguageSelector = ({ value, onChange, label }: LanguageSelectorProps) => {
+/**
+ * A dropdown selector for choosing languages
+ * @param {LanguageSelectorProps} props - Component props
+ * @returns {JSX.Element} LanguageSelector component
+ */
+export const LanguageSelector = ({ value, onChange, label }: LanguageSelectorProps) => {
+  const handleChange = useCallback(
+    (e: React.ChangeEvent<HTMLSelectElement>) => {
+      onChange(e.target.value as Language);
+    },
+    [onChange]
+  );
+
   return (
     <div className={styles.container}>
       <label className={styles.label}>{label}</label>
-      <select
-        value={value}
-        onChange={(e) => onChange(e.target.value as Language)}
-        className={styles.select}
-      >
+      <select value={value} onChange={handleChange} className={styles.select}>
         {languages.map(({ code, name }) => (
           <option key={code} value={code}>
             {name}
@@ -197,5 +206,3 @@ const LanguageSelector = ({ value, onChange, label }: LanguageSelectorProps) => 
     </div>
   );
 };
-
-export default LanguageSelector;
