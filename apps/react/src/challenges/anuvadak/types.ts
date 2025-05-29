@@ -1,3 +1,6 @@
+/**
+ * Supported language codes for translation
+ */
 export type Language =
   | 'en' // English
   | 'hi' // Hindi
@@ -166,7 +169,6 @@ export type Language =
   | 'sc' // Sardinian
   | 'se' // Northern Sami
   | 'sg' // Sango
-  | 'si' // Sinhala
   | 'ss' // Swati
   | 'tl' // Tagalog
   | 'tw' // Twi
@@ -174,17 +176,21 @@ export type Language =
   | 'vo' // Volapük
   | 'wa' // Walloon
   | 'wo' // Wolof
-  | 'xh' // Xhosa
-  | 'yi' // Yiddish
   | 'za' // Zhuang
   | 'zu'; // Zulu
 
+/**
+ * Props for the LanguageSelector component
+ */
 export interface LanguageSelectorProps {
   value: Language;
   onChange: (language: Language) => void;
   label: string;
 }
 
+/**
+ * Props for the TranslationBox component
+ */
 export interface TranslationBoxProps {
   value: string;
   onChange?: (text: string) => void;
@@ -194,6 +200,9 @@ export interface TranslationBoxProps {
   isLoading?: boolean;
 }
 
+/**
+ * Props for the SwapButton component
+ */
 export interface SwapButtonProps {
   onClick: () => void;
 }
