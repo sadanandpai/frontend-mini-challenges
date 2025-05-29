@@ -2,181 +2,186 @@
  * Supported language codes for translation
  */
 export type Language =
-  | 'en' // English
-  | 'hi' // Hindi
-  | 'es' // Spanish
-  | 'fr' // French
-  | 'de' // German
-  | 'it' // Italian
-  | 'pt' // Portuguese
-  | 'ru' // Russian
-  | 'ja' // Japanese
-  | 'ko' // Korean
-  | 'zh' // Chinese
-  | 'ar' // Arabic
-  | 'tr' // Turkish
-  | 'nl' // Dutch
-  | 'pl' // Polish
-  | 'vi' // Vietnamese
-  | 'th' // Thai
-  | 'id' // Indonesian
-  | 'ms' // Malay
-  | 'fa' // Persian
-  | 'he' // Hebrew
-  | 'el' // Greek
-  | 'cs' // Czech
-  | 'hu' // Hungarian
-  | 'ro' // Romanian
-  | 'sv' // Swedish
-  | 'da' // Danish
-  | 'fi' // Finnish
-  | 'no' // Norwegian
-  | 'uk' // Ukrainian
-  | 'bg' // Bulgarian
-  | 'hr' // Croatian
-  | 'sk' // Slovak
-  | 'sl' // Slovenian
-  | 'et' // Estonian
-  | 'lv' // Latvian
-  | 'lt' // Lithuanian
-  | 'sr' // Serbian
-  | 'ca' // Catalan
-  | 'eu' // Basque
-  | 'gl' // Galician
-  | 'is' // Icelandic
-  | 'mk' // Macedonian
-  | 'mt' // Maltese
-  | 'cy' // Welsh
-  | 'ga' // Irish
-  | 'gd' // Scottish Gaelic
-  | 'be' // Belarusian
-  | 'hy' // Armenian
-  | 'ka' // Georgian
-  | 'az' // Azerbaijani
-  | 'uz' // Uzbek
-  | 'kk' // Kazakh
-  | 'ky' // Kyrgyz
-  | 'tg' // Tajik
-  | 'mn' // Mongolian
-  | 'ne' // Nepali
-  | 'si' // Sinhala
-  | 'km' // Khmer
-  | 'lo' // Lao
-  | 'my' // Burmese
-  | 'jw' // Javanese
-  | 'su' // Sundanese
-  | 'yo' // Yoruba
-  | 'ig' // Igbo
-  | 'ha' // Hausa
-  | 'sw' // Swahili
-  | 'am' // Amharic
-  | 'so' // Somali
-  | 'zu' // Zulu
-  | 'xh' // Xhosa
-  | 'st' // Sesotho
-  | 'sn' // Shona
-  | 'ny' // Chichewa
-  | 'mg' // Malagasy
-  | 'rw' // Kinyarwanda
-  | 'sm' // Samoan
-  | 'to' // Tongan
-  | 'fj' // Fijian
-  | 'mi' // Maori
-  | 'ty' // Tahitian
-  | 'haw' // Hawaiian
-  | 'ceb' // Cebuano
-  | 'fil' // Filipino
-  | 'hmn' // Hmong
-  | 'yi' // Yiddish
-  | 'fy' // Frisian
-  | 'ht' // Haitian Creole
-  | 'co' // Corsican
-  | 'lb' // Luxembourgish
-  | 'gu' // Gujarati
-  | 'pa' // Punjabi
-  | 'bn' // Bengali
-  | 'ta' // Tamil
-  | 'te' // Telugu
-  | 'kn' // Kannada
-  | 'ml' // Malayalam
-  | 'mr' // Marathi
-  | 'sa' // Sanskrit
-  | 'sd' // Sindhi
-  | 'ur' // Urdu
-  | 'ps' // Pashto
-  | 'ku' // Kurdish
-  | 'ckb' // Central Kurdish
-  | 'bo' // Tibetan
-  | 'dz' // Dzongkha
-  | 'ug' // Uyghur
-  | 'tt' // Tatar
-  | 'cv' // Chuvash
-  | 'ba' // Bashkir
-  | 'sah' // Sakha
-  | 'os' // Ossetian
-  | 'ab' // Abkhaz
   | 'aa' // Afar
+  | 'ab' // Abkhaz
   | 'af' // Afrikaans
   | 'ak' // Akan
-  | 'sq' // Albanian
-  | 'an' // Aragonese
+  | 'am' // Amharic
+  | 'ar' // Arabic
   | 'as' // Assamese
   | 'av' // Avaric
   | 'ay' // Aymara
-  | 'bm' // Bambara
+  | 'az' // Azerbaijani
+  | 'ba' // Bashkir
+  | 'be' // Belarusian
+  | 'bg' // Bulgarian
   | 'bi' // Bislama
-  | 'bs' // Bosnian
+  | 'bm' // Bambara
+  | 'bn' // Bengali
+  | 'bo' // Tibetan
   | 'br' // Breton
-  | 'ch' // Chamorro
+  | 'bs' // Bosnian
+  | 'ca' // Catalan
   | 'ce' // Chechen
-  | 'cu' // Church Slavic
-  | 'kw' // Cornish
+  | 'ch' // Chamorro
+  | 'co' // Corsican
   | 'cr' // Cree
+  | 'cs' // Czech
+  | 'cu' // Church Slavic
+  | 'cv' // Chuvash
+  | 'cy' // Welsh
+  | 'da' // Danish
+  | 'de' // German
   | 'dv' // Divehi
+  | 'dz' // Dzongkha
   | 'ee' // Ewe
-  | 'fo' // Faroese
+  | 'el' // Greek
+  | 'en' // English
+  | 'eo' // Esperanto
+  | 'es' // Spanish
+  | 'et' // Estonian
+  | 'eu' // Basque
+  | 'fa' // Persian
   | 'ff' // Fulah
+  | 'fi' // Finnish
+  | 'fj' // Fijian
+  | 'fo' // Faroese
+  | 'fr' // French
+  | 'fy' // Frisian
+  | 'ga' // Irish
+  | 'gd' // Scottish Gaelic
+  | 'gl' // Galician
   | 'gn' // Guarani
+  | 'gu' // Gujarati
   | 'gv' // Manx
+  | 'ha' // Hausa
+  | 'he' // Hebrew
+  | 'hi' // Hindi
   | 'ho' // Hiri Motu
+  | 'hr' // Croatian
+  | 'ht' // Haitian Creole
+  | 'hu' // Hungarian
+  | 'hy' // Armenian
   | 'hz' // Herero
   | 'ia' // Interlingua
+  | 'id' // Indonesian
   | 'ie' // Interlingue
-  | 'iu' // Inuktitut
+  | 'ig' // Igbo
+  | 'ii' // Sichuan Yi
   | 'ik' // Inupiaq
+  | 'io' // Ido
+  | 'is' // Icelandic
+  | 'it' // Italian
+  | 'iu' // Inuktitut
+  | 'ja' // Japanese
   | 'jv' // Javanese
-  | 'kl' // Kalaallisut
-  | 'kr' // Kanuri
+  | 'ka' // Georgian
+  | 'kg' // Kongo
   | 'ki' // Kikuyu
   | 'kj' // Kuanyama
+  | 'kk' // Kazakh
+  | 'kl' // Kalaallisut
+  | 'km' // Khmer
+  | 'kn' // Kannada
+  | 'ko' // Korean
+  | 'kr' // Kanuri
+  | 'ks' // Kashmiri
+  | 'ku' // Kurdish
+  | 'kv' // Komi
+  | 'kw' // Cornish
+  | 'ky' // Kyrgyz
+  | 'la' // Latin
+  | 'lb' // Luxembourgish
+  | 'lg' // Ganda
   | 'li' // Limburgish
   | 'ln' // Lingala
+  | 'lo' // Lao
+  | 'lt' // Lithuanian
   | 'lu' // Luba-Katanga
-  | 'lg' // Ganda
+  | 'lv' // Latvian
+  | 'mg' // Malagasy
   | 'mh' // Marshallese
-  | 'mo' // Moldavian
+  | 'mi' // Maori
+  | 'mk' // Macedonian
+  | 'ml' // Malayalam
+  | 'mn' // Mongolian
+  | 'mr' // Marathi
+  | 'ms' // Malay
+  | 'mt' // Maltese
+  | 'my' // Burmese
   | 'na' // Nauru
+  | 'nb' // Norwegian Bokmål
+  | 'nd' // North Ndebele
+  | 'ne' // Nepali
   | 'ng' // Ndonga
+  | 'nl' // Dutch
+  | 'nn' // Norwegian Nynorsk
+  | 'no' // Norwegian
   | 'nr' // South Ndebele
+  | 'nv' // Navajo
+  | 'ny' // Chichewa
   | 'oc' // Occitan
   | 'oj' // Ojibwa
   | 'om' // Oromo
   | 'or' // Oriya
+  | 'os' // Ossetian
+  | 'pa' // Punjabi
   | 'pi' // Pali
+  | 'pl' // Polish
+  | 'ps' // Pashto
+  | 'pt' // Portuguese
   | 'qu' // Quechua
   | 'rm' // Romansh
   | 'rn' // Rundi
+  | 'ro' // Romanian
+  | 'ru' // Russian
+  | 'rw' // Kinyarwanda
+  | 'sa' // Sanskrit
   | 'sc' // Sardinian
+  | 'sd' // Sindhi
   | 'se' // Northern Sami
   | 'sg' // Sango
+  | 'si' // Sinhala
+  | 'sk' // Slovak
+  | 'sl' // Slovenian
+  | 'sm' // Samoan
+  | 'sn' // Shona
+  | 'so' // Somali
+  | 'sq' // Albanian
+  | 'sr' // Serbian
   | 'ss' // Swati
+  | 'st' // Sesotho
+  | 'su' // Sundanese
+  | 'sv' // Swedish
+  | 'sw' // Swahili
+  | 'ta' // Tamil
+  | 'te' // Telugu
+  | 'tg' // Tajik
+  | 'th' // Thai
+  | 'ti' // Tigrinya
+  | 'tk' // Turkmen
   | 'tl' // Tagalog
+  | 'tn' // Tswana
+  | 'to' // Tongan
+  | 'tr' // Turkish
+  | 'ts' // Tsonga
+  | 'tt' // Tatar
   | 'tw' // Twi
+  | 'ty' // Tahitian
+  | 'ug' // Uyghur
+  | 'uk' // Ukrainian
+  | 'ur' // Urdu
+  | 'uz' // Uzbek
   | 've' // Venda
+  | 'vi' // Vietnamese
   | 'vo' // Volapük
   | 'wa' // Walloon
   | 'wo' // Wolof
+  | 'xh' // Xhosa
+  | 'yi' // Yiddish
+  | 'yo' // Yoruba
   | 'za' // Zhuang
+  | 'zh' // Chinese
   | 'zu'; // Zulu
 
 /**
