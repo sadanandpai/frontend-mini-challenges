@@ -225,4 +225,11 @@ export const contributors = new Map<string, IContributor>([
       pic: 'https://avatars.githubusercontent.com/u/68234378?s=96&v=4',
     },
   ],
+  [
+    'Devdeep8',
+    {
+      name: 'Devdeep8',
+      pic: 'https://avatars.githubusercontent.com/u/119996069?s=400&u=028f4909e8f4fcfad58a2eb614c4089eabe97c9c&v=4',
+    },
+  ],
 ]);

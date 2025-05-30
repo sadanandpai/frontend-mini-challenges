@@ -7,6 +7,7 @@ import Accordion from '@/challenges/accordion/App';
 import AutocompleteOffline from '@/challenges/autocomplete/autocompleteOffline';
 import AutocompleteOnline from '@/challenges/autocomplete/autocompleteOnline';
 import AnagramChecker from '@/challenges/anagram-checker/App';
+import Anuvadak from '@/challenges/anuvadak/App';
 import BMICalculator from '@/challenges/bmi-calculator/App';
 import Background from '@/challenges/background-changer/Background';
 import ColorMixer from '@/challenges/color-mixer';
@@ -132,6 +133,7 @@ const reactChallengesMap = {
   'nested-checkbox': <NestedCheckbox />,
   'meeting-calendar': <MeetingCalendar />,
   'grid-lights': <GridLights />,
+  anuvadak: <Anuvadak />,
 };
 
 function Challenge() {
