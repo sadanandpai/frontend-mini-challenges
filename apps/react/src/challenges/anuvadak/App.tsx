@@ -23,30 +23,32 @@ const App = (): JSX.Element => {
     setIsLoading(true);
     setError(null);
 
+    const data = JSON.stringify({
+      target_lang: toLanguage,
+      text: [inputText],
+    });
+
     try {
       const response = await fetch('https://openl-translate.p.rapidapi.com/translate/bulk', {
         method: 'POST',
         headers: {
-          'content-type': 'application/json',
-          'X-RapidAPI-Key': '3563921bccmshc065453cb17903dp1c8ab6jsn2adb9c8dd077',
-          'X-RapidAPI-Host': 'openl-translate.p.rapidapi.com',
+          'x-rapidapi-key': '3563921bccmshc065453cb17903dp1c8ab6jsn2adb9c8dd077',
+          'x-rapidapi-host': 'openl-translate.p.rapidapi.com',
+          'Content-Type': 'application/json',
         },
-        body: JSON.stringify({
-          target_lang: toLanguage,
-          texts: [inputText],
-        }),
+        body: data,
       });
 
       if (!response.ok) {
         throw new Error('Translation failed');
       }
 
-      const data = await response.json();
-      if (!data.translatedTexts?.[0]) {
+      const responseData = await response.json();
+      if (!responseData.translatedTexts?.[0]) {
         throw new Error('Invalid response format');
       }
 
-      setTranslatedText(data.translatedTexts[0]);
+      setTranslatedText(responseData.translatedTexts[0]);
     } catch (err) {
       setError(err instanceof Error ? err.message : 'An error occurred');
       setTranslatedText('');
@@ -54,7 +56,6 @@ const App = (): JSX.Element => {
       setIsLoading(false);
     }
   }, [inputText, toLanguage]);
-
   const handleSwap = useCallback(() => {
     setFromLanguage(toLanguage);
     setToLanguage(fromLanguage);
