@@ -744,7 +744,7 @@ const challenges = new Map<string, IChallenge>([
       link: 'anuvadak',
       difficulty: EDifficulty.Medium,
       developer: 'Devdeep8',
-      tags: [ETag.interview],
+      tags: [],
       isNew: true,
     },
   ],
