@@ -28,7 +28,7 @@ const App = (): JSX.Element => {
         method: 'POST',
         headers: {
           'content-type': 'application/json',
-          'X-RapidAPI-Key': process.env.RAPID_API_KEY as string,
+          'X-RapidAPI-Key': '3563921bccmshc065453cb17903dp1c8ab6jsn2adb9c8dd077',
           'X-RapidAPI-Host': 'openl-translate.p.rapidapi.com',
         },
         body: JSON.stringify({
