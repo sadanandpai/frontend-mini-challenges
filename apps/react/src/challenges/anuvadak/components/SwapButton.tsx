@@ -15,6 +15,7 @@ export const SwapButton = ({ onClick }: SwapButtonProps) => {
   return (
     <button onClick={handleClick} className={styles.swapButton} aria-label="Swap languages">
       <svg
+        className={`${styles.icon} ${styles.rotate}`}
         xmlns="http://www.w3.org/2000/svg"
         width="24"
         height="24"

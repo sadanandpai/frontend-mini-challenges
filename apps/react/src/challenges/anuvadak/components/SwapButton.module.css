@@ -13,6 +13,10 @@
   padding: 0.5rem;
 }
 
+.rotate {
+  transform: rotate(90deg);
+}
+
 .button:hover {
   background-color: #f3f4f6;
   border-color: #2563eb;
