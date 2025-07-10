@@ -1,15 +1,12 @@
-import { useState, useCallback } from 'react';
-import styles from './App.module.css';
-import { LanguageSelector } from './components/LanguageSelector';
-import { TranslationBox } from './components/TranslationBox';
-import { SwapButton } from './components/SwapButton';
-import { Language } from './types';
+import { useCallback, useState } from 'react';
 
-/**
- * Main application component for the Anuvadak language translation app
- * @returns {JSX.Element} App component
- */
-const App = (): JSX.Element => {
+import { Language } from './types';
+import { LanguageSelector } from './components/LanguageSelector';
+import { SwapButton } from './components/SwapButton';
+import { TranslationBox } from './components/TranslationBox';
+import styles from './App.module.css';
+
+const App = () => {
   const [fromLanguage, setFromLanguage] = useState<Language>('en');
   const [toLanguage, setToLanguage] = useState<Language>('hi');
   const [inputText, setInputText] = useState('');

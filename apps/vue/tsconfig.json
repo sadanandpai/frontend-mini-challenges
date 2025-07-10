@@ -4,7 +4,7 @@
     "lib": ["ES2022", "DOM", "DOM.Iterable"],
     "jsx": "preserve",
     "noImplicitAny": false,
-    "types": ["vite/client", "vue/ref-macros"],
+    "types": ["vite/client"],
     "paths": {
       "@/*": ["./src/*"]
     }

@@ -8,12 +8,15 @@ const size = 4;
 const matchLength = 2;
 
 const getTiles = (size: number) =>
-  getShuffledSymbols((size * size) / matchLength, true).map((symbol) => ({ symbol, isOpen: false }));
+  getShuffledSymbols((size * size) / matchLength, true).map((symbol) => ({
+    symbol,
+    isOpen: false,
+  }));
 
 function MatchPair() {
   const [tiles, setTiles] = useState(() => getTiles(size));
   const [openTiles, setOpenTiles] = useState<number[]>([]);
-  const timerId = useRef<number>();
+  const timerId = useRef<number | undefined>(undefined);
   const attempts = useRef<number>(0);
   const matches = useRef<number>(0);
   const isResetting = useRef(false);

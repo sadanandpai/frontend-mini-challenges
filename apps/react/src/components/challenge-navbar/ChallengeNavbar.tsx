@@ -1,4 +1,5 @@
 import '@fmc/components';
+
 import { useEffect, useRef } from 'react';
 
 const { VITE_PATH, VITE_HOST_URL, DEV } = import.meta.env;
@@ -52,11 +53,15 @@ function ChallengeNavbar({ title, description, sourceCodeLink }: Props) {
   }, [title, description]);
 
   return (
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
     <nav-bar
       backURL={backURL}
       homeURL={homeURL}
       titleText={title}
       sourceCodeLink={reactSourceCodeBaseURL + sourceCodeLink}
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-ignore
     ></nav-bar>
   );
 }

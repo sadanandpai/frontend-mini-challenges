@@ -1,4 +1,5 @@
-import { forwardRef, MutableRefObject, useImperativeHandle, useState } from 'react';
+import { RefObject, forwardRef, useImperativeHandle, useState } from 'react';
+
 import styles from '../advanced-counter.module.scss';
 
 interface Props {
@@ -9,7 +10,7 @@ interface Props {
 
 export const AsyncControls = forwardRef(function AsyncControls(
   { delay, step, stepBy }: Props,
-  ref: MutableRefObject<{ reset: () => void }>
+  ref: RefObject<{ reset: () => void }>
 ) {
   const [timerIds, setTimerIds] = useState<{
     decrement: NodeJS.Timeout | null;
@@ -41,8 +42,14 @@ export const AsyncControls = forwardRef(function AsyncControls(
 
   useImperativeHandle(ref, () => ({
     reset: () => {
-      timerIds.decrement && clearTimeout(timerIds.decrement);
-      timerIds.increment && clearTimeout(timerIds.increment);
+      if (timerIds.decrement) {
+        clearTimeout(timerIds.decrement);
+      }
+
+      if (timerIds.increment) {
+        clearTimeout(timerIds.increment);
+      }
+
       setTimerIds({
         decrement: null,
         increment: null,
