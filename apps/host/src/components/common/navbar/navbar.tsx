@@ -1,11 +1,12 @@
+import { Menu, Moon, Sun } from 'lucide-react';
 import React, { useState } from 'react';
-import { useContext } from 'react';
-import { Drawer } from 'antd';
 import { logo, logo_dark } from '@fmc/assets/images';
-import { ThemeContext } from '../../ThemeWrapper';
-import { Sun, Moon, Menu } from 'lucide-react';
-import styles from './navbar.module.scss';
+
+import { Drawer } from 'antd';
 import { Link } from 'react-router-dom';
+import { ThemeContext } from '@/components/theme-context';
+import styles from './navbar.module.scss';
+import { useContext } from 'react';
 
 function Navbar({
   children,

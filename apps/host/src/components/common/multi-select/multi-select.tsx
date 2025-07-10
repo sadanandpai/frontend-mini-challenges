@@ -1,9 +1,10 @@
 import React, { useContext } from 'react';
 import ReactSelect, { MultiValueProps, OptionProps } from 'react-select';
-import { components } from 'react-select';
-import PropTypes from 'prop-types';
-import { ThemeContext } from '@/components/ThemeWrapper';
+
 import { OptionType } from '@fmc/data/types';
+import PropTypes from 'prop-types';
+import { ThemeContext } from '@/components/theme-context';
+import { components } from 'react-select';
 
 const Option = (props) => {
   return (

@@ -44,7 +44,7 @@ async function makeAPIRequest(text: string): Promise<MakeApiRequestReturnType> {
     }
 
     return result;
-  } catch (e) {
+  } catch {
     result.errorMsgFromApi = 'Error occurred while fetching suggestions';
     return result;
   }
@@ -80,7 +80,7 @@ export function useAutocompleteOnline() {
           setSuggestions([]);
           setErrorMessage(result.errorMsgFromApi);
         }
-      } catch (error) {
+      } catch {
         setSuggestions([]);
         setErrorMessage('Error occurred while fetching suggestions');
       }

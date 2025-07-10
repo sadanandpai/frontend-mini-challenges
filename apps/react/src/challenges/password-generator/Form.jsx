@@ -17,7 +17,11 @@ export default function Form({ passwordLength, setPasswordLength, isChecked, han
       <div>Include Lowercase character:</div>
       <div>
         <label>
-          <input type="checkbox" checked={isChecked.isCheckedLowerCha} onChange={handleChange('isCheckedLowerCha')} />
+          <input
+            type="checkbox"
+            checked={isChecked.isCheckedLowerCha}
+            onChange={handleChange('isCheckedLowerCha')}
+          />
           Lowercase character (e.g. abcdefg)
         </label>
       </div>
@@ -25,7 +29,11 @@ export default function Form({ passwordLength, setPasswordLength, isChecked, han
       <div>Include Uppercase character:</div>
       <div>
         <label>
-          <input type="checkbox" checked={isChecked.isCheckedUpperCha} onChange={handleChange('isCheckedUpperCha')} />
+          <input
+            type="checkbox"
+            checked={isChecked.isCheckedUpperCha}
+            onChange={handleChange('isCheckedUpperCha')}
+          />
           Uppercase character (e.g. ABCDEFG)
         </label>
       </div>
@@ -33,7 +41,11 @@ export default function Form({ passwordLength, setPasswordLength, isChecked, han
       <div>Include Number:</div>
       <div>
         <label>
-          <input type="checkbox" checked={isChecked.isCheckedNumber} onChange={handleChange('isCheckedNumber')} />
+          <input
+            type="checkbox"
+            checked={isChecked.isCheckedNumber}
+            onChange={handleChange('isCheckedNumber')}
+          />
           Number (e.g. 12345)
         </label>
       </div>
@@ -41,7 +53,11 @@ export default function Form({ passwordLength, setPasswordLength, isChecked, han
       <div>Include Symbols:</div>
       <div>
         <label>
-          <input type="checkbox" checked={isChecked.isCheckedSymbols} onChange={handleChange('isCheckedSymbols')} />
+          <input
+            type="checkbox"
+            checked={isChecked.isCheckedSymbols}
+            onChange={handleChange('isCheckedSymbols')}
+          />
           Symbols (e.g. !@#$%)
         </label>
       </div>
