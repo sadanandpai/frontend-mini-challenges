@@ -10,6 +10,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22.17.0
 
       # Runs a single command using the runners shell
       - name: setup git config
@@ -17,9 +20,11 @@ jobs:
           git config user.name "Sadanand Pai"
           git config user.email "sadypai@gmail.com"
 
+      - name: NPM installation
+        run: npm ci
+
       - name: setup deployment
         run: |
-          npm install
           npm run unit:test
           npm run build
           npm run copy-to-docs
