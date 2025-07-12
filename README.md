@@ -23,12 +23,18 @@
 
 ## About
 
-This repo is created to list down all the popular frontend challenges that are recommended for learning and interviews. Challenges are solved in vanilla JavaScript, React and VueJs. You can both play with the UI and view the solutions.
+This repo is created to list down all the popular frontend challenges that are recommended for
+learning and interviews. Challenges are solved in vanilla JavaScript, React and VueJs. You can both
+play with the UI and view the solutions.
 
-- Solutions to JavaScript challenges: [Click here](https://github.com/sadanandpai/frontend-mini-challenges/tree/main/apps/javascript/src/challenges)
-- Solutions to React challenges: [Click here](https://github.com/sadanandpai/frontend-mini-challenges/tree/main/apps/react/src/challenges)
-- Solutions to VueJs challenges: [Click here](https://github.com/sadanandpai/frontend-mini-challenges/tree/main/apps/vue/src/challenges)
-- Solutions to Angular challenges: [Click here](https://github.com/sadanandpai/frontend-mini-challenges/tree/main/apps/angular/src/app/challenges)
+- Solutions to JavaScript challenges:
+  [Click here](https://github.com/sadanandpai/frontend-mini-challenges/tree/main/apps/javascript/src/challenges)
+- Solutions to React challenges:
+  [Click here](https://github.com/sadanandpai/frontend-mini-challenges/tree/main/apps/react/src/challenges)
+- Solutions to VueJs challenges:
+  [Click here](https://github.com/sadanandpai/frontend-mini-challenges/tree/main/apps/vue/src/challenges)
+- Solutions to Angular challenges:
+  [Click here](https://github.com/sadanandpai/frontend-mini-challenges/tree/main/apps/angular/src/app/challenges)
 
 <br/>
 
@@ -39,12 +45,21 @@ This repo is created to list down all the popular frontend challenges that are r
 - Run `npm run dev`
 - Visit http://localhost:6010/
 
+## Local development with docker
+
+If you have `docker` installed on your local you can run the dev server with `docker-compose` in
+watch mode - file changes will be hot-updated.
+
+Run this command from project root:
+
+> docker-compose watch --prune
 
 <br/>
 
 ## Contributing Guide
 
-If you want to contribute, improve, or suggest changes to this repo, then check out the [Contributing Guide](https://github.com/sadanandpai/frontend-mini-challenges/blob/main/CONTRIBUTING.md)
+If you want to contribute, improve, or suggest changes to this repo, then check out the
+[Contributing Guide](https://github.com/sadanandpai/frontend-mini-challenges/blob/main/CONTRIBUTING.md)
 
 <br/>
 
