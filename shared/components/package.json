@@ -1,5 +1,8 @@
 {
   "name": "@fmc/components",
   "version": "1.0.0",
-  "description": "Web components"
+  "description": "Web components",
+  "dependencies": {
+    "@fmc/assets": "*"
+  }
 }

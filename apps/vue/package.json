@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fmc/components": "*",
     "vue": "^3.5.17",
     "vue-router": "^4.5.1"
   },
