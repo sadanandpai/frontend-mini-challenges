@@ -12,6 +12,7 @@
     "unit:test": "vitest"
   },
   "dependencies": {
+    "@fmc/components": "*",
     "axios": "^1.10.0",
     "leva": "^0.10.0",
     "react": "^19.1.0",
