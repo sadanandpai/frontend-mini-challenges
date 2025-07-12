@@ -1,4 +1,4 @@
-node_modules
+**/node_modules
 dist
 build
 Dockerfile
@@ -6,3 +6,5 @@ README.md
 .vscode
 .editorconfig
 .dockerignore
+.gitignore
+.git
