@@ -724,18 +724,6 @@ const challenges = new Map<string, IChallenge>([
     },
   ],
   [
-    'tango',
-    {
-      title: 'Tango',
-      description: 'Implement a complex dance step visualization',
-      link: 'tango',
-      difficulty: EDifficulty.Hard,
-      developer: 'sadanandpai',
-      tags: [],
-      isNew: true,
-    },
-  ],
-  [
     'anuvadak',
     {
       title: 'Anuvadak',

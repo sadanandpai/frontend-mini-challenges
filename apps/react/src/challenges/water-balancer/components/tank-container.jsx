@@ -1,5 +1,6 @@
 import React, { useRef, useState } from 'react';
 import { capacity, inFlow } from '../config';
+
 import WaterTank from './water-tank';
 
 function TankContainer({ tank, setTanks, index }) {
@@ -17,7 +18,7 @@ function TankContainer({ tank, setTanks, index }) {
       return next;
     });
 
-    intervalRef.current = setInterval(() => {
+    function fill() {
       setAddedWater((prevLevel) => {
         let newLevel = prevLevel + inFlow;
 
@@ -27,7 +28,10 @@ function TankContainer({ tank, setTanks, index }) {
 
         return newLevel;
       });
-    }, 1000);
+    }
+
+    fill();
+    intervalRef.current = setInterval(fill, 1000);
   }
 
   function onUp() {

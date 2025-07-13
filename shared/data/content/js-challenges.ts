@@ -330,7 +330,7 @@ const challenges: Map<string, IChallenge> = new Map([
   [
     'word-counter',
     {
-      title: 'Word Counter (online)',
+      title: 'Word Counter',
       description:
         'Can you build a tool that counts words and characters in real-time as users type?',
       link: 'word-counter/',
