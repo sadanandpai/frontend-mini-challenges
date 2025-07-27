@@ -15,7 +15,6 @@ export const initialArray = Array(size * size).fill(null);
 
 @Component({
   selector: 'app-tic-tac-toe',
-  standalone: true,
   imports: [NgFor, SquareComponent],
   templateUrl: './tic-tac-toe.component.html',
   styleUrls: ['./tic-tac-toe.component.scss'],

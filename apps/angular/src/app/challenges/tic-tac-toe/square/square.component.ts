@@ -4,7 +4,6 @@ import { NgStyle } from '@angular/common';
 
 @Component({
   selector: 'app-square',
-  standalone: true,
   imports: [NgStyle],
   templateUrl: './square.component.html',
   styleUrls: ['./square.component.scss'],

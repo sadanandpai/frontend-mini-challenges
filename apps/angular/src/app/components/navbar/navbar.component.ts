@@ -4,7 +4,6 @@ import { REPO_NAME, REPO_URL } from '@fmc/data/content';
 import { RouterLink } from '@angular/router';
 
 @Component({
-  standalone: true,
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss'],
