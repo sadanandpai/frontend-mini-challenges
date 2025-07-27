@@ -1,17 +1,41 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    <script type="module" crossorigin src="/frontend-mini-challenges/javascript/assets/index-Bsof4F-5.js"></script>
+    <script type="module" crossorigin src="/frontend-mini-challenges/javascript/assets/index-Wzo9HJPB.js"></script>
     <link rel="modulepreload" crossorigin href="/frontend-mini-challenges/javascript/assets/navbar-qSDpadrn.js">
     <link rel="modulepreload" crossorigin href="/frontend-mini-challenges/javascript/assets/header-CI4L8Jqr.js">
     <link rel="stylesheet" crossorigin href="/frontend-mini-challenges/javascript/assets/navbar-GXK6h4s9.css">
     <link rel="stylesheet" crossorigin href="/frontend-mini-challenges/javascript/assets/header-BlPJKZwb.css">
-    <link rel="stylesheet" crossorigin href="/frontend-mini-challenges/javascript/assets/index-DOaz_b2c.css">
+    <link rel="stylesheet" crossorigin href="/frontend-mini-challenges/javascript/assets/index-D1VQum7U.css">
   </head>
   <body>
-    <div class="container text-center">
-      <input type="tel" id="phone" maxlength="16" placeholder="mobile number" autocomplete="off" />
-      <div><label for="phone">+(123) - 4567890</label></div>
-    </div>
+    <main class="container text-center">
+      <h1 class="sr-only">Phone Number Formatter</h1>
+      <div class="form-container">
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <div class="input-wrapper">
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              inputmode="tel"
+              autocomplete="off"
+              maxlength="16"
+              placeholder="+(123) 456-7890"
+              aria-describedby="phone-format"
+              aria-invalid="false"
+              required
+              autofocus
+            />
+            <span class="input-suffix">&#128222;</span>
+          </div>
+          <div id="phone-format" class="hint">
+            Enter a 10-digit phone number. Format: +(123) 456-7890
+          </div>
+          <div id="phone-error" class="error-message" role="alert" aria-live="polite"></div>
+        </div>
+      </div>
+    </main>
   </body>
 </html>

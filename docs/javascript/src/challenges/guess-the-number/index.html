@@ -1,38 +1,53 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    <script type="module" crossorigin src="/frontend-mini-challenges/javascript/assets/index-CB4avO5E.js"></script>
+    <script type="module" crossorigin src="/frontend-mini-challenges/javascript/assets/index-EMSxPOSc.js"></script>
     <link rel="modulepreload" crossorigin href="/frontend-mini-challenges/javascript/assets/navbar-qSDpadrn.js">
     <link rel="modulepreload" crossorigin href="/frontend-mini-challenges/javascript/assets/header-CI4L8Jqr.js">
     <link rel="stylesheet" crossorigin href="/frontend-mini-challenges/javascript/assets/navbar-GXK6h4s9.css">
     <link rel="stylesheet" crossorigin href="/frontend-mini-challenges/javascript/assets/header-BlPJKZwb.css">
-    <link rel="stylesheet" crossorigin href="/frontend-mini-challenges/javascript/assets/index-0NeDXc7f.css">
+    <link rel="stylesheet" crossorigin href="/frontend-mini-challenges/javascript/assets/index-DXzcAZ2G.css">
   </head>
   <body>
-    <div class="container text-center">
-      <form id="form" class="input-container">
-        <label for="input">Enter a guess between 0 to 100</label><br /><br />
-        <input
-          type="number"
-          id="input"
-          placeholder="Enter a number"
-          autocomplete="off"
-          min="0"
-          max="100"
-          required
-          autofocus
-        />
-
-        <div>
-          <input type="submit" id="submit" class="btn btn-primary" value="Submit" />
-          <button type="button" id="startGame" class="btn btn-primary" disabled>Start Game</button>
+    <main class="container">
+      <h1 class="sr-only">Guess the Number Game</h1>
+      <div class="game-container">
+        <div class="game-instructions">
+          <p>I'm thinking of a number between 0 and 100. Can you guess it?</p>
+          <p>You have <span id="remainingGuesses">10</span> guesses remaining.</p>
         </div>
 
-        <div>
-          <p><output id="output"></output></p>
-          <p><output id="guessDisplay"></output></p>
-        </div>
-      </form>
-    </div>
+        <form id="form" class="game-form" aria-labelledby="gameInstructions">
+          <div class="form-group">
+            <label for="input" class="form-label">Your guess (0-100):</label>
+            <input
+              type="number"
+              id="input"
+              class="form-input"
+              placeholder="Enter a number"
+              autocomplete="off"
+              min="0"
+              max="100"
+              required
+              aria-required="true"
+              aria-describedby="inputHelp"
+            />
+            <small id="inputHelp" class="form-hint">Enter a number between 0 and 100</small>
+          </div>
+
+          <div class="button-group">
+            <button type="submit" id="submit" class="btn btn-primary">Submit Guess</button>
+            <button type="button" id="startGame" class="btn btn-secondary" disabled>
+              New Game
+            </button>
+          </div>
+
+          <div class="game-feedback" aria-live="polite">
+            <output id="output" class="feedback-message"></output>
+            <output id="guessDisplay" class="guesses"></output>
+          </div>
+        </form>
+      </div>
+    </main>
   </body>
 </html>
