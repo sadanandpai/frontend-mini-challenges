@@ -1,20 +1,69 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <script type="module" crossorigin src="/frontend-mini-challenges/javascript/assets/index-CBUlh2bl.js"></script>
+    <script type="module" crossorigin src="/frontend-mini-challenges/javascript/assets/index-SPxRPICw.js"></script>
     <link rel="modulepreload" crossorigin href="/frontend-mini-challenges/javascript/assets/navbar-qSDpadrn.js">
-    <link rel="modulepreload" crossorigin href="/frontend-mini-challenges/javascript/assets/header-BOIAEJyC.js">
+    <link rel="modulepreload" crossorigin href="/frontend-mini-challenges/javascript/assets/header-CI4L8Jqr.js">
     <link rel="stylesheet" crossorigin href="/frontend-mini-challenges/javascript/assets/navbar-GXK6h4s9.css">
-    <link rel="stylesheet" crossorigin href="/frontend-mini-challenges/javascript/assets/header-BfemnTcV.css">
-    <link rel="stylesheet" crossorigin href="/frontend-mini-challenges/javascript/assets/index-CHLfu5Gc.css">
+    <link rel="stylesheet" crossorigin href="/frontend-mini-challenges/javascript/assets/header-BlPJKZwb.css">
+    <link rel="stylesheet" crossorigin href="/frontend-mini-challenges/javascript/assets/index-_3s_D7OX.css">
   </head>
   <body>
-    <div class="container">
-      <div class="grid-container" id="grid"></div>
+    <div class="container text-center">
+      <header>
+        <p>Select a cell by position or row/column</p>
+      </header>
 
-      <form class="button-container" id="colorForm">
-        <input type="number" id="inputBox" min="1" max="9" placeholder="Enter" required />
-        <button type="submit" id="colorButton">Color Me</button>
+      <div class="grid-container" id="grid" role="grid" aria-label="Number grid"></div>
+
+      <form class="form-container" id="color-form" novalidate>
+        <div class="input-group">
+          <div class="form-group">
+            <label for="input-box">Cell Number (1-9):</label>
+            <input
+              type="number"
+              id="input-box"
+              name="cellNumber"
+              min="1"
+              max="9"
+              placeholder="1-9"
+              aria-label="Cell number from 1 to 9"
+            />
+          </div>
+
+          <div class="divider">OR</div>
+
+          <div class="row-col-inputs">
+            <div class="form-group">
+              <label for="row-input">Row (1-3):</label>
+              <input
+                type="number"
+                id="row-input"
+                name="row"
+                min="1"
+                max="3"
+                placeholder="1-3"
+                aria-label="Row number from 1 to 3"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="col-input">Column (1-3):</label>
+              <input
+                type="number"
+                id="col-input"
+                name="column"
+                min="1"
+                max="3"
+                placeholder="1-3"
+                aria-label="Column number from 1 to 3"
+              />
+            </div>
+          </div>
+        </div>
+
+        <button type="submit" id="color-button" class="primary-button">Color Cell</button>
+        <div class="error-message" id="error-message" role="alert" aria-live="polite"></div>
       </form>
     </div>
   </body>
