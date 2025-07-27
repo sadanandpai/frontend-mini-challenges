@@ -1,12 +1,7 @@
-.btn {
-  color: black;
-  font-size: 1rem;
-}
-
 .counter-value {
   padding: 1rem;
-  font-weight: bold;
   font-size: 3rem;
+  font-weight: bold;
 }
 
 input {

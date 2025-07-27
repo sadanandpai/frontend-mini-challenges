@@ -1,28 +1,61 @@
-const userInput = document.getElementById('userInput');
+// Cache DOM elements
+const elements = {
+  userInput: document.getElementById('userInput'),
+  lowerCase: document.getElementById('lowercase'),
+  upperCase: document.getElementById('uppercase'),
+  camelCase: document.getElementById('camelcase'),
+  pascalCase: document.getElementById('pascalcase'),
+  snakeCase: document.getElementById('snakecase'),
+  kebabCase: document.getElementById('kebabcase'),
+  trim: document.getElementById('trim'),
+};
 
-const lowerCaseEl = document.getElementById('lowercase');
-const upperCaseEl = document.getElementById('uppercase');
-const camelCaseEl = document.getElementById('camelcase');
-const pascalCaseEl = document.getElementById('pascalcase');
-const snakeCaseEl = document.getElementById('snakecase');
-const kebabCaseEl = document.getElementById('kebabcase');
-const titleCaseEl = document.getElementById('titlecase');
-const trimEl = document.getElementById('trim');
+/**
+ * Transforms text into different string formats
+ * @param {string} text - The input text to transform
+ * @returns {Object} Object containing transformed strings
+ */
+const transformText = (text) => {
+  const trimmedText = text.trim();
+  const lowerCase = trimmedText.toLowerCase();
+  const words = lowerCase.split(/\s+/).filter(Boolean);
 
-function transform({ text = userInput.value.trim() }) {
-  const camelCase = text
-    .toLowerCase()
-    .split(' ')
-    .reduce((a, b) => a + b[0]?.toUpperCase() + b.substring(1)?.toLowerCase());
+  const camelCase = words
+    .map((word, index) => (index === 0 ? word : word.charAt(0).toUpperCase() + word.slice(1)))
+    .join('');
 
-  lowerCaseEl.textContent = text.toLowerCase();
-  upperCaseEl.textContent = text.toUpperCase();
-  camelCaseEl.textContent = camelCase;
-  pascalCaseEl.textContent = camelCase ? camelCase[0]?.toUpperCase() + camelCase.substring(1) : '';
-  snakeCaseEl.textContent = text.split(' ').join('_');
-  kebabCaseEl.textContent = text.split(' ').join('-');
-  trimEl.textContent = text.split(' ').join('');
-}
+  return {
+    lowerCase,
+    upperCase: trimmedText.toUpperCase(),
+    camelCase,
+    pascalCase: camelCase.charAt(0).toUpperCase() + camelCase.slice(1),
+    snakeCase: words.join('_'),
+    kebabCase: words.join('-'),
+    trim: words.join(''),
+  };
+};
 
-userInput.addEventListener('input', transform);
-transform({});
+/**
+ * Updates the UI with transformed text
+ * @param {string} text - The input text to transform and display
+ */
+const updateUI = (text) => {
+  const transformed = transformText(text);
+
+  // Update each output element
+  Object.entries(transformed).forEach(([key, value]) => {
+    const element = elements[key];
+    if (element) {
+      element.textContent = value || '';
+      // Add ARIA live region updates for screen readers
+      element.setAttribute('aria-label', `${key}: ${value}`);
+    }
+  });
+};
+
+elements.userInput.addEventListener('input', () => {
+  updateUI(elements.userInput.value);
+});
+
+// init
+updateUI(elements.userInput.value);

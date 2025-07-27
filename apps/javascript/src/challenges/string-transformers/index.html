@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <script src="../../helpers/header.js" type="module"></script>
@@ -6,26 +6,61 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="container text-center">
-      <form>
+    <main class="container text-center">
+      <h1 class="sr-only">String Transformers</h1>
+
+      <form aria-labelledby="input-label">
+        <label id="input-label" for="userInput" class="sr-only">Enter text to transform</label>
         <input
           type="text"
           id="userInput"
+          class="input-field"
           autocomplete="off"
-          placeholder="enter the sentence with spaces (alphanumeric)"
+          aria-describedby="input-hint"
+          placeholder="Type something to transform..."
           value="this is a normal sentence to transform"
         />
+        <p id="input-hint" class="hint-text">
+          Type any text to see it transformed in different formats below
+        </p>
       </form>
 
-      <div class="transformers">
-        <div><label>Lower Case</label><span id="lowercase"></span></div>
-        <div><label>Upper Case</label><span id="uppercase"></span></div>
-        <div><label>Camel Case</label><span id="camelcase"></span></div>
-        <div><label>Pascal Case</label><span id="pascalcase"></span></div>
-        <div><label>Snake Case</label><span id="snakecase"></span></div>
-        <div><label>Kebab Case</label><span id="kebabcase"></span></div>
-        <div><label>Trim</label><span id="trim"></span></div>
+      <div class="transformers" role="region" aria-label="Transformation results">
+        <div class="transformer-item" tabindex="0" aria-labelledby="lowercase-label">
+          <span id="lowercase-label" class="transformer-label">Lower Case</span>
+          <output id="lowercase" class="transformer-output" aria-live="polite"></output>
+        </div>
+
+        <div class="transformer-item" tabindex="0" aria-labelledby="uppercase-label">
+          <span id="uppercase-label" class="transformer-label">Upper Case</span>
+          <output id="uppercase" class="transformer-output" aria-live="polite"></output>
+        </div>
+
+        <div class="transformer-item" tabindex="0" aria-labelledby="camelcase-label">
+          <span id="camelcase-label" class="transformer-label">Camel Case</span>
+          <output id="camelcase" class="transformer-output" aria-live="polite"></output>
+        </div>
+
+        <div class="transformer-item" tabindex="0" aria-labelledby="pascalcase-label">
+          <span id="pascalcase-label" class="transformer-label">Pascal Case</span>
+          <output id="pascalcase" class="transformer-output" aria-live="polite"></output>
+        </div>
+
+        <div class="transformer-item" tabindex="0" aria-labelledby="snakecase-label">
+          <span id="snakecase-label" class="transformer-label">Snake Case</span>
+          <output id="snakecase" class="transformer-output" aria-live="polite"></output>
+        </div>
+
+        <div class="transformer-item" tabindex="0" aria-labelledby="kebabcase-label">
+          <span id="kebabcase-label" class="transformer-label">Kebab Case</span>
+          <output id="kebabcase" class="transformer-output" aria-live="polite"></output>
+        </div>
+
+        <div class="transformer-item" tabindex="0" aria-labelledby="trim-label">
+          <span id="trim-label" class="transformer-label">Trim Spaces</span>
+          <output id="trim" class="transformer-output" aria-live="polite"></output>
+        </div>
       </div>
-    </div>
+    </main>
   </body>
 </html>
