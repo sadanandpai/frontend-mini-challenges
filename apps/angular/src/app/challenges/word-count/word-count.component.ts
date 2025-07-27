@@ -11,16 +11,11 @@ interface WordCountModel {
 
 @Component({
   selector: 'app-word-count',
-  standalone: true,
-  imports: [
-    FormsModule,
-    NgFor,
-  ],
+  imports: [FormsModule, NgFor],
   templateUrl: './word-count.component.html',
-  styleUrls: ['./word-count.component.scss']
+  styleUrls: ['./word-count.component.scss'],
 })
 export class WordCountComponent implements OnInit {
-
   text = '';
   wordCount = 0;
   charCount = 0;
@@ -31,7 +26,7 @@ export class WordCountComponent implements OnInit {
     localStorage.setItem('words', wordCount + '');
     localStorage.setItem('chars', charCount + '');
     localStorage.setItem('paras', paraCount + '');
-  };
+  }
 
   countWords() {
     const words = this.text.split(/\s+/).filter((word) => word !== '');
@@ -49,23 +44,21 @@ export class WordCountComponent implements OnInit {
       charCount: this.wordCount,
       paraCount: this.paraCount,
     });
-  };
+  }
 
   clearText() {
     this.text = '';
     this.wordCount = 0;
     this.charCount = 0;
     this.paraCount = 0;
-  };
+  }
 
   loadData() {
     this.text = localStorage.getItem('text') || '';
     this.wordCount = +(localStorage.getItem('words') || 0);
     this.charCount = +(localStorage.getItem('chars') || 0);
     this.paraCount = +(localStorage.getItem('paras') || 0);
-  };
-
-  ngOnInit(): void {
-
   }
+
+  ngOnInit(): void {}
 }

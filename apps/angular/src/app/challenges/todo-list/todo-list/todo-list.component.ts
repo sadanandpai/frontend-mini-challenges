@@ -4,7 +4,6 @@ import { TodoItem } from '../todo-app/todo-app.component';
 
 @Component({
   selector: 'app-todo-list',
-  standalone: true,
   imports: [CommonModule],
   templateUrl: './todo-list.component.html',
   styleUrls: ['./todo-list.component.scss'],
