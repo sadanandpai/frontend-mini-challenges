@@ -1,4 +1,148 @@
-input {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
+/* Base styles */
+:root {
+  --primary-color: #2563eb;
+  --primary-hover: #1d4ed8;
+  --error-color: #dc2626;
+  --success-color: #16a34a;
+  --text-color: #1e293b;
+  --border-color: #e2e8f0;
+  --border-radius: 0.375rem;
+  --transition: all 0.2s ease-in-out;
+}
+
+.form-container {
+  width: 100%;
+  max-width: 28rem;
+  padding: 2rem;
+  margin: auto;
+  background: white;
+  border-radius: var(--border-radius);
+  box-shadow:
+    0 4px 6px -1px rgb(0 0 0 / 10%),
+    0 2px 4px -2px rgb(0 0 0 / 10%);
+}
+
+/* Form elements */
+.form-group {
+  width: 100%;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--text-color);
+  text-align: left;
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+input[type='tel'] {
+  width: 100%;
+  padding: 0.75rem 2.5rem 0.75rem 1rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--text-color);
+  appearance: textfield;
+  background-color: white;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  transition: var(--transition);
+}
+
+/* Remove number input spinners */
+input[type='tel']::-webkit-outer-spin-button,
+input[type='tel']::-webkit-inner-spin-button {
+  margin: 0;
+  appearance: none;
+}
+
+.input-suffix {
+  position: absolute;
+  right: 1rem;
+  pointer-events: none;
+  opacity: 0.7;
+  transition: var(--transition);
+}
+
+input[type='tel']:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgb(37 99 235 / 10%);
+}
+
+input[type='tel']:focus + .input-suffix {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+/* Validation states */
+input[type='tel'][aria-invalid='true'] {
+  padding-right: 2.5rem;
+  border-color: var(--error-color);
+}
+
+input[type='tel'][aria-invalid='true'] + .input-suffix {
+  color: var(--error-color);
+}
+
+input[type='tel'].valid {
+  border-color: var(--success-color);
+}
+
+input[type='tel'].valid + .input-suffix {
+  color: var(--success-color);
+}
+
+/* Helper text and error messages */
+.hint,
+.error-message {
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  line-height: 1.4;
+  text-align: left;
+}
+
+.hint {
+  color: #64748b;
+}
+
+.error-message {
+  min-height: 1.25rem;
+  color: var(--error-color);
+}
+
+/* Animations */
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  25% {
+    transform: translateX(-5px);
+  }
+
+  75% {
+    transform: translateX(5px);
+  }
+}
+
+.shake {
+  animation: shake 0.3s ease-in-out;
+}
+
+/* Responsive adjustments */
+@media (width <= 480px) {
+  .form-container {
+    padding: 1.5rem;
+  }
+
+  input[type='tel'] {
+    font-size: 1rem;
+  }
 }
