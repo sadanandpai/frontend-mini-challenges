@@ -8,17 +8,45 @@
   display: none !important;
 }
 
-button.btn.btn-primary {
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   padding: 10px 16px;
-  background-color: cyan;
-  border: 1px solid grey;
-  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5;
+  vertical-align: middle;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  text-decoration: none;
   cursor: pointer;
+  user-select: none;
+  background-color: transparent;
+  background-color: #0d6efd;
+  border: 1px solid transparent;
+  border-color: #0d6efd;
+  border-radius: 4px;
 }
 
 button.btn:disabled,
 .btn.btn-primary:disabled {
+  color: #94a3b8;
   cursor: not-allowed;
+  background-color: #e2e8f0;
+  border-color: #e2e8f0;
+  opacity: 0.65;
+}
+
+.btn-primary:focus-visible {
+  outline: 3px solid rgb(13 110 253 / 30%);
+  outline-offset: 2px;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background-color: #0b5ed7;
+  border-color: #0b5ed7;
 }
 
 .btn.btn-primary.small {
@@ -26,6 +54,8 @@ button.btn:disabled,
 }
 
 .disabled {
-  color: grey;
+  pointer-events: none;
   cursor: not-allowed;
+  user-select: none;
+  opacity: 0.6;
 }

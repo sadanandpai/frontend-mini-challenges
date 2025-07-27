@@ -1,29 +1,75 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <script src="../../helpers/header.js" type="module"></script>
-    <script src="index.js" type="module"></script>
+    <script src="index.js" type="module" defer></script>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="container text-center">
-      <div class="counter">
-        <div class="counter-value">
-          <span class="value">0</span>
+      <div class="counter" role="region" aria-label="Counter">
+        <div class="counter-value" aria-live="polite" aria-atomic="true">
+          <span class="value" id="counter-value" aria-live="assertive">0</span>
         </div>
+
         <div class="counter-controls">
-          <button class="btn btn-primary" id="decrement">-</button>
-          <button class="btn btn-primary" id="increment">+</button>
+          <button
+            class="btn btn-primary"
+            id="decrement"
+            aria-label="Decrement counter by current step"
+            aria-keyshortcuts="ArrowDown,-"
+          >
+            <span aria-hidden="true">-</span>
+          </button>
+
+          <button
+            class="btn btn-primary"
+            id="increment"
+            aria-label="Increment counter by current step"
+            aria-keyshortcuts="ArrowUp,+"
+          >
+            <span aria-hidden="true">+</span>
+          </button>
         </div>
 
         <div class="change">
-          <label for="changeBy">Increment/Decrement by:</label>
-          <input type="number" id="changeBy" value="1" min="1" max="10" />
+          <label for="changeBy">
+            <span>Increment/Decrement by:</span>
+            <span class="sr-only">(1-10)</span>
+          </label>
+          <input
+            type="number"
+            id="changeBy"
+            name="changeBy"
+            value="1"
+            min="1"
+            max="10"
+            aria-valuemin="1"
+            aria-valuemax="10"
+            aria-valuenow="1"
+            aria-valuetext="1"
+            aria-describedby="step-description"
+            aria-keyshortcuts="PageUp PageDown"
+          />
+          <div id="step-description" class="sr-only">Use Page Up/Down to change the step value</div>
         </div>
 
         <div class="counter-controls">
-          <button class="btn btn-primary" id="reset">Reset</button>
+          <button class="btn btn-primary" id="reset" aria-label="Reset counter to zero">
+            Reset
+          </button>
         </div>
+
+        <div id="counter-announcement" class="sr-only" aria-live="polite" aria-atomic="true">
+          <!-- Will be updated by JavaScript -->
+        </div>
+      </div>
+
+      <div class="keyboard-instructions">
+        <p>
+          Keyboard shortcuts: <kbd>+</kbd> to increment, <kbd>-</kbd> to decrement,
+          <kbd>Page Up/Down</kbd> to change step value
+        </p>
       </div>
     </div>
   </body>
