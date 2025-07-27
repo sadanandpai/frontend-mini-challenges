@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NgFor } from '@angular/common';
+
 import { FormsModule } from '@angular/forms';
 
 interface WordCountModel {
@@ -11,7 +11,7 @@ interface WordCountModel {
 
 @Component({
   selector: 'app-word-count',
-  imports: [FormsModule, NgFor],
+  imports: [FormsModule],
   templateUrl: './word-count.component.html',
   styleUrls: ['./word-count.component.scss'],
 })

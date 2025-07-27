@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { CommonModule, NgFor } from '@angular/common';
+
 import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-stack',
-  imports: [FormsModule, NgFor],
+  imports: [FormsModule],
   templateUrl: './stack.component.html',
   styleUrls: ['./stack.component.scss'],
 })

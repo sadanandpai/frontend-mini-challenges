@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NgFor } from '@angular/common';
+
 import { SquareComponent } from '../square/square.component';
 
 export const size = 3;
@@ -15,7 +15,7 @@ export const initialArray = Array(size * size).fill(null);
 
 @Component({
   selector: 'app-tic-tac-toe',
-  imports: [NgFor, SquareComponent],
+  imports: [SquareComponent],
   templateUrl: './tic-tac-toe.component.html',
   styleUrls: ['./tic-tac-toe.component.scss'],
 })

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 import { FormsModule } from '@angular/forms';
 
 function getRandomNumber() {
@@ -8,7 +8,7 @@ function getRandomNumber() {
 
 @Component({
   selector: 'app-guess-number',
-  imports: [CommonModule, FormsModule],
+  imports: [FormsModule],
   templateUrl: './guess-number.component.html',
   styleUrls: ['./guess-number.component.scss'],
 })
