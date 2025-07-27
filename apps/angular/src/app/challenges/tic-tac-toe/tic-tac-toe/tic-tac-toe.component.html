@@ -16,9 +16,9 @@
       </div>
     </div>
     <div class="grid-container">
-      <ng-container *ngFor="let square of squares; let i = index">
-        <app-square [iTh]="i" [value]="square" (action)="action(i)" [disabled]="!isGameActive" />
-      </ng-container>
+      @for (square of squares; track square; let i = $index) {
+        <app-square [iTh]="i" [value]="square" (action)="action(i)" />
+      }
     </div>
     <button (click)="rematch()">Rematch</button>
   </div>

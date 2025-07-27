@@ -1,10 +1,10 @@
 import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 import { TodoItem } from '../todo-app/todo-app.component';
 
 @Component({
   selector: 'app-todo-list',
-  imports: [CommonModule],
+  imports: [],
   templateUrl: './todo-list.component.html',
   styleUrls: ['./todo-list.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
