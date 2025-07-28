@@ -1,58 +1,197 @@
-.color {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
+.wrapper {
+  --primary-color: #007bff;
+  --primary-hover: #0056b3;
+  --error-color: #d32f2f;
+  --border-color: #e0e0e0;
+  --text-color: #333;
+  --text-light: #666;
+  --white: #fff;
+  --gray-light: #f5f5f5;
+  --shadow: 0 2px 4px rgb(0, 0, 0, 10%);
+  --transition: all 0.2s ease-in-out;
+  --focus-ring: 0 0 0 3px rgb(0, 123, 255, 50%);
+  --focus-ring-inset: inset 0 0 0 3px rgb(0, 0, 0, 10%);
+
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.5;
+  color: var(--text-color);
 }
 
-form.form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    height: 70px;
+/* Title */
+.title {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  text-align: center;
 }
 
-.containers {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 90%;
-    max-width: 200px;
-    margin-top: 10px;
+/* Form */
+.form {
+  max-width: 500px;
+  padding: 1.5rem;
+  margin-right: auto;
+  margin-bottom: 2rem;
+  margin-left: auto;
+  background: var(--white);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
 }
 
-.container {
-    width: 30%;
-    padding: 10px;
-    text-align: center;
-    border: 1px solid black;
+.inputGroup {
+  width: 100%;
+  margin-bottom: 1.5rem;
 }
 
-.containerColor {
-    width: 30%;
-    padding: 10px;
-    color: white;
-    text-align: center;
-    background-color: red;
-    border: 1px solid black;
+.label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--text-color);
 }
 
 .numberInput {
-    height: 25px;
-    padding: 0 10px;
-    margin: 10px 0;
-    border: 1px solid black;
-    border-radius: 15px;
-}
-input{
-    cursor: pointer;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  border: 2px solid var(--border-color);
+  border-radius: 6px;
+  transition: var(--transition);
 }
 
+.numberInput:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgb(74, 111, 165, 20%);
+}
+
+.numberInput.inputError {
+  border-color: var(--error-color);
+}
+
+/* Error message */
 .error {
-    color: red;
-    font-size: 0.75rem;
-    margin: 0 0 0.5rem 0;
-    padding: 0;
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--error-color);
+}
+
+/* Button styles */
+.buttonGroup {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.button {
+  flex: 1;
+  min-width: 120px;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 6px;
+  transition: var(--transition);
+}
+
+.button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgb(74, 111, 165, 50%);
+}
+
+.button:disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.button:hover:not(:disabled) {
+  background-color: var(--primary-hover);
+}
+
+.button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.clearButton {
+  color: var(--text-color);
+  background-color: #f5f5f5;
+  border: 1px solid var(--border-color);
+}
+
+.clearButton:hover:not(:disabled) {
+  background-color: #e0e0e0;
+}
+
+/* Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  max-width: 400px;
+  padding: 1rem;
+  margin: 0 auto;
+}
+
+.cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1;
+  font-size: 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  user-select: none;
+  background-color: var(--white);
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  transition: var(--transition);
+}
+
+.cell:hover {
+  box-shadow: var(--shadow);
+}
+
+/* Focus styles for keyboard users */
+.cell:focus-visible {
+  z-index: 1;
+  outline: none;
+  box-shadow: var(--focus-ring), var(--focus-ring-inset);
+  transform: translateY(-1px);
+}
+
+/* Focus styles for mouse users */
+.cell:focus:not(:focus-visible) {
+  outline: none;
+  box-shadow: none;
+}
+
+/* Focus styles for touch devices */
+@media (hover: none) {
+  .cell:focus {
+    z-index: 1;
+    outline: none;
+    box-shadow: var(--focus-ring), var(--focus-ring-inset);
+  }
+}
+
+.coloredCell {
+  position: relative;
+  color: white;
+  background-color: var(--primary-color);
+  border-color: var(--primary-hover);
+}
+
+/* Focus styles for colored cells */
+.coloredCell:focus-visible {
+  outline: 2px solid white;
+  box-shadow:
+    0 0 0 3px rgb(255, 255, 255, 70%),
+    var(--focus-ring);
 }
