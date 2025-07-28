@@ -1,7 +1,7 @@
 import { Router, RouterOutlet } from '@angular/router';
 
 import { Component, inject } from '@angular/core';
-import { angularChallenges } from '@fmc/data/content';
+import { angularChallenges } from '../../../data/content'; // ...your component code...
 import { NavbarComponent } from '../navbar/navbar.component';
 
 @Component({
