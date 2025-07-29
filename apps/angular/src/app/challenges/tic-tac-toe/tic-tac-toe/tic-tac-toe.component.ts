@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NgFor } from '@angular/common';
+
 import { SquareComponent } from '../square/square.component';
 
 export const size = 3;
@@ -15,13 +15,9 @@ export const initialArray = Array(size * size).fill(null);
 
 @Component({
   selector: 'app-tic-tac-toe',
-  standalone: true,
-  imports: [
-    NgFor,
-    SquareComponent,
-  ],
+  imports: [SquareComponent],
   templateUrl: './tic-tac-toe.component.html',
-  styleUrls: ['./tic-tac-toe.component.scss']
+  styleUrls: ['./tic-tac-toe.component.scss'],
 })
 export class TicTacToeComponent {
   squares = initialArray;
@@ -44,7 +40,10 @@ export class TicTacToeComponent {
       this.playerWins = [this.xWins + 1, this.oWins, this.draw];
     } else if (this.winner === 'O') {
       this.playerWins = [this.xWins, this.oWins + 1, this.draw];
-    } else if (this.winner === null && this.squares.filter((square) => square === null).length === 0) {
+    } else if (
+      this.winner === null &&
+      this.squares.filter((square) => square === null).length === 0
+    ) {
       this.playerWins = [this.xWins, this.oWins, this.draw + 1];
     }
   }
@@ -53,7 +52,11 @@ export class TicTacToeComponent {
     this.isX = !this.isX;
     for (const combo of winningCombos) {
       const [a, b, c] = combo;
-      if (this.squares[a] !== null && this.squares[a] === this.squares[b] && this.squares[a] === this.squares[c]) {
+      if (
+        this.squares[a] !== null &&
+        this.squares[a] === this.squares[b] &&
+        this.squares[a] === this.squares[c]
+      ) {
         this.winner = this.squares[a] === 1 ? 'X' : 'O';
         return;
       }
