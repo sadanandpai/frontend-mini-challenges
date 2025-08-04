@@ -1,66 +1,207 @@
+// Currency exchange rates (base: USD)
 const currencyRates = {
-  USD: 1, // USD to USD (1:1)
-  EUR: 0.85, // USD to EUR (1 USD = 0.85 EUR)
-  GBP: 0.74, // USD to GBP (1 USD = 0.74 GBP)
-  INR: 74.63, // USD to INR (1 USD = 74.63 INR)
-  // Add more currency rates here
+  USD: 1, // US Dollar
+  EUR: 0.85, // Euro
+  GBP: 0.74, // British Pound
+  JPY: 110.16, // Japanese Yen
+  AUD: 1.35, // Australian Dollar
+  CAD: 1.25, // Canadian Dollar
+  CHF: 0.92, // Swiss Franc
+  CNY: 6.47, // Chinese Yuan
+  INR: 74.63, // Indian Rupee
 };
 
-document.getElementById('addCurrencyButton').addEventListener('click', function () {
-  const customCurrencyCode = document.getElementById('customCurrency').value.toUpperCase();
-  if (customCurrencyCode && !currencyRates[customCurrencyCode]) {
-    const exchangeRate = parseFloat(
-      prompt(`Enter exchange rate for 1 USD to ${customCurrencyCode}`)
-    );
-    if (!isNaN(exchangeRate)) {
-      currencyRates[customCurrencyCode] = exchangeRate;
-      updateCurrencyOptions();
-    } else {
-      alert('Invalid exchange rate. Please enter a valid number.');
-    }
-  } else if (currencyRates[customCurrencyCode]) {
-    alert(`Currency ${customCurrencyCode} already exists.`);
-  } else {
-    alert('Invalid currency code. Please enter a valid code (e.g., CAD).');
-  }
-});
+// DOM Elements
+const elements = {
+  form: document.getElementById('converterForm'),
+  amount: document.getElementById('amount'),
+  fromCurrency: document.getElementById('fromCurrency'),
+  toCurrency: document.getElementById('toCurrency'),
+  result: document.getElementById('result'),
+  customCurrency: document.getElementById('customCurrency'),
+  addCurrencyButton: document.getElementById('addCurrencyButton'),
+  errorContainer: document.getElementById('errorContainer'),
+};
 
-function updateCurrencyOptions() {
-  const fromCurrencySelect = document.getElementById('fromCurrency');
-  const toCurrencySelect = document.getElementById('toCurrency');
+// Error messages
+const ERROR_MESSAGES = {
+  INVALID_AMOUNT: 'Please enter a valid amount greater than zero',
+  INVALID_CURRENCY: 'Please select valid currencies to convert between',
+  INVALID_EXCHANGE_RATE: 'Please enter a valid exchange rate greater than zero',
+  CURRENCY_EXISTS: 'This currency already exists',
+  INVALID_CURRENCY_CODE: 'Please enter a valid 3-letter currency code (e.g., CAD, JPY, AUD)',
+};
 
-  // Clear existing options
-  fromCurrencySelect.innerHTML = '';
-  toCurrencySelect.innerHTML = '';
-
-  for (const currency in currencyRates) {
-    const option = document.createElement('option');
-    option.value = currency;
-    option.innerText = currency;
-    fromCurrencySelect.appendChild(option);
-
-    const toOption = option.cloneNode(true);
-    toCurrencySelect.appendChild(toOption);
-  }
-  toCurrencySelect.innerHTML += '<option value="custom">Custom</option>';
+/**
+ * Show error message to the user
+ * @param {string} message - Error message to display
+ */
+function showError(message) {
+  elements.errorContainer.textContent = message;
+  elements.errorContainer.focus();
 }
 
-document.getElementById('convertButton').addEventListener('click', convertCurrency);
+/**
+ * Clear error message
+ */
+function clearError() {
+  elements.errorContainer.textContent = '';
+}
 
-function convertCurrency() {
-  const amount = parseFloat(document.getElementById('amount').value);
-  const fromCurrency = document.getElementById('fromCurrency').value;
-  const toCurrency = document.getElementById('toCurrency').value;
-  const resultElement = document.getElementById('result');
+/**
+ * Format currency amount
+ * @param {number} amount - Amount to format
+ * @param {string} currency - Currency code
+ * @returns {string} Formatted currency string
+ */
+function formatCurrency(amount, currency) {
+  return new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: currency || 'USD',
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2,
+  }).format(amount);
+}
 
-  if (isNaN(amount)) {
-    alert('Please enter a valid amount.');
+/**
+ * Update currency dropdown options
+ */
+function updateCurrencyOptions() {
+  const currencies = Object.keys(currencyRates).sort();
+
+  // Save current selections
+  const fromValue = elements.fromCurrency.value;
+  const toValue = elements.toCurrency.value;
+
+  // Clear and rebuild options
+  elements.fromCurrency.innerHTML = '';
+  elements.toCurrency.innerHTML = '';
+
+  // Add options to both selects
+  currencies.forEach((currency) => {
+    const option = document.createElement('option');
+    option.value = currency;
+    option.textContent = currency;
+
+    // Add to 'from' dropdown
+    const fromOption = option.cloneNode(true);
+    elements.fromCurrency.appendChild(fromOption);
+
+    // Add to 'to' dropdown
+    const toOption = option.cloneNode(true);
+    elements.toCurrency.appendChild(toOption);
+  });
+
+  // Restore or set default selections
+  if (fromValue && currencies.includes(fromValue)) {
+    elements.fromCurrency.value = fromValue;
+  } else {
+    elements.fromCurrency.value = 'USD';
+  }
+
+  if (toValue && currencies.includes(toValue)) {
+    elements.toCurrency.value = toValue;
+  } else {
+    elements.toCurrency.value = 'EUR';
+  }
+}
+
+/**
+ * Convert currency and update the result
+ */
+function convertCurrency(event) {
+  if (event) event.preventDefault();
+
+  clearError();
+
+  const amount = parseFloat(elements.amount.value);
+  const fromCurrency = elements.fromCurrency.value;
+  const toCurrency = elements.toCurrency.value;
+
+  // Validate inputs
+  if (isNaN(amount) || amount <= 0) {
+    showError(ERROR_MESSAGES.INVALID_AMOUNT);
+    elements.amount.focus();
     return;
   }
 
-  const convertedAmount = (amount / currencyRates[fromCurrency]) * currencyRates[toCurrency];
-  resultElement.value = convertedAmount.toFixed(2);
+  if (!fromCurrency || !toCurrency) {
+    showError(ERROR_MESSAGES.INVALID_CURRENCY);
+    return;
+  }
+
+  try {
+    // Convert amount to USD first, then to target currency
+    const amountInUSD = amount / currencyRates[fromCurrency];
+    const convertedAmount = amountInUSD * currencyRates[toCurrency];
+
+    // Format and display result
+    elements.result.value = formatCurrency(convertedAmount, toCurrency);
+  } catch (error) {
+    console.error('Currency conversion error:', error);
+    showError('An error occurred during conversion. Please try again.');
+  }
 }
 
-// Initialize currency options
+/**
+ * Add a new custom currency
+ */
+function addCustomCurrency() {
+  const currencyCode = elements.customCurrency.value.trim().toUpperCase();
+  clearError();
+
+  // Validate currency code
+  if (!/^[A-Z]{3}$/.test(currencyCode)) {
+    showError(ERROR_MESSAGES.INVALID_CURRENCY_CODE);
+    elements.customCurrency.focus();
+    return;
+  }
+
+  // Check if currency already exists
+  if (currencyRates[currencyCode]) {
+    showError(`${ERROR_MESSAGES.CURRENCY_EXISTS}: ${currencyCode}`);
+    return;
+  }
+
+  // Get exchange rate from user
+  const rateInput = prompt(`Enter exchange rate for 1 USD to ${currencyCode}`);
+  const exchangeRate = parseFloat(rateInput);
+
+  // Validate exchange rate
+  if (isNaN(exchangeRate) || exchangeRate <= 0) {
+    showError(ERROR_MESSAGES.INVALID_EXCHANGE_RATE);
+    return;
+  }
+
+  // Add new currency and update UI
+  currencyRates[currencyCode] = exchangeRate;
+  updateCurrencyOptions();
+  elements.customCurrency.value = '';
+
+  // Focus the amount input for the next conversion
+  elements.amount.focus();
+}
+
+// Initialize currency dropdowns
 updateCurrencyOptions();
+
+// Form submission
+elements.form.addEventListener('submit', convertCurrency);
+
+// Add currency button
+elements.addCurrencyButton.addEventListener('click', addCustomCurrency);
+
+// Allow pressing Enter in the custom currency input to add it
+elements.customCurrency.addEventListener('keydown', (e) => {
+  if (e.key === 'Enter') {
+    e.preventDefault();
+    addCustomCurrency();
+  }
+});
+
+// Clear error when user starts typing
+elements.amount.addEventListener('input', clearError);
+elements.customCurrency.addEventListener('input', clearError);
+
+// Initial focus
+elements.amount.focus();

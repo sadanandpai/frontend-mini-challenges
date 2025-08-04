@@ -42,7 +42,6 @@ import Otp from '@/challenges/otp/App';
 import Pagination from '@/challenges/pagination/App';
 import PasswordGenerator from '@/challenges/password-generator/App';
 import PasswordStrength from '@/challenges/password-strength/passwordStrength';
-import ProgrammingMultiverse from '@/challenges/programming-multiverse';
 import ProgressBar from '@/challenges/progressbar/App';
 import QuizApp from '@/challenges/quiz-app/App';
 import Stack from '@/challenges/stack-implementation/Stack';
@@ -108,7 +107,6 @@ const reactChallengesMap = {
   'your-sport': <YourSport />,
   'modal-popup': <ModalPopup />,
   'emoji-picker': <EmojiPicker />,
-  'programming-multiverse': <ProgrammingMultiverse />,
   otp: <Otp />,
   'traffic-lights': <TrafficLights />,
   'quiz-app': <QuizApp />,

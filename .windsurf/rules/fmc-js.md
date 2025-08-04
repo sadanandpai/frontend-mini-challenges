@@ -11,7 +11,8 @@ index.html will always have the below tags
 header.js is responsible for importing the standard head tags and default styles. Hence no need to
 add tags like title, meta etc. Only these 3 imports are enough.
 
-The js files are imported as module. So please dont wait for domcontent load event in the js.
+The js files are imported as module. So please dont use DOMContentLoaded event in the js. Directly
+write the js code.
 
 The default styles are present in
 /Users/spai3/Documents/sadanand/projects/frontend-mini-challenges/shared/styles that include sr-only

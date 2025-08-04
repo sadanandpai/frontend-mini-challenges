@@ -51,17 +51,6 @@ const challenges: Map<string, IChallenge> = new Map([
     },
   ],
   [
-    'roll-dice',
-    {
-      title: 'Roll dice',
-      description: 'Can you build a dice roller that displays random dice faces on click?',
-      link: 'roll-dice/',
-      difficulty: EDifficulty.Easy,
-      developer: 'babandakale',
-      tags: [],
-    },
-  ],
-  [
     'guess-the-number',
     {
       title: 'Guess the number',

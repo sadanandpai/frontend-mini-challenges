@@ -14,17 +14,6 @@ const challenges = new Map<string, IChallenge>([
     },
   ],
   [
-    'programming-multiverse',
-    {
-      title: 'Programming Multiverse',
-      description: 'Display programming languages in an interactive grid layout',
-      link: 'programming-multiverse',
-      difficulty: EDifficulty.Easy,
-      developer: 'Sumitwarrior7',
-      tags: [],
-    },
-  ],
-  [
     'anagram-checker',
     {
       title: 'Anagram Checker',

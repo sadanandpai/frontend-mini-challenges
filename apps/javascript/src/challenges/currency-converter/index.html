@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <script src="../../helpers/header.js" type="module"></script>
@@ -6,26 +6,87 @@
     <script src="script.js" type="module"></script>
   </head>
   <body>
-    <div class="container converter">
-      <div class="input-container">
-        <input type="number" id="amount" placeholder="Enter amount" />
-        <select id="fromCurrency">
-          <!-- Existing currency options -->
-          <option value="custom">Custom</option>
-        </select>
+    <main class="container converter">
+      <h1 class="sr-only">Currency Converter</h1>
+
+      <form id="converterForm" class="converter-form">
+        <div class="input-group">
+          <label for="amount">Amount</label>
+          <div class="input-with-select">
+            <input
+              type="number"
+              id="amount"
+              name="amount"
+              min="0"
+              step="0.01"
+              placeholder="Enter amount"
+              aria-required="true"
+              aria-describedby="amount-help"
+              inputmode="decimal"
+            />
+            <select
+              id="fromCurrency"
+              name="fromCurrency"
+              aria-label="Convert from currency"
+              required
+            >
+              <!-- Options will be populated by JavaScript -->
+            </select>
+          </div>
+          <p id="amount-help" class="help-text">Enter the amount you want to convert</p>
+        </div>
+
+        <div class="input-group">
+          <label for="result">Result</label>
+          <div class="input-with-select">
+            <input
+              type="text"
+              id="result"
+              name="result"
+              placeholder="Result"
+              readonly
+              aria-readonly="true"
+              tabindex="-1"
+            />
+            <select id="toCurrency" name="toCurrency" aria-label="Convert to currency" required>
+              <!-- Options will be populated by JavaScript -->
+            </select>
+          </div>
+        </div>
+
+        <button type="submit" id="convertButton" class="btn-primary">
+          <span class="btn-icon" aria-hidden="true"> </span>
+          <span>Convert</span>
+        </button>
+      </form>
+
+      <div class="add-currency">
+        <h4>Add Custom Currency</h4>
+        <div class="input-group">
+          <label for="customCurrency" class="sr-only">Custom Currency Code</label>
+          <div class="input-with-button">
+            <input
+              type="text"
+              id="customCurrency"
+              name="customCurrency"
+              placeholder="e.g., CAD"
+              pattern="[A-Za-z]{3}"
+              maxlength="3"
+              aria-describedby="currency-help"
+              aria-required="true"
+            />
+            <button type="button" id="addCurrencyButton" class="btn-secondary">
+              <span class="btn-icon" aria-hidden="true">+</span>
+              <span>Add Currency</span>
+            </button>
+          </div>
+          <p id="currency-help" class="help-text">
+            Enter a 3-letter currency code (e.g., CAD, JPY, AUD)
+          </p>
+        </div>
       </div>
-      <div class="input-container">
-        <input type="number" id="result" placeholder="Result" disabled />
-        <select id="toCurrency">
-          <!-- Existing currency options -->
-          <option value="custom">Custom</option>
-        </select>
-      </div>
-      <button id="convertButton">Convert</button>
-      <div class="input-container">
-        <input type="text" id="customCurrency" placeholder="Custom Currency (e.g., CAD)" />
-        <button id="addCurrencyButton">Add Currency</button>
-      </div>
-    </div>
+
+      <div id="errorContainer" class="error-message" role="alert" aria-live="assertive"></div>
+    </main>
   </body>
 </html>
