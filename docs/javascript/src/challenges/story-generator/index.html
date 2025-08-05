@@ -1,38 +1,107 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <script type="module" crossorigin src="/frontend-mini-challenges/javascript/assets/index-6fF4CZSO.js"></script>
+    <script type="module" crossorigin src="/frontend-mini-challenges/javascript/assets/index-DK8NlQQK.js"></script>
     <link rel="modulepreload" crossorigin href="/frontend-mini-challenges/javascript/assets/navbar-DLcVbhlS.js">
     <link rel="modulepreload" crossorigin href="/frontend-mini-challenges/javascript/assets/header-Dq_qwdv8.js">
     <link rel="stylesheet" crossorigin href="/frontend-mini-challenges/javascript/assets/navbar-Dt4XNAzS.css">
     <link rel="stylesheet" crossorigin href="/frontend-mini-challenges/javascript/assets/header-BlPJKZwb.css">
-    <link rel="stylesheet" crossorigin href="/frontend-mini-challenges/javascript/assets/index-u9eV4BXb.css">
+    <link rel="stylesheet" crossorigin href="/frontend-mini-challenges/javascript/assets/index-J_mwaXn1.css">
   </head>
   <body>
     <div class="container">
-      <h1>MAD LIBS</h1>
-      <div class="form">
-        <label for="noun">NOUN:</label>
-        <input type="text" id="noun" />
+      <header>
+        <h2>Mad Libs</h2>
+        <p class="subtitle">Fill in the blanks and create your own magical story!</p>
+      </header>
 
-        <br />
-        <label for="verb">VERB:</label>
-        <input type="text" id="verb" />
-        <br />
-        <label for="adjective">ADJECTIVE:</label>
-        <input type="text" id="adjective" />
-        <br />
-        <label for="adverb">ADVERB:</label>
-        <input type="text" id="adverb" />
-        <br />
-        <button id="generate">Generate Story</button>
-      </div>
-      <div class="story" id="story"></div>
-      <div>
-        <button id="play-again">Play Again</button>
-        <button id="share-story-twitter">Twitter</button>
-      </div>
-      <br />
+      <main>
+        <form id="story-form" class="form" aria-labelledby="form-title">
+          <h2 id="form-title" class="visually-hidden">Story Inputs</h2>
+          <div class="form-group">
+            <label for="noun">Noun (person, place, or thing):</label>
+            <input
+              type="text"
+              id="noun"
+              name="noun"
+              required
+              aria-required="true"
+              autocomplete="off"
+              placeholder="e.g., wizard, castle, dragon"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="verb">Verb (action word):</label>
+            <input
+              type="text"
+              id="verb"
+              name="verb"
+              required
+              aria-required="true"
+              autocomplete="off"
+              placeholder="e.g., run, jump, fly"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="adjective">Adjective (describing word):</label>
+            <input
+              type="text"
+              id="adjective"
+              name="adjective"
+              required
+              aria-required="true"
+              autocomplete="off"
+              placeholder="e.g., magical, mysterious, brave"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="adverb">Adverb (describes how something is done):</label>
+            <input
+              type="text"
+              id="adverb"
+              name="adverb"
+              required
+              aria-required="true"
+              autocomplete="off"
+              placeholder="e.g., quickly, carefully, bravely"
+            />
+          </div>
+
+          <button type="submit" id="generate" class="button">
+            <span class="button-text">Generate Story</span>
+            <span class="button-loader" aria-hidden="true"></span>
+          </button>
+        </form>
+
+        <div id="story-output" class="story-container" hidden>
+          <div class="story" id="story" role="alert" aria-live="polite"></div>
+
+          <div class="button-group" role="group" aria-label="Story actions">
+            <button type="button" id="play-again" class="button button--secondary">
+              <span class="button-text">Create Another Story</span>
+            </button>
+            <button type="button" id="share-story-twitter" class="button button--twitter">
+              <span class="button-text">Share on Twitter</span>&nbsp;
+              <svg
+                class="icon"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <path
+                  fill="currentColor"
+                  d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </main>
     </div>
   </body>
 </html>
