@@ -5,7 +5,6 @@ import { angularChallenges } from '@fmc/data/content';
 import { NavbarComponent } from '../navbar/navbar.component';
 
 @Component({
-  standalone: true,
   selector: 'app-challenge-container',
   templateUrl: './challenge-container.component.html',
   imports: [NavbarComponent, RouterOutlet],
