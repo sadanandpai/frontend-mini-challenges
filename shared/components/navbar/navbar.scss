@@ -7,7 +7,7 @@
   gap: 1rem;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem;
+  padding: 0.75rem 1rem;
   margin-bottom: 1rem;
   box-shadow: 0 4px 4px 0 rgb(0 0 0 / 10%);
 
@@ -29,11 +29,13 @@
       align-items: center;
 
       .open-modal-btn {
+        width: 2rem;
+        height: 2rem;
         font-weight: bold;
         background-color: white;
         border: 2px solid black;
-        border-radius: 8px;
-        transition: transform 0.1s ease-in-out;
+        border-radius: 50%;
+        transition: transform 0.2s ease-in-out;
       }
 
       .open-modal-btn:hover {

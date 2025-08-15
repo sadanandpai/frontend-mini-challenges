@@ -122,6 +122,10 @@
 }
 
 @media (width <= 768px) {
+  .navbar {
+    padding: 0.5rem 0;
+  }
+
   .navLinks {
     gap: 0.5rem;
   }

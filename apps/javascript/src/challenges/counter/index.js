@@ -121,8 +121,13 @@ const updateCounter = (operation, event = null) => {
 /**
  * Handles changes to the step input
  */
-const handleStepChange = (event) => {
+const handleStepChange = () => {
+  if (elements.changeBy.value === '') {
+    return;
+  }
+
   const step = elements.changeBy.valueAsNumber;
+
   if (!isValidStep(step)) {
     elements.changeBy.value = COUNTER_DEFAULTS.DEFAULT_STEP;
   }
@@ -132,6 +137,12 @@ const handleStepChange = (event) => {
   elements.changeBy.setAttribute('aria-valuetext', elements.changeBy.value);
   // Announce the new step value
   announceCounterUpdate('step');
+};
+
+const handleStepBlur = () => {
+  if (elements.changeBy.value === '') {
+    elements.changeBy.value = COUNTER_DEFAULTS.DEFAULT_STEP;
+  }
 };
 
 /**
@@ -189,6 +200,7 @@ const initCounter = () => {
   elements.reset.addEventListener('click', (e) => updateCounter('reset', e));
   elements.changeBy.addEventListener('change', handleStepChange);
   elements.changeBy.addEventListener('input', handleStepChange);
+  elements.changeBy.addEventListener('blur', handleStepBlur);
 
   // Add keyboard event listener to document for global shortcuts
   document.addEventListener('keydown', handleKeyDown);

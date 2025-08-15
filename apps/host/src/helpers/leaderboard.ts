@@ -1,17 +1,19 @@
 import {
-  contributors,
   angularChallenges,
+  contributors,
   cssChallenges,
   jsChallenges,
   reactChallenges,
   vueChallenges,
 } from '@fmc/data/content';
+
 import type { IChallenge } from '@fmc/data/types';
 
 export interface DeveloperContributions {
+  css?: number;
+  js?: number;
   react?: number;
   vue?: number;
-  js?: number;
   angular?: number;
   totalContributions: number;
 }

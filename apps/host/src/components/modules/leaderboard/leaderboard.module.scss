@@ -1,280 +1,179 @@
-.leaderboardTableWrapper {
+.leaderboard {
+  max-width: 1200px;
+  padding: 2rem 1rem;
   margin: 0 auto;
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.07);
-  border-radius: 10px;
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 5rem;
+  color: var(--text-primary);
 }
 
-table.leaderboardTable {
-  border: none;
-  border-collapse: collapse;
+.tableContainer {
+  overflow-x: auto;
+  background-color: var(--card-bg);
+  border-radius: 8px;
+  box-shadow:
+    0 4px 6px -1px rgb(0 0 0 / 10%),
+    0 2px 4px -2px rgb(0 0 0 / 10%);
+}
+
+.table {
   width: 100%;
-  font-size: 14px;
+  font-size: 0.95rem;
+  border-collapse: collapse;
 
-  thead,
+  th,
   td {
-    border: none;
+    padding: 1rem;
+    border-bottom: 1px solid var(--border-color);
   }
 
-  thead > tr > td:nth-child(2) {
-    text-align: left;
-    padding-left: 25px;
+  th {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    font-weight: 600;
+    color: var(--text-primary);
+    white-space: nowrap;
+    background-color: var(--bg-color);
   }
 
-  tr {
-    border-bottom: 1px solid rgba(#ccc, 0.5);
-  }
-
-  tr:last-of-type {
+  tr:last-child td {
     border-bottom: none;
   }
 }
 
-.leaderBoardTableData {
-  border-top-style: hidden;
-  border-bottom-style: hidden;
-  text-align: center;
-}
-
-.leaderBoardContributorImg,
-.userProfileImg {
-  width: 30px;
-  height: 30px;
-  border: 2px solid orange;
-  border-radius: 50%;
-  margin-right: 10px;
-}
-
-.leaderBoardContributorName {
+.userHeader {
+  width: 30%;
+  min-width: 200px;
   text-align: left;
 }
 
-.leaderBoardHeading,
-.userProfileHeading {
-  margin-bottom: 3rem;
+.sortable {
+  min-width: 80px;
+  text-align: center !important;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.2s ease;
+
+  &:hover {
+    background-color: var(--bg-color);
+  }
+
+  &.active {
+    color: var(--primary-color);
+  }
+}
+
+.userRow {
+  transition: background-color 0.2s ease;
+
+  &:hover {
+    background-color: var(--bg-color);
+  }
+}
+
+.userCell {
+  padding: 0.75rem 1rem !important;
+}
+
+.userLink {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: var(--primary-color);
+  }
+}
+
+.avatar {
+  width: 36px;
+  height: 36px;
+  object-fit: cover;
+  border: 2px solid var(--border-color);
+  border-radius: 50%;
+  transition: border-color 0.2s ease;
+
+  .userLink:hover & {
+    border-color: var(--primary-color);
+  }
+}
+
+.userName {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.rank {
+  width: 50px;
+  font-weight: 600;
+  color: var(--text-secondary);
   text-align: center;
 }
 
-.profileDetailsContainer {
-  display: flex;
+.contributionCount {
+  font-weight: 600;
+  color: var(--primary-color);
+  text-align: center;
 }
 
-.profileLink {
-  display: flex;
-  align-items: center;
-  & span {
-    font-size: 12px;
-  }
-}
-
-.fontWeightNormal {
-  font-weight: 300;
-}
-
-.contributionTableCell {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-
-  .techStackDiv {
-    font-size: 14px;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    justify-content: center;
-
-    .techStackImg {
-      width: 20px;
-      height: 20px;
-    }
-  }
-  .techStackDivWrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-  }
-}
-
-.contributionTableCell div:last-of-type {
-  grid-column-end: -1;
-  display: flex;
-  flex-direction: column;
-}
-
-.totalContributions {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  div:first-child {
-    display: none;
-  }
-
-  div:last-child {
-    font-weight: 500;
-  }
-}
-
-.leaderboardTableWrapper {
-  table,
-  thead,
-  tbody,
-  th,
-  td,
-  tr {
-    display: block;
-  }
-  thead tr {
-    display: none;
-  }
-}
-
-tr.leaderboardRowContainer {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-areas:
-    'index name name name name name'
-    '. contributions contributions contributions contributions contributions';
-}
-
-td.index {
-  grid-area: index;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.techCell {
   font-weight: 500;
-}
-td.name {
-  grid-area: name;
-  display: flex;
-  align-items: center;
-  justify-content: start;
+  color: var(--text-secondary);
+  text-align: center;
 }
 
-td.contributions {
-  grid-area: contributions;
+.techIcon {
+  width: 24px;
+  height: 24px;
+  margin-right: 4px;
+  vertical-align: middle;
 }
 
-.leaderBoardContributorImg,
-.userProfileImg {
-  width: 40px;
-  height: 40px;
-  margin-right: 15px;
-}
+/* Responsive styles */
+@media (width <= 768px) {
+  .table {
+    font-size: 0.9rem;
 
-.leaderBoardContributorName {
-  font-size: 16px !important;
-  font-weight: 500;
-}
-
-@media screen and (min-width: 500px) {
-  .leaderboardTableWrapper {
-    table,
-    thead,
-    tbody,
     th,
-    td,
-    tr {
-      display: revert;
-    }
-    thead tr {
-      display: revert;
-    }
-
-    td.index {
-      font-weight: 400;
+    td {
+      padding: 0.75rem 0.5rem;
     }
   }
 
-  table.leaderboardTable {
-    font-size: 12px;
-    thead {
-      border-bottom: 1px solid rgba(#ccc, 0.5);
-    }
-  }
-  .leaderBoardContributorImg,
-  .userProfileImg {
-    width: 40px;
-    height: 40px;
-    margin-right: 15px;
+  .avatar {
+    width: 32px;
+    height: 32px;
   }
 
-  .leaderBoardContributorName {
-    font-size: 14px !important;
-    font-weight: 400;
+  .userName {
+    max-width: 120px;
   }
 
-  .contributionTableCell {
-    .techStackDiv {
-      display: block !important;
-      .techStackImg {
-        width: 15px;
-        height: 15px;
-      }
-      .techStackDivWrapper {
-        display: block !important;
-      }
-    }
-  }
-
-  .contributionTableCell div:last-of-type {
-    justify-content: space-between;
-    div:first-of-type {
-      display: block;
-    }
-  }
-
-  .totalContributions {
-    font-weight: 500;
+  .techIcon {
+    width: 20px;
+    height: 20px;
   }
 }
 
-@media screen and (min-width: 769px) {
-  table.leaderboardTable {
-    font-size: 14px;
+@media (width <= 480px) {
+  .leaderboard {
+    padding: 1rem 0.5rem;
   }
-  .contributionTableCell {
-    .techStackDiv {
-      font-size: 14px;
-      .techStackImg {
-        width: 20px;
-        height: 20px;
-      }
+
+  .table {
+    font-size: 0.85rem;
+
+    th,
+    td {
+      padding: 0.5rem 0.25rem;
     }
   }
-  .contributionTableCell div:last-of-type {
-    div {
-      font-size: 14px;
-    }
-  }
-}
 
-@media screen and (min-width: 960px) {
-  .leaderboardTableWrapper {
-    max-width: 70%;
-    padding: 10px 30px;
-  }
-  .leaderBoardContributorImg,
-  .userProfileImg {
-    width: 60px;
-    height: 60px;
-    margin-right: 20px;
-  }
-  .techStackImg {
-    width: 30px;
-    height: 30px;
-  }
-  .contributionTableCell {
-    max-width: 250px;
-    margin-left: auto;
-  }
-}
-
-@media screen and (min-width: 1440px) {
-  .leaderboardTableWrapper {
-    max-width: 820px;
+  .userName {
+    max-width: 100px;
   }
 }
