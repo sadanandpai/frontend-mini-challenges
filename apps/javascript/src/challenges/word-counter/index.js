@@ -49,8 +49,8 @@ input.addEventListener('keyup', function () {
     // need to convert seconds to minutes and hours
     if (seconds > 59) {
       const minutes = Math.floor(seconds / 60);
-      seconds = seconds - minutes * 60;
-      readingTime.innerHTML = minutes + 'm ' + seconds + 's';
+      const remainingSeconds = seconds - minutes * 60;
+      readingTime.innerHTML = minutes + 'm ' + remainingSeconds + 's';
     } else {
       readingTime.innerHTML = seconds + 's';
     }
