@@ -1,53 +1,78 @@
-.heading {
-  margin-bottom: 3rem;
+.contributors {
+  margin: 4rem 0;
   text-align: center;
-}
 
-.maintainerContainer {
-  text-align: center;
-  margin-bottom: 2rem;
+  &Title {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: var(--text-primary);
+  }
 
-  .contributor {
-    width: 80px;
-    height: 80px;
+  &Grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  &Card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+
+    .contributorsCardImg {
+      width: 60px;
+      height: 60px;
+      padding: 2px;
+      margin-bottom: 0.5rem;
+      object-fit: cover;
+      border: 2px solid var(--primary-color);
+      border-radius: 50%;
+    }
+
+    span {
+      max-width: 80px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+      white-space: nowrap;
+    }
+  }
+
+  &Link {
+    display: inline-block;
+    margin-top: 1rem;
+    font-weight: 500;
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+
+    &:hover {
+      text-decoration: underline;
+      opacity: 0.8;
+    }
   }
 }
 
-.contributionContainer {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: center;
-  list-style-type: none;
-}
+@media (width <= 768px) {
+  .contributors {
+    &Grid {
+      grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+      gap: 1rem;
+    }
 
-.contributor {
-  display: inline-block;
-  width: 60px;
-  height: 60px;
-  margin: 0 1rem;
-  transition: 0.5s all;
-
-  img {
-    width: 100%;
-    height: 100%;
-    border: 2px solid orange;
-    border-radius: 50%;
-  }
-
-  &:hover {
-    transform: scale(1.1);
-  }
-}
-
-@media screen and (width >= 768px) {
-  .maintainerContainer .contributor {
-    width: 120px;
-    height: 120px;
-  }
-
-  .contributor {
-    width: 80px;
-    height: 80px;
+    &Card {
+      img {
+        width: 50px;
+        height: 50px;
+      }
+    }
   }
 }

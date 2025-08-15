@@ -1,61 +1,80 @@
-import { IContributor, maintainersList } from './contributors-list';
 import { useEffect, useState } from 'react';
 
-import Contributor from './contributor';
+import { Contributor } from '@/pages/types';
 import axios from 'axios';
 import styles from './contribution.module.scss';
 import { useAutoAnimate } from '@formkit/auto-animate/react';
 
-async function getContributors() {
-  const response = await axios.get<{ login: string; avatar_url: string }[]>(
-    'https://api.github.com/repos/sadanandpai/frontend-mini-challenges/contributors?per_page=1000'
-  );
-  return response.data.map((contributor) => ({
-    username: contributor.login,
-    avatar: contributor.avatar_url?.match(/\d+/)?.[0] ?? '',
-  }));
-}
-
-function Contribution() {
-  const [contributors, setContributors] = useState<IContributor[]>([]);
-  const [maintainers] = useState(maintainersList);
-  const [parent] = useAutoAnimate();
+export function Contribution() {
+  const [contributors, setContributors] = useState<Contributor[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+  const [contributorsRef] = useAutoAnimate<HTMLDivElement>();
 
   useEffect(() => {
-    getContributors().then((list) => setContributors(list.slice(2)));
-  }, []);
+    const fetchContributors = async () => {
+      try {
+        const response = await axios.get<Contributor[]>(
+          'https://api.github.com/repos/sadanandpai/frontend-mini-challenges/contributors?per_page=100'
+        );
 
-  useEffect(() => {
-    const timer = setInterval(
-      () =>
-        setContributors((contributors) =>
-          contributors.map((x) => x).sort(() => 0.5 - Math.random())
-        ),
-      5000
-    );
-    return () => {
-      clearInterval(timer);
+        const data = response.data;
+        setContributors(data);
+      } catch (err) {
+        console.error('Error fetching contributors:', err);
+        setError('Failed to load contributors. Please try again later.');
+      } finally {
+        setLoading(false);
+      }
     };
+
+    fetchContributors();
   }, []);
 
   return (
     <>
-      <h2 className={styles.heading} id="contributors">
-        Contributors
-      </h2>
+      <section className={styles.contributors}>
+        <h2 className={styles.contributorsTitle}>Our Amazing Contributors</h2>
 
-      <section className={styles.maintainerContainer}>
-        <Contributor key={maintainers[0].username} {...maintainers[0]} />
-        <Contributor key={maintainers[1].username} {...maintainers[1]} />
-      </section>
-
-      <section className={styles.contributionContainer} ref={parent}>
-        {contributors.map((contributor) => (
-          <Contributor key={contributor.username} {...contributor} />
-        ))}
+        {loading ? (
+          <p>Loading contributors...</p>
+        ) : error ? (
+          <p>{error}</p>
+        ) : (
+          <>
+            <div className={styles.contributorsGrid} ref={contributorsRef}>
+              {contributors.map((contributor) => (
+                <a
+                  key={contributor.id}
+                  href={contributor.avatar_url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.contributorsCard}
+                  title={`${contributor.login} (${contributor.contributions} contributions)`}
+                >
+                  <img
+                    src={contributor.avatar_url}
+                    alt={contributor.login}
+                    loading="lazy"
+                    className={styles.contributorsCardImg}
+                    width={60}
+                    height={60}
+                  />
+                  <span>{contributor.login}</span>
+                </a>
+              ))}
+            </div>
+            <a
+              href="https://github.com/sadanandpai/frontend-mini-challenges/graphs/contributors"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.contributorsLink}
+            >
+              View all contributors on GitHub →
+            </a>
+          </>
+        )}
       </section>
     </>
   );
 }
-
-export default Contribution;

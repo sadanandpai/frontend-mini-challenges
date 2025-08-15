@@ -1,10 +1,10 @@
 .containerWrapper {
   width: 100%;
-  min-height: 100vh;
   height: 100%;
-  background-color: var(--bg-body);
-  color: var(--text-body);
+  min-height: 100vh;
   padding-block-end: 1rem;
+  color: var(--text-body);
+  background-color: var(--bg-body);
 }
 
 .container {

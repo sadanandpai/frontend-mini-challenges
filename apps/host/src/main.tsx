@@ -1,10 +1,12 @@
+import './index.css';
+
+import { RouterProvider, createHashRouter } from 'react-router-dom';
+
+import Challenges from './pages/challenges';
+import { HomePage } from './pages/home';
+import LeaderboardPage from './pages/leaderboard';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { RouterProvider, createHashRouter } from 'react-router-dom';
-import HomePage from './pages/home';
-import LeaderboardPage from './pages/leaderboard';
-import './index.css';
-import Challenges from './pages/challenges';
 import { ThemeWrapper } from './components/ThemeWrapper';
 
 const router = createHashRouter([

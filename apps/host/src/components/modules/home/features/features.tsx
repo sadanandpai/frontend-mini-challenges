@@ -1,35 +1,46 @@
+import { FeatureCard } from '@/pages/types';
 import styles from './features.module.scss';
 
-const features = [
+const features: FeatureCard[] = [
   {
-    title: 'Free and open-source',
-    info: 'Every challenge comes with the solution in multiple tech stacks & totally free forever',
+    title: '100+ Challenges',
+    description:
+      'Practice with a wide variety of frontend challenges that cover different concepts and difficulty levels.',
+    icon: '🎯',
   },
   {
-    title: 'Designed for interviews',
-    info: 'The challenges are handpicked collection from various interviews of top companies',
+    title: 'Multiple Frameworks',
+    description:
+      'Solutions available in JavaScript, React, Vue, Angular, and more. Learn your favorite tech stack!',
+    icon: '⚡',
   },
   {
-    title: 'Community vetted solutions',
-    info: 'Solutions are reviewed by the community & follows the best industry practices',
+    title: 'Interview Ready',
+    description:
+      'Prepare for technical interviews with real-world frontend challenges and solutions.',
+    icon: '💼',
+  },
+  {
+    title: 'Community Driven',
+    description:
+      'Join a community of developers contributing and learning together. Open source and free forever!',
+    icon: '👥',
   },
 ];
 
-function Features() {
+export function Features() {
   return (
-    <section id="whyUs">
-      <h2 className={styles.heading}>Why Us?</h2>
-
-      <div className={styles.features}>
-        {features.map((feature, idx) => (
-          <article key={idx}>
+    <section className={styles.features}>
+      <h2 className={styles.featuresTitle}>Why Frontend Mini Challenges?</h2>
+      <div className={styles.featuresGrid}>
+        {features.map((feature, index) => (
+          <div key={index} className={styles.featuresCard}>
+            <div style={{ fontSize: '2.5rem' }}>{feature.icon}</div>
             <h3>{feature.title}</h3>
-            <p>{feature.info}</p>
-          </article>
+            <p>{feature.description}</p>
+          </div>
         ))}
       </div>
     </section>
   );
 }
-
-export default Features;

@@ -24,18 +24,18 @@
     }
 
     span {
+      font-size: 1rem;
+      font-weight: 500;
       color: var(--text-body);
       text-align: center;
-      font-weight: 500;
-      font-size: 1rem;
     }
   }
 
   .heading {
+    font-size: 1.2rem;
+    font-weight: 500;
     color: var(--text-body);
     text-align: center;
-    font-weight: 500;
-    font-size: 1.2rem;
   }
 
   .right {
@@ -60,16 +60,17 @@
     width: var(--github-svg-size);
     height: var(--github-svg-size);
   }
+
   .hamburger {
     display: none;
 
     button {
-      border: none;
       background: transparent;
+      border: none;
     }
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (width <= 768px) {
     .github {
       display: none;
     }
@@ -110,21 +111,29 @@
     }
   }
 }
+
 .right:first-child {
   display: flex;
+}
+
+.themeButton {
+  color: var(--text-link);
+  background-color: inherit;
+  border: none;
 }
 
 .drawerContent {
   padding: 1rem;
 }
+
 .darkDrawer {
   .drawerListItem a {
-    color: #ffffff;
+    color: #fff;
   }
 
   .themeButton {
+    color: #fff;
     background-color: transparent;
-    color: #ffffff;
     transition: all 150ms ease-in-out;
   }
 
@@ -134,23 +143,25 @@
 }
 
 .drawerList {
-  list-style-type: none;
   padding: 0;
   margin: 0;
+  list-style-type: none;
 }
 
 .drawerListItem {
   margin-bottom: 1rem;
 }
+
 .ant-drawer-close {
   justify-content: flex-end;
   padding-left: 50px;
   margin-left: 500px;
 }
+
 .ant-drawer-header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 
   .ant-drawer-title {
     justify-content: flex-start;
@@ -159,10 +170,4 @@
   .ant-drawer-close {
     justify-content: flex-end;
   }
-}
-
-.themeButton {
-  border: none;
-  color: var(--text-link);
-  background-color: inherit;
 }

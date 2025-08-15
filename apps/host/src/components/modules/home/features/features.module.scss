@@ -1,38 +1,50 @@
-.heading {
-  margin-bottom: 3rem;
-  text-align: center;
-}
-
 .features {
-  display: flex;
-  flex-direction: column;
-  gap: max(5%, 50px);
-  width: 100%;
-  padding: 0 5%;
-  margin-bottom: 4rem;
+  margin: 8rem 0;
 
-  article {
-    flex-basis: 0;
-    flex-grow: 1;
-    padding: 1rem;
+  &Title {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: var(--text-primary);
     text-align: center;
+  }
+
+  &Grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 0 1rem;
+  }
+
+  &Card {
+    padding: 2rem;
+    text-align: center;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
     border-radius: 8px;
-    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 50%);
-    transition: all 0.5s;
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease;
+
+    &:hover {
+      box-shadow: 0 10px 20px rgb(0 0 0 / 10%);
+      transform: translateY(-5px);
+    }
 
     h3 {
-      font-size: 1.4rem;
-      font-weight: 500;
+      margin: 1rem 0;
+      color: var(--text-primary);
+    }
+
+    p {
+      line-height: 1.6;
+      color: var(--text-secondary);
     }
   }
 }
 
-article:hover {
-  transform: scale(1.1);
-}
-
-@media screen and (width >= 768px) {
-  .features {
-    flex-direction: row;
+@media (width <= 768px) {
+  .featuresGrid {
+    grid-template-columns: 1fr;
+    padding: 0;
   }
 }

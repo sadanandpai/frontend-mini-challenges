@@ -1,65 +1,44 @@
-import { coverTransparent, cssImg, jsImg, reactImg, vueImg, angularImg } from '@fmc/assets/images';
-import styles from './hero.module.scss';
-import { HashLink } from 'react-router-hash-link';
+import { angularImg, cssImg, jsImg, reactImg, vueImg } from '@fmc/assets/images';
 
-const allImg = [
-  {
-    title: 'css',
-    imgSrc: cssImg,
-  },
-  {
-    title: 'JS',
-    imgSrc: jsImg,
-  },
-  {
-    title: 'react',
-    imgSrc: reactImg,
-  },
-  {
-    title: 'vue',
-    imgSrc: vueImg,
-  },
-  {
-    title: 'angular',
-    imgSrc: angularImg,
-  },
+import { HashLink } from 'react-router-hash-link';
+import styles from './hero.module.scss';
+
+const techStack = [
+  { name: 'CSS', icon: cssImg },
+  { name: 'JavaScript', icon: jsImg },
+  { name: 'React', icon: reactImg },
+  { name: 'Vue', icon: vueImg },
+  { name: 'Angular', icon: angularImg },
 ];
 
-function Hero() {
+export function Hero() {
   return (
-    <main className={styles.hero}>
-      <div>
-        <h1>
-          Prepare for <span>UI coding Interviews</span>
-        </h1>
+    <section className={styles.hero}>
+      <h1 className={styles.heroTitle}>Prepare for UI coding Interviews</h1>
+      <p className={styles.heroDescription}>
+        Sharpen your skills by solving real-world frontend challenges. Practice with multiple
+        frameworks and learn from community solutions.
+      </p>
 
-        <p>by solving the collection of challenges from Frontend Mini Challenges</p>
-
-        <h3 className={styles.link}>
-          <HashLink to="javascript">Get Started</HashLink>
-        </h3>
-        <div className={styles.heroTechImg}>
-          {allImg.map((item) => (
-            <img
-              key={item.title}
-              src={item.imgSrc}
-              width={35}
-              height={35}
-              alt={`${item.title}-img`}
-              title={item.title}
-            />
-          ))}
-        </div>
+      <div className={styles.heroCta}>
+        <button className={`${styles.button} ${styles.buttonPrimary}`}>
+          <HashLink to="javascript">Explore Challenges</HashLink>
+        </button>
+        <a
+          href="https://github.com/sadanandpai/frontend-mini-challenges"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={`${styles.button} ${styles.buttonSecondary}`}
+        >
+          Contribute
+        </a>
       </div>
 
-      <figure className={styles.figure}>
-        <img className={styles.heroImage} src={coverTransparent} alt="brand" />
-        <figcaption>
-          A collection of frontend challenges for learning and interview preparation
-        </figcaption>
-      </figure>
-    </main>
+      <div className={styles.heroTechStack}>
+        {techStack.map((tech) => (
+          <img key={tech.name} src={tech.icon} alt={tech.name} title={tech.name} loading="lazy" />
+        ))}
+      </div>
+    </section>
   );
 }
-
-export default Hero;

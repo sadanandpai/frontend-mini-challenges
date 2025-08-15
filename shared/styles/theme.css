@@ -1,13 +1,11 @@
 :root {
   /* Default body colors */
-  --bg-body: #f3f4f6;
+  --bg-body: #fff;
   --text-body: #111827;
   --bg-navbar: #fff;
   --shadow-navbar: rgb(0 0 0 / 10%);
-  --bg-navbar-logo-img: transparent;
 
   /* Footer-specific colors */
-  --bg-footer: #f9fafb;
   --shadow-footer: rgb(0 0 0 / 10%);
 
   /* Links */
@@ -19,6 +17,16 @@
   --card-shadow-hover: rgb(0 0 0 / 30%);
   --card-border: rgb(250 250 250);
   --difficulty-color: '';
+
+  /* Theme Colors */
+  --primary-color: #4a6cf7;
+  --primary-dark: #3a5ce4;
+  --primary-rgb: 74, 108, 247;
+  --text-primary: #1e293b;
+  --text-secondary: #64748b;
+  --card-bg: #fff;
+  --border-color: #e2e8f0;
+  --bg-color: #f8fafc;
 }
 
 /* Dark override for above variables */
@@ -31,7 +39,6 @@
   --shadow-navbar: rgb(150 150 150 / 20%);
 
   /* Footer-specific colors (same as navbar) */
-  --bg-footer: var(--bg-body);
   --shadow-footer: #1f2937;
 
   /* Links */
@@ -44,4 +51,11 @@
   --card-border: rgb(70 70 70);
 
   color-scheme: dark;
+
+  /* Theme Colors */
+  --text-primary: #f1f5f9;
+  --text-secondary: #94a3b8;
+  --card-bg: #1e293b;
+  --border-color: #334155;
+  --bg-color: #0f172a;
 }
