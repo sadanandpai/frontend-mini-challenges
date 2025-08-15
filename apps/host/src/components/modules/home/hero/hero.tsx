@@ -21,9 +21,10 @@ export function Hero() {
       </p>
 
       <div className={styles.heroCta}>
-        <button className={`${styles.button} ${styles.buttonPrimary}`}>
-          <HashLink to="javascript">Explore Challenges</HashLink>
-        </button>
+        <HashLink className={`${styles.button} ${styles.buttonPrimary}`} to="javascript">
+          Explore Challenges
+        </HashLink>
+
         <a
           href="https://github.com/sadanandpai/frontend-mini-challenges"
           target="_blank"

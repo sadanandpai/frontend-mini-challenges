@@ -1,16 +1,17 @@
-import { useEffect } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
-import Navbar from '@/components/common/navbar/navbar';
-import ScrollBtn from '@/components/common/scroll-to-top/scroll-btn';
-import ChallengeGrid from '@/components/modules/challenges/challenge-grid/challenge-grid';
-import { angularImg, jsImg, reactImg, cssImg, vueImg } from '@fmc/assets/images';
 import {
   angularChallenges,
+  cssChallenges,
   jsChallenges,
   reactChallenges,
-  cssChallenges,
   vueChallenges,
 } from '@fmc/data/content';
+import { angularImg, cssImg, jsImg, reactImg, vueImg } from '@fmc/assets/images';
+import { useNavigate, useParams } from 'react-router-dom';
+
+import ChallengeGrid from '@/components/modules/challenges/challenge-grid/challenge-grid';
+import { Navbar } from '@/components/common/navbar/navbar';
+import ScrollBtn from '@/components/common/scroll-to-top/scroll-btn';
+import { useEffect } from 'react';
 
 const {
   VITE_PATH,

@@ -1,10 +1,10 @@
 import Leaderboard from '@/components/modules/leaderboard/leaderboard';
-import Navbar from '@/components/common/navbar/navbar';
+import { Navbar } from '@/components/common/navbar/navbar';
 
 function LeaderboardPage() {
   return (
     <>
-      <Navbar subheading="Leaderboard" />
+      <Navbar />
       <Leaderboard />
     </>
   );

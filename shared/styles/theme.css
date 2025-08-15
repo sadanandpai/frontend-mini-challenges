@@ -2,7 +2,6 @@
   /* Default body colors */
   --bg-body: #fff;
   --text-body: #111827;
-  --bg-navbar: #fff;
   --shadow-navbar: rgb(0 0 0 / 10%);
 
   /* Footer-specific colors */
@@ -35,7 +34,6 @@
   /* Default body colors */
   --bg-body: #030712;
   --text-body: #e5e7eb;
-  --bg-navbar: #030712;
   --shadow-navbar: rgb(150 150 150 / 20%);
 
   /* Footer-specific colors (same as navbar) */
