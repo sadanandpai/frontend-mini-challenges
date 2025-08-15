@@ -1,13 +1,24 @@
-import CustomSelect from '@/components/common/multi-select/multi-select';
-import { Link } from 'react-router-dom';
-import styles from './challenge-grid.module.scss';
-import { useMemo } from 'react';
-import { contributors } from '@fmc/data/content';
 import { ETag, OptionType } from '@fmc/data/types';
-import { Difficulties } from '@fmc/data/constants';
-import { Search } from 'lucide-react';
+
 import CustomCheckbox from '@/components/common/checkbox/checkbox';
+import { CustomSelect } from '@/components/common/multi-select/multi-select';
+import { Difficulties } from '@fmc/data/constants';
+import { Link } from 'react-router-dom';
 import Tags from '@/components/common/tags/tags';
+import { contributors } from '@fmc/data/content';
+import styles from './challenge-grid.module.scss';
+
+const developersMap = new Map();
+for (const [key, value] of contributors) {
+  developersMap.set(key, value);
+}
+
+const developers: { value: string; label: string }[] = [];
+developersMap.forEach((value, key) => {
+  if (key !== '' && value?.name !== '') {
+    developers.push({ value: key, label: value?.name });
+  }
+});
 
 interface Props {
   searchInput: string;
@@ -24,7 +35,7 @@ interface Props {
   newChallenge: boolean;
 }
 
-const ChallengeFilters = ({
+export function ChallengeFilters({
   searchInput,
   setSearchInput,
   optionSelected,
@@ -37,39 +48,22 @@ const ChallengeFilters = ({
   setSelectedChallengesByTags,
   setNewChallenge,
   newChallenge,
-}: Props) => {
-  const DeveloperList = useMemo(() => {
-    const developerList = new Map();
-    for (const [key, value] of contributors) {
-      developerList.set(key, value);
-    }
-
-    const data: { value: string; label: string }[] = [];
-    developerList.forEach((value, key) => {
-      if (key !== '' && value?.name !== '') {
-        data.push({ value: key, label: value?.name });
-      }
-    });
-    return data;
-  }, []);
-
+}: Props) {
   return (
     <div className={styles.filterOptionWrapper}>
       <div className={styles.searchInputWrapper}>
         <input
-          type="text"
+          type="search"
           name="searchTextInput"
-          placeholder="Search challenge..."
+          placeholder="Search Challenge"
           className={styles.searchInput}
           value={searchInput}
           onChange={(e) => setSearchInput(e.target.value.trim())}
         />
-
-        <Search size={15} className={styles.searchIcon} />
       </div>
 
       <CustomSelect
-        data={DeveloperList}
+        data={developers}
         optionSelected={optionSelected}
         setOptionSelected={(val: OptionType[]) => setOptionSelected(val)}
         selectPlaceholder="Select Developers"
@@ -81,6 +75,7 @@ const ChallengeFilters = ({
         setOptionSelected={(val: OptionType[]) => setSelectedDifficulties(val)}
         selectPlaceholder="Select Difficulties"
       />
+
       <CustomCheckbox
         className={styles.checkbox}
         checked={newChallenge}
@@ -107,6 +102,4 @@ const ChallengeFilters = ({
       </div>
     </div>
   );
-};
-
-export default ChallengeFilters;
+}

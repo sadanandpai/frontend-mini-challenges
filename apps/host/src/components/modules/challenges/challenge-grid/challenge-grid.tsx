@@ -1,10 +1,11 @@
-import { useEffect, useState } from 'react';
 import { ETag, IChallenge, OptionType } from '@fmc/data/types';
-import { contributors } from '@fmc/data/content';
+import { filtersHelper, getChallengesByid } from '@fmc/data/utils';
+import { useEffect, useState } from 'react';
+
 import Challenge from './challenge';
+import { ChallengeFilters } from './challenge-filter';
+import { contributors } from '@fmc/data/content';
 import styles from './challenge-grid.module.scss';
-import ChallengeFilters from './challenge-filter';
-import { getChallengesByid, filtersHelper } from '@fmc/data/utils';
 
 interface Props {
   challenges: IChallenge[];
