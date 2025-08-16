@@ -1,0 +1,1 @@
+import"./header-DzLLJonO.js";import"./navbar-kG32ew4P.js";const e=document.getElementById("themeSwitch"),t=document.getElementById("innnerThemeSwitch");e.addEventListener("change",function(){e.checked?(document.body.classList.add("dark"),t.checked=!0):(document.body.classList.remove("dark"),t.checked=!1)});
