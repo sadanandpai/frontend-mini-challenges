@@ -7,8 +7,8 @@
   gap: 1rem;
   align-items: center;
   justify-content: space-between;
-  padding: 0.75rem;
-  margin-bottom: 1rem;
+  padding: 1rem;
+  margin-bottom: 2rem;
   box-shadow: 0 4px 4px 0 rgb(0 0 0 / 10%);
 
   .left {
@@ -26,13 +26,13 @@
       transform: scaleY(2);
     }
 
-    .logo {
-      height: 40px;
+    img {
+      width: 32px;
+      height: 32px;
+    }
 
-      img {
-        width: 40px;
-        height: 40px;
-      }
+    .logo {
+      height: 32px;
     }
   }
 
@@ -47,11 +47,6 @@
 
     input {
       display: none;
-    }
-
-    img {
-      width: 30px;
-      height: 30px;
     }
 
     .menu {

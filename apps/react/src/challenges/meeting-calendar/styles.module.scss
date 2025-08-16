@@ -1,9 +1,9 @@
 .layout {
   display: flex;
+  gap: 2rem;
   align-items: center;
   justify-content: center;
   margin: 1rem 0;
-  gap: 2rem;
 
   button {
     padding: 0.25rem;
@@ -18,19 +18,19 @@
   .hourLabels {
     display: flex;
     flex-direction: column;
-    margin-right: 1rem;
     justify-content: space-between;
     width: 8ch;
+    margin-right: 1rem;
   }
 
   .day {
     position: relative;
-    margin-top: 0.5rem;
-    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    width: 100%;
     height: calc(100% - 1rem);
+    margin-top: 0.5rem;
     border-bottom: 1px solid #ccc;
 
     .hourSlot {
@@ -44,26 +44,26 @@
 
     .meeting {
       position: absolute;
-      opacity: 0.8;
-      overflow: hidden;
-      border-radius: 4px;
-      background-color: rgb(134, 198, 219);
-      outline: 1px solid white;
-      border: 1px solid gray;
-      transition: background-color 0.5s;
       display: flex;
       flex-direction: column;
       gap: 4px;
       padding: 4px;
+      overflow: hidden;
       font-size: small;
+      outline: 1px solid white;
+      background-color: rgb(134, 198, 219);
+      border: 1px solid gray;
+      border-radius: 4px;
+      opacity: 0.8;
+      transition: background-color 0.5s;
 
       span:first-child {
         font-weight: bold;
       }
 
       &:focus {
-        background-color: rgb(57, 196, 243);
         z-index: 1;
+        background-color: rgb(57, 196, 243);
       }
     }
   }
