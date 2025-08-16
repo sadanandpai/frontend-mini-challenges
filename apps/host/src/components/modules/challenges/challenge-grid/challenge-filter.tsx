@@ -50,41 +50,43 @@ export function ChallengeFilters({
   newChallenge,
 }: Props) {
   return (
-    <div className={styles.filterOptionWrapper}>
-      <div className={styles.searchInputWrapper}>
-        <input
-          type="search"
-          name="searchTextInput"
-          placeholder="Search Challenge"
-          className={styles.searchInput}
-          value={searchInput}
-          onChange={(e) => setSearchInput(e.target.value.trim())}
+    <>
+      <div className={styles.filterOptionWrapper}>
+        <div className={styles.searchInputWrapper}>
+          <input
+            type="search"
+            name="searchTextInput"
+            placeholder="Search Challenge"
+            className={styles.searchInput}
+            value={searchInput}
+            onChange={(e) => setSearchInput(e.target.value.trim())}
+          />
+        </div>
+
+        <CustomSelect
+          data={developers}
+          optionSelected={optionSelected}
+          setOptionSelected={(val: OptionType[]) => setOptionSelected(val)}
+          selectPlaceholder="Select Developers"
         />
+
+        <CustomSelect
+          data={Difficulties}
+          optionSelected={selectedDifficulties}
+          setOptionSelected={(val: OptionType[]) => setSelectedDifficulties(val)}
+          selectPlaceholder="Select Difficulties"
+        />
+
+        <CustomCheckbox
+          className={styles.checkbox}
+          checked={newChallenge}
+          setNewChallenge={setNewChallenge}
+          label="New Challenges"
+          containerClass={styles.checkboxContainer}
+        />
+
+        <Tags tag={tag} setTag={setTag} setSelectedChallengesByTags={setSelectedChallengesByTags} />
       </div>
-
-      <CustomSelect
-        data={developers}
-        optionSelected={optionSelected}
-        setOptionSelected={(val: OptionType[]) => setOptionSelected(val)}
-        selectPlaceholder="Select Developers"
-      />
-
-      <CustomSelect
-        data={Difficulties}
-        optionSelected={selectedDifficulties}
-        setOptionSelected={(val: OptionType[]) => setSelectedDifficulties(val)}
-        selectPlaceholder="Select Difficulties"
-      />
-
-      <CustomCheckbox
-        className={styles.checkbox}
-        checked={newChallenge}
-        setNewChallenge={setNewChallenge}
-        label="New Challenges"
-        containerClass={styles.checkboxContainer}
-      />
-
-      <Tags tag={tag} setTag={setTag} setSelectedChallengesByTags={setSelectedChallengesByTags} />
 
       <div className={styles.filterByTechWrapper}>
         {links.map((link) => (
@@ -100,6 +102,6 @@ export function ChallengeFilters({
           </Link>
         ))}
       </div>
-    </div>
+    </>
   );
 }

@@ -34,10 +34,9 @@
 
 .filterByTechWrapper {
   display: flex;
-  grid-column-end: -1;
-  gap: 10px;
+  gap: 1rem;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
 
   & > a {
     display: inline-block;

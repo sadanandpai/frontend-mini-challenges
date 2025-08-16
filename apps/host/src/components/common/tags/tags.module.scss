@@ -1,22 +1,23 @@
 .segment {
   display: flex;
-  justify-self: flex-start;
+  grid-column: -2;
+  justify-self: flex-end;
   width: 70%;
   border: 2px solid #ccc;
 }
 
 .segmentBtn {
-  background-color: var(--shadow-footer);
   width: 50%;
-  border: none;
   text-transform: capitalize;
+  background-color: var(--shadow-footer);
+  border: none;
 
   &[data-active='true'] {
-    background-color: rgb(75, 75, 255);
-    border: none;
     padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
     color: white;
+    cursor: pointer;
+    background-color: rgb(75 75 255);
+    border: none;
+    border-radius: 5px;
   }
 }
