@@ -1,40 +1,126 @@
-/* App.module.css */
-
+/* Container */
 .container {
-    text-align: center;
-    margin: 50px;
+  max-width: 600px;
+  margin: 2rem auto;
+}
+
+/* Form */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Input Group */
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* Labels */
+.label {
+  margin-bottom: 0.25rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #2d3748;
+}
+
+/* Input Fields */
+.input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  background-color: #fff;
+  border: 2px solid #e2e8f0;
+  border-radius: 0.5rem;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #4299e1;
+  box-shadow: 0 0 0 3px #4299e133;
+}
+
+.input:disabled {
+  cursor: not-allowed;
+  background-color: #f7fafc;
+  opacity: 0.8;
+}
+
+/* Buttons */
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3rem;
+  padding: 0.75rem 1.5rem;
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+  background-color: #4299e1;
+  border: none;
+  border-radius: 0.5rem;
+  transition:
+    background-color 0.2s,
+    transform 0.1s;
+}
+
+.button:disabled {
+  cursor: not-allowed;
+  background-color: #a0aec0;
+  opacity: 0.8;
+}
+
+.button:hover:not(:disabled) {
+  background-color: #3182ce;
+}
+
+.button:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+/* Results */
+.result {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  margin-top: 1.5rem;
+  font-weight: 500;
+  text-align: center;
+  border-left: 4px solid transparent;
+  border-radius: 0.5rem;
+  animation: fade-in 0.3s ease-in-out;
+}
+
+.success {
+  color: #2f855a;
+  background-color: #f0fff4;
+  border-left-color: #48bb78;
+}
+
+/* Animations */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
   }
-  
-  h1 {
-    color: #333;
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  .inputContainer {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-  }
-  
-  .input {
-    padding: 10px;
-    margin: 0 10px;
-  }
-  
-  .button {
-    padding: 10px;
-    background-color: #4caf50;
-    color: white;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .button:hover {
-    background-color: #45a049;
-  }
-  
-  .result {
-    color: #333;
-    font-weight: bold;
-    margin-top: 20px;
-  }
-  
+}
+
+/* Focus styles for keyboard navigation */
+:focus-visible {
+  outline: 3px solid #90cdf4;
+  outline-offset: 2px;
+}
