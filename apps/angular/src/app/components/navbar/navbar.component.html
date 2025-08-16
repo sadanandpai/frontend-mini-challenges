@@ -2,10 +2,7 @@
   <div class="left">
     <a [href]="backURL" class="back"> &lt; </a>
     <a [href]="homeURL" class="logo">
-      <img
-        src="https://github.com/sadanandpai/frontend-mini-challenges/raw/main/shared/assets/core/logo.png"
-        alt="logo"
-      />
+      <img src="{{ repoURL }}/raw/main/shared/assets/core/logo.png" alt="logo" />
     </a>
   </div>
 
@@ -31,12 +28,7 @@
             <img src="assets/icons/code.svg" alt="source code" />
             <span class="mobile">Source code</span>
           </a>
-          <a
-            target="blank"
-            class="github"
-            title="Github Repo"
-            href="https://github.com/sadanandpai/frontend-mini-challenges/"
-          >
+          <a target="blank" class="github" title="Github Repo" href="{{ repoURL }}">
             <img src="assets/icons/github.svg" alt="github repo" />
             <span class="mobile">Github Repo</span>
           </a>

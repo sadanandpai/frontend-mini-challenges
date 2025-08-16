@@ -10,6 +10,7 @@
 <script setup lang="ts">
 import '@fmc/components';
 import { onMounted } from 'vue';
+import { REPO_URL } from '@fmc/data/content';
 const { VITE_PATH, VITE_HOST_URL, DEV } = import.meta.env;
 
 // import { logo } from '@fmc/assets/images';
@@ -20,8 +21,7 @@ interface ChallengeModalElement extends HTMLElement {
 
 const backURL = DEV ? `${VITE_HOST_URL}${VITE_PATH}/#/vue` : `/${VITE_PATH}/#/vue/`;
 const homeURL = DEV ? `${VITE_HOST_URL}${VITE_PATH}/` : `/${VITE_PATH}/`;
-const sourceCodeBaseURL =
-  'https://github.com/sadanandpai/frontend-mini-challenges/tree/main/apps/vue/src/challenges/';
+const sourceCodeBaseURL = `${REPO_URL}/tree/main/apps/vue/src/challenges/`;
 
 const props = defineProps({
   title: {

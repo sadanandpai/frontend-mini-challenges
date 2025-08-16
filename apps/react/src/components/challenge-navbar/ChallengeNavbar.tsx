@@ -2,6 +2,8 @@ import '@fmc/components';
 
 import { useEffect, useRef } from 'react';
 
+import { REPO_URL } from '@fmc/data/content';
+
 const { VITE_PATH, VITE_HOST_URL, DEV } = import.meta.env;
 
 const backURL = DEV ? `${VITE_HOST_URL}${VITE_PATH}/#/react` : `/${VITE_PATH}/#/react/`;
@@ -17,8 +19,7 @@ interface Props {
   sourceCodeLink?: string;
 }
 
-const reactSourceCodeBaseURL =
-  'https://github.com/sadanandpai/frontend-mini-challenges/tree/main/apps/react/src/challenges/';
+const reactSourceCodeBaseURL = `${REPO_URL}/tree/main/apps/react/src/challenges/`;
 
 function ChallengeNavbar({ title, description, sourceCodeLink }: Props) {
   const modalRef = useRef<{

@@ -2,6 +2,7 @@ import { Moon, Sun, Trophy } from 'lucide-react';
 import { logo, logo_dark } from '@fmc/assets/images';
 
 import { Link } from 'react-router-dom';
+import { REPO_URL } from '@fmc/data/content';
 import { ThemeContext } from '@/components/theme-context';
 import { githubSVG } from '@fmc/assets/images';
 import styles from './navbar.module.scss';
@@ -28,7 +29,7 @@ export function Navbar() {
           </Link>
 
           <a
-            href="https://github.com/sadanandpai/frontend-mini-challenges"
+            href={REPO_URL}
             target="_blank"
             rel="noopener noreferrer"
             className={styles.githubLink}

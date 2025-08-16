@@ -1,4 +1,5 @@
 import { HashLink } from 'react-router-hash-link';
+import { REPO_URL } from '@fmc/data/content';
 import { githubSVG } from '@fmc/assets/images';
 import styles from './footer.module.scss';
 
@@ -12,7 +13,7 @@ export function Footer() {
           <h4>Frontend Mini Challenges</h4>
           <p>Sharpen your frontend development skills with our collection of mini challenges.</p>
           <a
-            href="https://github.com/sadanandpai/frontend-mini-challenges"
+            href={REPO_URL}
             target="_blank"
             rel="noopener noreferrer"
             className={styles.githubLink}
@@ -30,20 +31,12 @@ export function Footer() {
               <HashLink to="javascript">Challenges</HashLink>
             </li>
             <li>
-              <a
-                href="https://github.com/sadanandpai/frontend-mini-challenges"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <a href={REPO_URL} target="_blank" rel="noopener noreferrer">
                 Contribute
               </a>
             </li>
             <li>
-              <a
-                href="https://github.com/sadanandpai/frontend-mini-challenges/issues"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <a href={`${REPO_URL}/issues`} target="_blank" rel="noopener noreferrer">
                 Report an Issue
               </a>
             </li>

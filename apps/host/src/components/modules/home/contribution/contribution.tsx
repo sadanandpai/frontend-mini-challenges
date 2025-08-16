@@ -1,3 +1,4 @@
+import { REPO_CONTRIBUTORS_API, REPO_URL } from '@fmc/data/content';
 import { useEffect, useState } from 'react';
 
 import { Contributor } from '@/pages/types';
@@ -14,9 +15,7 @@ export function Contribution() {
   useEffect(() => {
     const fetchContributors = async () => {
       try {
-        const response = await axios.get<Contributor[]>(
-          'https://api.github.com/repos/sadanandpai/frontend-mini-challenges/contributors?per_page=100'
-        );
+        const response = await axios.get<Contributor[]>(`${REPO_CONTRIBUTORS_API}?per_page=100`);
 
         const data = response.data;
         setContributors(data);
@@ -46,7 +45,7 @@ export function Contribution() {
               {contributors.map((contributor) => (
                 <a
                   key={contributor.id}
-                  href={contributor.avatar_url}
+                  href={contributor.html_url}
                   target="_blank"
                   rel="noopener noreferrer"
                   className={styles.contributorsCard}
@@ -65,7 +64,7 @@ export function Contribution() {
               ))}
             </div>
             <a
-              href="https://github.com/sadanandpai/frontend-mini-challenges/graphs/contributors"
+              href={`${REPO_URL}/graphs/contributors`}
               target="_blank"
               rel="noopener noreferrer"
               className={styles.contributorsLink}

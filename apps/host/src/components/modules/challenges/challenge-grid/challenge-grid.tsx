@@ -1,10 +1,10 @@
 import { ETag, IChallenge, OptionType } from '@fmc/data/types';
+import { REPO_URL, contributors } from '@fmc/data/content';
 import { filtersHelper, getChallengesByid } from '@fmc/data/utils';
 import { useEffect, useState } from 'react';
 
 import Challenge from './challenge';
 import { ChallengeFilters } from './challenge-filter';
-import { contributors } from '@fmc/data/content';
 import styles from './challenge-grid.module.scss';
 
 interface Props {
@@ -101,7 +101,7 @@ function ChallengeGrid({ challenges, linkPrefix, links, techImg }: Props) {
           <div>
             maybe try adding one{' '}
             <a
-              href="https://github.com/sadanandpai/frontend-mini-challenges/blob/main/CONTRIBUTING.md#challenge-contribution"
+              href={`${REPO_URL}/blob/main/CONTRIBUTING.md#challenge-contribution`}
               target="_blank"
               rel="noopener noreferrer"
             >

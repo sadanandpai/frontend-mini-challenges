@@ -10,7 +10,12 @@
     </div>
     <p>
       Increment / Decrement by
-      <input type="number" type="number" [formControl]="inputControl" />
+      <input
+        type="number"
+        type="number"
+        [formControl]="inputControl"
+        (blur)="onBlur(inputControl.value)"
+      />
     </p>
 
     <button (click)="reset()">Reset</button>

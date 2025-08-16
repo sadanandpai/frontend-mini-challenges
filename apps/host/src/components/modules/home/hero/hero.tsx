@@ -1,6 +1,7 @@
 import { angularImg, cssImg, jsImg, reactImg, vueImg } from '@fmc/assets/images';
 
 import { HashLink } from 'react-router-hash-link';
+import { REPO_URL } from '@fmc/data/content';
 import styles from './hero.module.scss';
 
 const techStack = [
@@ -26,7 +27,7 @@ export function Hero() {
         </HashLink>
 
         <a
-          href="https://github.com/sadanandpai/frontend-mini-challenges"
+          href={REPO_URL}
           target="_blank"
           rel="noopener noreferrer"
           className={`${styles.button} ${styles.buttonSecondary}`}

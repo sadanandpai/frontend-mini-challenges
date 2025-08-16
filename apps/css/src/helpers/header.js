@@ -3,6 +3,8 @@ import '@fmc/shared-styles/base';
 import '@fmc/shared-styles/components';
 import '@fmc/shared-styles/utilities';
 import './navbar.ts';
+
+import { REPO_URL } from '@fmc/data/content';
 import { cssChallenges } from '@fmc/data/content';
 
 const metaUTF = document.createElement('meta');
@@ -19,10 +21,7 @@ metaHTTP.setAttribute('content', 'IE=edge');
 const favIcon = document.createElement('link');
 favIcon.setAttribute('rel', 'icon');
 favIcon.setAttribute('type', 'image/svg+xml');
-favIcon.setAttribute(
-  'href',
-  'https://github.com/sadanandpai/frontend-mini-challenges/raw/main/shared/assets/core/logo.png'
-);
+favIcon.setAttribute('href', `${REPO_URL}/raw/main/shared/assets/core/logo.png`);
 
 // Add all tags to the head
 const headTags = [metaUTF, metaName, metaHTTP, favIcon];
