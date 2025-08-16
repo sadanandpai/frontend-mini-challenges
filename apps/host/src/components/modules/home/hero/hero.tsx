@@ -1,4 +1,4 @@
-import { angularImg, cssImg, jsImg, reactImg, vueImg } from '@fmc/assets/images';
+import { angularImg, cssImg, jsImg, reactImg, vueImg } from '@fmc/assets';
 
 import { HashLink } from 'react-router-hash-link';
 import { REPO_URL } from '@fmc/data/content';

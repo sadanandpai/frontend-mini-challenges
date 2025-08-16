@@ -1,6 +1,8 @@
-import navbarHTML from './navbar.html?raw';
 import './navbar.scss';
-import { logo, githubSVG, youtubeSVG, codeSVG } from '@fmc/assets/images';
+
+import { codeSVG, githubSVG, logo, youtubeSVG } from '@fmc/assets';
+
+import navbarHTML from './navbar.html?raw';
 
 export class Navbar extends HTMLElement {
   updateYoutubeLink() {

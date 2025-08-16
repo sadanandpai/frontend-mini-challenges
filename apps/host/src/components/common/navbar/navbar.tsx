@@ -1,10 +1,10 @@
 import { Moon, Sun, Trophy } from 'lucide-react';
-import { logo, logo_dark } from '@fmc/assets/images';
+import { logo, logo_dark } from '@fmc/assets';
 
 import { Link } from 'react-router-dom';
 import { REPO_URL } from '@fmc/data/content';
 import { ThemeContext } from '@/components/theme-context';
-import { githubSVG } from '@fmc/assets/images';
+import { githubSVG } from '@fmc/assets';
 import styles from './navbar.module.scss';
 import { useContext } from 'react';
 

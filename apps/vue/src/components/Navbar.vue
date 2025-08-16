@@ -13,8 +13,6 @@ import { onMounted } from 'vue';
 import { REPO_URL } from '@fmc/data/content';
 const { VITE_PATH, VITE_HOST_URL, DEV } = import.meta.env;
 
-// import { logo } from '@fmc/assets/images';
-
 interface ChallengeModalElement extends HTMLElement {
   showModal: (options: { title: string; description: string }) => void;
 }

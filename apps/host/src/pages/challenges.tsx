@@ -5,7 +5,7 @@ import {
   reactChallenges,
   vueChallenges,
 } from '@fmc/data/content';
-import { angularImg, cssImg, jsImg, reactImg, vueImg } from '@fmc/assets/images';
+import { angularImg, cssImg, jsImg, reactImg, vueImg } from '@fmc/assets';
 import { useNavigate, useParams } from 'react-router-dom';
 
 import ChallengeGrid from '@/components/modules/challenges/challenge-grid/challenge-grid';

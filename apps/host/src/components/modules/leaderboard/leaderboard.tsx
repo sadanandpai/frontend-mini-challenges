@@ -1,4 +1,4 @@
-import { angularImg, cssImg, jsImg, reactImg, vueImg } from '@fmc/assets/images';
+import { angularImg, cssImg, jsImg, reactImg, vueImg } from '@fmc/assets';
 
 import { generateLeaderboardData } from '@/helpers/leaderboard';
 import styles from './leaderboard.module.scss';

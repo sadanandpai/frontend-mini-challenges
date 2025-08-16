@@ -1,6 +1,6 @@
 import { HashLink } from 'react-router-hash-link';
 import { REPO_URL } from '@fmc/data/content';
-import { githubSVG } from '@fmc/assets/images';
+import { githubSVG } from '@fmc/assets';
 import styles from './footer.module.scss';
 
 export function Footer() {
