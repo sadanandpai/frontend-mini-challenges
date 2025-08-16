@@ -19,12 +19,14 @@ export const AsyncControls = forwardRef(function AsyncControls(
     decrement: null,
     increment: null,
   });
-
+  const [disabled, setDisabled] = useState<boolean>(false);
   function decrementAsync() {
     const stepValue = step;
+    setDisabled(true);
     const timerId = setTimeout(() => {
       stepBy(-stepValue);
       setTimerIds((state) => ({ ...state, decrement: null }));
+      setDisabled(false);
     }, delay * 1000);
 
     setTimerIds((state) => ({ ...state, decrement: timerId }));
@@ -32,9 +34,11 @@ export const AsyncControls = forwardRef(function AsyncControls(
 
   function incrementAsync() {
     const stepValue = step;
+    setDisabled(true);
     const timerId = setTimeout(() => {
       stepBy(+stepValue);
       setTimerIds((state) => ({ ...state, increment: null }));
+      setDisabled(false);
     }, delay * 1000);
 
     setTimerIds((state) => ({ ...state, increment: timerId }));
@@ -62,7 +66,7 @@ export const AsyncControls = forwardRef(function AsyncControls(
       <button
         onClick={decrementAsync}
         aria-label="Async Decrement"
-        disabled={!!timerIds.decrement}
+        disabled={!!timerIds.decrement || disabled}
         className={styles.asyncButton}
       >
         async -
@@ -71,7 +75,7 @@ export const AsyncControls = forwardRef(function AsyncControls(
       <button
         onClick={incrementAsync}
         aria-label="Async Increment"
-        disabled={!!timerIds.increment}
+        disabled={!!timerIds.increment || disabled}
         className={styles.asyncButton}
       >
         + async
