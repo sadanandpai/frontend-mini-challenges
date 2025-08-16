@@ -3,15 +3,18 @@
   <h3>Collection of frontend challenges for learning and interviews</h3>
   <a href="https://sadanandpai.github.io/frontend-mini-challenges/"><img src="https://github.com/sadanandpai/frontend-mini-challenges/raw/main/shared/assets/core/cover.png" alt="web programming" width="500px" /></a>
 
-[![](https://img.shields.io/github/stars/sadanandpai/frontend-mini-challenges?style=for-the-badge)](#stars)
-[![](https://img.shields.io/github/forks/sadanandpai/frontend-mini-challenges?style=for-the-badge)](#forks)
+  [![](https://img.shields.io/github/stars/sadanandpai/frontend-mini-challenges?style=for-the-badge)](#stars)
+  [![](https://img.shields.io/github/forks/sadanandpai/frontend-mini-challenges?style=for-the-badge)](#forks)
 
+  ![Static Badge](https://img.shields.io/coderabbit/prs/github/sadanandpai/frontend-mini-challenges)
+  
   <p>Show your support by giving a ⭐ to this repo</p>
 
   <h3>
     <a href="https://sadanandpai.github.io/frontend-mini-challenges/">Explore all challenges</a>
   </h3>
 </div>
+
 
 <br/>
 
