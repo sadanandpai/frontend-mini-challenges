@@ -15,7 +15,6 @@
     "@fmc/assets": "*",
     "@fmc/data": "*",
     "@fmc/shared-styles": "*",
-    "@formkit/auto-animate": "^0.8.2",
     "axios": "^1.10.0",
     "lucide-react": "^0.525.0",
     "react": "^19.1.0",
