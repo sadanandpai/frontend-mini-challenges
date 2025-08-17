@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 import { FormsModule } from '@angular/forms';
 
@@ -15,7 +15,7 @@ interface WordCountModel {
   templateUrl: './word-count.component.html',
   styleUrls: ['./word-count.component.scss'],
 })
-export class WordCountComponent implements OnInit {
+export class WordCountComponent {
   text = '';
   wordCount = 0;
   charCount = 0;
@@ -59,6 +59,4 @@ export class WordCountComponent implements OnInit {
     this.charCount = +(localStorage.getItem('chars') || 0);
     this.paraCount = +(localStorage.getItem('paras') || 0);
   }
-
-  ngOnInit(): void {}
 }

@@ -1,6 +1,7 @@
 import { Router, RouterOutlet } from '@angular/router';
 
 import { Component, inject } from '@angular/core';
+import { angularChallenges } from '@fmc/data/content';
 import { NavbarComponent } from '../navbar/navbar.component';
 
 @Component({
@@ -21,7 +22,7 @@ export class ChallengeContainerComponent {
       return;
     }
 
-    const challenge = new Map([] as any).get(challengeId) as any;
+    const challenge = angularChallenges.get(challengeId);
 
     if (!challenge) {
       return;
