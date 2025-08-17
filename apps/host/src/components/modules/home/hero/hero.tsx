@@ -37,8 +37,15 @@ export function Hero() {
       </div>
 
       <div className={styles.heroTechStack}>
-        {techStack.map((tech) => (
-          <img key={tech.name} src={tech.icon} alt={tech.name} title={tech.name} loading="lazy" />
+        {techStack.map((tech, index) => (
+          <img
+            key={tech.name}
+            src={tech.icon}
+            alt={tech.name}
+            title={tech.name}
+            loading="lazy"
+            style={{ '--i': index } as React.CSSProperties}
+          />
         ))}
       </div>
     </section>

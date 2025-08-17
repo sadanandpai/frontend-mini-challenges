@@ -1,17 +1,52 @@
 .leaderboard {
   max-width: 1200px;
-  padding: 2rem 1rem;
+  padding: 1rem;
   margin: 0 auto;
   color: var(--text-primary);
 }
 
 .tableContainer {
   overflow-x: auto;
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
   background-color: var(--card-bg);
   border-radius: 8px;
   box-shadow:
     0 4px 6px -1px rgb(0 0 0 / 10%),
     0 2px 4px -2px rgb(0 0 0 / 10%);
+  -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
+
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.scrollHint {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 8px;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  opacity: 0.6;
+  animation: fade-in 0.5s ease-in-out;
+
+  span {
+    display: inline-flex;
+    gap: 4px;
+    align-items: center;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+
+  to {
+    opacity: 0.8;
+    transform: translateX(0);
+  }
 }
 
 .table {
@@ -161,7 +196,7 @@
 
 @media (width <= 480px) {
   .leaderboard {
-    padding: 1rem 0.5rem;
+    padding: 0 1rem;
   }
 
   .table {

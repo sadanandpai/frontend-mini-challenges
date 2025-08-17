@@ -2,11 +2,26 @@ import { angularImg, cssImg, jsImg, reactImg, vueImg } from '@fmc/assets';
 
 import { generateLeaderboardData } from '@/helpers/leaderboard';
 import styles from './leaderboard.module.scss';
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 
 const leaderboardData = generateLeaderboardData();
 
 export function Leaderboard() {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [showScrollHint, setShowScrollHint] = useState(false);
+
+  useEffect(() => {
+    const checkOverflow = () => {
+      if (containerRef.current) {
+        const { scrollWidth, clientWidth } = containerRef.current;
+        setShowScrollHint(scrollWidth > clientWidth);
+      }
+    };
+
+    checkOverflow();
+    window.addEventListener('resize', checkOverflow);
+    return () => window.removeEventListener('resize', checkOverflow);
+  }, []);
   const [sortConfig, setSortConfig] = useState<{ key: string; direction: 'asc' | 'desc' }>({
     key: 'totalContributions',
     direction: 'desc',
@@ -41,7 +56,12 @@ export function Leaderboard() {
 
   return (
     <div className={styles.leaderboard}>
-      <div className={styles.tableContainer}>
+      {showScrollHint && (
+        <div className={styles.scrollHint}>
+          <span>Scroll right →</span>
+        </div>
+      )}
+      <div ref={containerRef} className={styles.tableContainer}>
         <table className={styles.table}>
           <thead>
             <tr>
