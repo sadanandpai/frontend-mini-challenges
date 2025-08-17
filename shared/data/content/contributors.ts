@@ -3,233 +3,254 @@ import type { IContributor } from '../types/index';
 export const contributors = new Map<string, IContributor>([
   [
     'DeePaK-HeeRaKaRi',
-    { name: 'Deepak Heerakari', pic: 'https://avatars.githubusercontent.com/u/63955160' },
+    { name: 'Deepak Heerakari', pic: 'https://avatars.githubusercontent.com/u/63955160?v=4' },
   ],
   [
     'X0rD3v1L',
-    { name: 'Benarjee Sambangi', pic: 'https://avatars.githubusercontent.com/u/46685302' },
+    { name: 'Benarjee Sambangi', pic: 'https://avatars.githubusercontent.com/u/46685302?v=4' },
   ],
   [
     'sadanandpai',
-    { name: 'Sadanand Pai', pic: 'https://avatars.githubusercontent.com/u/12962887' },
+    { name: 'Sadanand Pai', pic: 'https://avatars.githubusercontent.com/u/12962887?v=4' },
   ],
-  ['arpansaha13', { name: 'Arpan Saha', pic: 'https://avatars.githubusercontent.com/u/82361490' }],
+  [
+    'arpansaha13',
+    { name: 'Arpan Saha', pic: 'https://avatars.githubusercontent.com/u/82361490?v=4' },
+  ],
   [
     'noorulaink00',
-    { name: 'Noor Ul Ain Khan', pic: 'https://avatars.githubusercontent.com/u/65324193' },
+    { name: 'Noor Ul Ain Khan', pic: 'https://avatars.githubusercontent.com/u/65324193?v=4' },
   ],
-  ['sahankatta', { name: 'Sahan Katta', pic: 'https://avatars.githubusercontent.com/u/65811236' }],
-  ['rashidtvmr', { name: 'Rashid', pic: 'https://avatars.githubusercontent.com/u/58169715' }],
+  [
+    'sahankatta',
+    { name: 'Sahan Katta', pic: 'https://avatars.githubusercontent.com/u/65811236?v=4' },
+  ],
+  ['rashidtvmr', { name: 'Rashid', pic: 'https://avatars.githubusercontent.com/u/58169715?v=4' }],
   [
     'gauravsinhaweb',
-    { name: 'Gaurav Sinha', pic: 'https://avatars.githubusercontent.com/u/75125943' },
+    { name: 'Gaurav Sinha', pic: 'https://avatars.githubusercontent.com/u/75125943?v=4' },
   ],
-  ['Kei-K23', { name: 'Kei-K', pic: 'https://avatars.githubusercontent.com/u/134714087' }],
+  ['Kei-K23', { name: 'Kei-K', pic: 'https://avatars.githubusercontent.com/u/134714087?v=4' }],
   [
     'caesar003',
-    { name: 'Khaisar Muksid', pic: 'https://avatars.githubusercontent.com/u/37962465' },
+    { name: 'Khaisar Muksid', pic: 'https://avatars.githubusercontent.com/u/37962465?v=4' },
   ],
   [
     'christian-lee1398',
-    { name: 'Christian Lee', pic: 'https://avatars.githubusercontent.com/u/83561483' },
+    { name: 'Christian Lee', pic: 'https://avatars.githubusercontent.com/u/83561483?v=4' },
   ],
   [
     'Sukomal07',
-    { name: 'Sukomal Dutta', pic: 'https://avatars.githubusercontent.com/u/100500478' },
+    { name: 'Sukomal Dutta', pic: 'https://avatars.githubusercontent.com/u/100500478?v=4' },
   ],
-  ['5h0ov', { name: 'Shuvadipta Das', pic: 'https://avatars.githubusercontent.com/u/83227649' }],
+  [
+    '5h0ov',
+    { name: 'Shuvadipta Das', pic: 'https://avatars.githubusercontent.com/u/83227649?v=4' },
+  ],
   [
     'shruti-sen2004',
-    { name: 'Shruti Sen', pic: 'https://avatars.githubusercontent.com/u/115914670' },
+    { name: 'Shruti Sen', pic: 'https://avatars.githubusercontent.com/u/115914670?v=4' },
   ],
   [
     'Kushal347',
-    { name: 'Kushal Agrawal', pic: 'https://avatars.githubusercontent.com/u/115914670' },
+    { name: 'Kushal Agrawal', pic: 'https://avatars.githubusercontent.com/u/115914670?v=4' },
   ],
   [
     'AbhineshJha',
-    { name: 'ABHINESH KUMAR JHA', pic: 'https://avatars.githubusercontent.com/u/142514166' },
+    { name: 'ABHINESH KUMAR JHA', pic: 'https://avatars.githubusercontent.com/u/142514166?v=4' },
   ],
   [
     'hritik',
-    { name: 'Hritik Bhattacharya', pic: 'https://avatars.githubusercontent.com/u/44370586' },
+    { name: 'Hritik Bhattacharya', pic: 'https://avatars.githubusercontent.com/u/44370586?v=4' },
   ],
   [
     'viditagrawal56',
-    { name: 'Vidit Agrawal', pic: 'https://avatars.githubusercontent.com/u/52532308' },
+    { name: 'Vidit Agrawal', pic: 'https://avatars.githubusercontent.com/u/52532308?v=4' },
   ],
   [
     'VishakhaSainani',
-    { name: 'Vishakha Sainani', pic: 'https://avatars.githubusercontent.com/u/113436770' },
+    { name: 'Vishakha Sainani', pic: 'https://avatars.githubusercontent.com/u/113436770?v=4' },
   ],
   [
     'shivam200446',
-    { name: 'Shivam', pic: 'https://avatars.githubusercontent.com/u/127589548?s=96&v=4' },
+    { name: 'Shivam', pic: 'https://avatars.githubusercontent.com/u/127589548?v=4' },
   ],
   [
     'Vivek-GuptaXCode',
-    { name: 'Vivek Kumar Gupta', pic: 'https://avatars.githubusercontent.com/u/145761266' },
+    { name: 'Vivek Kumar Gupta', pic: 'https://avatars.githubusercontent.com/u/145761266?v=4' },
   ],
   [
     'CrypticRevenger',
-    { name: 'Spandan Tripathy', pic: 'https://avatars.githubusercontent.com/u/128175097' },
+    { name: 'Spandan Tripathy', pic: 'https://avatars.githubusercontent.com/u/128175097?v=4' },
   ],
   [
     'AckermanLevi1',
-    { name: 'Aryan Bhargava', pic: 'https://avatars.githubusercontent.com/u/114604529' },
+    { name: 'Aryan Bhargava', pic: 'https://avatars.githubusercontent.com/u/114604529?v=4' },
   ],
   [
     'sujitmahapatra',
-    { name: 'Sujit Mahapatra', pic: 'https://avatars.githubusercontent.com/u/127632703' },
+    { name: 'Sujit Mahapatra', pic: 'https://avatars.githubusercontent.com/u/127632703?v=4' },
   ],
-  ['avtech', { name: 'Ayush Varshney', pic: 'https://avatars.githubusercontent.com/u/97428742' }],
-  ['pranav514', { name: 'Pranav', pic: 'https://avatars.githubusercontent.com/u/76992202' }],
+  [
+    'avtech',
+    { name: 'Ayush Varshney', pic: 'https://avatars.githubusercontent.com/u/97428742?v=4' },
+  ],
+  ['pranav514', { name: 'Pranav', pic: 'https://avatars.githubusercontent.com/u/76992202?v=4' }],
   [
     'Bratajit-03',
-    { name: 'Bratajit Das', pic: 'https://avatars.githubusercontent.com/u/106532791' },
+    { name: 'Bratajit Das', pic: 'https://avatars.githubusercontent.com/u/106532791?v=4' },
   ],
   [
     'DhanushNehru',
-    { name: 'Dhanush Nehru', pic: 'https://avatars.githubusercontent.com/u/22955675' },
+    { name: 'Dhanush Nehru', pic: 'https://avatars.githubusercontent.com/u/22955675?v=4' },
   ],
   [
     'itsayopapi',
-    { name: 'Ayomide Hassan', pic: 'https://avatars.githubusercontent.com/u/111683116' },
+    { name: 'Ayomide Hassan', pic: 'https://avatars.githubusercontent.com/u/111683116?v=4' },
   ],
-  ['srijanB7', { name: 'Srijan B7', pic: 'https://avatars.githubusercontent.com/u/115921421' }],
+  ['srijanB7', { name: 'Srijan B7', pic: 'https://avatars.githubusercontent.com/u/115921421?v=4' }],
   [
     'AdityaSuryawanshi',
-    { name: 'Aditya Suryawanshi', pic: 'https://avatars.githubusercontent.com/u/124609794' },
+    { name: 'Aditya Suryawanshi', pic: 'https://avatars.githubusercontent.com/u/124609794?v=4' },
   ],
-  ['NikhilJHA01', { name: 'Nikhil Jha', pic: 'https://avatars.githubusercontent.com/u/63518046' }],
-  ['deepu0', { name: 'Deepak Kumar', pic: 'https://avatars.githubusercontent.com/u/22304384' }],
+  [
+    'NikhilJHA01',
+    { name: 'Nikhil Jha', pic: 'https://avatars.githubusercontent.com/u/63518046?v=4' },
+  ],
+  ['deepu0', { name: 'Deepak Kumar', pic: 'https://avatars.githubusercontent.com/u/22304384?v=4' }],
   [
     'deepakRikhav',
-    { name: 'Deepak Rikhav', pic: 'https://avatars.githubusercontent.com/u/97227284' },
+    { name: 'Deepak Rikhav', pic: 'https://avatars.githubusercontent.com/u/97227284?v=4' },
   ],
   [
     'deepakrajkranti',
-    { name: 'Deepak Raj', pic: 'https://avatars.githubusercontent.com/u/88797436' },
+    { name: 'Deepak Raj', pic: 'https://avatars.githubusercontent.com/u/88797436?v=4' },
   ],
   [
     'insharahAyyubi',
-    { name: 'Insharah Ayyubi', pic: 'https://avatars.githubusercontent.com/u/103804673' },
+    { name: 'Insharah Ayyubi', pic: 'https://avatars.githubusercontent.com/u/103804673?v=4' },
   ],
   [
     'ayush-dutt-sharma',
-    { name: 'Ayush Dutt Sharma', pic: 'https://avatars.githubusercontent.com/u/73738613' },
+    { name: 'Ayush Dutt Sharma', pic: 'https://avatars.githubusercontent.com/u/73738613?v=4' },
   ],
-  ['dhanu084', { name: 'Dhanush Kiran', pic: 'https://avatars.githubusercontent.com/u/54932658' }],
+  [
+    'dhanu084',
+    { name: 'Dhanush Kiran', pic: 'https://avatars.githubusercontent.com/u/54932658?v=4' },
+  ],
   [
     'kumaratul60',
-    { name: 'Atul Kumar Awasthi', pic: 'https://avatars.githubusercontent.com/u/53579888' },
+    { name: 'Atul Kumar Awasthi', pic: 'https://avatars.githubusercontent.com/u/53579888?v=4' },
   ],
   [
     'ravi02205',
-    { name: 'Ravi Kumar Panchal', pic: 'https://avatars.githubusercontent.com/u/81222901' },
+    { name: 'Ravi Kumar Panchal', pic: 'https://avatars.githubusercontent.com/u/81222901?v=4' },
   ],
   [
     'harsh472000',
-    { name: 'Harsh Meghani', pic: 'https://avatars.githubusercontent.com/u/55913938' },
+    { name: 'Harsh Meghani', pic: 'https://avatars.githubusercontent.com/u/55913938?v=4' },
   ],
-  ['Pancratzia', { name: 'Laura Ortega', pic: 'https://avatars.githubusercontent.com/u/54899954' }],
+  [
+    'Pancratzia',
+    { name: 'Laura Ortega', pic: 'https://avatars.githubusercontent.com/u/54899954?v=4' },
+  ],
   [
     'ashikjhonson',
-    { name: 'Ashik Jhonson', pic: 'https://avatars.githubusercontent.com/u/97791612' },
+    { name: 'Ashik Jhonson', pic: 'https://avatars.githubusercontent.com/u/97791612?v=4' },
   ],
   [
     'Krishnakalani111',
-    { name: 'Krishna Kalani', pic: 'https://avatars.githubusercontent.com/u/88764668' },
+    { name: 'Krishna Kalani', pic: 'https://avatars.githubusercontent.com/u/88764668?v=4' },
   ],
   [
     'Bhushan1019',
-    { name: 'Bhushan Patil', pic: 'https://avatars.githubusercontent.com/u/121352274' },
+    { name: 'Bhushan Patil', pic: 'https://avatars.githubusercontent.com/u/121352274?v=4' },
   ],
   [
     'Sumitwarrior7',
-    { name: 'Cool Dude 69', pic: 'https://avatars.githubusercontent.com/u/108853577' },
+    { name: 'Cool Dude 69', pic: 'https://avatars.githubusercontent.com/u/108853577?v=4' },
   ],
   [
     'rishabhm05',
-    { name: 'Rishabh Mehta', pic: 'https://avatars.githubusercontent.com/u/67910259' },
+    { name: 'Rishabh Mehta', pic: 'https://avatars.githubusercontent.com/u/67910259?v=4' },
   ],
   [
     'jeevaramanathan',
-    { name: 'Jeeva Ramanathan', pic: 'https://avatars.githubusercontent.com/u/64531160' },
+    { name: 'Jeeva Ramanathan', pic: 'https://avatars.githubusercontent.com/u/64531160?v=4' },
   ],
-  ['AbhilashMadi', { name: 'Abhilash', pic: 'https://avatars.githubusercontent.com/u/109837171' }],
+  [
+    'AbhilashMadi',
+    { name: 'Abhilash', pic: 'https://avatars.githubusercontent.com/u/109837171?v=4' },
+  ],
   [
     'AnkitKTrivedi',
-    { name: 'Ankit Kumar Trivedi', pic: 'https://avatars.githubusercontent.com/u/38967951' },
+    { name: 'Ankit Kumar Trivedi', pic: 'https://avatars.githubusercontent.com/u/38967951?v=4' },
   ],
   [
     'jaydadhaniya',
-    { name: 'Jay Dadhaniya', pic: 'https://avatars.githubusercontent.com/u/24772528' },
+    { name: 'Jay Dadhaniya', pic: 'https://avatars.githubusercontent.com/u/24772528?v=4' },
   ],
   [
     'pankajparkar',
-    {
-      name: 'Pankaj Parkar',
-      pic: 'https://avatars.githubusercontent.com/u/5320044',
-    },
+    { name: 'Pankaj Parkar', pic: 'https://avatars.githubusercontent.com/u/5320044?v=4' },
   ],
   [
     'bhumikkalola',
-    { name: 'Bhumik Kalola', pic: 'https://avatars.githubusercontent.com/u/147032346' },
+    { name: 'Bhumik Kalola', pic: 'https://avatars.githubusercontent.com/u/147032346?v=4' },
   ],
   [
     'babandakale',
-    {
-      name: 'Baban Dakale',
-      pic: 'https://avatars.githubusercontent.com/u/142794846',
-    },
+    { name: 'Baban Dakale', pic: 'https://avatars.githubusercontent.com/u/142794846?v=4' },
   ],
   [
     'Manmit Tiwade',
-    { name: 'Manmit Tiwade', pic: 'https://avatars.githubusercontent.com/u/112580293' },
+    { name: 'Manmit Tiwade', pic: 'https://avatars.githubusercontent.com/u/112580293?v=4' },
   ],
-  ['liza', { name: 'Liza', pic: 'https://avatars.githubusercontent.com/u/78140921' }],
-  ['Shardik04', { name: 'Hardik Shah', pic: 'https://avatars.githubusercontent.com/u/11913104' }],
-  ['Vivek7038', { name: 'Vivek Chavan', pic: 'https://avatars.githubusercontent.com/u/95691809' }],
+  ['liza', { name: 'Liza', pic: 'https://avatars.githubusercontent.com/u/78140921?v=4' }],
+  [
+    'Shardik04',
+    { name: 'Hardik Shah', pic: 'https://avatars.githubusercontent.com/u/11913104?v=4' },
+  ],
+  [
+    'Vivek7038',
+    { name: 'Vivek Chavan', pic: 'https://avatars.githubusercontent.com/u/95691809?v=4' },
+  ],
   [
     'codechitra',
-    {
-      name: 'Akash Deep Chitransh',
-      pic: 'https://avatars.githubusercontent.com/u/85569078',
-    },
+    { name: 'Akash Deep Chitransh', pic: 'https://avatars.githubusercontent.com/u/85569078?v=4' },
   ],
-  ['takshch', { name: 'Taksh Chanana', pic: 'https://avatars.githubusercontent.com/u/26649558' }],
+  [
+    'takshch',
+    { name: 'Taksh Chanana', pic: 'https://avatars.githubusercontent.com/u/26649558?v=4' },
+  ],
   [
     'Syamsai-Polavarapu',
-    { name: 'Syamsai Polavarapu', pic: 'https://avatars.githubusercontent.com/u/25497768' },
+    { name: 'Syamsai Polavarapu', pic: 'https://avatars.githubusercontent.com/u/25497768?v=4' },
   ],
   [
     'Akshay-Omkar',
-    { name: 'Akshay Omkar', pic: 'https://avatars.githubusercontent.com/u/62467248' },
+    { name: 'Akshay Omkar', pic: 'https://avatars.githubusercontent.com/u/62467248?v=4' },
   ],
-  ['Bateusz', { name: 'Mateusz', pic: 'https://avatars.githubusercontent.com/u/55596139' }],
-  ['ssudipta', { name: 'Sudipta Saha', pic: 'https://avatars.githubusercontent.com/u/10368983' }],
+  ['Bateusz', { name: 'Mateusz', pic: 'https://avatars.githubusercontent.com/u/55596139?v=4' }],
+  [
+    'ssudipta',
+    { name: 'Sudipta Saha', pic: 'https://avatars.githubusercontent.com/u/10368983?v=4' },
+  ],
   [
     'Akshat-Gupta',
-    { name: 'Akshat Gupta', pic: 'https://avatars.githubusercontent.com/u/53713926' },
+    { name: 'Akshat Gupta', pic: 'https://avatars.githubusercontent.com/u/53713926?v=4' },
   ],
   [
     'officialbidisha',
-    { name: 'Bidisha Das', pic: 'https://avatars.githubusercontent.com/u/49115207' },
+    { name: 'Bidisha Das', pic: 'https://avatars.githubusercontent.com/u/49115207?v=4' },
   ],
-  ['amanraina1', { name: 'Aman Raina', pic: 'https://avatars.githubusercontent.com/u/140370468' }],
+  [
+    'amanraina1',
+    { name: 'Aman Raina', pic: 'https://avatars.githubusercontent.com/u/140370468?v=4' },
+  ],
   [
     'SujithGunasekaran',
-    {
-      name: 'Sujith Gunasekaran',
-      pic: 'https://avatars.githubusercontent.com/u/68234378?s=96&v=4',
-    },
+    { name: 'Sujith Gunasekaran', pic: 'https://avatars.githubusercontent.com/u/68234378?v=4' },
   ],
-  [
-    'Devdeep8',
-    {
-      name: 'Devdeep8',
-      pic: 'https://avatars.githubusercontent.com/u/119996069?s=400&u=028f4909e8f4fcfad58a2eb614c4089eabe97c9c&v=4',
-    },
-  ],
+  ['Devdeep8', { name: 'Devdeep8', pic: 'https://avatars.githubusercontent.com/u/119996069?v=4' }],
 ]);

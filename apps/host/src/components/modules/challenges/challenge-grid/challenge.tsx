@@ -1,6 +1,7 @@
+import type { IChallenge, IContributor } from '@fmc/data/types';
+
 import { AvatarGroup } from '../avatar/avatar';
 import styles from './challenge-grid.module.scss';
-import type { IChallenge, IContributor } from '@fmc/data/types';
 
 interface Props {
   link: string;
@@ -33,7 +34,7 @@ const Challenge = ({ link, contributor, challenge }: Props) => {
         <div className="flex-space-between">
           {challenge.developer && (
             <div className={styles.developer}>
-              <img src={contributor?.pic} alt="" />
+              <img src={`${contributor?.pic}&s=75`} alt="" />
               <span className={styles.name}>{contributor?.name}</span>
             </div>
           )}

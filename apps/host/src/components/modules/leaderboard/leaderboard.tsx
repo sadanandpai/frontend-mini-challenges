@@ -1,8 +1,8 @@
 import { angularImg, cssImg, jsImg, reactImg, vueImg } from '@fmc/assets';
+import { useEffect, useRef, useState } from 'react';
 
 import { generateLeaderboardData } from '@/helpers/leaderboard';
 import styles from './leaderboard.module.scss';
-import { useState, useRef, useEffect } from 'react';
 
 const leaderboardData = generateLeaderboardData();
 
@@ -122,7 +122,7 @@ export function Leaderboard() {
                     className={styles.userLink}
                   >
                     <img
-                      src={user.pic}
+                      src={`${user.pic}&s=75`}
                       alt={user.name}
                       className={styles.avatar}
                       loading="lazy"

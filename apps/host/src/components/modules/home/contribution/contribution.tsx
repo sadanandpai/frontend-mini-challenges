@@ -52,12 +52,12 @@ export function Contribution() {
                   title={`${contributor.login} (${contributor.contributions} contributions)`}
                 >
                   <img
-                    src={contributor.avatar_url}
+                    src={`${contributor.avatar_url}&s=75`}
                     alt={contributor.login}
                     loading="lazy"
                     className={styles.contributorsCardImg}
-                    width={60}
-                    height={60}
+                    width={75}
+                    height={75}
                   />
                   <span>{contributor.login}</span>
                 </a>
