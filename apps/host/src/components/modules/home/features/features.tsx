@@ -34,7 +34,11 @@ export function Features() {
       <h2 className={styles.featuresTitle}>Why Frontend Mini Challenges?</h2>
       <div className={styles.featuresGrid}>
         {features.map((feature, index) => (
-          <div key={index} className={styles.featuresCard}>
+          <div
+            key={index}
+            className={styles.featuresCard}
+            style={{ '--index': index } as React.CSSProperties}
+          >
             <div style={{ fontSize: '2.5rem' }}>{feature.icon}</div>
             <h3>{feature.title}</h3>
             <p>{feature.description}</p>

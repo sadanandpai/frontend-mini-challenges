@@ -13,7 +13,7 @@
 
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(3, 1fr);
   width: 300px;
   margin: 0 auto;
   overflow: hidden;
@@ -21,14 +21,14 @@
 }
 
 .container button {
-  font-weight: bold;
-  padding: 15px 15px;
-  border-radius: 8px;
+  padding: 15px;
   margin: 20px auto;
+  font-weight: bold;
   border: none;
+  border-radius: 8px;
 }
 
-@media (max-width: 300px) {
+@media (width <= 300px) {
   .grid-container {
     width: 100%;
   }

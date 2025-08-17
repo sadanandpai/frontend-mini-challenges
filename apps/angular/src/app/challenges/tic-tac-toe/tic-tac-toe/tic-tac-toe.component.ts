@@ -16,36 +16,32 @@ export const initialArray = Array(size * size).fill(null);
 @Component({
   selector: 'app-tic-tac-toe',
   standalone: true,
-  imports: [
-    NgFor,
-    SquareComponent,
-  ],
+  imports: [NgFor, SquareComponent],
   templateUrl: './tic-tac-toe.component.html',
-  styleUrls: ['./tic-tac-toe.component.scss']
+  styleUrls: ['./tic-tac-toe.component.scss'],
 })
 export class TicTacToeComponent {
   squares = initialArray;
   isX = false;
   winner: 'X' | 'O' | null = null;
-  xWins: number = 0;
-  oWins: number = 0;
-  playerWins = [0, 0, 0, 0];
-  draw: number = 0;
+  xWins = 0;
+  oWins = 0;
+  draw = 0;
+  isGameActive = true;
 
-  /*
-  useEffect(() => {
-    computeWin();
-  }, [squares]);
- */
-
-  // [winner, squares]);
   calculatePlayerWin() {
     if (this.winner === 'X') {
-      this.playerWins = [this.xWins + 1, this.oWins, this.draw];
+      this.xWins++;
+      this.isGameActive = false;
     } else if (this.winner === 'O') {
-      this.playerWins = [this.xWins, this.oWins + 1, this.draw];
-    } else if (this.winner === null && this.squares.filter((square) => square === null).length === 0) {
-      this.playerWins = [this.xWins, this.oWins, this.draw + 1];
+      this.oWins++;
+      this.isGameActive = false;
+    } else if (
+      this.winner === null &&
+      this.squares.filter((square) => square === null).length === 0
+    ) {
+      this.draw++;
+      this.isGameActive = false;
     }
   }
 
@@ -53,7 +49,11 @@ export class TicTacToeComponent {
     this.isX = !this.isX;
     for (const combo of winningCombos) {
       const [a, b, c] = combo;
-      if (this.squares[a] !== null && this.squares[a] === this.squares[b] && this.squares[a] === this.squares[c]) {
+      if (
+        this.squares[a] !== null &&
+        this.squares[a] === this.squares[b] &&
+        this.squares[a] === this.squares[c]
+      ) {
         this.winner = this.squares[a] === 1 ? 'X' : 'O';
         return;
       }
@@ -66,6 +66,10 @@ export class TicTacToeComponent {
   }
 
   action(iTh: number) {
+    if (!this.isGameActive) {
+      return;
+    }
+
     if (this.squares[iTh] === null && this.winner === null) {
       const _prevSquares = [...this.squares];
       _prevSquares[iTh] = this.isX ? 1 : 0;
@@ -77,6 +81,6 @@ export class TicTacToeComponent {
   rematch() {
     this.squares = initialArray;
     this.winner = null;
-    this.updateWinner();
+    this.isGameActive = true;
   }
 }

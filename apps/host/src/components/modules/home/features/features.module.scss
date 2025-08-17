@@ -1,11 +1,28 @@
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .features {
   margin: 6rem 0 8rem;
+  opacity: 0;
+  animation: fade-in-up 0.8s ease-out forwards;
 
   &Title {
     margin-bottom: 2rem;
     font-size: 2rem;
     color: var(--text-primary);
     text-align: center;
+    opacity: 0;
+    animation: fade-in-up 0.8s ease-out forwards;
+    animation-delay: 0.2s;
   }
 
   &Grid {
@@ -13,6 +30,9 @@
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
     padding: 0 1rem;
+    opacity: 0;
+    animation: fade-in-up 0.8s ease-out forwards;
+    animation-delay: 0.4s;
   }
 
   &Card {
@@ -21,9 +41,13 @@
     background: var(--card-bg);
     border: 1px solid var(--border-color);
     border-radius: 8px;
+    opacity: 0;
+    transform: translateY(20px);
     transition:
       transform 0.3s ease,
       box-shadow 0.3s ease;
+    animation: fade-in-up 0.8s ease-out forwards;
+    animation-delay: calc(0.1s * var(--index, 0));
 
     &:hover {
       box-shadow: 0 10px 20px rgb(0 0 0 / 10%);

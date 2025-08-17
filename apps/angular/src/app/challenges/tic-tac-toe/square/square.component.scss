@@ -1,18 +1,30 @@
 .grid-item {
   height: 80px;
-  padding: 20px;
-  font-size: 30px;
   text-align: center;
   cursor: pointer;
   border: 1px solid grey;
-  transition: all .2s ease;
+  transition: all 0.2s ease;
+
+  button {
+    width: 100%;
+    height: 100%;
+    font-size: 30px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    transition: all 0.2s ease;
+
+    &:disabled {
+      cursor: not-allowed;
+    }
+  }
 }
 
 .grid-item:hover {
   box-shadow: #32325d26 0 30px 60px -12px inset;
 }
 
-@media (max-width: 300px) {
+@media (width <= 300px) {
   .grid-item {
     height: 70px;
   }
