@@ -122,7 +122,7 @@ export function Leaderboard() {
                     className={styles.userLink}
                   >
                     <img
-                      src={`${user.pic}&s=75`}
+                      src={`${user.pic}?v=4&s=75`}
                       alt={user.name}
                       className={styles.avatar}
                       loading="lazy"

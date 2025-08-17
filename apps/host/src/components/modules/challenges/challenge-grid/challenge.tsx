@@ -34,7 +34,7 @@ const Challenge = ({ link, contributor, challenge }: Props) => {
         <div className="flex-space-between">
           {challenge.developer && (
             <div className={styles.developer}>
-              <img src={`${contributor?.pic}&s=75`} alt="" />
+              <img src={`${contributor?.pic}?v=4&s=75`} alt="" />
               <span className={styles.name}>{contributor?.name}</span>
             </div>
           )}

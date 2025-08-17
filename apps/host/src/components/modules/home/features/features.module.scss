@@ -50,7 +50,7 @@
     animation-delay: calc(0.1s * var(--index, 0));
 
     &:hover {
-      box-shadow: 0 10px 20px rgb(0 0 0 / 10%);
+      box-shadow: 0 10px 20px rgb(0 0 0 / 5%);
       transform: translateY(-5px);
     }
 
