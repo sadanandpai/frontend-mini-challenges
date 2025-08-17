@@ -2,9 +2,7 @@ import './index.css';
 
 import { RouterProvider, createHashRouter } from 'react-router-dom';
 
-import Challenges from './pages/challenges';
 import { HomePage } from './pages/home';
-import LeaderboardPage from './pages/leaderboard';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { ThemeWrapper } from './components/ThemeWrapper';
@@ -12,11 +10,17 @@ import { ThemeWrapper } from './components/ThemeWrapper';
 const router = createHashRouter([
   {
     path: '/leaderboard',
-    element: <LeaderboardPage />,
+    lazy: () =>
+      import('./pages/leaderboard').then((module) => ({
+        element: <module.default />,
+      })),
   },
   {
     path: '/:tech',
-    element: <Challenges />,
+    lazy: () =>
+      import('./pages/challenges').then((module) => ({
+        element: <module.default />,
+      })),
   },
   {
     path: '/',
