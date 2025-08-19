@@ -44,6 +44,7 @@ import PasswordGenerator from '@/challenges/password-generator/App';
 import PasswordStrength from '@/challenges/password-strength/passwordStrength';
 import ProgressBar from '@/challenges/progressbar/App';
 import QuizApp from '@/challenges/quiz-app/App';
+import ShapeDrawer from '@/challenges/shape-drawer/App';
 import Stack from '@/challenges/stack-implementation/Stack';
 import StarRating from '@/challenges/star-rating/App';
 import Stepper from '@/challenges/stepper/App';
@@ -131,6 +132,7 @@ const reactChallengesMap = {
   'meeting-calendar': <MeetingCalendar />,
   'grid-lights': <GridLights />,
   anuvadak: <Anuvadak />,
+  'shape-drawer': <ShapeDrawer />,
 };
 
 function Challenge() {
