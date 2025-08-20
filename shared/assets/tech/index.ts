@@ -1,7 +1,7 @@
-import cssImg from './css.png';
-import angularImg from './angular.png';
-import jsImg from './js.png';
-import reactImg from './react.png';
-import vueImg from './vue.png';
+import angularImg from './angular.svg';
+import cssImg from './css.svg';
+import jsImg from './js.svg';
+import reactImg from './react.svg';
+import vueImg from './vue.svg';
 
 export { angularImg, jsImg, reactImg, cssImg, vueImg };
