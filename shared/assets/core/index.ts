@@ -1,5 +1,4 @@
-import logo from './logo.png';
-import logoSvg from './logo.svg';
 import logo_dark from './logo_dark.png';
+import logo_light from './logo.svg';
 
-export { logo, logo_dark, logoSvg };
+export { logo_light, logo_dark };

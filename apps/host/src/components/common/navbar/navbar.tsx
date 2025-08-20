@@ -1,5 +1,5 @@
 import { Moon, Sun, Trophy } from 'lucide-react';
-import { logo, logo_dark } from '@fmc/assets';
+import { logo_dark, logo_light } from '@fmc/assets';
 
 import { Link } from 'react-router-dom';
 import { REPO_URL } from '@fmc/data/content';
@@ -11,7 +11,7 @@ import { useContext } from 'react';
 export function Navbar() {
   const { theme, toggleTheme } = useContext(ThemeContext);
   const isDark = theme === 'dark';
-  const logoSrc = isDark ? logo_dark : logo;
+  const logoSrc = isDark ? logo_dark : logo_light;
 
   return (
     <nav className={styles.navbar}>
@@ -24,7 +24,7 @@ export function Navbar() {
 
         <div className={styles.navLinks}>
           <Link to="/leaderboard" className={styles.navLink}>
-            <Trophy size="24" className={styles.navIcon} />
+            <Trophy size="1.5rem" className={styles.navIcon} />
             <span>Leaderboard</span>
           </Link>
 
@@ -43,7 +43,11 @@ export function Navbar() {
             className={styles.themeToggle}
             aria-label={`Switch to ${isDark ? 'light' : 'dark'} mode`}
           >
-            {isDark ? <Moon className={styles.themeIcon} /> : <Sun className={styles.themeIcon} />}
+            {isDark ? (
+              <Moon className={styles.themeIcon} size="1.5rem" />
+            ) : (
+              <Sun className={styles.themeIcon} size="1.5rem" />
+            )}
           </button>
         </div>
       </div>

@@ -1,6 +1,6 @@
 import './navbar.scss';
 
-import { codeSVG, githubSVG, logo, youtubeSVG } from '@fmc/assets';
+import { codeSVG, githubSVG, logo_light, youtubeSVG } from '@fmc/assets';
 
 import navbarHTML from './navbar.html?raw';
 
@@ -37,7 +37,7 @@ export class Navbar extends HTMLElement {
     this.innerHTML = navbarHTML;
     this.querySelector('.back')!.setAttribute('href', this.getAttribute('backURL')!);
     this.querySelector('.logo')!.setAttribute('href', this.getAttribute('homeURL')!);
-    this.querySelector('.logo img')!.setAttribute('src', logo);
+    this.querySelector('.logo img')!.setAttribute('src', logo_light);
     this.querySelector('.title')!.textContent = this.getAttribute('titleText') ?? '';
     this.updateSourceCodeLink();
     this.updateYoutubeLink();
