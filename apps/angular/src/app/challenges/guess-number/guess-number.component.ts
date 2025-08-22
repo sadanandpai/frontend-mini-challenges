@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 import { FormsModule } from '@angular/forms';
 
@@ -11,6 +11,7 @@ function getRandomNumber() {
   imports: [FormsModule],
   templateUrl: './guess-number.component.html',
   styleUrls: ['./guess-number.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class GuessNumberComponent {
   public l1 = getRandomNumber();

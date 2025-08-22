@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 import { FormsModule } from '@angular/forms';
 
@@ -7,6 +7,7 @@ import { FormsModule } from '@angular/forms';
   imports: [FormsModule],
   templateUrl: './stack.component.html',
   styleUrls: ['./stack.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class StackComponent {
   stack: string[] = [];

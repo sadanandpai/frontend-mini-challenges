@@ -1,4 +1,4 @@
-import { Component, EventEmitter, input, Input, Output } from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, input, Output } from '@angular/core';
 
 import { NgStyle } from '@angular/common';
 
@@ -7,6 +7,7 @@ import { NgStyle } from '@angular/common';
   imports: [NgStyle],
   templateUrl: './square.component.html',
   styleUrls: ['./square.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SquareComponent {
   public readonly value = input.required<'X' | 'O' | number | null | undefined>();

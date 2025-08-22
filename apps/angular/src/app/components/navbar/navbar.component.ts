@@ -1,10 +1,18 @@
-import { Component, computed, input, Input, isDevMode, signal } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  computed,
+  input,
+  isDevMode,
+  signal,
+} from '@angular/core';
 import { REPO_NAME, REPO_URL } from '@fmc/data/content';
 
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class NavbarComponent {
   public readonly title = input('Challenge');

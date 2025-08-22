@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 import { FormsModule } from '@angular/forms';
 
@@ -14,6 +14,7 @@ interface WordCountModel {
   imports: [FormsModule],
   templateUrl: './word-count.component.html',
   styleUrls: ['./word-count.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class WordCountComponent {
   text = '';

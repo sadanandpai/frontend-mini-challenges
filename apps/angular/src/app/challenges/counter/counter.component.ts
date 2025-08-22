@@ -5,8 +5,8 @@ import { FormControl, ReactiveFormsModule } from '@angular/forms';
   selector: 'app-counter',
   templateUrl: './counter.component.html',
   styleUrls: ['./counter.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [ReactiveFormsModule],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CounterComponent {
   private defaultStep = 1;

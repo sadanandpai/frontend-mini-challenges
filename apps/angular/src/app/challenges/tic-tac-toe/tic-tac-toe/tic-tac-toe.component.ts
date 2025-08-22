@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 import { SquareComponent } from '../square/square.component';
 
@@ -18,6 +18,7 @@ export const initialArray = Array(size * size).fill(null);
   imports: [SquareComponent],
   templateUrl: './tic-tac-toe.component.html',
   styleUrls: ['./tic-tac-toe.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class TicTacToeComponent {
   squares = initialArray;
