@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { NgFor } from '@angular/common';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
+
 import { SquareComponent } from '../square/square.component';
 
 export const size = 3;
@@ -15,10 +15,10 @@ export const initialArray = Array(size * size).fill(null);
 
 @Component({
   selector: 'app-tic-tac-toe',
-  standalone: true,
-  imports: [NgFor, SquareComponent],
+  imports: [SquareComponent],
   templateUrl: './tic-tac-toe.component.html',
   styleUrls: ['./tic-tac-toe.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class TicTacToeComponent {
   squares = initialArray;

@@ -2,11 +2,11 @@
   <div class="left">
     <a [href]="backURL" class="back"> &lt; </a>
     <a [href]="homeURL" class="logo">
-      <img src="{{ repoURL }}/raw/main/shared/assets/core/logo.svg" alt="logo" />
+      <img src="{{ repoURL() }}/raw/main/shared/assets/core/logo.svg" alt="logo" />
     </a>
   </div>
 
-  <h1 class="title">{{ title }}</h1>
+  <h1 class="title">{{ title() }}</h1>
 
   <div class="right">
     <div class="responsive_nav">
@@ -19,7 +19,7 @@
 
         <section class="menu">
           <a
-            [href]="angularSourceCodeURL"
+            [href]="angularSourceCodeURL()"
             target="_blank"
             rel="noreferrer"
             class="source-code"
@@ -28,7 +28,7 @@
             <img src="assets/icons/code.svg" alt="source code" />
             <span class="mobile">Source code</span>
           </a>
-          <a target="blank" class="github" title="Github Repo" href="{{ repoURL }}">
+          <a target="blank" class="github" title="Github Repo" [href]="repoURL()">
             <img src="assets/icons/github.svg" alt="github repo" />
             <span class="mobile">Github Repo</span>
           </a>

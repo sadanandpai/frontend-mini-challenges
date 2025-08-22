@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
+
 import { FormsModule } from '@angular/forms';
 
 function getRandomNumber() {
@@ -8,13 +8,10 @@ function getRandomNumber() {
 
 @Component({
   selector: 'app-guess-number',
-  standalone: true,
-  imports: [
-    CommonModule,
-    FormsModule,
-  ],
+  imports: [FormsModule],
   templateUrl: './guess-number.component.html',
-  styleUrls: ['./guess-number.component.scss']
+  styleUrls: ['./guess-number.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class GuessNumberComponent {
   public l1 = getRandomNumber();
@@ -37,7 +34,7 @@ export class GuessNumberComponent {
       this.high = false;
       this.disable = true;
     }
-  };
+  }
 
   restart() {
     this.l1 = getRandomNumber();
@@ -46,5 +43,5 @@ export class GuessNumberComponent {
     this.high = false;
     this.disable = false;
     this.num = 1;
-  };
+  }
 }

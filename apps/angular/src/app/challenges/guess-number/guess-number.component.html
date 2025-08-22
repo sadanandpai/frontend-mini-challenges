@@ -8,14 +8,14 @@
     </div>
   </form>
   <div class="text">
-    <ng-container *ngIf="low">
+    @if (low) {
       <p>Your guess is <b>Less</b> than the actual number</p>
-    </ng-container>
-    <ng-container *ngIf="high">
+    }
+    @if (high) {
       <p>Your guess is <b>Higher</b> than the actual number</p>
-    </ng-container>
-    <ng-container *ngIf="hi">
+    }
+    @if (hi) {
       <p>Your guess is <b>right</b></p>
-    </ng-container>
+    }
   </div>
 </div>

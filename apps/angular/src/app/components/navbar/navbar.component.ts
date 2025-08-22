@@ -1,31 +1,33 @@
-import { Component, Input, isDevMode } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  computed,
+  input,
+  isDevMode,
+  signal,
+} from '@angular/core';
 import { REPO_NAME, REPO_URL } from '@fmc/data/content';
 
-import { RouterLink } from '@angular/router';
-
 @Component({
-  standalone: true,
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss'],
-  imports: [RouterLink],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class NavbarComponent {
-  @Input() title = 'Challenge';
-  @Input() link!: string;
-  repoURL = REPO_URL;
+  public readonly title = input('Challenge');
+  public readonly link = input('');
+  public readonly repoURL = signal(REPO_URL);
 
-  public homeURL = isDevMode() ? `http://localhost:6010/${REPO_NAME}/` : `/${REPO_NAME}/`;
+  public readonly homeURL = isDevMode() ? `http://localhost:6010/${REPO_NAME}/` : `/${REPO_NAME}/`;
 
-  public backURL = isDevMode()
+  public readonly backURL = isDevMode()
     ? `http://localhost:6010/${REPO_NAME}/#/angular/`
     : `/${REPO_NAME}/#/angular/`;
 
-  public angularSourceCodeBaseURL = `${REPO_URL}/tree/main/apps/angular/src/app/challenges/`;
+  public readonly angularSourceCodeBaseURL = `${REPO_URL}/tree/main/apps/angular/src/app/challenges/`;
 
-  public angularSourceCodeURL!: string;
-
-  ngOnInit() {
-    this.angularSourceCodeURL = this.angularSourceCodeBaseURL + this.link;
-  }
+  public readonly angularSourceCodeURL = computed(
+    () => this.angularSourceCodeBaseURL + this.link()
+  );
 }

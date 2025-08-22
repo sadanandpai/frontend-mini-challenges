@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { NgFor } from '@angular/common';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
+
 import { FormsModule } from '@angular/forms';
 
 interface WordCountModel {
@@ -11,16 +11,12 @@ interface WordCountModel {
 
 @Component({
   selector: 'app-word-count',
-  standalone: true,
-  imports: [
-    FormsModule,
-    NgFor,
-  ],
+  imports: [FormsModule],
   templateUrl: './word-count.component.html',
-  styleUrls: ['./word-count.component.scss']
+  styleUrls: ['./word-count.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class WordCountComponent implements OnInit {
-
+export class WordCountComponent {
   text = '';
   wordCount = 0;
   charCount = 0;
@@ -31,7 +27,7 @@ export class WordCountComponent implements OnInit {
     localStorage.setItem('words', wordCount + '');
     localStorage.setItem('chars', charCount + '');
     localStorage.setItem('paras', paraCount + '');
-  };
+  }
 
   countWords() {
     const words = this.text.split(/\s+/).filter((word) => word !== '');
@@ -49,23 +45,19 @@ export class WordCountComponent implements OnInit {
       charCount: this.wordCount,
       paraCount: this.paraCount,
     });
-  };
+  }
 
   clearText() {
     this.text = '';
     this.wordCount = 0;
     this.charCount = 0;
     this.paraCount = 0;
-  };
+  }
 
   loadData() {
     this.text = localStorage.getItem('text') || '';
     this.wordCount = +(localStorage.getItem('words') || 0);
     this.charCount = +(localStorage.getItem('chars') || 0);
     this.paraCount = +(localStorage.getItem('paras') || 0);
-  };
-
-  ngOnInit(): void {
-
   }
 }

@@ -9,24 +9,19 @@ export interface TodoItem {
 
 @Component({
   selector: 'app-todo-app',
-  standalone: true,
-  imports: [
-    FormsModule,
-    TodoListComponent,
-  ],
+  imports: [FormsModule, TodoListComponent],
   templateUrl: './todo-app.component.html',
   styleUrls: ['./todo-app.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class TodoAppComponent {
-
   editInfo: TodoItem | null | undefined;
   value = '';
   items: TodoItem[] = [];
 
   edit({ id, value }: any): void {
     this.value = value;
-    this.editInfo = ({ id, value });
+    this.editInfo = { id, value };
   }
 
   delete(idx: number) {
@@ -63,5 +58,5 @@ export class TodoAppComponent {
     }
     this.items = newItems;
     this.editInfo = null;
-  };
+  }
 }
