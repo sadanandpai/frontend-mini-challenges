@@ -469,6 +469,19 @@ const challenges = new Map<string, IChallenge>([
     },
   ],
   [
+    'shape-drawer',
+    {
+      title: 'Shape Drawer',
+      description:
+        'Create an interactive shape drawing application. The application should allow users to draw circles and squares on click. Implement multiple undo/redo steps.',
+      link: 'shape-drawer',
+      difficulty: EDifficulty.Medium,
+      developer: 'sadanandpai',
+      tags: [ETag.interview],
+      isNew: true,
+    },
+  ],
+  [
     'transfer-list',
     {
       title: 'Transfer List',

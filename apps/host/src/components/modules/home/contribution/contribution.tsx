@@ -4,13 +4,11 @@ import { useEffect, useState } from 'react';
 import { Contributor } from '@/pages/types';
 import axios from 'axios';
 import styles from './contribution.module.scss';
-import { useAutoAnimate } from '@formkit/auto-animate/react';
 
 export function Contribution() {
   const [contributors, setContributors] = useState<Contributor[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const [contributorsRef] = useAutoAnimate<HTMLDivElement>();
 
   useEffect(() => {
     const fetchContributors = async () => {
@@ -41,7 +39,7 @@ export function Contribution() {
           <p>{error}</p>
         ) : (
           <>
-            <div className={styles.contributorsGrid} ref={contributorsRef}>
+            <div className={styles.contributorsGrid}>
               {contributors.map((contributor) => (
                 <a
                   key={contributor.id}

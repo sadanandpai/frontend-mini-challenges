@@ -21,7 +21,7 @@ metaHTTP.setAttribute('content', 'IE=edge');
 const favIcon = document.createElement('link');
 favIcon.setAttribute('rel', 'icon');
 favIcon.setAttribute('type', 'image/svg+xml');
-favIcon.setAttribute('href', `${REPO_URL}/raw/main/shared/assets/core/logo.png`);
+favIcon.setAttribute('href', `${REPO_URL}/raw/main/shared/assets/core/logo.svg`);
 
 // Add all tags to the head
 const headTags = [metaUTF, metaName, metaHTTP, favIcon];

@@ -1,0 +1,224 @@
+.container {
+  position: relative;
+  flex: 1;
+  width: 100%;
+  height: calc(100vh - 32px - 8rem);
+  overflow: hidden;
+  outline: none;
+  background-color: white;
+  border: 2px dashed #dee2e6;
+  border-radius: 8px;
+  transition: border-color 0.2s;
+
+  &:focus {
+    border-color: #4dabf7;
+    box-shadow: 0 0 0 2px rgb(33, 150, 243, 20%);
+  }
+}
+
+.instructions {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  max-width: 80%;
+  padding: 1rem;
+  font-size: 1.2rem;
+  color: #6c757d;
+  text-align: center;
+  pointer-events: none;
+  background-color: rgb(255, 255, 255, 90%);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgb(0, 0, 0, 5%);
+  opacity: 0.8;
+  transform: translate(-50%, -50%);
+}
+
+.controls {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.controlGroup {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  align-items: center;
+
+  &::after {
+    position: absolute;
+    top: 50%;
+    right: -0.5rem;
+    width: 1px;
+    height: 60%;
+    content: '';
+    background-color: #dee2e6;
+    transform: translateY(-50%);
+  }
+
+  &:last-child::after {
+    display: none;
+  }
+
+  input[type='color'] {
+    height: 2rem;
+  }
+}
+
+.controlButton {
+  min-width: 80px;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+  background-color: #4dabf7;
+  border: none;
+  border-radius: 6px;
+  box-shadow: 0 1px 2px rgb(0, 0, 0, 5%);
+  transition: all 0.2s ease;
+
+  &:disabled {
+    color: #f8f9fa;
+    cursor: not-allowed;
+    background-color: #adb5bd;
+    opacity: 0.7;
+  }
+
+  &:focus-visible {
+    outline: 2px solid #4dabf7;
+    outline-offset: 2px;
+  }
+
+  &:hover:not(:disabled) {
+    background-color: #339af0;
+    box-shadow: 0 2px 4px rgb(0, 0, 0, 10%);
+    transform: translateY(-1px);
+  }
+
+  &:active:not(:disabled) {
+    box-shadow: 0 1px 2px rgb(0, 0, 0, 5%);
+    transform: translateY(0);
+  }
+}
+
+.select {
+  padding: 0.4rem 1.8rem 0.4rem 0.6rem;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: white;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  transition:
+    border-color 0.15s,
+    box-shadow 0.15s;
+
+  &:hover {
+    border-color: #adb5bd;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: #4dabf7;
+    box-shadow: 0 0 0 3px rgb(77, 171, 247, 25%);
+  }
+}
+
+.colorInput {
+  width: 40px;
+  cursor: pointer;
+  border: 2px solid gray;
+  border-radius: 4px;
+  transition: border-color 0.2s;
+
+  &:hover,
+  &:focus {
+    border-color: #4dabf7;
+  }
+
+  &::-webkit-color-swatch {
+    border: 1px solid #dee2e6;
+    border-radius: 2px;
+  }
+}
+
+.rangeInput {
+  width: 120px;
+  height: 4px;
+  margin: 10px 0;
+  appearance: none;
+  outline: none;
+  background: #dee2e6;
+  border-radius: 2px;
+
+  &::-webkit-slider-thumb {
+    width: 18px;
+    height: 18px;
+    appearance: none;
+    cursor: pointer;
+    background: #4dabf7;
+    border-radius: 50%;
+    transition: all 0.2s;
+
+    &:hover {
+      background: #339af0;
+      transform: scale(1.1);
+    }
+  }
+
+  &:focus {
+    &::-webkit-slider-thumb {
+      box-shadow: 0 0 0 3px rgb(77, 171, 247, 30%);
+    }
+  }
+}
+
+.circle {
+  border-radius: 50%;
+}
+
+.square {
+  height: 25px;
+  background-color: red;
+  border-radius: 4px;
+}
+
+.circle,
+.square {
+  position: absolute;
+  box-shadow: 0 2px 4px rgb(0, 0, 0, 10%);
+  transition:
+    transform 0.1s ease,
+    box-shadow 0.2s ease;
+
+  &:hover {
+    z-index: 2;
+    box-shadow: 0 4px 8px rgb(0, 0, 0, 15%);
+    transform: scale(1.05);
+  }
+}
+
+.visuallyHidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  border-width: 0;
+  clip: rect(0, 0, 0, 0);
+}
+
+@media (width <= 640px) {
+  .container {
+    height: 100%;
+    height: calc(100vh - 32px - 10rem);
+  }
+}

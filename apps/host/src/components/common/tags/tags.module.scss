@@ -3,11 +3,11 @@
   grid-column: -2;
   justify-self: flex-end;
   width: 70%;
-  border: 2px solid #ccc;
 }
 
 .segmentBtn {
   width: 50%;
+  color: var(--text-primary);
   text-transform: capitalize;
   background-color: var(--shadow-footer);
   border: none;
