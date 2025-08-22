@@ -1,4 +1,12 @@
-import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  EventEmitter,
+  input,
+  Input,
+  output,
+  Output,
+} from '@angular/core';
 
 import { TodoItem } from '../todo-app/todo-app.component';
 
@@ -10,7 +18,7 @@ import { TodoItem } from '../todo-app/todo-app.component';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class TodoListComponent {
-  @Input() items: TodoItem[] = [];
-  @Output() edit = new EventEmitter<TodoItem>();
-  @Output() delete = new EventEmitter<number>();
+  public readonly items = input<TodoItem[]>([]);
+  public readonly edit = output<TodoItem>();
+  public readonly delete = output<number>();
 }

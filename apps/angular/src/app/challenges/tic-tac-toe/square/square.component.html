@@ -1,8 +1,8 @@
 <div class="grid-item" (click)="action.emit()">
   <button
-    [ngStyle]="{ opacity: value !== null ? 1 : 0, transition: 'all .1s ease-in-out' }"
-    [disabled]="disabled"
+    [ngStyle]="{ opacity: value() !== null ? 1 : 0, transition: 'all .1s ease-in-out' }"
+    [disabled]="disabled()"
   >
-    {{ value !== null ? (value == 1 ? 'X' : 'O') : 'X' }}
+    {{ value() !== null ? (value() == 1 ? 'X' : 'O') : 'X' }}
   </button>
 </div>

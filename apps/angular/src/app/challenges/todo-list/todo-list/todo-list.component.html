@@ -1,4 +1,4 @@
-@for (item of items; track item; let idx = $index) {
+@for (item of items(); track item.id; let idx = $index) {
   <li class="item">
     <span>{{ item.value }}</span>
     <div>

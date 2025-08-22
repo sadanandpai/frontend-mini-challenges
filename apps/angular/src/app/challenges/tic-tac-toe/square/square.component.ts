@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, input, Input, Output } from '@angular/core';
 
 import { NgStyle } from '@angular/common';
 
@@ -9,9 +9,9 @@ import { NgStyle } from '@angular/common';
   styleUrls: ['./square.component.scss'],
 })
 export class SquareComponent {
-  @Input() value!: 'X' | 'O' | number | null | undefined;
-  @Input() iTh!: number;
-  @Input() disabled!: boolean;
+  public readonly value = input.required<'X' | 'O' | number | null | undefined>();
+  public readonly iTh = input.required<number>();
+  public readonly disabled = input(false);
 
   @Output() action = new EventEmitter();
 }
