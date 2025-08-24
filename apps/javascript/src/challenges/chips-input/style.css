@@ -16,6 +16,8 @@ input {
   background-color: #eee;
   border: 1px solid lightgrey;
   border-radius: 1em;
+  word-break: break-word;
+  text-align: left;
 }
 
 .chip .remove {
@@ -29,5 +31,4 @@ input {
 
 .chip.finalized .remove {
   display: inherit;
-
 }
