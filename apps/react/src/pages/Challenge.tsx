@@ -59,6 +59,7 @@ import Toast from '@/challenges/toast-popup/toast';
 import TodoList from '@/challenges/todo-list/todo';
 import TrafficLights from '@/challenges/traffic-lights/App';
 import TransferListApp from '@/challenges/transfer-list/TransferListApp';
+import Reversi from '@/challenges/reversi/App';
 import TwentyfiveFiveClock from '@/challenges/25-5-clock';
 import WaterBalancer from '@/challenges/water-balancer/App';
 import WordConnect from '@/challenges/word-connect/App';
@@ -98,6 +99,7 @@ const reactChallengesMap = {
   '25-5-clock': <TwentyfiveFiveClock />,
   'bmi-calculator': <BMICalculator />,
   'email-templates': <EmailTemplates />,
+  reversi: <Reversi />,
   'expense-tracker': <ExpenseTracker />,
   pagination: <Pagination />,
   'image-gallery': <ImageGallery />,

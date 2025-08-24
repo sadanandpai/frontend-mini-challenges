@@ -738,6 +738,17 @@ const challenges = new Map<string, IChallenge>([
       isNew: true,
     },
   ],
+  [
+    'reversi',
+    {
+      title: 'Reversi',
+      description: 'Build the classic board game Reversi (Othello) with game logic and UI',
+      link: 'reversi',
+      difficulty: EDifficulty.Medium,
+      developer: 'sadanandpai',
+      tags: [],
+    },
+  ],
 ]);
 
 export const reactChallenges = sortChallengesByDifficulty(challenges);

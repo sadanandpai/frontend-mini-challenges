@@ -1,0 +1,110 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  padding: 1rem;
+}
+
+.scoreboard {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.score {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.board {
+  display: inline-block;
+  background-color: #47ad4c;
+  border: 2px solid #333;
+  box-shadow: 0 4px 8px rgb(0, 0, 0, 20%);
+}
+
+.row {
+  display: flex;
+}
+
+.cell {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  border: 1px solid #1b5e20;
+  transition: background-color 0.2s;
+
+  &:hover {
+    background-color: rgb(255, 255, 255, 10%);
+  }
+
+  &.validMove {
+    &::after {
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      content: '';
+      background-color: rgb(0, 0, 0, 20%);
+      border-radius: 50%;
+    }
+  }
+}
+
+.piece {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgb(0, 0, 0, 30%);
+
+  &.black {
+    background: linear-gradient(135deg, #424242, #000);
+  }
+
+  &.white {
+    background: linear-gradient(135deg, #fff, #e0e0e0);
+  }
+}
+
+.status {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  min-height: 2rem;
+  margin-top: 1rem;
+  font-size: 1.1rem;
+}
+
+.gameOver {
+  margin-left: 1rem;
+  font-weight: bold;
+  color: #d32f2f;
+}
+
+.resetButton {
+  padding: 0.5rem 1rem;
+  margin-left: 2rem;
+  font-size: 1rem;
+  color: white;
+  cursor: pointer;
+  background-color: #1976d2;
+  border: none;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+
+  &:hover {
+    background-color: #1565c0;
+  }
+
+  &:active {
+    background-color: #0d47a1;
+  }
+}
