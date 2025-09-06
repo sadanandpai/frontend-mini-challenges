@@ -1,6 +1,5 @@
 .card {
-  width: 100%;
-  max-width: 400px; /* fits nicely on desktop/tablets */
+  max-width: 400px;
   margin: 10px auto;
   padding: 20px;
   border-radius: 20px;
@@ -16,21 +15,36 @@
 .search {
   display: flex;
   align-items: center;
-  gap: 10px; /* spacing between input + button */
+  gap: 10px;
   margin-top: 15px;
 }
 
 .search input {
-  flex: 1; /* input takes remaining space */
-  min-width: 0; /* prevents overflow on small screens */
+  flex: 1;
+  min-width: 0;
   padding: 10px;
-  border: none;
+  border: 1px solid #ccc;
   border-radius: 30px;
   outline: none;
 }
 
+.search input:focus-visible {
+  outline: 2px solid #6c63ff;
+  outline-offset: 2px;
+}
+
+@media (max-width: 576px) {
+  .card {
+    margin: 20px;
+  }
+
+  .search {
+    margin-top: 30px;
+  }
+}
+
 .search button {
-  flex-shrink: 0; /* button doesn’t shrink smaller than its content */
+  flex-shrink: 0;
   padding: 10px 15px;
   border-radius: 50%;
   border: none;
