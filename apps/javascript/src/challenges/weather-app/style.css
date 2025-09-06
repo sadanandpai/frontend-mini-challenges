@@ -45,14 +45,23 @@
 
 .search button {
   flex-shrink: 0;
-  padding: 10px 15px;
+  inline-size: 44px;
+  block-size: 44px;
+  display: inline-grid;
+  place-items: center;
+  padding: 0;
   border-radius: 50%;
   border: none;
   background: #fff;
   cursor: pointer;
 }
+.search button:focus-visible {
+  outline: 2px solid #6c63ff;
+  outline-offset: 2px;
+}
+
 .search button img {
-  width: 16px;
+  width: 20px;
 }
 
 .weather-icon {
