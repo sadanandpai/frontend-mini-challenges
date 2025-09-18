@@ -72,14 +72,18 @@ function colorSelected() {
   const row = selectedRow.value - 1
   const col = selectedColumn.value - 1
 
-  table.value[row][col].colored = true
+  if (row >= 0 && row < table.value.length && col >= 0 && col < table.value[0].length) {
+    table.value[row][col].colored = true
+  }
 }
 
 function clearSelected() {
   const row = selectedRow.value - 1
   const col = selectedColumn.value - 1
 
-  table.value[row][col].colored = false
+  if (row >= 0 && row < table.value.length && col >= 0 && col < table.value[0].length) {
+    table.value[row][col].colored = false
+  }
 }
 
 function clearAll() {
