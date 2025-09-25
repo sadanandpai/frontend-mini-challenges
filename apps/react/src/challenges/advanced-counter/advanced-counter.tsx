@@ -19,6 +19,8 @@ function AdvancedCounter() {
   function reset() {
     ref.current.reset();
     setValue(0);
+    setDelay(1);
+    setStep(1);
   }
 
   function stepBy(stepValue: number) {
