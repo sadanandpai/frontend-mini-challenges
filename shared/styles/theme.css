@@ -26,6 +26,77 @@
   --card-bg: #fff;
   --border-color: #e2e8f0;
   --bg-color: #f8fafc;
+
+  /* Button Variables - NEW ADDITION */
+  --btn-primary-bg: #0d6efd;
+  --btn-primary-bg-hover: #0b5ed7;
+  --btn-primary-bg-active: #0a53be;
+  --btn-primary-bg-disabled: #e2e8f0;
+  --btn-primary-text: #ffffff;
+  --btn-primary-text-disabled: #94a3b8;
+  --btn-primary-border: #0d6efd;
+  --btn-primary-border-hover: #0b5ed7;
+  --btn-primary-border-disabled: #e2e8f0;
+  --btn-primary-focus-shadow: rgb(13 110 253 / 30%);
+
+  /* Secondary Button Variables */
+  --btn-secondary-bg: transparent;
+  --btn-secondary-bg-hover: #6c757d;
+  --btn-secondary-bg-active: #5c636a;
+  --btn-secondary-text: #6c757d;
+  --btn-secondary-text-hover: #ffffff;
+  --btn-secondary-border: #6c757d;
+  --btn-secondary-border-hover: #6c757d;
+  --btn-secondary-focus-shadow: rgb(108 117 125 / 30%);
+
+  /* Success Button Variables */
+  --btn-success-bg: #198754;
+  --btn-success-bg-hover: #157347;
+  --btn-success-bg-active: #13653f;
+  --btn-success-text: #ffffff;
+  --btn-success-border: #198754;
+  --btn-success-border-hover: #157347;
+  --btn-success-focus-shadow: rgb(25 135 84 / 30%);
+
+  /* Danger Button Variables */
+  --btn-danger-bg: #dc3545;
+  --btn-danger-bg-hover: #bb2d3b;
+  --btn-danger-bg-active: #a02834;
+  --btn-danger-text: #ffffff;
+  --btn-danger-border: #dc3545;
+  --btn-danger-border-hover: #bb2d3b;
+  --btn-danger-focus-shadow: rgb(220 53 69 / 30%);
+
+  /* Warning Button Variables */
+  --btn-warning-bg: #ffc107;
+  --btn-warning-bg-hover: #ffca2c;
+  --btn-warning-bg-active: #ffcd39;
+  --btn-warning-text: #000000;
+  --btn-warning-border: #ffc107;
+  --btn-warning-border-hover: #ffca2c;
+  --btn-warning-focus-shadow: rgb(255 193 7 / 30%);
+
+  /* Info Button Variables */
+  --btn-info-bg: #0dcaf0;
+  --btn-info-bg-hover: #31d2f2;
+  --btn-info-bg-active: #3dd5f3;
+  --btn-info-text: #000000;
+  --btn-info-border: #0dcaf0;
+  --btn-info-border-hover: #31d2f2;
+  --btn-info-focus-shadow: rgb(13 202 240 / 30%);
+
+  /* Button Common Variables */
+  --btn-border-radius: 4px;
+  --btn-padding-y: 10px;
+  --btn-padding-x: 16px;
+  --btn-padding-sm-y: 4px;
+  --btn-padding-sm-x: 6px;
+  --btn-font-size: 1rem;
+  --btn-font-weight: 500;
+  --btn-line-height: 1.5;
+  --btn-transition: all 0.15s ease-in-out;
+  --btn-focus-outline-offset: 2px;
+  --btn-disabled-opacity: 0.65;
 }
 
 /* Dark override for above variables */
@@ -56,4 +127,29 @@
   --card-bg: #1e293b;
   --border-color: #334155;
   --bg-color: #0f172a;
+
+  /* Dark theme button overrides */
+  --btn-primary-bg: #4f46e5;
+  --btn-primary-bg-hover: #4338ca;
+  --btn-primary-bg-active: #3730a3;
+  --btn-primary-bg-disabled: #374151;
+  --btn-primary-text-disabled: #6b7280;
+  --btn-primary-border: #4f46e5;
+  --btn-primary-border-hover: #4338ca;
+  --btn-primary-border-disabled: #374151;
+
+  --btn-secondary-bg-hover: #4b5563;
+  --btn-secondary-text: #9ca3af;
+  --btn-secondary-border: #6b7280;
+  --btn-secondary-border-hover: #4b5563;
+
+  --btn-success-bg: #10b981;
+  --btn-success-bg-hover: #059669;
+  --btn-success-border: #10b981;
+  --btn-success-border-hover: #059669;
+
+  --btn-danger-bg: #ef4444;
+  --btn-danger-bg-hover: #dc2626;
+  --btn-danger-border: #ef4444;
+  --btn-danger-border-hover: #dc2626;
 }

@@ -12,50 +12,141 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 10px 16px;
-  font-size: 1rem;
-  font-weight: 500;
-  line-height: 1.5;
+  padding: var(--btn-padding-y) var(--btn-padding-x);
+  font-size: var(--btn-font-size);
+  font-weight: var(--btn-font-weight);
+  line-height: var(--btn-line-height);
   vertical-align: middle;
-  color: #fff;
+  color: var(--btn-primary-text);
   text-align: center;
   white-space: nowrap;
   text-decoration: none;
   cursor: pointer;
   user-select: none;
-  background-color: transparent;
-  background-color: #0d6efd;
-  border: 1px solid transparent;
-  border-color: #0d6efd;
-  border-radius: 4px;
+  background-color: var(--btn-primary-bg);
+  border: 1px solid var(--btn-primary-border);
+  border-radius: var(--btn-border-radius);
+  transition: var(--btn-transition);
 }
 
 button.btn:disabled,
 .btn.btn-primary:disabled {
-  color: #94a3b8;
+  color: var(--btn-primary-text-disabled);
   cursor: not-allowed;
-  background-color: #e2e8f0;
-  border-color: #e2e8f0;
-  opacity: 0.65;
+  background-color: var(--btn-primary-bg-disabled);
+  border-color: var(--btn-primary-border-disabled);
+  opacity: var(--btn-disabled-opacity);
 }
 
 .btn-primary:focus-visible {
-  outline: 3px solid rgb(13 110 253 / 30%);
-  outline-offset: 2px;
+  outline: 3px solid var(--btn-primary-focus-shadow);
+  outline-offset: var(--btn-focus-outline-offset);
 }
 
 .btn-primary:hover:not(:disabled) {
-  background-color: #0b5ed7;
-  border-color: #0b5ed7;
+  background-color: var(--btn-primary-bg-hover);
+  border-color: var(--btn-primary-border-hover);
 }
 
+.btn-primary:active:not(:disabled) {
+  background-color: var(--btn-primary-bg-active);
+  border-color: var(--btn-primary-border-hover);
+}
+
+/* Secondary Button */
+.btn-secondary {
+  color: var(--btn-secondary-text);
+  background-color: var(--btn-secondary-bg);
+  border-color: var(--btn-secondary-border);
+}
+
+.btn-secondary:hover:not(:disabled) {
+  color: var(--btn-secondary-text-hover);
+  background-color: var(--btn-secondary-bg-hover);
+  border-color: var(--btn-secondary-border-hover);
+}
+
+.btn-secondary:focus-visible {
+  outline: 3px solid var(--btn-secondary-focus-shadow);
+  outline-offset: var(--btn-focus-outline-offset);
+}
+
+/* Success Button */
+.btn-success {
+  color: var(--btn-success-text);
+  background-color: var(--btn-success-bg);
+  border-color: var(--btn-success-border);
+}
+
+.btn-success:hover:not(:disabled) {
+  background-color: var(--btn-success-bg-hover);
+  border-color: var(--btn-success-border-hover);
+}
+
+.btn-success:focus-visible {
+  outline: 3px solid var(--btn-success-focus-shadow);
+  outline-offset: var(--btn-focus-outline-offset);
+}
+
+/* Danger Button */
+.btn-danger {
+  color: var(--btn-danger-text);
+  background-color: var(--btn-danger-bg);
+  border-color: var(--btn-danger-border);
+}
+
+.btn-danger:hover:not(:disabled) {
+  background-color: var(--btn-danger-bg-hover);
+  border-color: var(--btn-danger-border-hover);
+}
+
+.btn-danger:focus-visible {
+  outline: 3px solid var(--btn-danger-focus-shadow);
+  outline-offset: var(--btn-focus-outline-offset);
+}
+
+/* Warning Button */
+.btn-warning {
+  color: var(--btn-warning-text);
+  background-color: var(--btn-warning-bg);
+  border-color: var(--btn-warning-border);
+}
+
+.btn-warning:hover:not(:disabled) {
+  background-color: var(--btn-warning-bg-hover);
+  border-color: var(--btn-warning-border-hover);
+}
+
+.btn-warning:focus-visible {
+  outline: 3px solid var(--btn-warning-focus-shadow);
+  outline-offset: var(--btn-focus-outline-offset);
+}
+
+/* Info Button */
+.btn-info {
+  color: var(--btn-info-text);
+  background-color: var(--btn-info-bg);
+  border-color: var(--btn-info-border);
+}
+
+.btn-info:hover:not(:disabled) {
+  background-color: var(--btn-info-bg-hover);
+  border-color: var(--btn-info-border-hover);
+}
+
+.btn-info:focus-visible {
+  outline: 3px solid var(--btn-info-focus-shadow);
+  outline-offset: var(--btn-focus-outline-offset);
+}
+
+/* Button Sizes */
 .btn.btn-primary.small {
-  padding: 4px 6px;
+  padding: var(--btn-padding-sm-y) var(--btn-padding-sm-x);
 }
 
 .disabled {
   pointer-events: none;
   cursor: not-allowed;
   user-select: none;
-  opacity: 0.6;
+  opacity: var(--btn-disabled-opacity);
 }
