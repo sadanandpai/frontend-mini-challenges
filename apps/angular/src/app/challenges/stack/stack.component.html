@@ -13,7 +13,7 @@
 
     <h3>{{ outPut }}</h3>
 
-    @for (element of stack; track element) {
+    @for (element of stack; track $index) {
       <div class="stackElement">
         <p>{{ element }}</p>
       </div>

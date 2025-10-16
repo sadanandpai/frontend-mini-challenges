@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, inject } from '@angular/core';
 
 import { FormsModule } from '@angular/forms';
 
@@ -10,17 +10,25 @@ import { FormsModule } from '@angular/forms';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class StackComponent {
+  private cdr = inject(ChangeDetectorRef);
+
   stack: string[] = [];
   inputVal = '';
   outPut = '';
 
   push() {
-    this.stack = [...this.stack, this.inputVal];
-    this.inputVal = '';
+    if (this.inputVal.trim()) {
+      this.stack = [...this.stack, this.inputVal];
+      this.inputVal = '';
+      this.cdr.markForCheck();
+    }
   }
 
   pop() {
-    this.stack = this.stack.slice(0, -1);
+    if (this.stack.length > 0) {
+      this.stack = this.stack.slice(0, -1);
+      this.cdr.markForCheck();
+    }
   }
 
   peek() {
@@ -30,6 +38,7 @@ export class StackComponent {
       const lastElement = this.stack[this.stack.length - 1];
       this.outPut = `Last element is ${lastElement}`;
     }
+    this.cdr.markForCheck();
   }
 
   isEmpty() {
@@ -38,6 +47,7 @@ export class StackComponent {
     } else {
       this.outPut = 'Stack is not empty';
     }
+    this.cdr.markForCheck();
   }
 
   isFull() {
@@ -46,5 +56,6 @@ export class StackComponent {
     } else {
       this.outPut = 'Stack is not Full';
     }
+    this.cdr.markForCheck();
   }
 }
