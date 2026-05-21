@@ -34,6 +34,7 @@ interface Props {
   setSelectedChallengesByTags: React.Dispatch<React.SetStateAction<ETag[] | []>>;
   setNewChallenge: React.Dispatch<React.SetStateAction<boolean>>;
   newChallenge: boolean;
+  hasNewChallenges: boolean;
 }
 
 export function ChallengeFilters({
@@ -49,6 +50,7 @@ export function ChallengeFilters({
   setSelectedChallengesByTags,
   setNewChallenge,
   newChallenge,
+  hasNewChallenges,
 }: Props) {
   return (
     <>
@@ -60,7 +62,7 @@ export function ChallengeFilters({
             placeholder="Search Challenge"
             className={styles.searchInput}
             value={searchInput}
-            onChange={(e) => setSearchInput(e.target.value.trim())}
+            onChange={(e) => setSearchInput(e.target.value)}
           />
           <Search className={styles.searchIcon} size={18} />
         </div>
@@ -79,13 +81,15 @@ export function ChallengeFilters({
           selectPlaceholder="Select Difficulties"
         />
 
-        <CustomCheckbox
-          className={styles.checkbox}
-          checked={newChallenge}
-          setNewChallenge={setNewChallenge}
-          label="New Challenges"
-          containerClass={styles.checkboxContainer}
-        />
+        {hasNewChallenges && (
+          <CustomCheckbox
+            className={styles.checkbox}
+            checked={newChallenge}
+            setNewChallenge={setNewChallenge}
+            label="New Challenges"
+            containerClass={styles.checkboxContainer}
+          />
+        )}
 
         <Tags tag={tag} setTag={setTag} setSelectedChallengesByTags={setSelectedChallengesByTags} />
       </div>

@@ -47,14 +47,14 @@ export function CustomSelect({
       onChange={(newValue: unknown) => handleChange(newValue as OptionType[])}
       value={optionSelected}
       placeholder={selectPlaceholder}
-      controlShouldRenderValue={false}
+      // Show selected values as pills inside the control
+      controlShouldRenderValue={true}
       styles={{
         control: (base) => ({
           ...base,
           textAlign: 'left',
           border: '1px solid #ccc',
           background: theme === 'dark' ? '#000000' : '#ffffff',
-
           '&:hover': {
             border: '1px solid #4a6cf7',
           },
@@ -64,16 +64,33 @@ export function CustomSelect({
           textAlign: 'left',
           background: theme === 'dark' ? '#000000' : '#ffffff',
         }),
-        option: (base, state) => {
-          return {
-            ...base,
-            color: state.isSelected
-              ? '#ffffff'
-              : theme === 'dark' && state.isFocused
-                ? '#000000'
-                : 'inherit',
-          };
-        },
+        option: (base, state) => ({
+          ...base,
+          color: state.isSelected
+            ? '#ffffff'
+            : theme === 'dark' && state.isFocused
+              ? '#000000'
+              : 'inherit',
+          backgroundColor: state.isSelected ? 'var(--primary-color)' : undefined,
+        }),
+        multiValue: (base) => ({
+          ...base,
+          backgroundColor: 'var(--primary-color)',
+          borderRadius: '4px',
+          padding: '2px 6px',
+          color: '#fff',
+        }),
+        multiValueLabel: (base) => ({
+          ...base,
+          color: '#fff',
+          padding: 0,
+          margin: 0,
+        }),
+        multiValueRemove: (base) => ({
+          ...base,
+          color: '#fff',
+          ':hover': { backgroundColor: 'var(--primary-color-dark)' },
+        }),
         placeholder: (base) => ({
           ...base,
           color: '#777',

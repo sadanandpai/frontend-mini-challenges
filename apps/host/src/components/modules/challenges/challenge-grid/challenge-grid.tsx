@@ -80,6 +80,7 @@ function ChallengeGrid({ challenges, linkPrefix, links }: Props) {
         setTag={setTag}
         newChallenge={newChallenge}
         setNewChallenge={setNewChallenge}
+        hasNewChallenges={challenges.some((c) => c.isNew)}
       />
 
       {filteredChallenges.length ? (
