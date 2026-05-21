@@ -44,7 +44,6 @@ const challenges: Map<string, IChallenge> = new Map([
       difficulty: EDifficulty.Easy,
       developer: 'pankajparkar',
       tags: [],
-      isNew: true,
     },
   ],
   [
@@ -56,7 +55,6 @@ const challenges: Map<string, IChallenge> = new Map([
       difficulty: EDifficulty.Easy,
       developer: 'pankajparkar',
       tags: [ETag.interview],
-      isNew: true,
     },
   ],
   [
@@ -69,7 +67,6 @@ const challenges: Map<string, IChallenge> = new Map([
       difficulty: EDifficulty.Easy,
       developer: 'pankajparkar',
       tags: [],
-      isNew: true,
     },
   ],
 ]);

@@ -4,6 +4,7 @@ import CustomCheckbox from '@/components/common/checkbox/checkbox';
 import { CustomSelect } from '@/components/common/multi-select/multi-select';
 import { Difficulties } from '@fmc/data/constants';
 import { Link } from 'react-router-dom';
+import { Search } from 'lucide-react';
 import Tags from '@/components/common/tags/tags';
 import { contributors } from '@fmc/data/content';
 import styles from './challenge-grid.module.scss';
@@ -61,6 +62,7 @@ export function ChallengeFilters({
             value={searchInput}
             onChange={(e) => setSearchInput(e.target.value.trim())}
           />
+          <Search className={styles.searchIcon} size={18} />
         </div>
 
         <CustomSelect

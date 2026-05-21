@@ -5,7 +5,7 @@
   border-radius: 1000px;
 
   /* Use shadow instead of border so that it does not occupy space */
-  box-shadow: 0 0 0 2px black;
+  box-shadow: 0 0 0 2px var(--card-body);
 }
 
 .avatarGroup {

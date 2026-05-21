@@ -11,10 +11,9 @@ interface Props {
   challenges: IChallenge[];
   linkPrefix: string;
   links: { tech: string; imgSrc: string; active: boolean }[];
-  techImg: string;
 }
 
-function ChallengeGrid({ challenges, linkPrefix, links, techImg }: Props) {
+function ChallengeGrid({ challenges, linkPrefix, links }: Props) {
   const initialFilters = filtersHelper();
 
   const [searchInput, setSearchInput] = useState(initialFilters.searchInput);
@@ -91,7 +90,6 @@ function ChallengeGrid({ challenges, linkPrefix, links, techImg }: Props) {
               link={linkPrefix + challenge.link}
               contributor={contributors.get(challenge.developer)}
               challenge={challenge}
-              techImg={techImg}
             />
           ))}
         </div>
