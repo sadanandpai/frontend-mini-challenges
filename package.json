@@ -8,23 +8,23 @@
     "build": "nx run-many -t build",
     "lint": "nx run-many -t lint",
     "build-baseless": "nx run-many -t build-baseless",
-    "copy-to-docs": "rm -rf docs && cp -r apps/host/dist docs && cp -r apps/css/dist docs/css && cp -r apps/javascript/dist docs/javascript && cp -r apps/react/dist docs/react && cp -r apps/vue/dist docs/vue && cp -r apps/angular/dist/angular/browser docs/angular",
+    "copy-to-dist": "rm -rf dist && cp -r apps/host/dist dist && cp -r apps/css/dist dist/css && cp -r apps/javascript/dist dist/javascript && cp -r apps/react/dist dist/react && cp -r apps/vue/dist dist/vue && cp -r apps/angular/dist/angular/browser dist/angular",
     "unit:test": "nx run-many -t unit:test",
     "prettify": "pretty-quick --staged",
     "prepare": "husky"
   },
   "engines": {
-    "node": "^22.17.0"
+    "node": "^24.14.0"
   },
   "devDependencies": {
-    "@nx/js": "^21.2.2",
-    "@playwright/test": "^1.53.2",
-    "@types/node": "^24.0.12",
+    "@nx/js": "23.1.1",
+    "@playwright/test": "^1.62.1",
+    "@types/node": "^24.13.3",
     "husky": "^9.1.7",
-    "nx": "^21.2.2",
-    "prettier": "^3.6.2",
+    "nx": "23.1.1",
+    "prettier": "^3.9.6",
     "pretty-quick": "^4.2.2",
-    "typescript": "^5.3.3"
+    "typescript": "^5.8.3"
   },
   "workspaces": [
     "apps/*",

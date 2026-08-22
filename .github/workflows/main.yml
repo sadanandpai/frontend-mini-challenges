@@ -1,32 +1,59 @@
-name: Node.js CI
+name: Deploy GitHub Pages
 
 on:
   push:
-    branches: ['main']
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
 
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
         with:
-          node-version: 22.17.0
+          node-version: 24.14.0
+          cache: npm
 
-      # Runs a single command using the runners shell
-      - name: setup git config
-        run: |
-          git config user.name "Sadanand Pai"
-          git config user.email "sadypai@gmail.com"
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
 
-      - name: NPM installation
+      - name: Install
         run: npm ci
 
-      - name: setup deployment
-        run: |
-          npm run unit:test
-          npm run build
-          npm run copy-to-docs
-          git add docs -f
-          git diff --staged --quiet || (git commit -m "build files - github action" --no-verify && git push)
+      - name: Test
+        run: npm run unit:test
+
+      - name: Build
+        run: npm run build
+
+      - name: Assemble site
+        run: npm run copy-to-dist
+
+      - name: Upload dist
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4

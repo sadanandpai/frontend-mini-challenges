@@ -15,5 +15,6 @@
     "unit:test": {
       "cache": true
     }
-  }
+  },
+  "analytics": false
 }
