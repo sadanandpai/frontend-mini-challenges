@@ -14,10 +14,14 @@ function updateBalance() {
 function addTransaction(description, amount, type) {
   const transaction = document.createElement('li');
   transaction.classList.add(type);
-  transaction.innerHTML = `
-        <span>${description}</span>
-        <span>$${amount.toFixed(2)}</span>
-    `;
+
+  const descriptionEl = document.createElement('span');
+  descriptionEl.textContent = description;
+
+  const amountEl = document.createElement('span');
+  amountEl.textContent = `$${amount.toFixed(2)}`;
+
+  transaction.append(descriptionEl, amountEl);
   transactionList.appendChild(transaction);
   balance += type === 'income' ? amount : -amount;
   updateBalance();

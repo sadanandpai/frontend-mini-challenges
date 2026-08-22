@@ -21,7 +21,7 @@ function addComment(parentEl, commentState, parentState) {
   const commentEl = parentEl.querySelector(':scope > .sub-comments > .comment-wrapper:last-child');
 
   commentEl.querySelector('.profile-pic').src =
-    `https://i.pravatar.cc/32?u=${commentState.username}`;
+    `https://i.pravatar.cc/32?u=${encodeURIComponent(commentState.username)}`;
 
   commentEl.querySelector('.reply').addEventListener('click', () => {
     if (!commentEl.querySelector(':scope > .sub-comments > .new-comment')) {

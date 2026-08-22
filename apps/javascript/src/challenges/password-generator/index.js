@@ -93,11 +93,16 @@ const APLHABETWORDS = {
   Z: 'Zipline',
 };
 
+const secureRandomIndex = (length) => {
+  if (length <= 0) return 0;
+  return crypto.getRandomValues(new Uint32Array(1))[0] % length;
+};
+
 const functionMap = {
-  upper: () => String.fromCodePoint(65 + Math.floor(Math.random() * 26)),
-  lower: () => String.fromCodePoint(97 + Math.floor(Math.random() * 26)),
-  numeric: () => String.fromCodePoint(49 + Math.floor(Math.random() * 9)),
-  symbols: () => specialChars[Math.floor(Math.random() * specialChars.length)],
+  upper: () => String.fromCodePoint(65 + secureRandomIndex(26)),
+  lower: () => String.fromCodePoint(97 + secureRandomIndex(26)),
+  numeric: () => String.fromCodePoint(49 + secureRandomIndex(9)),
+  symbols: () => specialChars[secureRandomIndex(specialChars.length)],
 };
 
 const updateCharLength = (length) => {
@@ -108,14 +113,14 @@ const updateCharLength = (length) => {
 const getRandomCharsFromCriteria = (length, keys) => {
   let str = '';
   for (let i = 0; i < length; i++) {
-    str += functionMap[keys[Math.floor(Math.random() * keys.length)]]();
+    str += functionMap[keys[secureRandomIndex(keys.length)]]();
   }
   return str;
 };
 
 const insertAtRandomPlaces = (subStr, mainStr) => {
   return subStr.split('').reduce((str, ch) => {
-    const pos = Math.floor(Math.random() * str.length);
+    const pos = secureRandomIndex(str.length);
     str = str.substring(0, pos) + ch + str.substring(pos);
     return str;
   }, mainStr);
@@ -128,7 +133,10 @@ const generatePassword = (length, options) => {
   }, {});
 
   const optionLength = Object.keys(validOptions).length;
-  const lengthCompletionPassword = getRandomCharsFromCriteria(length - optionLength, Object.keys(validOptions));
+  const lengthCompletionPassword = getRandomCharsFromCriteria(
+    length - optionLength,
+    Object.keys(validOptions)
+  );
   const minimumCriteriaMatchingPassword = Object.entries(validOptions)
     .map(([key, value]) => (value ? functionMap[key]() : ''))
     .join('');
