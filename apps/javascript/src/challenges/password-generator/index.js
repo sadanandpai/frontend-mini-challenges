@@ -94,8 +94,17 @@ const APLHABETWORDS = {
 };
 
 const secureRandomIndex = (length) => {
-  if (length <= 0) return 0;
-  return crypto.getRandomValues(new Uint32Array(1))[0] % length;
+  if (length <= 1) return 0;
+
+  const buckets = Math.floor(0x100000000 / length);
+  const limit = buckets * length;
+  const buf = new Uint32Array(1);
+  let value;
+  do {
+    crypto.getRandomValues(buf);
+    value = buf[0];
+  } while (value >= limit);
+  return Math.floor(value / buckets);
 };
 
 const functionMap = {
