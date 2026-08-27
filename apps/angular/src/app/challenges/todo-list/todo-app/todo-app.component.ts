@@ -11,7 +11,7 @@ export interface TodoItem {
   selector: 'app-todo-app',
   imports: [FormsModule, TodoListComponent],
   templateUrl: './todo-app.component.html',
-  styleUrls: ['./todo-app.component.scss'],
+  styleUrl: './todo-app.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class TodoAppComponent {

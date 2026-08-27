@@ -6,7 +6,7 @@ import { FormsModule } from '@angular/forms';
   selector: 'app-stack',
   imports: [FormsModule],
   templateUrl: './stack.component.html',
-  styleUrls: ['./stack.component.scss'],
+  styleUrl: './stack.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class StackComponent {

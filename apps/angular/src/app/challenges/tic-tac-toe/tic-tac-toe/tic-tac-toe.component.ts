@@ -17,7 +17,7 @@ export const initialArray = Array(size * size).fill(null);
   selector: 'app-tic-tac-toe',
   imports: [SquareComponent],
   templateUrl: './tic-tac-toe.component.html',
-  styleUrls: ['./tic-tac-toe.component.scss'],
+  styleUrl: './tic-tac-toe.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class TicTacToeComponent {

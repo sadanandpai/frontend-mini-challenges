@@ -10,7 +10,7 @@ function getRandomNumber() {
   selector: 'app-guess-number',
   imports: [FormsModule],
   templateUrl: './guess-number.component.html',
-  styleUrls: ['./guess-number.component.scss'],
+  styleUrl: './guess-number.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class GuessNumberComponent {

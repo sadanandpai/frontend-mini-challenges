@@ -15,7 +15,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: 24.14.0
+          node-version: 24.19.0
 
       # Runs a single command using the runners shell
       - name: setup git config

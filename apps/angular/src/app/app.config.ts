@@ -1,15 +1,7 @@
 import { ApplicationConfig, provideZonelessChangeDetection } from '@angular/core';
-import { provideRouter } from '@angular/router';
-import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { provideRouter, withHashLocation } from '@angular/router';
 import { routes } from './routes';
 
 export const appConfig: ApplicationConfig = {
-  providers: [
-    provideRouter(routes),
-    provideZonelessChangeDetection(),
-    {
-      provide: LocationStrategy,
-      useClass: HashLocationStrategy,
-    },
-  ],
+  providers: [provideRouter(routes, withHashLocation()), provideZonelessChangeDetection()],
 };

@@ -13,7 +13,7 @@ interface WordCountModel {
   selector: 'app-word-count',
   imports: [FormsModule],
   templateUrl: './word-count.component.html',
-  styleUrls: ['./word-count.component.scss'],
+  styleUrl: './word-count.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class WordCountComponent {

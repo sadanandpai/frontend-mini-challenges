@@ -1,12 +1,9 @@
-import { ChangeDetectionStrategy, Component, EventEmitter, input, Output } from '@angular/core';
-
-import { NgStyle } from '@angular/common';
+import { ChangeDetectionStrategy, Component, input, output } from '@angular/core';
 
 @Component({
   selector: 'app-square',
-  imports: [NgStyle],
   templateUrl: './square.component.html',
-  styleUrls: ['./square.component.scss'],
+  styleUrl: './square.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SquareComponent {
@@ -14,5 +11,5 @@ export class SquareComponent {
   public readonly iTh = input.required<number>();
   public readonly disabled = input(false);
 
-  @Output() action = new EventEmitter();
+  public readonly action = output();
 }
