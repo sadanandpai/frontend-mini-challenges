@@ -736,7 +736,7 @@ input.addEventListener('keyup', function () {
       'z',
       'zero',
     ];
-    for (var i = 0; i < words.length; i++) {
+    for (let i = 0; i < words.length; i++) {
       // filtering out stop words and numbers
       if (stopWords.indexOf(words[i].toLowerCase()) === -1 && isNaN(words[i])) {
         nonStopWords.push(words[i].toLowerCase());
@@ -746,7 +746,7 @@ input.addEventListener('keyup', function () {
 
     // step-2: forming an object with keywords and their count
     var keywords = {};
-    for (var i = 0; i < nonStopWords.length; i++) {
+    for (let i = 0; i < nonStopWords.length; i++) {
       // checking if the word(property) already exists
       // if it does increment the count otherwise set it to one
       if (nonStopWords[i] in keywords) {
@@ -758,7 +758,7 @@ input.addEventListener('keyup', function () {
 
     // step-3: sorting the object by first converting it to a 2D array
     var sortedKeywords = [];
-    for (var keyword in keywords) {
+    for (const keyword in keywords) {
       sortedKeywords.push([keyword, keywords[keyword]]);
     }
     sortedKeywords.sort(function (a, b) {
@@ -768,7 +768,7 @@ input.addEventListener('keyup', function () {
 
     // step-4: displaying top 4 keywords and their count
     topKeywords.innerHTML = '';
-    for (var i = 0; i < sortedKeywords.length && i < 4; i++) {
+    for (let i = 0; i < sortedKeywords.length && i < 4; i++) {
       var li = document.createElement('li');
       li.innerHTML = '<b>' + sortedKeywords[i][0] + '</b>: ' + sortedKeywords[i][1];
       topKeywords.appendChild(li);

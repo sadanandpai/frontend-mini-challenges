@@ -22,13 +22,6 @@ export class WordCountComponent {
   charCount = 0;
   paraCount = 0;
 
-  saveData({ text, wordCount, charCount, paraCount }: WordCountModel) {
-    localStorage.setItem('text', text);
-    localStorage.setItem('words', wordCount + '');
-    localStorage.setItem('chars', charCount + '');
-    localStorage.setItem('paras', paraCount + '');
-  }
-
   countWords() {
     const words = this.text.split(/\s+/).filter((word) => word !== '');
     const characters = this.text.length;
@@ -38,8 +31,7 @@ export class WordCountComponent {
     this.charCount = characters;
     this.paraCount = paragraphs;
 
-    // Update data
-    this.saveData({
+    saveData({
       text: this.text,
       wordCount: this.wordCount,
       charCount: this.wordCount,
@@ -56,8 +48,15 @@ export class WordCountComponent {
 
   loadData() {
     this.text = localStorage.getItem('text') || '';
-    this.wordCount = +(localStorage.getItem('words') || 0);
-    this.charCount = +(localStorage.getItem('chars') || 0);
-    this.paraCount = +(localStorage.getItem('paras') || 0);
+    this.wordCount = Number(localStorage.getItem('words') || 0);
+    this.charCount = Number(localStorage.getItem('chars') || 0);
+    this.paraCount = Number(localStorage.getItem('paras') || 0);
   }
+}
+
+function saveData({ text, wordCount, charCount, paraCount }: WordCountModel) {
+  localStorage.setItem('text', text);
+  localStorage.setItem('words', String(wordCount));
+  localStorage.setItem('chars', String(charCount));
+  localStorage.setItem('paras', String(paraCount));
 }

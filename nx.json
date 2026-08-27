@@ -13,7 +13,8 @@
       "cache": true
     },
     "unit:test": {
-      "cache": true
+      "cache": true,
+      "inputs": ["default", { "runtime": "node --version" }]
     }
   },
   "analytics": false

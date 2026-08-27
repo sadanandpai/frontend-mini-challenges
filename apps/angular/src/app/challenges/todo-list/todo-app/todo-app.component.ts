@@ -19,7 +19,7 @@ export class TodoAppComponent {
   value = '';
   items: TodoItem[] = [];
 
-  edit({ id, value }: any): void {
+  edit({ id, value }: TodoItem): void {
     this.value = value;
     this.editInfo = { id, value };
   }
