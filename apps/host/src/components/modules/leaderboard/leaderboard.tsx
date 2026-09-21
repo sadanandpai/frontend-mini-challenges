@@ -127,7 +127,7 @@ export function Leaderboard() {
                       className={styles.avatar}
                       loading="lazy"
                       onError={(e) => {
-                        (e.target as HTMLImageElement).src = 'https://via.placeholder.com/40';
+                        (e.target as HTMLImageElement).src = 'https://placeholder.photo/avatar/40.svg?style=layered&seed=leaderboard-user';
                       }}
                     />
                     <span className={styles.userName}>{user.name || username}</span>
