@@ -6,7 +6,7 @@ const $movieRating = document.getElementById('movie-rating');
 const $movieReleased = document.getElementById('movie-released');
 const $movieDirector = document.getElementById('movie-director');
 const $moviePoster = document.getElementById('movie-poster');
-const apiKey = 'adff2bf8';
+const apiKey = import.meta.env.VITE_OMDB_API_KEY;
 
 const $movieInfo = document.querySelector('.movie-info');
 $movieInfo.classList.add('hidden');
