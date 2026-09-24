@@ -3,12 +3,17 @@
 }
 
 button {
-  border: 1px solid black;
-  border-radius: 2px;
-  padding: 0.5rem;
-  text-align: center;
-  cursor: pointer;
-  margin-top: 1rem;
+    border: 1px solid #d3d3d3;
+    border-radius: 2px;
+    font-size: medium;
+    text-align: center;
+    padding: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #e4e4e7;  
+    border-color: #767981;
 }
 
 header {
